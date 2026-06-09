@@ -29,7 +29,7 @@ def tokenize(text: str) -> list[str]:
     return re.findall(r"\w+", text.lower())
 
 
-def build_bm25_index(domain: str, chunks: list) -> None:
+def build_bm25_index(domain: str, chunks: list) -> bool:
     """Build and persist a BM25 index from a list of Chunk objects.
 
     Args:
