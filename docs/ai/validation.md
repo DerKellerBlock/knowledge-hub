@@ -2,53 +2,41 @@
 
 ## Verfügbare Checks
 
-### Shell-Skript-Syntax
+### Shell-Syntax
 ```bash
-# Alle Shell-Skripte prüfen
 find . -name "*.sh" -exec bash -n {} \;
 ```
 
 ### Python-Syntax
 ```bash
-# Alle Python-Dateien prüfen
-find . -name "*.py" -exec python3 -m py_compile {} \;
+find . -name "*.py" -not -path "*/__pycache__/*" -exec python3 -m py_compile {} \;
 ```
 
-### JSON-Validierung
+### JSON
 ```bash
-# opencode.json prüfen
 python3 -c "import json; json.load(open('.opencode/opencode.json'))"
 ```
 
-### Verzeichnisstruktur
+### MCP-Server Quick-Test
 ```bash
-# Prüft ob alle erwarteten Ordner existieren
-for dir in domains scripts mcp_servers docs; do
-  [ -d "$dir" ] && echo "✓ $dir" || echo "✗ $dir MISSING"
-done
-```
-
-### ChromaDB-Status
-```bash
-# Prüft ob Index existiert
-python3 -c "
-import os
-if os.path.exists('chromadb_data'):
-    size = sum(os.path.getsize(os.path.join(r,f)) for r,_,fs in os.walk('chromadb_data') for f in fs)
-    print(f'Index: {size/1024/1024:.0f} MB')
-else:
-    print('Index: NOT FOUND')
+timeout 10 python3 -c "
+import sys; sys.path.insert(0,'.')
+from mcp_servers.knowledge_hub.tools import list_domains
+print(list_domains())
 "
 ```
 
-### Git-Status
+### Domain-Status
 ```bash
-git status --short
-git diff --stat
+./domains/godot/scripts/status.sh
 ```
 
-## Noch nicht verfügbar
+### GitHub Action
+```bash
+[ -f .github/workflows/update-knowledge.yml ] && echo "✅" || echo "❌"
+```
 
-- pytest/bats Unit-Tests (später)
-- MCP-Server-Integrationstest (später)
-- Embedding-Qualitäts-Test (später)
+### Git
+```bash
+git status --short
+```
