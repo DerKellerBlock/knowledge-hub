@@ -143,6 +143,16 @@ def _resolve_texts_via_chromadb(domain: str, results: list[dict]) -> None:
                 r["source_file"] = r.get("source_file") or meta.get("source_file", "")
                 r["line_start"] = r.get("line_start") or meta.get("line_start", 0)
                 r["line_end"] = r.get("line_end") or meta.get("line_end", 0)
+                # Backfill structured fields from ChromaDB metadata
+                r["chunk_type"] = r.get("chunk_type") or meta.get("chunk_type")
+                r["class_name"] = r.get("class_name") or meta.get("class_name")
+                r["name"] = r.get("name") or meta.get("name")
+                r["signature"] = r.get("signature") or meta.get("signature")
+                if not r.get("inherits_from") and meta.get("inherits_from"):
+                    try:
+                        r["inherits_from"] = json.loads(meta["inherits_from"])
+                    except (json.JSONDecodeError, TypeError):
+                        pass
     except Exception as e:
         logger.warning(f"Failed to resolve texts via ChromaDB: {e}")
 
