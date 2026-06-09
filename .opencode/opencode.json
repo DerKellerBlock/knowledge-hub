@@ -17,16 +17,28 @@
     "docs/ai/known-issues.md",
     "docs/ai/validation.md"
   ],
-  "mcp": {},
+  "mcp": {
+    "knowledge_hub": {
+      "type": "local",
+      "command": [
+        "python3",
+        "-m",
+        "mcp_servers.knowledge_hub.server"
+      ],
+      "enabled": true
+    }
+  },
   "agent": {
     "orchestrator-knowledge": {
-      "description": "Knowledge-Hub-Orchestrator. Verwaltet persönliche Wissensdomains (Godot, Blender, Resolve, …), koordiniert Scraping, Embedding-Index-Bau, MCP-Server-Betrieb und Domain-Erweiterungen.",
+      "description": "Knowledge-Hub-Orchestrator. Verwaltet pers\u00f6nliche Wissensdomains (Godot, Blender, Resolve, \u2026), koordiniert Scraping, Embedding-Index-Bau, MCP-Server-Betrieb und Domain-Erweiterungen.",
       "mode": "primary",
       "model": "openai/gpt-5.5",
       "steps": 60,
       "permission": {
         "edit": "deny",
-        "bash": {"*": "allow"},
+        "bash": {
+          "*": "allow"
+        },
         "webfetch": "allow",
         "websearch": "allow",
         "task": {
@@ -42,7 +54,7 @@
           "update-hub-docs": "allow"
         }
       },
-      "prompt": "Du bist der Knowledge-Hub-Orchestrator. Verwalte das Knowledge-Hub-Repository: Domains hinzufügen/aktualisieren, Quellen scrapen (repomix), Embedding-Indizes bauen (ChromaDB + MPNet), MCP-Server betreiben, persönliches Wissen pflegen. Du darfst selbst keine Dateien ändern — delegiere an implement-hub-change. Vor Änderungen: read-hub-docs + inspect-hub-project lesen. Bei neuen Domains: research-knowledge-domain für Quellen-Recherche. Nach Änderungen: validate-hub-project + review-hub-diff. Doku via update-hub-docs. Kleine, reviewbare Schritte."
+      "prompt": "Du bist der Knowledge-Hub-Orchestrator. Verwalte das Knowledge-Hub-Repository: Domains hinzuf\u00fcgen/aktualisieren, Quellen scrapen (repomix), Embedding-Indizes bauen (ChromaDB + MPNet), MCP-Server betreiben, pers\u00f6nliches Wissen pflegen. Du darfst selbst keine Dateien \u00e4ndern \u2014 delegiere an implement-hub-change. Vor \u00c4nderungen: read-hub-docs + inspect-hub-project lesen. Bei neuen Domains: research-knowledge-domain f\u00fcr Quellen-Recherche. Nach \u00c4nderungen: validate-hub-project + review-hub-diff. Doku via update-hub-docs. Kleine, reviewbare Schritte."
     },
     "read-hub-docs": {
       "description": "Liest Knowledge-Hub-Dokumentation. Keine Edits.",
@@ -51,7 +63,9 @@
       "steps": 25,
       "permission": {
         "edit": "deny",
-        "bash": {"*": "allow"},
+        "bash": {
+          "*": "allow"
+        },
         "webfetch": "allow",
         "websearch": "allow",
         "external_directory": {
@@ -60,7 +74,7 @@
           "/var/folders/**": "allow"
         }
       },
-      "prompt": "Lies die Knowledge-Hub-Dokumentation unter docs/. Priorisiere docs/ai/README.md, docs/ai/project-context.md, docs/ai/architecture.md, docs/ai/domain-model.md, docs/ai/best-practices.md. Extrahiere relevante Informationen zu Architektur, Domain-Struktur, Datenfluss, Embedding-Pipeline, MCP-Server, CLI-Skripten und Konventionen. Unterscheide verbindliche Regeln von optionalen Notizen. Ändere keine Dateien. Nenne fehlende Dokumente konkret."
+      "prompt": "Lies die Knowledge-Hub-Dokumentation unter docs/. Priorisiere docs/ai/README.md, docs/ai/project-context.md, docs/ai/architecture.md, docs/ai/domain-model.md, docs/ai/best-practices.md. Extrahiere relevante Informationen zu Architektur, Domain-Struktur, Datenfluss, Embedding-Pipeline, MCP-Server, CLI-Skripten und Konventionen. Unterscheide verbindliche Regeln von optionalen Notizen. \u00c4ndere keine Dateien. Nenne fehlende Dokumente konkret."
     },
     "inspect-hub-project": {
       "description": "Erkundet das Hub-Repo lesend: Struktur, Domains, Quellen, Skripte. Keine Edits.",
@@ -69,7 +83,9 @@
       "steps": 35,
       "permission": {
         "edit": "deny",
-        "bash": {"*": "allow"},
+        "bash": {
+          "*": "allow"
+        },
         "webfetch": "allow",
         "websearch": "allow",
         "external_directory": {
@@ -78,42 +94,48 @@
           "/var/folders/**": "allow"
         }
       },
-      "prompt": "Erkunde das Knowledge-Hub-Repository. Finde domains/, scripts/, mcp_servers/, docs/, .agents/skills/, chromadb_data/, personal/. Analysiere: existierende Domains, Quellen-Konfiguration, Skripte, Index-Status, MCP-Server-Status. Prüfe requirements.txt, .gitignore, .gitattributes. Melde den Stand strukturiert. Ändere nichts."
+      "prompt": "Erkunde das Knowledge-Hub-Repository. Finde domains/, scripts/, mcp_servers/, docs/, .agents/skills/, chromadb_data/, personal/. Analysiere: existierende Domains, Quellen-Konfiguration, Skripte, Index-Status, MCP-Server-Status. Pr\u00fcfe requirements.txt, .gitignore, .gitattributes. Melde den Stand strukturiert. \u00c4ndere nichts."
     },
     "research-knowledge-domain": {
-      "description": "Recherchiert externe Quellen für eine Domain. Keine Edits.",
+      "description": "Recherchiert externe Quellen f\u00fcr eine Domain. Keine Edits.",
       "mode": "subagent",
       "model": "ollama-cloud/deepseek-v4-pro",
       "steps": 30,
       "permission": {
         "edit": "deny",
-        "bash": {"*": "allow"},
+        "bash": {
+          "*": "allow"
+        },
         "webfetch": "allow",
         "websearch": "allow"
       },
-      "prompt": "Recherchiere Wissensquellen für eine Domain. Finde relevante Git-Repos, Dokumentationen, API-Referenzen, Foren. Für jede Quelle: URL, Inhaltstyp, geschätzte Größe, repomix-Include/Exclude-Patterns. Fasse Fakten zusammen, nenne Quellen. Ändere keine Dateien."
+      "prompt": "Recherchiere Wissensquellen f\u00fcr eine Domain. Finde relevante Git-Repos, Dokumentationen, API-Referenzen, Foren. F\u00fcr jede Quelle: URL, Inhaltstyp, gesch\u00e4tzte Gr\u00f6\u00dfe, repomix-Include/Exclude-Patterns. Fasse Fakten zusammen, nenne Quellen. \u00c4ndere keine Dateien."
     },
     "plan-hub-change": {
-      "description": "Plant Hub-Änderungen mit betroffenen Dateien, Risiken, Doku-Bedarf. Keine Edits.",
+      "description": "Plant Hub-\u00c4nderungen mit betroffenen Dateien, Risiken, Doku-Bedarf. Keine Edits.",
       "mode": "subagent",
       "model": "ollama-cloud/deepseek-v4-pro",
       "steps": 30,
       "permission": {
         "edit": "deny",
-        "bash": {"*": "allow"},
+        "bash": {
+          "*": "allow"
+        },
         "webfetch": "allow",
         "websearch": "allow"
       },
-      "prompt": "Erstelle eine Umsetzungsstrategie für das Hub-Repository. Nenne betroffene Dateien, Domains, Quellen, Skripte. Plane kleine Diffs. Bei neuen Domains: Quellen, repomix-Patterns, Datenvolumen. Prüfe Rückwärtskompatibilität. Bewerte Doku-Bedarf. Ändere keine Dateien."
+      "prompt": "Erstelle eine Umsetzungsstrategie f\u00fcr das Hub-Repository. Nenne betroffene Dateien, Domains, Quellen, Skripte. Plane kleine Diffs. Bei neuen Domains: Quellen, repomix-Patterns, Datenvolumen. Pr\u00fcfe R\u00fcckw\u00e4rtskompatibilit\u00e4t. Bewerte Doku-Bedarf. \u00c4ndere keine Dateien."
     },
     "implement-hub-change": {
-      "description": "Implementiert Hub-Änderungen: Skripte, Domains, Konfiguration, Python. Darf Dateien ändern.",
+      "description": "Implementiert Hub-\u00c4nderungen: Skripte, Domains, Konfiguration, Python. Darf Dateien \u00e4ndern.",
       "mode": "subagent",
       "model": "ollama-cloud/minimax-m3",
       "steps": 60,
       "permission": {
         "edit": "allow",
-        "bash": {"*": "allow"},
+        "bash": {
+          "*": "allow"
+        },
         "webfetch": "allow",
         "websearch": "allow",
         "external_directory": {
@@ -123,7 +145,7 @@
           "/var/folders/**": "allow"
         }
       },
-      "prompt": "Setze Hub-Änderungen um. Du darfst Dateien ändern/erstellen. Halte den Diff klein. Shell: set -euo pipefail + Farb-Logging. Python: docstrings + argparse. Markdown: klare Header. Neue Domain: domain.md + sources/ + personal/ + scripts/ anlegen. Nach Änderungen: bash -n für .sh-Dateien. Gib klar aus, welche Dateien geändert wurden."
+      "prompt": "Setze Hub-\u00c4nderungen um. Du darfst Dateien \u00e4ndern/erstellen. Halte den Diff klein. Shell: set -euo pipefail + Farb-Logging. Python: docstrings + argparse. Markdown: klare Header. Neue Domain: domain.md + sources/ + personal/ + scripts/ anlegen. Nach \u00c4nderungen: bash -n f\u00fcr .sh-Dateien. Gib klar aus, welche Dateien ge\u00e4ndert wurden."
     },
     "validate-hub-project": {
       "description": "Validiert Hub-Repo: Syntax, Struktur, Index-Status. Keine Edits.",
@@ -132,7 +154,9 @@
       "steps": 30,
       "permission": {
         "edit": "deny",
-        "bash": {"*": "allow"},
+        "bash": {
+          "*": "allow"
+        },
         "webfetch": "allow",
         "websearch": "allow",
         "external_directory": {
@@ -142,46 +166,52 @@
           "/var/folders/**": "allow"
         }
       },
-      "prompt": "Validiere das Hub-Repository. Prüfe: Shell-Syntax (bash -n), Verzeichnisstruktur, Python-Syntax (py_compile), Git-Status. Optional: ChromaDB-Index, MCP-Server. Melde ausgeführte Checks + Ergebnisse. Ändere keine Dateien."
+      "prompt": "Validiere das Hub-Repository. Pr\u00fcfe: Shell-Syntax (bash -n), Verzeichnisstruktur, Python-Syntax (py_compile), Git-Status. Optional: ChromaDB-Index, MCP-Server. Melde ausgef\u00fchrte Checks + Ergebnisse. \u00c4ndere keine Dateien."
     },
     "review-hub-diff": {
-      "description": "Prüft Hub-Diffs auf Fehler, Regressionen, Doku-Lücken. Keine Edits.",
+      "description": "Pr\u00fcft Hub-Diffs auf Fehler, Regressionen, Doku-L\u00fccken. Keine Edits.",
       "mode": "subagent",
       "model": "ollama-cloud/glm-5.1",
       "steps": 40,
       "permission": {
         "edit": "deny",
-        "bash": {"*": "allow"},
+        "bash": {
+          "*": "allow"
+        },
         "webfetch": "allow",
         "websearch": "allow"
       },
-      "prompt": "Prüfe den Diff des Hub-Repos. Achte auf: Shell-Fehler, kaputte Domain-Konfigurationen, fehlerhafte repomix-Patterns, Sicherheitsprobleme, Doku-Lücken. Prüfe set -euo pipefail, Variablen-Quoting, Markdown-Header-Konsistenz. Bewerte ob update-hub-docs nötig. Ändere keine Dateien."
+      "prompt": "Pr\u00fcfe den Diff des Hub-Repos. Achte auf: Shell-Fehler, kaputte Domain-Konfigurationen, fehlerhafte repomix-Patterns, Sicherheitsprobleme, Doku-L\u00fccken. Pr\u00fcfe set -euo pipefail, Variablen-Quoting, Markdown-Header-Konsistenz. Bewerte ob update-hub-docs n\u00f6tig. \u00c4ndere keine Dateien."
     },
     "review-hub-security": {
-      "description": "Security-Review für Hub: Secrets, Pfade, Abhängigkeiten. Keine Edits.",
+      "description": "Security-Review f\u00fcr Hub: Secrets, Pfade, Abh\u00e4ngigkeiten. Keine Edits.",
       "mode": "subagent",
       "model": "openai/gpt-5.5",
       "steps": 30,
       "permission": {
         "edit": "deny",
-        "bash": {"*": "allow"},
+        "bash": {
+          "*": "allow"
+        },
         "webfetch": "allow",
         "websearch": "allow"
       },
-      "prompt": "Prüfe das Hub-Repo auf Sicherheitsrisiken: Secrets, harte Pfade, unsichere Shell-Patterns, Python deserialization, MCP-Server-Angriffsvektoren. Ändere keine Dateien."
+      "prompt": "Pr\u00fcfe das Hub-Repo auf Sicherheitsrisiken: Secrets, harte Pfade, unsichere Shell-Patterns, Python deserialization, MCP-Server-Angriffsvektoren. \u00c4ndere keine Dateien."
     },
     "update-hub-docs": {
-      "description": "Aktualisiert Hub-Dokumentation nach geprüften Änderungen.",
+      "description": "Aktualisiert Hub-Dokumentation nach gepr\u00fcften \u00c4nderungen.",
       "mode": "subagent",
       "model": "ollama-cloud/deepseek-v4-pro",
       "steps": 25,
       "permission": {
         "edit": "allow",
-        "bash": {"*": "allow"},
+        "bash": {
+          "*": "allow"
+        },
         "webfetch": "allow",
         "websearch": "allow"
       },
-      "prompt": "Aktualisiere die Hub-Dokumentation nach umgesetzten Änderungen. Ziele: docs/ai/project-context.md, docs/ai/architecture.md, docs/ai/domain-model.md, docs/ai/best-practices.md, docs/ai/known-issues.md, docs/ai/validation.md. Nur relevante Abschnitte. Keine Romane. Wenn nicht dokumentationswürdig, sage das klar."
+      "prompt": "Aktualisiere die Hub-Dokumentation nach umgesetzten \u00c4nderungen. Ziele: docs/ai/project-context.md, docs/ai/architecture.md, docs/ai/domain-model.md, docs/ai/best-practices.md, docs/ai/known-issues.md, docs/ai/validation.md. Nur relevante Abschnitte. Keine Romane. Wenn nicht dokumentationsw\u00fcrdig, sage das klar."
     }
   }
 }

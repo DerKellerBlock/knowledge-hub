@@ -1,0 +1,1 @@
+"""Knowledge Hub MCP Server."""
