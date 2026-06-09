@@ -3,49 +3,32 @@ name: Update Knowledge
 on:
   schedule:
     - cron: '0 6 * * 1'       # Weekly Monday 06:00 UTC
-  workflow_dispatch:            # Manual trigger
+  workflow_dispatch:            # Manual trigger from Actions tab
 
 permissions:
-  contents: write               # Needed for git push
+  contents: write
 
 jobs:
-  update-godot:
+  update:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          lfs: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v4
 
       - name: Install repomix
         run: npm install -g repomix
 
       - name: Update Godot knowledge
-        run: |
-          cd domains/godot/scripts
-          bash update.sh --no-index
+        run: cd domains/godot/scripts && bash update.sh --no-index
 
-      - name: Check for changes
-        id: diff
+      - name: Commit changes (if any)
         run: |
           if git diff --quiet -- .agents/skills/godot/references/; then
-            echo "changed=false" >> $GITHUB_OUTPUT
-            echo "✅ No changes — knowledge is up to date"
-          else
-            echo "changed=true" >> $GITHUB_OUTPUT
-            echo "📝 Changes detected:"
-            git diff --stat -- .agents/skills/godot/references/
+            echo "No changes — knowledge is up to date."
+            exit 0
           fi
-
-      - name: Commit and push changes
-        if: steps.diff.outputs.changed == 'true'
-        run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .agents/skills/godot/references/
           git commit -m "chore(godot): auto-update knowledge from upstream [skip ci]"
           git push
-          echo "🚀 Changes pushed"
