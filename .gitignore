@@ -18,3 +18,4 @@ venv/
 # IDE
 .idea/
 .vscode/
+**/__pycache__/
