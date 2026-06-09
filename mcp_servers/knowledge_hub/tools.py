@@ -57,7 +57,7 @@ def search_knowledge(
         if sources_dir.is_dir():
             try:
                 output = subprocess.run(
-                    ["rg", "--no-ignore", "-n", "-i", "--", query, str(sources_dir)],
+                    ["rg", "-L", "--no-ignore", "-n", "-i", "--", query, str(sources_dir)],
                     capture_output=True, text=True, timeout=10,
                 )
                 for i, line in enumerate(output.stdout.strip().split("\n")[:max_results]):
@@ -132,9 +132,9 @@ def search_knowledge(
             continue
         try:
             output = subprocess.run(
-                ["rg", "--no-ignore", "-n", "-i", "--", query, str(search_dir)],
-                capture_output=True, text=True, timeout=10,
-            )
+                    ["rg", "-L", "--no-ignore", "-n", "-i", "--", query, str(search_dir)],
+                    capture_output=True, text=True, timeout=10,
+                )
             for i, line in enumerate(output.stdout.strip().split("\n")[:5]):
                 if not line.strip():
                     continue

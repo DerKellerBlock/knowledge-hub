@@ -46,7 +46,7 @@ def exact_search(domain: str, query: str, max_results: int = 10) -> list[dict]:
 
         try:
             output = subprocess.run(
-                ["rg", "--no-ignore", "-n", "-i", "--", query, str(search_dir)],
+                ["rg", "-L", "--no-ignore", "-n", "-i", "--", query, str(search_dir)],
                 capture_output=True,
                 text=True,
                 timeout=10,

@@ -55,7 +55,7 @@ case "$MODE" in
     exact)
         echo -e "${GREEN}Exact search:${NC} $QUERY"
         echo ""
-        rg --no-ignore -n -i -- "$QUERY" "${SKILLS_DIR}/godot/references/" 2>/dev/null | head -20 || echo "(no matches)"
+        rg -L --no-ignore -n -i -- "$QUERY" "${SKILLS_DIR}/godot/references/" 2>/dev/null | head -20 || echo "(no matches)"
         ;;
     semantic)
         python3 "${REPO_ROOT}/scripts/embed_search.py" --domain godot --query "$QUERY" --top 5 2>/dev/null
