@@ -7,6 +7,7 @@ DomainParser abstract base class. Domains MAY provide a parser.py that
 subclasses DomainParser. If no parser exists, fallback_chunk() is used.
 """
 
+import json
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 
@@ -66,7 +67,7 @@ class Chunk:
         if self.signature:
             meta["signature"] = self.signature
         if self.inherits_from:
-            meta["inherits_from"] = "::".join(self.inherits_from)
+            meta["inherits_from"] = json.dumps(self.inherits_from)
         if self.docstring:
             meta["docstring"] = self.docstring[:500]
         return meta
@@ -76,7 +77,7 @@ class Chunk:
         """Reconstruct a Chunk from ChromaDB metadata (used in search results)."""
         inherits = None
         if meta.get("inherits_from"):
-            inherits = meta["inherits_from"].split("::")
+            inherits = json.loads(meta["inherits_from"])
         return Chunk(
             chunk_id=chunk_id,
             domain=meta.get("domain", ""),
