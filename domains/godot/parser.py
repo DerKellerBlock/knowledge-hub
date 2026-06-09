@@ -29,7 +29,7 @@ class Parser(DomainParser):
     CLASS_PATTERN = re.compile(r"^\.\.\s+class::\s+(\w+)")
     INHERITS_PATTERN = re.compile(r"inherits.*?:?\s*(.+)$", re.IGNORECASE)
     METHOD_PATTERN = re.compile(
-        r"^\s*(?:static\s+)?(\w+(?:\.\w+)*)\s*\([^)]*\)",
+        r"^\s*(?:static\s+)?(?:\w[\w.]*\s+)?(\w+(?:\.\w+)*)\s*\([^)]*\)",
     )
     PROPERTY_PATTERN = re.compile(
         r"^\s*var\s+(\w+)\s*(?::\s*\w+)?",
