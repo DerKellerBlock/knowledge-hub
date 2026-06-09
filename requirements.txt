@@ -1,0 +1,11 @@
+# Knowledge Hub — Python Dependencies
+#
+# Hinweis: sentence-transformers mit all-mpnet-base-v2 lädt ~420 MB
+# beim ersten pip install herunter (one-time Model-Download).
+#
+# Installation:
+#   pip install -r requirements.txt
+
+chromadb>=0.5.0,<1.0.0
+sentence-transformers>=3.0.0,<4.0.0
+mcp>=1.0.0
