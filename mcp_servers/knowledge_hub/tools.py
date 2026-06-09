@@ -99,9 +99,17 @@ def search_knowledge(
         if source_filter and st not in source_filter:
             continue
 
+        distance = chroma_results["distances"][0][i]
+        # Normalize: L2 distances are 0..∞, cosine distances are 0..2
+        # For cosine: 1.0 - distance = similarity (0..1)
+        # For L2: smaller is better, cap at 0..1 via 1.0/(1.0 + distance)
+        if distance > 2.0:
+            score = round(1.0 / (1.0 + distance), 4)   # L2 fallback
+        else:
+            score = round(1.0 - distance, 4)            # Cosine
         semantic.append({
             "rank": i + 1,
-            "score": round(1.0 - chroma_results["distances"][0][i], 4),
+            "score": score,
             "source_type": st,
             "source": meta.get("source", "unknown"),
             "domain": meta.get("domain", domain),

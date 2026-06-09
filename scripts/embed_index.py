@@ -145,7 +145,12 @@ def build_index(domain: str, model: SentenceTransformer) -> None:
 
     collection = client.create_collection(
         name=collection_name,
-        metadata={"domain": domain, "model": MODEL_NAME, "dimensions": 768},
+        metadata={
+            "domain": domain,
+            "model": MODEL_NAME,
+            "dimensions": 768,
+            "hnsw:space": "cosine",
+        },
     )
 
     # Insert in batches
