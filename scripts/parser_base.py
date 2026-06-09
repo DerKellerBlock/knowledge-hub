@@ -8,7 +8,7 @@ subclasses DomainParser. If no parser exists, fallback_chunk() is used.
 """
 
 from abc import ABC, abstractmethod
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass
@@ -91,6 +91,7 @@ class Chunk:
             source_file=meta.get("source_file", ""),
             line_start=meta.get("line_start", 0),
             line_end=meta.get("line_end", 0),
+            chunk_id_in_file=meta.get("chunk_id_in_file", 0),
         )
 
 
