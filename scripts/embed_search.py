@@ -49,23 +49,45 @@ def semantic_search(
         include=["documents", "metadatas", "distances"],
     )
 
-    # Format results
+    # Format results with full Chunk metadata
     formatted = []
     for i in range(len(results["ids"][0])):
-        formatted.append(
-            {
-                "rank": i + 1,
-                "score": round(1.0 - results["distances"][0][i], 4),
-                "source_type": results["metadatas"][0][i].get("source_type", "unknown"),
-                "source": results["metadatas"][0][i].get("source", "unknown"),
-                "domain": results["metadatas"][0][i].get("domain", domain),
-                "filename": results["metadatas"][0][i].get("filename", ""),
-                "line_offset": results["metadatas"][0][i].get("line_offset", 0),
-                "text": results["documents"][0][i][:500],
-                "chunk_id": results["ids"][0][i],
-                "match_type": "semantic",
-            }
-        )
+        meta = results["metadatas"][0][i]
+        distance = results["distances"][0][i]
+        # Normalize distance to similarity score
+        if distance > 2.0:
+            score = round(1.0 / (1.0 + distance), 4)   # L2 fallback
+        else:
+            score = round(1.0 - distance, 4)            # Cosine
+
+        # Parse inherits_from from JSON (stored as json.dumps in parser_base)
+        inherits = None
+        if meta.get("inherits_from"):
+            try:
+                inherits = json.loads(meta["inherits_from"])
+            except (json.JSONDecodeError, TypeError):
+                pass
+
+        entry = {
+            "rank": i + 1,
+            "score": score,
+            "chunk_id": results["ids"][0][i],
+            "text": results["documents"][0][i][:500],
+            "match_type": "semantic",
+            "source_type": meta.get("source_type", "unknown"),
+            "domain": meta.get("domain", domain),
+            "source_file": meta.get("source_file", ""),
+            "line_start": meta.get("line_start", 0),
+            "line_end": meta.get("line_end", 0),
+            # Structured fields (None if not present)
+            "chunk_type": meta.get("chunk_type"),
+            "class_name": meta.get("class_name"),
+            "name": meta.get("name"),
+            "signature": meta.get("signature"),
+            "inherits_from": inherits,
+        }
+
+        formatted.append(entry)
 
     return formatted
 
@@ -93,7 +115,7 @@ def main():
         print(json.dumps({"results": results, "total_found": len(results)}, indent=2))
     else:
         for r in results:
-            source_label = f"[{r['source_type']}:{r['source']}]"
+            source_label = f"[{r['source_type']}:{r['source_file']}]"
             print(f"\n  #{r['rank']} {source_label} (score: {r['score']})")
             print(f"  {r['text'][:200]}...")
 
