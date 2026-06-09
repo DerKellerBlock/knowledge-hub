@@ -1,7 +1,6 @@
 """Tool implementations for Knowledge Hub MCP Server."""
 
 import json
-import os
 import subprocess
 from datetime import datetime
 from pathlib import Path
@@ -10,6 +9,15 @@ import chromadb
 from sentence_transformers import SentenceTransformer
 
 from .config import DOMAINS_DIR, CHROMA_DIR, SCRIPTS_DIR, PERSONAL_DIR, MODEL_NAME
+
+# ── Add scripts/ to path so we can import search modules ────────────────
+import sys as _sys
+_SCRIPTS = str(Path(__file__).resolve().parent.parent.parent / "scripts")
+if _SCRIPTS not in _sys.path:
+    _sys.path.insert(0, _SCRIPTS)
+
+from hybrid_search import search as hybrid_search_fn
+from bm25_search import bm25_search, get_bm25_index_size_mb
 
 # ── Lazy-loaded model ────────────────────────────────────────────────────
 _model: SentenceTransformer | None = None
@@ -47,133 +55,18 @@ def search_knowledge(
     max_results: int = 10,
     source_filter: list[str] | None = None,
 ) -> dict:
-    """Search a domain's knowledge (exact, semantic, or hybrid)."""
-    collection_name = f"{domain}_knowledge"
+    """Search a domain's knowledge (exact=BM25, semantic=ChromaDB, or hybrid).
 
-    if mode == "exact":
-        # ripgrep exact search
-        sources_dir = DOMAINS_DIR / domain / "sources"
-        results = []
-        if sources_dir.is_dir():
-            try:
-                output = subprocess.run(
-                    ["rg", "-L", "--no-ignore", "-n", "-i", "--", query, str(sources_dir)],
-                    capture_output=True, text=True, timeout=10,
-                )
-                for i, line in enumerate(output.stdout.strip().split("\n")[:max_results]):
-                    if not line.strip():
-                        continue
-                    parts = line.split(":", 2)
-                    text = parts[2][:300] if len(parts) >= 3 else line[:300]
-                    results.append({
-                        "rank": i + 1, "score": 1.0,
-                        "source_type": "repo", "source": Path(parts[0]).stem,
-                        "domain": domain, "text": text,
-                        "match_type": "exact",
-                    })
-            except (subprocess.TimeoutExpired, FileNotFoundError):
-                pass
-        return {"results": results, "total_found": len(results), "mode": "exact"}
-
-    # Semantic or hybrid
-    model = get_model()
-    client = chromadb.PersistentClient(path=str(CHROMA_DIR))
-    try:
-        collection = client.get_collection(collection_name)
-    except Exception:
-        return {"error": f"Collection '{collection_name}' not found. Run embed_index.py first."}
-
-    query_embedding = model.encode([query])[0]
-    chroma_results = collection.query(
-        query_embeddings=[query_embedding.tolist()],
-        n_results=max_results,
-        include=["documents", "metadatas", "distances"],
+    Delegates all search logic to scripts/ (hybrid_search.py, bm25_search.py).
+    No duplicate search/ranking logic lives in tools.py.
+    """
+    return hybrid_search_fn(
+        domain=domain,
+        query=query,
+        mode=mode,
+        top_k=max_results,
+        source_filter=source_filter,
     )
-
-    semantic = []
-    for i in range(len(chroma_results["ids"][0])):
-        meta = chroma_results["metadatas"][0][i]
-        st = meta.get("source_type", "unknown")
-
-        # Apply source filter if provided
-        if source_filter and st not in source_filter:
-            continue
-
-        distance = chroma_results["distances"][0][i]
-        # Normalize: L2 distances are 0..∞, cosine distances are 0..2
-        # For cosine: 1.0 - distance = similarity (0..1)
-        # For L2: smaller is better, cap at 0..1 via 1.0/(1.0 + distance)
-        if distance > 2.0:
-            score = round(1.0 / (1.0 + distance), 4)   # L2 fallback
-        else:
-            score = round(1.0 - distance, 4)            # Cosine
-        semantic.append({
-            "rank": i + 1,
-            "score": score,
-            "source_type": st,
-            "source": meta.get("source", "unknown"),
-            "domain": meta.get("domain", domain),
-            "filename": meta.get("filename", ""),
-            "line_offset": meta.get("line_offset", 0),
-            "text": chroma_results["documents"][0][i][:300],
-            "match_type": "semantic",
-        })
-
-    if mode == "semantic":
-        return {"results": semantic[:max_results], "total_found": len(semantic), "mode": "semantic"}
-
-    # Hybrid: merge exact + semantic via RRF
-    # Exact via ripgrep
-    sources_dir = DOMAINS_DIR / domain / "sources"
-    personal_dir = DOMAINS_DIR / domain / "personal"
-    exact = []
-    for search_dir, st in [(sources_dir, "repo"), (personal_dir, "personal")]:
-        if not search_dir.is_dir():
-            continue
-        try:
-            output = subprocess.run(
-                    ["rg", "-L", "--no-ignore", "-n", "-i", "--", query, str(search_dir)],
-                    capture_output=True, text=True, timeout=10,
-                )
-            for i, line in enumerate(output.stdout.strip().split("\n")[:5]):
-                if not line.strip():
-                    continue
-                parts = line.split(":", 2)
-                text = parts[2][:300] if len(parts) >= 3 else line[:300]
-                exact.append({
-                    "source_type": st, "source": Path(parts[0]).stem,
-                    "domain": domain, "text": text, "exact_rank": i + 1,
-                })
-        except (subprocess.TimeoutExpired, FileNotFoundError):
-            pass
-
-    # RRF fusion
-    k = 60
-    scores: dict[str, float] = {}
-    merged: dict[str, dict] = {}
-
-    for r in semantic:
-        cid = f"sem_{r['rank']}"
-        scores[cid] = 1.0 / (k + r["rank"])
-        merged[cid] = dict(r)
-        merged[cid]["match_type"] = "hybrid"
-
-    for i, r in enumerate(exact):
-        cid = f"exact_{i}"
-        scores[cid] = scores.get(cid, 0) + 1.0 / (k + i + 1)
-        merged[cid] = dict(r)
-        merged[cid]["match_type"] = "hybrid"
-        merged[cid]["rank"] = i + 1
-
-    ranked = sorted(scores.items(), key=lambda x: x[1], reverse=True)[:max_results]
-    hybrid = []
-    for idx, (cid, score) in enumerate(ranked):
-        entry = dict(merged[cid])
-        entry["rank"] = idx + 1
-        entry["score"] = round(score, 4)
-        hybrid.append(entry)
-
-    return {"results": hybrid, "total_found": len(hybrid), "mode": "hybrid"}
 
 
 # ── Status ────────────────────────────────────────────────────────────────
@@ -189,23 +82,26 @@ def get_domain_status(domain: str | None = None) -> dict:
         sources = list(domain_dir.glob("sources/*.md")) if domain_dir.is_dir() else []
         personal = list(domain_dir.glob("personal/*.md")) if domain_dir.is_dir() else []
 
+        # Check if parser exists
+        has_parser = (domain_dir / "parser.py").exists()
+
+        # Check if index exists
         index_exists = False
         index_size_mb = 0
         if CHROMA_DIR.is_dir():
-            col_dir = CHROMA_DIR  # chromadb stores all collections in one dir
-            if col_dir.is_dir():
-                total = sum(
-                    f.stat().st_size for f in col_dir.rglob("*") if f.is_file()
-                )
-                index_size_mb = round(total / 1024 / 1024)
+            total = sum(
+                f.stat().st_size for f in CHROMA_DIR.rglob("*") if f.is_file()
+            )
+            index_size_mb = round(total / 1024 / 1024)
+            try:
+                client = chromadb.PersistentClient(path=str(CHROMA_DIR))
+                client.get_collection(f"{d}_knowledge")
+                index_exists = True
+            except Exception:
+                pass
 
-        # Check if collection exists
-        try:
-            client = chromadb.PersistentClient(path=str(CHROMA_DIR))
-            client.get_collection(f"{d}_knowledge")
-            index_exists = True
-        except Exception:
-            pass
+        # BM25 index size
+        bm25_mb = get_bm25_index_size_mb(d)
 
         result[d] = {
             "sources": len(sources),
@@ -214,6 +110,8 @@ def get_domain_status(domain: str | None = None) -> dict:
             "personal_files": [p.name for p in personal],
             "index_exists": index_exists,
             "index_size_mb": index_size_mb,
+            "has_parser": has_parser,
+            "bm25_index_size_mb": bm25_mb,
         }
 
     return result
