@@ -1,0 +1,1 @@
+../../../.agents/skills/godot/references/godot-demos-packed.md

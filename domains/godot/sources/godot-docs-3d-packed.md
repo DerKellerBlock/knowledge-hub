@@ -1,0 +1,1 @@
+../../../.agents/skills/godot/references/godot-docs-3d-packed.md
