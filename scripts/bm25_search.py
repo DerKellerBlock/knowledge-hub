@@ -52,15 +52,18 @@ def build_bm25_index(domain: str, chunks: list) -> None:
         chunk_ids.append(chunk.chunk_id)
 
     if not corpus:
-        return
+        return False
 
     bm25 = BM25Okapi(corpus)
+    CHROMA_DIR.mkdir(parents=True, exist_ok=True)
     index_path = CHROMA_DIR / f"{domain}_bm25.pkl"
     with open(index_path, "wb") as f:
         pickle.dump({"index": bm25, "chunk_ids": chunk_ids}, f)
 
     # Invalidate cache for this domain
     _bm25_cache.pop(domain, None)
+
+    return True
 
 
 def _load_index(domain: str) -> dict:
