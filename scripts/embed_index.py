@@ -223,7 +223,7 @@ def main():
     # Load model (once)
     print(f"[INFO]  Loading embedding model: {MODEL_NAME}")
     print(f"[INFO]  (first run downloads ~420 MB — please wait)")
-    model = SentenceTransformer(MODEL_NAME)
+    model = SentenceTransformer(MODEL_NAME, device="mps")
 
     # Determine domains
     if args.all:
