@@ -38,7 +38,7 @@ async def list_tools_handler() -> list[Tool]:
     return [
         Tool(
             name="search_knowledge",
-            description="Search knowledge in a domain (exact, semantic, or hybrid). Finds API references, code examples, and personal notes.",
+            description="Search knowledge in a domain (exact=BM25, semantic=ChromaDB, hybrid=both + CrossEncoder rerank). Finds API references, code examples, and personal notes.",
             inputSchema={
                 "type": "object",
                 "properties": {
@@ -53,7 +53,7 @@ async def list_tools_handler() -> list[Tool]:
                     "mode": {
                         "type": "string",
                         "enum": ["exact", "semantic", "hybrid"],
-                        "description": "Search mode: exact=ripgrep, semantic=ChromaDB, hybrid=both",
+                        "description": "Search mode: exact=BM25, semantic=ChromaDB, hybrid=both",
                         "default": "hybrid",
                     },
                     "max_results": {
@@ -85,7 +85,7 @@ async def list_tools_handler() -> list[Tool]:
         ),
         Tool(
             name="update_domain",
-            description="Update a domain's knowledge: refresh repo sources (via repomix) and rebuild ChromaDB index.",
+            description="Update a domain's knowledge: refresh repo sources (via repomix) and rebuild ChromaDB + BM25 index.",
             inputSchema={
                 "type": "object",
                 "properties": {
