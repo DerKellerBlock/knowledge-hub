@@ -30,7 +30,7 @@ class Chunk:
     source_type: str  # "repo" | "personal"
 
     # Struktur-Felder (optional)
-    chunk_type: str | None = None       # "class" | "method" | "property" | "signal" | "enum" | "section"
+    chunk_type: str | None = None       # "class" | "method" | "operator" | "constructor" | "property" | "signal" | "enum" | "constant" | "annotation" | "theme_property" | "section"
     class_name: str | None = None       # z.B. "Node3D"
     name: str | None = None             # Methoden-/Property-Name, z.B. "rotate_y"
     signature: str | None = None        # "void rotate_y(angle: float)"
