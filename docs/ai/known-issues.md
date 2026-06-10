@@ -14,4 +14,3 @@
 ## Einschränkungen
 
 - **LIM-001:** MCP-Server nur stdio (kein HTTP/SSE) — akzeptabel für persönlichen Hub
-- **LIM-002:** Godot-Parser produziert aktuell 0 strukturierte Chunks (Regex muss auf echtes RST angepasst werden) — Fallback-Chunking greift korrekt
