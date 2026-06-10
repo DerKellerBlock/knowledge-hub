@@ -91,9 +91,13 @@ def load_domain_sources(domain: str) -> list[Chunk]:
                         if not c.chunk_id.startswith(f"{domain}::"):
                             c.chunk_id = f"{domain}::{c.chunk_id}"
                     chunks.extend(parsed)
-                    print(f"[INFO]  Parser '{parser.source_type_name}': "
-                          f"{len(parsed)} structured chunks from {file.name}")
-                    continue
+                    if parsed:
+                        print(f"[INFO]  Parser '{parser.source_type_name}': "
+                              f"{len(parsed)} structured chunks from {file.name}")
+                        continue
+                    else:
+                        print(f"[INFO]  Parser '{parser.source_type_name}': "
+                              f"0 structured chunks from {file.name} — falling back")
                 except Exception as e:
                     print(f"[WARN]  Parser failed for {file.name}: {e} — falling back")
 
