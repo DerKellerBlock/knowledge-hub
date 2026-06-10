@@ -191,7 +191,7 @@ class Parser(DomainParser):
         so the caller can fall back to sliding-window chunking.
         """
         # Fast heuristic: only proceed if this file contains class RST content.
-        if "classes/class_" not in content[:1000]:
+        if "## File: classes/class_" not in content:
             return []
 
         chunks: list[Chunk] = []
