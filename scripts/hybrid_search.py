@@ -92,10 +92,14 @@ def rrf_fusion(
             }
         else:
             meta[cid]["stage1_sources"].append("semantic")
-            if r.get("score"):
-                meta[cid]["dense_score"] = r.get("score", 0)
-            if r.get("text") and not meta[cid].get("text"):
-                meta[cid]["text"] = r["text"]
+            # Merge ALL fields from dense result (dense has richer metadata)
+            for key, value in r.items():
+                if key in ("chunk_id", "stage1_sources"):
+                    continue
+                if value is not None and (meta[cid].get(key) is None or key == "text"):
+                    if key == "text" and meta[cid].get("text"):
+                        continue  # keep existing text
+                    meta[cid][key] = value
 
     # Sort by RRF score
     ranked = sorted(scores.items(), key=lambda x: x[1], reverse=True)[:top_n]
