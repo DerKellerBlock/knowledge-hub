@@ -17,7 +17,7 @@
 │  scripts/                                 │
 │  ├── embed_index.py   → ChromaDB         │
 │  ├── embed_search.py  ← ChromaDB         │
-│  └── hybrid_search.py ← rg + ChromaDB    │
+│  └── hybrid_search.py ← BM25 + ChromaDB → Cross-Encoder │
 │                                           │
 │  mcp_servers/knowledge_hub/               │
 │  └── OpenCode ← MCP-Tools                │
@@ -35,9 +35,10 @@
    - Chunking (500 Tokens, 100 Overlap) → Embedding (MPNet, 768 dims) → ChromaDB Collection `<name>_knowledge`
    - Collection wird komplett neu gebaut (kein inkrementelles Update)
 
-3. **Suche:**
+3. **Suche (zweistufig):**
    - `scripts/hybrid_search.py --domain godot --query "..." --mode hybrid`
-   - Parallel: ripgrep (exakt) + ChromaDB (semantisch) → RRF-Fusion (k=60) → Top-10 Ranking
+   - **Stage 1:** BM25 (exakt) + ChromaDB (semantisch) → RRF-Fusion (k=60) → Candidate-Pool
+   - **Stage 2:** Cross-Encoder (ms-marco-MiniLM-L-12-v2) → Reranking → Top-10 Ranking
 
 4. **MCP-Server:**
    - `mcp_servers/knowledge_hub/server.py` — stdio MCP-Server
@@ -49,7 +50,7 @@
 |-----------|--------------|---------|---------|
 | `embed_index.py` | Index-Bau | Quell-Dateien (.md) | ChromaDB-Collection |
 | `embed_search.py` | Semantische Query | Query-String | JSON-Result |
-| `hybrid_search.py` | Fusion rg + Embeddings | Query-String | JSON-Result (geranked) |
+| `hybrid_search.py` | Fusion BM25 + Embeddings → Cross-Encoder-Rerank | Query-String | JSON-Result (geranked) |
 | MCP-Server | OpenCode-Integration | MCP-Tool-Calls | JSON-Responses |
 
 ## Domain-Autonomie

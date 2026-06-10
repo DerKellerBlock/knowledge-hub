@@ -11,9 +11,11 @@
 
 - **Sprachen:** Bash (CLI-Skripte), Python 3.11+ (Embedding-Pipeline, MCP-Server)
 - **Embedding-Model:** all-mpnet-base-v2 (768 dims, ~420 MB)
+- **Cross-Encoder:** ms-marco-MiniLM-L-12-v2 (384 dims, ~140 MB)
 - **Vector-DB:** ChromaDB (persistent, on-disk)
+- **BM25-Tokenizer:** rank-bm25 (Python, in-memory)
 - **Scraping:** repomix 1.14.1 (via Homebrew)
-- **Suche:** ripgrep (exakt) + ChromaDB (semantisch) + RRF-Fusion (hybrid)
+- **Suche:** BM25 (exakt) + ChromaDB (semantisch) + RRF-Fusion + Cross-Encoder-Reranking (hybrid)
 - **MCP-Server:** Python MCP SDK (stdio transport)
 - **OpenCode:** `.opencode/opencode.json` (orchestrator-knowledge)
 

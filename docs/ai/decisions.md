@@ -48,3 +48,15 @@
 
 - **Entscheidung:** Externe Quellen werden via repomix (`--remote`) gescraped, nicht mit eigenen HTTP/HTML-Parsern.
 - **Begründung:** repomix 1.14.1 ist battle-tested, handled Git-Logik, Token-Counting, Compression. Eigenbau wäre signifikant mehr Aufwand.
+
+## Q6: BM25 ersetzt ripgrep
+
+- **Entscheidung:** BM25 (`rank_bm25`) ersetzt ripgrep komplett als exakten Retrieval-Pfad in der hybriden Suche.
+- **Begründung:** BM25 liefert Relevanz-Scores (kontinuierlich) statt binärer Treffer. Bessere Fusions-Qualität mit ChromaDB über RRF, da beide Pfade echte Scores liefern. Keine Shell-Subprocess-Latenz. `rank_bm25` läuft in-memory im gleichen Python-Prozess.
+- **Datum:** 2026-06-10
+
+## Q7: Cross-Encoder-Reranking
+
+- **Entscheidung:** Stage-2-Reranking mit `ms-marco-MiniLM-L-12-v2` als Cross-Encoder nach der RRF-Fusion.
+- **Begründung:** Cross-Encoder bewertet Query-Dokument-Paare direkt (nicht nur Embedding-Ähnlichkeit), was präzisere Top-10-Rankings liefert. ~140 MB Modell, ~50–100 ms pro Reranking-Durchlauf — akzeptabel für persönlichen Hub.
+- **Datum:** 2026-06-10

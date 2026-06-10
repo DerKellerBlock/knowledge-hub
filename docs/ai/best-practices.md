@@ -43,3 +43,4 @@
 - API-Keys nur via Environment-Variablen oder `.env` (gitignored)
 - Keine harten `/Users/noahk/`-Pfade (außer in dieser Doku und opencode.json)
 - Shell-Skripte prüfen Inputs (z.B. Domain-Namen validieren)
+- **Pickle-Sicherheit:** `rank_bm25` serialisiert/deserialisiert BM25-Indizes via Python `pickle`. Für den persönlichen Hub akzeptabel (alle Dateien unter eigener Kontrolle, kein externer Input). Produktion/Shared-Hub wäre problematisch — dann auf JSON oder safetensors migrieren.

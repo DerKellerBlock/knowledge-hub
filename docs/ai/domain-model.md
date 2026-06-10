@@ -51,6 +51,16 @@ domains/<name>/
 | Repo-Wissen | `"repo"` | `sources/*.md` | Komplett neu bei jedem Update |
 | Persönliches Wissen | `"personal"` | `personal/*.md` | Kumulativ (wächst) |
 
+## Indizes pro Domain
+
+| Index | Technologie | Speicherort | Metrik |
+|-------|-------------|-------------|--------|
+| ChromaDB-Collection | ChromaDB (on-disk) | `chromadb_data/<name>_knowledge/` | Cosine (768d) |
+| BM25-Index | rank_bm25 (in-memory) | Beim Laden aus Chunks gebaut | TF-IDF-basiert |
+| Cross-Encoder | ms-marco-MiniLM-L-12-v2 | In-Memory beim Search-Lauf | Pairwise Score |
+
+Der `bm25_index_size_mb` ist Teil des Domain-Status und wird in `domain.md` als Metadatum geführt.
+
 ## Eine neue Domain anlegen
 
 ```bash
