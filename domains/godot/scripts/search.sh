@@ -2,9 +2,9 @@
 # search.sh — Search Godot domain knowledge (exact + semantic)
 #
 # Usage:
-#   ./domains/godot/scripts/search.sh "CharacterBody3D"               # exact (ripgrep)
+#   ./domains/godot/scripts/search.sh "CharacterBody3D"               # exact (BM25)
 #   ./domains/godot/scripts/search.sh --semantic "gravity"            # semantic (ChromaDB)
-#   ./domains/godot/scripts/search.sh --hybrid "player movement"       # hybrid (ripgrep + ChromaDB)
+#   ./domains/godot/scripts/search.sh --hybrid "player movement"       # hybrid (BM25 + ChromaDB + CrossEncoder)
 #
 # Shortcuts:
 #   -e    exact (default)
@@ -33,9 +33,9 @@ while [[ $# -gt 0 ]]; do
             echo "Usage: $0 [MODE] <query>"
             echo ""
             echo "Modes:"
-            echo "  -e, --exact      Exact search via ripgrep (default)"
+            echo "  -e, --exact      Exact search via BM25 (default)"
             echo "  -s, --semantic   Semantic search via ChromaDB"
-            echo "  -x, --hybrid     Hybrid search (exact + semantic)"
+            echo "  -x, --hybrid     Hybrid search (BM25 + semantic + CrossEncoder)"
             echo ""
             echo "Examples:"
             echo "  $0 -x 'player character controller'"
@@ -53,9 +53,8 @@ fi
 
 case "$MODE" in
     exact)
-        echo -e "${GREEN}Exact search:${NC} $QUERY"
-        echo ""
-        rg -L --no-ignore -n -i -- "$QUERY" "${SKILLS_DIR}/godot/references/" 2>/dev/null | head -20 || echo "(no matches)"
+        echo -e "${GREEN}BM25 exact search:${NC} $QUERY"
+        python3 "${REPO_ROOT}/scripts/hybrid_search.py" --domain godot --query "$QUERY" --mode exact --top 20 2>/dev/null
         ;;
     semantic)
         python3 "${REPO_ROOT}/scripts/embed_search.py" --domain godot --query "$QUERY" --top 5 2>/dev/null
