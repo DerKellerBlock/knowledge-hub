@@ -1,6 +1,7 @@
 """Tool implementations for Knowledge Hub MCP Server."""
 
 import json
+import re
 import subprocess
 from datetime import datetime
 from pathlib import Path
@@ -32,6 +33,10 @@ def get_model() -> SentenceTransformer:
 
 
 # ── Domain helpers ────────────────────────────────────────────────────────
+
+
+_DOMAIN_NAME_RE = re.compile(r'^[a-z0-9_-]+$')
+_CATEGORY_RE = re.compile(r'^[a-z0-9_-]+$')
 
 
 def list_domains() -> list[str]:
@@ -128,6 +133,9 @@ def add_personal_note(
     if not domain_dir.is_dir():
         return {"error": f"Domain '{domain}' not found"}
 
+    if not _CATEGORY_RE.match(category):
+        return {"error": f"Invalid category name: {category} (must match [a-z0-9_-]+)"}
+
     target = domain_dir / "personal" / f"{category}.md"
     target.parent.mkdir(parents=True, exist_ok=True)
 
@@ -142,7 +150,7 @@ def add_personal_note(
     with open(target, "a") as f:
         f.write(entry)
 
-    return {"status": "added", "domain": domain, "category": category, "topic": topic, "file": str(target)}
+    return {"status": "added", "domain": domain, "category": category, "topic": topic, "file": f"domains/{domain}/personal/{category}.md"}
 
 
 def list_personal_notes(domain: str, category: str | None = None) -> dict:
