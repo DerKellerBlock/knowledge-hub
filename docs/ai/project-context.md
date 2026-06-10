@@ -4,7 +4,7 @@
 
 - **Name:** Knowledge Hub
 - **Beschreibung:** Persönlicher, domain-agnostischer Knowledge Hub für Noahs technisches Wissen. Vereinigt Repo-Wissen (automatisch gescraped via repomix) mit persönlichem Erfahrungswissen (FAQs, Gotchas, Best Practices).
-- **Repository:** `/Users/noahk/Documents/work/knowledge-hub`
+- **Repository:** `~/Documents/work/knowledge-hub`
 - **Ziel:** Single Source of Truth für alle technischen Wissensdomains. Installierbar als OpenCode-Skill in andere Projekte.
 
 ## Technologie-Stack
