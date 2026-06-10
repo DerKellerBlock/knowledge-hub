@@ -141,7 +141,7 @@ def _resolve_texts_via_chromadb(domain: str, results: list[dict]) -> None:
 
         for r in results:
             if not r.get("text") and r["chunk_id"] in id_to_text:
-                r["text"] = id_to_text[r["chunk_id"]][:500]
+                r["text"] = id_to_text[r["chunk_id"]][:5000]
                 meta = id_to_meta.get(r["chunk_id"], {})
                 r["source_type"] = r.get("source_type") or meta.get("source_type", "unknown")
                 r["source_file"] = r.get("source_file") or meta.get("source_file", "")
@@ -268,7 +268,7 @@ def main():
             mt = f"[{r.get('match_type', '?')}]"
             ctype = f" {r.get('chunk_type','')}/{r.get('name','')}" if r.get('name') else ""
             print(f"\n  #{r.get('rank','?')} {src} {mt}{ctype} (score: {r.get('score','?')})")
-            text = r.get("text", "")[:200]
+            text = r.get("text", "")[:5000]
             print(f"  {text}...")
 
     print(f"\n[INFO]  Found {result['total_found']} results "

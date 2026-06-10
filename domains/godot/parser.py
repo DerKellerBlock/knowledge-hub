@@ -503,6 +503,18 @@ class Parser(DomainParser):
                     i += 1
                     continue
 
+                # Flush on classref separators (BEFORE the ".. " skip below)
+                if "classref-section-separator" in line or "classref-item-separator" in line:
+                    if pending_member is not None:
+                        self._emit_member_chunk(
+                            pending_member, current_desc_lines,
+                            chunks, class_name, inherits_from, file_path, i,
+                        )
+                        pending_member = None
+                        current_desc_lines = []
+                    i += 1
+                    continue
+
                 # Skip RST directives (rst-class, tabs, code-block, etc.)
                 if line.lstrip().startswith(".. "):
                     i += 1
@@ -690,6 +702,12 @@ class Parser(DomainParser):
                 text_parts.append(docstring)
 
         text = "\n".join(text_parts)
+
+        # ── Option C: fallback to sliding-window chunker for oversized chunks ──
+        MAX_CHUNK_CHARS = 4000  # ~2000 tokens × 2 chars/token (match FALLBACK_CHUNK_SIZE)
+        if len(text) > MAX_CHUNK_CHARS:
+            return  # Skip emission — fallback chunker handles this section
+
         docstring_clean = self._join_clean(desc_lines)[:500]
 
         # Determine line range (best-effort: anchor was at this point)

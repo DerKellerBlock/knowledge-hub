@@ -72,7 +72,7 @@ def semantic_search(
             "rank": i + 1,
             "score": score,
             "chunk_id": results["ids"][0][i],
-            "text": results["documents"][0][i][:500],
+            "text": results["documents"][0][i][:5000],
             "match_type": "semantic",
             "source_type": meta.get("source_type", "unknown"),
             "domain": meta.get("domain", domain),

@@ -116,8 +116,8 @@ class DomainParser(ABC):
 
 # ── Fallback chunking ─────────────────────────────────────────────────────
 
-FALLBACK_CHUNK_SIZE = 500   # approximate tokens
-FALLBACK_CHUNK_OVERLAP = 100
+FALLBACK_CHUNK_SIZE = 2000  # approximate tokens
+FALLBACK_CHUNK_OVERLAP = 200
 CHARS_PER_TOKEN = 4
 FALLBACK_CHUNK_CHARS = FALLBACK_CHUNK_SIZE * CHARS_PER_TOKEN       # 2000
 FALLBACK_OVERLAP_CHARS = FALLBACK_CHUNK_OVERLAP * CHARS_PER_TOKEN  # 400
