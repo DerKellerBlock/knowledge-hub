@@ -37,7 +37,7 @@ git clone <url> knowledge-hub
 cd knowledge-hub
 
 # 2. Abhängigkeiten installieren
-brew install repomix ripgrep
+brew install repomix
 pip install -r requirements.txt
 
 # 3. Ersten Index bauen
@@ -50,4 +50,4 @@ python -m mcp_servers.knowledge_hub.server --help
 ## Team / Kontakt
 
 - **Verantwortlich:** Noah
-- **Status:** Phase 1 (Foundation)
+- **Status:** Phase 2 (Retrieval 2.0)

@@ -19,7 +19,7 @@ domains/<name>/
 │   └── tips.md            # Kurze Tipps
 └── scripts/               # Domain-CLI
     ├── update.sh           # Quellen aktualisieren (repomix)
-    ├── search.sh           # ripgrep-Suche
+    ├── search.sh           # BM25-Suche
     └── status.sh           # Domain-Status
 ```
 
