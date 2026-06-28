@@ -7,3 +7,4 @@ markers = [
     "mcp: MCP contract tests calling actual tool functions (~30s)",
 ]
 addopts = "--strict-markers"
+pythonpath = [".", "scripts"]
