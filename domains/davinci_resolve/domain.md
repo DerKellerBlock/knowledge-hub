@@ -19,6 +19,10 @@ Deckt: Cut, Edit, Color, Fairlight, Fusion, Deliver, Photo (ab Resolve 21).
 | Fairlight Live User Manual | sources/fairlight-live-user-manual.md | Blackmagic PDF | 2026-06-28 |
 | Fusion 20.3 Manual | sources/fusion-20.3-manual.md | Blackmagic PDF | 2026-06-28 |
 
+## Bezugsquellen (PDF-Downloads)
+- Training: https://www.blackmagicdesign.com/products/davinciresolve/training
+- Support & Manuals: https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion
+
 ## Persönliches Wissen
 | Datei | Beschreibung |
 |-------|-------------|
