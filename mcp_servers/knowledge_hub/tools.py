@@ -5,7 +5,11 @@ import subprocess
 from datetime import datetime
 from pathlib import Path
 
-from .config import DOMAINS_DIR
+from . import config as _config
+
+# NOTE: DOMAINS_DIR is referenced dynamically via ``_config.DOMAINS_DIR`` at
+# each call site (not snapshotted here) so tests that monkeypatch
+# ``config.DOMAINS_DIR`` are observed by tools.py.
 
 import sys as _sys
 _SCRIPTS = str(Path(__file__).resolve().parent.parent.parent / "scripts")
@@ -59,11 +63,11 @@ _CATEGORY_RE = re.compile(r'^[a-z0-9_-]+$')
 
 def list_domains() -> list[str]:
     """List all available domains (folders with domain.md)."""
-    if not DOMAINS_DIR.is_dir():
+    if not _config.DOMAINS_DIR.is_dir():
         return []
     return sorted(
         d.name
-        for d in DOMAINS_DIR.iterdir()
+        for d in _config.DOMAINS_DIR.iterdir()
         if d.is_dir() and (d / "domain.md").exists()
     )
 
@@ -114,7 +118,7 @@ def get_domain_status(domain: str | None = None) -> dict:
 
     result = {}
     for d in domains:
-        domain_dir = DOMAINS_DIR / d
+        domain_dir = _config.DOMAINS_DIR / d
         sources = list(domain_dir.glob("sources/*.md")) if domain_dir.is_dir() else []
         personal = list(domain_dir.glob("personal/*.md")) if domain_dir.is_dir() else []
         has_parser = (domain_dir / "parser.py").exists()
@@ -160,7 +164,7 @@ def add_personal_note(
     if scope_error:
         return scope_error
 
-    domain_dir = DOMAINS_DIR / domain
+    domain_dir = _config.DOMAINS_DIR / domain
     if not domain_dir.is_dir():
         return {"error": f"Domain '{domain}' not found"}
 
@@ -190,7 +194,7 @@ def list_personal_notes(domain: str, category: str | None = None) -> dict:
     if scope_error:
         return scope_error
 
-    domain_dir = DOMAINS_DIR / domain
+    domain_dir = _config.DOMAINS_DIR / domain
     if not domain_dir.is_dir():
         return {"error": f"Domain '{domain}' not found"}
 
@@ -230,7 +234,7 @@ def update_domain(domain: str, rebuild_index: bool = True) -> dict:
     if scope_error:
         return scope_error
 
-    update_script = DOMAINS_DIR / domain / "scripts" / "update.sh"
+    update_script = _config.DOMAINS_DIR / domain / "scripts" / "update.sh"
     if not update_script.exists():
         return {"error": f"No update.sh found for domain '{domain}'"}
 
