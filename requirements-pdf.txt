@@ -1,0 +1,15 @@
+# Knowledge Hub — PDF Build Tool Dependencies (AGPL)
+#
+# This file is ONLY for the PDF → Markdown conversion script
+# (scripts/parse_pdf_to_markdown.py). It is NOT imported by the
+# MIT-licensed runtime code. See THIRD_PARTY_LICENSES.md.
+#
+# Installation (only needed for PDF conversion):
+#   pip install -r requirements-pdf.txt
+#
+# License: PyMuPDF and PyMuPDF4LLM are AGPL-3.0 (Artifex Software).
+# Using them via subprocess (separate script) keeps the Knowledge Hub
+# runtime MIT-licensed via the Process Boundary principle.
+
+PyMuPDF>=1.24.0,<2.0.0
+pymupdf4llm>=0.0.17,<1.0.0

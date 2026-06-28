@@ -1,39 +1,57 @@
 """Tool implementations for Knowledge Hub MCP Server."""
 
-import json
 import re
 import subprocess
 from datetime import datetime
 from pathlib import Path
 
-import chromadb
-from sentence_transformers import SentenceTransformer
+from .config import DOMAINS_DIR
 
-from .config import DOMAINS_DIR, CHROMA_DIR, SCRIPTS_DIR, PERSONAL_DIR, MODEL_NAME
-
-# ── Add scripts/ to path so we can import search modules ────────────────
 import sys as _sys
 _SCRIPTS = str(Path(__file__).resolve().parent.parent.parent / "scripts")
 if _SCRIPTS not in _sys.path:
     _sys.path.insert(0, _SCRIPTS)
 
 from hybrid_search import search as hybrid_search_fn
-from bm25_search import bm25_search, get_bm25_index_size_mb
+from bm25_search import get_bm25_index_size_mb
+from model_manager import get_chroma_client, get_domain_config
 
-# ── Lazy-loaded model ────────────────────────────────────────────────────
-_model: SentenceTransformer | None = None
+# ── Domain scoping ────────────────────────────────────────────────────────
+_SCOPED_DOMAINS: set[str] | None = None  # None = all domains visible
 
 
-def get_model() -> SentenceTransformer:
-    """Load or return cached embedding model."""
-    global _model
-    if _model is None:
-        _model = SentenceTransformer(MODEL_NAME)
-    return _model
+def set_domain_scope(domains: list[str] | None) -> None:
+    """Set the visible domains for this server instance.
+
+    Pass None or empty list to make all domains visible (backward compat).
+    Validates that scoped domains exist; raises ValueError on invalid domain.
+    """
+    global _SCOPED_DOMAINS
+    if not domains:
+        _SCOPED_DOMAINS = None
+        return
+
+    available = list_domains()
+    invalid = [d for d in domains if d not in available]
+    if invalid:
+        raise ValueError(
+            f"Domain(s) not found: {invalid}. Available: {available}"
+        )
+    _SCOPED_DOMAINS = set(domains)
+
+
+def _check_domain_scope(domain: str) -> dict | None:
+    """Return error dict if domain is out of scope, None if OK."""
+    if _SCOPED_DOMAINS is not None and domain not in _SCOPED_DOMAINS:
+        available = sorted(_SCOPED_DOMAINS)
+        return {
+            "error": f"Domain '{domain}' not available in this server scope. "
+                     f"Available: {available}"
+        }
+    return None
 
 
 # ── Domain helpers ────────────────────────────────────────────────────────
-
 
 _DOMAIN_NAME_RE = re.compile(r'^[a-z0-9_-]+$')
 _CATEGORY_RE = re.compile(r'^[a-z0-9_-]+$')
@@ -50,6 +68,14 @@ def list_domains() -> list[str]:
     )
 
 
+def list_scoped_domains() -> list[str]:
+    """List domains visible in current scope (filtered by _SCOPED_DOMAINS)."""
+    all_domains = list_domains()
+    if _SCOPED_DOMAINS is None:
+        return all_domains
+    return [d for d in all_domains if d in _SCOPED_DOMAINS]
+
+
 # ── Search ────────────────────────────────────────────────────────────────
 
 
@@ -60,11 +86,10 @@ def search_knowledge(
     max_results: int = 10,
     source_filter: list[str] | None = None,
 ) -> dict:
-    """Search a domain's knowledge (exact=BM25, semantic=ChromaDB, or hybrid).
-
-    Delegates all search logic to scripts/ (hybrid_search.py, bm25_search.py).
-    No duplicate search/ranking logic lives in tools.py.
-    """
+    """Search a domain's knowledge."""
+    scope_error = _check_domain_scope(domain)
+    if scope_error:
+        return scope_error
     return hybrid_search_fn(
         domain=domain,
         query=query,
@@ -78,34 +103,36 @@ def search_knowledge(
 
 
 def get_domain_status(domain: str | None = None) -> dict:
-    """Get status for one or all domains."""
-    domains = [domain] if domain else list_domains()
-    result = {}
+    """Get status for one or all (scoped) domains."""
+    if domain:
+        scope_error = _check_domain_scope(domain)
+        if scope_error:
+            return scope_error
+        domains = [domain]
+    else:
+        domains = list_scoped_domains()
 
+    result = {}
     for d in domains:
         domain_dir = DOMAINS_DIR / d
         sources = list(domain_dir.glob("sources/*.md")) if domain_dir.is_dir() else []
         personal = list(domain_dir.glob("personal/*.md")) if domain_dir.is_dir() else []
-
-        # Check if parser exists
         has_parser = (domain_dir / "parser.py").exists()
 
-        # Check if index exists
         index_exists = False
         index_size_mb = 0
-        if CHROMA_DIR.is_dir():
-            total = sum(
-                f.stat().st_size for f in CHROMA_DIR.rglob("*") if f.is_file()
-            )
-            index_size_mb = round(total / 1024 / 1024)
-            try:
-                client = chromadb.PersistentClient(path=str(CHROMA_DIR))
-                client.get_collection(f"{d}_knowledge")
-                index_exists = True
-            except Exception:
-                pass
+        try:
+            client = get_chroma_client(d)
+            client.get_collection(f"{d}_knowledge")
+            index_exists = True
+            cfg = get_domain_config(d)
+            chroma_path = cfg["chroma_path"]
+            if chroma_path.exists():
+                total = sum(f.stat().st_size for f in chroma_path.rglob("*") if f.is_file())
+                index_size_mb = round(total / 1024 / 1024)
+        except Exception:
+            pass
 
-        # BM25 index size
         bm25_mb = get_bm25_index_size_mb(d)
 
         result[d] = {
@@ -122,13 +149,17 @@ def get_domain_status(domain: str | None = None) -> dict:
     return result
 
 
-# ── Personal Notes ────────────────────────────────────────────────────────
+# ── Personal Notes ──────────────────────────────────────────────────────────
 
 
 def add_personal_note(
     domain: str, topic: str, content: str, category: str = "gotchas"
 ) -> dict:
     """Add a personal note to a domain's knowledge."""
+    scope_error = _check_domain_scope(domain)
+    if scope_error:
+        return scope_error
+
     domain_dir = DOMAINS_DIR / domain
     if not domain_dir.is_dir():
         return {"error": f"Domain '{domain}' not found"}
@@ -155,6 +186,10 @@ def add_personal_note(
 
 def list_personal_notes(domain: str, category: str | None = None) -> dict:
     """List personal notes for a domain."""
+    scope_error = _check_domain_scope(domain)
+    if scope_error:
+        return scope_error
+
     domain_dir = DOMAINS_DIR / domain
     if not domain_dir.is_dir():
         return {"error": f"Domain '{domain}' not found"}
@@ -191,6 +226,10 @@ def list_personal_notes(domain: str, category: str | None = None) -> dict:
 
 def update_domain(domain: str, rebuild_index: bool = True) -> dict:
     """Update a domain's knowledge sources and optionally rebuild index."""
+    scope_error = _check_domain_scope(domain)
+    if scope_error:
+        return scope_error
+
     update_script = DOMAINS_DIR / domain / "scripts" / "update.sh"
     if not update_script.exists():
         return {"error": f"No update.sh found for domain '{domain}'"}

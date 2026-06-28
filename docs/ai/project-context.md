@@ -51,3 +51,12 @@ python -m mcp_servers.knowledge_hub.server --help
 
 - **Verantwortlich:** Noah
 - **Status:** Phase 2 (Retrieval 2.0)
+
+## Update 2026-06-27: Per-Domain Isolation + DaVinci Resolve
+
+- Knowledge Hub unterstützt jetzt Per-Domain ChromaDB-Isolation.
+- MCP-Server akzeptiert `--domains` CLI-Flag für Domain-Scoping.
+- Neue Domain `davinci_resolve` mit 10 Blackmagic-PDF-Quellen.
+- AGPL Process Boundary für PyMuPDF4LLM (Build-Tool only).
+- Migration des Godot-Index in neues Layout erfolgt automatisch.
+- `nak-hopper-game` nutzt `--domains godot`, `video-blog` nutzt `--domains davinci_resolve`.

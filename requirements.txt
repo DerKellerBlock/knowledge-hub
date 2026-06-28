@@ -1,7 +1,8 @@
-# Knowledge Hub — Python Dependencies
+# Knowledge Hub — Python Dependencies (Runtime, MIT)
 #
-# Hinweis: sentence-transformers mit all-mpnet-base-v2 lädt ~420 MB
-# beim ersten pip install herunter (one-time Model-Download).
+# IMPORTANT: PyMuPDF / PyMuPDF4LLM are NOT included here.
+# They are AGPL-3.0 and only used in the build tool.
+# See requirements-pdf.txt and THIRD_PARTY_LICENSES.md.
 #
 # Installation:
 #   pip install -r requirements.txt

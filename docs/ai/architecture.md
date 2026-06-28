@@ -66,3 +66,22 @@ Neue Domain hinzufügen:
 1. `domains/<name>/` mit domain.md + Quellen anlegen
 2. `python scripts/embed_index.py --domain <name>` — Index bauen
 3. MCP-Server erkennt neue Domain automatisch (scannt `domains/` beim Start)
+
+## Per-Domain Isolation (2026-06-27)
+
+```
+chromadb_data/
+  godot/
+    chroma/                 # eigene DB
+    godot_bm25.pkl
+  davinci_resolve/
+    chroma/
+    davinci_resolve_bm25.pkl
+```
+
+Model Manager (`scripts/model_manager.py`) ist die einzige Stelle, die
+Embedding- und Reranker-Modelle lädt. Lazy-Loading, Per-Domain-Caching,
+LRU-Eviction.
+
+Domain-Scoping: `--domains` CLI-Flag auf dem MCP-Server begrenzt sichtbare
+Domains. Default (ohne Flag): alle sichtbar (rückwärtskompatibel).

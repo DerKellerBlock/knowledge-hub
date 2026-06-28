@@ -3,18 +3,24 @@
 
 Usage:
   python -m mcp_servers.knowledge_hub.server
+  python -m mcp_servers.knowledge_hub.server --domains godot
+  python -m mcp_servers.knowledge_hub.server --domains davinci_resolve
+  KNOWLEDGE_HUB_DOMAINS=godot python -m mcp_servers.knowledge_hub.server
 
 OpenCode config:
   "mcp": {
     "knowledge_hub": {
       "type": "local",
-      "command": ["python3", "-m", "mcp_servers.knowledge_hub.server"],
+      "command": ["python3", "-m", "mcp_servers.knowledge_hub.server", "--domains", "godot"],
       "enabled": true
     }
   }
 """
 
+import argparse
 import json
+import os
+import sys
 from pathlib import Path
 
 from mcp.server import Server
@@ -28,7 +34,32 @@ from .tools import (
     add_personal_note,
     list_personal_notes,
     list_domains,
+    list_scoped_domains,
+    set_domain_scope,
 )
+
+# ── CLI argument parsing (before MCP server starts) ───────────────────────
+
+
+def _parse_domains_arg() -> list[str] | None:
+    """Parse --domains CLI flag or KNOWLEDGE_HUB_DOMAINS env var.
+
+    Returns None if neither is set (all domains visible).
+    """
+    parser = argparse.ArgumentParser(add_help=False)
+    parser.add_argument("--domains", type=str, default=None,
+                        help="Comma-separated list of domains to expose")
+    args, _ = parser.parse_known_args()
+
+    if args.domains:
+        return [d.strip() for d in args.domains.split(",") if d.strip()]
+
+    env = os.environ.get("KNOWLEDGE_HUB_DOMAINS")
+    if env:
+        return [d.strip() for d in env.split(",") if d.strip()]
+
+    return None
+
 
 server = Server("knowledge-hub")
 
@@ -42,30 +73,11 @@ async def list_tools_handler() -> list[Tool]:
             inputSchema={
                 "type": "object",
                 "properties": {
-                    "domain": {
-                        "type": "string",
-                        "description": "Domain to search (e.g., 'godot')",
-                    },
-                    "query": {
-                        "type": "string",
-                        "description": "Search query (natural language)",
-                    },
-                    "mode": {
-                        "type": "string",
-                        "enum": ["exact", "semantic", "hybrid"],
-                        "description": "Search mode: exact=BM25, semantic=ChromaDB, hybrid=both",
-                        "default": "hybrid",
-                    },
-                    "max_results": {
-                        "type": "integer",
-                        "description": "Maximum number of results",
-                        "default": 10,
-                    },
-                    "source_filter": {
-                        "type": "array",
-                        "items": {"type": "string", "enum": ["repo", "personal"]},
-                        "description": "Filter by source type (repo and/or personal)",
-                    },
+                    "domain": {"type": "string", "description": "Domain to search (e.g., 'godot', 'davinci_resolve')"},
+                    "query": {"type": "string", "description": "Search query (natural language)"},
+                    "mode": {"type": "string", "enum": ["exact", "semantic", "hybrid"], "description": "Search mode: exact=BM25, semantic=ChromaDB, hybrid=both", "default": "hybrid"},
+                    "max_results": {"type": "integer", "description": "Maximum number of results", "default": 10},
+                    "source_filter": {"type": "array", "items": {"type": "string", "enum": ["repo", "personal"]}, "description": "Filter by source type (repo and/or personal)"},
                 },
                 "required": ["domain", "query"],
             },
@@ -76,10 +88,7 @@ async def list_tools_handler() -> list[Tool]:
             inputSchema={
                 "type": "object",
                 "properties": {
-                    "domain": {
-                        "type": "string",
-                        "description": "Specific domain (omitted = all domains)",
-                    },
+                    "domain": {"type": "string", "description": "Specific domain (omitted = all scoped domains)"},
                 },
             },
         ),
@@ -89,15 +98,8 @@ async def list_tools_handler() -> list[Tool]:
             inputSchema={
                 "type": "object",
                 "properties": {
-                    "domain": {
-                        "type": "string",
-                        "description": "Domain to update (e.g., 'godot')",
-                    },
-                    "rebuild_index": {
-                        "type": "boolean",
-                        "description": "Rebuild ChromaDB index after update",
-                        "default": True,
-                    },
+                    "domain": {"type": "string", "description": "Domain to update"},
+                    "rebuild_index": {"type": "boolean", "description": "Rebuild ChromaDB index after update", "default": True},
                 },
                 "required": ["domain"],
             },
@@ -108,24 +110,10 @@ async def list_tools_handler() -> list[Tool]:
             inputSchema={
                 "type": "object",
                 "properties": {
-                    "domain": {
-                        "type": "string",
-                        "description": "Domain to add to (e.g., 'godot')",
-                    },
-                    "topic": {
-                        "type": "string",
-                        "description": "Short topic title",
-                    },
-                    "content": {
-                        "type": "string",
-                        "description": "Note content (markdown)",
-                    },
-                    "category": {
-                        "type": "string",
-                        "enum": ["gotchas", "tips", "best-practices", "faq"],
-                        "description": "Category of note",
-                        "default": "gotchas",
-                    },
+                    "domain": {"type": "string", "description": "Domain to add to"},
+                    "topic": {"type": "string", "description": "Short topic title"},
+                    "content": {"type": "string", "description": "Note content (markdown)"},
+                    "category": {"type": "string", "enum": ["gotchas", "tips", "best-practices", "faq"], "description": "Category of note", "default": "gotchas"},
                 },
                 "required": ["domain", "topic", "content"],
             },
@@ -136,21 +124,15 @@ async def list_tools_handler() -> list[Tool]:
             inputSchema={
                 "type": "object",
                 "properties": {
-                    "domain": {
-                        "type": "string",
-                        "description": "Domain to list notes for (e.g., 'godot')",
-                    },
-                    "category": {
-                        "type": "string",
-                        "description": "Filter by category (gotchas, tips, best-practices, faq)",
-                    },
+                    "domain": {"type": "string", "description": "Domain to list notes for"},
+                    "category": {"type": "string", "description": "Filter by category (gotchas, tips, best-practices, faq)"},
                 },
                 "required": ["domain"],
             },
         ),
         Tool(
             name="list_domains",
-            description="List all available knowledge domains.",
+            description="List all available knowledge domains (scoped to this server).",
             inputSchema={
                 "type": "object",
                 "properties": {},
@@ -190,7 +172,7 @@ async def call_tool_handler(name: str, arguments: dict) -> list[TextContent]:
                 category=arguments.get("category"),
             )
         elif name == "list_domains":
-            domains = list_domains()
+            domains = list_scoped_domains()
             result = {"domains": domains, "count": len(domains)}
         else:
             return [TextContent(type="text", text=f"Unknown tool: {name}")]
@@ -202,11 +184,18 @@ async def call_tool_handler(name: str, arguments: dict) -> list[TextContent]:
 
 
 async def main():
+    # Parse and apply domain scoping before starting MCP loop
+    domains = _parse_domains_arg()
+    if domains:
+        print(f"[INFO]  Domain scope: {domains}", file=sys.stderr)
+        set_domain_scope(domains)
+    else:
+        print(f"[INFO]  Domain scope: ALL (no --domains flag)", file=sys.stderr)
+
     async with stdio_server() as (read_stream, write_stream):
         await server.run(read_stream, write_stream, server.create_initialization_options())
 
 
 if __name__ == "__main__":
     import asyncio
-
     asyncio.run(main())
