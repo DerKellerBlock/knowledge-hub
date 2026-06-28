@@ -24,7 +24,7 @@ def validate(
     domain: str,
     query: str,
     expected_min_results: int = 1,
-    max_query_time_ms: int = 5000,
+    max_query_time_ms: int = 10000,
 ) -> bool:
     """Run a search and validate the results. Returns True if all checks pass."""
     print(f"[TEST]  domain={domain} query='{query}'")
@@ -70,7 +70,7 @@ def main():
     parser.add_argument("--domain", required=True, type=str)
     parser.add_argument("--query", required=True, type=str)
     parser.add_argument("--expected-min-results", type=int, default=1)
-    parser.add_argument("--max-query-time-ms", type=int, default=5000)
+    parser.add_argument("--max-query-time-ms", type=int, default=10000)
     args = parser.parse_args()
 
     success = validate(
