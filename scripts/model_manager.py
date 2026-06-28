@@ -11,6 +11,7 @@ License: MIT (no PyMuPDF imports here).
 
 import gc
 import json
+import logging
 import re
 from collections import OrderedDict
 from pathlib import Path
@@ -18,6 +19,22 @@ from pathlib import Path
 import chromadb
 from chromadb.config import Settings
 from sentence_transformers import CrossEncoder, SentenceTransformer
+
+# Silence ChromaDB telemetry warnings. chromadb 1.5.x ships with an
+# incompatible posthog client signature (capture() arity mismatch), which
+# produces a noisy "Failed to send telemetry event" ERROR log on every
+# operation. The telemetry is non-essential and anonymized_telemetry=False
+# does not suppress these logs because the failure happens before the
+# telemetry-disabled guard is consulted. This filter drops messages from
+# the posthog telemetry logger specifically.
+class _ChromaTelemetryFilter(logging.Filter):
+    def filter(self, record: logging.LogRecord) -> bool:
+        return "Failed to send telemetry event" not in record.getMessage()
+
+
+logging.getLogger("chromadb.telemetry.product.posthog").addFilter(
+    _ChromaTelemetryFilter()
+)
 
 # Import config (add scripts/ + mcp_servers/knowledge_hub/ to path for standalone use)
 import sys as _sys
@@ -118,6 +135,7 @@ def get_chroma_client(domain: str) -> chromadb.PersistentClient:
             settings=Settings(
                 chroma_segment_cache_policy="LRU",
                 chroma_memory_limit_bytes=CHROMA_MEMORY_LIMIT_BYTES,
+                anonymized_telemetry=False,
             ),
         )
     return _chroma_clients[domain]
