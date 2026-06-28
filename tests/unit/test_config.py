@@ -1,0 +1,88 @@
+"""Unit tests for config.py path helpers."""
+
+from pathlib import Path
+
+from mcp_servers.knowledge_hub.config import (
+    HUB_ROOT,
+    DOMAINS_DIR,
+    SCRIPTS_DIR,
+    CHROMA_DIR,
+    PERSONAL_DIR,
+    domain_chroma_path,
+    domain_bm25_path,
+    legacy_bm25_path,
+    legacy_collection_path,
+    DEFAULT_MODEL_NAME,
+    CROSS_ENCODER_MODEL,
+    BM25_CACHE_MAX,
+    CHROMA_MEMORY_LIMIT_BYTES,
+)
+
+
+def test_hub_root_is_absolute():
+    assert HUB_ROOT.is_absolute()
+    assert HUB_ROOT.name == "knowledge-hub"
+
+
+def test_domains_dir_under_hub_root():
+    assert DOMAINS_DIR == HUB_ROOT / "domains"
+
+
+def test_scripts_dir_under_hub_root():
+    assert SCRIPTS_DIR == HUB_ROOT / "scripts"
+
+
+def test_chroma_dir_under_hub_root():
+    assert CHROMA_DIR == HUB_ROOT / "chromadb_data"
+
+
+def test_domain_chroma_path_godot():
+    p = domain_chroma_path("godot")
+    assert p == CHROMA_DIR / "godot" / "chroma"
+
+
+def test_domain_chroma_path_davinci_resolve():
+    p = domain_chroma_path("davinci_resolve")
+    assert p == CHROMA_DIR / "davinci_resolve" / "chroma"
+
+
+def test_domain_chroma_path_arbitrary():
+    p = domain_chroma_path("my_domain")
+    assert p == CHROMA_DIR / "my_domain" / "chroma"
+
+
+def test_domain_bm25_path_godot():
+    p = domain_bm25_path("godot")
+    assert p == CHROMA_DIR / "godot" / "godot_bm25.pkl"
+
+
+def test_domain_bm25_path_davinci_resolve():
+    p = domain_bm25_path("davinci_resolve")
+    assert p == CHROMA_DIR / "davinci_resolve" / "davinci_resolve_bm25.pkl"
+
+
+def test_legacy_bm25_path():
+    assert legacy_bm25_path("godot") == CHROMA_DIR / "godot_bm25.pkl"
+
+
+def test_legacy_collection_path():
+    assert legacy_collection_path("godot") == CHROMA_DIR / "godot_knowledge"
+
+
+def test_default_model_name_is_string():
+    assert isinstance(DEFAULT_MODEL_NAME, str)
+    assert len(DEFAULT_MODEL_NAME) > 0
+
+
+def test_cross_encoder_model_is_string():
+    assert isinstance(CROSS_ENCODER_MODEL, str)
+
+
+def test_bm25_cache_max_is_positive_int():
+    assert isinstance(BM25_CACHE_MAX, int)
+    assert BM25_CACHE_MAX > 0
+
+
+def test_chroma_memory_limit_is_bytes():
+    assert isinstance(CHROMA_MEMORY_LIMIT_BYTES, int)
+    assert CHROMA_MEMORY_LIMIT_BYTES > 0
