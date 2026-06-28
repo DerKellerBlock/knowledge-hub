@@ -2,22 +2,15 @@
 """
 Hybrid search: BM25 (sparse) + ChromaDB (dense) → RRF fusion → Cross-Encoder rerank.
 
+Per-Domain isolated: each domain has its own ChromaDB client and BM25 index.
+Models loaded via model_manager (lazy, cached).
+
 Usage:
   python scripts/hybrid_search.py --domain godot --query "rotate Node3D Y axis" --top 10
-  python scripts/hybrid_search.py --domain godot --query "gravity" --json
-
-Algorithm (two-stage retrieval):
-  Stage 1: BM25 (sparse) + ChromaDB (dense) — parallel, up to 100 candidates each
-           RRF-Fusion (Reciprocal Rank Fusion, k=60) → ~20-50 unified candidates
-  Stage 2: Cross-Encoder (ms-marco-MiniLM-L-12-v2) reranks candidates → Top-k
-
-Modes:
-  exact    → BM25 only
-  semantic → ChromaDB only
-  hybrid   → BM25 + ChromaDB + Cross-Encoder (default)
 """
 
 import argparse
+import gc
 import json
 import logging
 import sys
@@ -25,19 +18,18 @@ import time
 from pathlib import Path
 
 import chromadb
-from sentence_transformers import SentenceTransformer
 
+import sys as _sys
+_pkg_root = Path(__file__).resolve().parent.parent
+if str(_pkg_root) not in _sys.path:
+    _sys.path.insert(0, str(_pkg_root))
+from model_manager import get_embedder, get_chroma_client, is_reranker_available
 from embed_search import semantic_search
 from bm25_search import bm25_search
-from reranker import rerank, is_reranker_available
+from reranker import rerank
 
 logging.basicConfig(level=logging.WARNING)
 logger = logging.getLogger(__name__)
-
-HUB_ROOT = Path(__file__).resolve().parent.parent
-DOMAINS_DIR = HUB_ROOT / "domains"
-CHROMA_DIR = HUB_ROOT / "chromadb_data"
-MODEL_NAME = "all-mpnet-base-v2"
 
 
 def rrf_fusion(
@@ -46,16 +38,10 @@ def rrf_fusion(
     k: int = 60,
     top_n: int = 50,
 ) -> list[dict]:
-    """Reciprocal Rank Fusion for BM25 and Dense results.
-
-    Both input lists must have "chunk_id" keys.
-    Dense results must also have "text" (for downstream reranking).
-    Returns unified list with "text", "score" (RRF), "stage1_sources" fields.
-    """
+    """Reciprocal Rank Fusion for BM25 and Dense results."""
     scores: dict[str, float] = {}
     meta: dict[str, dict] = {}
 
-    # Sparse (BM25) results
     for i, r in enumerate(sparse_results):
         cid = r["chunk_id"]
         rank = i + 1
@@ -65,10 +51,9 @@ def rrf_fusion(
                 "chunk_id": cid,
                 "stage1_sources": ["bm25"],
                 "bm25_score": r.get("score", 0),
-                "text": "",  # will be filled from dense results or ChromaDB
+                "text": "",
             }
 
-    # Dense (semantic) results
     for i, r in enumerate(dense_results):
         cid = r["chunk_id"]
         rank = i + 1
@@ -89,19 +74,20 @@ def rrf_fusion(
                 "name": r.get("name"),
                 "signature": r.get("signature"),
                 "inherits_from": r.get("inherits_from"),
+                "page_start": r.get("page_start"),
+                "page_end": r.get("page_end"),
+                "section_path": r.get("section_path"),
             }
         else:
             meta[cid]["stage1_sources"].append("semantic")
-            # Merge ALL fields from dense result (dense has richer metadata)
             for key, value in r.items():
                 if key in ("chunk_id", "stage1_sources"):
                     continue
                 if value is not None and (meta[cid].get(key) is None or key == "text"):
                     if key == "text" and meta[cid].get("text"):
-                        continue  # keep existing text
+                        continue
                     meta[cid][key] = value
 
-    # Sort by RRF score
     ranked = sorted(scores.items(), key=lambda x: x[1], reverse=True)[:top_n]
 
     results = []
@@ -116,18 +102,15 @@ def rrf_fusion(
 
 
 def _resolve_texts_via_chromadb(domain: str, results: list[dict]) -> None:
-    """Fill missing 'text' fields by querying ChromaDB in one batch.
-
-    Some entries may have come from BM25 only (no text). We batch-lookup
-    their texts from ChromaDB so the cross-encoder has text to work with.
-    """
+    """Fill missing 'text' fields by querying ChromaDB in one batch."""
     missing_ids = [r["chunk_id"] for r in results if not r.get("text")]
     if not missing_ids:
         return
 
     try:
-        client = chromadb.PersistentClient(path=str(CHROMA_DIR))
-        collection = client.get_collection(f"{domain}_knowledge")
+        client = get_chroma_client(domain)
+        collection_name = f"{domain}_knowledge"
+        collection = client.get_collection(collection_name)
         batch_result = collection.get(
             ids=missing_ids, include=["documents", "metadatas"]
         )
@@ -147,7 +130,6 @@ def _resolve_texts_via_chromadb(domain: str, results: list[dict]) -> None:
                 r["source_file"] = r.get("source_file") or meta.get("source_file", "")
                 r["line_start"] = r.get("line_start") or meta.get("line_start", 0)
                 r["line_end"] = r.get("line_end") or meta.get("line_end", 0)
-                # Backfill structured fields from ChromaDB metadata
                 r["chunk_type"] = r.get("chunk_type") or meta.get("chunk_type")
                 r["class_name"] = r.get("class_name") or meta.get("class_name")
                 r["name"] = r.get("name") or meta.get("name")
@@ -157,6 +139,9 @@ def _resolve_texts_via_chromadb(domain: str, results: list[dict]) -> None:
                         r["inherits_from"] = json.loads(meta["inherits_from"])
                     except (json.JSONDecodeError, TypeError):
                         pass
+                r["page_start"] = r.get("page_start") or meta.get("page_start")
+                r["page_end"] = r.get("page_end") or meta.get("page_end")
+                r["section_path"] = r.get("section_path") or meta.get("section_path")
     except Exception as e:
         logger.warning(f"Failed to resolve texts via ChromaDB: {e}")
 
@@ -168,23 +153,11 @@ def search(
     top_k: int = 10,
     source_filter: list[str] | None = None,
 ) -> dict:
-    """Search knowledge in a domain.
-
-    Args:
-        domain: Domain name (e.g. 'godot')
-        query: Search query string
-        mode: 'exact' (BM25), 'semantic' (ChromaDB), or 'hybrid' (both + rerank)
-        top_k: Max number of results to return
-        source_filter: Optional filter by source_type ['repo', 'personal']
-
-    Returns:
-        {"results": [...], "total_found": int, "mode": str, "query_time_ms": int}
-    """
+    """Search knowledge in a domain."""
     t0 = time.time()
 
     if mode == "exact":
         results = bm25_search(domain, query, top_k=top_k)
-        # Enrich BM25 results with text from ChromaDB
         _resolve_texts_via_chromadb(domain, results)
         total = len(results)
         if source_filter:
@@ -197,7 +170,7 @@ def search(
         }
 
     if mode == "semantic":
-        model = SentenceTransformer(MODEL_NAME)
+        model = get_embedder(domain)
         results = semantic_search(domain, query, top_k, model)
         total = len(results)
         if source_filter:
@@ -209,23 +182,18 @@ def search(
             "query_time_ms": int((time.time() - t0) * 1000),
         }
 
-    # Hybrid: Stage 1 (BM25 + Dense) → RRF → Stage 2 (Cross-Encoder)
-    model = SentenceTransformer(MODEL_NAME)
+    # Hybrid
+    model = get_embedder(domain)
     bm25_results = bm25_search(domain, query, top_k=100)
     dense_results = semantic_search(domain, query, 100, model)
 
-    # Apply source filter early (before fusion)
     if source_filter:
         bm25_results = [r for r in bm25_results if r.get("source_type") in source_filter]
         dense_results = [r for r in dense_results if r.get("source_type") in source_filter]
 
-    # RRF fusion
     fused = rrf_fusion(bm25_results, dense_results, k=60, top_n=50)
-
-    # Resolve texts for BM25-only entries
     _resolve_texts_via_chromadb(domain, fused)
 
-    # Stage 2: Cross-Encoder reranking
     if is_reranker_available() and len(fused) > top_k:
         try:
             fused = rerank(query, fused, top_k=top_k)
@@ -244,20 +212,15 @@ def search(
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Hybrid search (BM25 + ChromaDB + Cross-Encoder)"
-    )
-    parser.add_argument("--domain", type=str, required=True, help="Domain to search")
-    parser.add_argument("--query", type=str, required=True, help="Search query")
-    parser.add_argument("--mode", type=str, default="hybrid",
-                        choices=["exact", "semantic", "hybrid"])
-    parser.add_argument("--top", type=int, default=10, help="Max results")
-    parser.add_argument("--json", action="store_true", help="Output as JSON")
-
+    parser = argparse.ArgumentParser(description="Hybrid search (BM25 + ChromaDB + Cross-Encoder)")
+    parser.add_argument("--domain", type=str, required=True)
+    parser.add_argument("--query", type=str, required=True)
+    parser.add_argument("--mode", type=str, default="hybrid", choices=["exact", "semantic", "hybrid"])
+    parser.add_argument("--top", type=int, default=10)
+    parser.add_argument("--json", action="store_true")
     args = parser.parse_args()
 
     print(f"[INFO]  Hybrid search in '{args.domain}': {args.query} (mode={args.mode})")
-
     result = search(args.domain, args.query, mode=args.mode, top_k=args.top)
 
     if args.json:
@@ -271,8 +234,7 @@ def main():
             text = r.get("text", "")[:5000]
             print(f"  {text}...")
 
-    print(f"\n[INFO]  Found {result['total_found']} results "
-          f"in {result['query_time_ms']}ms")
+    print(f"\n[INFO]  Found {result['total_found']} results in {result['query_time_ms']}ms")
 
 
 if __name__ == "__main__":
