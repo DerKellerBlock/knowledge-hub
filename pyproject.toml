@@ -1,0 +1,9 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "unit: fast isolated tests, no models/DB loaded (< 10s)",
+    "integration: tests with a temporary ChromaDB and dummy data (~60s)",
+    "e2e: regression tests against the prebuilt real index (~30s)",
+    "mcp: MCP contract tests calling actual tool functions (~30s)",
+]
+addopts = "--strict-markers"
