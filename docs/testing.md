@@ -54,11 +54,10 @@ E2E tests automatically skip if the index directory doesn't exist.
 
 ## Known Gaps
 
-- **`test_davinci_search_returns_pdf_metadata`** (xfail): The DaVinci index
-  lacks `page_start` metadata because `parse_pdf_to_markdown.py` does not
-  embed PDF page numbers into the markdown output, and `embed_index.py`
-  does not set `page_start` for fallback-chunked markdown. This is a tracked
-  gap in the PDF→index pipeline, not a test bug.
+None currently. The `page_start`/`page_end` metadata gap was fixed by
+enabling `page_separators=True` in `parse_pdf_to_markdown.py` and
+extending `fallback_chunk()` to extract page numbers from the
+`--- end of page=N ---` markers.
 
 ## Coverage
 
