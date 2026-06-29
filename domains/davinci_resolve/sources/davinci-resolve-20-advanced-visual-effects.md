@@ -50,8 +50,16 @@
   - Lesson Review (p.218)
 - Index (p.220)
 -->
+
+
+--- end of page=0 ---
+
 ## Advanced Visual Effects in
 
+
+
+
+--- end of page=1 ---
 
 **Advanced Visual Effects in DaVinci Resolve 20**
 
@@ -126,6 +134,10 @@ registered trademark of Microsoft Inc., registered in the U.S. and other countri
 
 ISBN 13: 979-8-9924874-5-9
 
+
+
+
+--- end of page=2 ---
 
 ## **Contents**
 
@@ -207,6 +219,10 @@ Magically Creating a Mask 97
 **Contents** **iii**
 
 
+
+
+--- end of page=3 ---
+
 Adding Reflections 105
 
 Correcting Color in Fusion 109
@@ -264,6 +280,10 @@ Index 201
 **Contents** **iv**
 
 
+
+
+--- end of page=4 ---
+
 ## **Foreword**
 
 **Welcome to Advanced Visual Effects in DaVinci Resolve 20.**
@@ -315,6 +335,10 @@ Blackmagic Design
 **Foreword** **v**
 
 
+
+
+--- end of page=5 ---
+
 ## **Acknowledgments**
 
 We would like to thank the following individuals for their contributions of media and
@@ -349,6 +373,10 @@ held the position of Senior Product Manager for Pro Applications at Apple Inc.
 **About the Authors** **vi**
 
 
+
+
+--- end of page=6 ---
+
 ## **Who This Book Is For**
 
 This hands-on training guide is designed for DaVinci Resolve editors, colorists, and visual
@@ -378,6 +406,10 @@ which can be purchased from [www.blackmagicdesign.com.](http://www.blackmagicdes
 
 **Who This Book Is For** **vii**
 
+
+
+
+--- end of page=7 ---
 
 ## **Getting Started**
 
@@ -444,6 +476,10 @@ real-world skills that you can apply to real-world productions.
 
 **Getting Started** **viii**
 
+
+
+
+--- end of page=8 ---
 
 Lesson 1 is an introductory lesson that allows students who are new to 3D compositing to
 
@@ -538,6 +574,10 @@ training program includes a learning path for you.
 **Getting Started** **ix**
 
 
+
+
+--- end of page=9 ---
+
 ##### **Getting Certified**
 
 After completing this book, you are encouraged to take the 1-hour, 50-question online
@@ -603,6 +643,10 @@ section to download the content for this book.
 **Getting Started** **x**
 
 
+
+
+--- end of page=10 ---
+
 ##### **DaVinci Resolve 20 Quick Setup**
 
 When DaVinci Resolve 20 is successfully installed, you can launch the application for the
@@ -631,6 +675,10 @@ detailing the new features available in the current version.
 **Getting Started** **xi**
 
 
+
+
+--- end of page=11 ---
+
 **1** If required, you can change the language used. You can also learn more about these
 
 and hundreds of other amazing features available in DaVinci Resolve 20 by clicking
@@ -650,6 +698,10 @@ how Resolve is working.
 **Getting Started** **xii**
 
 
+
+
+--- end of page=12 ---
+
 **2** Click the Quick Setup button.
 
 
@@ -660,6 +712,10 @@ card will perform well. If both pass this test, click Continue.
 
 **Getting Started** **xiii**
 
+
+
+
+--- end of page=13 ---
 
 Next, you will be asked what type of project you would like to begin. DaVinci Resolve
 
@@ -686,6 +742,10 @@ Videos folder (Windows).
 **Getting Started** **xiv**
 
 
+
+
+--- end of page=14 ---
+
 **5** Leave this set to the default location and click Continue.
 
 
@@ -703,6 +763,10 @@ this point, you may find those shortcuts won’t work.
 **Getting Started** **xv**
 
 
+
+
+--- end of page=15 ---
+
 **6** For now, leave the layout set to DaVinci Resolve and click Continue.
 
 
@@ -719,6 +783,10 @@ well as you continue learning about the application and how it uses your system.
 
 **Getting Started** **xvi**
 
+
+
+
+--- end of page=16 ---
 
 Once loaded, DaVinci Resolve will open to the cut page, which is the default starting
 
@@ -782,6 +850,10 @@ You are now ready to begin Lesson 1.
 
 **Getting Started** **xvii**
 
+
+
+
+--- end of page=17 ---
 
 ## **Introducing Blackmagic Cloud**
 
@@ -853,6 +925,10 @@ To find out more about these exciting workflows, visit
 **Introducing Blackmagic Cloud** **xviii**
 
 
+
+
+--- end of page=18 ---
+
 ### Lesson 1
 # Creating a 3D Scene
 
@@ -920,6 +996,10 @@ Converting 3D into a 2D Image 33
 Lesson Review 39
 
 
+
+
+--- end of page=19 ---
+
 This lesson introduces you to the basic construction of a 3D scene by creating a simple
 
 “3D card”-type flythrough. Flat 2D images (or “cards”) are placed in 3D space, arranged at
@@ -963,6 +1043,10 @@ the node trees.
 
 **Lesson 1 Creating a 3D Scene** **2**
 
+
+
+
+--- end of page=20 ---
 
 **1** Open DaVinci Resolve, right-click in the Project Manager, and choose Restore
 
@@ -1015,6 +1099,10 @@ to its default state, which should (mostly) match the layout used in this book.
 **Lesson 1 Creating a 3D Scene** **3**
 
 
+
+
+--- end of page=21 ---
+
 **7** Right-click the Wildlife Open clip in the bin and choose Open in Fusion Page.
 
 
@@ -1052,6 +1140,10 @@ connecting to an Image Plane 3D node or a Shape 3D node.
 
 **Lesson 1 Creating a 3D Scene** **4**
 
+
+
+
+--- end of page=22 ---
 
 **11** With the SUNSET node selected, open the Effects Library, and from the Tools > 3D
 
@@ -1095,6 +1187,10 @@ close the media pool again.
 **Lesson 1 Creating a 3D Scene** **5**
 
 
+
+
+--- end of page=23 ---
+
 **15** With the GIRAFFE node selected, press Shift-Spacebar and type **image** to add an
 
 Image Plane 3D to the Node Editor.
@@ -1118,6 +1214,10 @@ Merge 3D node just by connecting the output of two 3D nodes.
 
 **Lesson 1 Creating a 3D Scene** **6**
 
+
+
+
+--- end of page=24 ---
 
 **17** Drag the output of GIRAFFE’s Image Plane 3D node to the output of SUNSET’s Image
 
@@ -1155,6 +1255,10 @@ By using a value above 0.0, you’ve moved the giraffe in front of our sunset ba
 **Lesson 1 Creating a 3D Scene** **7**
 
 
+
+
+--- end of page=25 ---
+
 ## **Navigating in 3D**
 
 Since the Z translation value determines the layer order, it is extremely important that you
@@ -1191,6 +1295,10 @@ number of inputs.
 
 **Lesson 1 Creating a 3D Scene** **8**
 
+
+
+
+--- end of page=26 ---
 
 In Fusion’s 3D world, the origin point of the coordinate system is in the center of the
 
@@ -1231,6 +1339,10 @@ them more appropriately.
 **Lesson 1 Creating a 3D Scene** **9**
 
 
+
+
+--- end of page=27 ---
+
 Although the actual values don’t really matter, and the current values may result in
 
 small animals in our viewer, the values we used create a nicely dispersed group of
@@ -1260,6 +1372,10 @@ to the right until the X translation in the Inspector is between 0.1 and 0.15.
 **Lesson 1 Creating a 3D Scene** **10**
 
 
+
+
+--- end of page=28 ---
+
 Sometimes, objects might be outside the viewer’s display or obscured by other
 
 elements, making onscreen controls difficult to use. Although you could use the
@@ -1277,6 +1393,10 @@ the viewer until the lion is fully visible in the viewer.
 
 **Lesson 1 Creating a 3D Scene** **11**
 
+
+
+
+--- end of page=29 ---
 
 **9** Select the LION’s Image Plane 3D node and drag the green Y translation down until
 
@@ -1329,6 +1449,10 @@ Now, let’s return to a default starting point and continue building our 3D sce
 **Lesson 1 Creating a 3D Scene** **12**
 
 
+
+
+--- end of page=30 ---
+
 **11** Right-click in viewer 1 and choose Settings > Load Defaults to return the perspective
 
 view to the default angle.
@@ -1350,6 +1474,10 @@ are essential activities when compositing a 3D scene.
 
 **Lesson 1 Creating a 3D Scene** **13**
 
+
+
+
+--- end of page=31 ---
 
 ## **Using 3D Text**
 
@@ -1407,6 +1535,10 @@ of elements connected to a different Merge 3D.
 **Lesson 1 Creating a 3D Scene** **14**
 
 
+
+
+--- end of page=32 ---
+
 **3** From the toolbar, click the Text3D node to add it to the Node Editor, connected to the
 
 Merge3D2 node.
@@ -1431,6 +1563,10 @@ As with 2D text, you can assign a font, size, and other text properties to your 
 
 **Lesson 1 Creating a 3D Scene** **15**
 
+
+
+
+--- end of page=33 ---
 
 **7** Set the typeface to Open Sans Extra Bold and the Size to 0.03.
 
@@ -1469,6 +1605,10 @@ things next.
 
 **Lesson 1 Creating a 3D Scene** **16**
 
+
+
+
+--- end of page=34 ---
 
 ##### **Applying Materials to Text3D**
 
@@ -1513,6 +1653,10 @@ Material 3D node.
 **Lesson 1 Creating a 3D Scene** **17**
 
 
+
+
+--- end of page=35 ---
+
 **7** Drag the output of the Chrome template to the green Material input on the Replace
 
 Material 3D.
@@ -1543,6 +1687,10 @@ settings work well enough for our scene.
 
 **Lesson 1 Creating a 3D Scene** **18**
 
+
+
+
+--- end of page=36 ---
 
 ## **Setting Up a Camera**
 
@@ -1585,6 +1733,10 @@ the camera.
 **Lesson 1 Creating a 3D Scene** **19**
 
 
+
+
+--- end of page=37 ---
+
 **3** In the lower left corner of viewer 2, right-click over the axis control and choose
 
 Camera3D1 from the context menu.
@@ -1620,6 +1772,10 @@ view, but the bottom edge of the foreground element is not visible in viewer 2.
 
 **Lesson 1 Creating a 3D Scene** **20**
 
+
+
+
+--- end of page=38 ---
 
 It’s important to remember that if you move or rotate the view in the viewer with the
 
@@ -1663,6 +1819,10 @@ the focal distance setting, you adjust the Focal Plane slider in the Inspector.
 **Lesson 1 Creating a 3D Scene** **21**
 
 
+
+
+--- end of page=39 ---
+
 **7** While viewing viewer 1’s Perspective view, drag the Focal Plane slider to the left until
 
 the green rectangle is near the same location as the 3D text.
@@ -1694,6 +1854,10 @@ It will be easier to view our scene if we quickly switch to single-viewer mode.
 
 **Lesson 1 Creating a 3D Scene** **22**
 
+
+
+
+--- end of page=40 ---
 
 **11** Above viewer 2, click the Single-Viewer Mode button.
 
@@ -1743,6 +1907,10 @@ the sunset graphic and text.
 **Lesson 1 Creating a 3D Scene** **23**
 
 
+
+
+--- end of page=41 ---
+
 **4** Move the Z translation back as far as possible without exposing the bottom line of the
 
 FOREGROUND graphic. This will likely end up with a Z translation value of around 1.5.
@@ -1780,6 +1948,10 @@ arrow in viewer 1.
 **Lesson 1 Creating a 3D Scene** **24**
 
 
+
+
+--- end of page=42 ---
+
 TIP When a 3D object (including a camera or light) is selected, pressing W
 
 while your mouse pointer is over a viewer will change the onscreen
@@ -1814,6 +1986,10 @@ Spline Editor.
 
 **Lesson 1 Creating a 3D Scene** **25**
 
+
+
+
+--- end of page=43 ---
 
 **11** Click the keyframe at frame 80, and then in the lower right toolbar of the Spline editor,
 
@@ -1852,6 +2028,10 @@ in Fusion.
 **Lesson 1 Creating a 3D Scene** **26**
 
 
+
+
+--- end of page=44 ---
+
 **3** In the Light subcategory, click the Ambient Light tool to add it to the Node Editor,
 
 connected to the Merge3D1 node.
@@ -1873,6 +2053,10 @@ between 0.5 and 0.8 to brighten the scene.
 
 **Lesson 1 Creating a 3D Scene** **27**
 
+
+
+
+--- end of page=45 ---
 
 The ambient light provides overall lighting but hasn’t affected our 3D text. Unlike
 
@@ -1914,6 +2098,10 @@ Sunset graphic until it illuminates our text.
 **Lesson 1 Creating a 3D Scene** **28**
 
 
+
+
+--- end of page=46 ---
+
 To have the spotlight appear as if it is lighting our text from above, you can use a
 
 combination of the Y translation and rotation.
@@ -1931,6 +2119,10 @@ controls to rotation wheels.
 **Lesson 1 Creating a 3D Scene** **29**
 
 
+
+
+--- end of page=47 ---
+
 **11** Drag the red X rotation wheel until the spotlight shines down on our text.
 
 
@@ -1941,6 +2133,10 @@ softer, more localized spot on the text.
 
 **Lesson 1 Creating a 3D Scene** **30**
 
+
+
+
+--- end of page=48 ---
 
 Currently, our spotlight is illuminating both the background Sunset graphic and the
 
@@ -1975,6 +2171,10 @@ you must isolate those objects on their own separate Merge 3D node.
 
 **Lesson 1 Creating a 3D Scene** **31**
 
+
+
+
+--- end of page=49 ---
 
 Now, you should see the ambient light illuminate our entire scene because we’ve
 
@@ -2044,6 +2244,10 @@ casting shadows.
 **Lesson 1 Creating a 3D Scene** **32**
 
 
+
+
+--- end of page=50 ---
+
 ## **Converting 3D into a 2D Image**
 
 Every 3D scene ends with a Renderer 3D node that converts the 3D environment into a 2D
@@ -2073,6 +2277,10 @@ Inspector to see the Renderer 3D icon.
 
 **Lesson 1 Creating a 3D Scene** **33**
 
+
+
+
+--- end of page=51 ---
 
 The Renderer 3D is set to render the camera by default, so you are all set there.
 
@@ -2123,6 +2331,10 @@ directional and ambient lights.
 
 **Lesson 1 Creating a 3D Scene** **34**
 
+
+
+
+--- end of page=52 ---
 
 One last check is to ensure the Renderer 3D is set to output the correct resolution for
 
@@ -2175,6 +2387,10 @@ the more of the image remains in focus.
 **Lesson 1 Creating a 3D Scene** **35**
 
 
+
+
+--- end of page=53 ---
+
 **3** Decrease the amount of DoF blur to 0.005 and play through the animation to
 
 preview it.
@@ -2193,6 +2409,10 @@ you need to change the focal point as the camera moves.
 
 **Lesson 1 Creating a 3D Scene** **36**
 
+
+
+
+--- end of page=54 ---
 
 TIP If necessary, in viewer 1, hold down the Command (macOS) or Ctrl
 
@@ -2235,6 +2455,10 @@ you’ll need to keyframe the plane of focus.
 **Lesson 1 Creating a 3D Scene** **37**
 
 
+
+
+--- end of page=55 ---
+
 **10** Click the Keyframe button to the right of the Focal Plane slider.
 
 **11** Move to frame 80 in the render range and adjust the Focal Plane slider again to be
@@ -2269,6 +2493,10 @@ applied or continue with standard 2D composition of other elements. You can even
 **Lesson 1 Creating a 3D Scene** **38**
 
 
+
+
+--- end of page=56 ---
+
 multiple 3D and 2D sections within a single composite, which makes complex compositing
 
 much easier.
@@ -2298,6 +2526,10 @@ cannot be connected to a Merge 3D node that already has objects connected.
 **Lesson 1 Creating a 3D Scene** **39**
 
 
+
+
+--- end of page=57 ---
+
 ##### **Answers**
 
 **1** True. A MediaIn node must go through a Shape 3D node or an Image Plane 3D node
@@ -2321,6 +2553,10 @@ A 2D scene uses x = 0.5 and y = 0.5 as the center of the viewer.
 
 **Lesson 1 Creating a 3D Scene** **40**
 
+
+
+
+--- end of page=58 ---
 
 ### Lesson 2
 # Exploring a Green- Screen Workflow
@@ -2377,6 +2613,10 @@ Reflection 72
 Lesson Review 83
 
 
+
+
+--- end of page=59 ---
+
 By the end of this lesson, you will not only have sharpened your compositing skills, but you
 
 will also have had a first look at how 2D and 3D can work together, unlocking new creative
@@ -2421,6 +2661,10 @@ This lesson will use the Fusion 20 Delta Keyer archive.
 
 **Lesson 2 Exploring a Green-Screen Workflow** **42**
 
+
+
+
+--- end of page=60 ---
 
 **3** Select the **Fusion20DeltaKeyer.dra** file and click Open to add the archived project to
 
@@ -2474,6 +2718,10 @@ handle the rest.
 **Lesson 2 Exploring a Green-Screen Workflow** **43**
 
 
+
+
+--- end of page=61 ---
+
 **7** Choose File > Project Settings, and in the sidebar, click the Color
 
 Management category.
@@ -2521,6 +2769,10 @@ for your delivery.
 **Lesson 2 Exploring a Green-Screen Workflow** **44**
 
 
+
+
+--- end of page=62 ---
+
 TIP If you don’t have a calibrated HD display connected to your computer
 
 when creating visual effects, it is more common to set the output color space
@@ -2561,6 +2813,10 @@ using the media pool.
 
 **Lesson 2 Exploring a Green-Screen Workflow** **45**
 
+
+
+
+--- end of page=63 ---
 
 **13** Position the playhead over the Fusion clip and press Shift-5 to enter the Fusion page.
 
@@ -2616,8 +2872,16 @@ setting that you configured in the Color Management Project Settings.
 **Lesson 2 Exploring a Green-Screen Workflow** **46**
 
 
+
+
+--- end of page=64 ---
+
 **Lesson 2 Exploring a Green-Screen Workflow** **47**
 
+
+
+
+--- end of page=65 ---
 
 You can see this in action when applying the same color correction to two versions
 
@@ -2675,6 +2939,10 @@ which overlaps some of the nodes.
 **Lesson 2 Exploring a Green-Screen Workflow** **48**
 
 
+
+
+--- end of page=66 ---
+
 **2** Press 1 to view the GreenScreen node in viewer 1, and then click in the viewer and
 
 press R to view the red channel.
@@ -2695,6 +2963,10 @@ channels, as you can clearly see on the back seats as we view the red channel.
 
 **Lesson 2 Exploring a Green-Screen Workflow** **49**
 
+
+
+
+--- end of page=67 ---
 
 Fusion includes a Noise Reduction node that uses the same temporal, spatial, and
 
@@ -2750,6 +3022,10 @@ is to lose detail.
 
 **Lesson 2 Exploring a Green-Screen Workflow** **50**
 
+
+
+
+--- end of page=68 ---
 
 **8** Increase the temporal threshold to 1.0.
 
@@ -2817,6 +3093,10 @@ connected to the Noise Reduction node.
 **Lesson 2 Exploring a Green-Screen Workflow** **51**
 
 
+
+
+--- end of page=69 ---
+
 **1** Press Shift-Spacebar and type **Delta** to add a Delta Keyer to the Noise Reduction node.
 
 
@@ -2839,6 +3119,10 @@ and the defroster grid lines on the back window.
 **Lesson 2 Exploring a Green-Screen Workflow** **52**
 
 
+
+
+--- end of page=70 ---
+
 **4** To view the alpha channel or the matte created by the Delta Keyer in Viewer 1, click in
 
 the viewer and press A.
@@ -2857,6 +3141,10 @@ or Ctrl key (Windows) as you scroll the middle mouse to zoom in to the passenger
 
 **Lesson 2 Exploring a Green-Screen Workflow** **53**
 
+
+
+
+--- end of page=71 ---
 
 The viewer shows what is probably the finest detailed area in the matte, the
 
@@ -2902,6 +3190,10 @@ or even the paint node, but you can also use another Delta Keyer.
 
 **Lesson 2 Exploring a Green-Screen Workflow** **54**
 
+
+
+
+--- end of page=72 ---
 
 NOTE In this exercise, we won’t provide exact values for every parameter. Keying
 
@@ -2953,6 +3245,10 @@ in the viewer.
 **Lesson 2 Exploring a Green-Screen Workflow** **55**
 
 
+
+
+--- end of page=73 ---
+
 Typically, people will instantly try to refine the matte. While that isn’t a terrible idea,
 
 there is a large area at the bottom half of the shot that can be handled immediately
@@ -3003,6 +3299,10 @@ balancing acts between maximizing the adjustment and ruining your matte.
 
 **Lesson 2 Exploring a Green-Screen Workflow** **56**
 
+
+
+
+--- end of page=74 ---
 
 **12** Increase the Gain slider above a quarter of the way to the right and then drag the
 
@@ -3063,6 +3363,10 @@ make a single keyer do all the work.
 **Lesson 2 Exploring a Green-Screen Workflow** **57**
 
 
+
+
+--- end of page=75 ---
+
 **1** Click in an empty area near the Delta_Edge node and add a third Delta Keyer.
 
 **2** Select the third Delta Keyer and rename it **Delta_Window** .
@@ -3087,6 +3391,10 @@ bit and the high threshold down about 20%.
 **Lesson 2 Exploring a Green-Screen Workflow** **58**
 
 
+
+
+--- end of page=76 ---
+
 Because we are only interested in working on the small window to the right of the
 
 driver’s head, we’ll use a mask to restrict this key to that area.
@@ -3103,6 +3411,10 @@ as possible.
 
 **Lesson 2 Exploring a Green-Screen Workflow** **59**
 
+
+
+
+--- end of page=77 ---
 
 You can see that this hasn’t created a perfect matte for our hair and window. As with
 
@@ -3134,6 +3446,10 @@ modify the strength of the matte for any of the regions.
 **Lesson 2 Exploring a Green-Screen Workflow** **60**
 
 
+
+
+--- end of page=78 ---
+
 **11** Adjust both viewers so you are zoomed in to the side of the driver’s head where you
 
 are keying.
@@ -3163,6 +3479,10 @@ small amounts to see if you can improve the wisps of hair even more.
 
 **Lesson 2 Exploring a Green-Screen Workflow** **61**
 
+
+
+
+--- end of page=79 ---
 
 **14** Drag the output from the Delta_Window node to the green foreground input on the
 
@@ -3217,6 +3537,10 @@ Edge node.
 **Lesson 2 Exploring a Green-Screen Workflow** **62**
 
 
+
+
+--- end of page=80 ---
+
 **2** In the Mask tab, set the Solid Replace Mode to Source.
 
 
@@ -3256,6 +3580,10 @@ In our case, we want to adjust the saturation of the green hue.
 **Lesson 2 Exploring a Green-Screen Workflow** **63**
 
 
+
+
+--- end of page=81 ---
+
 **7** Make sure Sat is the only enabled checkbox.
 
 **8** Locate the control point under the green hue on the color bar and drag it down
@@ -3279,6 +3607,10 @@ yellow hair.
 
 **Lesson 2 Exploring a Green-Screen Workflow** **64**
 
+
+
+
+--- end of page=82 ---
 
 **10** Locate the control point under the yellow hue on the color bar and drag it up until the
 
@@ -3311,6 +3643,10 @@ Now, you can just copy the mask from the foreground to the background.
 **Lesson 2 Exploring a Green-Screen Workflow** **65**
 
 
+
+
+--- end of page=83 ---
+
 **14** In the Inspector, choose Combine Alpha from the Combine menu.
 
 
@@ -3340,6 +3676,10 @@ making the composite truly believable.
 
 **Lesson 2 Exploring a Green-Screen Workflow** **66**
 
+
+
+
+--- end of page=84 ---
 
 ## **Adding Natural Light Spill**
 
@@ -3384,6 +3724,10 @@ background input.
 **Lesson 2 Exploring a Green-Screen Workflow** **67**
 
 
+
+
+--- end of page=85 ---
+
 **4** Drag another output from the GreenScreen clip to the green foreground input of the
 
 Difference Keyer.
@@ -3415,6 +3759,10 @@ actually want to make a few of those pixels more opaque.
 **Lesson 2 Exploring a Green-Screen Workflow** **68**
 
 
+
+
+--- end of page=86 ---
+
 **6** Increase the High threshold slightly to create a good balance between soft edges and
 
 a more semitransparent, less detailed matte.
@@ -3434,6 +3782,10 @@ This is now the mask we will use to create spill onto our actors in the car.
 
 **Lesson 2 Exploring a Green-Screen Workflow** **69**
 
+
+
+
+--- end of page=87 ---
 
 **9** Press Shift-Spacebar to add a Merge node and press 1 to see it in the viewer.
 
@@ -3462,6 +3814,10 @@ Merge3 node.
 **Lesson 2 Exploring a Green-Screen Workflow** **70**
 
 
+
+
+--- end of page=88 ---
+
 **13** Click somewhere near the Merge1 node, and from the toolbar, click the Blur node.
 
 
@@ -3481,6 +3837,10 @@ and then onto the Merge2 node for our (almost) completed composite.
 
 **Lesson 2 Exploring a Green-Screen Workflow** **71**
 
+
+
+
+--- end of page=89 ---
 
 **17** Drag the output of the Merge3 node to the yellow background input of the Matte
 
@@ -3520,6 +3880,10 @@ composite into our 2D composite.
 **Lesson 2 Exploring a Green-Screen Workflow** **72**
 
 
+
+
+--- end of page=90 ---
+
 **2** Select Merge4 and press 2 to see it in the viewer on the right.
 
 **3** Click in an empty place above the Merge4 and then add a Merge 3D node.
@@ -3546,6 +3910,10 @@ curved windshield shape.
 
 **Lesson 2 Exploring a Green-Screen Workflow** **73**
 
+
+
+
+--- end of page=91 ---
 
 The Shape3D node can be used to create several 3D primitive shapes, such as spheres,
 
@@ -3586,6 +3954,10 @@ so it doesn’t have caps on the top and bottom, making it more like a windshiel
 **Lesson 2 Exploring a Green-Screen Workflow** **74**
 
 
+
+
+--- end of page=92 ---
+
 **11** Drag the Latitude End to -20 and the Start to 20.
 
 
@@ -3612,6 +3984,10 @@ can take advantage of DaVinci Resolve’s Auto Stabilize in the edit page.
 **Lesson 2 Exploring a Green-Screen Workflow** **75**
 
 
+
+
+--- end of page=93 ---
+
 **2** Right-click over the Fusion clip in the timeline and choose Open in Timeline.
 
 
@@ -3635,6 +4011,10 @@ main timeline.
 
 **Lesson 2 Exploring a Green-Screen Workflow** **76**
 
+
+
+
+--- end of page=94 ---
 
 **7** Right-click over the newly edited clip and choose Change Clip Speed.
 
@@ -3664,6 +4044,10 @@ is that it also places that rendered clip in the media pool so we can access it 
 
 **Lesson 2 Exploring a Green-Screen Workflow** **77**
 
+
+
+
+--- end of page=95 ---
 
 **11** In the Render in Place window, enter the clip name as **Stabilized Road** .
 
@@ -3709,6 +4093,10 @@ For our first introduction to projection mapping, we’ll take the easy route.
 **Lesson 2 Exploring a Green-Screen Workflow** **78**
 
 
+
+
+--- end of page=96 ---
+
 **1** Select the Merge3D node and add a Camera3D node to it.
 
 
@@ -3723,6 +4111,10 @@ Enable Image Plane.
 
 **Lesson 2 Exploring a Green-Screen Workflow** **79**
 
+
+
+
+--- end of page=97 ---
 
 The camera isn’t positioned in front of the Shape3D, so the shape will turn black since
 
@@ -3746,6 +4138,10 @@ displayed in viewer2, roughly 30-150.
 
 **Lesson 2 Exploring a Green-Screen Workflow** **80**
 
+
+
+
+--- end of page=98 ---
 
 **8** Change the End latitude to around -10 and the Start latitude to 25 so the height of the
 
@@ -3772,6 +4168,10 @@ Merge4 node.
 **Lesson 2 Exploring a Green-Screen Workflow** **81**
 
 
+
+
+--- end of page=99 ---
+
 **11** Select the Merge4 node, change the Apply mode screen, and lower the Blend value as
 
 low as you see fit to create a realistic reflection.
@@ -3795,6 +4195,10 @@ Completed node tree for Lesson 2
 
 **Lesson 2 Exploring a Green-Screen Workflow** **82**
 
+
+
+
+--- end of page=100 ---
 
 ## **Lesson Review**
 
@@ -3840,6 +4244,10 @@ directly mapping a texture onto the Shape3D windshield?
 **Lesson 2 Exploring a Green-Screen Workflow** **83**
 
 
+
+
+--- end of page=101 ---
+
 ##### **Answers**
 
 **1** True. The Delta Keyer can handle both matte creation and spill suppression.
@@ -3857,6 +4265,10 @@ edges of the keyed subject with the colors of the background.
 
 **Lesson 2 Exploring a Green-Screen Workflow** **84**
 
+
+
+
+--- end of page=102 ---
 
 ### Lesson 3
 # Creating a Rainy Day
@@ -3914,6 +4326,10 @@ Generating 3D Particles 113
 Lesson Review 127
 
 
+
+
+--- end of page=103 ---
+
 By blending technical precision with a bit of your own creative flair, you’ll begin to learn
 
 how to blend 2D images and 3D scenes, use Fusion’s Magic Mask node to isolate objects
@@ -3947,6 +4363,10 @@ Project Archive, select the **Fusion 20 3D Dry4Wet.dra** file, and then open the
 
 **Lesson 3 Creating a Rainy Day** **86**
 
+
+
+
+--- end of page=104 ---
 
 **2** From the Timelines bin, load the **Lesson-START** timeline and play the clip in this
 
@@ -3984,6 +4404,10 @@ give us a head start.
 **Lesson 3 Creating a Rainy Day** **87**
 
 
+
+
+--- end of page=105 ---
+
 **4** Select the Merge 3D, press 1 to see it in viewer 1, and use the Time ruler to scrub
 
 through the render range.
@@ -4015,6 +4439,10 @@ VFX Media bin.
 **Lesson 3 Creating a Rainy Day** **88**
 
 
+
+
+--- end of page=106 ---
+
 **7** Drag the StormClouds image to an empty area of the Node Editor near the Merge3D
 
 node and rename it **StormClouds** .
@@ -4041,6 +4469,10 @@ plane to fit our scene.
 
 **Lesson 3 Creating a Rainy Day** **89**
 
+
+
+
+--- end of page=107 ---
 
 **10** Select ImagePlane3D and push the image plane back in the Inspector by -500 meters
 
@@ -4079,6 +4511,10 @@ we can keep track of what each group of nodes is doing.
 **Lesson 3 Creating a Rainy Day** **90**
 
 
+
+
+--- end of page=108 ---
+
 **15** Drag a selection rectangle around the Camera3D, ImagePlane3D, StormClouds,
 
 Merge3D, and Renderer3D nodes.
@@ -4106,6 +4542,10 @@ workflows by clearly delineating sections of the node tree.
 
 **Lesson 3 Creating a Rainy Day** **91**
 
+
+
+
+--- end of page=109 ---
 
 The Underlay surrounds the selected nodes, visually grouping them together. You can
 
@@ -4163,6 +4603,10 @@ Merge node.
 **Lesson 3 Creating a Rainy Day** **92**
 
 
+
+
+--- end of page=110 ---
+
 **3** In the Inspector, set the Apply mode to Darken.
 
 
@@ -4207,6 +4651,10 @@ EXR sequence you want to import.
 
 **Lesson 3 Creating a Rainy Day** **93**
 
+
+
+
+--- end of page=111 ---
 
 **3** Navigate to the DR20 Studio Fusion 3D Training Media > Fusion Files > Masks > Bricks
 
@@ -4254,6 +4702,10 @@ To embed these masks into the rooftop clip, we need to use a Matte control.
 **Lesson 3 Creating a Rainy Day** **94**
 
 
+
+
+--- end of page=112 ---
+
 **9** Click in an empty area of the Node Editor under the MultiMerge node, press Shift
 Spacebar, and type **Mat** to select and add the Matte Control to the Node Editor.
 
@@ -4286,6 +4738,10 @@ Matte control.
 **Lesson 3 Creating a Rainy Day** **95**
 
 
+
+
+--- end of page=113 ---
+
 **14** Select the Matte control, press 1 to view it, and in the Inspector, set the Combine menu
 
 to Combine Alpha.
@@ -4307,6 +4763,10 @@ so it can be used as the new foreground for our Merge2 node.
 
 **Lesson 3 Creating a Rainy Day** **96**
 
+
+
+
+--- end of page=114 ---
 
 The sky replacement is starting to come together. If you look closely at the top half of our
 
@@ -4343,6 +4803,10 @@ and continue.
 **Lesson 3 Creating a Rainy Day** **97**
 
 
+
+
+--- end of page=115 ---
+
 **3** Close the Effects Library to give the two viewers more working space.
 
 
@@ -4375,6 +4839,10 @@ subject, so you want the stroke to be well within the subject’s boundaries.
 **Lesson 3 Creating a Rainy Day** **98**
 
 
+
+
+--- end of page=116 ---
+
 The area you drew over appears in viewer 2 as the start of your mask. Much of our
 
 actor is missing, so we clearly need more strokes. Draw over areas that need to be
@@ -4402,6 +4870,10 @@ strokes as you can to get an accurate mask.
 
 **Lesson 3 Creating a Rainy Day** **99**
 
+
+
+
+--- end of page=117 ---
 
 **10** Our last stroke will be from his ankle to the tip of his shoe.
 
@@ -4447,6 +4919,10 @@ at the first frame where you see a hole in the collar.
 **Lesson 3 Creating a Rainy Day** **100**
 
 
+
+
+--- end of page=118 ---
+
 **13** Draw two short strokes: one that runs the length of his collar and a second that follows
 
 the back of his head across his collar, ending at his upper back.
@@ -4472,6 +4948,10 @@ you observed.
 
 **Lesson 3 Creating a Rainy Day** **101**
 
+
+
+
+--- end of page=119 ---
 
 **18** If a hole appears on the collar as you track backward, draw a single line over the collar
 
@@ -4526,6 +5006,10 @@ outline fringe.
 **Lesson 3 Creating a Rainy Day** **102**
 
 
+
+
+--- end of page=120 ---
+
 **5** Drag the output of the Magic Mask to a white layer input on the MultiMerge node.
 
 
@@ -4553,6 +5037,10 @@ another Underlay.
 
 **Lesson 3 Creating a Rainy Day** **103**
 
+
+
+
+--- end of page=121 ---
 
 **8** Press Shift-Spacebar, type **underlay**, and press Enter or Return to add an Underlay
 
@@ -4588,6 +5076,10 @@ node to correct the mask.
 **Lesson 3 Creating a Rainy Day** **104**
 
 
+
+
+--- end of page=122 ---
+
 ## **Adding Reflections**
 
 If the ground is meant to be wet, it would have reflections on it. It’s not difficult to add
@@ -4616,6 +5108,10 @@ our actor is onscreen.
 **Lesson 3 Creating a Rainy Day** **105**
 
 
+
+
+--- end of page=123 ---
+
 **6** Set the Y parameter to around -0.1.
 
 
@@ -4640,6 +5136,10 @@ rooftop (background), and then we’ll lower the transparency for the flipped fo
 **Lesson 3 Creating a Rainy Day** **106**
 
 
+
+
+--- end of page=124 ---
+
 **9** With the Merge3 selected, in the Inspector, set the Apply mode to Darken and lower
 
 the Blend slider so it appears more like a reflection.
@@ -4663,6 +5163,10 @@ actor move. We’ll use a few simple keyframes to move the reflection.
 
 **Lesson 3 Creating a Rainy Day** **107**
 
+
+
+
+--- end of page=125 ---
 
 **12** Select the Transform node, and in the Inspector, enable keyframing for the Center X
 
@@ -4706,6 +5210,10 @@ them based on your final comp and your professional eye.
 **Lesson 3 Creating a Rainy Day** **108**
 
 
+
+
+--- end of page=126 ---
+
 ## **Correcting Color in Fusion**
 
 Performing a sky replacement is only half the task in our dry-to-wet look. Color correcting
@@ -4728,6 +5236,10 @@ We’ll use this color correction to set a general adjustment for the entire sho
 
 **Lesson 3 Creating a Rainy Day** **109**
 
+
+
+
+--- end of page=127 ---
 
 **3** Drag the Gain slider lower to give a darker stormy look over the shot.
 
@@ -4758,6 +5270,10 @@ Matte Control2.
 **Lesson 3 Creating a Rainy Day** **110**
 
 
+
+
+--- end of page=128 ---
+
 **9** Drag an output from the ROOF mask to the yellow background input on the
 
 Matte Control2.
@@ -4787,6 +5303,10 @@ the Foreground Alpha is copied into the Background Alpha channel.
 
 **Lesson 3 Creating a Rainy Day** **111**
 
+
+
+
+--- end of page=129 ---
 
 **13** Drag the output of the MatteControl2 node to the blue Effect Mask input on
 
@@ -4820,6 +5340,10 @@ of sheen, and then shift Highlights toward a cool/neutral tone.
 
 **Lesson 3 Creating a Rainy Day** **112**
 
+
+
+
+--- end of page=130 ---
 
 We’ve replaced the sky, added a reflection, and color-corrected all the elements to give our
 
@@ -4873,6 +5397,10 @@ to the Node Editor.
 **Lesson 3 Creating a Rainy Day** **113**
 
 
+
+
+--- end of page=131 ---
+
 TIP The names of all particle-specific nodes begin with a p: pEmitter, pSpawn,
 
 pBounce, pTurbulance, and so on. This naming convention makes it easy to
@@ -4912,6 +5440,10 @@ Most of your actual particle setup begins in the pEmitter node.
 
 **Lesson 3 Creating a Rainy Day** **114**
 
+
+
+
+--- end of page=132 ---
 
 **5** In the Node Editor, select the pEmitter.
 
@@ -4960,6 +5492,10 @@ live-action clip.
 **Lesson 3 Creating a Rainy Day** **115**
 
 
+
+
+--- end of page=133 ---
+
 **8** In the Region’s Width and Height, enter **100** for each, and then click in the viewer and
 
 press F to fit the rectangle within the viewer.
@@ -4978,6 +5514,10 @@ and raised up.
 
 **Lesson 3 Creating a Rainy Day** **116**
 
+
+
+
+--- end of page=134 ---
 
 Looking at this front view, you can see the ground plane. Currently, the rectangle is at
 
@@ -5018,6 +5558,10 @@ rectangle above the ground plane.
 
 **Lesson 3 Creating a Rainy Day** **117**
 
+
+
+
+--- end of page=135 ---
 
 **2** If necessary, click the Play button to begin playing the comp.
 
@@ -5067,6 +5611,10 @@ may be too few for rain.
 **Lesson 3 Creating a Rainy Day** **118**
 
 
+
+
+--- end of page=136 ---
+
 **8** Set the Number to 100.
 
 
@@ -5115,6 +5663,10 @@ emitter’s default point cells, but it’s now time to explore other options.
 **Lesson 3 Creating a Rainy Day** **119**
 
 
+
+
+--- end of page=137 ---
+
 ##### **Using an Image for Particle Cells**
 
 It’s unusual to stay with the small white points for your particle cells. In fact, the cells can
@@ -5143,6 +5695,10 @@ Node Editor near the pEmitter node.
 
 **Lesson 3 Creating a Rainy Day** **120**
 
+
+
+
+--- end of page=138 ---
 
 The file is a small 200 x 200-pixel PNG that resembles a water droplet. When using
 
@@ -5174,6 +5730,10 @@ viewer and press F.
 **Lesson 3 Creating a Rainy Day** **121**
 
 
+
+
+--- end of page=139 ---
+
 **7** Select the pEmitter node.
 
 
@@ -5191,6 +5751,10 @@ without the background in place, it’s time to composite the rain into our scen
 
 **Lesson 3 Creating a Rainy Day** **122**
 
+
+
+
+--- end of page=140 ---
 
 ##### **Rendering and Compositing Particles**
 
@@ -5219,6 +5783,10 @@ To composite the rain, we need to add another Merge node after all our color cor
 
 **Lesson 3 Creating a Rainy Day** **123**
 
+
+
+
+--- end of page=141 ---
 
 **6** Select the Merge4 node, press 2 to see it in viewer 2, and then play the comp.
 
@@ -5251,6 +5819,10 @@ allowing us to add motion blur as a post-processing effect.
 **Lesson 3 Creating a Rainy Day** **124**
 
 
+
+
+--- end of page=142 ---
+
 **9** Select the Renderer3D node and, in the Output Channels section, enable Vector.
 
 
@@ -5266,6 +5838,10 @@ back vectors.
 
 **Lesson 3 Creating a Rainy Day** **125**
 
+
+
+
+--- end of page=143 ---
 
 **11** In the Inspector, lower the Vector Motion Blur’s Scale to 0.5 to lower the amount of blur.
 
@@ -5299,6 +5875,10 @@ Completed node tree for Lesson 3
 
 **Lesson 3 Creating a Rainy Day** **126**
 
+
+
+
+--- end of page=144 ---
 
 ## **Lesson Review**
 
@@ -5342,6 +5922,10 @@ leave the frame
 **Lesson 3 Creating a Rainy Day** **127**
 
 
+
+
+--- end of page=145 ---
+
 ##### **Answers**
 
 **1** True. The Magic Mask tool in DaVinci Resolve 20 Studio uses AI to create motion
@@ -5362,6 +5946,10 @@ improve performance by eliminating unnecessary particles once they leave the fra
 
 **Lesson 3 Creating a Rainy Day** **128**
 
+
+
+
+--- end of page=146 ---
 
 ### Lesson 4
 # 3D Camera Tracking
@@ -5424,6 +6012,10 @@ Matching Color and Light 156
 Lesson Review 159
 
 
+
+
+--- end of page=147 ---
+
 During this lesson, you’ll learn how to set up, perform, and refine a 3D track to realistically
 
 add a pirate ship off the coastline of a simple beach shot.
@@ -5464,6 +6056,10 @@ the computer.
 **Lesson 4 3D Camera Tracking** **130**
 
 
+
+
+--- end of page=148 ---
+
 This calculated parallax works convincingly as long as everything in your shot is “nailed
 
 down.” Objects within the shot that exhibit independent motion—such as those pesky
@@ -5493,6 +6089,10 @@ which shows the beach.
 
 **Lesson 4 3D Camera Tracking** **131**
 
+
+
+
+--- end of page=149 ---
 
 As it plays, try to identify objects in the clip that will require garbage matting—that is,
 
@@ -5533,6 +6133,10 @@ shape beyond the left edge of the frame.
 **Lesson 4 3D Camera Tracking** **132**
 
 
+
+
+--- end of page=150 ---
+
 **8** In the Inspector, enable the Shape Animation auto keyframe by clicking the
 
 diamond icon.
@@ -5552,6 +6156,10 @@ individual points to reshape as needed.
 
 **Lesson 4 3D Camera Tracking** **133**
 
+
+
+
+--- end of page=151 ---
 
 TIP Emphasize speed over accuracy. As long as you keep the rocks mostly
 
@@ -5605,6 +6213,10 @@ shape in the Polygon list and rename it **RocksGshape** .
 **Lesson 4 3D Camera Tracking** **134**
 
 
+
+
+--- end of page=152 ---
+
 **17** Click the Polygon button under the list to add a new shape to the Polygon List.
 
 **18** Rename the Polygon2 **BeachGshape** .
@@ -5645,6 +6257,10 @@ or use other methods.
 **Lesson 4 3D Camera Tracking** **135**
 
 
+
+
+--- end of page=153 ---
+
 ##### **Creating Mattes with Magic Mask**
 
 NOTE The Magic Mask requires DaVinci Resolve 20 Studio.
@@ -5681,6 +6297,10 @@ when they are at their largest point within the frame.
 **Lesson 4 3D Camera Tracking** **136**
 
 
+
+
+--- end of page=154 ---
+
 **5** For all three actors, draw a line for the head and spine, a line for each arm, and a line
 
 for each leg.
@@ -5714,6 +6334,10 @@ press 2 to see it in viewer 2.
 
 **Lesson 4 3D Camera Tracking** **137**
 
+
+
+
+--- end of page=155 ---
 
 **2** Connect the output of SceneryGshape into the blue effect mask input of MagicMask.
 
@@ -5758,6 +6382,10 @@ Tracker. Magic Mask is just one of those special cases we must account for. To m
 **Lesson 4 3D Camera Tracking** **138**
 
 
+
+
+--- end of page=156 ---
+
 work for the Camera Tracker, we need to use a Bitmap node to convert the output of
 
 the Magic Mask. The Bitmap node converts an image into a black-and-white binary.
@@ -5794,6 +6422,10 @@ Locations.
 
 **Lesson 4 3D Camera Tracking** **139**
 
+
+
+
+--- end of page=157 ---
 
 The Camera Tracker starts by generating a cloud of trackers informed by areas of
 
@@ -5833,6 +6465,10 @@ reversed, and we need to invert it to get the trackers on the beach and rocks.
 **Lesson 4 3D Camera Tracking** **140**
 
 
+
+
+--- end of page=158 ---
+
 **12** Select the Camera Tracker node to see the tracking points in the viewer.
 
 
@@ -5857,6 +6493,10 @@ click Bidirectional Tracking.
 
 **Lesson 4 3D Camera Tracking** **141**
 
+
+
+
+--- end of page=159 ---
 
 The Camera Tracker steps frame by frame, calculating the positions for all the tracking
 
@@ -5915,6 +6555,10 @@ Time to solve the camera track!
 **Lesson 4 3D Camera Tracking** **142**
 
 
+
+
+--- end of page=160 ---
+
 **3** Click the Solve button to switch to the Solve tab, and click Solve.
 
 
@@ -5944,6 +6588,10 @@ average solve error will be different from the value in the preceding figure.
 
 **Lesson 4 3D Camera Tracking** **143**
 
+
+
+
+--- end of page=161 ---
 
 ## **Refining the Solve**
 
@@ -5982,6 +6630,10 @@ features with high errors.
 **Lesson 4 3D Camera Tracking** **144**
 
 
+
+
+--- end of page=162 ---
+
 TIP Solving is computationally demanding and RAM-intensive, but it is also
 
 iterative as you refine the calculation. Deleting too many tracking markers and
@@ -6019,6 +6671,10 @@ based on the final scene.
 
 **Lesson 4 3D Camera Tracking** **145**
 
+
+
+
+--- end of page=163 ---
 
 **4** In the Solve tab, set the Maximum Track Error to 0.2 and the Maximum Solve
 
@@ -6066,6 +6722,10 @@ desired average solve error goal of less than 0.5.
 **Lesson 4 3D Camera Tracking** **146**
 
 
+
+
+--- end of page=164 ---
+
 ## **Exporting the Scene**
 
 At this point, the Camera Tracker node has computed a virtual 3D scene that matches the
@@ -6104,6 +6764,10 @@ switch to Unaligned.
 **Lesson 4 3D Camera Tracking** **147**
 
 
+
+
+--- end of page=165 ---
+
 **3** Click the Unaligned button. The option to set the ground plane becomes visible in the
 
 Orientation section.
@@ -6140,6 +6804,10 @@ first select all the tracking points that track features located on the beach.
 **Lesson 4 3D Camera Tracking** **148**
 
 
+
+
+--- end of page=166 ---
+
 **6** Shift-click any beach track points you may have missed with your selection.
 
 **7** In the orientation section, click Set from Selection. The Camera Tracker adjusts the
@@ -6172,6 +6840,10 @@ The last detail you should define is the scale of the scene.
 **Lesson 4 3D Camera Tracking** **149**
 
 
+
+
+--- end of page=167 ---
+
 ##### **Defining Scale**
 
 Setting a scale when performing 3D camera tracking defines the real-world size of the 3D
@@ -6198,6 +6870,10 @@ palm tree.
 **Lesson 4 3D Camera Tracking** **150**
 
 
+
+
+--- end of page=168 ---
+
 **2** Hold the Command key (macOS) or the Ctrl key (Windows) and select a green tracking
 
 point at the top of the same date palm tree.
@@ -6216,6 +6892,10 @@ can define the scale.
 
 **Lesson 4 3D Camera Tracking** **151**
 
+
+
+
+--- end of page=169 ---
 
 TIP Conventional wisdom is to use the metric system for measurements. This
 
@@ -6254,6 +6934,10 @@ created 3D scene.
 **Lesson 4 3D Camera Tracking** **152**
 
 
+
+
+--- end of page=170 ---
+
 Congratulations! You’ve performed your first 3D track.
 
 
@@ -6288,6 +6972,10 @@ a 3D shape.
 **Lesson 4 3D Camera Tracking** **153**
 
 
+
+
+--- end of page=171 ---
+
 **4** Press 2 to view the Shape3D in viewer 2
 
 
@@ -6301,6 +6989,10 @@ Merge3D1 and press 1 to see it in viewer 1.
 
 **Lesson 4 3D Camera Tracking** **154**
 
+
+
+
+--- end of page=172 ---
 
 TIP You might need to use the modifier keys plus middle mouse button
 
@@ -6343,6 +7035,10 @@ Translation Z value to get a closer match.
 **Lesson 4 3D Camera Tracking** **155**
 
 
+
+
+--- end of page=173 ---
+
 **10** Next, adjust the X and Y Translation controls to position the pirate ship just to the right
 
 of the rock outcropping and just below the horizon line.
@@ -6384,6 +7080,10 @@ Color Compressor node.
 **Lesson 4 3D Camera Tracking** **156**
 
 
+
+
+--- end of page=174 ---
+
 To create a realistic blue haze, we need to sample the blue as a “sea haze” reference.
 
 To do that, we need to load the image into a viewer.
@@ -6404,6 +7104,10 @@ the way to 1.0.
 
 **Lesson 4 3D Camera Tracking** **157**
 
+
+
+
+--- end of page=175 ---
 
 The result…is not pretty. First, the edges of the image are overcorrected. We can use a
 
@@ -6433,6 +7137,10 @@ blend more or less of the original image with the effect.
 
 **Lesson 4 3D Camera Tracking** **158**
 
+
+
+
+--- end of page=176 ---
 
 You now have a pirate ship sitting convincingly in the water off the headland.
 
@@ -6481,6 +7189,10 @@ potentially improve a high solve error.
 **Lesson 4 3D Camera Tracking** **159**
 
 
+
+
+--- end of page=177 ---
+
 ##### **Answers**
 
 **1** True. 3D camera tracking is not available in the free version of DaVinci Resolve 20.
@@ -6504,6 +7216,10 @@ potentially improve a high solve error.
 
 **Lesson 4 3D Camera Tracking** **160**
 
+
+
+
+--- end of page=178 ---
 
 ### Lesson 5
 # Compositing 3D with USD
@@ -6568,6 +7284,10 @@ Finishing the Comp 197
 Lesson Review 199
 
 
+
+
+--- end of page=179 ---
+
 In this lesson, you’ll learn what USD is, why it’s useful in Fusion, and how to start working
 
 with it for your own projects—all without needing 3D experience. Let’s get started!
@@ -6599,6 +7319,10 @@ Restore Project Archive.
 
 **Lesson 5 Compositing 3D with USD** **162**
 
+
+
+
+--- end of page=180 ---
 
 **3** From the TImelines bin, load the **Lesson-START** timeline and play the clip in this
 
@@ -6651,6 +7375,10 @@ uLoader node.
 **Lesson 5 Compositing 3D with USD** **163**
 
 
+
+
+--- end of page=181 ---
+
 **7** In the Open dialog, navigate to the Fusion Files > USD > master_dragon_asset folder
 
 in the DR20 Studio Fusion 3D Training folder. Then select **main_dragon.usd** and
@@ -6690,6 +7418,10 @@ half speed.
 
 **Lesson 5 Compositing 3D with USD** **164**
 
+
+
+
+--- end of page=182 ---
 
 While the uLoader node can make some adjustments, it mainly focuses on loading USD
 
@@ -6766,6 +7498,10 @@ stacking those changes rather than forcing endless re-imports and fixes.
 **Lesson 5 Compositing 3D with USD** **165**
 
 
+
+
+--- end of page=183 ---
+
 ## **Creating Surfaces with Shaders**
 
 To create the look of leathery dragon skin, you use shaders. A shader defines how an
@@ -6818,6 +7554,10 @@ Shift-Spacebar. Search for and add a uTexture node.
 **Lesson 5 Compositing 3D with USD** **166**
 
 
+
+
+--- end of page=184 ---
+
 Think of a shader as the set of rules that determines how a surface looks under various
 
 lights and angles; a texture is the actual image applied to your 3D model.
@@ -6859,6 +7599,10 @@ The dragon now has a less glossy appearance to his skin.
 **Lesson 5 Compositing 3D with USD** **167**
 
 
+
+
+--- end of page=185 ---
+
 ##### **Adding Roughness and Shading**
 
 To make our dragon skin even more realistic, we can mix a few different ingredients with
@@ -6896,6 +7640,10 @@ Bias creates a glossier surface.
 **Lesson 5 Compositing 3D with USD** **168**
 
 
+
+
+--- end of page=186 ---
+
 **5** In the uShader node, lower the Roughness Scale and increase the Roughness Bias
 
 until the dragon texture appears more leathery and less shiny.
@@ -6926,6 +7674,10 @@ the mouse button. Then, from the menu of inputs, select Occlusion.
 
 **Lesson 5 Compositing 3D with USD** **169**
 
+
+
+
+--- end of page=187 ---
 
 The occlusion map is very heavy, making our dragon look too dark. Controls for the
 
@@ -6967,6 +7719,10 @@ replaced by using a Scene tree window.
 
 **Lesson 5 Compositing 3D with USD** **170**
 
+
+
+
+--- end of page=188 ---
 
 TIP Prim is short for primitive, which refers to any object or element in
 
@@ -7012,6 +7768,10 @@ our dragon.
 **Lesson 5 Compositing 3D with USD** **171**
 
 
+
+
+--- end of page=189 ---
+
 **3** Press Shift-Spacebar, add a uRenderer node, and then press 1 to view it.
 
 
@@ -7054,6 +7814,10 @@ composited over our observatory shot using a standard Merge node.
 **Lesson 5 Compositing 3D with USD** **172**
 
 
+
+
+--- end of page=190 ---
+
 **6** Drag the output of the uRenderer node to the green foreground input of the
 
 Merge node.
@@ -7078,6 +7842,10 @@ the dragon circle the observatory, and we still need to correct the lighting.
 
 **Lesson 5 Compositing 3D with USD** **173**
 
+
+
+
+--- end of page=191 ---
 
 ## **Making a Dragon Fly**
 
@@ -7116,6 +7884,10 @@ observatory. We won’t actually circle it yet; we’re just setting up the init
 **Lesson 5 Compositing 3D with USD** **174**
 
 
+
+
+--- end of page=192 ---
+
 **5** Select the uTransform1 node, and in the Inspector, adjust the Translation controls to
 
 move the dragon along the edge of the ground plane. Make the adjustments as
@@ -7134,6 +7906,10 @@ rotation to -45.
 
 **Lesson 5 Compositing 3D with USD** **175**
 
+
+
+
+--- end of page=193 ---
 
 Now for the circling part of our animation. To create a circular flight path for our
 
@@ -7165,6 +7941,10 @@ click the Enable Keyframe button in the Inspector for the Y Rotation.
 
 **Lesson 5 Compositing 3D with USD** **176**
 
+
+
+
+--- end of page=194 ---
 
 This sets our starting position for our flying dragon. Next, we’ll have the dragon go
 
@@ -7212,6 +7992,10 @@ light bouncing off the environment.
 **Lesson 5 Compositing 3D with USD** **177**
 
 
+
+
+--- end of page=195 ---
+
 **1** Select the uMerge node and click the uDome Light from the Effects Library.
 
 
@@ -7233,6 +8017,10 @@ the viewer setting.
 
 **Lesson 5 Compositing 3D with USD** **178**
 
+
+
+
+--- end of page=196 ---
 
 **3** Above the viewer, click the Lighting dropdown menu and choose Scene Lights.
 
@@ -7257,6 +8045,10 @@ tinting our image a bit.
 
 **Lesson 5 Compositing 3D with USD** **179**
 
+
+
+
+--- end of page=197 ---
 
 **6** At the top of the Inspector, drag the Eyedropper tool into the viewer to sample the
 
@@ -7290,6 +8082,10 @@ would illuminate our dragon the most.
 
 **Lesson 5 Compositing 3D with USD** **180**
 
+
+
+
+--- end of page=198 ---
 
 **9** Select the uMerge1 and press 1 to see it in the viewer.
 
@@ -7335,6 +8131,10 @@ real-world lighting for film or photography, think of it like a softbox.
 **Lesson 5 Compositing 3D with USD** **181**
 
 
+
+
+--- end of page=199 ---
+
 **2** In the time ruler, move to frame 50.
 
 
@@ -7361,6 +8161,10 @@ Target checkbox to reveal the target parameters. Then drag the Pick button into 
 
 **Lesson 5 Compositing 3D with USD** **182**
 
+
+
+
+--- end of page=200 ---
 
 The Disk light is a local light that’s not very strong by default, so we need to increase
 
@@ -7398,6 +8202,10 @@ focuses on the dragon’s new location.
 **Lesson 5 Compositing 3D with USD** **183**
 
 
+
+
+--- end of page=201 ---
+
 **8** Move the time ruler to frame 275. This is a good representative frame for us to use to
 
 set up our new light.
@@ -7423,6 +8231,10 @@ from above.
 **Lesson 5 Compositing 3D with USD** **184**
 
 
+
+
+--- end of page=202 ---
+
 **13** The view is zoomed in too far by default, so hold the Command (MacOS) or Ctrl
 
 (Windows) key and scroll the middle mouse button to zoom out until you can see the
@@ -7439,6 +8251,10 @@ the dragon in viewer 2. The value will be somewhere around 60.
 
 **Lesson 5 Compositing 3D with USD** **185**
 
+
+
+
+--- end of page=203 ---
 
 **15** Return to any of the controls you adjusted for the first uDisk Light node and revisit
 
@@ -7491,6 +8307,10 @@ Now we can make five dragons and offset them in time and space.
 **Lesson 5 Compositing 3D with USD** **186**
 
 
+
+
+--- end of page=204 ---
+
 **2** With the uDuplicate node selected, in the Inspector, set the Last value for the number
 
 of copies to **5** .
@@ -7510,6 +8330,10 @@ Time Offset.
 
 **Lesson 5 Compositing 3D with USD** **187**
 
+
+
+
+--- end of page=205 ---
 
 **4** To offset each copy in space, set the X Offset Translation to -250 so the copies fly in
 
@@ -7535,6 +8359,10 @@ random value.
 
 **Lesson 5 Compositing 3D with USD** **188**
 
+
+
+
+--- end of page=206 ---
 
 **6** Set the Time Offset to 20.0.
 
@@ -7562,6 +8390,10 @@ in the Node Editor under the Merge node.
 
 **Lesson 5 Compositing 3D with USD** **189**
 
+
+
+
+--- end of page=207 ---
 
 **11** Drag the output of the MediaIn2 node (the Dome mask) to the blue mask input on the
 
@@ -7605,6 +8437,10 @@ used to create effects in conjunction with nodes that support Z channels, like F
 **Lesson 5 Compositing 3D with USD** **190**
 
 
+
+
+--- end of page=208 ---
+
 **2** With the uRenderer selected, press Shift-Spacebar and add a Fog node to the
 
 Node Editor.
@@ -7634,6 +8470,10 @@ the observatory.
 
 **Lesson 5 Compositing 3D with USD** **191**
 
+
+
+
+--- end of page=209 ---
 
 **5** Drag the Z Near-plane slider to the left until the dragon is faintly seen through the fog
 
@@ -7667,6 +8507,10 @@ Noise generator.
 **Lesson 5 Compositing 3D with USD** **192**
 
 
+
+
+--- end of page=210 ---
+
 **8** Click in an empty area of the Node Editor off to the right of the Fog node, press
 
 Shift-Spacebar, and add a FastNoise node.
@@ -7686,6 +8530,10 @@ the Inspector.
 
 **Lesson 5 Compositing 3D with USD** **193**
 
+
+
+
+--- end of page=211 ---
 
 **10** Click the Color tab in the Inspector.
 
@@ -7708,6 +8556,10 @@ only need it to affect our dragons.
 
 **Lesson 5 Compositing 3D with USD** **194**
 
+
+
+
+--- end of page=212 ---
 
 If you scrub through or play the composition, you’ll notice that the fog nicely enhances
 
@@ -7735,6 +8587,10 @@ dragons blend well into the scene.
 
 **Lesson 5 Compositing 3D with USD** **195**
 
+
+
+
+--- end of page=213 ---
 
 ##### **Correcting Alpha Channels**
 
@@ -7764,6 +8620,10 @@ alpha back to a premultiplied alpha, ensuring perfect edges for the Merge node.
 **Lesson 5 Compositing 3D with USD** **196**
 
 
+
+
+--- end of page=214 ---
+
 **2** Select the BrightnessContrast node, press Shift-Spacebar, and add an
 
 AlphaMultiply node.
@@ -7786,6 +8646,10 @@ add to this comp.
 
 **Lesson 5 Compositing 3D with USD** **197**
 
+
+
+
+--- end of page=215 ---
 
 You might recall from the first exercise in this book that the Renderer 3D contains
 
@@ -7814,6 +8678,10 @@ explored everything from basic 3D placement and camera tracking to lighting, sha
 
 **Lesson 5 Compositing 3D with USD** **198**
 
+
+
+
+--- end of page=216 ---
 
 and particle effects. With this foundation, you now have the skills to create dynamic,
 
@@ -7862,6 +8730,10 @@ rotation axis.
 **Lesson 5 Compositing 3D with USD** **199**
 
 
+
+
+--- end of page=217 ---
+
 ##### **Answers**
 
 **1** True. USD stands for “Universal Scene Description” and is used to organize and
@@ -7881,6 +8753,10 @@ rotation axis.
 
 **Lesson 5 Compositing 3D with USD** **200**
 
+
+
+
+--- end of page=218 ---
 
 ## **Index**
 
@@ -8038,6 +8914,10 @@ Blender, _165_
 
 **Index** **201**
 
+
+
+
+--- end of page=219 ---
 
 Blur node, _71_
 
@@ -8202,6 +9082,10 @@ Directional Light, _32_, _34_
 **Index** **202**
 
 
+
+
+--- end of page=220 ---
+
 Disk Light, _181–183_
 
 DNxHR HQ codec, _78_
@@ -8361,6 +9245,10 @@ Hue Curve node, adding to Node Editor, _63_
 
 **Index** **203**
 
+
+
+
+--- end of page=221 ---
 
 **I**
 
@@ -8529,6 +9417,10 @@ master_dragon_asset folder, _164_
 **Index** **204**
 
 
+
+
+--- end of page=222 ---
+
 materials, applying to 3D text, _17–18_
 
 Matte Control node, _65_, _94–96_
@@ -8685,6 +9577,10 @@ perspective angle, rotating, _5_
 
 **Index** **205**
 
+
+
+
+--- end of page=223 ---
 
 Perspective view
 
@@ -8848,6 +9744,10 @@ SceneryGshape, _135_
 **Index** **206**
 
 
+
+
+--- end of page=224 ---
+
 scenes, exporting, _147–153_ . _See also_ _3D_
 _scenes_ ; _USD (Universal Scene_
 _Description)_
@@ -9010,6 +9910,10 @@ uReplaceMaterial tool, _166_
 **Index** **207**
 
 
+
+
+--- end of page=225 ---
+
 USD (Universal Scene Description), _161_ .
 _See also_ _3D scenes_ ; _compositing 3D with_
 _USD_ ; _scenes_
@@ -9121,8 +10025,16 @@ zooming in and out in 3D viewer, _12_
 **Index** **208**
 
 
+
+
+--- end of page=226 ---
+
 **This page is intentionally left blank ﻿** **209**
 
+
+
+
+--- end of page=227 ---
 
 Post production, especially visual effects, is constantly evolving
 with exciting new tools and techniques. Whether you’re an editor,
@@ -9180,4 +10092,8 @@ more sophisticated 2D compositing techniques.
 
 **Import and Integrate 3D USD Data**
 
+
+
+
+--- end of page=228 ---
 

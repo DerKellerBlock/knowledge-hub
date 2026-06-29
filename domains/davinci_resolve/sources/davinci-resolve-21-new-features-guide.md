@@ -141,6 +141,10 @@
 **Leading the Creative Video Revolution**
 
 
+
+
+--- end of page=0 ---
+
 ###### Welcome
 
 Welcome to DaVinci Resolve for Mac, Linux and Windows!
@@ -190,6 +194,10 @@ The DaVinci Resolve Engineering Team
 
 CEO Blackmagic Design
 
+
+
+
+--- end of page=1 ---
 
 ### **Contents**
 
@@ -272,6 +280,10 @@ New Features Guide DaVinci Resolve 21 | Contents
 **3**
 
 
+
+
+--- end of page=2 ---
+
 Multicam Clips can Include All Audio Tracks for Each Angle����������������������������������������������������������������������� 72
 
 Multicam Clips can Use Full Clip Extents on Creation and During Sync������������������������������������������������ 72
@@ -352,6 +364,10 @@ New Features Guide DaVinci Resolve 21 | Contents
 
 **4**
 
+
+
+
+--- end of page=3 ---
 
 **Color**
 
@@ -437,6 +453,10 @@ New Features Guide DaVinci Resolve 21 | Contents
 **5**
 
 
+
+
+--- end of page=4 ---
+
 USD Support for 3D Matte Objects and Textures�������������������������������������������������������������������������������������������� 118
 
 USD Projector and USD Catcher Tools������������������������������������������������������������������������������������������������������������������ 118
@@ -508,6 +528,10 @@ New Features Guide DaVinci Resolve 21 | Contents
 **6**
 
 
+
+
+--- end of page=5 ---
+
 ### **Introduction**
 
 DaVinci Resolve 21 introduces a new Photo page, which enables colorists and
@@ -538,6 +562,10 @@ Color page DaVinci Resolve 21
 
 New Features Guide DaVinci Resolve 21 | Introduction **7**
 
+
+
+
+--- end of page=6 ---
 
 ## Photo
 
@@ -572,6 +600,10 @@ editing, color grading, VFX and audio post, all in real time.
 
 New Features Guide DaVinci Resolve 21 | Photo **8**
 
+
+
+
+--- end of page=7 ---
 
 **NOTE:** All grades and effects for still images within albums are applied at the source level.
 This means that the grades for your stills are shared across all the albums within a project
@@ -625,6 +657,10 @@ images only.
 New Features Guide DaVinci Resolve 21 | Photo **9**
 
 
+
+
+--- end of page=8 ---
+
 The Media Pool in the Photo Page
 
 
@@ -635,6 +671,10 @@ The Media Pool in the Photo Page
 
 New Features Guide DaVinci Resolve 21 | Photo **10**
 
+
+
+
+--- end of page=9 ---
 
 The browser area shows the contents of the currently selected folder. Every still photo, bin,
 and album appears here. You can create as many albums as you need within a single project.
@@ -704,6 +744,10 @@ Create Smart Bin.
 New Features Guide DaVinci Resolve 21 | Photo **11**
 
 
+
+
+--- end of page=10 ---
+
 Searching the Media Pool
 
 Clicking on the magnifying glass icon in the toolbar opens a search field, where you can look for
@@ -722,6 +766,10 @@ The Photo Effects library
 
 New Features Guide DaVinci Resolve 21 | Photo **12**
 
+
+
+
+--- end of page=11 ---
 
 To preview an effect before placing it on a photo, ensure that “Hover Scrub Preview” is checked in the
 Effects option menu, then simply hover your pointer over any thumbnail in the Effects tab and move it
@@ -769,6 +817,10 @@ The Photo Album Interface
 
 New Features Guide DaVinci Resolve 21 | Photo **13**
 
+
+
+
+--- end of page=12 ---
 
 **To add an image or images to a Photo Album:**
 
@@ -822,6 +874,10 @@ as the criteria.
 
 New Features Guide DaVinci Resolve 21 | Photo **14**
 
+
+
+
+--- end of page=13 ---
 
 **Keywords:** Clicking on this icon lets you filter the photos in the album based on
 keywords. Right clicking on the icon lets you choose which keywords you want
@@ -880,6 +936,10 @@ Edit, Color, and Fusion pages on your still photos as well.
 New Features Guide DaVinci Resolve 21 | Photo **15**
 
 
+
+
+--- end of page=14 ---
+
 ##### **The Viewer**
 
 The Photo Viewer lets you take a detailed look at one specific photo while you’re editing it, as well as
@@ -917,6 +977,10 @@ can select to bypass only Color, or only Fusion in the dropdown menu.
 
 New Features Guide DaVinci Resolve 21 | Photo **16**
 
+
+
+
+--- end of page=15 ---
 
 Lightbox
 
@@ -967,6 +1031,10 @@ the other pages of DaVinci Resolve.
 
 New Features Guide DaVinci Resolve 21 | Photo **17**
 
+
+
+
+--- end of page=16 ---
 
 Transform Toolbar
 
@@ -1026,6 +1094,10 @@ default settings.
 New Features Guide DaVinci Resolve 21 | Photo **18**
 
 
+
+
+--- end of page=17 ---
+
 Crop Toolbar
 
 The Photo page has a set of onscreen controls you can use to directly crop the image in the Viewer.
@@ -1076,6 +1148,10 @@ that the original version is safely stored. You can save as many versions of an 
 New Features Guide DaVinci Resolve 21 | Photo **19**
 
 
+
+
+--- end of page=18 ---
+
 The New Version dialog Box
 
 
@@ -1092,6 +1168,10 @@ Deliver page, all other versions will be ignored.
 
 New Features Guide DaVinci Resolve 21 | Photo **20**
 
+
+
+
+--- end of page=19 ---
 
 ##### **Quick Export**
 
@@ -1130,6 +1210,10 @@ resolution, and codec.
 
 New Features Guide DaVinci Resolve 21 | Photo **21**
 
+
+
+
+--- end of page=20 ---
 
 Because there are so very many metadata fields available, two drop-down menus at the top
 let you change which set of metadata is displayed in the Metadata Editor.
@@ -1188,6 +1272,10 @@ like photo editing applications.
 New Features Guide DaVinci Resolve 21 | Photo **22**
 
 
+
+
+--- end of page=21 ---
+
 Once your camera and computer system are setup, pressing the Capture tab will automatically
 connect to your camera and pressing the Capture Live View icon at the top of the viewer will take you
 to the Capture Live View interface.
@@ -1235,6 +1323,10 @@ before firing the shutter.
 
 New Features Guide DaVinci Resolve 21 | Photo **23**
 
+
+
+
+--- end of page=22 ---
 
  - **AutoFocus:** Click this icon to set the autofocus.
 
@@ -1316,6 +1408,10 @@ the interface for further modification.
 New Features Guide DaVinci Resolve 21 | Photo **24**
 
 
+
+
+--- end of page=23 ---
+
 Overlay
 
 You can use this toolset to overlay an existing image on top of the Capture Live View. This helps aid in
@@ -1381,6 +1477,10 @@ itself, not the image.
 
 New Features Guide DaVinci Resolve 21 | Photo **25**
 
+
+
+
+--- end of page=24 ---
 
 ##### **RAW**
 
@@ -1450,6 +1550,10 @@ preserved and can be retrieved in subsequent adjustments. The range is –100 to
 New Features Guide DaVinci Resolve 21 | Photo **26**
 
 
+
+
+--- end of page=25 ---
+
  - **Gain:** Adjusts the white point of the media, raising or lowering it while scaling all midtone values
 between it and the black point. Regardless of how you adjust this control, all image data is
 preserved and can be retrieved in subsequent adjustments. 0 is unity. The range is –100 to +100.
@@ -1512,6 +1616,10 @@ leave it at Default (Original) to bypass the look filters.
 
 New Features Guide DaVinci Resolve 21 | Photo **27**
 
+
+
+
+--- end of page=26 ---
 
 Adjustments
 
@@ -1577,6 +1685,10 @@ or backward along the hue distribution as seen on a color wheel.
 
 New Features Guide DaVinci Resolve 21 | Photo **28**
 
+
+
+
+--- end of page=27 ---
 
 ##### **Effects**
 
@@ -1654,6 +1766,10 @@ back to it’s original state.
 New Features Guide DaVinci Resolve 21 | Photo **29**
 
 
+
+
+--- end of page=28 ---
+
 ##### **Adding LUTs to your Photos**
 
 If you’ve installed a custom or pre-made look up table (LUT) into DaVinci Resolve, any photo in the
@@ -1697,6 +1813,10 @@ only the photos you’ve selected in the Album at the bottom of the Deliver page
 
 New Features Guide DaVinci Resolve 21 | Photo **30**
 
+
+
+
+--- end of page=29 ---
 
 Photo
 
@@ -1761,6 +1881,10 @@ digits will use numbers from 1-99,999,999.
 New Features Guide DaVinci Resolve 21 | Photo **31**
 
 
+
+
+--- end of page=30 ---
+
 ### **Photo Editing Example**
 
 The combination of having a still image editor in combination with DaVinci Resolve’s extensive film and
@@ -1779,11 +1903,23 @@ video editing tools makes a whole new range of creative and practical photo effe
 New Features Guide DaVinci Resolve 21 | Photo **32**
 
 
+
+
+--- end of page=31 ---
+
 New Features Guide DaVinci Resolve 21 | Photo **33**
 
 
+
+
+--- end of page=32 ---
+
 New Features Guide DaVinci Resolve 21 | Photo **34**
 
+
+
+
+--- end of page=33 ---
 
 The final image result now clearly differentiates the statues from the background,
 and places a nice filmic look over the entire frame.
@@ -1820,6 +1956,10 @@ As of this beta, DaVinci Resolve supports the following RAW camera formats:
 New Features Guide DaVinci Resolve 21 | Photo **35**
 
 
+
+
+--- end of page=34 ---
+
 ### **Photo Multiuser Collaboration** **and Blackmagic Cloud Syncing**
 
 The Photo page can also take advantage of DaVinci Resolves extensive Multiuser collaboration
@@ -1840,6 +1980,10 @@ the Photo page.
 
 New Features Guide DaVinci Resolve 21 | Photo **36**
 
+
+
+
+--- end of page=35 ---
 
 ### **GPU Accelerated Batch** **Exports and Conversions**
 
@@ -1873,6 +2017,10 @@ DaVinci Resolve will always use the original full sized image for final output.
 
 New Features Guide DaVinci Resolve 21 | Photo **37**
 
+
+
+
+--- end of page=36 ---
 
 ## AI Tools
 
@@ -1919,6 +2067,10 @@ Choose Faster or Better mode for IntelliSearch
 New Features Guide DaVinci Resolve 21 | AI Tools **38**
 
 
+
+
+--- end of page=37 ---
+
 Analyzing Media in IntelliSearch
 
 Once your model is selected, you will need to run the IntelliSearch analysis on your Media Pool clips,
@@ -1942,6 +2094,10 @@ The AI Clip Analysis Icon in the Media Pool
 
 New Features Guide DaVinci Resolve 21 | AI Tools **39**
 
+
+
+
+--- end of page=38 ---
 
 ##### **Using IntelliSearch**
 
@@ -2008,6 +2164,10 @@ effectively making it a subclip.
 New Features Guide DaVinci Resolve 21 | AI Tools **40**
 
 
+
+
+--- end of page=39 ---
+
 Face Gallery
 
 Clicking on the Show Face Gallery icon in the IntelliSearch bar opens a thumbnail view of each human
@@ -2028,6 +2188,10 @@ shows only clips she is in by default.
 New Features Guide DaVinci Resolve 21 | AI Tools **41**
 
 
+
+
+--- end of page=40 ---
+
 ### **AI Speech Generator**
 
 Speech Generator generates high quality spoken word output from written text, letting you create your
@@ -2046,6 +2210,10 @@ Extras Download Manager.
 
 New Features Guide DaVinci Resolve 21 | AI Tools **42**
 
+
+
+
+--- end of page=41 ---
 
 ##### **Using AI Speech Generator**
 
@@ -2090,6 +2258,10 @@ emotion with 0 being closest to prosody of the reference voice source.
 
 New Features Guide DaVinci Resolve 21 | AI Tools **43**
 
+
+
+
+--- end of page=42 ---
 
 **Pitch:** Controls how high or low the voice is. Positive values are higher pitched, and negative
 values are lower.
@@ -2156,6 +2328,10 @@ voice model.
 New Features Guide DaVinci Resolve 21 | AI Tools **44**
 
 
+
+
+--- end of page=43 ---
+
 ### **AI CineFocus**
 
 CineFocus allows you to create your own custom virtual lens that emulates realistic defocus and bokeh
@@ -2181,6 +2357,10 @@ The same image, with the focal point changed to the wall.
 New Features Guide DaVinci Resolve 21 | AI Tools **45**
 
 
+
+
+--- end of page=44 ---
+
 The same image but with the focal point changed to the temple
 
 
@@ -2200,6 +2380,10 @@ The CineFocus Depth Map view. Brighter areas are “closer” in depth.
 
 New Features Guide DaVinci Resolve 21 | AI Tools **46**
 
+
+
+
+--- end of page=45 ---
 
 ##### **Focus Mode**
 
@@ -2227,6 +2411,10 @@ The CineFocus Aperture view. Showing the virtual lens characteristics.
 
 New Features Guide DaVinci Resolve 21 | AI Tools **47**
 
+
+
+
+--- end of page=46 ---
 
 ##### **Result**
 
@@ -2298,6 +2486,10 @@ between near and far objects.
 New Features Guide DaVinci Resolve 21 | AI Tools **48**
 
 
+
+
+--- end of page=47 ---
+
  - **Post Processing:** Check this box to make adjustments to the black and white Depth Map, and
 activate the toolset below.
 
@@ -2361,6 +2553,10 @@ the shape of a pinwheel fan.
 
 New Features Guide DaVinci Resolve 21 | AI Tools **49**
 
+
+
+
+--- end of page=48 ---
 
 Lens Distortion
 
@@ -2429,6 +2625,10 @@ defocused areas after processing.
 New Features Guide DaVinci Resolve 21 | AI Tools **50**
 
 
+
+
+--- end of page=49 ---
+
 Additional Grain
 
 This toolset lets you add a grain layer over the entire image.
@@ -2478,6 +2678,10 @@ option to preview the alpha channel if needed.
 
 New Features Guide DaVinci Resolve 21 | AI Tools **51**
 
+
+
+
+--- end of page=50 ---
 
  - **Detect Faces in Frame:** Click this button to have the tool find any recognizable faces in the frame
 with a bounding box. If multiple faces are found, you can choose the one you want to age by clicking
@@ -2534,6 +2738,10 @@ you want to shape, and the second part is adjusting the actual shaping you want 
 
 New Features Guide DaVinci Resolve 21 | AI Tools **52**
 
+
+
+
+--- end of page=51 ---
 
 Tracking
 
@@ -2621,6 +2829,10 @@ from the face.
 New Features Guide DaVinci Resolve 21 | AI Tools **53**
 
 
+
+
+--- end of page=52 ---
+
 Mouth
 
  - **Adjust Mouth:** Checking this box enables or disables the Mouth toolset.
@@ -2668,6 +2880,10 @@ soot on their face).
 New Features Guide DaVinci Resolve 21 | AI Tools **54**
 
 
+
+
+--- end of page=53 ---
+
 ### **AI Slate Finder and AI Slate ID**
 
 Slate Finder uses AI to automatically detects slates (clapper boards) and mark their positions on your
@@ -2691,6 +2907,10 @@ not be completely available yet.
 
 New Features Guide DaVinci Resolve 21 | AI Tools **55**
 
+
+
+
+--- end of page=54 ---
 
 ### **AI UltraSharpen**
 
@@ -2716,6 +2936,10 @@ It’s a very simple tool, with only one control.
 New Features Guide DaVinci Resolve 21 | AI Tools **56**
 
 
+
+
+--- end of page=55 ---
+
 ### **AI Motion DeBlur**
 
 Motion DeBlur is an AI tool designed specifically for the removal of common motion blur artifacts,
@@ -2737,6 +2961,10 @@ The crisper footage after the Motion DeBlur operation.
 
 New Features Guide DaVinci Resolve 21 | AI Tools **57**
 
+
+
+
+--- end of page=56 ---
 
 **To apply Motion DeBlur to a clip:**
 
@@ -2783,6 +3011,10 @@ used in the operation, for higher quality results.
 New Features Guide DaVinci Resolve 21 | AI Tools **58**
 
 
+
+
+--- end of page=57 ---
+
 Some tips for better results from Motion DeBlur:
 
 - Moderate motion blur caused by slow camera panning is generally handled
@@ -2809,6 +3041,10 @@ frame, such as from one corner to another within a few seconds.
 
 New Features Guide DaVinci Resolve 21 | AI Tools **59**
 
+
+
+
+--- end of page=58 ---
 
 ## Cut and Edit
 
@@ -2839,6 +3075,10 @@ individual layers as needed.
 New Features Guide DaVinci Resolve 21 | Cut and Edit **60**
 
 
+
+
+--- end of page=59 ---
+
 Bringing the file into a Timeline, rasterizes and flattens all of the layers by default.
 
 
@@ -2859,6 +3099,10 @@ Body group split up into its individual layers.
 
 New Features Guide DaVinci Resolve 21 | Cut and Edit **61**
 
+
+
+
+--- end of page=60 ---
 
 The Body layer group expanded into its component layers
 
@@ -2883,6 +3127,10 @@ to make smooth changes to the retime speed
 
 New Features Guide DaVinci Resolve 21 | Cut and Edit **62**
 
+
+
+
+--- end of page=61 ---
 
 ### **Keyframe and Add Curves** **for Selected Clips**
 
@@ -2913,6 +3161,10 @@ or Step Out icons at the top of the Keyframe Editor.
 
 New Features Guide DaVinci Resolve 21 | Cut and Edit **63**
 
+
+
+
+--- end of page=62 ---
 
 Step In will hold the value of the previous keyframe, then jumps to the next keyframe.
 
@@ -2950,6 +3202,10 @@ arrives back at the beginning. The classic example of this is a bouncing ball.
 New Features Guide DaVinci Resolve 21 | Cut and Edit **64**
 
 
+
+
+--- end of page=63 ---
+
 To Ping Pong a series of keyframes multi-select the keyframes you want to repeat back and forth and
 choose Ping Pong from the Option Menu > Loop Type in the Keyframe Editor.
 
@@ -2986,6 +3242,10 @@ Holding the Option key and moving the corner of the box lets you skew the keyfra
 New Features Guide DaVinci Resolve 21 | Cut and Edit **65**
 
 
+
+
+--- end of page=64 ---
+
 ### **Keyframe Fusion Effects, Generators** **and Text Tools in the Keyframe Editor**
 
 Fusion Effects, Generators, and Text tools can be keyframed using their Fusion parameters in
@@ -3004,6 +3264,10 @@ The Keyframe editor modifying a Fusion Title.
 
 New Features Guide DaVinci Resolve 21 | Cut and Edit **66**
 
+
+
+
+--- end of page=65 ---
 
 ### **Subframe Support for** **Audio Keyframing and Markers**
 
@@ -3038,6 +3302,10 @@ easily load your OGraf or Lottie files directly into your composition.
 New Features Guide DaVinci Resolve 21 | Cut and Edit **67**
 
 
+
+
+--- end of page=66 ---
+
 ### **Font Browser for Choosing** **Text and Subtitle Elements**
 
 When selecting and choosing a font for text based elements, users can now choose to show an
@@ -3061,6 +3329,10 @@ The Font Browser in Thumbnail View
 
 New Features Guide DaVinci Resolve 21 | Cut and Edit **68**
 
+
+
+
+--- end of page=67 ---
 
 The Font Browser is resizable, and also has a simple toolset to help you identify the perfect font.
 
@@ -3097,6 +3369,10 @@ here to only return fonts with those results.
 New Features Guide DaVinci Resolve 21 | Cut and Edit **69**
 
 
+
+
+--- end of page=68 ---
+
 ### **Show Font Previews Preference**
 
 While the Font Browser will let you compare and contrast a variety of fonts with great specificity,
@@ -3113,6 +3389,10 @@ Preview Fonts preference comes in.
 
 New Features Guide DaVinci Resolve 21 | Cut and Edit **70**
 
+
+
+
+--- end of page=69 ---
 
 ### **Spell Checking for all Text Elements**
 
@@ -3159,6 +3439,10 @@ controls for Color Palettes under Advanced Controls, where you can select displa
 New Features Guide DaVinci Resolve 21 | Cut and Edit **71**
 
 
+
+
+--- end of page=70 ---
+
 ### **Multicam Clips can Include** **All Audio Tracks for Each Angle**
 
 There is a new option when creating a Multicam Clip, to have all of the audio tracks from all of the
@@ -3193,6 +3477,10 @@ Recent Five Minute icon
 New Features Guide DaVinci Resolve 21 | Cut and Edit **72**
 
 
+
+
+--- end of page=71 ---
+
 ### **Replay Editor Allows Timeline** **Selection from Search Dial**
 
 You can now view and select up to the last ten timelines in the Replay Editor. To do so, simply hold
@@ -3210,6 +3498,10 @@ the start and end boxes in the interface.
 
 New Features Guide DaVinci Resolve 21 | Cut and Edit **73**
 
+
+
+
+--- end of page=72 ---
 
 ### **Replay Title Palette Allows** **Up to Six Favorite Titles**
 
@@ -3230,6 +3522,10 @@ color on the right channel to show that the effect is extrapolated across channe
 
 New Features Guide DaVinci Resolve 21 | Cut and Edit **74**
 
+
+
+
+--- end of page=73 ---
 
 ### **Improved Waveforms, Markers and Fades** **Display for Shorter Edit Timeline Tracks**
 
@@ -3262,6 +3558,10 @@ timeline editing.
 New Features Guide DaVinci Resolve 21 | Cut and Edit **75**
 
 
+
+
+--- end of page=74 ---
+
 ### **DRT Timeline Import Supports** **Link and Conform Options**
 
 When importing a DaVinci Resolve Timeline (.drt) file into a project, a new Import Timeline dialog
@@ -3289,6 +3589,10 @@ Comparing the current timeline against a previous backup
 
 New Features Guide DaVinci Resolve 21 | Cut and Edit **76**
 
+
+
+
+--- end of page=75 ---
 
 ### **Subtitle Inspector Supports** **Find and Replace**
 
@@ -3318,6 +3622,10 @@ will replace all instances of that search in the subtitle track with the new ter
 New Features Guide DaVinci Resolve 21 | Cut and Edit **77**
 
 
+
+
+--- end of page=76 ---
+
 ### **Tracks Index Lets You Show or Hide Tracks**
 
 You can now show or hide tracks from the Tracks Index in the Edit page, by clicking on the eye icon to
@@ -3346,6 +3654,10 @@ of the subtitle clip after a change is made.
 New Features Guide DaVinci Resolve 21 | Cut and Edit **78**
 
 
+
+
+--- end of page=77 ---
+
 **To retime a subtitle / caption:**
 
 **1** Select the subtitle clip you want to retime on the timeline.
@@ -3372,6 +3684,10 @@ Importing a subtitle for a media pool clip, and detecting its timing.
 
 New Features Guide DaVinci Resolve 21 | Cut and Edit **79**
 
+
+
+
+--- end of page=78 ---
 
 ### **IntelliScript Supports Final Draft Imports**
 
@@ -3402,6 +3718,10 @@ Timeline > Select Transitions
 
 New Features Guide DaVinci Resolve 21 | Cut and Edit **80**
 
+
+
+
+--- end of page=79 ---
 
 ### **Paste and Remove Attributes**
 
@@ -3437,6 +3757,10 @@ length for each.
 
 New Features Guide DaVinci Resolve 21 | Cut and Edit **81**
 
+
+
+
+--- end of page=80 ---
 
 ## Media
 
@@ -3480,6 +3804,10 @@ side of the tab bar will let you search for tabs
 New Features Guide DaVinci Resolve 21 | Media **82**
 
 
+
+
+--- end of page=81 ---
+
 ### **Thumbnail, List and Metadata** **Views Can Be Set Per Bin**
 
 Bins can now be set to permanently open in a specific layout view (Thumbnail, Metadata, and List)
@@ -3522,6 +3850,10 @@ Giving a clip a four star rating in the Shot & Scene metadata.
 New Features Guide DaVinci Resolve 21 | Media **83**
 
 
+
+
+--- end of page=82 ---
+
 ### **Cut Page Supports Smart Bin Views**
 
 The Cut Page now lets you view and create Smart Bins in its Media Pool view. You can access any
@@ -3537,6 +3869,10 @@ on the Media Bin dropdown menu in the upper left.
 
 New Features Guide DaVinci Resolve 21 | Media **84**
 
+
+
+
+--- end of page=83 ---
 
 ### **Export Media Bin Thumbnails as a PDF**
 
@@ -3563,6 +3899,10 @@ Choosing Export as PDF from the Media Pool option menu
 
 New Features Guide DaVinci Resolve 21 | Media **85**
 
+
+
+
+--- end of page=84 ---
 
 ### **Automatic Smart Bin and** **Clip Filter for Offline Clips**
 
@@ -3596,6 +3936,10 @@ the Media Pool. This lets you visually categorize all your projects at a glance.
 New Features Guide DaVinci Resolve 21 | Media **86**
 
 
+
+
+--- end of page=85 ---
+
 ### **Transcription Column in List View**
 
 There is now a Transcription Column in the Media Pool list view. The column is there as a visual
@@ -3617,6 +3961,10 @@ Clicking on the reset icon (red) will reset the audio clip attributes to their o
 New Features Guide DaVinci Resolve 21 | Media **87**
 
 
+
+
+--- end of page=86 ---
+
 ## Color
 
 ### **MultiMaster Trim Manager**
@@ -3637,6 +3985,10 @@ each deliverable.
 
 New Features Guide DaVinci Resolve 21 | Color **88**
 
+
+
+
+--- end of page=87 ---
 
 By default, each trim enables an After Clip node graph, Before Group node graph, After Group node
 graph, Before Timeline node graph and an After Timeline node graph. You can also enable/disable
@@ -3668,6 +4020,10 @@ in the Deliver page Video Render settings.
 New Features Guide DaVinci Resolve 21 | Color **89**
 
 
+
+
+--- end of page=88 ---
+
 ### **Render AI Magic Mask 2** **as an External Matte**
 
 You can now render a Magic Mask as a separate matte node. This lets you use the resulting magic
@@ -3684,6 +4040,10 @@ The external matte node created by rendering the Magic Mask
 
 New Features Guide DaVinci Resolve 21 | Color **90**
 
+
+
+
+--- end of page=89 ---
 
 ### **Clip Groups Support Grade Versioning**
 
@@ -3718,6 +4078,10 @@ that have been added to the node for each layer.
 New Features Guide DaVinci Resolve 21 | Color **91**
 
 
+
+
+--- end of page=90 ---
+
 The node graph in node view
 
 
@@ -3727,6 +4091,10 @@ The same graph in Layer View (top left arrow)
 
 New Features Guide DaVinci Resolve 21 | Color **92**
 
+
+
+
+--- end of page=91 ---
 
 ### **Node Stacks Support up to Eight Layers**
 
@@ -3758,6 +4126,10 @@ fade threshold.
 New Features Guide DaVinci Resolve 21 | Color **93**
 
 
+
+
+--- end of page=92 ---
+
 ### **Shared Node Support** **for Stereoscopic 3D Clips**
 
 Stereoscopic 3D clips can now use Shared Nodes (a node that can be simultaneously updated across
@@ -3776,6 +4148,10 @@ a specific part of the waveform.
 
 New Features Guide DaVinci Resolve 21 | Color **94**
 
+
+
+
+--- end of page=93 ---
 
 ### **HDR Vivid Improvements**
 
@@ -3820,6 +4196,10 @@ RGB colorspace and gamma.
 New Features Guide DaVinci Resolve 21 | Color **95**
 
 
+
+
+--- end of page=94 ---
+
 ### **OpenFX 1.5 Color Management** **APIs for Colorspace Aware Effects**
 
 DaVinci Resolve now supports OpenFX 1.5 Color Management APIs, which should provide more
@@ -3842,6 +4222,10 @@ retain its original shape.
 
 New Features Guide DaVinci Resolve 21 | Color **96**
 
+
+
+
+--- end of page=95 ---
 
 ## Resolve FX
 
@@ -3870,8 +4254,16 @@ that let you dial in just the look you want.
 New Features Guide DaVinci Resolve 21 | Resolve FX **97**
 
 
+
+
+--- end of page=96 ---
+
 New Features Guide DaVinci Resolve 21 | Resolve FX **98**
 
+
+
+
+--- end of page=97 ---
 
 Content
 
@@ -3947,6 +4339,10 @@ toolset below.
 New Features Guide DaVinci Resolve 21 | Resolve FX **99**
 
 
+
+
+--- end of page=98 ---
+
 ## Immersive
 
 ### **VR180 and VR360 Standard** **Immersive Workflow Support**
@@ -3981,6 +4377,10 @@ attributes are set to match your specific VR Camera’s footage. Once set, click
 New Features Guide DaVinci Resolve 21 | Immersive **100**
 
 
+
+
+--- end of page=99 ---
+
 Set your Stereoscopic Mode and Projection
 format in Clip Attributes for all your clips.
 
@@ -3999,6 +4399,10 @@ click and drag inside the viewer in this mode to rotate the view.
 
 New Features Guide DaVinci Resolve 21 | Immersive **101**
 
+
+
+
+--- end of page=100 ---
 
 Immersive Viewer Selection
 
@@ -4025,6 +4429,10 @@ click on the small link icon to lock the Horizontal and Vertical fields of view 
 
 New Features Guide DaVinci Resolve 21 | Immersive **102**
 
+
+
+
+--- end of page=101 ---
 
 ##### **Immersive Transform**
 
@@ -4066,6 +4474,10 @@ The VR 180/360 delivery preset
 New Features Guide DaVinci Resolve 21 | Immersive **103**
 
 
+
+
+--- end of page=102 ---
+
 ### **Apple Immersive Workflows** **Now Support Foveated Rendering**
 
 You can now use and adjust the Foveated Rendering parameters for Apple Immersive Workflows.
@@ -4090,6 +4502,10 @@ VR180 and VR360 video sources.
 
 New Features Guide DaVinci Resolve 21 | Immersive **104**
 
+
+
+
+--- end of page=103 ---
 
 ## Fairlight
 
@@ -4131,6 +4547,10 @@ organization. Folder tracks support a maximum of three levels of nesting.
 New Features Guide DaVinci Resolve 21 | Fairlight **105**
 
 
+
+
+--- end of page=104 ---
+
 The Fairlight timeline before adding tracks A13-A17 into a folder track,
 
 
@@ -4139,6 +4559,10 @@ The folder track open, showing the enclosed tracks
 
 New Features Guide DaVinci Resolve 21 | Fairlight **106**
 
+
+
+
+--- end of page=105 ---
 
 The folder track closed using the disclosure triangle to the left of the track header.
 
@@ -4168,6 +4592,10 @@ and more efficient.
 New Features Guide DaVinci Resolve 21 | Fairlight **107**
 
 
+
+
+--- end of page=106 ---
+
 ## Fusion
 
 ### **Krokodove Toolset Integrated** **into Fusion and Edit Effects**
@@ -4192,6 +4620,10 @@ A brief description of the toolset follows:
 
 New Features Guide DaVinci Resolve 21 | Fusion **108**
 
+
+
+
+--- end of page=107 ---
 
 **Image Tools**
 
@@ -4226,6 +4658,10 @@ New Features Guide DaVinci Resolve 21 | Fusion **108**
 New Features Guide DaVinci Resolve 21 | Fusion **109**
 
 
+
+
+--- end of page=108 ---
+
 **Image Pixel Tools**
 
 
@@ -4254,6 +4690,10 @@ New Features Guide DaVinci Resolve 21 | Fusion **109**
 
 New Features Guide DaVinci Resolve 21 | Fusion **110**
 
+
+
+
+--- end of page=109 ---
 
 **Image Warp Tools**
 
@@ -4292,6 +4732,10 @@ New Features Guide DaVinci Resolve 21 | Fusion **110**
 New Features Guide DaVinci Resolve 21 | Fusion **111**
 
 
+
+
+--- end of page=110 ---
+
 ### **Improved Macro Editor**
 
 The Fusion macro editor in DaVinci Resolve 21 has been greatly improved to be more intuitive, with a
@@ -4329,6 +4773,10 @@ Enter a name for your macro
 New Features Guide DaVinci Resolve 21 | Fusion **112**
 
 
+
+
+--- end of page=111 ---
+
 At the top is the Macro Name, this is where you give a name to your macro that will be added to the
 tool list, and right-clicking on the magic wand icon lets you choose an image for the new macro’s
 thumbnail icon.
@@ -4362,6 +4810,10 @@ The Macro Editor Columns:
 New Features Guide DaVinci Resolve 21 | Fusion **113**
 
 
+
+
+--- end of page=112 ---
+
 Enter a name for your macro
 
 
@@ -4393,6 +4845,10 @@ it actually performs in Fusion.
 
 New Features Guide DaVinci Resolve 21 | Fusion **114**
 
+
+
+
+--- end of page=113 ---
 
 **The Macro Editor’s Option Menu:**
 
@@ -4429,6 +4885,10 @@ Modify With > Fairlight Animator from the context menu.
 New Features Guide DaVinci Resolve 21 | Fusion **115**
 
 
+
+
+--- end of page=114 ---
+
 Choosing the Fairlight Animator modifier
 
 
@@ -4452,6 +4912,10 @@ your OGraf or Lottie files directly into your composition.
 
 New Features Guide DaVinci Resolve 21 | Fusion **116**
 
+
+
+
+--- end of page=115 ---
 
 ### **Text+ and MultiText Support Spell Checking**
 
@@ -4486,6 +4950,10 @@ adding pivot adjustments to the Layout tab.
 New Features Guide DaVinci Resolve 21 | Fusion **117**
 
 
+
+
+--- end of page=116 ---
+
 ### **Support for USD SDK 25.11 with** **Hydra 2.0 API for Storm Renderer**
 
 Fusion has been updated to USD SDK 25.11 with Hydra 2.0 API for the Storm renderer.
@@ -4513,6 +4981,10 @@ detail below.
 
 New Features Guide DaVinci Resolve 21 | Fusion **118**
 
+
+
+
+--- end of page=117 ---
 
 ### uProjector [uPj]
 
@@ -4564,6 +5036,10 @@ See the section for the uCatcher node for additional details.
 New Features Guide DaVinci Resolve 21 | Fusion **119**
 
 
+
+
+--- end of page=118 ---
+
 uCamera Projection vs. uProjection Node
 
 The uCamera node also provides a projection feature, and should be used when the projection is
@@ -4600,6 +5076,10 @@ uProjector controls
 
 New Features Guide DaVinci Resolve 21 | Fusion **120**
 
+
+
+
+--- end of page=119 ---
 
 Controls Tab
 
@@ -4682,6 +5162,10 @@ the image is scaled to fit into the pyramid based upon the fit options.
 New Features Guide DaVinci Resolve 21 | Fusion **121**
 
 
+
+
+--- end of page=120 ---
+
 When both the aspect of the pyramid (AovY/AovX) and the aspect of the image (height *
 pixelAspectY)/(width * pixelAspectX) are the same, there is no need for the fit options, and in this
 case the fit options all do the same thing. However, when the aspect of the image and the pyramid
@@ -4757,6 +5241,10 @@ visible in the scene.
 New Features Guide DaVinci Resolve 21 | Fusion **122**
 
 
+
+
+--- end of page=121 ---
+
 Common Controls
 
 
@@ -4810,6 +5298,10 @@ The yellow Scene input accepts USD geometry, (i.e. a uShape or a USD asset via a
 New Features Guide DaVinci Resolve 21 | Fusion **123**
 
 
+
+
+--- end of page=122 ---
+
 ##### **Basic Node Setup**
 
 The input of the uCatcher node is the geometry of the USD asset that will receive the projected
@@ -4846,6 +5338,10 @@ projectors. It has no effect on the results when only one projector is in the sc
 
 New Features Guide DaVinci Resolve 21 | Fusion **124**
 
+
+
+
+--- end of page=123 ---
 
 **Threshold**
 
@@ -4900,6 +5396,10 @@ Both tools are described in detail below.
 New Features Guide DaVinci Resolve 21 | Fusion **125**
 
 
+
+
+--- end of page=124 ---
+
 ### CreateReliefMap [CRM]
 
 The CreateReliefMap node
@@ -4935,6 +5435,10 @@ A 2D shape is input from the sRender node to the CreateReliefMap node.
 
 New Features Guide DaVinci Resolve 21 | Fusion **126**
 
+
+
+
+--- end of page=125 ---
 
 ##### **Inspector**
 
@@ -4986,6 +5490,10 @@ Flip Depth checkbox selected.
 New Features Guide DaVinci Resolve 21 | Fusion **127**
 
 
+
+
+--- end of page=126 ---
+
 Common Controls
 
 
@@ -5030,6 +5538,10 @@ before passing the finished relief data to apply to a Shape3D node.
 
 New Features Guide DaVinci Resolve 21 | Fusion **128**
 
+
+
+
+--- end of page=127 ---
 
 ##### **Inspector**
 
@@ -5078,6 +5590,10 @@ found in “The Common Controls” section at the end of this chapter.
 New Features Guide DaVinci Resolve 21 | Fusion **129**
 
 
+
+
+--- end of page=128 ---
+
 ### **Multi-Inspector**
 
 The Multi-Inspector is a powerful new feature in Fusion v21 that allows users to edit common
@@ -5113,6 +5629,10 @@ while dragging will switch to between offsetting and scaling mode, allowing even
 New Features Guide DaVinci Resolve 21 | Fusion **130**
 
 
+
+
+--- end of page=129 ---
+
 The Set Values To context menu
 
 
@@ -5144,6 +5664,10 @@ and Settings.
 New Features Guide DaVinci Resolve 21 | Fusion **131**
 
 
+
+
+--- end of page=130 ---
+
 ##### **Inputs**
 
 The dColor Corrector node includes two inputs in the Node Editor.
@@ -5172,6 +5696,10 @@ dColor Corrector controls
 
 New Features Guide DaVinci Resolve 21 | Fusion **132**
 
+
+
+
+--- end of page=131 ---
 
 Correction Tab Colors Menu
 
@@ -5237,6 +5765,10 @@ green to red, and so on.
 
 New Features Guide DaVinci Resolve 21 | Fusion **133**
 
+
+
+
+--- end of page=132 ---
 
 Hue shifting can be done by dragging the slider, entering a value directly into the text control, or by
 placing the mouse above the outer ring of the color wheel and dragging the mouse up or down. The
@@ -5311,6 +5843,10 @@ Selecting this button returns all color controls in this section to their defaul
 New Features Guide DaVinci Resolve 21 | Fusion **134**
 
 
+
+
+--- end of page=133 ---
+
 Correction Tab Levels Menu
 
 The main Correction tab is further separated into four types of correction methods: colors, levels,
@@ -5348,6 +5884,10 @@ This menu is used to select and display the histogram for each color channel or 
 
 New Features Guide DaVinci Resolve 21 | Fusion **135**
 
+
+
+
+--- end of page=134 ---
 
 **Histogram Display**
 
@@ -5413,6 +5953,10 @@ Clicking this button resets all the controls in the Levels section to their defa
 New Features Guide DaVinci Resolve 21 | Fusion **136**
 
 
+
+
+--- end of page=135 ---
+
 Correction Tab Histogram Menu
 
 When the menu is set to Histogram, a histogram display is produced of the input image. If a reference
@@ -5464,6 +6008,10 @@ equalizing luminance between the input and reference images.
 New Features Guide DaVinci Resolve 21 | Fusion **137**
 
 
+
+
+--- end of page=136 ---
+
 Correction Tab Suppress Menu
 
 Color Suppression provides a mechanism for removing an unwanted color component from the image.
@@ -5512,6 +6060,10 @@ partly in the range and do not receive the full effect of any color adjustments 
 New Features Guide DaVinci Resolve 21 | Fusion **138**
 
 
+
+
+--- end of page=137 ---
+
 dColor Corrector Ranges controls
 
 
@@ -5551,6 +6103,10 @@ Simple (linear) settings.
 
 New Features Guide DaVinci Resolve 21 | Fusion **139**
 
+
+
+
+--- end of page=138 ---
 
 Options Tab
 
@@ -5608,6 +6164,10 @@ are described in detail at the end of this chapter in “The Common Controls” 
 New Features Guide DaVinci Resolve 21 | Fusion **140**
 
 
+
+
+--- end of page=139 ---
+
 ### **User Defined Metadata Variables** **in Paths, Expressions, and Scripts**
 
 A new variables system has been added to Fusion. This new feature builds on Fusion’s already
@@ -5645,6 +6205,10 @@ Resolve variables in Saver will look like %{resolve:Resolve Metadata}
 New Features Guide DaVinci Resolve 21 | Fusion **141**
 
 
+
+
+--- end of page=140 ---
+
 ### **Improved Lens Distort Tool**
 
 The Lens Distort tool has been improved with checkerboard calibration and it can now be
@@ -5674,6 +6238,10 @@ The tools that can receive motion vector layers include:
 New Features Guide DaVinci Resolve 21 | Fusion **142**
 
 
+
+
+--- end of page=141 ---
+
 ### **Improved Guides and Rulers**
 
 The Guides and Rulers in Fusion 21 have been improved with locked persistence, guide presets and
@@ -5692,6 +6260,10 @@ Undocking the Keyframe editor into it’s own resizable window.
 
 New Features Guide DaVinci Resolve 21 | Fusion **143**
 
+
+
+
+--- end of page=142 ---
 
 ### **Nudge Spline Keyframes**
 
@@ -5727,6 +6299,10 @@ interpolation or frame blending would typically blur or distort.
 
 New Features Guide DaVinci Resolve 21 | Fusion **144**
 
+
+
+
+--- end of page=143 ---
 
 ##### **Basic Node Setup**
 
@@ -5779,6 +6355,10 @@ found in “The Common Controls” section at the end of this chapter.
 New Features Guide DaVinci Resolve 21 | Fusion **145**
 
 
+
+
+--- end of page=144 ---
+
 ## General Improvements
 
 ### **Background Rendering**
@@ -5801,6 +6381,10 @@ their progress.
 
 
 
+
+
+
+--- end of page=145 ---
 
  - **Background Render:** These options control the Background Rendering parameters.
 
@@ -5835,6 +6419,10 @@ Metadata fields used in your burn-in. There is a list of common fields, along wi
 narrow down results, and the icon to sort them alphabetically up or down. Simply select the “+” icon to
 add that field to the middle Burn-In Fields column.
 
+
+
+
+--- end of page=146 ---
 
 The middle column is Burn-In Fields, this lets you customize and format the exact data returned in the
 field. You can use any combination of typed in text, metadata fields from the left column, and other
@@ -5877,6 +6465,10 @@ Then click the Import button in the Overlay Controls to select the image. You ca
 the image using the rest of the Overlay Controls.
 
 
+
+
+--- end of page=147 ---
+
 ### **Searchable Preferences** **and Project Settings**
 
 DaVinci Resolve 21 adds search bars to both the Preferences and Project Settings. This allows you
@@ -5901,6 +6493,10 @@ in the DaVinci Resolve Reference Manual.
 There is a significant three times increase in speed when syncing files to Blackmagic Cloud in
 DaVinci Resolve 21.
 
+
+
+
+--- end of page=148 ---
 
 ### **Codec Support**
 
@@ -5942,4 +6538,8 @@ cameras and technologies.
 
   - HEIF encode support on macOS and Windows.
 
+
+
+
+--- end of page=149 ---
 

@@ -156,8 +156,16 @@
   - Lesson Review (p.751)
 - Index (p.754)
 -->
+
+
+--- end of page=0 ---
+
 ## The Fairlight Audio Guide to
 
+
+
+
+--- end of page=1 ---
 
 **The Fairlight Audio Guide to DaVinci Resolve 20**
 
@@ -230,6 +238,10 @@ registered trademark of Microsoft Inc., registered in the U.S. and other countri
 ISBN 13: 979-8-9924874-2-8
 
 
+
+
+--- end of page=2 ---
+
 ## **Contents**
 
 Foreword ix
@@ -293,6 +305,10 @@ Lesson Review 78
 
 **Contents** **iii**
 
+
+
+
+--- end of page=3 ---
 
 2 Editing Dialogue Tracks 81
 
@@ -359,6 +375,10 @@ Adding Custom Crossfades in the Timeline 231
 **Contents** **iv**
 
 
+
+
+--- end of page=4 ---
+
 Adding Podcast Music 235
 
 Working with the Music Remixer (Studio Only) 236
@@ -420,6 +440,10 @@ Lesson Review 364
 
 **Contents** **v**
 
+
+
+
+--- end of page=5 ---
 
 6 Audio Repairs with Native Processing and Plug-Ins 367
 
@@ -485,6 +509,10 @@ Lesson Review 533
 
 **Contents** **vi**
 
+
+
+
+--- end of page=6 ---
 
 9 Mixing and Sweetening the Soundtrack 535
 
@@ -553,6 +581,10 @@ Bouncing an Ambisonics Mix in the Timeline 664
 **Contents** **vii**
 
 
+
+
+--- end of page=7 ---
+
 Working with Dolby Atmos in the Fairlight Page 671
 
 Converting a Surround Sound Channel-Based Mix to Dolby Atmos 672
@@ -587,6 +619,10 @@ Index 727
 
 **Contents** **viii**
 
+
+
+
+--- end of page=8 ---
 
 ## **Foreword**
 
@@ -638,6 +674,10 @@ Blackmagic Design
 
 **Foreword** **ix**
 
+
+
+
+--- end of page=9 ---
 
 ## **Acknowledgments**
 
@@ -710,6 +750,10 @@ of online Logic Pro X videos.
 **About the Author** **x**
 
 
+
+
+--- end of page=10 ---
+
 Mary currently works for Blackmagic Design’s marketing and curriculum development
 
 team as a Fairlight audio post workflow specialist, developing and delivering training,
@@ -777,6 +821,10 @@ sound design, sound effects editing, and mixing. As you step through Resolve’s
 
 **Getting Started** **xi**
 
+
+
+
+--- end of page=11 ---
 
 audio post-production tools and workflows, you’ll discover new techniques for whatever
 
@@ -846,6 +894,10 @@ sampled footsteps in sync with video.
 **Getting Started** **xii**
 
 
+
+
+--- end of page=12 ---
+
 **Lessons 5 and 6**
 
 
@@ -906,6 +958,10 @@ ambisonics and Dolby Atmos sound.
 
 **Getting Started** **xiii**
 
+
+
+
+--- end of page=13 ---
 
 ##### **The Blackmagic Design Training** **and Certification Program**
 
@@ -998,6 +1054,10 @@ the lessons.
 **Getting Started** **xiv**
 
 
+
+
+--- end of page=14 ---
+
 NOTE The exercises in this book refer to file and resource locations that will differ
 
 if you use the software version from the Apple Mac App Store. For the purposes of
@@ -1058,6 +1118,10 @@ menu, search for “DaVinci Resolve,” and press Enter to launch the applicatio
 **Getting Started** **xv**
 
 
+
+
+--- end of page=15 ---
+
 When DaVinci Resolve 20 opens for the first time, a Welcome splash screen details the new
 
 features available in the current version.
@@ -1065,6 +1129,10 @@ features available in the current version.
 
 **Getting Started** **xvi**
 
+
+
+
+--- end of page=16 ---
 
 **1** If required, you can change the language used. You can also learn more about these
 
@@ -1085,6 +1153,10 @@ how Resolve works.
 **Getting Started** **xvii**
 
 
+
+
+--- end of page=17 ---
+
 **2** Click the Quick Setup button.
 
 
@@ -1095,6 +1167,10 @@ graphics card will perform well. If both pass this test, click Continue.
 
 **Getting Started** **xviii**
 
+
+
+
+--- end of page=18 ---
 
 Next, you will be asked what type of project you would like to begin. DaVinci Resolve
 
@@ -1128,6 +1204,10 @@ Resolve will need to create as you work. This location is commonly referred to a
 **Getting Started** **xix**
 
 
+
+
+--- end of page=19 ---
+
 **5** Leave this set to the default location and click Continue.
 
 
@@ -1144,6 +1224,10 @@ find those shortcuts won’t work.
 
 **Getting Started** **xx**
 
+
+
+
+--- end of page=20 ---
 
 **6** For now, leave the layout set to DaVinci Resolve and click Continue.
 
@@ -1170,6 +1254,10 @@ first lesson in this book.
 
 **Getting Started** **xxi**
 
+
+
+
+--- end of page=21 ---
 
 **8** Choose DaVinci Resolve > Quit DaVinci Resolve or press Command-Q (macOS) or
 
@@ -1231,6 +1319,10 @@ double-click to unzip them if they haven’t unzipped automatically.
 **Getting Started** **xxii**
 
 
+
+
+--- end of page=22 ---
+
 **10** From your Downloads folder, drag the R20 Fairlight Part 1, R20 Fairlight Part 2,
 
 R20 Fairlight Part 3, and R20 Fairlight Part 4 folders into the R20 Fairlight Book Media
@@ -1272,6 +1364,10 @@ will work.
 **Getting Started** **xxiii**
 
 
+
+
+--- end of page=23 ---
+
 **3** In the Fairlight page, in the interface toolbar at the upper left of the page, click the
 
 Sound Library tab to show the Sound Library panel.
@@ -1291,6 +1387,10 @@ proceed to Lesson 1.
 
 **Getting Started** **xxiv**
 
+
+
+
+--- end of page=24 ---
 
 You can register, download, and install the free Fairlight Sound Library now or later.
 
@@ -1322,6 +1422,10 @@ Help menu.
 
 **Getting Started** **xxv**
 
+
+
+
+--- end of page=25 ---
 
 ## **Introducing Blackmagic Cloud**
 
@@ -1392,6 +1496,10 @@ To find out more about these exciting workflows, visit
 
 **Introducing Blackmagic Cloud** **xxvi**
 
+
+
+
+--- end of page=26 ---
 
 ### Lesson 1
 # Building a Soundtrack
@@ -1489,6 +1597,10 @@ Panning an Audio Track from the Viewer 73
 Lesson Review 78
 
 
+
+
+--- end of page=27 ---
+
 Luckily, the Fairlight page in DaVinci Resolve includes all the tools you’ll need to transform
 
 your basic production sound into a fully realized soundtrack from start to finish.
@@ -1562,6 +1674,10 @@ creating a new project.
 **Lesson 1 Building a Soundtrack** **2**
 
 
+
+
+--- end of page=28 ---
+
 ## **Creating a New Empty Project**
 
 In this exercise, you’ll create a new project that will be used to build and mix the Post Park
@@ -1590,6 +1706,10 @@ where you’ll import and edit those files to create the podcast intro.
 
 **Lesson 1 Building a Soundtrack** **3**
 
+
+
+
+--- end of page=29 ---
 
 **5** In the New Project dialog, type Post Park Normal Intro in the name field and then
 
@@ -1620,6 +1740,10 @@ the page.
 **Lesson 1 Building a Soundtrack** **4**
 
 
+
+
+--- end of page=30 ---
+
 ## **Importing Audio Files and** **Creating a Timeline**
 
 In this exercise, you’ll import the Podcast Intro Audio files in the media pool and utilize
@@ -1644,6 +1768,10 @@ the Import Media dialog.
 
 **Lesson 1 Building a Soundtrack** **5**
 
+
+
+
+--- end of page=31 ---
 
 **3** In the Import Media dialog, navigate to the R20 Fairlight Book Media > R20 Fairlight
 
@@ -1674,6 +1802,10 @@ transform silence to “somewhere” in seconds. Let’s try it.
 **Lesson 1 Building a Soundtrack** **6**
 
 
+
+
+--- end of page=32 ---
+
 **4** In the media pool, locate the **Ext City Ambience.wav** audio clip.
 
 
@@ -1702,6 +1834,10 @@ the clip toward the left of the track until it starts at the beginning of the tr
 
 **Lesson 1 Building a Soundtrack** **7**
 
+
+
+
+--- end of page=33 ---
 
 ##### **Playing and Resizing Tracks in the Timeline**
 
@@ -1752,6 +1888,10 @@ move the playhead to that position (00:00:00:00).
 **Lesson 1 Building a Soundtrack** **8**
 
 
+
+
+--- end of page=34 ---
+
 TIP Pressing the Home and End keys will move you to the start or end of a
 
 timeline, respectively. Some Mac keyboards do not have Home and End keys.
@@ -1791,6 +1931,10 @@ the meters. Let’s take a moment to adjust the track height and volume level of
 
 **Lesson 1 Building a Soundtrack** **9**
 
+
+
+
+--- end of page=35 ---
 
 **3** Press the Spacebar to stop playback.
 
@@ -1841,6 +1985,10 @@ the Inspector.
 **Lesson 1 Building a Soundtrack** **10**
 
 
+
+
+--- end of page=36 ---
+
 ## **Changing Clip Volume** **Levels in the Inspector**
 
 The Inspector gives you easy access to controls for any selected clip. While you will use the
@@ -1888,6 +2036,10 @@ a new number in the Volume field, or dragging left or right on the field.
 
 **Lesson 1 Building a Soundtrack** **11**
 
+
+
+
+--- end of page=37 ---
 
 **4** While listening, drag the volume slider to the right to increase the clip level.
 
@@ -1937,6 +2089,10 @@ to increase their levels as needed before editing them to the timeline.
 
 **Lesson 1 Building a Soundtrack** **12**
 
+
+
+
+--- end of page=38 ---
 
 NOTE If you didn’t finish the previous steps in this lesson, import the backup
 
@@ -2002,6 +2158,10 @@ Source audio clips
 **Lesson 1 Building a Soundtrack** **13**
 
 
+
+
+--- end of page=39 ---
+
 You can view source clips in either metadata or thumbnail view. The default is
 
 thumbnail view, which displays a graphical representation of the clip’s waveform. The
@@ -2045,6 +2205,10 @@ the media pool clip’s controls in the Inspector.
 
 **Lesson 1 Building a Soundtrack** **14**
 
+
+
+
+--- end of page=40 ---
 
 **5** In the Inspector, set the Volume level to 6.0. Then, in the media pool, preview the clip
 
@@ -2101,6 +2265,10 @@ the DIM button is on.
 **Lesson 1 Building a Soundtrack** **15**
 
 
+
+
+--- end of page=41 ---
+
 **2** In the media pool, preview the **Dangerous Music R19** clip.
 
 
@@ -2130,6 +2298,10 @@ close to being too loud and clipping or becoming distorted.
 
 **Lesson 1 Building a Soundtrack** **16**
 
+
+
+
+--- end of page=42 ---
 
 **3** Select the **VO 1 Book_006** clip to show it in the preview player. Click the DIM button or
 
@@ -2171,6 +2343,10 @@ starting with the clip of the birds. Which clip mainly features the sound of bir
 
 **Lesson 1 Building a Soundtrack** **17**
 
+
+
+
+--- end of page=43 ---
 
 ##### **Changing Source Clip Names**
 
@@ -2218,6 +2394,10 @@ sound effects.
 **Lesson 1 Building a Soundtrack** **18**
 
 
+
+
+--- end of page=44 ---
+
 ## **Manually Creating and** **Naming Tracks**
 
 You can create a single track or multiple tracks simultaneously from within the timeline. In
@@ -2256,6 +2436,10 @@ the next track and select the name field.
 **Lesson 1 Building a Soundtrack** **19**
 
 
+
+
+--- end of page=45 ---
+
 **5** Press Tab to select the name field for the next track. Type **BIRDS** .
 
 **6** Press Tab to select the name field for the next track. Type **MOWER** . Press Enter
@@ -2290,6 +2474,10 @@ accessed clips.
 **Lesson 1 Building a Soundtrack** **20**
 
 
+
+
+--- end of page=46 ---
+
 **2** At the top of the media pool, click the dropdown menu arrow and select Birds.
 
 
@@ -2304,6 +2492,10 @@ beginning of the A1 BIRDS track in the timeline.
 
 **Lesson 1 Building a Soundtrack** **21**
 
+
+
+
+--- end of page=47 ---
 
 The clip appears in the track once you release it. Now it’s time to add the mower clip.
 
@@ -2334,6 +2526,10 @@ fix this, you can simply change the track format to mono.
 **Lesson 1 Building a Soundtrack** **22**
 
 
+
+
+--- end of page=48 ---
+
 **5** Right-click the A2 track header area and choose Change Track Type To > Mono.
 
 
@@ -2356,6 +2552,10 @@ tracks in Lesson 2, “Editing Dialogue Tracks.”
 
 **Lesson 1 Building a Soundtrack** **23**
 
+
+
+
+--- end of page=49 ---
 
 There is still one more housekeeping item to change in the timeline.
 
@@ -2384,6 +2584,10 @@ the beginning of the timeline and evaluate the tracks.
 
 **Lesson 1 Building a Soundtrack** **24**
 
+
+
+
+--- end of page=50 ---
 
 NOTE If you didn’t finish the previous steps, import the backup timeline 1b Tracks
 
@@ -2425,6 +2629,10 @@ more car noise than birds.
 
 **Lesson 1 Building a Soundtrack** **25**
 
+
+
+
+--- end of page=51 ---
 
 To evaluate the tracks, you can use the controls in the track headers. At the left of each
 
@@ -2477,6 +2685,10 @@ as you work.
 **Lesson 1 Building a Soundtrack** **26**
 
 
+
+
+--- end of page=52 ---
+
 Now, let’s try using the Solo and Mute buttons on several tracks. Solo isolates a track
 
 by temporarily muting all other tracks. Mute silences a track until it is unmuted. You
@@ -2520,6 +2732,10 @@ exercise, you’ll clean up the beginning of the Birds clip.
 **Lesson 1 Building a Soundtrack** **27**
 
 
+
+
+--- end of page=53 ---
+
 ## **Trimming Clips in the Timeline**
 
 DaVinci Resolve offers many options for editing and trimming audio clips, either manually
@@ -2551,6 +2767,10 @@ The playhead marks where you want to trim the head (start) of the clip.
 
 **Lesson 1 Building a Soundtrack** **28**
 
+
+
+
+--- end of page=54 ---
 
 **2** In the A2 BIRDS track, drag the head (left edge) of the clip to the right until it reaches
 
@@ -2587,6 +2807,10 @@ stay the same, so the results will be 01:00:30:00.
 **Lesson 1 Building a Soundtrack** **29**
 
 
+
+
+--- end of page=55 ---
+
 **5** Click the Timecode display in the upper left of the timeline to select it. Type **30.** (thirty
 
 period) to set the timecode to 30:00.
@@ -2616,6 +2840,10 @@ ensure that the playhead is at 01:00:30:00.
 
 **Lesson 1 Building a Soundtrack** **30**
 
+
+
+
+--- end of page=56 ---
 
 **8** Choose Trim > Trim End or press Shift-] (right bracket) to trim the tail of the clips
 
@@ -2656,6 +2884,10 @@ takes in the voiceover.
 **Lesson 1 Building a Soundtrack** **31**
 
 
+
+
+--- end of page=57 ---
+
 **2** In the timeline toolbar, click the Markers button to set a marker in the timeline ruler at
 
 the playhead position.
@@ -2690,6 +2922,10 @@ the playhead one second to the right.
 **Lesson 1 Building a Soundtrack** **32**
 
 
+
+
+--- end of page=58 ---
+
 **6** Press M to set a marker at 01:00:01:00. Press M again to open the Markers dialog.
 
 Then, in the Markers dialog, type **START VO** . When you are finished, click Done.
@@ -2719,6 +2955,10 @@ to source clips as you review the remaining clips and edit them to the timeline.
 
 **Lesson 1 Building a Soundtrack** **33**
 
+
+
+
+--- end of page=59 ---
 
 ## **Marking and Editing Select** **Portions of a Clip**
 
@@ -2756,6 +2996,10 @@ and listen to both takes.
 
 **Lesson 1 Building a Soundtrack** **34**
 
+
+
+
+--- end of page=60 ---
 
 For this intro, the director likes the first take. Fun fact: the director is the one who was
 
@@ -2801,6 +3045,10 @@ to select specific portions of a clip.
 **Lesson 1 Building a Soundtrack** **35**
 
 
+
+
+--- end of page=61 ---
+
 ##### **Marking In and Out Points**
 
 In the lower right corner of the preview player, you’ll see a set of buttons to mark In and
@@ -2834,6 +3082,10 @@ Luckily, the first few turns will work well for this project.
 
 **Lesson 1 Building a Soundtrack** **36**
 
+
+
+
+--- end of page=62 ---
 
 **4** Play the clip from the beginning and listen for the first and second page turns. Stop
 
@@ -2885,6 +3137,10 @@ using your mouse.
 **Lesson 1 Building a Soundtrack** **37**
 
 
+
+
+--- end of page=63 ---
+
 ##### **Scrubbing with the JKL Keys**
 
 Using the JKL keys allows you to quickly scrub through clips in both the timeline and
@@ -2925,6 +3181,10 @@ press K to stop before pressing O. When you are finished, stop playback if neces
 **Lesson 1 Building a Soundtrack** **38**
 
 
+
+
+--- end of page=64 ---
+
 TIP In and Out points update whenever you press I or O, which makes “on the
 
 fly” marking easy. For example, as the playhead approaches the desired Out
@@ -2958,6 +3218,10 @@ Duration Marker from the menu.
 
 **Lesson 1 Building a Soundtrack** **39**
 
+
+
+
+--- end of page=65 ---
 
 A blue duration marker appears above the marked range.
 
@@ -2999,6 +3263,10 @@ media pool list.
 **Lesson 1 Building a Soundtrack** **40**
 
 
+
+
+--- end of page=66 ---
+
 **13** Select Take 1 to load only that marked portion of the clip into the preview player. Play
 
 the selected take.
@@ -3030,6 +3298,10 @@ the Add Tracks dialog, set the following:
 
 **Lesson 1 Building a Soundtrack** **41**
 
+
+
+
+--- end of page=67 ---
 
 **2** Click Add Tracks or press Return.
 
@@ -3086,6 +3358,10 @@ the track header, or dragging the track name in the mixer or tracks index. There
 **Lesson 1 Building a Soundtrack** **42**
 
 
+
+
+--- end of page=68 ---
+
 shortcut (right-click) menu option for moving a track in the timeline. In this exercise, you’ll
 
 use the timeline and track index methods.
@@ -3104,6 +3380,10 @@ track header.
 
 **Lesson 1 Building a Soundtrack** **43**
 
+
+
+
+--- end of page=69 ---
 
 The VO 1 track is now in the A1 position in the timeline, and the clip color within the
 
@@ -3145,6 +3425,10 @@ select both tracks.
 **Lesson 1 Building a Soundtrack** **44**
 
 
+
+
+--- end of page=70 ---
+
 So far, so good with the track organization. Let’s finish coloring the tracks in the
 
 tracks index.
@@ -3179,6 +3463,10 @@ number, name, and controls.
 
 **Lesson 1 Building a Soundtrack** **45**
 
+
+
+
+--- end of page=71 ---
 
 **2** In the tracks list, select the AMBIENCE track.
 
@@ -3219,6 +3507,10 @@ between the BIRDS and MOWER tracks.
 **Lesson 1 Building a Soundtrack** **46**
 
 
+
+
+--- end of page=72 ---
+
 **5** Drag and drop the MOWER track above the BIRDS track.
 
 **6** Click the empty space at the bottom of the track index to deselect all tracks.
@@ -3257,6 +3549,10 @@ click to rename tracks and drag and drop to reorder tracks right in the tracks l
 **Lesson 1 Building a Soundtrack** **47**
 
 
+
+
+--- end of page=73 ---
+
 **1** In the tracks list, with your pointer over the visibility control (eye icon) for track A4, drag
 
 down over the visibility controls for tracks A4 through A6 to hide them.
@@ -3289,6 +3585,10 @@ large enough to clearly see the clips and waveforms.
 
 **Lesson 1 Building a Soundtrack** **48**
 
+
+
+
+--- end of page=74 ---
 
 NOTE Dragging the track header to resize track height will work on the
 
@@ -3325,6 +3625,10 @@ Range Selection tool, and the new Exclusive Solo option.
 
 **Lesson 1 Building a Soundtrack** **49**
 
+
+
+
+--- end of page=75 ---
 
 **1** Solo the A1 VO 1 track and play the clip once to remind yourself of what is said and the
 
@@ -3382,6 +3686,10 @@ increasing the volume level.
 **Lesson 1 Building a Soundtrack** **50**
 
 
+
+
+--- end of page=76 ---
+
 **7** Choose View > Zoom Audio Waveform > Increase Height.
 
 
@@ -3398,6 +3706,10 @@ the waveform zoom level does not affect the track’s volume.
 
 **Lesson 1 Building a Soundtrack** **51**
 
+
+
+
+--- end of page=77 ---
 
 ##### **Selecting and Editing with** **the Range Selection Tool**
 
@@ -3452,6 +3764,10 @@ slammed onto the bench.)
 **Lesson 1 Building a Soundtrack** **52**
 
 
+
+
+--- end of page=78 ---
+
 The green bar in the ruler above the timeline indicates the In and Out points of the
 
 range. You can also see the range’s In and Out points in the timecode display. The
@@ -3484,6 +3800,10 @@ Only the selected portion of the clip in the A2 track remains in the track.
 
 **Lesson 1 Building a Soundtrack** **53**
 
+
+
+
+--- end of page=79 ---
 
 **5** Click the empty space in the timeline to clear the range.
 
@@ -3528,6 +3848,10 @@ section of the voiceover clip.
 **Lesson 1 Building a Soundtrack** **54**
 
 
+
+
+--- end of page=80 ---
+
 **9** Play the timeline from the beginning.
 
 
@@ -3554,6 +3878,10 @@ Alt-X (Windows).
 
 **Lesson 1 Building a Soundtrack** **55**
 
+
+
+
+--- end of page=81 ---
 
 ##### **Preparing the Project**
 
@@ -3592,6 +3920,10 @@ NOTE If you didn’t finish all the steps in this lesson, open the timeline
 **Lesson 1 Building a Soundtrack** **56**
 
 
+
+
+--- end of page=82 ---
+
 ## **Marking and Adding** **Music to the Timeline**
 
 The soundscape is starting to come to life; all it needs is some dramatic music for the
@@ -3623,6 +3955,10 @@ waveform for the entire clip from start to finish, you can set the Zoom menu to 
 **Lesson 1 Building a Soundtrack** **57**
 
 
+
+
+--- end of page=83 ---
+
 **3** Click the Zoom menu in the upper left corner of the preview player and choose 1x.
 
 
@@ -3645,6 +3981,10 @@ from the first frame to the last, regardless of the zoom level displayed.
 
 **Lesson 1 Building a Soundtrack** **58**
 
+
+
+
+--- end of page=84 ---
 
 ##### **Scrubbing with In and Out Marks**
 
@@ -3684,6 +4024,10 @@ for 30 seconds of music, your In point should be somewhere near the middle of th
 **Lesson 1 Building a Soundtrack** **59**
 
 
+
+
+--- end of page=85 ---
+
 The duration field should now be around 30 seconds. The duration is fine, but the
 
 extended silence at the end of the clip means there won’t be 30 seconds of music.
@@ -3722,6 +4066,10 @@ This will automatically create a new track for the clip. In this exercise, you�
 **Lesson 1 Building a Soundtrack** **60**
 
 
+
+
+--- end of page=86 ---
+
 **1** Drag the **Dangerous Music R19** clip from the media pool to the empty space below
 
 the A6 track to create a new track for the incoming clip.
@@ -3742,6 +4090,10 @@ the music.
 
 **Lesson 1 Building a Soundtrack** **61**
 
+
+
+
+--- end of page=87 ---
 
 It’s hard to say how it works with the music because the music completely dominates the
 
@@ -3791,6 +4143,10 @@ Fairlight > Show Clip Gain Line.
 **Lesson 1 Building a Soundtrack** **62**
 
 
+
+
+--- end of page=88 ---
+
 **3** In the **Dangerous Music R19** clip, drag down on the clip gain line to reduce the clip’s
 
 volume level until the tooltip reads -20 dB.
@@ -3825,6 +4181,10 @@ says, “then out of nowhere they arrived” at around 01:00:07:22.
 **Lesson 1 Building a Soundtrack** **63**
 
 
+
+
+--- end of page=89 ---
+
 **6** Select the A7 track, if necessary. Then press Shift-[ (left bracket) or choose Trim > Trim
 
 Start to trim the head of the music clip to the playhead.
@@ -3857,6 +4217,10 @@ handle to the playhead or select the clip and choose Trim > Fade In to Playhead.
 
 **Lesson 1 Building a Soundtrack** **64**
 
+
+
+
+--- end of page=90 ---
 
 **4** Listen to the last section of the voiceover with the music.
 
@@ -3925,6 +4289,10 @@ follow the suggested levels below while you train your ears.
 **Lesson 1 Building a Soundtrack** **65**
 
 
+
+
+--- end of page=91 ---
+
 **6** Play the timeline from the beginning to hear how it sounds with the new clip levels.
 
 
@@ -3966,6 +4334,10 @@ near the end.
 
 **Lesson 1 Building a Soundtrack** **66**
 
+
+
+
+--- end of page=92 ---
 
 ##### **Splitting and Nudging Clips**
 
@@ -4010,6 +4382,10 @@ move the remaining voiceover 1 second to the right to add a pause between phrase
 **Lesson 1 Building a Soundtrack** **67**
 
 
+
+
+--- end of page=93 ---
+
 **7** Drag the second clip in the A1 track to the right so it starts at the playhead.
 
 
@@ -4050,6 +4426,10 @@ frames or so.
 
 **Lesson 1 Building a Soundtrack** **68**
 
+
+
+
+--- end of page=94 ---
 
 **13** Click any empty space to clear the current range.
 
@@ -4103,6 +4483,10 @@ second gulp and “aah” align with the second gap between clips in the A1 trac
 
 **Lesson 1 Building a Soundtrack** **69**
 
+
+
+
+--- end of page=95 ---
 
 **2** Drag the Book Pages Turning clip in the A3 track to the right until the waveform aligns
 
@@ -4163,6 +4547,10 @@ tool to reduce the second gulp an additional amount. Let’s try it.
 **Lesson 1 Building a Soundtrack** **70**
 
 
+
+
+--- end of page=96 ---
+
 **1** Adjust the vertical and horizontal zoom to see the clip in the A2 track clearly.
 
 **2** Using the gain line on the Drinking Coffee clip, lower the clip level from 13 dB to 10 dB.
@@ -4211,6 +4599,10 @@ that section.
 **Lesson 1 Building a Soundtrack** **71**
 
 
+
+
+--- end of page=97 ---
+
 **8** Click the gain line near the end of the clip to see the level in the tooltip.
 
 
@@ -4256,6 +4648,10 @@ and review your work—again.
 
 **Lesson 1 Building a Soundtrack** **72**
 
+
+
+
+--- end of page=98 ---
 
 ##### **One More Thing**
 
@@ -4324,6 +4720,10 @@ If the timeline had a video track, the viewer is where you would see the video o
 **Lesson 1 Building a Soundtrack** **73**
 
 
+
+
+--- end of page=99 ---
+
 **3** In the lower left corner of the viewer, click the Controls menu and choose Show
 
 Tracker Controls.
@@ -4340,6 +4740,10 @@ forth between left and right. This makes the controls easy.
 
 **Lesson 1 Building a Soundtrack** **74**
 
+
+
+
+--- end of page=100 ---
 
 **5** Press R for the Range tool and click the lower half of the mower clip to select the entire
 
@@ -4367,6 +4771,10 @@ Now, you can set the starting position on the far right of the viewer.
 **Lesson 1 Building a Soundtrack** **75**
 
 
+
+
+--- end of page=101 ---
+
 **7** Option/Alt-click the right side of the viewer to set the pan tracker and a left-right
 
 keyframe in that position.
@@ -4374,6 +4782,10 @@ keyframe in that position.
 
 **Lesson 1 Building a Soundtrack** **76**
 
+
+
+
+--- end of page=102 ---
 
 **8** Press Shift-O to move the playhead to the selected clip’s Out point. Option/Alt-click the
 
@@ -4392,6 +4804,10 @@ in the viewer.
 
 **Lesson 1 Building a Soundtrack** **77**
 
+
+
+
+--- end of page=103 ---
 
 Fantastic! Just like that, the mower sounds like it is moving in the distance from the right to
 
@@ -4453,6 +4869,10 @@ that apply.)
 **Lesson 1 Building a Soundtrack** **78**
 
 
+
+
+--- end of page=104 ---
+
 **5** What shortcuts are used to mark the beginning and end of a section that you want to
 
 use for a source clip in the media pool?
@@ -4487,6 +4907,10 @@ anywhere in between
 **Lesson 1 Building a Soundtrack** **79**
 
 
+
+
+--- end of page=105 ---
+
 ##### **Answers**
 
 **1** a, d
@@ -4506,6 +4930,10 @@ You can also change the level of a timeline clip in either the timeline or the I
 
 **Lesson 1 Building a Soundtrack** **80**
 
+
+
+
+--- end of page=106 ---
 
 ### Lesson 2
 # Editing Dialogue Tracks
@@ -4591,6 +5019,10 @@ Transcription (Studio Only) 153
 Lesson Review 159
 
 
+
+
+--- end of page=107 ---
+
 NOTE The exercises in this lesson build from the tools and skills you learned in the
 
 previous lesson. If you skipped ahead to this lesson, you might need to look back
@@ -4649,6 +5081,10 @@ DaVinci Resolve menu.
 **Lesson 2 Editing Dialogue Tracks** **82**
 
 
+
+
+--- end of page=108 ---
+
 ## **Opening and Playing the Project**
 
 In this exercise, you will restore the TML Audio Post project that contains the clips, scenes,
@@ -4685,6 +5121,10 @@ you can keep the unaltered original project for later reference.
 
 **Lesson 2 Editing Dialogue Tracks** **83**
 
+
+
+
+--- end of page=109 ---
 
 Now that you’ve restored and saved a copy of the project, let’s review the project
 
@@ -4724,6 +5164,10 @@ For subsequent exercises, you’ll simply be instructed to open a specific timel
 
 **Lesson 2 Editing Dialogue Tracks** **84**
 
+
+
+
+--- end of page=110 ---
 
 NOTE You can also access any of the lesson timelines for this book in the
 
@@ -4768,6 +5212,10 @@ or full monitoring panel at this time.
 **Lesson 2 Editing Dialogue Tracks** **85**
 
 
+
+
+--- end of page=111 ---
+
 **2** In the lower right corner of the viewer, click the Floating Window button or choose
 
 Workspace > Fairlight > Floating to convert the viewer into a floating window.
@@ -4791,6 +5239,10 @@ Feel free to resize or move the viewer at any time as you work through these exe
 
 **Lesson 2 Editing Dialogue Tracks** **86**
 
+
+
+
+--- end of page=112 ---
 
 To return the viewer to the monitoring panel, you can click the Dock button in the
 
@@ -4858,6 +5310,10 @@ user-defined Timeline menu, which shows recent timelines or all timelines in a p
 **Lesson 2 Editing Dialogue Tracks** **87**
 
 
+
+
+--- end of page=113 ---
+
 **3** In the upper left corner of the timeline window, click the Timelines dropdown menu
 
 to see the project’s recent timelines. In the list of timelines, choose 2 Multichannel
@@ -4885,6 +5341,10 @@ video clips are blue.
 
 **Lesson 2 Editing Dialogue Tracks** **88**
 
+
+
+
+--- end of page=114 ---
 
 Thoughts? It doesn’t take long to realize the many challenges ahead for the dialogue editor
 
@@ -4938,6 +5398,10 @@ Let’s start by taking a closer look at the clip in the timeline.
 **Lesson 2 Editing Dialogue Tracks** **89**
 
 
+
+
+--- end of page=115 ---
+
 **2** In the Clip Attributes dialog, click the Audio tab.
 
 
@@ -4957,6 +5421,10 @@ channel directly in the timeline or File tab of the Inspector.
 
 **Lesson 2 Editing Dialogue Tracks** **90**
 
+
+
+
+--- end of page=116 ---
 
 **4** Show the Inspector and click the File tab to see that panel.
 
@@ -4995,6 +5463,10 @@ technique to an entire bin filled with source video and audio clips.
 **Lesson 2 Editing Dialogue Tracks** **91**
 
 
+
+
+--- end of page=117 ---
+
 **2** In the media pool bin list, select the TML Media > Multichannel Dialogue bin.
 
 
@@ -5016,6 +5488,10 @@ two audio channels: stereo left and right.
 
 **Lesson 2 Editing Dialogue Tracks** **92**
 
+
+
+
+--- end of page=118 ---
 
 **4** Play a few seconds of the clip in the preview player to hear the stereo audio.
 
@@ -5053,6 +5529,10 @@ Metadata panel.
 
 **Lesson 2 Editing Dialogue Tracks** **93**
 
+
+
+
+--- end of page=119 ---
 
 **7** Click the Format dropdown to see the current choices for the 3 channels.
 
@@ -5096,6 +5576,10 @@ information to retain.
 **Lesson 2 Editing Dialogue Tracks** **94**
 
 
+
+
+--- end of page=120 ---
+
 **11** Click Sync.
 
 **12** In the Inspector, select the video clip in the Multichannel Dialogue bin.
@@ -5127,6 +5611,10 @@ As expected, the timeline opens with one stereo and three mono tracks.
 **Lesson 2 Editing Dialogue Tracks** **95**
 
 
+
+
+--- end of page=121 ---
+
 **15** Select the audio clip in the timeline to see the Audio Configuration in the Inspector.
 
 
@@ -5157,6 +5645,10 @@ in the timeline.
 **Lesson 2 Editing Dialogue Tracks** **96**
 
 
+
+
+--- end of page=122 ---
+
 **2** In the Inspector Audio Configurations, uncheck all the audio channels except for the
 
 3-Boom channel.
@@ -5185,6 +5677,10 @@ Here, you’ll see only the channels currently showing in the timeline.
 
 **Lesson 2 Editing Dialogue Tracks** **97**
 
+
+
+
+--- end of page=123 ---
 
 **6** In the Audio Configuration controls, click the A1 channel dropdown menu to see the
 
@@ -5224,6 +5720,10 @@ pinpoint where and when to edit the clips.
 **Lesson 2 Editing Dialogue Tracks** **98**
 
 
+
+
+--- end of page=124 ---
+
 **1** Open the **2 Multichannel Start** timeline. Close any unnecessary panels so that only
 
 the timeline and viewer are visible.
@@ -5258,6 +5758,10 @@ beneath the fixed playhead.
 **Lesson 2 Editing Dialogue Tracks** **99**
 
 
+
+
+--- end of page=125 ---
+
 ##### **Using Fixed Playhead Mode** **for Scrolling Playback**
 
 Normal page-scrolling playback is highly functional for both picture editing and audio
@@ -5279,6 +5783,10 @@ without updating the visible portion of the timeline.
 
 **Lesson 2 Editing Dialogue Tracks** **100**
 
+
+
+
+--- end of page=126 ---
 
 The playhead and the first clip now start in the middle of the timeline. To move the
 
@@ -5316,6 +5824,10 @@ keys, respectively. The Jump to options are available in the Timeline View Optio
 
 **Lesson 2 Editing Dialogue Tracks** **101**
 
+
+
+
+--- end of page=127 ---
 
 As you can see, there are four Jump to options, including Clip, Fade, Marker, and
 
@@ -5368,6 +5880,10 @@ Automation is toggled on, which is a default setting in the Fairlight page.
 **Lesson 2 Editing Dialogue Tracks** **102**
 
 
+
+
+--- end of page=128 ---
+
 **3** Click the Toggle Automation button (red) to turn off automation and hide the bus in
 
 the timeline.
@@ -5406,6 +5922,10 @@ you’ll drag the ruler to scrub the audio beneath the playhead.
 
 **Lesson 2 Editing Dialogue Tracks** **103**
 
+
+
+
+--- end of page=129 ---
 
 **2** At the top of the timeline, grab the ruler above the first set of waveform peaks and
 
@@ -5451,6 +5971,10 @@ scrubbing.
 **Lesson 2 Editing Dialogue Tracks** **104**
 
 
+
+
+--- end of page=130 ---
+
 **8** In the Timeline menu, choose Loop Jog to enable loop jog mode. If necessary, enable
 
 Audio Scrubbing before enabling Loop Jog in the Timeline menu.
@@ -5493,6 +6017,10 @@ a field in which to set the Loop Jog Width. The default setting is 80 ms (millis
 
 **Lesson 2 Editing Dialogue Tracks** **105**
 
+
+
+
+--- end of page=131 ---
 
 **14** If necessary, change the Loop Jog Alignment to Pre and the Loop Jog Width to 80 ms.
 
@@ -5555,6 +6083,10 @@ steps utilize skills that you have learned in previous exercises.
 **Lesson 2 Editing Dialogue Tracks** **106**
 
 
+
+
+--- end of page=132 ---
+
 **1** Fast forward through the first part of the clip while looking at the viewer to count how
 
 many characters are in this scene. Stop playback at around 01:00:10:18.
@@ -5582,6 +6114,10 @@ only need to add five more tracks.
 
 **Lesson 2 Editing Dialogue Tracks** **107**
 
+
+
+
+--- end of page=133 ---
 
 **4** Click Add Tracks.
 
@@ -5619,6 +6155,10 @@ Olive, A4 Levi – Blue, A5 Director – Tan, A6 PFX – Green (no color change)
 
 **Lesson 2 Editing Dialogue Tracks** **108**
 
+
+
+
+--- end of page=134 ---
 
 Next, you’ll split the clip and move each section to the correct track.
 
@@ -5677,6 +6217,10 @@ Then use the Vertical Zoom slider or Shift-scroll the middle mouse wheel to redu
 **Lesson 2 Editing Dialogue Tracks** **109**
 
 
+
+
+--- end of page=135 ---
+
 vertical height of the remaining tracks until you can see them above the
 
 floating viewer.
@@ -5696,6 +6240,10 @@ This is one of the secrets to fast keyboard editing in the Fairlight page.
 
 **Lesson 2 Editing Dialogue Tracks** **110**
 
+
+
+
+--- end of page=136 ---
 
 **4** Using the JKL keys, play the A1 track from the beginning. Stop before the first spoken
 
@@ -5751,6 +6299,10 @@ Split the clip starting at around 01:00:01:17 and ending at 01:00:03:04.
 **Lesson 2 Editing Dialogue Tracks** **111**
 
 
+
+
+--- end of page=137 ---
+
 The next line doesn’t happen for a few seconds, so let’s decrease the horizontal zoom
 
 to see more of what is coming up next in the waveform.
@@ -5788,6 +6340,10 @@ this?” Split the clip.
 
 **Lesson 2 Editing Dialogue Tracks** **112**
 
+
+
+
+--- end of page=138 ---
 
 Hopefully, by now, you have a bit of a rhythm with your navigation and editing shortcuts as
 
@@ -5849,6 +6405,10 @@ after a single use.
 **Lesson 2 Editing Dialogue Tracks** **113**
 
 
+
+
+--- end of page=139 ---
+
 **2** Choose Timeline > Track Destination Selection > Audio Destination A1 to select the A1
 
 track. While the menu is visible, look at the other Track Destination Selection options
@@ -5885,6 +6445,10 @@ automatically. Let’s try it.
 **Lesson 2 Editing Dialogue Tracks** **114**
 
 
+
+
+--- end of page=140 ---
+
 As you can see, with the A1 track already selected, the clip touching the playhead in the
 
 track is also selected.
@@ -5905,6 +6469,10 @@ shortcuts you’ll need.
 
 **Lesson 2 Editing Dialogue Tracks** **115**
 
+
+
+
+--- end of page=141 ---
 
 The shortcut for Cut is Command-X (macOS) or Ctrl-X (Windows).
 
@@ -5941,6 +6509,10 @@ clip if you are simply moving it to a different track.
 
 **Lesson 2 Editing Dialogue Tracks** **116**
 
+
+
+
+--- end of page=142 ---
 
 **8** Press Command-Option-1 (macOS) or Ctrl-Alt-1 (Windows) to select the A1 track.
 
@@ -5993,6 +6565,10 @@ Ctrl-Alt-Down Arrow (Windows) twice to move the track selection down to the A3 t
 **Lesson 2 Editing Dialogue Tracks** **117**
 
 
+
+
+--- end of page=143 ---
+
 **14** Paste the clip into the A3 track. Press Command-Option-Up Arrow (macOS) or Ctrl-Alt
 Up Arrow (Windows) twice to move the track selection up to the A1 track.
 
@@ -6035,6 +6611,10 @@ Once you finish the first 14 clips, stop and check your progress.
 **Lesson 2 Editing Dialogue Tracks** **118**
 
 
+
+
+--- end of page=144 ---
+
 **17** Press Shift-Z to zoom out horizontally to see the checkerboard edit so far.
 
 
@@ -6069,6 +6649,10 @@ second pass. Or you can split and move as you go. It’s up to you.
 
 **Lesson 2 Editing Dialogue Tracks** **119**
 
+
+
+
+--- end of page=145 ---
 
 You can also select multiple clips, such as PFX sounds, and cut, move, and paste them
 
@@ -6136,6 +6720,10 @@ Clips are outlined in red when they are selected.
 **Lesson 2 Editing Dialogue Tracks** **120**
 
 
+
+
+--- end of page=146 ---
+
 **8** In the Remove Attributes dialog, select the Volume option. Click Apply.
 
 
@@ -6184,6 +6772,10 @@ between the different channels to hear them. Let’s get started.
 **Lesson 2 Editing Dialogue Tracks** **121**
 
 
+
+
+--- end of page=147 ---
+
 **1** Press R to switch to the Range tool.
 
 **2** In the timeline, move the playhead to the beginning of the fourth clip in the A1 track.
@@ -6211,6 +6803,10 @@ Next, you’ll show the source audio channel in the timeline clip headers.
 
 **Lesson 2 Editing Dialogue Tracks** **122**
 
+
+
+
+--- end of page=148 ---
 
 **6** Choose Fairlight > View Clip Info Display to open that dialog.
 
@@ -6242,6 +6838,10 @@ looped playback.
 
 **Lesson 2 Editing Dialogue Tracks** **123**
 
+
+
+
+--- end of page=149 ---
 
 **9** If necessary, move the playhead to the selected clip. Press the Spacebar to start
 
@@ -6276,6 +6876,10 @@ shortcut menu. Choose the 3-Boom channel.
 
 **Lesson 2 Editing Dialogue Tracks** **124**
 
+
+
+
+--- end of page=150 ---
 
 That’s all the tools and techniques you need to select audio channels, split clips, create
 
@@ -6323,6 +6927,10 @@ The project currently includes one timeline Podcast Intro v1 and eight audio cli
 
 **Lesson 2 Editing Dialogue Tracks** **125**
 
+
+
+
+--- end of page=151 ---
 
 For the next exercises, you’ll import a timeline that includes tracks and various editing
 
@@ -6372,6 +6980,10 @@ Open Recent Project. Here, you’ll find a list of the 10 most recent projects.
 
 **Lesson 2 Editing Dialogue Tracks** **126**
 
+
+
+
+--- end of page=152 ---
 
 ## **Editing Consecutive Voiceover** **Takes in the Timeline**
 
@@ -6432,6 +7044,10 @@ you’ll narrow it down to the best.
 **Lesson 2 Editing Dialogue Tracks** **127**
 
 
+
+
+--- end of page=153 ---
+
 **1** Play the clip in the A1 track and listen to all three takes of the Runner’s voiceover.
 
 
@@ -6478,6 +7094,10 @@ timeline editing, and more. You’ll learn more about this at the end of the cha
 **Lesson 2 Editing Dialogue Tracks** **128**
 
 
+
+
+--- end of page=154 ---
+
 ##### **Aligning Takes in Separate Tracks**
 
 To align takes, you can move them to separate neighboring tracks or layers within the
@@ -6500,6 +7120,10 @@ for the first words. Do your best using the waveform as a guide.
 
 **Lesson 2 Editing Dialogue Tracks** **129**
 
+
+
+
+--- end of page=155 ---
 
 TIP Zooming clips horizontally gives you a better view of the waveform to
 
@@ -6535,6 +7159,10 @@ to the A2 track.
 
 **Lesson 2 Editing Dialogue Tracks** **130**
 
+
+
+
+--- end of page=156 ---
 
 **8** Play the first phrase and listen to the revised alignment of the runner character saying,
 
@@ -6579,6 +7207,10 @@ Instead, let’s try a more advanced technique that doesn’t require mouse sele
 **Lesson 2 Editing Dialogue Tracks** **131**
 
 
+
+
+--- end of page=157 ---
+
 ##### **Using JKL and Edit Shortcuts** **to Split and Align Clips**
 
 In this exercise, you’ll apply the skills you learned for checkerboard editing to splitting and
@@ -6613,6 +7245,10 @@ waveform. Once aligned, press Command-V (macOS) or Ctrl-V (Windows) to paste.
 
 **Lesson 2 Editing Dialogue Tracks** **132**
 
+
+
+
+--- end of page=158 ---
 
 **6** You’ve got this! Keep it going.
 
@@ -6659,6 +7295,10 @@ timeline **2 VO6 Split 2 Tracks** to catch up.
 **Lesson 2 Editing Dialogue Tracks** **133**
 
 
+
+
+--- end of page=159 ---
+
 ##### **Disabling Timeline Clips to Create** **a Multi-Track Composite**
 
 The next step is to choose the best take of each voiceover section and disable the other to
@@ -6701,6 +7341,10 @@ the A1 track.
 
 **Lesson 2 Editing Dialogue Tracks** **134**
 
+
+
+
+--- end of page=160 ---
 
 **4** Press R to switch to the Range tool. With the Range tool, select the first clip in the
 
@@ -6751,6 +7395,10 @@ Ctrl-selecting (Windows).
 
 **Lesson 2 Editing Dialogue Tracks** **135**
 
+
+
+
+--- end of page=161 ---
 
 **8** Unsolo the track and disable the following clips as requested by the clients:
 
@@ -6803,6 +7451,10 @@ takes are on the top layer. Finally, you’ll tighten the edit and play the fina
 **Lesson 2 Editing Dialogue Tracks** **136**
 
 
+
+
+--- end of page=162 ---
+
 ##### **Preparing the Project**
 
 To simplify the process, let’s work in the same timeline and start by naming and duplicating
@@ -6835,6 +7487,10 @@ You are finished with the A1 and A2 tracks, so they can be muted and hidden.
 
 **Lesson 2 Editing Dialogue Tracks** **137**
 
+
+
+
+--- end of page=163 ---
 
 **4** In the Tracks Index, mute the A1 and A2 tracks and click the Visibility button (eye icon)
 
@@ -6869,6 +7525,10 @@ clips in the selected track.
 
 **Lesson 2 Editing Dialogue Tracks** **138**
 
+
+
+
+--- end of page=164 ---
 
 **10** Right-click any of the selected clips in the A4 track and choose Clip Color > Yellow.
 
@@ -6907,6 +7567,10 @@ you move them up and down between layers.
 **Lesson 2 Editing Dialogue Tracks** **139**
 
 
+
+
+--- end of page=165 ---
+
 Each track has a single layer of mono clips, and an empty, clip-sized space appears in
 
 the track above the clips. The height of each clip and layer is based on the track height
@@ -6937,6 +7601,10 @@ Now, you can clearly see the audio track layers to edit the multiple voiceover t
 
 **Lesson 2 Editing Dialogue Tracks** **140**
 
+
+
+
+--- end of page=166 ---
 
 ## **Trimming and Moving Clips** **to Different Layers**
 
@@ -6981,6 +7649,10 @@ waveform.
 
 **Lesson 2 Editing Dialogue Tracks** **141**
 
+
+
+
+--- end of page=167 ---
 
 When trimming toward another clip in the same layer, the clip will automatically appear
 
@@ -7039,6 +7711,10 @@ clips out of sync horizontally.
 **Lesson 2 Editing Dialogue Tracks** **142**
 
 
+
+
+--- end of page=168 ---
+
 **11** Play the timeline to hear the best takes.
 
 
@@ -7081,6 +7757,10 @@ Split the selected clips. Deselect the clips.
 
 **Lesson 2 Editing Dialogue Tracks** **143**
 
+
+
+
+--- end of page=169 ---
 
 Next, you’ll trim and align the clips. As you align the clips, drag the clip in the lower
 
@@ -7130,6 +7810,10 @@ You can show the audio track layers to edit or change clip order anytime.
 **Lesson 2 Editing Dialogue Tracks** **144**
 
 
+
+
+--- end of page=170 ---
+
 **2** Use the Vertical Zoom slider or drag the A3 track header to decrease the track’s height.
 
 
@@ -7170,6 +7854,10 @@ will return to the starting point so you can listen from the beginning again. Le
 
 **Lesson 2 Editing Dialogue Tracks** **145**
 
+
+
+
+--- end of page=171 ---
 
 **9** Press, (comma) two more times to nudge left two more frames.
 
@@ -7236,6 +7924,10 @@ a bin and then bounce the composite.
 **Lesson 2 Editing Dialogue Tracks** **146**
 
 
+
+
+--- end of page=172 ---
+
 **3** Select the Bounced VO Comps bin.
 
 
@@ -7271,6 +7963,10 @@ timeline to reflect its contents.
 
 **Lesson 2 Editing Dialogue Tracks** **147**
 
+
+
+
+--- end of page=173 ---
 
 **9** If necessary, in the media pool, select the Master bin to see all the clips and timelines.
 
@@ -7330,6 +8026,10 @@ also patched together from different people’s parts.
 **Lesson 2 Editing Dialogue Tracks** **148**
 
 
+
+
+--- end of page=174 ---
+
 ##### **Preparing the Project**
 
 To save time, you’ll open a project with the combo intro already built. You’ll be invited to
@@ -7385,6 +8085,10 @@ go back and see how it all started.
 **Lesson 2 Editing Dialogue Tracks** **149**
 
 
+
+
+--- end of page=175 ---
+
 **7** In the media pool, locate the timelines in the Lesson 2 bin. Then open the timeline
 
 **2 Intro Combo Start** .
@@ -7423,6 +8127,10 @@ enough or too much and adjust the edit accordingly.
 
 **Lesson 2 Editing Dialogue Tracks** **150**
 
+
+
+
+--- end of page=176 ---
 
 **1** Open the timeline **2 Intro Combo to Tighten** .
 
@@ -7469,6 +8177,10 @@ clips. Trust your ears and your guts. You’ve got this!
 **Lesson 2 Editing Dialogue Tracks** **151**
 
 
+
+
+--- end of page=177 ---
+
 ##### **Using Enable to Audition Stacked** **Clips in the Timeline**
 
 There are countless creative editing choices for this character combo podcast intro. One
@@ -7511,6 +8223,10 @@ Position to disable that option.
 
 **Lesson 2 Editing Dialogue Tracks** **152**
 
+
+
+
+--- end of page=178 ---
 
 Mission accomplished. You have completed the first level of dialogue editing! But cutting
 
@@ -7570,6 +8286,10 @@ direction between takes, and even changes in accent.
 **Lesson 2 Editing Dialogue Tracks** **153**
 
 
+
+
+--- end of page=179 ---
+
 **5** Change the preview player Zoom menu to 1x. Then, move the playhead to the middle
 
 of the clip for a better view of the entire waveform.
@@ -7580,6 +8300,10 @@ of the clip for a better view of the entire waveform.
 
 **Lesson 2 Editing Dialogue Tracks** **154**
 
+
+
+
+--- end of page=180 ---
 
 A Transcribing Audio progress dialog indicates that the clip is being analyzed. Once
 
@@ -7611,6 +8335,10 @@ play the first take starting with the highlighted “The last day of normal….�
 
 **Lesson 2 Editing Dialogue Tracks** **155**
 
+
+
+
+--- end of page=181 ---
 
 **10** To the right of the Search button, click the Next button (>) to advance to the next
 
@@ -7644,6 +8372,10 @@ Lesson 1.
 
 **Lesson 2 Editing Dialogue Tracks** **156**
 
+
+
+
+--- end of page=182 ---
 
 **14** In the lower left corner of the Transcription window, click the Marker button to mark
 
@@ -7687,6 +8419,10 @@ as VO 4 Skateboard, VO 5 Photographer, and VO 3 Bike, respectively.
 **Lesson 2 Editing Dialogue Tracks** **157**
 
 
+
+
+--- end of page=183 ---
+
 **17** In the Transcription window, search for the phrase “then out of nowhere.”
 
 
@@ -7712,6 +8448,10 @@ effects and music.
 
 **Lesson 2 Editing Dialogue Tracks** **158**
 
+
+
+
+--- end of page=184 ---
 
 ## **Lesson Review**
 
@@ -7771,6 +8511,10 @@ Arrow (macOS) or Alt-Ctrl-Up/Down Arrow (Windows).
 **Lesson 2 Editing Dialogue Tracks** **159**
 
 
+
+
+--- end of page=185 ---
+
 ##### **Answers**
 
 **1** b, c
@@ -7790,6 +8534,10 @@ timeline clips.
 
 **Lesson 2 Editing Dialogue Tracks** **160**
 
+
+
+
+--- end of page=186 ---
 
 ### Lesson 3
 # Editing Sound Effects and Music
@@ -7857,6 +8605,10 @@ Working with the Music Remixer (Studio Only) 236
 Lesson Review 244
 
 
+
+
+--- end of page=187 ---
+
 ## **Finishing a Spotting List** **in the Markers Index**
 
 So far, you’ve learned how to build a soundtrack from scratch and edit dialogue using the
@@ -7899,6 +8651,10 @@ markers and notes in the Markers index.
 **Lesson 3 Editing Sound Effects and Music** **162**
 
 
+
+
+--- end of page=188 ---
+
 **4** In the upper left corner of the interface toolbar, click the Index button to open the
 
 Index panel. Then, at the top of the Index panel, click the Markers button to show
@@ -7921,6 +8677,10 @@ is black.
 **Lesson 3 Editing Sound Effects and Music** **163**
 
 
+
+
+--- end of page=189 ---
+
 **5** In the Markers index toolbar, click the List View button to change the index to List view.
 
 
@@ -7941,6 +8701,10 @@ marker in the color column.
 
 **Lesson 3 Editing Sound Effects and Music** **164**
 
+
+
+
+--- end of page=190 ---
 
 This marker represents the photographer’s voiceover, which comprises the two blue
 
@@ -7978,6 +8742,10 @@ columns to a different order by dragging the column header to a new position.
 
 **Lesson 3 Editing Sound Effects and Music** **165**
 
+
+
+
+--- end of page=191 ---
 
 If you look carefully at the markers in the middle area of the timeline, you’ll see a
 
@@ -8030,6 +8798,10 @@ speed, and precision.
 
 **Lesson 3 Editing Sound Effects and Music** **166**
 
+
+
+
+--- end of page=192 ---
 
 NOTE The Focus mode multi-tool behavior combines many of the selection,
 
@@ -8097,6 +8869,10 @@ sound effects into the timeline.
 **Lesson 3 Editing Sound Effects and Music** **167**
 
 
+
+
+--- end of page=193 ---
+
 **1** Show the media pool.
 
 
@@ -8135,6 +8911,10 @@ tool. Let’s add the **Dog walking** clip to the corresponding track.
 **Lesson 3 Editing Sound Effects and Music** **168**
 
 
+
+
+--- end of page=194 ---
+
 **7** Increase the height of the A9 track as needed for a clear view of the clip, waveform,
 
 and pointer.
@@ -8164,6 +8944,10 @@ playhead as it moves along the timeline. Stop playback.
 
 **Lesson 3 Editing Sound Effects and Music** **169**
 
+
+
+
+--- end of page=195 ---
 
 A new edit point I-beam flashes on the clip wherever you stopped playback. Before you
 
@@ -8211,6 +8995,10 @@ the track and use the solo-scrub method to listen to a specific section of the c
 
 **Lesson 3 Editing Sound Effects and Music** **170**
 
+
+
+
+--- end of page=196 ---
 
 **1** If necessary, scroll down to the A9 track.
 
@@ -8272,6 +9060,10 @@ you have an edit selection range with a duration of around 2:15.
 **Lesson 3 Editing Sound Effects and Music** **171**
 
 
+
+
+--- end of page=197 ---
+
 The part of the clip within the edit selection range brightens. You can extend or reduce
 
 the range by Shift-dragging the start or end of the range in the upper half of the clip.
@@ -8320,6 +9112,10 @@ range in the timeline ruler as a guide while you move the clip.
 **Lesson 3 Editing Sound Effects and Music** **172**
 
 
+
+
+--- end of page=198 ---
+
 **6** Using the Dog Walk marker as a guide, drag the fade handle in the upper left corner of
 
 the clip to create a fade-in that starts at the beginning of the clip and ends at the Dog
@@ -8343,6 +9139,10 @@ you’ll use a different technique to edit and align the next two sound effects.
 
 **Lesson 3 Editing Sound Effects and Music** **173**
 
+
+
+
+--- end of page=199 ---
 
 ## **Using Multi-Tool Snapping** **to Head or Tail**
 
@@ -8396,6 +9196,10 @@ beginning of the A13 FX 5 Camera track.
 **Lesson 3 Editing Sound Effects and Music** **174**
 
 
+
+
+--- end of page=200 ---
+
 **5** In the media pool, select the Fairlight Sound Library bin to see a sample of sound
 
 effects that come with the Fairlight Sound Library.
@@ -8428,6 +9232,10 @@ Selecting the track isn’t necessary, but it allows you to see the I-beam curso
 **Lesson 3 Editing Sound Effects and Music** **175**
 
 
+
+
+--- end of page=201 ---
+
 **10** In the Markers index, select the Book marker.
 
 **11** Hold Option-Command (macOS) or Alt-Ctrl (Windows) and click the yellow clip in the
@@ -8448,6 +9256,10 @@ clip to set the playhead at the end of the clip (approximately 01:00:26:09).
 
 **Lesson 3 Editing Sound Effects and Music** **176**
 
+
+
+
+--- end of page=202 ---
 
 **13** Hold Command-Option-Control (macOS) or Command-Alt-Ctrl (Windows) and click the
 
@@ -8495,6 +9307,10 @@ with your trims and fades.
 **Lesson 3 Editing Sound Effects and Music** **177**
 
 
+
+
+--- end of page=203 ---
+
 **17** In the A12 track, drag the left edge of the Running clip toward the left about 2 seconds
 
 until it starts at 01:00:20:20. Use the timecode field as a guide while you extend the
@@ -8523,6 +9339,10 @@ the media pool in the Timelines > Lesson 3 bin.
 
 **Lesson 3 Editing Sound Effects and Music** **178**
 
+
+
+
+--- end of page=204 ---
 
 ##### **Using Transients to Split Clips Quickly**
 
@@ -8560,6 +9380,10 @@ Clip and Jump to Transient.
 
 **Lesson 3 Editing Sound Effects and Music** **179**
 
+
+
+
+--- end of page=205 ---
 
 With the Jump to Transient option enabled, you can use the Up and Down Arrow keys
 
@@ -8603,6 +9427,10 @@ Tracks index.
 **Lesson 3 Editing Sound Effects and Music** **180**
 
 
+
+
+--- end of page=206 ---
+
 **8** Swipe off visibility (the eye icon) for tracks A1 through A12 so that only the A13 track
 
 is visible.
@@ -8630,6 +9458,10 @@ or Razor shortcuts.
 
 **Lesson 3 Editing Sound Effects and Music** **181**
 
+
+
+
+--- end of page=207 ---
 
 **11** Press Command-B (macOS) or Ctrl-B (Windows) to split the clip at the playhead
 
@@ -8686,6 +9518,10 @@ fade-out.
 **Lesson 3 Editing Sound Effects and Music** **182**
 
 
+
+
+--- end of page=208 ---
+
 Mission accomplished! The sound effects are working great, and your clients are happy and
 
 eager for you to finish the soundtrack. In the next exercise, you’ll work with the Fairlight
@@ -8740,6 +9576,10 @@ Library menu. In the Project Library dropdown menu, choose Fairlight Sound Libra
 **Lesson 3 Editing Sound Effects and Music** **183**
 
 
+
+
+--- end of page=209 ---
+
 NOTE If you don’t have the Fairlight Sound Library installed, install it now. If
 
 you cannot download at this time, you can find the sound effects you need in
@@ -8761,6 +9601,10 @@ There are three results listed.
 
 **Lesson 3 Editing Sound Effects and Music** **184**
 
+
+
+
+--- end of page=210 ---
 
 **4** Select each sound, one at a time, and play it in the Sound Library preview player.
 
@@ -8789,6 +9633,10 @@ the clip. Mark an In point. The duration to the end of the clip should be around
 
 **Lesson 3 Editing Sound Effects and Music** **185**
 
+
+
+
+--- end of page=211 ---
 
 **7** Play the marked section of the clip.
 
@@ -8853,6 +9701,10 @@ set of buttons to cancel or commit, all without the need to drag and drop the cl
 **Lesson 3 Editing Sound Effects and Music** **186**
 
 
+
+
+--- end of page=212 ---
+
 **1** In the timeline, select the A10 FX 3 Bike track.
 
 **2** Press Shift-Up Arrow or Shift-Down Arrow to move the playhead to the pink
@@ -8888,6 +9740,10 @@ The search results include a list of seven clips ranging from **Bike Bells 1** t
 
 **Lesson 3 Editing Sound Effects and Music** **187**
 
+
+
+
+--- end of page=213 ---
 
 Thoughts? You could try using bells for the scene. However, the character is a college
 
@@ -8938,6 +9794,10 @@ cancel the audition by selecting a different sound in the Sound Library.
 **Lesson 3 Editing Sound Effects and Music** **188**
 
 
+
+
+--- end of page=214 ---
+
 **11** In the Sound Library, select **Bike By 2** in the results list.
 
 
@@ -8977,6 +9837,10 @@ in the timeline. Good luck!
 
 **Lesson 3 Editing Sound Effects and Music** **189**
 
+
+
+
+--- end of page=215 ---
 
 ##### **Playing the Podcast Intro with Sound Effects**
 
@@ -9034,6 +9898,10 @@ the TML Project.
 **Lesson 3 Editing Sound Effects and Music** **190**
 
 
+
+
+--- end of page=216 ---
+
 ## **Preparing the TML Project**
 
 Time to reopen the _Too Much Life_ project you worked on in Lesson 2. Let’s take a minute for
@@ -9078,6 +9946,10 @@ on the remaining exercises.
 **Lesson 3 Editing Sound Effects and Music** **191**
 
 
+
+
+--- end of page=217 ---
+
 ## **Using a Sync Point in** **the Sound Library**
 
 One of the daily challenges for sound designers and the sound effects editors on their
@@ -9116,6 +9988,10 @@ opening waveform.
 
 **Lesson 3 Editing Sound Effects and Music** **192**
 
+
+
+
+--- end of page=218 ---
 
 **2** In the Sound Library, preview each wood door sound in the list.
 
@@ -9166,6 +10042,10 @@ horizontal waveform mini map above the preview player. Let’s try it.
 **Lesson 3 Editing Sound Effects and Music** **193**
 
 
+
+
+--- end of page=219 ---
+
 **5** Locate the rectangle in the waveform mini map above the preview player. Click the
 
 beginning of the waveform in the map to jump the rectangle and waveform view in the
@@ -9193,6 +10073,10 @@ the door where it starts to open, then back up by one frame (01:00:12:01).
 
 **Lesson 3 Editing Sound Effects and Music** **194**
 
+
+
+
+--- end of page=220 ---
 
 **8** Select the A2 FX 1 Door track.
 
@@ -9248,6 +10132,10 @@ opening, then back up a frame until the light crack is gone.
 **Lesson 3 Editing Sound Effects and Music** **195**
 
 
+
+
+--- end of page=221 ---
+
 **16** Audition the sound effect. Play the clip in the timeline and check the sync. Lower the
 
 clip gain level on the door sound. Confirm the clip. Nudge if needed.
@@ -9280,6 +10168,10 @@ Processing for Creative Sound Design.”
 
 **Lesson 3 Editing Sound Effects and Music** **196**
 
+
+
+
+--- end of page=222 ---
 
 NOTE The Fairlight Sound Library includes a limited number of sounds to work
 
@@ -9320,6 +10212,10 @@ the upper right of the screen.
 **Lesson 3 Editing Sound Effects and Music** **197**
 
 
+
+
+--- end of page=223 ---
+
 **4** Go to the blue marker, just after Emiliana’s line “Positive, do it.”
 
 
@@ -9343,6 +10239,10 @@ Video Scroller option.
 
 **Lesson 3 Editing Sound Effects and Music** **198**
 
+
+
+
+--- end of page=224 ---
 
 At the bottom of the timeline, you’ll see the video scroller. Each filmstrip frame in the
 
@@ -9388,6 +10288,10 @@ You can also click any frame on the filmstrip to jump the playhead to that frame
 
 **Lesson 3 Editing Sound Effects and Music** **199**
 
+
+
+
+--- end of page=225 ---
 
 **9** In the video scroller filmstrip, click a frame where the engine is fully ignited with four
 
@@ -9439,6 +10343,10 @@ of the A4 track for a better view of the clip’s waveform.
 **Lesson 3 Editing Sound Effects and Music** **200**
 
 
+
+
+--- end of page=226 ---
+
 **16** Move the playhead to the beginning of the timeline and select the A4 track. If
 
 necessary, set the edit selection point at the beginning of the clip in the A4 track.
@@ -9469,6 +10377,10 @@ Once the clip is pasted, you can see its waveform in the audio scroller.
 
 **Lesson 3 Editing Sound Effects and Music** **201**
 
+
+
+
+--- end of page=227 ---
 
 **21** Click the A4 FX 1 track header to deselect the track.
 
@@ -9512,6 +10424,10 @@ Fairlight Part 2 > Fusion VFX v1.dra.
 **Lesson 3 Editing Sound Effects and Music** **202**
 
 
+
+
+--- end of page=228 ---
+
 The Fusion VFX v1 project opens with the 3 Fusion VFX Video Start timeline open and
 
 the video and audio scrollers still showing. The viewer will be in the same position and
@@ -9549,6 +10465,10 @@ accompany the visuals.
 
 **Lesson 3 Editing Sound Effects and Music** **203**
 
+
+
+
+--- end of page=229 ---
 
 ## **Marking Sound Cues** **with the Video Scroller**
 
@@ -9588,6 +10508,10 @@ that position in the timeline.
 **Lesson 3 Editing Sound Effects and Music** **204**
 
 
+
+
+--- end of page=230 ---
+
 **3** Play the section of the timeline with the green duration marker. Watch the green oval
 
 draw in and eventually disappear in the distance onscreen in the viewer and video
@@ -9626,6 +10550,10 @@ selection range.
 **Lesson 3 Editing Sound Effects and Music** **205**
 
 
+
+
+--- end of page=231 ---
+
 **7** Choose Mark > Convert In and Out to Duration Marker.
 
 
@@ -9655,6 +10583,10 @@ the end of the marker is also the end of the clip.
 **Lesson 3 Editing Sound Effects and Music** **206**
 
 
+
+
+--- end of page=232 ---
+
 **11** While using the viewer and video scroller as a guide, drag an edit selection from the
 
 end of the video clip where the logo disappears offscreen to the point just before the
@@ -9677,6 +10609,10 @@ to orange.
 
 **Lesson 3 Editing Sound Effects and Music** **207**
 
+
+
+
+--- end of page=233 ---
 
 You’ll work with these markers later in Lesson 7. For now, you are finished with the
 
@@ -9738,6 +10674,10 @@ songwriter Esbie Fonte.
 **Lesson 3 Editing Sound Effects and Music** **208**
 
 
+
+
+--- end of page=234 ---
+
 The timeline shows one track, A1 Song Edit, and a clip with the first part of the song
 
 “Circles.” There are also some timeline markers that you’ll use as a guide while editing
@@ -9780,6 +10720,10 @@ Options menu.
 **Lesson 3 Editing Sound Effects and Music** **209**
 
 
+
+
+--- end of page=235 ---
+
 **6** Click the Grid View Options menu to show the different Grid options.
 
 
@@ -9815,6 +10759,10 @@ the ruler and timecode displays to musical time: Bar|Beat|Note.
 **Lesson 3 Editing Sound Effects and Music** **210**
 
 
+
+
+--- end of page=236 ---
+
 Let’s zoom in on the clip for a better view of the waveform.
 
 **8** Zoom horizontally and vertically as needed for a clear view of the clip’s waveform.
@@ -9835,6 +10783,10 @@ shortcut menu.
 
 **Lesson 3 Editing Sound Effects and Music** **211**
 
+
+
+
+--- end of page=237 ---
 
 The ruler and timecode window now show 001|01|01 starting at the beginning
 
@@ -9909,6 +10861,10 @@ the Out just before the vocal starts. Let’s try it.
 **Lesson 3 Editing Sound Effects and Music** **212**
 
 
+
+
+--- end of page=238 ---
+
 **13** Set an In point at the beginning of the clip since the first note is the first beat of the
 
 first bar. Play the clip and count 1, 2, 3, 4 | 2, 2, 3, 4 | 3, 2, 3, 4 | 4, 2, 3, 4 | Out. Mark an
@@ -9929,6 +10885,10 @@ BPM (beats per minute).
 
 **Lesson 3 Editing Sound Effects and Music** **213**
 
+
+
+
+--- end of page=239 ---
 
 **15** In the Tempo Grid Setup dialog, set the Number of Bars to 4 if necessary. Then click
 
@@ -9954,6 +10914,10 @@ the music against the revised musical time.
 
 **Lesson 3 Editing Sound Effects and Music** **214**
 
+
+
+
+--- end of page=240 ---
 
 **17** Play the entire clip and watch the timecode window.
 
@@ -9992,6 +10956,10 @@ contains an instrumental version of the song.
 **Lesson 3 Editing Sound Effects and Music** **215**
 
 
+
+
+--- end of page=241 ---
+
 **2** Show the Markers Index.
 
 **3** In the timeline, unmute the A2 track and play the beginning to hear both tracks together.
@@ -10026,6 +10994,10 @@ track layers.
 
 **Lesson 3 Editing Sound Effects and Music** **216**
 
+
+
+
+--- end of page=242 ---
 
 ##### **Trimming and Fading Music in Track Layers**
 
@@ -10070,6 +11042,10 @@ Thoughts? The edit sounds abrupt and definitely needs a fade.
 
 **Lesson 3 Editing Sound Effects and Music** **217**
 
+
+
+
+--- end of page=243 ---
 
 **6** Using the grid as a guide, drag a two-bar fade out at the end of the yellow clip.
 
@@ -10130,6 +11106,10 @@ track without changing its horizontal position.
 **Lesson 3 Editing Sound Effects and Music** **218**
 
 
+
+
+--- end of page=244 ---
+
 **4** Select the clip in the A3 track. Press Option/Alt-Up Arrow twice to move the selected
 
 clip from the A3 track to the A1 track.
@@ -10150,6 +11130,10 @@ Display Grid option at the top of the menu.
 
 **Lesson 3 Editing Sound Effects and Music** **219**
 
+
+
+
+--- end of page=245 ---
 
 The tempo grid now shows four quarter-note sections between each set of brighter
 
@@ -10186,6 +11170,10 @@ response, as always, is “Sure!”
 **Lesson 3 Editing Sound Effects and Music** **220**
 
 
+
+
+--- end of page=246 ---
+
 ##### **Customizing a Fade in the Timeline**
 
 Once you’ve created a fade transition, you can adjust the curve of the fade by dragging the
@@ -10216,6 +11204,10 @@ handle toward the left to create a steep and quick fade.
 
 **Lesson 3 Editing Sound Effects and Music** **221**
 
+
+
+
+--- end of page=247 ---
 
 The bright and shaded area on the clip indicates the level changes during the fade. In
 
@@ -10270,6 +11262,10 @@ Display Grid option.
 
 **Lesson 3 Editing Sound Effects and Music** **222**
 
+
+
+
+--- end of page=248 ---
 
 **11** Drag a fade-out from the end of the teal clip to the red marker.
 
@@ -10327,6 +11323,10 @@ NOTE If you didn’t complete the previous music editing exercises, you can use 
 **Lesson 3 Editing Sound Effects and Music** **223**
 
 
+
+
+--- end of page=249 ---
+
 **1** In the Timeline View Options menu, deselect Display Video Tracks if necessary.
 
 **2** In the 3b Music Edit Start timeline, mark an In point at the green marker. Mark an
@@ -10352,6 +11352,10 @@ MX track.
 
 **Lesson 3 Editing Sound Effects and Music** **224**
 
+
+
+
+--- end of page=250 ---
 
 Notice that the nested timeline looks like a clip except for the badge in the lower left
 
@@ -10426,6 +11430,10 @@ The timeline that is nested is selected in the media pool.
 **Lesson 3 Editing Sound Effects and Music** **225**
 
 
+
+
+--- end of page=251 ---
+
 **5** Increase the height of the A1 Song Edit track.
 
 
@@ -10473,6 +11481,10 @@ Outro clip.
 **Lesson 3 Editing Sound Effects and Music** **226**
 
 
+
+
+--- end of page=252 ---
+
 - Remove the long fade at the end of the teal clip.
 
 - Trim the teal clip so that it ends at 01:00:58:09.
@@ -10491,6 +11503,10 @@ open and play back the timeline 3f Music Edit Finished V2.
 
 **Lesson 3 Editing Sound Effects and Music** **227**
 
+
+
+
+--- end of page=253 ---
 
 ##### **Playing the Updated Nested Timeline**
 
@@ -10525,6 +11541,10 @@ having to bother the clients with new versions, timelines, or mixes.
 
 **Lesson 3 Editing Sound Effects and Music** **228**
 
+
+
+
+--- end of page=254 ---
 
 ##### **Decomposing a Nested Timeline**
 
@@ -10574,6 +11594,10 @@ nested Bus 1 to the Bus 1 in the master timeline.
 **Lesson 3 Editing Sound Effects and Music** **229**
 
 
+
+
+--- end of page=255 ---
+
 **2** In the Decompose Preserving Audio Data dialog, choose “Preserve existing paths”
 
 from the dropdown menu.
@@ -10602,6 +11626,10 @@ _DaVinci Resolve Reference Manual_ .
 
 **Lesson 3 Editing Sound Effects and Music** **230**
 
+
+
+
+--- end of page=256 ---
 
 ## **Adding Custom Crossfades** **in the Timeline**
 
@@ -10650,6 +11678,10 @@ gridline in the ruler.
 **Lesson 3 Editing Sound Effects and Music** **231**
 
 
+
+
+--- end of page=257 ---
+
 **6** Right-click the edit point where the last frame of the yellow clip meets the first frame of
 
 the green clip. Choose “Add 12 frame Crossfade 0 dB” from the shortcut menu. Click
@@ -10677,6 +11709,10 @@ clip. Press A to return to the arrow tool to maintain the playback range while y
 
 **Lesson 3 Editing Sound Effects and Music** **232**
 
+
+
+
+--- end of page=258 ---
 
 It sounds great. However, while you are here, you might as well see and hear what
 
@@ -10720,6 +11756,10 @@ needed. In the next section, you’ll add a crossfade to the second blue marker.
 **Lesson 3 Editing Sound Effects and Music** **233**
 
 
+
+
+--- end of page=259 ---
+
 NOTE Audio transitions added to the timeline in the edit page appear as
 
 crossfades in the Fairlight page. Once in the timeline, you can select a crossfade
@@ -10761,6 +11801,10 @@ the crossfade without clearing the playback range.
 
 **Lesson 3 Editing Sound Effects and Music** **234**
 
+
+
+
+--- end of page=260 ---
 
 **5** Set a playback range if you plan to use the Arrow tool or continue working with the
 
@@ -10817,6 +11861,10 @@ and edit the music clip yourself.
 **Lesson 3 Editing Sound Effects and Music** **235**
 
 
+
+
+--- end of page=261 ---
+
 **5** Open the timeline **3c Intro Combo FX and Pan** .
 
 **6** Resize the Music track as needed.
@@ -10869,6 +11917,10 @@ to automate the music mix.
 **Lesson 3 Editing Sound Effects and Music** **236**
 
 
+
+
+--- end of page=262 ---
+
 **3** Show the floating Fairlight viewer. Resize and move the viewer to a location where it is
 
 easy to see while you play the timeline.
@@ -10911,6 +11963,10 @@ opportunity to use the Music Remixer Track FX.
 **Lesson 3 Editing Sound Effects and Music** **237**
 
 
+
+
+--- end of page=263 ---
+
 The track name, MX, at the top of the Inspector indicates which track is selected.
 
 DaVinci Resolve Studio 19 includes five Track FX that are available in the Inspector and
@@ -10942,6 +11998,10 @@ the controls.
 
 **Lesson 3 Editing Sound Effects and Music** **238**
 
+
+
+
+--- end of page=264 ---
 
 The Music Remixer controls include volume sliders for different music elements,
 
@@ -10988,6 +12048,10 @@ than simply muting them.
 **Lesson 3 Editing Sound Effects and Music** **239**
 
 
+
+
+--- end of page=265 ---
+
 ##### **Automating the Music Remixer** **During Playback**
 
 All effects plug-ins, including the Music Remixer, include a handy floating window with
@@ -11025,6 +12089,10 @@ the floating Music Remixer window.
 
 **Lesson 3 Editing Sound Effects and Music** **240**
 
+
+
+
+--- end of page=266 ---
 
 The Music Remixer window offers easy dial controls and Mute buttons. Let’s test the
 
@@ -11074,6 +12142,10 @@ Fairlight page, next to the transport controls.
 **Lesson 3 Editing Sound Effects and Music** **241**
 
 
+
+
+--- end of page=267 ---
+
 **7** Click the Toggle Automation button to turn on automation. Click the Automation
 
 Controls button to open the automation toolbar.
@@ -11113,6 +12185,10 @@ and mute buttons. When finished stop playback.
 
 **Lesson 3 Editing Sound Effects and Music** **242**
 
+
+
+
+--- end of page=268 ---
 
 **10** Play the track from the beginning to see and hear the changes and see the controls
 
@@ -11164,6 +12240,10 @@ Track Automation.
 **Lesson 3 Editing Sound Effects and Music** **243**
 
 
+
+
+--- end of page=269 ---
+
 **13** Right-click the A1 track header and choose Clear Track Automation. In the dialog,
 
 click Reset.
@@ -11214,6 +12294,10 @@ that apply.)
 **Lesson 3 Editing Sound Effects and Music** **244**
 
 
+
+
+--- end of page=270 ---
+
 **3** True or False? When using the Focus mode multi-tool, clicking the upper half of a clip
 
 activates an I-beam cursor, while clicking the lower half of a clip selects the entire clip.
@@ -11258,6 +12342,10 @@ timeline track.
 **Lesson 3 Editing Sound Effects and Music** **245**
 
 
+
+
+--- end of page=271 ---
+
 ##### **Answers**
 
 **1** a
@@ -11276,6 +12364,10 @@ timeline track.
 
 **Lesson 3 Editing Sound Effects and Music** **246**
 
+
+
+
+--- end of page=272 ---
 
 ### Lesson 4
 # Recording Voiceover, ADR, and the Foley Sampler
@@ -11355,6 +12447,10 @@ Creating ADR Cues with AI Tools (Studio Only) 308
 Lesson Review 310
 
 
+
+
+--- end of page=273 ---
+
 In this lesson, you’ll set up and perform four types of audio recordings. First, you’ll
 
 manually record a simple voiceover track for the Post Park Normal podcast. Then, you’ll use
@@ -11409,6 +12505,10 @@ the audio input device.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **248**
 
 
+
+
+--- end of page=274 ---
+
 For this example, a Rode NT1-A microphone is connected to the computer via a
 
 Scarlett Solo USB audio interface.
@@ -11447,6 +12547,10 @@ are great, but who is driving the mower? And just like that, the role of the gro
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **249**
 
+
+
+
+--- end of page=275 ---
 
 was born. That’s right! In a few minutes, you will have the opportunity to record the part
 
@@ -11509,6 +12613,10 @@ will serve as the voiceover script and then create a new timeline for recording.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **250**
 
 
+
+
+--- end of page=276 ---
+
 **8** In the media pool, locate the PPN Intro Scripts bin. Select the bin.
 
 
@@ -11531,6 +12639,10 @@ Timeline Name field and click Create.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **251**
 
+
+
+
+--- end of page=277 ---
 
 The new 4 Groundskeeper VO timeline opens with three tracks, including the Text clip
 
@@ -11565,6 +12677,10 @@ for the next exercise.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **252**
 
+
+
+
+--- end of page=278 ---
 
 NOTE You can also access any of the lesson timelines for this book in the
 
@@ -11612,6 +12728,10 @@ in a new name.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **253**
 
+
+
+
+--- end of page=279 ---
 
 You’ve created a bin for the recorded clips in your project, and now you’ll choose
 
@@ -11666,6 +12786,10 @@ so that you can all keep track of your media as you go.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **254**
 
 
+
+
+--- end of page=280 ---
+
 ##### **Setting the Audio Metering for Recording**
 
 Before closing the Project Settings window, let’s look at the Fairlight settings, where you
@@ -11716,6 +12840,10 @@ _track_ . Next, you’ll patch the track to your microphone source for recording
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **255**
 
 
+
+
+--- end of page=281 ---
+
 ## **Patching a Track for Recording**
 
 To patch a track’s input, you can choose Fairlight > Patch Input/Output or click the Input
@@ -11765,6 +12893,10 @@ User Preferences. The default track type for new timelines is stereo.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **256**
 
 
+
+
+--- end of page=282 ---
+
 **3** Name the A1 track **Groundskeeper** .
 
 
@@ -11796,6 +12928,10 @@ input channels accordingly.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **257**
 
+
+
+
+--- end of page=283 ---
 
 **7** Click Patch to set your input patch.
 
@@ -11833,6 +12969,10 @@ monitoring style.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **258**
 
+
+
+
+--- end of page=284 ---
 
 ##### **Monitoring the Track Input**
 
@@ -11883,6 +13023,10 @@ input monitoring style.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **259**
 
+
+
+
+--- end of page=285 ---
 
 Finally, if you’re using an external microphone and audio input/output interface, you
 
@@ -11936,6 +13080,10 @@ You are ready to record.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **260**
 
 
+
+
+--- end of page=286 ---
+
 ## **Recording Consecutive** **Takes in the Timeline**
 
 You have completed all the necessary steps to prepare your project for recording. Before
@@ -11976,6 +13124,10 @@ on the project.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **261**
 
 
+
+
+--- end of page=287 ---
+
 **4** Choose File > Project Notes to see the text window containing the director’s project
 
 notes. If you’d like, read the notes before proceeding to recording. When finished,
@@ -12011,6 +13163,10 @@ starts moving and drawing a red region within the armed track, you are recording
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **262**
 
+
+
+
+--- end of page=288 ---
 
 **8** In the transport controls, click the Record button. Read the script into the microphone
 
@@ -12064,6 +13220,10 @@ new recordings do not overwrite existing material in the same track.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **263**
 
 
+
+
+--- end of page=289 ---
+
 Instead of creating a new track and patching it to the microphone for the layered
 
 recordings, let’s simply duplicate the A1 track. Duplicating the track retains the track name,
@@ -12095,6 +13255,10 @@ A new A2 Groundskeeper Copy track appears below the A1 Groundskeeper track.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **264**
 
+
+
+
+--- end of page=290 ---
 
 **9** In the transport controls, click the Record button. Read the script into the microphone
 
@@ -12134,6 +13298,10 @@ playback mode.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **265**
 
 
+
+
+--- end of page=291 ---
+
 **13** Press the JKL keys, using the waveform as a guide, to move the playhead to the last
 
 section of the second take, just before “Then, out of nowhere….”
@@ -12156,6 +13324,10 @@ they arrived.” Click the Stop button or press the Spacebar to stop recording.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **266**
 
+
+
+
+--- end of page=292 ---
 
 Now that you’ve recorded several takes in the same track, let’s show the audio track
 
@@ -12213,6 +13385,10 @@ and recording the same dialogue cue over and over again.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **267**
 
 
+
+
+--- end of page=293 ---
+
 ## **Setting Up an ADR Session**
 
 DaVinci Resolve includes a full ADR toolset in the Fairlight page. In this exercise, you’ll open
@@ -12265,6 +13441,10 @@ later lesson.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **268**
 
 
+
+
+--- end of page=294 ---
+
 **3** Mute the A1 ref L track to mute both A1 and A2 linked tracks.
 
 **4** Unmute the A3 Production track.
@@ -12315,6 +13495,10 @@ ADR tools to set up your recording session.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **269**
 
 
+
+
+--- end of page=295 ---
+
 **8** In the interface toolbar, click the ADR button to display the ADR tools. Then, click the
 
 Setup tab at the top of the ADR tools to display the ADR Setup panel.
@@ -12334,6 +13518,10 @@ recording begins.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **270**
 
+
+
+
+--- end of page=296 ---
 
 **9** Set the Pre Roll to 6 Seconds and the Post Roll to 2 Seconds.
 
@@ -12384,6 +13572,10 @@ panel and add the character names.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **271**
 
 
+
+
+--- end of page=297 ---
+
 **13** Click the Add New button. In the selected character Name field, type **Harper** . When
 
 you’re finished, press Return/Enter.
@@ -12416,6 +13608,10 @@ Point, Count In, Video Streamer, and Smart Timeline, as shown.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **272**
 
+
+
+
+--- end of page=298 ---
 
 **16** Click setting titles for the Beep to In Point and Beep at In Point settings to show the
 
@@ -12461,6 +13657,10 @@ From field to **5** . Leave the “to” field set to 1.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **273**
 
 
+
+
+--- end of page=299 ---
+
 **19** Click the On Screen Cue Text Style header to reveal the settings.
 
 
@@ -12505,6 +13705,10 @@ settings while you work.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **274**
 
 
+
+
+--- end of page=300 ---
+
 ##### **Manually Creating ADR Cues**
 
 You can import an entire ADR cue list or manually create new cues as you go. Each cue has
@@ -12543,6 +13747,10 @@ reaction time of the talent when they need to record.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **275**
 
 
+
+
+--- end of page=301 ---
+
 **6** In the ADR list panel, click New Cue.
 
 
@@ -12562,6 +13770,10 @@ The only element missing now is the dialogue.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **276**
 
+
+
+
+--- end of page=302 ---
 
 The text appears in the dialogue field in the cue list as you type. Now that you have
 
@@ -12620,6 +13832,10 @@ NOTE If you didn’t finish the previous ADR exercises, feel free to open the ti
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **277**
 
 
+
+
+--- end of page=303 ---
+
 ## **Recording ADR Cues** **in the Timeline**
 
 Once you’ve set up your ADR session, you can simply go to the ADR Record panel to record.
@@ -12648,6 +13864,10 @@ bin. Then, reopen the ADR panel.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **278**
 
+
+
+
+--- end of page=304 ---
 
 **3** In the Record panel cue list, select one of the cues to record.
 
@@ -12691,6 +13911,10 @@ the color picker.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **279**
 
+
+
+
+--- end of page=305 ---
 
 **6** Rehearse the cue again as many times as you need. Don’t worry about getting it
 
@@ -12748,6 +13972,10 @@ track layers.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **280**
 
 
+
+
+--- end of page=306 ---
+
 **11** Choose View > Show Audio Track Layers. Adjust the track zoom as necessary to clearly
 
 see the multiple takes in the A13 track.
@@ -12773,6 +14001,10 @@ practice by recording the other cue or additional takes.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **281**
 
+
+
+
+--- end of page=307 ---
 
 ## **Exploring the ADR Timeline**
 
@@ -12835,6 +14067,10 @@ the upper right corner of the ADR panel.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **282**
 
 
+
+
+--- end of page=308 ---
+
 **5** In the ADR panel Options menu (…), choose Import Cue List. Navigate to R19 Fairlight
 
 Part 1 > Additional Media > **ADRCues_TML Harper Surfs Scene v2.csv** and click Open.
@@ -12856,6 +14092,10 @@ correct header. There are also new columns for Cue ID, Done, and Ignore.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **283**
 
+
+
+
+--- end of page=309 ---
 
 You could clear all existing cues or update the Cue ID on the existing cues to match the
 
@@ -12896,6 +14136,10 @@ to Hide Cues Marked as Done.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **284**
 
 
+
+
+--- end of page=310 ---
+
 **2** In the Cue Sort menu, click Marley to deselect her cues and hide them from the list.
 
 **3** In the Cue Sort menu, click Raina to deselect her cues and hide them from the list.
@@ -12933,6 +14177,10 @@ this lesson.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **285**
 
 
+
+
+--- end of page=311 ---
+
 ##### **Revealing the Beep Track Patching**
 
 Now that you have firsthand experience with the DaVinci Resolve ADR tools, you probably
@@ -12968,6 +14216,10 @@ record sounds from the System Generator in the next exercise.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **286**
 
+
+
+
+--- end of page=312 ---
 
 **5** The Path Settings window opens and shows the Record Level set to Thru.
 
@@ -13018,6 +14270,10 @@ record different sounds that you can use later for sound design.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **287**
 
 
+
+
+--- end of page=313 ---
+
 For this exercise, you’ll continue working with your TML Audio Post project. First, let’s clean
 
 up the workspace and then create a new timeline and track.
@@ -13052,6 +14308,10 @@ bin after you’ve finished recording.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **288**
 
 
+
+
+--- end of page=314 ---
+
 **6** In the media pool, select the Recordings bin. Hide the media pool.
 
 
@@ -13085,6 +14345,10 @@ Because this is a stereo track, select both channels of the GEN FX track for the
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **289**
 
+
+
+
+--- end of page=315 ---
 
 **10** Click Patch and close the Patch Input/Output window.
 
@@ -13126,6 +14390,10 @@ whenever necessary.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **290**
 
+
+
+
+--- end of page=316 ---
 
 ##### **Changing the Test Tone Generator Settings**
 
@@ -13175,6 +14443,10 @@ Now, let’s record a bit of that noise.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **291**
 
 
+
+
+--- end of page=317 ---
+
 **4** Click the Record button to record about 10 seconds of pink noise. When you’re
 
 finished, click the Stop button or press the Spacebar.
@@ -13193,6 +14465,10 @@ Input/Output.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **292**
 
+
+
+
+--- end of page=318 ---
 
 **6** In the Patch Input/Output window, click Noise in the Source controls, and then click the
 
@@ -13244,6 +14520,10 @@ where it is and how to record it for your projects.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **293**
 
+
+
+
+--- end of page=319 ---
 
 ## **Practicing More FX**
 
@@ -13298,6 +14578,10 @@ timeline **4 Sound Design FX Recorded** .
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **294**
 
+
+
+
+--- end of page=320 ---
 
 ## **Exploring the Foley Sampler**
 
@@ -13364,6 +14648,10 @@ you’ll add the Foley Sampler plug-in to the A4 FX Foley 1 track.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **295**
 
 
+
+
+--- end of page=321 ---
+
 **8** Drag the Foley Sampler plug-in to the A4 FX Foley 1 track header. Hide the
 
 Effects Library.
@@ -13412,6 +14700,10 @@ drag a sound effect from the Sound FX bin in the media pool.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **296**
 
 
+
+
+--- end of page=322 ---
+
 **3** Drag the **Taking Clothes Off** clip to the Foley Sampler window.
 
 
@@ -13445,6 +14737,10 @@ sample and mapping.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **297**
 
+
+
+
+--- end of page=323 ---
 
 ##### **Modifying Sample Mapping**
 
@@ -13481,6 +14777,10 @@ over the keyboard keys stops after one octave (12 keys), which is just before th
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **298**
 
+
+
+
+--- end of page=324 ---
 
 **2** Change the Centre knob value to 41, which is the key in the middle of the mapped keys
 
@@ -13524,6 +14824,10 @@ sample plays, you can see the blue playhead move across the sample’s waveform.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **299**
 
 
+
+
+--- end of page=325 ---
+
 **6** In the Range controls, drag the Start knob toward the right until the white vertical line
 
 is just before the loudest part of the waveform (around 68.75). You can leave the End in
@@ -13565,6 +14869,10 @@ Foley Sampler Keys controls to Manual mode. Otherwise, the sample mapping will o
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **300**
 
+
+
+
+--- end of page=326 ---
 
 your previous mapping and automatically split the keyboard evenly between the previous
 
@@ -13612,6 +14920,10 @@ option to play the full sample or split parts of the sample.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **301**
 
 
+
+
+--- end of page=327 ---
+
 **6** At the top of the Foley Sampler, click the Sample button to show the sample waveform.
 
 
@@ -13631,6 +14943,10 @@ Options menu, choose Split Sample.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **302**
 
 
+
+
+--- end of page=328 ---
+
 The split footstep groups are now mapped to keys in order from left to right. Let’s look
 
 at the split samples to see the resulting waveforms.
@@ -13649,6 +14965,10 @@ make it easier to perform the steps to picture when the time comes.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **303**
 
+
+
+
+--- end of page=329 ---
 
 NOTE The Foley Sampler splits samples by looking at transients and silence
 
@@ -13695,6 +15015,10 @@ tool to maintain the range while you work.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **304**
 
 
+
+
+--- end of page=330 ---
+
 **4** Turn on the Loop button in the transport controls to enable looped playback.
 
 **5** Press Shift-I to move the playhead to the beginning of the range. Start looped playback
@@ -13733,6 +15057,10 @@ the range.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **305**
 
 
+
+
+--- end of page=331 ---
+
 **9** When you are ready to record a take, click the Record button in the transport controls
 
 above the timeline. Press the Spacebar to stop recording when you are finished.
@@ -13767,6 +15095,10 @@ clear view of the newly recorded clip in the A4 track.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **306**
 
+
+
+
+--- end of page=332 ---
 
 **2** Move the playhead to the beginning of the range, or before the blue marker.
 
@@ -13814,6 +15146,10 @@ own soundtracks.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **307**
 
 
+
+
+--- end of page=333 ---
+
 TIP You can save a Foley Sampler instrument with all the samples and mapping to
 
 the Preset Manager so you can use it again in other timeline tacks or even other
@@ -13853,6 +15189,10 @@ with Speakers.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **308**
 
 
+
+
+--- end of page=334 ---
+
 **4** Open the ADR panel.
 
 **5** Click the List tab to see the updated ADR list.
@@ -13860,6 +15200,10 @@ with Speakers.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **309**
 
+
+
+
+--- end of page=335 ---
 
 Cues 1-4 are still at the top of the list, just as you created them earlier in the lesson.
 
@@ -13916,6 +15260,10 @@ Settings bin in the media pool.
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **310**
 
 
+
+
+--- end of page=336 ---
+
 **5** Identify the two types of noise available in the Test Tones Settings window.
 
 (Select two.)
@@ -13970,6 +15318,10 @@ connected to your computer to add timed sound effects to sync with onscreen visu
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **311**
 
 
+
+
+--- end of page=337 ---
+
 ##### **Answers**
 
 **1** c. To record a connected microphone to a specific track, you must patch the audio
@@ -13997,6 +15349,10 @@ in the Fairlight menu.
 
 **Lesson 4 Recording Voiceover, ADR, and the Foley Sampler** **312**
 
+
+
+
+--- end of page=338 ---
 
 ### Lesson 5
 # Balancing Clips and Panning Tracks
@@ -14063,6 +15419,10 @@ Viewing Multiple Pan Trackers  358
 Lesson Review 364
 
 
+
+
+--- end of page=339 ---
+
 NOTE The exercises in this lesson build on the tools and skills you learned in the
 
 previous lessons. If you skipped ahead to this lesson, you might need to look back
@@ -14110,6 +15470,10 @@ that option.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **314**
 
+
+
+
+--- end of page=340 ---
 
 **7** Play the timeline and listen to it once with only dialogue and the ocean waves sounds.
 
@@ -14185,6 +15549,10 @@ clips and tracks.
 **Lesson 5 Balancing Clips and Panning Tracks** **315**
 
 
+
+
+--- end of page=341 ---
+
 **2** Press Command-A (macOS) or Ctrl-A (Windows) to select all clips in the timeline.
 
 
@@ -14231,6 +15599,10 @@ You are ready to evaluate the dialogue clips.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **316**
 
+
+
+
+--- end of page=342 ---
 
 ## **Balancing Dialogue Clip Levels**
 
@@ -14289,6 +15661,10 @@ working will be referred to as “marking the clip.”
 **Lesson 5 Balancing Clips and Panning Tracks** **317**
 
 
+
+
+--- end of page=343 ---
+
 **7** Zoom as needed until you can clearly see the selected clip and its waveform.
 
 
@@ -14331,6 +15707,10 @@ process. Exceptions might be a loud scream or whisper, but neither is in this sc
 
 **Lesson 5 Balancing Clips and Panning Tracks** **318**
 
+
+
+
+--- end of page=344 ---
 
 ##### **Establishing Target Dialogue Levels**
 
@@ -14391,6 +15771,10 @@ Let’s see where Harper’s dialogue falls on the meters in her first clip.
 **Lesson 5 Balancing Clips and Panning Tracks** **319**
 
 
+
+
+--- end of page=345 ---
+
 **3** In the mixer, look at the meter in the A1 channel strip to determine the current
 
 dialogue level. During playback, watch the solid bar in the meter to see the average
@@ -14428,6 +15812,10 @@ display once before in Lesson 1.
 **Lesson 5 Balancing Clips and Panning Tracks** **320**
 
 
+
+
+--- end of page=346 ---
+
 **5** Choose Fairlight > View Clip Info Display and click the Clip Name and Volume options to
 
 select them. Click OK.
@@ -14451,6 +15839,10 @@ middle of the timeline.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **321**
 
+
+
+
+--- end of page=347 ---
 
 **7** Drag the Harper meter to the A1 track and place it near the clip that you’re evaluating.
 
@@ -14491,6 +15883,10 @@ Meter window to reset the meter.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **322**
 
+
+
+
+--- end of page=348 ---
 
 **10** Move the playhead to the last half of the clip, and then drag the playhead back and
 
@@ -14553,6 +15949,10 @@ anyone else changes their mind.
 **Lesson 5 Balancing Clips and Panning Tracks** **323**
 
 
+
+
+--- end of page=349 ---
+
 ##### **Adjusting Clip Levels**
 
 Now that you know the levels of Harper’s first three dialogue clips and the level you’re
@@ -14590,6 +15990,10 @@ Notice the clip gain level in the clip display.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **324**
 
+
+
+
+--- end of page=350 ---
 
 **4** Play the marked clip and watch the meter to see the new levels.
 
@@ -14645,6 +16049,10 @@ balance the clip.
 **Lesson 5 Balancing Clips and Panning Tracks** **325**
 
 
+
+
+--- end of page=351 ---
+
 ##### **Using Keyframes to Change Clip Levels**
 
 In Lesson 1, you used keyframes to lower part of the drinking coffee sound effect in the
@@ -14699,6 +16107,10 @@ The first part of the clip should still be solid yellow in the meters, peaking n
 **Lesson 5 Balancing Clips and Panning Tracks** **326**
 
 
+
+
+--- end of page=352 ---
+
 **6** Locate the part of the clip waveform just before the waveform increases dramatically.
 
 
@@ -14732,6 +16144,10 @@ between -5.00 dB and -6.00 dB.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **327**
 
+
+
+
+--- end of page=353 ---
 
 How do you know the clip gain levels once there are changes within the clip? Simply
 
@@ -14799,6 +16215,10 @@ and closer to the camera in the scene.
 **Lesson 5 Balancing Clips and Panning Tracks** **328**
 
 
+
+
+--- end of page=354 ---
+
 Levi’s dialogue levels need to be on the lower end of the dialogue range, closer to -15 dB
 
 with peaks around -12 dB to -13 dB and possibly dipping into the green on the meters.
@@ -14845,6 +16265,10 @@ can also be used to toggle all of a track’s plug-ins on and off with a single 
 **Lesson 5 Balancing Clips and Panning Tracks** **329**
 
 
+
+
+--- end of page=355 ---
+
 **4** In the timeline, play the three clips on the A4 track.
 
 
@@ -14864,6 +16288,10 @@ intelligibility.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **330**
 
+
+
+
+--- end of page=356 ---
 
 **7** Start looped playback. Drag the gain line on the second clip downward to lower the
 
@@ -14896,6 +16324,10 @@ of the range, using the waveform as a guide.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **331**
 
+
+
+
+--- end of page=357 ---
 
 **10** When finished, click any empty timeline space to clear the range.
 
@@ -14950,6 +16382,10 @@ NOTE If you did not complete all the balancing exercises up to this point, open 
 **Lesson 5 Balancing Clips and Panning Tracks** **332**
 
 
+
+
+--- end of page=358 ---
+
 ## **Applying Auto-Leveling** **to Balance Clips**
 
 If you think balancing dialogue levels is agonizing and tedious, DaVinci Resolve offers two
@@ -14998,6 +16434,10 @@ In this exercise, you’ll apply normalization to the clips in the A3 Marley tra
 **Lesson 5 Balancing Clips and Panning Tracks** **333**
 
 
+
+
+--- end of page=359 ---
+
 At a glance, you can see that her levels are on the high end of the dialogue range. Plus,
 
 she is off-camera, so we don’t know proximity or context. In situations like this, it’s good
@@ -15044,6 +16484,10 @@ later if needed.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **334**
 
+
+
+
+--- end of page=360 ---
 
 **10** Clear the range.
 
@@ -15096,6 +16540,10 @@ even when the levels are good the sound can be perceived as too loud or too quie
 **Lesson 5 Balancing Clips and Panning Tracks** **335**
 
 
+
+
+--- end of page=361 ---
+
 **15** Lower the level of the last clip in the A3 track by 2 dB.
 
 **16** Close the Meter. Unsolo any tracks if necessary.
@@ -15137,6 +16585,10 @@ Nice! Now, it just needs the music that drives the scene.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **336**
 
+
+
+
+--- end of page=362 ---
 
 Wow! What a difference a little balancing makes in improving the soundtrack. Although
 
@@ -15194,6 +16646,10 @@ For now, you’ll focus on balancing the clip levels using the Dialogue Leveler.
 **Lesson 5 Balancing Clips and Panning Tracks** **337**
 
 
+
+
+--- end of page=363 ---
+
 As you can see and hear, the clip is balanced. Let’s duplicate the track and clear the
 
 level changes and keyframes from the copy.
@@ -15215,6 +16671,10 @@ All the keyframes and level changes have been removed.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **338**
 
+
+
+
+--- end of page=364 ---
 
 **8** Mute the A1 track. Show the meter for the A2 track and start looped playback to see
 
@@ -15276,6 +16736,10 @@ toggled on or off during playback from the customization window or in the Inspec
 **Lesson 5 Balancing Clips and Panning Tracks** **339**
 
 
+
+
+--- end of page=365 ---
+
 **13** Hover over the Dialogue Leveler effect in the A2 channel strip until you see the
 
 buttons to Enable (left) or Control (right) the effect. Click the Enable button.
@@ -15299,6 +16763,10 @@ the Meters and Dialogue Leveler controls windows below the A2 track.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **340**
 
+
+
+
+--- end of page=366 ---
 
 **16** Zoom to your taste. Start looped playback and watch the levels while listening to
 
@@ -15327,6 +16795,10 @@ Dialogue Leveler bypassed Dialogue Leveler on
 
 **Lesson 5 Balancing Clips and Panning Tracks** **341**
 
+
+
+
+--- end of page=367 ---
 
 **18** Feel free to experiment with the other Dialogue Leveler settings to see and hear the
 
@@ -15384,6 +16856,10 @@ as needed to move the viewer below the tracks.
 **Lesson 5 Balancing Clips and Panning Tracks** **342**
 
 
+
+
+--- end of page=368 ---
+
 **2** Play the timeline to see and hear the end of the “Learn to Surf” scene.
 
 
@@ -15409,6 +16885,10 @@ tracks to solo them all.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **343**
 
+
+
+
+--- end of page=369 ---
 
 **4** Play the timeline once, listening only to the sound effects.
 
@@ -15442,6 +16922,10 @@ Now, let’s look at the panning controls for the FX Cam 2 track in the mixer.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **344**
 
+
+
+
+--- end of page=370 ---
 
 In the mixer panning controls, the green dots represent the spread and positions of
 
@@ -15493,6 +16977,10 @@ the right side of the frame. Stop playback.
 **Lesson 5 Balancing Clips and Panning Tracks** **345**
 
 
+
+
+--- end of page=371 ---
+
 To bypass the panner, Command-click (macOS) or Ctrl-click (Windows) the pan control
 
 in the mixer. This works with all mixer controls. The control turns gray when bypassed.
@@ -15542,6 +17030,10 @@ that was recorded in the camera.
 **Lesson 5 Balancing Clips and Panning Tracks** **346**
 
 
+
+
+--- end of page=372 ---
+
 **4** Hide the monitoring panel, including the viewer.
 
 **5** Play the timeline to hear the sound and see the jets fly by. During playback, listen for
@@ -15560,6 +17052,10 @@ the video.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **347**
 
+
+
+
+--- end of page=373 ---
 
 **7** In the mixer, double-click the track’s Pan controls to open the Audio Pan window. Move
 
@@ -15601,6 +17097,10 @@ the low-frequency effect (LFE) speaker.
 **Lesson 5 Balancing Clips and Panning Tracks** **348**
 
 
+
+
+--- end of page=374 ---
+
 The A1 Planes track is currently panned to the front, with the left channel going to the
 
 far-left front speaker position, and the right channel going to the far-right front
@@ -15637,6 +17137,10 @@ follow the position of the panner. Stop playback.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **349**
 
+
+
+
+--- end of page=375 ---
 
 Next, use the Left/Right control to position the panner to match the starting point of
 
@@ -15683,6 +17187,10 @@ movements of objects in the Fairlight viewer in DaVinci Resolve Studio.
 **Lesson 5 Balancing Clips and Panning Tracks** **350**
 
 
+
+
+--- end of page=376 ---
+
 **1** In the lower left corner of the viewer, click the Controls menu and choose Show Tracker
 
 Controls. Then, enable the Left-Right and Down-Up control buttons.
@@ -15727,6 +17235,10 @@ visualize the panoramic field from different perspectives. Click the 3D button a
 **Lesson 5 Balancing Clips and Panning Tracks** **351**
 
 
+
+
+--- end of page=377 ---
+
 the Audio Pan window to switch the interface to the 3D Cartesian view, offering controls for
 
 working with immersive audio formats such as Dolby Atmos and Ambisonics. In this
@@ -15762,6 +17274,10 @@ left corner of the Panner viewer let you view the room from different preset ang
 **Lesson 5 Balancing Clips and Panning Tracks** **352**
 
 
+
+
+--- end of page=378 ---
+
 **2** Click each Perspective button to see the different preset angles. When finished, click
 
 the first Perspective button.
@@ -15769,6 +17285,10 @@ the first Perspective button.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **353**
 
+
+
+
+--- end of page=379 ---
 
 NOTE You can freely rotate the perspective by holding down Command
 Option-Shift (macOS) or Ctrl-Alt-Shift (Windows) while dragging. Holding the
@@ -15796,6 +17316,10 @@ them to center.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **354**
 
+
+
+
+--- end of page=380 ---
 
 **5** In the viewer, Option-click the nearest jet plane to set the tracker position and
 
@@ -15836,6 +17360,10 @@ Let’s try it.
 **Lesson 5 Balancing Clips and Panning Tracks** **355**
 
 
+
+
+--- end of page=381 ---
+
 **9** Right-click the Left/Right control in the 3D panner to see the Left/Right automation
 
 curve in the A1 track.
@@ -15860,6 +17388,10 @@ with automation and panning tracks in later lessons.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **356**
 
+
+
+
+--- end of page=382 ---
 
 ##### Auto-Panning to Video ( Studio Only )
 
@@ -15896,6 +17428,10 @@ the timeline.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **357**
 
+
+
+
+--- end of page=383 ---
 
 The Generating IntelliTrack Pan Data progress dialog indicates how long the tracking
 
@@ -15944,6 +17480,10 @@ panner to 3D view.
 **Lesson 5 Balancing Clips and Panning Tracks** **358**
 
 
+
+
+--- end of page=384 ---
+
 **7** Play the mower clip from the beginning to see the current tracking in the panner
 
 and viewer.
@@ -15968,6 +17508,10 @@ on their corresponding track.
 **Lesson 5 Balancing Clips and Panning Tracks** **359**
 
 
+
+
+--- end of page=385 ---
+
 **9** Extend the mixer to see the channel strips for the selected tracks.
 
 
@@ -15991,6 +17535,10 @@ timeline if necessary.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **360**
 
+
+
+
+--- end of page=386 ---
 
 The viewer shows the starting pan positions for all the selected tracks. If you are
 
@@ -16041,6 +17589,10 @@ while the Roar is at the far left.
 **Lesson 5 Balancing Clips and Panning Tracks** **361**
 
 
+
+
+--- end of page=387 ---
+
 **3** Open the Pan window for the A18 Roar track.
 
 
@@ -16088,6 +17640,10 @@ as needed.
 **Lesson 5 Balancing Clips and Panning Tracks** **362**
 
 
+
+
+--- end of page=388 ---
+
 **6** Click the first keyframe on the A19 Dragon Vocals 1 track to see the value, 13L.
 
 
@@ -16123,6 +17679,10 @@ same flying beast.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **363**
 
+
+
+
+--- end of page=389 ---
 
 ##### **More Balancing and Panning**
 
@@ -16184,6 +17744,10 @@ before adjusting track levels in the mixer.
 **Lesson 5 Balancing Clips and Panning Tracks** **364**
 
 
+
+
+--- end of page=390 ---
+
 **5** In the Fairlight page, where can you set or adjust the left/right pan for a stereo track?
 
 (Choose all that apply.)
@@ -16210,6 +17774,10 @@ before adjusting track levels in the mixer.
 **Lesson 5 Balancing Clips and Panning Tracks** **365**
 
 
+
+
+--- end of page=391 ---
+
 ##### **Answers**
 
 **1** c
@@ -16228,6 +17796,10 @@ before adjusting track levels in the mixer.
 
 **Lesson 5 Balancing Clips and Panning Tracks** **366**
 
+
+
+
+--- end of page=392 ---
 
 ### Lesson 6
 # Audio Repairs with Native Processing and Plug-Ins
@@ -16281,6 +17853,10 @@ More Audio Repairs 414
 
 Lesson Review 415
 
+
+
+
+--- end of page=393 ---
 
 ## **Finding the Problem**
 
@@ -16342,6 +17918,10 @@ including the viewer.
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **368**
 
+
+
+
+--- end of page=394 ---
 
 The first clip is ready for repair, and as the track name suggests, you’ll use EQ for this quick fix.
 
@@ -16417,6 +17997,10 @@ This setup will help you quickly identify and fix frequency issues in your audio
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **369**
 
 
+
+
+--- end of page=395 ---
+
 **3** At the top of the A1 channel strip in the mixer, locate the Frequency Analyzer plug-in.
 
 
@@ -16450,6 +18034,10 @@ track. During playback, look at the Frequency Spectrum window.
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **370**
 
+
+
+
+--- end of page=396 ---
 
 The large shaded blue area to the left of the Frequency Analyzer graph is the low
 frequency rumbling noise, while the peaks around 3 kHz to 6 kHz are the bird chirps.
@@ -16496,6 +18084,10 @@ High-shelf filter
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **371**
 
 
+
+
+--- end of page=397 ---
+
 High- and low-shelf filters are similar to high- and low-pass filters, but the shelf filters
 
 attenuate (lower) unwanted frequencies, whereas the pass filters completely block
@@ -16538,6 +18130,10 @@ a low roar to a slight background noise with the built-in low-shelf filter in th
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **372**
 
+
+
+
+--- end of page=398 ---
 
 **11** Stop playback.
 
@@ -16588,6 +18184,10 @@ loudest peaks and bringing them closer to the lowest peaks. The expander, in con
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **373**
 
 
+
+
+--- end of page=399 ---
+
 enlarges the dynamic range to increase the difference between the loudest and
 
 quietest peaks. The limiter and gate work on opposite ends of the signal to avoid
@@ -16630,6 +18230,10 @@ below the threshold.
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **374**
 
 
+
+
+--- end of page=400 ---
+
 The Range control sets the maximum amount of gain reduction applied to the signal
 
 when it falls below the gate threshold.
@@ -16662,6 +18266,10 @@ add them during playback until you achieve your goal.
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **375**
 
+
+
+
+--- end of page=401 ---
 
 **10** During looped playback, adjust the Threshold level to lower it all the way to the left
 
@@ -16708,6 +18316,10 @@ Sweetening the Soundtrack.” For now, you’ll focus on applying plug-ins to sp
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **376**
 
 
+
+
+--- end of page=402 ---
+
 A clear background hum contaminates the entire clip. This problem is fairly common
 
 and can have several causes, including poor audio cable shielding, incorrect power
@@ -16728,6 +18340,10 @@ The Fairlight FX plug-ins appear at the top of the Audio FX list.
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **377**
 
+
+
+
+--- end of page=403 ---
 
 The De-Hummer dialog opens with controls to specify the type of hum in the clip. You
 
@@ -16787,6 +18403,10 @@ correct frequency.
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **378**
 
 
+
+
+--- end of page=404 ---
+
 **5** Start looped playback.
 
 **6** While listening to playback, drag the Amount dial to increase the amount of the
@@ -16805,6 +18425,10 @@ harmonics while retaining the fundamental frequency.
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **379**
 
+
+
+
+--- end of page=405 ---
 
 **7** Drag the Slope dial slightly toward the right to strengthen the different harmonic
 
@@ -16838,6 +18462,10 @@ to the Noise Reduction plug-in.
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **380**
 
+
+
+
+--- end of page=406 ---
 
 ##### **Reducing Noise**
 
@@ -16898,6 +18526,10 @@ Reduction plug-in from the Effects Library.
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **381**
 
 
+
+
+--- end of page=407 ---
+
 For this exercise, you’ll leave the clip unaltered in the A1 Original track. Then, you’ll
 
 apply the Noise Reduction plug-in to the identical clips in A2 and A3 so you can
@@ -16948,6 +18580,10 @@ you can easily increase the levels at the end of the clip.
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **382**
 
 
+
+
+--- end of page=408 ---
+
 **6** At the end of the clip on the A2 track, drag the gain line upward to around 20 dB to
 
 increase the noise level in that section. Then, drag a range that includes the noise
@@ -16982,6 +18618,10 @@ during playback.
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **383**
 
+
+
+
+--- end of page=409 ---
 
 **12** Start looped playback again to hear the clip with the noise print subtracted. Click the
 
@@ -17021,6 +18661,10 @@ Set a play range around the fifth phrase in the clip. Start playback of the phra
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **384**
 
+
+
+
+--- end of page=410 ---
 
 **16** Stop playback. Close the Noise Reduction dialog, clear the play range, and mute
 
@@ -17075,6 +18719,10 @@ You can hear a constant hum and background noise in the clip.
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **385**
 
 
+
+
+--- end of page=411 ---
+
 TIP When a dialogue clip is contaminated with both hum and noise, remove
 
 the hum first so the noise reduction plug-in can focus on the noise, which is
@@ -17127,6 +18775,10 @@ Now you can hear the noise.
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **386**
 
 
+
+
+--- end of page=412 ---
+
 **11** Click the Custom button for the first Noise Reduction plug-in to show the plug-in’s
 
 control dialog.
@@ -17158,6 +18810,10 @@ Noise Only mode.
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **387**
 
+
+
+
+--- end of page=413 ---
 
 **14** In the Inspector, turn off the second Noise Reduction plug-in.
 
@@ -17213,6 +18869,10 @@ best results.
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **388**
 
 
+
+
+--- end of page=414 ---
+
 ## **Dealing with Processor-Intensive** **Plug‑Ins**
 
 In DaVinci Resolve, there is no limit to the number of plug-ins that you can add to a clip.
@@ -17263,6 +18923,10 @@ Bounce clip options without changing the A2 plug-ins and processing.
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **389**
 
 
+
+
+--- end of page=415 ---
+
 **4** Right-click the clip in the A3 track and choose Cache Audio Effect.
 
 
@@ -17294,6 +18958,10 @@ the original clip disabled underneath.
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **390**
 
+
+
+
+--- end of page=416 ---
 
 Notice that the keyframes on the clip gain line were retained on the bounced clip. Why?
 
@@ -17345,6 +19013,10 @@ these processor-saving techniques to your own projects.
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **391**
 
+
+
+
+--- end of page=417 ---
 
 ## **Repairing Dialogue** with Track FX (Studio Only)
 
@@ -17403,6 +19075,10 @@ Let’s start with locating the Track FX for A1 in the mixer and Inspector.
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **392**
 
 
+
+
+--- end of page=418 ---
+
 **7** In the Mixer menu Visible Track FX list, select Voice Isolation and Dialogue Separator to
 
 show them both in the mixer, if necessary.
@@ -17431,6 +19107,10 @@ and ambience.
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **393**
 
+
+
+
+--- end of page=419 ---
 
 Enabling a Track FX in the Inspector also enables it in the mixer and vice versa. The
 
@@ -17478,6 +19158,10 @@ clip. Then, apply Voice Isolation to clean up the background noise.
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **394**
 
 
+
+
+--- end of page=420 ---
+
 **15** Mark and play the clip in the A2 track. Then, increase the level of the clip gain line as
 
 much as necessary to hear the dialogue clearly.
@@ -17523,6 +19207,10 @@ the timeline.
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **395**
 
 
+
+
+--- end of page=421 ---
+
 **20** In the Inspector, enable Voice Isolation for the selected clip.
 
 
@@ -17564,6 +19252,10 @@ Next, you’ll move on to the Dialogue Separator Track FX.
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **396**
 
 
+
+
+--- end of page=422 ---
+
 ##### **Working with the Dialogue Separator**
 
 Now that you’ve successfully used Voice Isolation on three different clips, let’s try the
@@ -17604,6 +19296,10 @@ amount of background noise.
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **397**
 
+
+
+
+--- end of page=423 ---
 
 **6** Increase the Ambience amount to increase the reverberance in the clip. Then, drag the
 
@@ -17648,6 +19344,10 @@ Now that you know how to work with Track FX, you can use them on your own projec
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **398**
 
+
+
+
+--- end of page=424 ---
 
 ##### **More Dialogue Repairs with Track FX**
 
@@ -17705,6 +19405,10 @@ Let’s start by opening a different timeline containing a single music clip.
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **399**
 
 
+
+
+--- end of page=425 ---
+
 **2** Hide all open panels, leaving only the timeline.
 
 
@@ -17744,6 +19448,10 @@ Then, zoom in until you see the individual samples (dots) that make up the wavef
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **400**
 
+
+
+
+--- end of page=426 ---
 
 Welcome to the sample level of the waveform. Just as molecules are the building blocks of
 
@@ -17794,6 +19502,10 @@ Edited Samples.
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **401**
 
 
+
+
+--- end of page=427 ---
+
 **3** Repeat steps 1 and 2 in the lower channel.
 
 
@@ -17839,6 +19551,10 @@ dialogue clips during playback.
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **402**
 
+
+
+
+--- end of page=428 ---
 
 ##### **Preparing the Timeline**
 
@@ -17893,6 +19609,10 @@ you want them. For this exercise, let’s move the tracks.
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **403**
 
 
+
+
+--- end of page=429 ---
+
 **7** Select the A8 and A9 tracks.
 
 
@@ -17907,6 +19627,10 @@ release the tracks to the right of the A5 DX 2 Dad track.
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **404**
 
+
+
+
+--- end of page=430 ---
 
 The tracks have been reordered in the timeline and mixers. Now, all three tracks
 
@@ -17959,6 +19683,10 @@ A5 track.
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **405**
 
 
+
+
+--- end of page=431 ---
+
 **4** Scrub through the clip forward and backward, holding JK and KL alternately to hear the
 
 dialogue in slow motion while watching the lip movements in the viewer.
@@ -18003,6 +19731,10 @@ A6 tracks.
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **406**
 
 
+
+
+--- end of page=432 ---
+
 The beige A6 track is now between the orange A5 and A7 tracks.
 
 **8** Mute the A7 ADR 2 Dad track for comparison later.
@@ -18024,6 +19756,10 @@ waveform using keyframe markers.
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **407**
 
+
+
+
+--- end of page=433 ---
 
 **10** Unsolo the A5 track. Clear the range. Solo only A6, if necessary.
 
@@ -18049,6 +19785,10 @@ this visually or by playing the end of the clips as needed until the timing of t
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **408**
 
+
+
+
+--- end of page=434 ---
 
 **14** Mark the clip in A7 to set a range. Solo A5 and A6 and listen to them together.
 
@@ -18115,6 +19855,10 @@ and the last section.
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **409**
 
 
+
+
+--- end of page=435 ---
+
 **1** Solo only the A6 track.
 
 **2** Move the pointer to the empty space after the waveform and Command-click (macOS)
@@ -18134,6 +19878,10 @@ waveform aligns with the beginning of the original recording.
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **410**
 
+
+
+
+--- end of page=436 ---
 
 **5** Adjust the time keyframes in the middle of the clip as needed to align the end of the
 
@@ -18171,6 +19919,10 @@ Wave retime effects on the Fairlight page.
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **411**
 
+
+
+
+--- end of page=437 ---
 
 ##### **Applying Pitch Changes to** **a Clip in the Inspector**
 
@@ -18219,6 +19971,10 @@ fine-tuning a clip’s pitch.
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **412**
 
 
+
+
+--- end of page=438 ---
+
 Dragging the pitch controls to the left lowers the pitch and is designated by a negative
 
 number. Conversely, dragging to the right raises the pitch. The best way to understand
@@ -18264,6 +20020,10 @@ entire track, it’s better to use the Fairlight FX pitch plug-in.
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **413**
 
+
+
+
+--- end of page=439 ---
 
 ## **More Audio Repairs**
 
@@ -18330,6 +20090,10 @@ ADR line “Will you teach me how to surf?”
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **414**
 
 
+
+
+--- end of page=440 ---
+
 **5** Choose the best take, move it to the uppermost layer, disable the other clips, and hide
 
 the audio track layers.
@@ -18392,6 +20156,10 @@ from clips that contain a human voice? (Choose two.)
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **415**
 
 
+
+
+--- end of page=441 ---
+
 ##### **Answers**
 
 **1** False. You can apply unlimited plug-ins to a clip and up to six plug-ins to a track.
@@ -18411,6 +20179,10 @@ level, simply zoom in to the waveform to see the samples on the Fairlight page.
 
 **Lesson 6 Audio Repairs with Native Processing and Plug-Ins** **416**
 
+
+
+
+--- end of page=442 ---
 
 ### Lesson 7
 # Using Fairlight FX and Processing for Creative Sound Design
@@ -18464,6 +20236,10 @@ Doubling a Track to Thicken the Sound  460
 
 Lesson Review 472
 
+
+
+
+--- end of page=443 ---
 
 Once an audience has “been there, done that,” an onscreen _soundscape_ (audible landscape)
 
@@ -18527,6 +20303,10 @@ time and reduce unnecessary mouse clicks as you work through this lesson.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **418**
 
 
+
+
+--- end of page=444 ---
+
 **2** Choose DaVinci Resolve > Keyboard Customization.
 
 
@@ -18554,6 +20334,10 @@ custom layouts you may have saved on your system.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **419**
 
+
+
+
+--- end of page=445 ---
 
 NOTE If you are already using custom keyboard shortcuts that you created on
 
@@ -18593,6 +20377,10 @@ function, as you will see in a moment.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **420**
 
+
+
+
+--- end of page=446 ---
 
 Yep, that shortcut is already taken. No problem. Let’s try Shift-X instead to “shift” the
 
@@ -18651,6 +20439,10 @@ when he is speaking through the PA system.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **421**
 
 
+
+
+--- end of page=447 ---
+
 One thing to consider before adding effects directly to dialogue clips or tracks is that,
 
 when it comes to dialogue editing and mixing, it is essential to keep the primary dialogue
@@ -18703,6 +20495,10 @@ context of where Raina is compared to Harper.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **422**
 
 
+
+
+--- end of page=448 ---
+
 There is currently no difference between Raina’s dialogue when we see her yelling to
 
 Harper from the beach and when we see Harper listening to Raina from the water.
@@ -18730,6 +20526,10 @@ Now, let’s put this to work.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **423**
 
+
+
+
+--- end of page=449 ---
 
 NOTE When working with Smart Zoom, you can use the same shortcut to
 
@@ -18770,6 +20570,10 @@ button (the + symbol) and choose Delay > Fairlight FX > Echo.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **424**
 
 
+
+
+--- end of page=450 ---
+
 The Echo panel opens. This classic Echo effect includes a graph showing the timing
 
 and intensity of the generated echoes on each channel, as well as an Output meter
@@ -18799,6 +20603,10 @@ stop playback.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **425**
 
+
+
+
+--- end of page=451 ---
 
 Did any of the presets work for this situation? Large Hall was the closest to working. In
 
@@ -18851,6 +20659,10 @@ The Preset pop-up menu updates to show the current preset, TML Surf Scene.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **426**
 
+
+
+
+--- end of page=452 ---
 
 TIP When naming presets and sound effects, it’s always a good idea to give
 
@@ -18909,6 +20721,10 @@ Cinema Viewer, then stop playback.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **427**
 
+
+
+
+--- end of page=453 ---
 
 ## **Futzing Dialogue to** **Simulate a PA System**
 
@@ -18983,6 +20799,10 @@ from while Vice Principal Garrett makes his announcement.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **428**
 
 
+
+
+--- end of page=454 ---
+
 How do you imagine the outdoor PA sound from this location? He is speaking into a PA
 
 handset, but the speakers are not visible—they could be mounted on the school
@@ -19040,6 +20860,10 @@ audio tracks to improve dialogue during the mix.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **429**
 
 
+
+
+--- end of page=455 ---
+
 In the following exercise, you’ll look at limiting the high and low frequencies to simulate the
 
 frequency limitations of an outdoor PA system. First, you’ll use the six-band EQ on the A2
@@ -19075,6 +20899,10 @@ filtered out, leaving only the mid-range frequencies, just like a telephone spea
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **430**
 
+
+
+
+--- end of page=456 ---
 
 ##### **Saving Alternate Settings for Quick Comparison**
 
@@ -19139,6 +20967,10 @@ The B controls are identical to the A controls. Now, you can customize the setti
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **431**
 
 
+
+
+--- end of page=457 ---
+
 **4** Continue looped playback. In the Equalizer window, click the Band 2, Band 3, Band 4,
 
 and Band 5 buttons to turn them off.
@@ -19189,6 +21021,10 @@ drive the different presets to find one that works best for this scene.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **432**
 
 
+
+
+--- end of page=458 ---
+
 Once again, let’s use the Add Effect pop-up menu in the mixer. In this case, there is
 
 only one Fairlight FX plug-in in the Distortion category, aptly named Distortion.
@@ -19216,6 +21052,10 @@ especially if you are wearing headphones.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **433**
 
 
+
+
+--- end of page=459 ---
+
 **2** In the monitoring controls in the top right corner of the Fairlight interface, click the
 
 DIM button.
@@ -19241,6 +21081,10 @@ polynomial wave shaper.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **434**
 
+
+
+
+--- end of page=460 ---
 
 **5** Continue playback. In the Distortion settings, click each of the two mode buttons to
 
@@ -19298,6 +21142,10 @@ the signal so far.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **435**
 
 
+
+
+--- end of page=461 ---
+
 **1** At the top of the A2 channel strip, click the Order dropdown menu and choose EQ, FX,
 
 DY from the bottom of the menu.
@@ -19345,6 +21193,10 @@ combination with the Reverb to combine the effects.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **436**
 
 
+
+
+--- end of page=462 ---
+
 **1** Select the A2 track, if necessary.
 
 **2** In the mixer, click the Add Effect button and choose Reverb > Fairlight FX > Reverb to
@@ -19380,6 +21232,10 @@ and hear the extreme differences between small and large spaces.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **437**
 
 
+
+
+--- end of page=463 ---
+
 **3** Start looped playback. In the Reverb dialog, choose the Bathroom preset. Toggle the
 
 Bypass button off and on to hear the track with and without the Bathroom preset.
@@ -19401,6 +21257,10 @@ reverb tail to the right.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **438**
 
+
+
+
+--- end of page=464 ---
 
 **5** Try each of the different presets to hear the differences.
 
@@ -19447,6 +21307,10 @@ you can see both the Reverb and Echo controls.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **439**
 
 
+
+
+--- end of page=465 ---
+
 **13** Set the Echo panel preset to the TML Surf Scene preset you made earlier.
 
 
@@ -19487,6 +21351,10 @@ with on future projects.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **440**
 
 
+
+
+--- end of page=466 ---
+
 **1** Choose Fairlight > Presets Library to open the Presets Library window.
 
 
@@ -19519,6 +21387,10 @@ exterior (outdoor) PA system.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **441**
 
 
+
+
+--- end of page=467 ---
+
 **5** Click the Save New button to open the Global Track Preset dialog. Click Create New.
 
 
@@ -19543,6 +21415,10 @@ As you can see in the mixer, all the settings are applied to the new track
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **442**
 
+
+
+
+--- end of page=468 ---
 
 **9** Close the Presets Library.
 
@@ -19607,6 +21483,10 @@ noise effect soon.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **443**
 
 
+
+
+--- end of page=469 ---
+
 **1** Open the **7 Sound Design Waves Start** timeline. Show only the timeline, mixer,
 
 and Inspector.
@@ -19656,6 +21536,10 @@ see what is actually happening under the hood.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **444**
 
 
+
+
+--- end of page=470 ---
+
 ##### **Exploring the 4-in-1 Modulation Plug-In**
 
 Fairlight’s Modulation plug-in includes many of the controls that you may have used in
@@ -19698,6 +21582,10 @@ changes were applied to the clip.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **445**
 
 
+
+
+--- end of page=471 ---
+
 **3** In the A1 Channels strip, click the Controls button on the Modulation plug-in to open
 
 the Modulation window. Reset the plug-in.
@@ -19727,6 +21615,10 @@ Press the Esc key to close the EQ window.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **446**
 
+
+
+
+--- end of page=472 ---
 
 **6** In the Modulation window, choose the Doppler preset to hear a Doppler effect applied
 
@@ -19758,6 +21650,10 @@ Frequency, Amplitude, Filter, and Rotation.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **447**
 
+
+
+
+--- end of page=473 ---
 
 **7** Apply each of the remaining presets to hear the default modulation effects on the
 
@@ -19807,6 +21703,10 @@ select both.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **448**
 
 
+
+
+--- end of page=474 ---
+
 **4** Choose Edit > Duplicate Selection or press Shift-Command-D (macOS) or Shift-Ctrl-D
 
 (Windows).
@@ -19843,6 +21743,10 @@ be soloed.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **449**
 
+
+
+
+--- end of page=475 ---
 
 **11** Click OK.
 
@@ -19888,6 +21792,10 @@ in films, TV shows, video games, and podcasts.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **450**
 
 
+
+
+--- end of page=476 ---
+
 ##### **Design and Bounce a Wave**
 
 It’s time to take what you have learned and make your own wave sound effect. To simplify
@@ -19910,6 +21818,10 @@ ocean waves in under 5 minutes!
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **451**
 
+
+
+
+--- end of page=477 ---
 
 ## **Using Pitch and Time to Alter Sound**
 
@@ -19972,6 +21884,10 @@ dragon roar.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **452**
 
 
+
+
+--- end of page=478 ---
+
 **3** If necessary, turn on Exclusive Solo. Then Solo the A1 Original track.
 
 
@@ -20028,6 +21944,10 @@ things to try.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **453**
 
 
+
+
+--- end of page=479 ---
+
 ##### **Applying Speed Changes** **to a Clip in the Inspector**
 
 Previously, you reversed a clip with the Reverse Clip option in the right-click contextual
@@ -20067,6 +21987,10 @@ of the clip.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **454**
 
+
+
+
+--- end of page=480 ---
 
 NOTE Since you are experimenting with this sound effect in a separate
 
@@ -20122,6 +22046,10 @@ Listen to the clip.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **455**
 
+
+
+
+--- end of page=481 ---
 
 **9** Drag the Speed % dial toward the left to raise the speed and decrease the duration.
 
@@ -20179,6 +22107,10 @@ end of the reversed clip in A3.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **456**
 
 
+
+
+--- end of page=482 ---
+
 **6** Play the selection.
 
 
@@ -20224,6 +22156,10 @@ transform a clip.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **457**
 
+
+
+
+--- end of page=483 ---
 
 ##### **Using Pitch to Change Human** **Voices into Dragon Vocals**
 
@@ -20275,6 +22211,10 @@ The Inspector indicates that multiple clips have been selected.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **458**
 
 
+
+
+--- end of page=484 ---
+
 **6** Set the Pitch to -24 Semi Tones. Play the selected range.
 
 
@@ -20310,6 +22250,10 @@ fire-breathing reptile than a human.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **459**
 
+
+
+
+--- end of page=485 ---
 
 ## **Doubling a Track to** **Thicken the Sound**
 
@@ -20348,6 +22292,10 @@ to 33.62.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **460**
 
+
+
+
+--- end of page=486 ---
 
 **4** Play the navy clip in the A4 track to hear it with the changes.
 
@@ -20406,6 +22354,10 @@ doubled clips.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **461**
 
 
+
+
+--- end of page=487 ---
+
 ##### **Creating a Front-to-Back Extended Sound**
 
 The last technique that you’ll explore in this timeline involves editing together a clip to the
@@ -20437,6 +22389,10 @@ point in the waveform.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **462**
 
 
+
+
+--- end of page=488 ---
+
 **6** Drag the two clips together to remove the gap between them.
 
 **7** Right-click the edit point between the first and second clip and choose Add 12 frame
@@ -20466,6 +22422,10 @@ A new green clip appears in a new layer above the navy clips.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **463**
 
+
+
+
+--- end of page=489 ---
 
 **13** Drag the bounced clip down to the A2 track.
 
@@ -20516,6 +22476,10 @@ create your own version.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **464**
 
 
+
+
+--- end of page=490 ---
+
 **2** Open the **Original Dragon Wings Finished** timeline.
 
 
@@ -20544,6 +22508,10 @@ bounced clip.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **465**
 
+
+
+
+--- end of page=491 ---
 
 In the clip’s waveform, you can see the individual flaps. You can also see that the flaps
 
@@ -20574,6 +22542,10 @@ selected clips.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **466**
 
+
+
+
+--- end of page=492 ---
 
 **7** While the tracks are selected, Option/Alt-click the Solo button on one of the selected
 
@@ -20635,6 +22607,10 @@ the brown tracks.
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **467**
 
 
+
+
+--- end of page=493 ---
+
 These clips represent the two best multilayered sounds, which were copied and moved
 
 to lower tracks from the stacked original recordings. Next, you’ll look and listen to the
@@ -20680,6 +22656,10 @@ one octave (-12).
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **468**
 
+
+
+
+--- end of page=494 ---
 
 Cumulatively, aligned and played together, these clips create a pretty good dragon
 
@@ -20727,6 +22707,10 @@ results were less than legendary.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **469**
 
+
+
+
+--- end of page=495 ---
 
 ##### **Another Original Dragon Wing** **Flap Sound Effect**
 
@@ -20787,6 +22771,10 @@ to life with sound!
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **470**
 
 
+
+
+--- end of page=496 ---
+
 **6** Play the timeline once and listen for the subtle sound design effects that were added
 
 to accentuate the 3D DaVinci Resolve logo onscreen.
@@ -20830,6 +22818,10 @@ version that the clients liked, giving it two thumbs up.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **471**
 
+
+
+
+--- end of page=497 ---
 
 The good news? You’ve reached the end of these action-packed sound design exercises!
 
@@ -20895,6 +22887,10 @@ multiple soloed tracks, but only one track at a time when Exclusive Solo is enab
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **472**
 
 
+
+
+--- end of page=498 ---
+
 **5** Where can you change the processing order between FX, EQ, and DY (Dynamics)
 
 per track?
@@ -20925,6 +22921,10 @@ the timeline? (Choose all that apply.)
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **473**
 
 
+
+
+--- end of page=499 ---
+
 ##### **Answers**
 
 **1** d
@@ -20944,6 +22944,10 @@ Exclusive Solo is enabled.
 
 **Lesson 7 Using Fairlight FX and Processing for Creative Sound Design** **474**
 
+
+
+
+--- end of page=500 ---
 
 ### Lesson 8
 # Simplifying the Mix with Groups, Busses, and Nested Timelines
@@ -21005,6 +23009,10 @@ Creating a Timeline Template 525
 Lesson Review  533
 
 
+
+
+--- end of page=501 ---
+
 DaVinci Resolve features the powerful Flex Bus bussing architecture, which is completely
 
 user-defined and offers unlimited signal flow possibilities. Older “legacy” projects use the
@@ -21057,6 +23065,10 @@ be answered shortly.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **476**
 
 
+
+
+--- end of page=502 ---
+
 **1** Open your Podcast Intro Combo project. Then open the Lesson 8, **8 Link Group and**
 
 **Track Groups** timeline.
@@ -21083,6 +23095,10 @@ background noise.
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **477**
 
+
+
+
+--- end of page=503 ---
 
 **6** Select the A15 and A16 tracks and look at them in the mixer to see how they
 
@@ -21116,6 +23132,10 @@ buttons active and all other tracks disabled since they can’t be linked.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **478**
 
 
+
+
+--- end of page=504 ---
+
 **8** In the Link Group dialog, select both Birds tracks and click Link.
 
 
@@ -21143,6 +23163,10 @@ Once linked, the tracks act as a single two-channel track.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **479**
 
 
+
+
+--- end of page=505 ---
+
 **12** Look for the Birds tracks in the mixer and monitoring panel.
 
 
@@ -21156,6 +23180,10 @@ channel strip, fader, and meter based on the first channel in the linked group.
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **480**
 
+
+
+
+--- end of page=506 ---
 
 **13** Unsolo the A17 Ambience track.
 
@@ -21209,6 +23237,10 @@ waveforms to use as a guide.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **481**
 
 
+
+
+--- end of page=507 ---
+
 **4** Hold Option/Alt while pressing the comma key numerous times to slip the sound in
 
 reverse. Keep an eye on the marker and the playhead. The marker will move toward
@@ -21254,6 +23286,10 @@ control for both Birds tracks.
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **482**
 
+
+
+
+--- end of page=508 ---
 
 **3** In the Link Group dialog, select the linked Birds tracks.
 
@@ -21311,6 +23347,10 @@ timeline. For this exercise, you’ll use the default Pointer mode selection too
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **483**
 
 
+
+
+--- end of page=509 ---
+
 **3** Unsolo the Birds tracks.
 
 **4** In the interface toolbar at the top left of the Fairlight page, click the Groups button to
@@ -21355,6 +23395,10 @@ clips or tracks within the group manually.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **484**
 
 
+
+
+--- end of page=510 ---
+
 **7** In the timeline, solo the A22 Wing Flaps track near the bottom of the timeline.
 
 
@@ -21397,6 +23441,10 @@ selected at the same time.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **485**
 
 
+
+
+--- end of page=511 ---
+
 **11** Choose Edit > Copy or use keyboard shortcuts to copy the selected clips.
 
 **12** Press the Down Arrow key to jump the playhead to the next edit point, along with the
@@ -21424,6 +23472,10 @@ the clips, you’ll need to deactivate the Dragon group.
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **486**
 
+
+
+
+--- end of page=512 ---
 
 **15** In the Groups panel, click the G1 ID button to deactivate the Dragon group.
 
@@ -21470,6 +23522,10 @@ groups to create larger submix groups.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **487**
 
 
+
+
+--- end of page=513 ---
+
 ##### **Creating Track Groups for Mixing**
 
 Track groups are useful for mixing, allowing you to control all member tracks
@@ -21492,6 +23548,10 @@ dialogue, sound effects, background sound effects, and music.
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **488**
 
+
+
+
+--- end of page=514 ---
 
 The Create Group dialog opens. At the top of the dialog, you can name the group and
 
@@ -21539,6 +23599,10 @@ The Modify Group dialog is identical to the Group dialog.
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **489**
 
+
+
+
+--- end of page=515 ---
 
 **11** In the Modify Group dialog, scroll down the Add Channels column on the left. Drag a
 
@@ -21592,6 +23656,10 @@ When you are finished, deactivate and deselect any active groups.
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **490**
 
+
+
+
+--- end of page=516 ---
 
 NOTE If you didn’t complete the previous exercises, open the **8 Link Group**
 
@@ -21650,6 +23718,10 @@ intended use to control signal flow.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **491**
 
 
+
+
+--- end of page=517 ---
+
 **2** Click the Add Bus button four times to add four new busses to the list.
 
 
@@ -21683,6 +23755,10 @@ will be mono.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **492**
 
 
+
+
+--- end of page=518 ---
+
 **5** In the Format column, change the format of the DX bus to Mono.
 
 
@@ -21711,6 +23787,10 @@ NOTE Bus tracks only appear in the timeline when automation is enabled.
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **493**
 
+
+
+
+--- end of page=519 ---
 
 You are all set up with submix busses. The next step is to assign the tracks to go into
 
@@ -21781,6 +23861,10 @@ in the mixer.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **494**
 
 
+
+
+--- end of page=520 ---
+
 **1** Press Shift-Z to fit all the timeline clips horizontally in the visible timeline.
 
 **2** In the timeline, select the first track VO 1 Book to highlight its channel strip in
@@ -21820,6 +23904,10 @@ pop-up menu.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **495**
 
 
+
+
+--- end of page=521 ---
+
 That was easy! The only thing that would simplify this process even more would be if
 
 you could instantly select all the submix tracks that you want to assign to submixes.
@@ -21852,6 +23940,10 @@ You’ve got the hang of this now.
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **496**
 
+
+
+
+--- end of page=522 ---
 
 **10** When you are finished, deselect any selected track groups and hide the Groups panel.
 
@@ -21905,6 +23997,10 @@ playhead before troubleshooting the bus.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **497**
 
 
+
+
+--- end of page=523 ---
+
 Keep in mind that your Control Room monitoring can be changed at any time.
 
 
@@ -21953,6 +24049,10 @@ monitor during playback.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **498**
 
 
+
+
+--- end of page=524 ---
+
 ##### **Deleting Unnecessary Bus Assignments**
 
 Based on your recent tests monitoring the different busses, all are working according to
@@ -21991,6 +24091,10 @@ choose Remove Bus Output from the pop-up menu.
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **499**
 
+
+
+
+--- end of page=525 ---
 
 So long, Stereo output bus. With that one modified click, the tracks are no longer
 
@@ -22039,6 +24143,10 @@ easily in the mixer.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **500**
 
 
+
+
+--- end of page=526 ---
+
 TIP When you’re finished, it’s a good idea to always reset the Control Room
 
 monitoring to the main output—in this case, the Stereo bus. Also, when
@@ -22084,6 +24192,10 @@ the next exercise when you create an auxiliary bus.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **501**
 
 
+
+
+--- end of page=527 ---
+
 At a glance, the Bus Assign window tells the entire story of how the tracks and busses
 
 are assigned. Bus assignments are shown below each track name in the lower section.
@@ -22105,6 +24217,10 @@ However, the Stereo bus is not assigned to any other bus because it is an output
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **502**
 
+
+
+
+--- end of page=528 ---
 
 **4** Close the Bus Assign window.
 
@@ -22151,6 +24267,10 @@ NOTE If you didn’t complete the previous exercises, open the timeline
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **503**
 
 
+
+
+--- end of page=529 ---
+
 **3** Extend the mixer as far to the left as possible. Scroll to the end of the mixer to see the
 
 channel strips for the last tracks and all the busses. If you are working with dual
@@ -22180,6 +24300,10 @@ you listen to the results. When you are finished, stop playback.
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **504**
 
+
+
+
+--- end of page=530 ---
 
 Now you know why submixes are a mixer’s best friend. It is much easier to move one
 
@@ -22225,6 +24349,10 @@ directly to individual tracks.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **505**
 
 
+
+
+--- end of page=531 ---
+
 Auxiliary busses have several advantages over applying effects directly to tracks, such
 
 as shared processing, applying effects with a wider channel format like stereo, and
@@ -22266,6 +24394,10 @@ bus for the Echo effect.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **506**
 
 
+
+
+--- end of page=532 ---
+
 The new Bus 6 appears below MX in the Bus Format pane.
 
 
@@ -22298,6 +24430,10 @@ and localization.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **507**
 
 
+
+
+--- end of page=533 ---
+
 **8** Click OK to close the Bus Format window. Expand and scroll the mixer as needed to
 
 see the new Echo Bus to the right of the MX bus. Notice that the new bus, labeled DX
@@ -22326,6 +24462,10 @@ preset for now.
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **508**
 
+
+
+
+--- end of page=534 ---
 
 **11** Close the Echo window.
 
@@ -22360,6 +24500,10 @@ track or bus.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **509**
 
 
+
+
+--- end of page=535 ---
+
 ##### **Sending Track Signals to the Auxiliary Bus**
 
 Currently, the auxiliary DX Echo bus is configured with the Echo plug-in ready to use, but
@@ -22389,6 +24533,10 @@ Controls, and Delete buttons for the DX Echo bus.
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **510**
 
+
+
+
+--- end of page=536 ---
 
 **3** Hover the pointer over the DX Echo and click the Controls button to open the Bus
 
@@ -22430,6 +24578,10 @@ bus, or all these options as long as it eventually reaches an output bus if you 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **511**
 
 
+
+
+--- end of page=537 ---
+
 hear it. In this timeline, all tracks are assigned to the Stereo output bus, as you can
 
 clearly see in the mixer. The DX Echo bus still needs to be assigned to the output bus.
@@ -22442,6 +24594,10 @@ choose Stereo from the pop-up menu.
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **512**
 
+
+
+
+--- end of page=538 ---
 
 You should now be able to hear the A6 track with the echo effect.
 
@@ -22501,6 +24657,10 @@ bus is mono.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **513**
 
 
+
+
+--- end of page=539 ---
+
 **4** Using the image below as a guide, make the necessary changes to the Echo controls.
 
 Once finished, solo the A6 DX r5 30L track and play the first set of clips to hear them
@@ -22524,6 +24684,10 @@ preset dialog, click Create New. Name the preset **TML Surf Scene v2** .
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **514**
 
+
+
+
+--- end of page=540 ---
 
 **8** Play the scene from the beginning to hear how it sounds with the echo applied to
 
@@ -22572,6 +24736,10 @@ Harper’s clips when she pops up out of the water and bellows, “Did you get i
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **515**
 
 
+
+
+--- end of page=541 ---
+
 Your motivation is that once you can find levels on the DX Echo fader that you like for each
 
 section, you’ll realize that you could easily automate those levels to fit this scene and many
@@ -22599,6 +24767,10 @@ in her vocals, reflecting her offscreen distance from the camera.
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **516**
 
+
+
+
+--- end of page=542 ---
 
 ## **Working with Nested Timelines**
 
@@ -22656,6 +24828,10 @@ As you can see, this timeline has one stereo bus, named FX.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **517**
 
 
+
+
+--- end of page=543 ---
+
 **2** Play the timeline once to hear the sound effects for the scene without any dialogue
 
 or music.
@@ -22694,6 +24870,10 @@ track as well.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **518**
 
 
+
+
+--- end of page=544 ---
+
 **5** Hide the Index.
 
 
@@ -22731,6 +24911,10 @@ the nested timeline contributing to the FX during playback.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **519**
 
 
+
+
+--- end of page=545 ---
+
 Now, let’s decompose it and add the FX bus to the busses already in the master
 
 timeline.
@@ -22752,6 +24936,10 @@ automation, and bussing. In this case, there were three busses originally named 
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **520**
 
+
+
+
+--- end of page=546 ---
 
 bgFX, and Stereo. They were incorporated into the master timeline and tagged with
 
@@ -22803,6 +24991,10 @@ crossfades in the A1 track.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **521**
 
 
+
+
+--- end of page=547 ---
+
 You’ll add the timeline with the full music mix to the A2 track. First, let’s look at the
 
 other timeline.
@@ -22842,6 +25034,10 @@ In the monitoring panel across the top of the screen, you’ll see meters for 11
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **522**
 
 
+
+
+--- end of page=548 ---
+
 **3** Double-click the meters in the monitoring to stack the meters in two rows.
 
 
@@ -22856,6 +25052,10 @@ Groups panel.
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **523**
 
+
+
+
+--- end of page=549 ---
 
 In the timeline, you’ll see that the tracks are colored based on types of instruments
 
@@ -22895,6 +25095,10 @@ media pool.
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **524**
 
+
+
+
+--- end of page=550 ---
 
 The nested timeline has a 5.1 output bus, and this timeline has a stereo output bus, so
 
@@ -22941,6 +25145,10 @@ timelines from different types of projects. The premade timelines in this projec
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **525**
 
 
+
+
+--- end of page=551 ---
+
 available as DaVinci Resolve timeline (.drt) files that can be imported into another project.
 
 You’ll find this project and timelines for this exercise in the R19 Fairlight Part 2 folder in
@@ -22967,6 +25175,10 @@ Bus 1. This is a perfect starter timeline for building a template.
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **526**
 
+
+
+
+--- end of page=552 ---
 
 The first step for building a template is naming the tracks. Track names and
 
@@ -23005,6 +25217,10 @@ including 18 Dialogue tracks, 40 FX tracks, and 24 Music tracks.
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **527**
 
+
+
+
+--- end of page=553 ---
 
 Manually naming 100 tracks could take a while. Luckily, the Fairlight page features a
 
@@ -23056,6 +25272,10 @@ high track counts. Some mixers like to use Aux busses as spacers between section
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **528**
 
 
+
+
+--- end of page=554 ---
+
 **11** In the timeline, zoom vertically to increase the track heights until you can see track
 
 numbers in the headers.
@@ -23091,6 +25311,10 @@ ready for media and mixing!
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **529**
 
 
+
+
+--- end of page=555 ---
+
 ##### **Saving a Timeline Configuration** **in the Presets Library**
 
 Once a timeline template is complete, you can export the timeline as a .drt file or save the
@@ -23120,6 +25344,10 @@ Configuration Presets.
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **530**
 
 
+
+
+--- end of page=556 ---
+
 **5** Name the new configuration with your initials followed by **100 Tracks 10 Busses** .
 
 Click OK.
@@ -23148,6 +25376,10 @@ The Fairlight Presets dropdown menu appears.
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **531**
 
+
+
+
+--- end of page=557 ---
 
 **3** Select your 100 Tracks 10 Busses preset from the dropdown. Click Create.
 
@@ -23214,6 +25446,10 @@ bus. Enjoy!
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **532**
 
 
+
+
+--- end of page=558 ---
+
 ## **Lesson Review**
 
 **1** Which Fairlight feature is used to link multiple mono tracks as a single multichannel
@@ -23277,6 +25513,10 @@ the timeline?
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **533**
 
 
+
+
+--- end of page=559 ---
+
 ##### **Answers**
 
 **1** d
@@ -23295,6 +25535,10 @@ the timeline?
 
 **Lesson 8 Simplifying the Mix with Groups, Busses, and Nested Timelines** **534**
 
+
+
+
+--- end of page=560 ---
 
 ### Lesson 9
 # Mixing and Sweetening the Soundtrack
@@ -23394,6 +25638,10 @@ Processing Tools (Studio Only) 601
 Lesson Review 612
 
 
+
+
+--- end of page=561 ---
+
 If you are a seasoned audio engineer or re-recording mixer, you already know how to
 
 transform a timeline full of tracks into a professional-sounding mix; you just need to learn
@@ -23478,6 +25726,10 @@ qualities and dynamics) and finalizing the mix for output.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **536**
 
 
+
+
+--- end of page=562 ---
+
 NOTE The exercises in this lesson build from the tools and skills you have learned
 
 in previous lessons. If you skipped ahead to this lesson, you may need to review
@@ -23509,6 +25761,10 @@ This version of the scene represents the culmination of your work throughout thi
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **537**
 
+
+
+
+--- end of page=563 ---
 
 Let’s resize the viewer in the monitoring panel. Because this timeline has only 21
 
@@ -23560,6 +25816,10 @@ track meters.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **538**
 
 
+
+
+--- end of page=564 ---
+
 **7** Drag the bottom edge of the viewer up as far as you can to minimize the height of the
 
 viewer and monitoring panel.
@@ -23577,6 +25837,10 @@ options. Here, you can Save, Import, and Delete custom layouts.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **539**
 
+
+
+
+--- end of page=565 ---
 
 ## **Using Reference Tracks to** **Set Monitoring Levels**
 
@@ -23637,6 +25901,10 @@ quiet sounds will sound quiet, and if something isn’t working, you’ll hear i
 **Lesson 9 Mixing and Sweetening the Soundtrack** **540**
 
 
+
+
+--- end of page=566 ---
+
 One of the best ways to set your listening levels is to use a reference track that contains
 
 professionally mixed content similar to your current project or scene. In the real world,
@@ -23666,6 +25934,10 @@ you’ll be working with shortly.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **541**
 
+
+
+
+--- end of page=567 ---
 
 **3** Start playback from the blue marker. Look at all the meters in the track header, mixer,
 
@@ -23697,6 +25969,10 @@ same story but simply uses different scales to do so: the reference track levels
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **542**
 
+
+
+
+--- end of page=568 ---
 
 at the nominal levels between -10 and -15 dB in the mixer and correspond with the
 
@@ -23747,6 +26023,10 @@ comes with practice. The important goal is to set a comfortable level for you.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **543**
 
+
+
+
+--- end of page=569 ---
 
 Once you have set up your monitoring levels for mixing, you must abide by the number
 
@@ -23823,6 +26103,10 @@ of the music and non-diegetic sound in the mix.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **544**
 
 
+
+
+--- end of page=570 ---
+
 ##### **Evaluating the Reference Track Levels**
 
 It’s one thing to read about dialogue levels, loudness, and balancing tracks. It’s another
@@ -23870,6 +26154,10 @@ section, choose Digital VU from the Meter Type dropdown menu.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **545**
 
+
+
+
+--- end of page=571 ---
 
 **2** While you are in the Project Settings window, make sure that the “Pre fader metering
 
@@ -23931,6 +26219,10 @@ present. The loudest peaks in this scene reach around -6 dB but not above that.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **546**
 
 
+
+
+--- end of page=572 ---
+
 In the last step of evaluating this reference mix, you’ll watch the entire scene from
 
 the beginning with the floating meter showing so that you can keep an eye on the
@@ -23973,6 +26265,10 @@ mixing inspiration, to see the levels, or to listen to the balance between sound
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **547**
 
+
+
+
+--- end of page=573 ---
 
 ## **Setting Initial Track** **and Submix Levels**
 
@@ -24017,6 +26313,10 @@ channel strips in the mixer.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **548**
 
 
+
+
+--- end of page=574 ---
+
 The channel strips are narrower but still offer all the same controls and information.
 
 
@@ -24059,6 +26359,10 @@ DX to monitor only the dialogue bus.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **549**
 
+
+
+
+--- end of page=575 ---
 
 **6** Open the corresponding Meter plug-in for the DX submix bus and place it above the
 
@@ -24121,6 +26425,10 @@ effects drive the scene, the FX bus would be the next element to add to the mix.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **550**
 
 
+
+
+--- end of page=576 ---
+
 Wait. Busses don’t have a Solo button, and you can only monitor one bus at a time. So
 
 how do you add only the music bus (MX) to the mix? No problem, just mute the busses
@@ -24175,6 +26483,10 @@ designed to use the levels of one track (or tracks) to duck (lower) the levels o
 **Lesson 9 Mixing and Sweetening the Soundtrack** **551**
 
 
+
+
+--- end of page=577 ---
+
 ## **Using the Ducker to Lower** **Music or FX Tracks**
 
 The Ducker is a built-in Fairlight Track FX, like the Dialogue Leveler, that makes it easy to get
@@ -24206,6 +26518,10 @@ if necessary.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **552**
 
+
+
+
+--- end of page=578 ---
 
 **2** Play the timeline from the first marker and listen to the music with the dialogue.
 
@@ -24247,6 +26563,10 @@ clips and the track number and name in the headers.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **553**
 
 
+
+
+--- end of page=579 ---
+
 **8** In the Track FX list of the Inspector, enable the Ducker.
 
 
@@ -24273,6 +26593,10 @@ the music will automatically lower as needed for the dialogue.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **554**
 
 
+
+
+--- end of page=580 ---
+
 **9** In the Ducker controls, set the Source 1 dropdown to ADR 1 Edit.
 
 
@@ -24294,6 +26618,10 @@ controls window.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **555**
 
 
+
+
+--- end of page=581 ---
+
 **12** Click the Custom button in the top right corner of the Ducker controls in the Inspector
 
 to open the Ducker window.
@@ -24306,6 +26634,10 @@ controlling the signal on the Music 2 track.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **556**
 
+
+
+
+--- end of page=582 ---
 
 You can also select (check) or deselect (uncheck) source tracks in the Ducker Source
 
@@ -24346,6 +26678,10 @@ Level, the more likely the changes will be perceived by the listener.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **557**
 
+
+
+
+--- end of page=583 ---
 
 **15** Increase the Duck Level control to 10.0.
 
@@ -24397,6 +26733,10 @@ other sources, let’s move on to automating levels using a fader and automation
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **558**
 
+
+
+
+--- end of page=584 ---
 
 NOTE The Ducker is a Track FX that can be applied on any track to control the level
 
@@ -24463,6 +26803,10 @@ with a single fader.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **559**
 
 
+
+
+--- end of page=585 ---
+
 Automating the changes to your faders and other parameters while you work allows you to
 
 free up your hands and focus on each pass of the mix. In the next set of exercises, you’ll
@@ -24507,6 +26851,10 @@ of the bus track and header.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **560**
 
 
+
+
+--- end of page=586 ---
+
 With the larger track height, you can more clearly see the Automation Arm button
 
 and Automation dropdown menu in the track header. The timeline is set up and ready
@@ -24535,6 +26883,10 @@ automation modes in the mixer options menu.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **561**
 
+
+
+
+--- end of page=587 ---
 
 Show options with a click.
 
@@ -24583,6 +26935,10 @@ automation and continues to record automation after you release the control.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **562**
 
+
+
+
+--- end of page=588 ---
 
 - **Snap mode** begins recording automation when you touch a control and stops
 
@@ -24661,6 +27017,10 @@ and the fader will automatically glide back to the previous level when you relea
 **Lesson 9 Mixing and Sweetening the Soundtrack** **563**
 
 
+
+
+--- end of page=589 ---
+
 Since this scene takes place at the beach near the water, it is important to always hear
 
 the water and waves, without them overpowering the dialogue or music.
@@ -24723,6 +27083,10 @@ compete, let context be the judge. The music is clearly the dominant force going
 **Lesson 9 Mixing and Sweetening the Soundtrack** **564**
 
 
+
+
+--- end of page=590 ---
+
 this scene, and the waves sound FX are a distraction. Additionally, the musical score
 
 was written and recorded specifically for this moment and offers an emotional
@@ -24773,6 +27137,10 @@ the level field in the B6 FX Waves track header.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **565**
 
 
+
+
+--- end of page=591 ---
+
 **11** Stop playback.
 
 **12** Move the playhead to the beginning of the timeline.
@@ -24812,6 +27180,10 @@ You are ready to automate the FX Waves bus for this scene!
 **Lesson 9 Mixing and Sweetening the Soundtrack** **566**
 
 
+
+
+--- end of page=592 ---
+
 ## **Recording Fader Automation**
 
 To record automation data, the only thing left to do is choose which Touch mode you want
@@ -24848,6 +27220,10 @@ mode and On Stop is set to Return.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **567**
 
 
+
+
+--- end of page=593 ---
+
 **5** In either the timeline or mixer, click the Automation Arm button for the B6 FX Waves
 
 bus track.
@@ -24868,6 +27244,10 @@ track, you can move the playhead forward, closer to the start of the dialogue.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **568**
 
+
+
+
+--- end of page=594 ---
 
 The red Fader Level curve in the FX Waves track indicates that level data is being
 
@@ -24914,6 +27294,10 @@ all automation applied to a timeline.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **569**
 
 
+
+
+--- end of page=595 ---
+
 **9** Play the timeline just before the automated section of the scene and watch the B6 FX
 
 Waves fader as it moves automatically to follow the recorded automation.
@@ -24942,6 +27326,10 @@ see the amount of change.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **570**
 
+
+
+
+--- end of page=596 ---
 
 Now let’s select the glide ramp at the end of the lowered section of the curve and
 
@@ -24994,6 +27382,10 @@ or redo your work. Have fun!
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **571**
 
+
+
+
+--- end of page=597 ---
 
 ## **Sweetening the Mix**
 
@@ -25066,6 +27458,10 @@ mark a play range around a group of clips.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **572**
 
 
+
+
+--- end of page=598 ---
+
 **1** Open the timeline **9c Dynamics Start** .
 
 **2** Zoom the timeline as needed until you clearly see tracks A2–A6 and all the pink clips
@@ -25101,6 +27497,10 @@ lowering the level of the loudest words.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **573**
 
+
+
+
+--- end of page=599 ---
 
 **6** Start looped playback. In the Dynamics – DX r1 window, watch the Input meters and
 
@@ -25140,6 +27540,10 @@ In most cases, you’ll set your dialogue compression Threshold between
 **Lesson 9 Mixing and Sweetening the Soundtrack** **574**
 
 
+
+
+--- end of page=600 ---
+
 **7** Click the Compressor switch to enable the default compressor controls. During
 
 playback, look at the Output levels.
@@ -25165,6 +27569,10 @@ to see if it improves the levels.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **575**
 
+
+
+
+--- end of page=601 ---
 
 **8** Continue looped playback. In the Presets dropdown menu, choose the first option,
 
@@ -25197,6 +27605,10 @@ copy and paste the settings on her other tracks.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **576**
 
 
+
+
+--- end of page=602 ---
+
 **14** In the mixer, right-click the Dynamics area of the A2 DX r1 channel strip and choose
 
 Copy from the shortcut menu.
@@ -25212,6 +27624,10 @@ hear how they sound with the other tracks.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **577**
 
+
+
+
+--- end of page=603 ---
 
 **16** Play the scene and listen to the dialogue with the music and sound effects.
 
@@ -25275,6 +27691,10 @@ see what is happening under the hood in the Dynamics window.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **578**
 
 
+
+
+--- end of page=604 ---
+
 **2** Scroll the mixer to the right to see the busses. Look at dynamics area for the busses.
 
 
@@ -25307,6 +27727,10 @@ shine through.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **579**
 
+
+
+
+--- end of page=605 ---
 
 **4** In the mixer, Command-click (macOS) or Ctrl-click (Windows) the Dynamics area of the
 
@@ -25350,6 +27774,10 @@ This is great for verifying your compression source while you mix.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **580**
 
 
+
+
+--- end of page=606 ---
+
 **7** Move the playhead to the teal marker and start playback.
 
 **8** When the dialogue starts, click the Listen button to hear only the source
@@ -25368,6 +27796,10 @@ that can be used as a source.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **581**
 
+
+
+
+--- end of page=607 ---
 
 **11** Click the Sidechain Source dropdown menu again, or any empty timeline space to hide
 
@@ -25410,6 +27842,10 @@ results during playback.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **582**
 
+
+
+
+--- end of page=608 ---
 
 Adjust the Threshold and Ratio to set the amount of this gain reduction, and adjust Attack,
 
@@ -25478,6 +27914,10 @@ frequencies in the music to make room for the dialogue.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **583**
 
 
+
+
+--- end of page=609 ---
+
 First, let’s go over some key things to know about dialogue equalization.
 
 
@@ -25514,6 +27954,10 @@ The audible frequency range for the average human is between 20 Hz and 20 kHz
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **584**
 
+
+
+
+--- end of page=610 ---
 
 The fundamental frequencies for human voices sit right in the low to lower-middle of the
 
@@ -25581,6 +28025,10 @@ color wheel.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **585**
 
 
+
+
+--- end of page=611 ---
+
 ##### **Sweetening Dialogue with EQ**
 
 In Lesson 7, you explored limiting high and low frequencies to make dialogue sound as if it
@@ -25629,6 +28077,10 @@ clips within those tracks.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **586**
 
 
+
+
+--- end of page=612 ---
+
 **3** Solo the A8 DX m2 track.
 
 **4** In the soloed track, drag a range with the multi-tool around the five consecutive
@@ -25654,6 +28106,10 @@ As expected, the meatiest part of her vocal lives between 100–500 Hz.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **587**
 
+
+
+
+--- end of page=613 ---
 
 **7** In the Equalizer window, turn on Band 1. Listen to Marley’s dialogue while you drag the
 
@@ -25689,6 +28145,10 @@ determine whether tweaking within this range improves her voice or amplifies
 **Lesson 9 Mixing and Sweetening the Soundtrack** **588**
 
 
+
+
+--- end of page=614 ---
+
 irritating vocal qualities. Drag the Band 3 handle below the 0 dB line to around -10 dB
 
 and sweep the same frequency range. When you are finished, stop playback.
@@ -25696,6 +28156,10 @@ and sweep the same frequency range. When you are finished, stop playback.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **589**
 
+
+
+
+--- end of page=615 ---
 
 You probably discovered that boosting her vocal frequencies between 400 Hz–500 Hz
 
@@ -25738,6 +28202,10 @@ sibilance is gone, and then lower the curve to around 1–3 dB. Trust your insti
 **Lesson 9 Mixing and Sweetening the Soundtrack** **590**
 
 
+
+
+--- end of page=616 ---
+
 your ears. However, if you aren’t sure, sweep around 8 kHz to find her sibilance, sweep
 
 left to around 6.20 kHz, and set the level to around +2 dB.
@@ -25769,6 +28237,10 @@ The EQ window updates to show the newly selected track.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **591**
 
+
+
+
+--- end of page=617 ---
 
 **16** Close the EQ window. Zoom to fit the clips to the timeline.
 
@@ -25830,6 +28302,10 @@ In this exercise, you’ll carve the low-mid range frequencies on the music trac
 **Lesson 9 Mixing and Sweetening the Soundtrack** **592**
 
 
+
+
+--- end of page=618 ---
+
 **2** In the timeline, set a range in the MX bus track that includes the teal marker and the
 
 three blue clips in the DX h A2 track (approximately 01:00:14:15 – 01:00:49:20).
@@ -25848,6 +28324,10 @@ how the different frequencies “muddy” the dialogue.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **593**
 
+
+
+
+--- end of page=619 ---
 
 If you recall from earlier in this lesson, the meatiest part of human vocals usually stays
 
@@ -25876,6 +28356,10 @@ expense of the robust musical score. Set the Band 3 Frequency to around 400.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **594**
 
+
+
+
+--- end of page=620 ---
 
 **8** Set the curve to between -5 dB and -10 dB. Toggle the EQ window off and on to hear
 
@@ -25916,6 +28400,10 @@ Effects panel.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **595**
 
 
+
+
+--- end of page=621 ---
+
 **1** Open the timeline **9g New Plugins** .
 
 **2** Show the Effects panel on the left side of the screen.
@@ -25932,6 +28420,10 @@ been mixing in reverse order.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **596**
 
+
+
+
+--- end of page=622 ---
 
 **4** In the timeline, set a play range using the pink duration marker for In and Out points.
 
@@ -25967,6 +28459,10 @@ process applied to the track, followed by Dynamics, and finally FX plug-ins.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **597**
 
 
+
+
+--- end of page=623 ---
+
 **5** In the A6 Effects area, open the FL EQ and Gain plug-ins.
 
 
@@ -25999,6 +28495,10 @@ adjustments. When you are finished, make sure the plug-ins are turned on.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **598**
 
+
+
+
+--- end of page=624 ---
 
 **7** Close the plug-in windows.
 
@@ -26037,6 +28537,10 @@ the option Add to Plugin Chain from the plug-in window’s options menu.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **599**
 
 
+
+
+--- end of page=625 ---
+
 **9** In the A6 channel of the mixer, open the second Chain FX plug-in window.
 
 
@@ -26065,6 +28569,10 @@ window as they are if you use them in individual effects slots in the mixer.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **600**
 
+
+
+
+--- end of page=626 ---
 
 **11** Close all the open plug-in windows.
 
@@ -26118,6 +28626,10 @@ recordings without needing to manually adjust EQ settings for each one.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **601**
 
 
+
+
+--- end of page=627 ---
+
 Dialogue Matcher goes even further. It not only matches the tone but also adjusts volume
 
 levels and the sound of the recording space—like room reverb or ambience. It creates a
@@ -26155,6 +28667,10 @@ Original track.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **602**
 
+
+
+
+--- end of page=628 ---
 
 This is the final processed sound of the ADA voice in the film _Hyperlight_ . For this
 
@@ -26196,6 +28712,10 @@ EQ Matcher > Apply Clip EQ.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **603**
 
 
+
+
+--- end of page=629 ---
+
 **10** Show the Inspector and select the clip in the A2 track, if necessary, to see the EQ
 
 applied to the clip.
@@ -26221,6 +28741,10 @@ Capture Dialogue Profile.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **604**
 
+
+
+
+--- end of page=630 ---
 
 **13** Right-click the clip in the A3 Dialogue Match track and choose Apply Dialogue Profile.
 
@@ -26277,6 +28801,10 @@ stack of green clips on A5–A8 is closer to the track headers.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **605**
 
 
+
+
+--- end of page=631 ---
+
 **2** Set a play range around the green clip in the A5 VO Test Original track.
 
 **3** Solo and play the green clip in each of the tracks from A5–A7, one at a time, to hear the
@@ -26317,6 +28845,10 @@ video plus audio)
 **Lesson 9 Mixing and Sweetening the Soundtrack** **606**
 
 
+
+
+--- end of page=632 ---
+
 **7** Click Render.
 
 
@@ -26349,6 +28881,10 @@ with the Male 1 voice.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **607**
 
 
+
+
+--- end of page=633 ---
+
 **12** Click Render.
 
 
@@ -26375,6 +28911,10 @@ timeline area above the Navy clip.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **608**
 
+
+
+
+--- end of page=634 ---
 
 **17** Right-click the Navy clip in the A8 track and choose AI Tools > Voice Convert.
 
@@ -26437,6 +28977,10 @@ Assistant to organize and mix the soundtrack.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **609**
 
 
+
+
+--- end of page=635 ---
+
 **1** Open the timeline **9 Studio – AI Audio Assistant** .
 
 **2** Show the monitoring panel and mixer, if necessary.
@@ -26478,6 +29022,10 @@ what the DaVinci Resolve Studio AI Audio Assistant can do with it.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **610**
 
 
+
+
+--- end of page=636 ---
+
 **4** Choose Timeline > AI Tools > Audio Assistant.
 
 
@@ -26496,6 +29044,10 @@ step along the way to the finished mix.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **611**
 
+
+
+
+--- end of page=637 ---
 
 The finished timeline includes organized tracks that are color-coded for dialogue,
 
@@ -26563,6 +29115,10 @@ before adjusting track levels in the mixer.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **612**
 
 
+
+
+--- end of page=638 ---
+
 **3** What is a common reason for applying a compressor to a dialogue track?
 
 **a)** To make noise sound like a computer warble
@@ -26623,6 +29179,10 @@ the volume curve to dip the track’s sound when there is spoken dialogue.
 **Lesson 9 Mixing and Sweetening the Soundtrack** **613**
 
 
+
+
+--- end of page=639 ---
+
 ##### **Answers**
 
 **1** True
@@ -26644,6 +29204,10 @@ dialogue clarity.
 
 **Lesson 9 Mixing and Sweetening the Soundtrack** **614**
 
+
+
+
+--- end of page=640 ---
 
 ### Lesson 10
 # Finishing and Delivering Tracks
@@ -26721,6 +29285,10 @@ Rendering Stereo and
 Lesson Review 640
 
 
+
+
+--- end of page=641 ---
+
 ## **Preparing the Project**
 
 Let’s start by opening the TML project, where you will work with the loudness metering
@@ -26768,6 +29336,10 @@ turn it down and play nice with the rest of the show.
 
 **Lesson 10 Finishing and Delivering Tracks** **616**
 
+
+
+
+--- end of page=642 ---
 
 To even the acoustic playing field, new loudness standards were introduced that apply to
 
@@ -26826,6 +29398,10 @@ your Project Settings.
 **Lesson 10 Finishing and Delivering Tracks** **617**
 
 
+
+
+--- end of page=643 ---
+
 You can monitor loudness levels for an unrendered mix in real time during playback in the
 
 monitoring panel Loudness meters and in the timeline Loudness graph. Additionally, you
@@ -26868,6 +29444,10 @@ Analyze Audio Levels to open that dialog.
 **Lesson 10 Finishing and Delivering Tracks** **618**
 
 
+
+
+--- end of page=644 ---
+
 **3** In the Analyze Audio Levels dialog, choose ITU-R BS.1770-4. Click Analyze.
 
 
@@ -26909,6 +29489,10 @@ typical dialogue film with dynamic levels, the True Peak is somewhere between
 **Lesson 10 Finishing and Delivering Tracks** **619**
 
 
+
+
+--- end of page=645 ---
+
 **5** In the Normalize Audio Level dialog, set the Normalization Mode to ITU-R BS.1770-4.
 
 Click Normalize. Once the normalization is complete, the waveform changes to indicate
@@ -26946,6 +29530,10 @@ a scene versus the entire scene, reel, or show.
 **Lesson 10 Finishing and Delivering Tracks** **620**
 
 
+
+
+--- end of page=646 ---
+
 **1** Move the playhead to the first frame of the **10 Full Surf Scene** timeline. Then, click the
 
 Toggle Automation button to turn automation on and enable visibility for the bus
@@ -26977,6 +29565,10 @@ options are checked.
 
 **Lesson 10 Finishing and Delivering Tracks** **621**
 
+
+
+
+--- end of page=647 ---
 
 **6** Start playback. The loudness metering colors and values are drawn in the graph as
 
@@ -27016,6 +29608,10 @@ tracks and busses using standard mixing and automation workflows.
 
 **Lesson 10 Finishing and Delivering Tracks** **622**
 
+
+
+
+--- end of page=648 ---
 
 Remember, loudness measurements are for the cumulative sound of a show or reel.
 
@@ -27057,6 +29653,10 @@ that you mixed in the previous lesson and learn how to bounce the finished mix.
 
 **Lesson 10 Finishing and Delivering Tracks** **623**
 
+
+
+
+--- end of page=649 ---
 
 ## **Bouncing Mixes in** **the Fairlight Page**
 
@@ -27113,6 +29713,10 @@ the media pool.
 **Lesson 10 Finishing and Delivering Tracks** **624**
 
 
+
+
+--- end of page=650 ---
+
 **5** Extend the mixer. Zoom the timeline as needed to see all the clips, tracks, and busses.
 
 
@@ -27151,6 +29755,10 @@ dialogue plus echo. Let’s try it.
 **Lesson 10 Finishing and Delivering Tracks** **625**
 
 
+
+
+--- end of page=651 ---
+
 NOTE When bouncing a mix to an existing track, the bus format and track
 
 must match. For example, you can bounce a stereo bus to a stereo track. If you
@@ -27179,6 +29787,10 @@ is yellow based on the track color. Let’s see how it sounds.
 
 **Lesson 10 Finishing and Delivering Tracks** **626**
 
+
+
+
+--- end of page=652 ---
 
 **11** Unmute all the busses.
 
@@ -27226,6 +29838,10 @@ as follows:
 **Lesson 10 Finishing and Delivering Tracks** **627**
 
 
+
+
+--- end of page=653 ---
+
 **4** Click OK.
 
 
@@ -27263,6 +29879,10 @@ Single-channel, mono bounced file Two-channel, stereo bounced file
 **Lesson 10 Finishing and Delivering Tracks** **628**
 
 
+
+
+--- end of page=654 ---
+
 Two-channel, stereo bounced file Two-channel, stereo bounced file
 
 
@@ -27293,6 +29913,10 @@ display in step 4.
 
 **Lesson 10 Finishing and Delivering Tracks** **629**
 
+
+
+
+--- end of page=655 ---
 
 **4** Choose Fairlight > View Clip Info Display. Set the Name option to Clip Name. Click OK.
 
@@ -27334,6 +29958,10 @@ NOTE If you have not completed the previous exercises, open the timeline
 
 **Lesson 10 Finishing and Delivering Tracks** **630**
 
+
+
+
+--- end of page=656 ---
 
 ## **Exporting Files from the Timeline**
 
@@ -27377,6 +30005,10 @@ simultaneously.
 
 **Lesson 10 Finishing and Delivering Tracks** **631**
 
+
+
+
+--- end of page=657 ---
 
  - Click Browse, create a new folder on the Desktop (or other preferred location), and
 
@@ -27423,6 +30055,10 @@ selected tracks.”
 **Lesson 10 Finishing and Delivering Tracks** **632**
 
 
+
+
+--- end of page=658 ---
+
 The last two sections provide options to Export with clip information such as Clip level,
 
 fades, EQ and FX, and iXML information. Below that, you’ll see the option to Normalize
@@ -27452,6 +30088,10 @@ different project and render stereo and 5.1 mixes in the deliver page.
 
 **Lesson 10 Finishing and Delivering Tracks** **633**
 
+
+
+
+--- end of page=659 ---
 
 ## **Preparing the Project**
 
@@ -27487,6 +30127,10 @@ the sound was focused in the front left, right, and center? However, when monito
 
 **Lesson 10 Finishing and Delivering Tracks** **634**
 
+
+
+
+--- end of page=660 ---
 
 5.1 busses, the sound effects and music sound as if they are coming from the front, side,
 
@@ -27547,6 +30191,10 @@ configure the output format. of the timeline you are outputting.
 **Lesson 10 Finishing and Delivering Tracks** **635**
 
 
+
+
+--- end of page=661 ---
+
 **5** In the upper left, in the Render Settings, click Audio Only. Also, choose Single Clip
 
 if necessary.
@@ -27586,6 +30234,10 @@ options, if necessary.
 **Lesson 10 Finishing and Delivering Tracks** **636**
 
 
+
+
+--- end of page=662 ---
+
 **9** Click the Output Track dropdown menu to see the multiple available options.
 
 
@@ -27620,6 +30272,10 @@ Output Track 2 dropdown to 5.1 (5.1).
 
 **Lesson 10 Finishing and Delivering Tracks** **637**
 
+
+
+
+--- end of page=663 ---
 
 Next, set the Audio Normalization for the rendered files. Rather than simply Normalize
 
@@ -27663,6 +30319,10 @@ Create a new folder on the Desktop called **PPN Podcast Intro** . Click Save.
 **Lesson 10 Finishing and Delivering Tracks** **638**
 
 
+
+
+--- end of page=664 ---
+
 **15** When you’re done selecting your drive destination, click Add to Render Queue.
 
 
@@ -27684,6 +30344,10 @@ different projects.
 
 **Lesson 10 Finishing and Delivering Tracks** **639**
 
+
+
+
+--- end of page=665 ---
 
 ##### **Explore the Mixes!**
 
@@ -27740,6 +30404,10 @@ context menu
 **Lesson 10 Finishing and Delivering Tracks** **640**
 
 
+
+
+--- end of page=666 ---
+
 **5** In the Fairlight page, where will you find the Export audio files option?
 
 **a)** Fairlight menu
@@ -27768,6 +30436,10 @@ context menu
 **Lesson 10 Finishing and Delivering Tracks** **641**
 
 
+
+
+--- end of page=667 ---
+
 ##### **Answers**
 
 **1** b
@@ -27789,6 +30461,10 @@ Files dialog, and the deliver page.
 
 **Lesson 10 Finishing and Delivering Tracks** **642**
 
+
+
+
+--- end of page=668 ---
 
 ### Lesson 11
 # Exploring Immersive Audio Integration
@@ -27888,6 +30564,10 @@ Exploring the Multi-Bed Dolby Atmos Mix 722
 Lesson Review 724
 
 
+
+
+--- end of page=669 ---
+
 DaVinci Resolve Studio offers fully integrated support for ground-up creation of immersive
 
 audio projects in a variety of formats, including MPEG-H, Auro 3D, Sony 360 RA,
@@ -27956,6 +30636,10 @@ you can work with those immersive formats.
 **Lesson 11 Exploring Immersive Audio Integration** **644**
 
 
+
+
+--- end of page=670 ---
+
 **1** Open DaVinci Resolve if necessary.
 
 **2** Open your Podcast Intro Combo project.
@@ -27985,6 +30669,10 @@ that format. You can also access the immersive toolset in the Fairlight page.
 
 **Lesson 11 Exploring Immersive Audio Integration** **645**
 
+
+
+
+--- end of page=671 ---
 
 **What Is Ambisonics?**
 
@@ -28046,6 +30734,10 @@ binaural sound shortly. For now, let’s open the timeline and play the mono cli
 **Lesson 11 Exploring Immersive Audio Integration** **646**
 
 
+
+
+--- end of page=672 ---
+
 One more thing before you start: grab some headphones and put them on so you can
 
 experience the immersive sound along the way!
@@ -28088,6 +30780,10 @@ output during playback.
 
 **Lesson 11 Exploring Immersive Audio Integration** **647**
 
+
+
+
+--- end of page=673 ---
 
 **What Is the Difference Between First-Order Ambisonics and**
 **Higher-Order Ambisonics?**
@@ -28134,6 +30830,10 @@ Ambi 1OA bus.
 
 **Lesson 11 Exploring Immersive Audio Integration** **648**
 
+
+
+
+--- end of page=674 ---
 
 You’ve added an ambisonics bus and assigned it to the track. Next, you’ll monitor the
 
@@ -28183,6 +30883,10 @@ Monitoring menu arrow and choose Binaural.
 
 **Lesson 11 Exploring Immersive Audio Integration** **649**
 
+
+
+
+--- end of page=675 ---
 
 **2** Start playback and listen to a few seconds of the ambisonics binaural sound.
 
@@ -28248,6 +30952,10 @@ the Audio Pan window as you play the two example timelines.
 **Lesson 11 Exploring Immersive Audio Integration** **650**
 
 
+
+
+--- end of page=676 ---
+
 **2** Click the Spherical button to the left of the 3D button. Click Yes in the Change
 
 Coordinate System dialog.
@@ -28255,6 +30963,10 @@ Coordinate System dialog.
 
 **Lesson 11 Exploring Immersive Audio Integration** **651**
 
+
+
+
+--- end of page=677 ---
 
 The Audio Pan changes to Spherical view. In Spherical view, the coordinate controls
 
@@ -28301,6 +31013,10 @@ in front of or behind the listener.
 **Lesson 11 Exploring Immersive Audio Integration** **652**
 
 
+
+
+--- end of page=678 ---
+
 **7** Move the playhead to the first frame if needed.
 
 **8** Click the third perspective button to see the overhead view of the 3D sphere.
@@ -28332,6 +31048,10 @@ and coordinates in the viewer when the sound is within the visible frame area of
 
 **Lesson 11 Exploring Immersive Audio Integration** **653**
 
+
+
+
+--- end of page=679 ---
 
 **10** Select the A1 Helicopter track. In the viewer, set the viewer to Show Tracker Controls
 
@@ -28369,6 +31089,10 @@ recordings that capture the full spherical sound without the need for panning.
 
 **Lesson 11 Exploring Immersive Audio Integration** **654**
 
+
+
+
+--- end of page=680 ---
 
 ## **Working with Ambisonics Meters**
 
@@ -28416,6 +31140,10 @@ window to the left of the viewer for side-by-side comparison.
 **Lesson 11 Exploring Immersive Audio Integration** **655**
 
 
+
+
+--- end of page=681 ---
+
 **3** Move the playhead to the beginning of the timeline. Then select the A1 Helicopter
 
 track header.
@@ -28433,6 +31161,10 @@ The pan tracker coordinates are on the right edge of the viewer at -180 degrees.
 
 **Lesson 11 Exploring Immersive Audio Integration** **656**
 
+
+
+
+--- end of page=682 ---
 
 The tracker indicates panning, while the sonar meter indicates the actual location of
 
@@ -28463,6 +31195,10 @@ ambisonics clip.
 
 **Lesson 11 Exploring Immersive Audio Integration** **657**
 
+
+
+
+--- end of page=683 ---
 
 NOTE Ambisonics clips—whether recorded with an ambisonics microphone
 
@@ -28510,6 +31246,10 @@ the clip was rendered with more information.
 **Lesson 11 Exploring Immersive Audio Integration** **658**
 
 
+
+
+--- end of page=684 ---
+
 **12** Mute the A1 track and unmute the A2 track. Play the 3rd-order ambisonics clip and
 
 watch the ambisonics meters.
@@ -28542,6 +31282,10 @@ summed meter because ambisonics encodes sound as a whole sound field, not as
 
 **Lesson 11 Exploring Immersive Audio Integration** **659**
 
+
+
+
+--- end of page=685 ---
 
 separate channels like stereo or surround. The summed meter reflects the total
 
@@ -28584,6 +31328,10 @@ monitor the AMBI Bus in the Binaural Format.
 **Lesson 11 Exploring Immersive Audio Integration** **660**
 
 
+
+
+--- end of page=686 ---
+
 This is the same podcast intro you worked on in previous lessons. The only difference
 
 is that a 1st-order ambisonics bus was added, and some sound effects tracks have
@@ -28618,6 +31366,10 @@ adjust the perspective view just like the Audio Pan window.
 **Lesson 11 Exploring Immersive Audio Integration** **661**
 
 
+
+
+--- end of page=687 ---
+
 At the bottom of the Space View window, check the options for Ambisonics Metering
 
 and Show Beds, and in the Objects menu, choose Show all. Here, you can see colored
@@ -28651,6 +31403,10 @@ and screenshots.
 **Lesson 11 Exploring Immersive Audio Integration** **662**
 
 
+
+
+--- end of page=688 ---
+
 **5** Click the third perspective view button to change the Space View to overhead view.
 
 Start playback from the beginning of the clips. During playback, watch the objects in
@@ -28660,6 +31416,10 @@ the Space View.
 
 **Lesson 11 Exploring Immersive Audio Integration** **663**
 
+
+
+
+--- end of page=689 ---
 
 **6** When finished, stop playback and close the Space View.
 
@@ -28718,6 +31478,10 @@ You may also want to slightly reduce the sound of the birds.
 **Lesson 11 Exploring Immersive Audio Integration** **664**
 
 
+
+
+--- end of page=690 ---
+
 **2** Move the playhead to the first frame of the timeline and press I to mark an In point.
 
 **3** Choose Timeline > Audio > Bounce Mix to Track.
@@ -28742,6 +31506,10 @@ bus again.
 **Lesson 11 Exploring Immersive Audio Integration** **665**
 
 
+
+
+--- end of page=691 ---
+
 **7** In the Bus Format dialog, change the AMBI Bus Format to Ambisonics 3rd order.
 
 Click OK.
@@ -28764,6 +31532,10 @@ the format and ambisonics clips within.
 **Lesson 11 Exploring Immersive Audio Integration** **666**
 
 
+
+
+--- end of page=692 ---
+
 In the mixer, you’ll see that the new tracks are assigned to the stereo bus. Why?
 
 Because all new tracks are automatically assigned to the first bus. In this case, the first
@@ -28783,6 +31555,10 @@ AMBI bus.
 
 **Lesson 11 Exploring Immersive Audio Integration** **667**
 
+
+
+
+--- end of page=693 ---
 
 **12** Solo one of the new ambisonics tracks containing the bounced ambisonics park fx, and
 
@@ -28842,6 +31618,10 @@ system. For this exercise, you’ll continue working with the same timeline.
 **Lesson 11 Exploring Immersive Audio Integration** **668**
 
 
+
+
+--- end of page=694 ---
+
 **4** Click the Deliver button or press Shift-8 to go to the deliver page.
 
 **5** In the deliver page timeline area, scroll down until you see the A24 and A25 tracks.
@@ -28865,6 +31645,10 @@ deliverables in the previous lesson. If you didn’t make a folder then, make on
 
 **Lesson 11 Exploring Immersive Audio Integration** **669**
 
+
+
+
+--- end of page=695 ---
 
 **9** In the Audio tab, choose the settings as shown.
 
@@ -28897,6 +31681,10 @@ Atmos toolset in the Fairlight page.
 
 **Lesson 11 Exploring Immersive Audio Integration** **670**
 
+
+
+
+--- end of page=696 ---
 
 **What Does Dolby Atmos Do?**
 
@@ -28961,6 +31749,10 @@ export a new Dolby Atmos master file yourself.
 **Lesson 11 Exploring Immersive Audio Integration** **671**
 
 
+
+
+--- end of page=697 ---
+
 NOTE To simplify the mixer for screenshots, some mixer controls, including EQ,
 
 Dynamics, and Bus Sends, were hidden via the mixer options menu. Hiding mixer
@@ -29006,6 +31798,10 @@ that will be placed in 3D space using object-based panning. Let’s get started!
 **Lesson 11 Exploring Immersive Audio Integration** **672**
 
 
+
+
+--- end of page=698 ---
+
 **1** Open your Fusion VFX v1 project. Then open the timeline
 
 **11 Circles Dolby Atmos Start** .
@@ -29027,6 +31823,10 @@ only monitoring format available in the monitoring controls is 7.1.
 **Lesson 11 Exploring Immersive Audio Integration** **673**
 
 
+
+
+--- end of page=699 ---
+
 Let’s add a Dolby Atmos Master bus. Then, you can monitor the project in other bus
 
 formats, including surround sound, Dolby Atmos, and binaural.
@@ -29047,6 +31847,10 @@ color to purple.
 
 **Lesson 11 Exploring Immersive Audio Integration** **674**
 
+
+
+
+--- end of page=700 ---
 
 **7** Scroll the mixer if needed to reveal the new Dolby Atmos Master bus to the right of the
 
@@ -29096,6 +31900,10 @@ speakers or headphones.
 **Lesson 11 Exploring Immersive Audio Integration** **675**
 
 
+
+
+--- end of page=701 ---
+
 In the monitoring controls above the mixer, you can now monitor playback in any standard
 
 channel format, as well as immersive Dolby formats with 2, 4, or even 6 overhead speakers
@@ -29131,6 +31939,10 @@ arrow to the right of the default monitoring format 7.1.4 to show the menu.
 
 **Lesson 11 Exploring Immersive Audio Integration** **676**
 
+
+
+
+--- end of page=702 ---
 
 **3** Choose 2.0 from the monitoring menu to change the playback format to stereo.
 
@@ -29184,6 +31996,10 @@ additional beds.
 
 **Lesson 11 Exploring Immersive Audio Integration** **677**
 
+
+
+
+--- end of page=703 ---
 
 ##### **Assigning and Viewing Tracks as Objects**
 
@@ -29243,6 +32059,10 @@ tracks at once by using the handy Option/Alt modifier.
 **Lesson 11 Exploring Immersive Audio Integration** **678**
 
 
+
+
+--- end of page=704 ---
+
 **3** In the mixer, Option/Alt-click the 7.1 Mix Bus Outputs bus assignment for any of the
 
 selected channels and change it to Master.
@@ -29264,6 +32084,10 @@ the tracks assigned to the bed busses by selecting Show Beds in Space View contr
 
 **Lesson 11 Exploring Immersive Audio Integration** **679**
 
+
+
+
+--- end of page=705 ---
 
 **6** Continue playback. At the bottom of the Space View window, check the Show
 
@@ -29288,6 +32112,10 @@ Atmos master file from your mix in the timeline.
 
 **Lesson 11 Exploring Immersive Audio Integration** **680**
 
+
+
+
+--- end of page=706 ---
 
 ## **Enabling the Dolby Atmos** **Renderer in Preferences**
 
@@ -29325,6 +32153,10 @@ dialog, click OK.
 
 **Lesson 11 Exploring Immersive Audio Integration** **681**
 
+
+
+
+--- end of page=707 ---
 
 Since the dialog indicated that Preferences have been updated and changes will take
 
@@ -29372,6 +32204,10 @@ this book.
 **Lesson 11 Exploring Immersive Audio Integration** **682**
 
 
+
+
+--- end of page=708 ---
+
 ## **Adding a Dolby Atmos Master File** **to the Media Pool and Timeline**
 
 In this exercise, you’ll create a new project where you’ll explore the Dolby Atmos master
@@ -29405,6 +32241,10 @@ Location such as Documents, Desktop, or the root level of your system. Click Cre
 **Lesson 11 Exploring Immersive Audio Integration** **683**
 
 
+
+
+--- end of page=709 ---
+
 **5** Press Command-I (macOS) or Ctrl-I (Windows) to open the Import Media dialog.
 
 **6** In the Import Media dialog, navigate to the R20 Fairlight Book Media > R20
@@ -29433,6 +32273,10 @@ Format fields.
 **Lesson 11 Exploring Immersive Audio Integration** **684**
 
 
+
+
+--- end of page=710 ---
+
 **7** Display video tracks in the Timeline View Options menu. Drag the **NaturesFury.mp4**
 
 video clip from the media pool to the empty timeline space.
@@ -29456,6 +32300,10 @@ match the channel format of the clip that you used to create the timeline.
 
 **Lesson 11 Exploring Immersive Audio Integration** **685**
 
+
+
+
+--- end of page=711 ---
 
 Normally, adding another audio clip to a new track will create a track that matches the
 
@@ -29488,6 +32336,10 @@ clips to the right until they align with the end of the clip in the A2 track.
 
 **Lesson 11 Exploring Immersive Audio Integration** **686**
 
+
+
+
+--- end of page=712 ---
 
 **13** Solo the A2 track, if necessary, and play part of the timeline. Watch the viewer to see
 
@@ -29528,6 +32380,10 @@ master files in the same track and render a new master.
 
 **Lesson 11 Exploring Immersive Audio Integration** **687**
 
+
+
+
+--- end of page=713 ---
 
 ## **Changing the Playback Format**
 
@@ -29573,6 +32429,10 @@ to Stereo.
 
 **Lesson 11 Exploring Immersive Audio Integration** **688**
 
+
+
+
+--- end of page=714 ---
 
 **2** Click OK.
 
@@ -29632,6 +32492,10 @@ based formats from the Atmos Master.
 **Lesson 11 Exploring Immersive Audio Integration** **689**
 
 
+
+
+--- end of page=715 ---
+
 In this exercise, you’ll use the power of the internal Dolby Atmos Renderer to generate a
 
 stereo and a 5.1 downmix file from the Dolby Atmos master file. The DaVinci Resolve
@@ -29661,6 +32525,10 @@ settings to choose a different format to bounce.
 **Lesson 11 Exploring Immersive Audio Integration** **690**
 
 
+
+
+--- end of page=716 ---
+
 **4** In the Bounce Mix to Tack dialog, set the Destination track for the Atmos Render Stereo
 
 and Atmos Render 5.1 to New Track.
@@ -29683,6 +32551,10 @@ Before moving on to delivery, let’s change the A2 track and master file back t
 
 **Lesson 11 Exploring Immersive Audio Integration** **691**
 
+
+
+
+--- end of page=717 ---
 
 **7** Right-click the A2 track header and choose Change Track Type to > Dolby Atmos > 7.1.4.
 
@@ -29756,6 +32628,10 @@ this example, the A2 track (currently 7.1.4 format) contains the Dolby Atmos mas
 **Lesson 11 Exploring Immersive Audio Integration** **692**
 
 
+
+
+--- end of page=718 ---
+
 When you change the Track Number to 2, the FFOA timecode at 01:00:00:00 becomes
 
 active and checked automatically. You can use the FFOA to set the start of actual audio
@@ -29786,6 +32662,10 @@ timeline track on the Audio tab.
 
 **Lesson 11 Exploring Immersive Audio Integration** **693**
 
+
+
+
+--- end of page=719 ---
 
 **5** Click the Audio tab, if necessary, to see the audio settings.
 
@@ -29836,6 +32716,10 @@ trimmed, the source master file is fully copied into the IMF.
 **Lesson 11 Exploring Immersive Audio Integration** **694**
 
 
+
+
+--- end of page=720 ---
+
 **7** Set the options at the bottom of the Render Settings Audio panel as follows:
 
 
@@ -29855,6 +32739,10 @@ you select a track containing a Dolby Atmos master file.)
 
 **Lesson 11 Exploring Immersive Audio Integration** **695**
 
+
+
+
+--- end of page=721 ---
 
 **10** At the Finder level of your system, locate the **NF Dolby Atmos Deliverables** folder and
 
@@ -29897,6 +32785,10 @@ Immersive Tools menu. This method of importing a file will generate a new timeli
 
 **Lesson 11 Exploring Immersive Audio Integration** **696**
 
+
+
+
+--- end of page=722 ---
 
 will re-create the full Dolby Atmos mix, complete with content, bed and object tracks,
 
@@ -29949,6 +32841,10 @@ frame. The sound (FFOA) starts at 01:00:00:00.
 
 **Lesson 11 Exploring Immersive Audio Integration** **697**
 
+
+
+
+--- end of page=723 ---
 
 TIP When working with a timeline with a large gap between the start of the
 
@@ -30007,6 +32903,10 @@ maximum allowable 118 object tracks, plus four VCA groups with faders.
 **Lesson 11 Exploring Immersive Audio Integration** **698**
 
 
+
+
+--- end of page=724 ---
+
 **3** Double-click the track meters in the monitoring panel to double-stack the meters
 
 so that you can monitor all 109 tracks at once.
@@ -30033,6 +32933,10 @@ the timeline.
 
 **Lesson 11 Exploring Immersive Audio Integration** **699**
 
+
+
+
+--- end of page=725 ---
 
 You can see 10 audio channels, but there are no visible labels on the stem
 
@@ -30066,6 +32970,10 @@ with the first object track.
 **Lesson 11 Exploring Immersive Audio Integration** **700**
 
 
+
+
+--- end of page=726 ---
+
 NOTE The VCA groups were added along with the track names to
 
 demonstrate how they are incorporated as embedded metadata when
@@ -30088,6 +32996,10 @@ of all tracks in a group, even if they have automation applied.
 
 **Lesson 11 Exploring Immersive Audio Integration** **701**
 
+
+
+
+--- end of page=727 ---
 
 **9** In the mixer, expand the bus section toward the left until you can see the channel
 
@@ -30114,6 +33026,10 @@ more track channel strips and hide the VCA channel strips.
 
 **Lesson 11 Exploring Immersive Audio Integration** **702**
 
+
+
+
+--- end of page=728 ---
 
 NOTE To show the VCA controls in the mixer, enable VCA in the mixer options
 
@@ -30153,6 +33069,10 @@ Dolby Atmos Send.
 
 **Lesson 11 Exploring Immersive Audio Integration** **703**
 
+
+
+
+--- end of page=729 ---
 
 Here, you can see that the 10 Composite Bed channels are patched to the first 10
 
@@ -30194,6 +33114,10 @@ source viewer.
 **Lesson 11 Exploring Immersive Audio Integration** **704**
 
 
+
+
+--- end of page=730 ---
+
 **3** Hover your pointer over the source viewer until you see an overlay with a video clip
 
 icon on the left and an audio waveform icon on the right.
@@ -30222,6 +33146,10 @@ last frame of the audio clips.
 
 **Lesson 11 Exploring Immersive Audio Integration** **705**
 
+
+
+
+--- end of page=731 ---
 
 Now that you’ve imported the Nature’s Fury Dolby Atmos master file and synced the video,
 
@@ -30271,6 +33199,10 @@ show only selected, etc.
 **Lesson 11 Exploring Immersive Audio Integration** **706**
 
 
+
+
+--- end of page=732 ---
+
 NOTE Setting a playback monitoring format automatically updates the Patch
 
 Input/Output settings accordingly. If you’re monitoring through external speakers,
@@ -30298,6 +33230,10 @@ or downmixed from an intermediate layout. These are referred to as _downmix sett
 
 **Lesson 11 Exploring Immersive Audio Integration** **707**
 
+
+
+
+--- end of page=733 ---
 
 Downmix settings work in conjunction with trim controls when monitoring in 5.1.2, 5.1,
 
@@ -30356,6 +33292,10 @@ File has already been added to the Lesson 11 Timelines folder.
 **Lesson 11 Exploring Immersive Audio Integration** **708**
 
 
+
+
+--- end of page=734 ---
+
 **1** Open your Podcast Intro Combo project.
 
 **2** In the media pool, Lesson 11 bin, open the **11e Dolby Atmos Bus and Bed** timeline.
@@ -30378,6 +33318,10 @@ As you can see, the bin is empty, but not for long.
 **Lesson 11 Exploring Immersive Audio Integration** **709**
 
 
+
+
+--- end of page=735 ---
+
 **4** Choose Fairlight > Immersive Audio > Import Master File.
 
 **5** In the Finder window, navigate to the R20 Fairlight Book Media > R20 Fairlight Part 4 >
@@ -30399,6 +33343,10 @@ clips horizontally in the visible timeline area.
 
 **Lesson 11 Exploring Immersive Audio Integration** **710**
 
+
+
+
+--- end of page=736 ---
 
 **8** If necessary, set the monitoring controls to Binaural if you are listening with
 
@@ -30452,6 +33400,10 @@ Fairlight timeline.
 **Lesson 11 Exploring Immersive Audio Integration** **711**
 
 
+
+
+--- end of page=737 ---
+
 ## **Creating Original Dolby Atmos** **Content in DaVinci Resolve**
 
 DaVinci Resolve Studio makes it easy to patch, mix, and export any soundtrack into a Dolby
@@ -30503,6 +33455,10 @@ These submix busses are all routed to the lime-green 5.1 Comp bus.
 
 **Lesson 11 Exploring Immersive Audio Integration** **712**
 
+
+
+
+--- end of page=738 ---
 
 **5** While in the mixer, look for the 5.1 Comp bus assigned to the Dolby Atmos Master bus.
 
@@ -30556,6 +33512,10 @@ Destination side.
 **Lesson 11 Exploring Immersive Audio Integration** **713**
 
 
+
+
+--- end of page=739 ---
+
 **3** On the Source side of the Patch Input/Output window, select all six lime-green 5.1 bus
 
 channels. Then, on the Destination side, select Bed 1–Bed 6.
@@ -30573,6 +33533,10 @@ object tracks.
 
 **Lesson 11 Exploring Immersive Audio Integration** **714**
 
+
+
+
+--- end of page=740 ---
 
 Here, you’ll see all the audio track channels. Now, you only need to choose which
 
@@ -30599,6 +33563,10 @@ Next, you’ll select and unpatch the channels you don’t want to send as objec
 
 **Lesson 11 Exploring Immersive Audio Integration** **715**
 
+
+
+
+--- end of page=741 ---
 
 **9** On the Source channels, select Mower FX-L, Mower FX-R, Birds-L, Birds-R, Ambience-L,
 
@@ -30639,6 +33607,10 @@ you wish to export as a master file.
 **Lesson 11 Exploring Immersive Audio Integration** **716**
 
 
+
+
+--- end of page=742 ---
+
 **1** Mark an In point at the beginning of the **11e Dolby Atmos Bed and Bus** timeline.
 
 
@@ -30672,6 +33644,10 @@ A progress dialog indicates that a new master file is generated from the current
 
 **Lesson 11 Exploring Immersive Audio Integration** **717**
 
+
+
+
+--- end of page=743 ---
 
 NOTE If you did not complete the earlier lessons, create a new folder for the PPN
 
@@ -30710,6 +33686,10 @@ Here, you can see four 5.1 busses, including FX 5.1, bgFX 5.1, MX 5.1, and DX 5,
 
 **Lesson 11 Exploring Immersive Audio Integration** **718**
 
+
+
+
+--- end of page=744 ---
 
 In this timeline, instead of assigning these busses as submix busses to a 5.1 Comp bus,
 
@@ -30759,6 +33739,10 @@ Objects area of the mixer.
 **Lesson 11 Exploring Immersive Audio Integration** **719**
 
 
+
+
+--- end of page=745 ---
+
 **2** Select the following park-related FX channel strips in the mixer: A8 Book FX—A13
 
 Camera FX. Option/Alt-click the VCA field above the track names for the selected track
@@ -30771,6 +33755,10 @@ and choose VCA 1.
 
 **Lesson 11 Exploring Immersive Audio Integration** **720**
 
+
+
+
+--- end of page=746 ---
 
 **4** Option/Alt-click the VCA field for the selected tracks and choose VCA 2.
 
@@ -30809,6 +33797,10 @@ At the bottom of the Tracks Index, you’ll see the current VCAs listed.
 **Lesson 11 Exploring Immersive Audio Integration** **721**
 
 
+
+
+--- end of page=747 ---
+
 Now that you’ve named the VCAs, let’s change the Dragon VCA to brown.
 
 **4** In the Tracks Index, right-click VCA2 and choose Change Track Color > Brown.
@@ -30846,6 +33838,10 @@ finished master file and test the VCAs in the mixer.
 
 **Lesson 11 Exploring Immersive Audio Integration** **722**
 
+
+
+
+--- end of page=748 ---
 
 importing, remember to open the bin in the media pool where you want the imported
 
@@ -30893,6 +33889,10 @@ Dolby Atmos integration in DaVinci Resolve Studio.
 
 **Lesson 11 Exploring Immersive Audio Integration** **723**
 
+
+
+
+--- end of page=749 ---
 
 NOTE If you want to learn more about working with Dolby Atmos, you’ll find more
 
@@ -30948,6 +33948,10 @@ Studio version of DaVinci Resolve.
 **Lesson 11 Exploring Immersive Audio Integration** **724**
 
 
+
+
+--- end of page=750 ---
+
 **5** In DaVinci Resolve 20 Studio, you can export which types of Dolby Atmos master files?
 
 **a)** XML and AAF
@@ -30993,6 +33997,10 @@ so it will re-create the full mix, including content, automation, bed, and objec
 
 **Lesson 11 Exploring Immersive Audio Integration** **725**
 
+
+
+
+--- end of page=751 ---
 
 ##### **Answers**
 
@@ -31058,6 +34066,10 @@ DaVinci Resolve Training page—The Fairlight Audio Guide to DaVinci Resolve 20
 
 **Lesson 11 Exploring Immersive Audio Integration** **726**
 
+
+
+
+--- end of page=752 ---
 
 ## **Index**
 
@@ -31213,6 +34225,10 @@ audio controls, adjusting, _375_
 
 **Index** **727**
 
+
+
+
+--- end of page=753 ---
 
 audio edit, finessing, _66–70_
 
@@ -31375,6 +34391,10 @@ busses to create stems, _627–628_
 
 **Index** **728**
 
+
+
+
+--- end of page=754 ---
 
 mixes in Fairlight page, _624–628_
 
@@ -31543,6 +34563,10 @@ Inspector, _11–13_
 **Index** **729**
 
 
+
+
+--- end of page=755 ---
+
 COFFEE track, _42_
 
 Command key. _See_ _keyboard shortcuts_
@@ -31704,6 +34728,10 @@ _397–398_
 
 **Index** **730**
 
+
+
+
+--- end of page=756 ---
 
 dialogue tracks
 
@@ -31867,6 +34895,10 @@ setting, _37–41_
 **Index** **731**
 
 
+
+
+--- end of page=757 ---
+
 DX bus, naming, _492_
 
 DX Echo bus, _507_, _515–516_
@@ -32021,6 +35053,10 @@ Distortion, _432–435_
 
 **Index** **732**
 
+
+
+
+--- end of page=758 ---
 
 Echo, _422–425_, _436–440_
 
@@ -32179,6 +35215,10 @@ helicopter sound, _654_
 
 **Index** **733**
 
+
+
+
+--- end of page=759 ---
 
 high and low frequencies,
 limiting, _429–430_
@@ -32342,6 +35382,10 @@ Select All clips, _120_
 
 **Index** **734**
 
+
+
+
+--- end of page=760 ---
 
 selecting clips or tracks, _44_
 
@@ -32508,6 +35552,10 @@ single-row and dual-row, _523_
 **Index** **735**
 
 
+
+
+--- end of page=761 ---
+
 Meters button, _73_, _86_
 
 meters in Fairlight mixer, reading, _318_
@@ -32666,6 +35714,10 @@ working with, _223–230_, _517–525_
 **Index** **736**
 
 
+
+
+--- end of page=762 ---
+
 NF Dolby Atmos Deliverables folder, _696_
 
 noise. _See also_ _low-level noise_
@@ -32813,6 +35865,10 @@ Echo, _422–425_, _436–440_
 
 **Index** **737**
 
+
+
+
+--- end of page=763 ---
 
 plug-ins ( _continued_ )
 
@@ -32972,6 +36028,10 @@ Remove Attributes dialog, _315–316_
 **Index** **738**
 
 
+
+
+--- end of page=764 ---
+
 rendering mixes in deliver page, _635–639_
 
 repairing audio. _See_ _audio repairs_
@@ -33130,6 +36190,10 @@ Sound Design FX timeline, _288_
 **Index** **739**
 
 
+
+
+--- end of page=765 ---
+
 sound effects. _See also_ _Foley Sampler_ ; _FX_ ;
 
 _multilayered sound effects_
@@ -33286,6 +36350,10 @@ templates. _See_ _timeline template_
 
 **Index** **740**
 
+
+
+
+--- end of page=766 ---
 
 Test Tone Settings, changing for System
 Generator, _291–293_
@@ -33447,6 +36515,10 @@ page, _635–639_
 
 **Index** **741**
 
+
+
+
+--- end of page=767 ---
 
 timelines and clips ( _continued_ )
 
@@ -33610,6 +36682,10 @@ track height, adjusting, _9–10_, _49_
 **Index** **742**
 
 
+
+
+--- end of page=768 ---
+
 track input, monitoring, _259–260_
 
 Track Inspector, switching to, _393_
@@ -33769,6 +36845,10 @@ Seed Name, _264_
 **Index** **743**
 
 
+
+
+--- end of page=769 ---
+
 vocal presence, finding sweet spot for, _590_
 
 VO group, _489_
@@ -33835,8 +36915,16 @@ zoom sliders, using, _10_
 **Index** **744**
 
 
+
+
+--- end of page=770 ---
+
 **This page is intentionally left blank** **745**
 
+
+
+
+--- end of page=771 ---
 
 DaVinci Resolve 20 features a dedicated Fairlight audio page built
 right in! This official Blackmagic Design hands on training guide
@@ -33900,4 +36988,8 @@ tricks that will help you work smarter and faster!
 
 **Immersive Audio Integration**
 
+
+
+
+--- end of page=772 ---
 

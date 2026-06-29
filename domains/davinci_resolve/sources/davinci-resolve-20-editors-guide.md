@@ -119,8 +119,16 @@
   - Lesson Review (p.640)
 - Index (p.642)
 -->
+
+
+--- end of page=0 ---
+
 ## The Editor’s Guide to
 
+
+
+
+--- end of page=1 ---
 
 **The Editor’s Guide to DaVinci Resolve 20**
 
@@ -195,6 +203,10 @@ registered trademark of Microsoft Inc., registered in the U.S. and other countri
 
 ISBN 13: 979-8-9924874-3-5
 
+
+
+
+--- end of page=2 ---
 
 ## **Contents**
 
@@ -278,6 +290,10 @@ Slide Edits 97
 
 **Contents** **iii**
 
+
+
+
+--- end of page=3 ---
 
 Replacing Clips 99
 
@@ -363,6 +379,10 @@ Lesson Review 243
 **Contents** **iv**
 
 
+
+
+--- end of page=4 ---
+
 5 Project Organization 245
 
 
@@ -444,6 +464,10 @@ Lesson Review 387
 **Contents** **v**
 
 
+
+
+--- end of page=5 ---
+
 7 Edit Page Effects 389
 
 
@@ -499,6 +523,10 @@ Lesson Review 543
 **Contents** **vi**
 
 
+
+
+--- end of page=6 ---
+
 9 Delivering Projects 545
 
 
@@ -534,6 +562,10 @@ Index 619
 
 **Contents** **vii**
 
+
+
+
+--- end of page=7 ---
 
 ## **Foreword**
 
@@ -586,6 +618,10 @@ Blackmagic Design
 **Foreword** **viii**
 
 
+
+
+--- end of page=8 ---
+
 ## **Acknowledgments**
 
 We would like to thank the following individuals for their contributions of media used
@@ -617,6 +653,10 @@ Roger Campo, “I Don’t Know Nothing” music video and song
 
 **Acknowledgments** **ix**
 
+
+
+
+--- end of page=9 ---
 
 ## **About the Author**
 
@@ -661,6 +701,10 @@ and Maureen.
 **About the Author** **x**
 
 
+
+
+--- end of page=10 ---
+
 ## **Who This Book Is For**
 
 This book is designed for both beginners and professionals. Beginners will find clear and
@@ -676,6 +720,10 @@ tips and tricks that will help you make the switch to DaVinci Resolve!
 
 **Who This Book Is For** **xi**
 
+
+
+
+--- end of page=11 ---
 
 ## **Getting Started**
 
@@ -710,6 +758,10 @@ most challenging projects using only one piece of software!
 
 **Getting Started** **xii**
 
+
+
+
+--- end of page=12 ---
 
 ##### **What You’ll Learn**
 
@@ -807,6 +859,10 @@ DaVinci Resolve 20. They include:
 **Getting Started** **xiii**
 
 
+
+
+--- end of page=13 ---
+
 Whether you want an introductory guide to DaVinci Resolve or want to learn more
 
 advanced editing techniques, color grading, sound mixing, or visual effects, our certified
@@ -874,6 +930,10 @@ sections to launch DaVinci Resolve and download the media files used throughout 
 **Getting Started** **xiv**
 
 
+
+
+--- end of page=14 ---
+
 ##### **DaVinci Resolve 20 Quick Setup**
 
 When DaVinci Resolve 20 is successfully installed, you can launch the application for the
@@ -903,6 +963,10 @@ detailing the new features available in the current version.
 **Getting Started** **xv**
 
 
+
+
+--- end of page=15 ---
+
 **1** If required, you can change the language used. You can also learn more about these
 
 and hundreds of other amazing features available in DaVinci Resolve 20 by clicking
@@ -922,6 +986,10 @@ how Resolve is working.
 **Getting Started** **xvi**
 
 
+
+
+--- end of page=16 ---
+
 **2** Click the Quick Setup button.
 
 
@@ -932,6 +1000,10 @@ card will perform well. If both pass this test, click Continue.
 
 **Getting Started** **xvii**
 
+
+
+
+--- end of page=17 ---
 
 Next, you will be asked what type of project you would like to begin. DaVinci Resolve
 
@@ -958,6 +1030,10 @@ Videos folder (Windows).
 **Getting Started** **xviii**
 
 
+
+
+--- end of page=18 ---
+
 **5** Leave this set to the default location and click Continue.
 
 
@@ -975,6 +1051,10 @@ find those shortcuts won’t work.
 **Getting Started** **xix**
 
 
+
+
+--- end of page=19 ---
+
 **6** For now, leave the layout set to DaVinci Resolve and click Continue.
 
 
@@ -991,6 +1071,10 @@ well as you continue learning about the application and how it uses your system.
 
 **Getting Started** **xx**
 
+
+
+
+--- end of page=20 ---
 
 Once loaded, DaVinci Resolve will open to the cut page, which is the default starting
 
@@ -1056,6 +1140,10 @@ to begin Lesson 1.
 
 **Getting Started** **xxi**
 
+
+
+
+--- end of page=21 ---
 
 ## **Introducing Blackmagic Cloud**
 
@@ -1126,6 +1214,10 @@ To find out more about these exciting workflows, visit
 
 **Introducing Blackmagic Cloud** **xxii**
 
+
+
+
+--- end of page=22 ---
 
 ### Lesson 1
 # Building the Rough Cut
@@ -1204,6 +1296,10 @@ Adding the Logo 69
 
 Lesson Review 73
 
+
+
+
+--- end of page=23 ---
 
 The edit page supports the approach to nonlinear editing that has been battle-tested by
 
@@ -1284,6 +1380,10 @@ expensive IT and hardware infrastructure.
 **Lesson 1 Building the Rough Cut** **2**
 
 
+
+
+--- end of page=24 ---
+
 However, for the moment, you will create and work with a local project library.
 
 **1** Open DaVinci Resolve to display the Project Manager.
@@ -1305,6 +1405,10 @@ Show/Hide Project Libraries button.
 
 **Lesson 1 Building the Rough Cut** **3**
 
+
+
+
+--- end of page=25 ---
 
 The list of local project libraries connected to your DaVinci Resolve system opens.
 
@@ -1329,6 +1433,10 @@ then click the Browse button.
 
 **Lesson 1 Building the Rough Cut** **4**
 
+
+
+
+--- end of page=26 ---
 
 You’ll need to select (or create) an empty directory on your system for a new project
 
@@ -1360,6 +1468,10 @@ DaVinci Resolve.
 
 **Lesson 1 Building the Rough Cut** **5**
 
+
+
+
+--- end of page=27 ---
 
 TIP To switch project libraries, simply click the desired project library from the
 
@@ -1405,6 +1517,10 @@ project automatically.
 **Lesson 1 Building the Rough Cut** **6**
 
 
+
+
+--- end of page=28 ---
+
 **9** Select the **OMO Promo.drp** file and click Open.
 
 
@@ -1445,6 +1561,10 @@ on your computer’s hard drive.
 **Lesson 1 Building the Rough Cut** **7**
 
 
+
+
+--- end of page=29 ---
+
 ##### **Relinking the Media Files**
 
 The reason why clips may go offline is often because the storage containing the associated
@@ -1480,6 +1600,10 @@ The Relink Media window appears, telling you how many files are currently missin
 **Lesson 1 Building the Rough Cut** **8**
 
 
+
+
+--- end of page=30 ---
+
 Because this project was originally created for you, the media was stored on a specific
 
 media drive for that system. To deliver the files for training, the media has been copied
@@ -1511,6 +1635,10 @@ their new path.
 
 **Lesson 1 Building the Rough Cut** **9**
 
+
+
+
+--- end of page=31 ---
 
 NOTE In case Resolve cannot find the appropriate files, you can initiate a more
 
@@ -1552,6 +1680,10 @@ and timeline zoom settings
 **Lesson 1 Building the Rough Cut** **10**
 
 
+
+
+--- end of page=32 ---
+
 As mentioned previously, the project for this lesson has already been set up and organized
 
 for you using a variety of techniques that you’ll explore in later lessons.
@@ -1572,6 +1704,10 @@ pool window.
 
 **Lesson 1 Building the Rough Cut** **11**
 
+
+
+
+--- end of page=33 ---
 
 By default, clips are displayed as a series of _thumbnail_ images, with each image
 
@@ -1619,6 +1755,10 @@ icon in the bottom left of a clip’s thumbnail.
 **Lesson 1 Building the Rough Cut** **12**
 
 
+
+
+--- end of page=34 ---
+
 **3** Choose Timeline > Audio Scrubbing or press Shift-S to disable audio scrubbing.
 
 **4** Live preview some of the clips with audio again to verify that audio scrubbing has
@@ -1650,6 +1790,10 @@ The clips are now listed in chronological order from the earliest timecode value
 
 **Lesson 1 Building the Rough Cut** **13**
 
+
+
+
+--- end of page=35 ---
 
 TIP Choose Custom from the Sort menu to arrange the clip thumbnails in
 
@@ -1693,6 +1837,10 @@ interview easier.
 **Lesson 1 Building the Rough Cut** **14**
 
 
+
+
+--- end of page=36 ---
+
 NOTE You’ll learn how to sync audio and video clips, create subclips, and edit
 
 multicamera footage in later lessons.
@@ -1720,6 +1868,10 @@ the footage further using metadata.
 **Lesson 1 Building the Rough Cut** **15**
 
 
+
+
+--- end of page=37 ---
+
 **10** In the Smart Bins section of the bin list, select the Keywords category and click the
 
 disclosure arrow to reveal the Keywords smart bins.
@@ -1744,6 +1896,10 @@ keyword “RETAIL” applied.
 
 **Lesson 1 Building the Rough Cut** **16**
 
+
+
+
+--- end of page=38 ---
 
 **12** Click the disclosure arrow for the Keywords category again to collapse it, and then click
 
@@ -1770,6 +1926,10 @@ editing the rough cut for the Organ Mountain Outfitters promo.
 **Lesson 1 Building the Rough Cut** **17**
 
 
+
+
+--- end of page=39 ---
+
 **Changing Media Pool Views**
 
 Although thumbnails are a visual way of accessing the clips in the media pool, they
@@ -1789,8 +1949,16 @@ are not the only way of viewing your clips.
 **Lesson 1 Building the Rough Cut** **18**
 
 
+
+
+--- end of page=40 ---
+
 **Lesson 1 Building the Rough Cut** **19**
 
+
+
+
+--- end of page=41 ---
 
 ## **Assembling the Soundbites**
 
@@ -1834,6 +2002,10 @@ Master bin in the media pool.
 **Lesson 1 Building the Rough Cut** **20**
 
 
+
+
+--- end of page=42 ---
+
 **2** With the name of the new bin still highlighted, type **TIMELINES** and press
 
 Return (Enter).
@@ -1873,6 +2045,10 @@ project have already been set for you, use the project’s settings with confide
 **Lesson 1 Building the Rough Cut** **21**
 
 
+
+
+--- end of page=43 ---
+
 **4** In the Timeline Name field, type **OMO EDIT**, change the Audio Track Type to Mono
 
 (because the audio for the interview is set to mono), and click Create.
@@ -1897,6 +2073,10 @@ Preferences.
 
 **Lesson 1 Building the Rough Cut** **22**
 
+
+
+
+--- end of page=44 ---
 
 Now that you have the timeline, you can begin assembling the soundbites from
 
@@ -1952,6 +2132,10 @@ the source video.
 **Lesson 1 Building the Rough Cut** **23**
 
 
+
+
+--- end of page=45 ---
+
 **9** Click the source viewer’s Options menu (…) and choose Show Audio Waveform on
 
 Source Clip.
@@ -1967,6 +2151,10 @@ can change the source viewer mode dropdown menu to Audio Track.
 
 **Lesson 1 Building the Rough Cut** **24**
 
+
+
+
+--- end of page=46 ---
 
 **10** Return the playhead back to the beginning of the clip and start playing the
 
@@ -1989,6 +2177,10 @@ Zoomed In.
 **Lesson 1 Building the Rough Cut** **25**
 
 
+
+
+--- end of page=47 ---
+
 The waveform now displays a zoomed-in view of the waveforms.
 
 
@@ -2006,6 +2198,10 @@ scrubbing to help you refine the position to just before Chris starts speaking.
 
 **Lesson 1 Building the Rough Cut** **26**
 
+
+
+
+--- end of page=48 ---
 
 **14** When you’re happy that the playhead is positioned just before Chris says, “I’m Chris
 
@@ -2029,6 +2225,10 @@ Mexico,” and then stop playback.
 **Lesson 1 Building the Rough Cut** **27**
 
 
+
+
+--- end of page=49 ---
+
 **16** Again, use the Left / Right Arrow keys to refine the playhead’s position to just before
 
 Chris blinks, and choose Mark > Mark Out or press O to add an Out point to specify
@@ -2049,6 +2249,10 @@ Having marked the soundbite you want to use, you can now edit it into the timeli
 **Lesson 1 Building the Rough Cut** **28**
 
 
+
+
+--- end of page=50 ---
+
 **17** Drag the clip from the source viewer to the timeline viewer.
 
 
@@ -2068,8 +2272,16 @@ clip into the timeline.
 **Lesson 1 Building the Rough Cut** **29**
 
 
+
+
+--- end of page=51 ---
+
 **Lesson 1 Building the Rough Cut** **30**
 
+
+
+
+--- end of page=52 ---
 
 ## **Working with the Subclips**
 
@@ -2121,8 +2333,16 @@ your behalf of relevant soundbites from the much longer interview clips.
 **Lesson 1 Building the Rough Cut** **31**
 
 
+
+
+--- end of page=53 ---
+
 **Lesson 1 Building the Rough Cut** **32**
 
+
+
+
+--- end of page=54 ---
 
 **1** In the bin list, select the SUBCLIPS bin to view the subclips for this project, adjusting
 
@@ -2154,6 +2374,10 @@ Zoomed In.
 **Lesson 1 Building the Rough Cut** **33**
 
 
+
+
+--- end of page=55 ---
+
 Even though this is still only a 30-second portion of a much longer interview clip in the
 
 A CAM bin, you still only need to use a portion of it.
@@ -2180,6 +2404,10 @@ the fn key with any F key to override the macOS shortcuts.
 **Lesson 1 Building the Rough Cut** **34**
 
 
+
+
+--- end of page=56 ---
+
 The second interview clip is edited into the timeline, starting at the position of the
 
 timeline playhead and using only the portion marked between the In and Out points in
@@ -2201,6 +2429,10 @@ the source.
 **Lesson 1 Building the Rough Cut** **35**
 
 
+
+
+--- end of page=57 ---
+
 ##### **Adding the Final Soundbites**
 
 You will now continue to add the rest of the soundbites for this promo using a variety of
@@ -2220,6 +2452,10 @@ TIP Press Q to quickly switch between the timeline and source viewers.
 **Lesson 1 Building the Rough Cut** **36**
 
 
+
+
+--- end of page=58 ---
+
 **3** Press Up Arrow to move to the previous clip in the media pool— **SUBCLIP A 12 Brand** 
 and, if necessary, press Home to return to the start of this clip.
 
@@ -2238,6 +2474,10 @@ viewer, clicking the Overwrite Clip button, or pressing F10.
 
 **Lesson 1 Building the Rough Cut** **37**
 
+
+
+
+--- end of page=59 ---
 
 **6** Press Q to switch back to the source viewer and press Up Arrow until the first clip in
 
@@ -2265,6 +2505,10 @@ an In point.
 **Lesson 1 Building the Rough Cut** **38**
 
 
+
+
+--- end of page=60 ---
+
 TIP Use the Zoom Audio Waveforms to more easily see the gap between the
 
 two “thats.”
@@ -2287,6 +2531,10 @@ subclip, **SUBCLIP A 11 EXSW** .
 **Lesson 1 Building the Rough Cut** **39**
 
 
+
+
+--- end of page=61 ---
+
 **12** Add In and Out points around the final soundbite of this interview where Chris says,
 
 “That’s why we say experience the southwest.”
@@ -2302,6 +2550,10 @@ the soundbites.
 
 **Lesson 1 Building the Rough Cut** **40**
 
+
+
+
+--- end of page=62 ---
 
 ##### **Reordering Timeline Clips**
 
@@ -2339,6 +2591,10 @@ the selection.
 **Lesson 1 Building the Rough Cut** **41**
 
 
+
+
+--- end of page=63 ---
+
 ## **Insert and Append at End Edits**
 
 Now that you have the soundbites in the timeline, you can begin building out the story with
@@ -2369,6 +2625,10 @@ playhead to the appropriate point.
 **Lesson 1 Building the Rough Cut** **42**
 
 
+
+
+--- end of page=64 ---
+
 **2** In the timeline, deselect any selected clips and press Home to move the playhead to
 
 the start of the timeline.
@@ -2389,6 +2649,10 @@ next to the Overwrite Clip button in the timeline toolbar or by pressing F9.
 
 **Lesson 1 Building the Rough Cut** **43**
 
+
+
+
+--- end of page=65 ---
 
 Another useful editing function is the Append at End edit. This does exactly what it
 
@@ -2411,6 +2675,10 @@ Append to End of Timeline or by pressing Shift-F12.
 
 **Lesson 1 Building the Rough Cut** **44**
 
+
+
+
+--- end of page=66 ---
 
 **The “Rules” of Three-Point Editing**
 
@@ -2478,6 +2746,10 @@ make some four-point edits that use In and Out points in unique and specific way
 **Lesson 1 Building the Rough Cut** **45**
 
 
+
+
+--- end of page=67 ---
+
 NOTE If you need to catch up before moving to the next step, select the
 
 TIMELINES bin and choose File > Import > Timeline, navigate to R20 Editors Guide
@@ -2535,6 +2807,10 @@ the final piece.
 **Lesson 1 Building the Rough Cut** **46**
 
 
+
+
+--- end of page=68 ---
+
 **2** Choose Timeline > Select Clips Forward > Select Clips Forward on this Track, or press Y.
 
 
@@ -2566,6 +2842,10 @@ amount that might need to be adjusted later when you’re refining the edit.
 
 **Lesson 1 Building the Rough Cut** **47**
 
+
+
+
+--- end of page=69 ---
 
 NOTE You can also use the number keys of an extended keyboard to quickly
 
@@ -2611,6 +2891,10 @@ and better paced. Think of it as the movie-making equivalent of punctuation!
 
 **Lesson 1 Building the Rough Cut** **48**
 
+
+
+
+--- end of page=70 ---
 
 ## **Adding the B-Roll Footage**
 
@@ -2660,6 +2944,10 @@ the foothills of the mountains.
 **Lesson 1 Building the Rough Cut** **49**
 
 
+
+
+--- end of page=71 ---
+
 **5** Play the clip from the beginning and add an In point after you hear the director shout,
 
 “Go ahead,” and the girl is about to take her second step.
@@ -2686,6 +2974,10 @@ this clip based on the current timeline In and Out points.
 
 **Lesson 1 Building the Rough Cut** **50**
 
+
+
+
+--- end of page=72 ---
 
 **7** In the source viewer, press Shift-O to jump to the implied Out point where the
 
@@ -2728,6 +3020,10 @@ timeline playhead as in the earlier steps.
 **Lesson 1 Building the Rough Cut** **51**
 
 
+
+
+--- end of page=73 ---
+
 Typically, B-roll shots like this tend to be edited on top of the interview already in the
 
 timeline as a cutaway. DaVinci Resolve provides an editing function to make this as
@@ -2758,6 +3054,10 @@ for you to specify where the next edit should be.
 **Lesson 1 Building the Rough Cut** **52**
 
 
+
+
+--- end of page=74 ---
+
 **13** Play the timeline and add an Out point after Chris says, “… there’s nothing like it….”
 
 
@@ -2778,6 +3078,10 @@ same tracks as the previous cutaway.
 **Lesson 1 Building the Rough Cut** **53**
 
 
+
+
+--- end of page=75 ---
+
 **17** With the timeline active, press I to add an In point in the timeline, play forward, and
 
 add an Out point after Chris says, “… ever experienced.”
@@ -2794,6 +3098,10 @@ behind her ear.
 
 **Lesson 1 Building the Rough Cut** **54**
 
+
+
+
+--- end of page=76 ---
 
 The wind noise against the camera microphone is a little off-putting for this shot. You
 
@@ -2824,6 +3132,10 @@ slightly different control.
 **Lesson 1 Building the Rough Cut** **55**
 
 
+
+
+--- end of page=77 ---
+
 **21** Add an In point to the playhead position in the timeline and an Out point after Chris
 
 says, “… the culture, the food….”
@@ -2838,6 +3150,10 @@ spinning the flaming torches.
 
 **Lesson 1 Building the Rough Cut** **56**
 
+
+
+
+--- end of page=78 ---
 
 **23** In the timeline, click the A1 destination control next to the Audio 1 track to disable it.
 
@@ -2874,6 +3190,10 @@ inspires us….”
 **Lesson 1 Building the Rough Cut** **57**
 
 
+
+
+--- end of page=79 ---
+
 **26** Press Q to switch to the source viewer and press the Up Arrow key to navigate to the
 
 clip **PINA BLANCA** **44** and add an In point when the guy is about to jump onto the rock.
@@ -2901,8 +3221,16 @@ TIMELINES bin and choose File > Import > Timeline, navigate to R20 Editors Guide
 **Lesson 1 Building the Rough Cut** **58**
 
 
+
+
+--- end of page=80 ---
+
 **Lesson 1 Building the Rough Cut** **59**
 
+
+
+
+--- end of page=81 ---
 
 ## **Backtiming Edits**
 
@@ -2949,6 +3277,10 @@ clip is located on.
 **Lesson 1 Building the Rough Cut** **60**
 
 
+
+
+--- end of page=82 ---
+
 **3** Press O to add an Out point.
 
 
@@ -2980,6 +3312,10 @@ This is where you want this shot to end.
 
 **Lesson 1 Building the Rough Cut** **61**
 
+
+
+
+--- end of page=83 ---
 
 **6** Add an Out point at this frame.
 
@@ -3019,6 +3355,10 @@ Clear In and Out or press Option-X (macOS) or Alt-X (Windows).
 **Lesson 1 Building the Rough Cut** **62**
 
 
+
+
+--- end of page=84 ---
+
 **7** Press F12 to make a Place on Top edit.
 
 
@@ -3044,6 +3384,10 @@ to the shop shelves. You only need the last part of this ambitious shot, though
 **Lesson 1 Building the Rough Cut** **63**
 
 
+
+
+--- end of page=85 ---
+
 **10** In the source viewer, locate the frame where the girl hangs up the T-shirt and has left
 
 the frame (near the end of the clip) and add an Out point.
@@ -3058,6 +3402,10 @@ timeline In and Out points.
 
 **Lesson 1 Building the Rough Cut** **64**
 
+
+
+
+--- end of page=86 ---
 
 **12** Add an In point to the current playhead location in the timeline and an Out point after
 
@@ -3075,6 +3423,10 @@ Organ Mountain Outfitters sign, just after the girl in the black hat releases th
 
 **Lesson 1 Building the Rough Cut** **65**
 
+
+
+
+--- end of page=87 ---
 
 **15** Press F12 to make a Place on Top edit.
 
@@ -3116,6 +3468,10 @@ the start of the timeline.
 **Lesson 1 Building the Rough Cut** **66**
 
 
+
+
+--- end of page=88 ---
+
 **2** Select the MUSIC bin from the bin list in the media pool and open the
 
 **Furever Glass.wav** clip in the source viewer.
@@ -3139,6 +3495,10 @@ the timeline again.
 
 **Lesson 1 Building the Rough Cut** **67**
 
+
+
+
+--- end of page=89 ---
 
 **4** Press F12 to make a Place on Top edit to add the music clip to a new audio track.
 
@@ -3176,6 +3536,10 @@ Chris’s soundbites against the music, which is more than enough for this rough
 **Lesson 1 Building the Rough Cut** **68**
 
 
+
+
+--- end of page=90 ---
+
 ## **Adding the Logo**
 
 The last element to add in this lesson is the Organ Mountain Outfitters logo over the
@@ -3210,6 +3574,10 @@ as needed.
 **Lesson 1 Building the Rough Cut** **69**
 
 
+
+
+--- end of page=91 ---
+
 NOTE You can adjust this default “duration” used for graphics or still images
 
 in the User Preferences > Editing category under “Standard still duration.”
@@ -3238,6 +3606,10 @@ background in the viewers.
 **Lesson 1 Building the Rough Cut** **70**
 
 
+
+
+--- end of page=92 ---
+
 The black viewer background is replaced by the checkerboard background, denoting
 
 an alpha channel. These parts of the image will remain transparent when the clip is
@@ -3263,6 +3635,10 @@ source viewer.
 
 **Lesson 1 Building the Rough Cut** **71**
 
+
+
+
+--- end of page=93 ---
 
 **5** Press F12 to perform a Place on Top and backtime the clip to the Video 2 track.
 
@@ -3296,6 +3672,10 @@ next lesson.
 
 **Lesson 1 Building the Rough Cut** **72**
 
+
+
+
+--- end of page=94 ---
 
 ## **Lesson Review**
 
@@ -3339,6 +3719,10 @@ one In point?
 **Lesson 1 Building the Rough Cut** **73**
 
 
+
+
+--- end of page=95 ---
+
 ##### **Answers**
 
 **1** False. A rough cut is usually the first step in the editing process, where the overall
@@ -3374,6 +3758,10 @@ point by choosing where to place the clip.
 
 **Lesson 1 Building the Rough Cut** **74**
 
+
+
+
+--- end of page=96 ---
 
 ### Lesson 2
 # Refining the Rough Cut
@@ -3462,6 +3850,10 @@ Reviewing the Edit 131
 Lesson Review 147
 
 
+
+
+--- end of page=97 ---
+
 Of course, part of the job of the editor is to deliver the final project to meet a deadline—
 
 you wouldn’t want to miss the movie’s opening night!—so it’s not surprising that many feel
@@ -3522,6 +3914,10 @@ you make, you always have a backup copy of the timeline to return to.
 **Lesson 2 Refining the Rough Cut** **76**
 
 
+
+
+--- end of page=98 ---
+
 **1** Choose Timeline > Find Current Timeline in Media Pool to quickly reveal the currently
 
 active timeline in its bin.
@@ -3539,6 +3935,10 @@ to the end to signify that this is the duplicated timeline.
 
 **Lesson 2 Refining the Rough Cut** **77**
 
+
+
+
+--- end of page=99 ---
 
 Many editors like to rename duplicated timelines, usually replacing “copy” with a
 
@@ -3587,6 +3987,10 @@ choose Disable Timeline.
 **Lesson 2 Refining the Rough Cut** **78**
 
 
+
+
+--- end of page=100 ---
+
 A struck-through-eye symbol replaces the icon for this timeline, indicating this timeline
 
 is now disabled.
@@ -3628,6 +4032,10 @@ timeline in its bin.
 **Lesson 2 Refining the Rough Cut** **79**
 
 
+
+
+--- end of page=101 ---
+
 **2** Right-click the current timeline and choose Restore Timeline Backup to reveal a list of
 
 backups, date- and time-stamped when the backup was created.
@@ -3647,6 +4055,10 @@ the timeline window.
 
 **Lesson 2 Refining the Rough Cut** **80**
 
+
+
+
+--- end of page=102 ---
 
 NOTE If the Restore Timeline Backup option isn’t available, then no backups
 
@@ -3696,6 +4108,10 @@ as far back as you feel comfortable.
 **Lesson 2 Refining the Rough Cut** **81**
 
 
+
+
+--- end of page=103 ---
+
 Timeline backups are saved in the Backup Location detailed here. However, there are
 
 no user-manageable files in this location, and timeline backups should always be
@@ -3744,6 +4160,10 @@ Mountain Outfitters promo.
 
 **Lesson 2 Refining the Rough Cut** **82**
 
+
+
+
+--- end of page=104 ---
 
 **The Editor’s Art**
 
@@ -3804,6 +4224,10 @@ Dynamic Trim mode. You’ll learn more about dynamic trimming in Lesson 3,
 **Lesson 2 Refining the Rough Cut** **83**
 
 
+
+
+--- end of page=105 ---
+
 ## **Trimming the Timeline Clips**
 
 In the previous lesson, you added a series of cutaways to the interview by adding In and
@@ -3844,6 +4268,10 @@ the tooltip).
 **Lesson 2 Refining the Rough Cut** **84**
 
 
+
+
+--- end of page=106 ---
+
 TIP If you find that snapping is preventing you from accurately positioning the
 
 clip, you can temporarily disable it by pressing N while you move the clip.
@@ -3878,6 +4306,10 @@ you moved the first clip.
 
 **Lesson 2 Refining the Rough Cut** **85**
 
+
+
+
+--- end of page=107 ---
 
 ## **Rolling Edits**
 
@@ -3915,6 +4347,10 @@ _outgoing_ clip) and the _start_, or In point, of **PINA BLANCA 70** (the _incom
 **Lesson 2 Refining the Rough Cut** **86**
 
 
+
+
+--- end of page=108 ---
+
 **4** Trim the selected edit to the right by around 16 frames (+00:16 in the tooltip) or until
 
 you think the duration of the **WHITE SANDS 36** and the **PINA BLANCA 70** clips
@@ -3937,6 +4373,10 @@ click the Full Extent Zoom button to see the entire timeline once again.
 
 **Lesson 2 Refining the Rough Cut** **87**
 
+
+
+
+--- end of page=109 ---
 
 ##### **Creating Split Edits**
 
@@ -3984,6 +4424,10 @@ are indicated by the presence of the chain icon before the clip name in the time
 **Lesson 2 Refining the Rough Cut** **88**
 
 
+
+
+--- end of page=110 ---
+
 **3** Click the edit point between the **ORGAN MOUNTAIN 1** and **INTERVIEW A 5** clips to
 
 select just the video edit point, and then Command-click (macOS) or Ctrl-click
@@ -4020,6 +4464,10 @@ NOTE You will learn more about creating split edits in Lesson 3.
 
 **Lesson 2 Refining the Rough Cut** **89**
 
+
+
+
+--- end of page=111 ---
 
 Split edits like this are very powerful since they help better knit an edit together. Rather
 
@@ -4063,6 +4511,10 @@ reflect the type of trim you are about to perform.
 **Lesson 2 Refining the Rough Cut** **90**
 
 
+
+
+--- end of page=112 ---
+
 This time, because you are in Trim Edit mode, the clip does not move in the timeline.
 
 Instead, you will see that you are slipping the clip within its own In and Out points!
@@ -4082,6 +4534,10 @@ change you’re making.
 
 **Lesson 2 Refining the Rough Cut** **91**
 
+
+
+
+--- end of page=113 ---
 
 The top two images show the start and end (the In and Out points) of the currently
 
@@ -4123,6 +4579,10 @@ just made.
 
 **Lesson 2 Refining the Rough Cut** **92**
 
+
+
+
+--- end of page=114 ---
 
 Even though you haven’t adjusted the timing of the gap between the two interview clips on
 
@@ -4170,6 +4630,10 @@ between the last two clips on Video 2.
 **Lesson 2 Refining the Rough Cut** **93**
 
 
+
+
+--- end of page=115 ---
+
 **3** Drag the selected edit to the left by about a second (-01:00 on the tooltip).
 
 
@@ -4208,6 +4672,10 @@ on Video 1 to select the “outgoing” part of the gap.
 
 **Lesson 2 Refining the Rough Cut** **94**
 
+
+
+
+--- end of page=116 ---
 
 NOTE On a laptop, you might need to zoom in closer to this edit to select
 
@@ -4261,6 +4729,10 @@ start, which necessitates slipping the shot afterward to correct for the change.
 **Lesson 2 Refining the Rough Cut** **95**
 
 
+
+
+--- end of page=117 ---
+
 See the conundrum? Thankfully, there are never any right or wrong ways of achieving
 
 the results you’re looking for. There are, however, more efficient ways of achieving that
@@ -4297,6 +4769,10 @@ to refining clips in a timeline.
 
 **Lesson 2 Refining the Rough Cut** **96**
 
+
+
+
+--- end of page=118 ---
 
 ## **Slide Edits**
 
@@ -4335,6 +4811,10 @@ clip’s name bar.
 **Lesson 2 Refining the Rough Cut** **97**
 
 
+
+
+--- end of page=119 ---
+
 **4** With the slide icon displayed, select the clip and drag it to the right, pressing N to
 
 disable snapping if necessary to slide the clip by 1 second (+01:00 in the tooltip).
@@ -4356,6 +4836,10 @@ trimming the latter’s incoming and outgoing frames.
 
 **Lesson 2 Refining the Rough Cut** **98**
 
+
+
+
+--- end of page=120 ---
 
 **5** Deselect all selected clips and click the Full Extent Zoom button to return to viewing
 
@@ -4401,6 +4885,10 @@ timeline, as you will see).
 **Lesson 2 Refining the Rough Cut** **99**
 
 
+
+
+--- end of page=121 ---
+
 **1** In the timeline, place your playhead over the start of clip **WHITE SANDS 36** and click
 
 the Detail Zoom button to zoom in on this part of the timeline.
@@ -4422,6 +4910,10 @@ Mountain Outfitters clothing.
 
 **Lesson 2 Refining the Rough Cut** **100**
 
+
+
+
+--- end of page=122 ---
 
 **3** In the source viewer, place the playhead at the point where the girl on the left raises
 
@@ -4451,6 +4943,10 @@ noise is too distracting.
 
 **Lesson 2 Refining the Rough Cut** **101**
 
+
+
+
+--- end of page=123 ---
 
 **5** Click the A1 destination control to disable audio editing.
 
@@ -4492,6 +4988,10 @@ source viewer.
 **Lesson 2 Refining the Rough Cut** **102**
 
 
+
+
+--- end of page=124 ---
+
 **6** Drag the clip from the source viewer to the Replace overlay in the timeline viewer.
 
 
@@ -4513,6 +5013,10 @@ clip on the timeline. However, sometimes you’ll only want to replace a part of
 **Lesson 2 Refining the Rough Cut** **103**
 
 
+
+
+--- end of page=125 ---
+
 **7** Scroll through the timeline and play the **PINA BLANCA 44** clip, where the guy is
 
 jumping onto the rocks, stopping as the guy reaches the top of the rock.
@@ -4530,6 +5034,10 @@ add an edit point.
 
 **Lesson 2 Refining the Rough Cut** **104**
 
+
+
+
+--- end of page=126 ---
 
 The clip is split in two, with a dotted line signifying that this is a _through edit_ . (You may
 
@@ -4559,6 +5067,10 @@ frame of the clip before the through edit.
 **Lesson 2 Refining the Rough Cut** **105**
 
 
+
+
+--- end of page=127 ---
+
 **12** From the PINA BLANCA keyword smart bin, open the **PINA BLANCA 48** clip in the
 
 source viewer and locate a frame about halfway through the clip that most closely
@@ -4578,6 +5090,10 @@ In the timeline, the first clip of **PINA BLANCA 44** has been replaced by
 
 **Lesson 2 Refining the Rough Cut** **106**
 
+
+
+
+--- end of page=128 ---
 
 NOTE On macOS systems, you might need to make a further change to the
 
@@ -4633,6 +5149,10 @@ take 11 of the interview.
 **Lesson 2 Refining the Rough Cut** **107**
 
 
+
+
+--- end of page=129 ---
+
 NOTE You will learn more about clip names and how to use them with clip
 
 metadata in Lesson 5, “Project Organization.”
@@ -4662,6 +5182,10 @@ Source Timecode.
 **Lesson 2 Refining the Rough Cut** **108**
 
 
+
+
+--- end of page=130 ---
+
 The current timecode field now displays the source timecode for the clip that is
 
 currently displayed in the timeline.
@@ -4678,6 +5202,10 @@ The playhead jumps directly to the pasted timecode in the source viewer.
 **Lesson 2 Refining the Rough Cut** **109**
 
 
+
+
+--- end of page=131 ---
+
 **6** Press / (forward slash) with the source viewer active to preview a couple of seconds on
 
 either side of the playhead’s location to verify it’s the correct part of the interview
@@ -4692,6 +5220,10 @@ tracks, respectively, because the clip you want to replace is located on those t
 
 **Lesson 2 Refining the Rough Cut** **110**
 
+
+
+
+--- end of page=132 ---
 
 **8** Click the Replace Clip button in the timeline toolbar or press F11 to perform a
 
@@ -4724,6 +5256,10 @@ says, “…we take that inspiration….”
 **Lesson 2 Refining the Rough Cut** **111**
 
 
+
+
+--- end of page=133 ---
+
 **11** Select the clip in the timeline and choose Timeline > Razor or press Command-B
 
 (macOS) or Ctrl-B (Windows) to add an edit.
@@ -4743,6 +5279,10 @@ Ctrl-V (Windows) to jump to the correct location of this clip.
 
 **Lesson 2 Refining the Rough Cut** **112**
 
+
+
+
+--- end of page=134 ---
 
 **15** Press / (forward slash) to preview the portion of the clip in the source viewer around
 
@@ -4774,6 +5314,10 @@ add an In point just after Chris says, “We are located in our store….”
 **Lesson 2 Refining the Rough Cut** **113**
 
 
+
+
+--- end of page=135 ---
+
 **19** Choose Playback > Go To > Last Frame or press ’ (apostrophe) to jump to the last frame
 
 of this clip and add an Out point.
@@ -4802,6 +5346,10 @@ audio shouldn’t be used to replace the audio already in the timeline.
 
 **Lesson 2 Refining the Rough Cut** **114**
 
+
+
+
+--- end of page=136 ---
 
 **23** Click the A1 destination control to disable audio editing or press Command-Option-1
 
@@ -4836,6 +5384,10 @@ Timecode to return to viewing the timeline’s timecode.
 
 **Lesson 2 Refining the Rough Cut** **115**
 
+
+
+
+--- end of page=137 ---
 
 Placing In and Out points in the timeline allows you to limit the portion of timeline footage
 
@@ -4882,6 +5434,10 @@ Effects Library.
 **Lesson 2 Refining the Rough Cut** **116**
 
 
+
+
+--- end of page=138 ---
+
 **3** In the Effects Library, select the Titles category and scroll through the list of Fusion
 
 Titles to the **Horizontal Line Reveal** title.
@@ -4902,6 +5458,10 @@ want to use other editing functions instead.
 **Lesson 2 Refining the Rough Cut** **117**
 
 
+
+
+--- end of page=139 ---
+
 **4** Double-click the **Horizontal Line Reveal** title to open it directly in the source viewer,
 
 where you can preview it in real time.
@@ -4917,6 +5477,10 @@ over the title clip in the timeline.
 **Lesson 2 Refining the Rough Cut** **118**
 
 
+
+
+--- end of page=140 ---
+
 **6** Move the timeline playhead over the center of the title clip in the timeline to see the
 
 title composited over the footage of Organ Mountain in the timeline viewer.
@@ -4931,6 +5495,10 @@ Inspector automatically.
 
 **Lesson 2 Refining the Rough Cut** **119**
 
+
+
+
+--- end of page=141 ---
 
 **8** In the Title Inspector, select the SAMPLE UPPER text in the Upper Text Controls and
 
@@ -4952,6 +5520,10 @@ an overscan and are typically required for broadcast TV programs.
 **Lesson 2 Refining the Rough Cut** **120**
 
 
+
+
+--- end of page=142 ---
+
 Ideally, you want the titles positioned inside the inner title safe box.
 
 
@@ -4967,6 +5539,10 @@ type **#experiencethesouthwest** .
 
 **Lesson 2 Refining the Rough Cut** **121**
 
+
+
+
+--- end of page=143 ---
 
 **13** Adjust the Lower Text Spacing to about 1.09 so the text is about the same length
 
@@ -4987,6 +5563,10 @@ To make the text more eye-catching, you can adjust the colors.
 
 **Lesson 2 Refining the Rough Cut** **122**
 
+
+
+
+--- end of page=144 ---
 
 **16** Change the color for the gradient’s left triangle control to a rich orange by increasing
 
@@ -5012,6 +5592,10 @@ similar warm yellow used in the Upper Text (Red 1.0, Green 0.8, Blue 0.0).
 **Lesson 2 Refining the Rough Cut** **123**
 
 
+
+
+--- end of page=145 ---
+
 **21** Click the Settings tab at the top of the Inspector.
 
 
@@ -5027,6 +5611,10 @@ the tooltip).
 
 **Lesson 2 Refining the Rough Cut** **124**
 
+
+
+
+--- end of page=146 ---
 
 **24** Trim the end of the **ORGAN MOUNTAIN 1** clip on Video 1 so it snaps to the end of the
 
@@ -5057,6 +5645,10 @@ the mountains, **PINA BLANCA 44** .
 
 **Lesson 2 Refining the Rough Cut** **125**
 
+
+
+
+--- end of page=147 ---
 
 The shake from the handheld camera on this shot is quite noticeable and detracts
 
@@ -5093,6 +5685,10 @@ camera movement.
 **Lesson 2 Refining the Rough Cut** **126**
 
 
+
+
+--- end of page=148 ---
+
 **5** Increase the Smooth control to about 0.900 and click the Stabilize button again to
 
 apply the changes.
@@ -5125,6 +5721,10 @@ to remove all camera motion.
 
 **Lesson 2 Refining the Rough Cut** **127**
 
+
+
+
+--- end of page=149 ---
 
 ##### **Dynamic Zoom**
 
@@ -5168,6 +5768,10 @@ of the logo now comes to a gentle rest near the end of the clip in the timeline.
 **Lesson 2 Refining the Rough Cut** **128**
 
 
+
+
+--- end of page=150 ---
+
 You can also refine the start and end framing for the dynamic zoom.
 
 **6** Choose View > Viewer Overlay > Dynamic Zoom to reveal the onscreen controls for the
@@ -5187,6 +5791,10 @@ represents the end framing.
 
 **Lesson 2 Refining the Rough Cut** **129**
 
+
+
+
+--- end of page=151 ---
 
 **7** Drag one of the corners of the green outline box out slightly, away from the edges of
 
@@ -5225,6 +5833,10 @@ TIMELINES bin and choose File > Import > Timeline, navigate to R20 Editors Guide
 
 **Lesson 2 Refining the Rough Cut** **130**
 
+
+
+
+--- end of page=152 ---
 
 ## **Reviewing the Edit**
 
@@ -5278,6 +5890,10 @@ to work with!
 **Lesson 2 Refining the Rough Cut** **131**
 
 
+
+
+--- end of page=153 ---
+
 **1** Choose Workspace > Viewer Mode > Cinema Viewer or press Command-F (macOS) or
 
 Ctrl-F (Windows).
@@ -5315,6 +5931,10 @@ from additional changes. If so, now is the time to make those adjustments.
 
 **Lesson 2 Refining the Rough Cut** **132**
 
+
+
+
+--- end of page=154 ---
 
 NOTE If you have two monitors attached to your computer and you’re using
 
@@ -5356,6 +5976,10 @@ listed in the _DaVinci Resolve Manual_ .
 **Lesson 2 Refining the Rough Cut** **133**
 
 
+
+
+--- end of page=155 ---
+
 For ease of use using the built-in Blackmagic Cloud Connection, DaVinci Remote Monitor
 
 requires the user to sign in using a Blackmagic Cloud account. Blackmagic Cloud accounts
@@ -5385,6 +6009,10 @@ Step 3 below.
 **Lesson 2 Refining the Rough Cut** **134**
 
 
+
+
+--- end of page=156 ---
+
 **2** Click Sign In and enter your details to log in to your Blackmagic Cloud account.
 
 
@@ -5408,6 +6036,10 @@ Preferences > System > Internet Accounts.
 
 **Lesson 2 Refining the Rough Cut** **135**
 
+
+
+
+--- end of page=157 ---
 
 The Remote Monitoring window includes settings for the video codec and bitrate
 
@@ -5441,6 +6073,10 @@ join the session.
 **Lesson 2 Refining the Rough Cut** **136**
 
 
+
+
+--- end of page=158 ---
+
 **7** Once they receive your session code, they must enter it in the Session Code field on
 
 the DaVinci Remote Monitor app on their computer, iPhone, or iPad, and then click Join.
@@ -5453,6 +6089,10 @@ real time.
 
 **Lesson 2 Refining the Rough Cut** **137**
 
+
+
+
+--- end of page=159 ---
 
 The Remote Monitor icon indicates that a Remote Monitoring Session has active
 
@@ -5480,6 +6120,10 @@ your system.
 
 **Lesson 2 Refining the Rough Cut** **138**
 
+
+
+
+--- end of page=160 ---
 
 ##### **Using Blackmagic Cloud Presentations**
 
@@ -5514,6 +6158,10 @@ Once you have signed in, you will see the Blackmagic Cloud Welcome screen.
 **Lesson 2 Refining the Rough Cut** **139**
 
 
+
+
+--- end of page=161 ---
+
 **3** If this is your first Presentation, in the Presentation Name, type **OMO PROMO** and click
 
 Add; otherwise, click Add Presentation at the bottom of the Presentations list, name
@@ -5529,6 +6177,10 @@ The OMO Promo presentation is added to the Presentations list.
 
 **Lesson 2 Refining the Rough Cut** **140**
 
+
+
+
+--- end of page=162 ---
 
 **5** Click the “Allow Guest access to presentation” option.
 
@@ -5564,6 +6216,10 @@ to upload a video.
 **Lesson 2 Refining the Rough Cut** **141**
 
 
+
+
+--- end of page=163 ---
+
 **7** Return to DaVinci Resolve and click the Quick Export button in the top right corner of
 
 the edit page or choose File > Quick Export and select the Presentations preset.
@@ -5589,6 +6245,10 @@ presentation in your Blackmagic Cloud account.
 
 **Lesson 2 Refining the Rough Cut** **142**
 
+
+
+
+--- end of page=164 ---
 
 ##### **Reviewing the Presentation**
 
@@ -5619,6 +6279,10 @@ playback is sync’d.
 
 **Lesson 2 Refining the Rough Cut** **143**
 
+
+
+
+--- end of page=165 ---
 
 NOTE The person who initiates the sync’d playback will then have sole control
 
@@ -5661,6 +6325,10 @@ These markers can be adjusted and, if necessary, responded to directly in the ed
 **Lesson 2 Refining the Rough Cut** **144**
 
 
+
+
+--- end of page=166 ---
+
 **6** Double-click any timeline marker to open the Presentations comments window, where
 
 you can reply to or delete the comment as necessary.
@@ -5683,6 +6351,10 @@ being shown.
 
 **Lesson 2 Refining the Rough Cut** **145**
 
+
+
+
+--- end of page=167 ---
 
 **8** Right-click any of the column headings and deselect all options except Frame, Color,
 
@@ -5718,6 +6390,10 @@ will look at other editing techniques you can employ on different sorts of proje
 
 **Lesson 2 Refining the Rough Cut** **146**
 
+
+
+
+--- end of page=168 ---
 
 ## **Lesson Review**
 
@@ -5763,6 +6439,10 @@ automatically?
 **Lesson 2 Refining the Rough Cut** **147**
 
 
+
+
+--- end of page=169 ---
+
 ##### **Answers**
 
 **1** a) and b). Selection mode and Trim Edit mode can be used to trim the start or end of a
@@ -5790,6 +6470,10 @@ window or the Internet Accounts section of the System Preferences.
 
 **Lesson 2 Refining the Rough Cut** **148**
 
+
+
+
+--- end of page=170 ---
 
 ### Lesson 3
 # Cutting a Dramatic Scene
@@ -5864,6 +6548,10 @@ Dynamic Trimming 192
 Lesson Review 195
 
 
+
+
+--- end of page=171 ---
+
 In this lesson, you’ll edit part of a scene from the film _Too Much Life_, written and directed by
 
 Sawyer Woods. This is the scene when the film’s main protagonist, Harper Hudson, is
@@ -5916,6 +6604,10 @@ timeline comfortably.
 **Lesson 3 Cutting a Dramatic Scene** **150**
 
 
+
+
+--- end of page=172 ---
+
 There is currently only one clip in the timeline. This clip is a wide shot of the scene you
 
 will edit. Instead of a printed script or storyboard, you will use this clip as a reference
@@ -5942,6 +6634,10 @@ around to different sides of the desk throughout the scene.
 
 **Lesson 3 Cutting a Dramatic Scene** **151**
 
+
+
+
+--- end of page=173 ---
 
 **8** In the media pool, open the VIDEO bin to review the footage available to you for
 
@@ -5988,6 +6684,10 @@ Lesson 4, “Multicamera Editing.”
 **Lesson 3 Cutting a Dramatic Scene** **152**
 
 
+
+
+--- end of page=174 ---
+
 You are more than welcome to review each of the takes made available to you for this
 
 scene. You can then decide how each shot can be used to provide the best coverage of
@@ -6032,6 +6732,10 @@ together and the more creative your choices are likely to be.
 **Lesson 3 Cutting a Dramatic Scene** **153**
 
 
+
+
+--- end of page=175 ---
+
 ## **Blocking Out the Dialogue**
 
 As with the Organ Mountain Outfitters project you worked on in the previous lessons, the
@@ -6057,6 +6761,10 @@ Clips dropdown menu at the top of the viewer.
 **Lesson 3 Cutting a Dramatic Scene** **154**
 
 
+
+
+--- end of page=176 ---
+
 This menu provides an easy way to quickly switch between the last 10 clips you have
 
 opened in the source viewer without returning to the media pool.
@@ -6076,6 +6784,10 @@ to help you identify where the dialogue starts and stops.
 **Lesson 3 Cutting a Dramatic Scene** **155**
 
 
+
+
+--- end of page=177 ---
+
 **6** Press Q to switch to the timeline and, if necessary, press Home (or fn-Left Arrow if you
 
 are working on a laptop) to return the playhead to the start of the timeline.
@@ -6092,6 +6804,10 @@ action when Harper is about to sit, and add an In point.
 
 **Lesson 3 Cutting a Dramatic Scene** **156**
 
+
+
+
+--- end of page=178 ---
 
 **9** Press Q to switch back to the timeline, continue playing, and add an Out point after
 
@@ -6112,6 +6828,10 @@ duration fields in both viewers also reveals that, while the In and Out points w
 
 **Lesson 3 Cutting a Dramatic Scene** **157**
 
+
+
+
+--- end of page=179 ---
 
 placed, there is a subtle but significant difference in their durations: around 12
 
@@ -6145,6 +6865,10 @@ in the timeline. To verify this, you can use the preview marks you used in Lesso
 
 **Lesson 3 Cutting a Dramatic Scene** **158**
 
+
+
+
+--- end of page=180 ---
 
 The blue preview mark to indicate the last frame of the shorter duration appears on
 
@@ -6207,6 +6931,10 @@ points you marked, which means it is a _four-point edit_ .
 **Lesson 3 Cutting a Dramatic Scene** **159**
 
 
+
+
+--- end of page=181 ---
+
 ## **Adding the Reverse Shots**
 
 Now that you understand how the Ripple Overwrite works, you will put it to good use by
@@ -6236,6 +6964,10 @@ turned to Principal Everdunn before he says, “She stole school property.”
 
 **Lesson 3 Cutting a Dramatic Scene** **160**
 
+
+
+
+--- end of page=182 ---
 
 **5** Continue to play the clip and set an Out point just as he turns to face Everdunn (who is
 
@@ -6268,6 +7000,10 @@ perfect, remember that this is just a rough cut you’re working on!
 **Lesson 3 Cutting a Dramatic Scene** **161**
 
 
+
+
+--- end of page=183 ---
+
 **10** Once you have reviewed the edit, play the new clip in the timeline and add an In point
 
 after Garret says, “You killed the Centennial Palm Tree,” but before he looks away from
@@ -6288,6 +7024,10 @@ motivated by Principal Everdunn as she starts walking around behind Harper).
 **Lesson 3 Cutting a Dramatic Scene** **162**
 
 
+
+
+--- end of page=184 ---
+
 **13** Set an In point just as Harper looks at Garret and says, “It was an accident…” and an
 
 Out point after she says, “I didn’t mean to kill the tree.”
@@ -6307,6 +7047,10 @@ says, “It’s the Centennial Palm Tree,” and an Out point after Harper taunt
 **Lesson 3 Cutting a Dramatic Scene** **163**
 
 
+
+
+--- end of page=185 ---
+
 **16** Press Q to switch to the source viewer and set In and Out points around Harper’s line
 
 “Can’t you just call it a palm tree?”
@@ -6323,6 +7067,10 @@ long?” before Everdunn’s arm appears in the shot.
 
 **Lesson 3 Cutting a Dramatic Scene** **164**
 
+
+
+
+--- end of page=186 ---
 
 **19** Press Q to switch to the source viewer and set an In point as Harper starts to lean
 
@@ -6361,6 +7109,10 @@ click Open.
 **Lesson 3 Cutting a Dramatic Scene** **165**
 
 
+
+
+--- end of page=187 ---
+
 ## **Using Ripple Overwrite** **for Alternate Takes**
 
 The rough cut of the scene is looking fairly accomplished already. However, you know by
@@ -6391,6 +7143,10 @@ disciplinary meeting?”
 **Lesson 3 Cutting a Dramatic Scene** **166**
 
 
+
+
+--- end of page=188 ---
+
 **4** Review the edit, playing the next clip in the timeline as well, where Harper responds to
 
 Principal Everdunn.
@@ -6414,6 +7170,10 @@ them into the source viewer.
 
 **Lesson 3 Cutting a Dramatic Scene** **167**
 
+
+
+
+--- end of page=189 ---
 
 **7** Close the media pool to reclaim your editing real estate.
 
@@ -6463,6 +7223,10 @@ To prove this wasn’t a fluke, you’ll repeat the process on another shot.
 **Lesson 3 Cutting a Dramatic Scene** **168**
 
 
+
+
+--- end of page=190 ---
+
 **12** In the timeline, move the playhead over the clip of Garret, where Everdunn places her
 
 hand on his shoulder.
@@ -6479,6 +7243,10 @@ an In point just before Garret’s eye twitches and an Out point just as he star
 
 **Lesson 3 Cutting a Dramatic Scene** **169**
 
+
+
+
+--- end of page=191 ---
 
 **15** Perform a Ripple Overwrite edit to edit this new shot into the timeline in place of the
 
@@ -6530,6 +7298,10 @@ name” and his mouth is firmly shut.
 **Lesson 3 Cutting a Dramatic Scene** **170**
 
 
+
+
+--- end of page=192 ---
+
 The first step when match framing to a clip is to locate the clip in the timeline. For this
 
 example, you need to add another shot you’d previously overwritten from the original
@@ -6565,6 +7337,10 @@ end of the timeline.
 
 **Lesson 3 Cutting a Dramatic Scene** **171**
 
+
+
+
+--- end of page=193 ---
 
 **5** Place the playhead anywhere over the last clip in the timeline and choose Timeline >
 
@@ -6602,6 +7378,10 @@ the timeline from which it’s open.
 **Lesson 3 Cutting a Dramatic Scene** **172**
 
 
+
+
+--- end of page=194 ---
+
 **6** In the source viewer, locate the part where Principal Everdunn starts walking from
 
 Garret’s left side and set an In point as soon as Harper stops speaking and an Out
@@ -6625,6 +7405,10 @@ click Open.
 
 **Lesson 3 Cutting a Dramatic Scene** **173**
 
+
+
+
+--- end of page=195 ---
 
 ## **Editing the Pickups**
 
@@ -6665,6 +7449,10 @@ is selected.
 **Lesson 3 Cutting a Dramatic Scene** **174**
 
 
+
+
+--- end of page=196 ---
+
 **4** In the source viewer, set an In point when Garret is reaching out for the turtle just
 
 before his hand touches it.
@@ -6680,6 +7468,10 @@ backward across the desk but before his hand releases it.
 
 **Lesson 3 Cutting a Dramatic Scene** **175**
 
+
+
+
+--- end of page=197 ---
 
 **7** Review the shot, and then set In and Out points at similar points in the action: the In
 
@@ -6714,6 +7506,10 @@ the original opening shot you started with at the beginning of this lesson.
 **Lesson 3 Cutting a Dramatic Scene** **176**
 
 
+
+
+--- end of page=198 ---
+
 **11** Play the shot and add an Out point after Principal Everdunn says, “Sit down” and Garret
 
 is turning toward Harper.
@@ -6728,6 +7524,10 @@ is turning toward Harper.
 
 **Lesson 3 Cutting a Dramatic Scene** **177**
 
+
+
+
+--- end of page=199 ---
 
 **14** Set an Out point after Principal Everdunn says, “Sit down” and Garret is turned slightly
 
@@ -6766,6 +7566,10 @@ should be barely noticeable. Still, that does not mean you shouldn’t consider 
 
 **Lesson 3 Cutting a Dramatic Scene** **178**
 
+
+
+
+--- end of page=200 ---
 
 Comparing alternative takes often means repetitively revising your timeline. Of course,
 
@@ -6812,6 +7616,10 @@ an In point just before Garret removes his hand from the turtle and an Out point
 **Lesson 3 Cutting a Dramatic Scene** **179**
 
 
+
+
+--- end of page=201 ---
+
 Principal Everdunn says, “Harper” but before she says her next line. (You might not be
 
 able to hear the line very clearly, but that’s not really important at the moment.)
@@ -6827,6 +7635,10 @@ TIP You can add as many takes as you need to a Take Selector.
 
 **Lesson 3 Cutting a Dramatic Scene** **180**
 
+
+
+
+--- end of page=202 ---
 
 The current Take Selector now shows two clips stacked on top of each other, with the
 
@@ -6856,6 +7668,10 @@ Take Selector is indicated by a red star icon in the upper left corner of the ta
 
 **Lesson 3 Cutting a Dramatic Scene** **181**
 
+
+
+
+--- end of page=203 ---
 
 Of course, you should realize by now that there is no right or wrong answer, simply
 
@@ -6908,6 +7724,10 @@ choose Finalize Take.
 
 **Lesson 3 Cutting a Dramatic Scene** **182**
 
+
+
+
+--- end of page=204 ---
 
 ##### **Extra Credit**
 
@@ -6962,6 +7782,10 @@ the timeline panel.
 **Lesson 3 Cutting a Dramatic Scene** **183**
 
 
+
+
+--- end of page=205 ---
+
 This timeline is a rough cut of the whole scene, including the ending, where Principal
 
 Everdunn gets Garret and Harper to breathe deeply. The notable difference with this
@@ -6998,6 +7822,10 @@ techniques of creating split edits.
 
 **Lesson 3 Cutting a Dramatic Scene** **184**
 
+
+
+
+--- end of page=206 ---
 
 ## **Creating Split Edits** **Using Extend Edit**
 
@@ -7044,6 +7872,10 @@ select just the video or audio parts of the clips separately.
 **Lesson 3 Cutting a Dramatic Scene** **185**
 
 
+
+
+--- end of page=207 ---
+
 **2** Play the opening part of the scene and stop at the point where Principal Everdunn
 
 turns to Vice Principal Garret, but just before she says his name, and click the Detail
@@ -7085,6 +7917,10 @@ accusation is.
 **Lesson 3 Cutting a Dramatic Scene** **186**
 
 
+
+
+--- end of page=208 ---
+
 **6** Place the playhead over Garret’s shot just after he says, “killed,” when he’s looking
 
 at Harper.
@@ -7107,6 +7943,10 @@ Harper reacts with a roll of the eyes. It would be nice to make more of this per
 
 **Lesson 3 Cutting a Dramatic Scene** **187**
 
+
+
+
+--- end of page=209 ---
 
 **10** Press U to switch the selected edit from a roll to an incoming ripple trim.
 
@@ -7132,6 +7972,10 @@ the Centennial Palm Tree,” and stop just before he starts to say, “palm tree
 **Lesson 3 Cutting a Dramatic Scene** **188**
 
 
+
+
+--- end of page=210 ---
+
 **14** Again, select the next video edit point and press E to perform an Extend Edit, and then
 
 press / (forward slash) to review the change.
@@ -7148,6 +7992,10 @@ just before Harper squints, and press / ( forward slash) to review the edit.
 
 **Lesson 3 Cutting a Dramatic Scene** **189**
 
+
+
+
+--- end of page=211 ---
 
 **16** Continue playing Harper’s shot, stopping just as she says the word “palm” and looks
 
@@ -7179,6 +8027,10 @@ manipulate the footage to achieve the best possible results all around.
 
 **Lesson 3 Cutting a Dramatic Scene** **190**
 
+
+
+
+--- end of page=212 ---
 
 Of course, there is never a single answer to any of these questions. The best approach is to
 
@@ -7212,6 +8064,10 @@ almost endless, with many acceptable outcomes. Such is the ecstasy and agony of 
 **Lesson 3 Cutting a Dramatic Scene** **191**
 
 
+
+
+--- end of page=213 ---
+
 ## **Dynamic Trimming**
 
 Another trimming mode you can enable in conjunction with either the Selection or Trim
@@ -7240,6 +8096,10 @@ Tree” through gritted teeth.
 
 **Lesson 3 Cutting a Dramatic Scene** **192**
 
+
+
+
+--- end of page=214 ---
 
 As soon as you enable Dynamic Trim mode, several things happen. First, the edit point
 
@@ -7274,6 +8134,10 @@ the different edit point selections until both sides are selected.
 
 **Lesson 3 Cutting a Dramatic Scene** **193**
 
+
+
+
+--- end of page=215 ---
 
 **6** Press and hold K, and then also press J to begin slowly rolling the selected edit point
 
@@ -7315,6 +8179,10 @@ timeline toolbar.
 
 **Lesson 3 Cutting a Dramatic Scene** **194**
 
+
+
+
+--- end of page=216 ---
 
 Continue to finesse this edit using any of the techniques you prefer to adjust the pacing
 
@@ -7363,6 +8231,10 @@ Edit mode.
 **Lesson 3 Cutting a Dramatic Scene** **195**
 
 
+
+
+--- end of page=217 ---
+
 ##### **Answers**
 
 **1** False. Ripple Overwrite is a four-point edit that you use when the duration of the
@@ -7390,6 +8262,10 @@ Trim Edit mode.
 
 **Lesson 3 Cutting a Dramatic Scene** **196**
 
+
+
+
+--- end of page=218 ---
 
 ### Lesson 4
 # Multicamera Editing
@@ -7466,6 +8342,10 @@ Adjusting a Multicam Clip 233
 Lesson Review 243
 
 
+
+
+--- end of page=219 ---
+
 ## **Editing a Multicamera Interview**
 
 Accurately establishing the synchronization relationship between multiple camera angles
@@ -7507,6 +8387,10 @@ Shirt…” sign.
 **Lesson 4 Multicamera Editing** **198**
 
 
+
+
+--- end of page=220 ---
+
 **7** In the media pool, select the Interview bin and review the footage.
 
 
@@ -7535,6 +8419,10 @@ Selected Bin.
 **Lesson 4 Multicamera Editing** **199**
 
 
+
+
+--- end of page=221 ---
+
 **9** In the New Timeline window, name this timeline **OMO Interview SYNC** and deselect
 
 Use Selected Mark In/Out.
@@ -7553,6 +8441,10 @@ sorting order of the media pool).
 
 **Lesson 4 Multicamera Editing** **200**
 
+
+
+
+--- end of page=222 ---
 
 **11** Ensure that you have Linked Selection enabled in the timeline toolbar.
 
@@ -7586,6 +8478,10 @@ The Automatically Align Clips window opens.
 **Lesson 4 Multicamera Editing** **201**
 
 
+
+
+--- end of page=223 ---
+
 **15** Ensure that the “Synchronize using” option is set to Timecode and click Sync.
 
 
@@ -7612,6 +8508,10 @@ that it, too, is playing in sync with the audio from Audio 1.
 **Lesson 4 Multicamera Editing** **202**
 
 
+
+
+--- end of page=224 ---
+
 **19** Click the Enable Video Track control for Video 3 to re-enable the track.
 
 
@@ -7627,6 +8527,10 @@ Convert Timeline to Multicam Clip > Use Source Audio Channels.
 
 **Lesson 4 Multicamera Editing** **203**
 
+
+
+
+--- end of page=225 ---
 
 The timeline closes (because it’s no longer a timeline), revealing the previously open
 
@@ -7658,6 +8562,10 @@ Source Clip.
 
 **Lesson 4 Multicamera Editing** **204**
 
+
+
+
+--- end of page=226 ---
 
 NOTE If you have a multicam clip already open the source viewer, you cannot
 
@@ -7703,6 +8611,10 @@ together in sync.
 **Lesson 4 Multicamera Editing** **205**
 
 
+
+
+--- end of page=227 ---
+
 **4** In the source viewer, set an In point just before Chris says, “My name is Chris Lang…”
 
 and an Out point after Chris says, “…our communities that we live in.”
@@ -7724,6 +8636,10 @@ the interview in the timeline, you can start to edit to improve the flow.
 
 **Lesson 4 Multicamera Editing** **206**
 
+
+
+
+--- end of page=228 ---
 
 **6** Close the media pool and choose Workspace > Single Viewer Mode. If required, resize
 
@@ -7747,6 +8663,10 @@ Chris says, “… a lifestyle and outdoor brand.” Then press O to add an Out 
 
 **Lesson 4 Multicamera Editing** **207**
 
+
+
+
+--- end of page=229 ---
 
 **11** If necessary, enter Trim Edit mode and refine the edit so Chris says, “My name is Chris
 
@@ -7796,6 +8716,10 @@ wise, this is a very nasty jump cut!
 **Lesson 4 Multicamera Editing** **208**
 
 
+
+
+--- end of page=230 ---
+
 **3** Right-click the second multicam clip in the timeline and choose Switch Multicam Clip
 
 Angle > Video 3.
@@ -7821,6 +8745,10 @@ Angle > Audio 1.
 **Lesson 4 Multicamera Editing** **209**
 
 
+
+
+--- end of page=231 ---
+
 This audio angle is switched back to the sync’d audio of the first angle, Video 1.
 
 
@@ -7840,6 +8768,10 @@ clip to the right of this new edit and choose Switch Multicam Clip Angle > Video
 
 **Lesson 4 Multicamera Editing** **210**
 
+
+
+
+--- end of page=232 ---
 
 **10** Enable Linked Selection and, using Trim Edit mode, trim the incoming multicam clip by
 
@@ -7891,6 +8823,10 @@ Now, you’ll turn your attention to the incoming part of the interview.
 **Lesson 4 Multicamera Editing** **211**
 
 
+
+
+--- end of page=233 ---
+
 **17** With Trim Edit mode still active, select the incoming side of the video of the first
 
 interview clip.
@@ -7925,6 +8861,10 @@ imported timeline.
 
 **Lesson 4 Multicamera Editing** **212**
 
+
+
+
+--- end of page=234 ---
 
 ## **Flattening the Multicam Clips**
 
@@ -7972,6 +8912,10 @@ individual angle.
 **Lesson 4 Multicamera Editing** **213**
 
 
+
+
+--- end of page=235 ---
+
 NOTE You can always flatten a multicam clip after it has been graded. By default,
 
 flattening the multicam clip will copy the grade(s) applied to the multicam clip itself
@@ -8018,6 +8962,10 @@ and click Open.
 
 **Lesson 4 Multicamera Editing** **214**
 
+
+
+
+--- end of page=236 ---
 
 **7** Select the ANGLES bin and review the footage.
 
@@ -8070,6 +9018,10 @@ like the multicam clip created and organized.
 **Lesson 4 Multicamera Editing** **215**
 
 
+
+
+--- end of page=237 ---
+
 **1** Click the Options menu (…) in the source viewer and deselect the Show Audio
 
 Waveforms in Source Clip option.
@@ -8089,6 +9041,10 @@ the clips organized and sync’d within the multicam clip.
 
 **Lesson 4 Multicamera Editing** **216**
 
+
+
+
+--- end of page=238 ---
 
 **4** Leave the Frame Rate set to 23.976, which has defaulted to the frame rate of the
 
@@ -8158,6 +9114,10 @@ if relevant.
 **Lesson 4 Multicamera Editing** **217**
 
 
+
+
+--- end of page=239 ---
+
 **9** Ensure that the option “Move source clips to ‘Original Clips’ bin” is selected.
 
 
@@ -8173,6 +9133,10 @@ which, unsurprisingly, contains the individual clips you used to create the mult
 
 **Lesson 4 Multicamera Editing** **218**
 
+
+
+
+--- end of page=240 ---
 
 **11** Double-click the **IDKN SYNC** clip to open it in the source viewer.
 
@@ -8214,6 +9178,10 @@ the multicam clip, which is currently outlined with a red box.
 **Lesson 4 Multicamera Editing** **219**
 
 
+
+
+--- end of page=241 ---
+
 **13** While the multicam clip continues to play, click the IDKN MUSIC angle in the bottom
 
 right corner.
@@ -8241,6 +9209,10 @@ material in the time it takes to play the timeline.
 **Lesson 4 Multicamera Editing** **220**
 
 
+
+
+--- end of page=242 ---
+
 **2** In the New Timeline window, change the Timeline Name field to **IDKN EDIT** and
 
 click Create.
@@ -8262,6 +9234,10 @@ camera assistant has moved the smart slate out of the shot and mark an In point.
 
 **Lesson 4 Multicamera Editing** **221**
 
+
+
+
+--- end of page=243 ---
 
 **6** Click the Full Extent Zoom button and move the timeline playhead back to the start of
 
@@ -8287,6 +9263,10 @@ in the timeline and choose Switch Multicam Clip Angle > IDKN 1.
 
 **Lesson 4 Multicamera Editing** **222**
 
+
+
+
+--- end of page=244 ---
 
 This switches the video angle for the multicam clip in the timeline to the first angle
 
@@ -8317,6 +9297,10 @@ multicam viewer.
 
 **Lesson 4 Multicamera Editing** **223**
 
+
+
+
+--- end of page=245 ---
 
 NOTE Multicam mode can only be used in conjunction with any multicam clips
 
@@ -8352,6 +9336,10 @@ with the timeline viewer.
 
 **Lesson 4 Multicamera Editing** **224**
 
+
+
+
+--- end of page=246 ---
 
 You are almost ready to begin cutting this multicam clip. However, there is one final
 
@@ -8391,6 +9379,10 @@ end of the timeline and the song.
 
 **Lesson 4 Multicamera Editing** **225**
 
+
+
+
+--- end of page=247 ---
 
 NOTE Don’t worry about the timeline clips appearing blank as you’re editing;
 
@@ -8439,8 +9431,16 @@ imported timeline.
 **Lesson 4 Multicamera Editing** **226**
 
 
+
+
+--- end of page=248 ---
+
 **Lesson 4 Multicamera Editing** **227**
 
+
+
+
+--- end of page=249 ---
 
 ## **Adjusting the Multicamera Edit**
 
@@ -8488,6 +9488,10 @@ until you see a shot you want to change, and then stop playback.
 **Lesson 4 Multicamera Editing** **228**
 
 
+
+
+--- end of page=250 ---
+
 Since the multicam viewer is displaying the same multicam clip under the timeline
 
 playhead, you’ll see all the angles available at that point.
@@ -8505,6 +9509,10 @@ default _cut_ (blade icon) to _switch_ (replace icon).
 
 **Lesson 4 Multicamera Editing** **229**
 
+
+
+
+--- end of page=251 ---
 
 **3** Option-click (macOS) or Alt-click (Windows) to switch the current active angle to the
 
@@ -8524,6 +9532,10 @@ Edit, or simply press Delete (Backspace).
 
 **Lesson 4 Multicamera Editing** **230**
 
+
+
+
+--- end of page=252 ---
 
 **2** In the multicam viewer, click any other angle (without any modifier keys) to cut to the
 
@@ -8556,8 +9568,16 @@ you can adjust the multicam clip itself.
 **Lesson 4 Multicamera Editing** **231**
 
 
+
+
+--- end of page=253 ---
+
 **Lesson 4 Multicamera Editing** **232**
 
+
+
+
+--- end of page=254 ---
 
 ## **Adjusting a Multicam Clip**
 
@@ -8575,6 +9595,10 @@ The current timeline appears as an individual tab along the top of the timeline 
 
 **Lesson 4 Multicamera Editing** **233**
 
+
+
+
+--- end of page=255 ---
 
 **2** Select any of the individual multicam clips and choose Clip > Open in Timeline, or
 
@@ -8606,6 +9630,10 @@ multicam viewer, with clips on “Video 2” and “Audio 2” being displayed a
 
 **Lesson 4 Multicamera Editing** **234**
 
+
+
+
+--- end of page=256 ---
 
 However, notice that instead of “Video 1” and “Audio 1,” the track names are “IDKN 1,”
 
@@ -8644,6 +9672,10 @@ any changes to the angle order or names.
 **Lesson 4 Multicamera Editing** **235**
 
 
+
+
+--- end of page=257 ---
+
 This adds a new V7 angle, moving each subsequent angle up so the original V7
 
 becomes V8, the original V8 becomes V9, and the original V9 becomes V10, even
@@ -8668,6 +9700,10 @@ part of the song.
 
 **Lesson 4 Multicamera Editing** **236**
 
+
+
+
+--- end of page=258 ---
 
 **6** Drag the **IDKN 7** clip anywhere into the new V7 angle you just added.
 
@@ -8694,6 +9730,10 @@ select both clips.
 **Lesson 4 Multicamera Editing** **237**
 
 
+
+
+--- end of page=259 ---
+
 **10** Choose Clip > Auto Align Clips, or right-click either of these selected clips and choose
 
 Auto Align Clips.
@@ -8717,6 +9757,10 @@ keeping with the other angle names you originally set for this multicam clip.
 
 **Lesson 4 Multicamera Editing** **238**
 
+
+
+
+--- end of page=260 ---
 
 NOTE Changing the angle name also changes the name of the corresponding
 
@@ -8750,6 +9794,10 @@ the latter half of the song.
 
 **Lesson 4 Multicamera Editing** **239**
 
+
+
+
+--- end of page=261 ---
 
 **16** Change the Multicam view menu from “Default” to “3x3” to view all nine video angles
 
@@ -8785,8 +9833,16 @@ you consider necessary now that you have an additional camera angle to consider!
 **Lesson 4 Multicamera Editing** **240**
 
 
+
+
+--- end of page=262 ---
+
 **Lesson 4 Multicamera Editing** **241**
 
+
+
+
+--- end of page=263 ---
 
 Congratulations! You should now have the skills necessary to tackle even the most complex
 
@@ -8810,6 +9866,10 @@ possible results.
 
 **Lesson 4 Multicamera Editing** **242**
 
+
+
+
+--- end of page=264 ---
 
 ## **Lesson Review**
 
@@ -8855,6 +9915,10 @@ angles from the multicam clip(s) in the timeline.
 **Lesson 4 Multicamera Editing** **243**
 
 
+
+
+--- end of page=265 ---
+
 ##### **Answers**
 
 **1** a), b), and c) You can choose to synchronize angles using In points, Out points,
@@ -8878,6 +9942,10 @@ that was used as the active angle in the timeline.
 
 **Lesson 4 Multicamera Editing** **244**
 
+
+
+
+--- end of page=266 ---
 
 ### Lesson 5
 # Project Organization
@@ -8969,6 +10037,10 @@ Power Bins 317
 Lesson Review 321
 
 
+
+
+--- end of page=267 ---
+
 While much of this can be accomplished on the edit page, DaVinci Resolve has a specific
 
 page dedicated to helping you focus on preparing and organizing your media: the media
@@ -9010,6 +10082,10 @@ Project button.
 
 **Lesson 5 Project Organization** **246**
 
+
+
+
+--- end of page=268 ---
 
 **2** In the Create New Project window, type **OMO SETUP** as the name for this new project.
 
@@ -9053,6 +10129,10 @@ TIP You can also use Shift-4 to quickly switch back to the edit page anytime.
 **Lesson 5 Project Organization** **247**
 
 
+
+
+--- end of page=269 ---
+
 As mentioned in the introduction to this chapter, the media page is dedicated to
 
 the reviewing and organizing of your source media—principally video, audio, and
@@ -9081,6 +10161,10 @@ these basic settings.
 
 **Lesson 5 Project Organization** **248**
 
+
+
+
+--- end of page=270 ---
 
 **5** Choose File > Project Settings or press Shift-9 to open the Project Settings window.
 
@@ -9124,6 +10208,10 @@ doubt, always talk to the director to determine the best settings for your proje
 
 **Lesson 5 Project Organization** **249**
 
+
+
+
+--- end of page=271 ---
 
 NOTE If you’re working for broadcast TV, you may be required to work with an
 
@@ -9169,6 +10257,10 @@ frame rate that is unsupported by the video monitoring hardware.
 **Lesson 5 Project Organization** **250**
 
 
+
+
+--- end of page=272 ---
+
 ##### **Saving Project Presets and** **Setting the Default Preset**
 
 If you frequently work with projects that require different Timeline Format settings or you
@@ -9200,6 +10292,10 @@ default project settings, returning the Timeline Format settings to their starti
 
 **Lesson 5 Project Organization** **251**
 
+
+
+
+--- end of page=273 ---
 
 **4** Click the Options menu and choose 1080HD 23.976 > Load Preset to reload the saved
 
@@ -9240,6 +10336,10 @@ Default Preset.
 **Lesson 5 Project Organization** **252**
 
 
+
+
+--- end of page=274 ---
+
 A window confirms that you want to set the 1080HD 23.976 preset as the default for
 
 all future projects.
@@ -9279,6 +10379,10 @@ folder into the media storage browser to open that location directly.
 **Lesson 5 Project Organization** **253**
 
 
+
+
+--- end of page=275 ---
+
 The media storage browser displays five folders containing the clips used in the Organ
 
 Mountain Outfitters promo.
@@ -9302,6 +10406,10 @@ its contents.
 
 **Lesson 5 Project Organization** **254**
 
+
+
+
+--- end of page=276 ---
 
 This folder contains the B-Roll clips for the Organ Mountain Outfitters project, which
 
@@ -9337,6 +10445,10 @@ represented in the Meters tab of the Audio panel.
 **Lesson 5 Project Organization** **255**
 
 
+
+
+--- end of page=277 ---
+
 TIP You can also use the familiar JKL shortcuts to control playback of clips in
 
 the media page.
@@ -9359,6 +10471,10 @@ data panel.
 **Lesson 5 Project Organization** **256**
 
 
+
+
+--- end of page=278 ---
+
 This changes the order of the clips displayed in the media storage browser.
 
 
@@ -9369,6 +10485,10 @@ Of course, you can also use List view to view file information about all the cli
 
 **Lesson 5 Project Organization** **257**
 
+
+
+
+--- end of page=279 ---
 
 **8** Right-click any of the column headers and deselect Start, End, and Frames to hide
 
@@ -9387,6 +10507,10 @@ frame rates.
 
 **Lesson 5 Project Organization** **258**
 
+
+
+
+--- end of page=280 ---
 
 **9** Click the FPS column header to sort the files by ascending frame rate.
 
@@ -9407,6 +10531,10 @@ previous lessons. This time, these files have a consistent resolution and frame 
 
 **Lesson 5 Project Organization** **259**
 
+
+
+
+--- end of page=281 ---
 
 So, to summarize, the project needs to be delivered at a resolution of 1920 x 1080 and
 
@@ -9484,6 +10612,10 @@ and you were able to edit them without any issues.
 **Lesson 5 Project Organization** **260**
 
 
+
+
+--- end of page=282 ---
+
 ##### **Adjusting Project Settings**
 
 You may also notice that these files look a little more washed out than the footage you
@@ -9512,6 +10644,10 @@ Management section.
 **Lesson 5 Project Organization** **261**
 
 
+
+
+--- end of page=283 ---
+
 **2** In the Color Space and Transforms settings, change the Color Science dropdown menu
 
 to DaVinci YRGB Color Managed.
@@ -9524,6 +10660,10 @@ to DaVinci YRGB Color Managed.
 
 **Lesson 5 Project Organization** **262**
 
+
+
+
+--- end of page=284 ---
 
 NOTE Color management is a vast subject far beyond the scope of this editing
 
@@ -9575,6 +10715,10 @@ color managed.
 **Lesson 5 Project Organization** **263**
 
 
+
+
+--- end of page=285 ---
+
 **8** Click the Options menu (…) and choose 1080HD 23.976 > Export Preset.
 
 **9** In the Export Preset window, save the preset as **1080HD 23.976 COLOR**
@@ -9619,6 +10763,10 @@ to reveal the import options.
 
 **Lesson 5 Project Organization** **264**
 
+
+
+
+--- end of page=286 ---
 
 There are three main options for importing clips from the media storage browser:
 
@@ -9683,6 +10831,10 @@ the new timelines.
 **Lesson 5 Project Organization** **265**
 
 
+
+
+--- end of page=287 ---
+
 The clips are added to the media pool in a B-ROLL bin.
 
 
@@ -9713,6 +10865,10 @@ descending order.
 
 **Lesson 5 Project Organization** **266**
 
+
+
+
+--- end of page=288 ---
 
 TIP The User sort order allows you to manually drag the order of bins in
 
@@ -9770,6 +10926,10 @@ the audio of the clips to help achieve the perfect sync!
 **Lesson 5 Project Organization** **267**
 
 
+
+
+--- end of page=289 ---
+
 **1** In the bin list, select the AUDIO bin and Shift-click the CAM C bin to display the
 
 contents of the four selected bins in the media pool.
@@ -9789,6 +10949,10 @@ very low-level audio channels.
 
 **Lesson 5 Project Organization** **268**
 
+
+
+
+--- end of page=290 ---
 
 **3** With the clip still selected, open the Inspector, select the File tab, and scroll down to
 
@@ -9817,6 +10981,10 @@ preview each channel in isolation.
 **Lesson 5 Project Organization** **269**
 
 
+
+
+--- end of page=291 ---
+
 TIP Press Shift-S to toggle audio scrubbing.
 
 
@@ -9838,6 +11006,10 @@ audio viewer, all with healthy audio levels showing in the meters.
 
 **Lesson 5 Project Organization** **270**
 
+
+
+
+--- end of page=292 ---
 
 In the Info tab of the Inspector, you see the individual channels labeled “Mix-L,” “Mix-R,”
 
@@ -9871,6 +11043,10 @@ four audio clips.
 **Lesson 5 Project Organization** **271**
 
 
+
+
+--- end of page=293 ---
+
 **8** In the Format dropdown menu in the Inspector, choose the option “4 ch – mono.”
 
 
@@ -9881,6 +11057,10 @@ channel can now be used individually in the timeline.
 
 **Lesson 5 Project Organization** **272**
 
+
+
+
+--- end of page=294 ---
 
 Now that you have correctly configured the audio, you can sync the video and audio
 
@@ -9909,6 +11089,10 @@ this process easier.
 
 **Lesson 5 Project Organization** **273**
 
+
+
+
+--- end of page=295 ---
 
 **10** Select Waveform for the “Synchronize using” option and select the “Retain embedded
 
@@ -9949,6 +11133,10 @@ a warning dialog would have appeared indicating which clips couldn’t be sync�
 **Lesson 5 Project Organization** **274**
 
 
+
+
+--- end of page=296 ---
+
 Now this clip has six audio channels, the last four of which are much higher in the meters
 
 than the first two. These are the four channels of the audio clip that you have just sync’d.
@@ -9978,6 +11166,10 @@ Audio Configuration panel.
 **Lesson 5 Project Organization** **275**
 
 
+
+
+--- end of page=297 ---
+
 Now you can see that these clips all have a total of six audio channels: the first two
 
 being the embedded audio channels (still configured as stereo), and the last four being
@@ -10003,6 +11195,10 @@ one track is playing.
 **Lesson 5 Project Organization** **276**
 
 
+
+
+--- end of page=298 ---
+
 NOTE Muting and disabling tracks in the Audio Configuration panel results in two
 
 different things when the clips are edited into a timeline. Disabling the audio track
@@ -10027,6 +11223,10 @@ and choosing Enable Clip (or by pressing D).
 
 **Lesson 5 Project Organization** **277**
 
+
+
+
+--- end of page=299 ---
 
 ## **Working with Metadata**
 
@@ -10079,6 +11279,10 @@ recorded. You can edit many of these fields or add your own metadata as needed.
 **Lesson 5 Project Organization** **278**
 
 
+
+
+--- end of page=300 ---
+
 **4** In the media pool, select the B-ROLL bin.
 
 **5** Use Live Preview to quickly review the clips in this bin, and then Command-click
@@ -10096,6 +11300,10 @@ scene number.
 
 **Lesson 5 Project Organization** **279**
 
+
+
+
+--- end of page=301 ---
 
 **8** With the clips reordered, select the first four clips (from Scene 2).
 
@@ -10120,6 +11328,10 @@ them instantly.
 **Lesson 5 Project Organization** **280**
 
 
+
+
+--- end of page=302 ---
+
 The Search field opens at the top of the media pool.
 
 
@@ -10135,6 +11347,10 @@ which by default is what your search is looking for.
 
 **Lesson 5 Project Organization** **281**
 
+
+
+
+--- end of page=303 ---
 
 **4** In the Search field, highlight “furever” and type **pine** to reveal the clips that have the
 
@@ -10162,6 +11378,10 @@ metadata to find media pool clips in even the largest projects.
 
 **Lesson 5 Project Organization** **282**
 
+
+
+
+--- end of page=304 ---
 
 ## **Creating Keyword Smart Bins**
 
@@ -10198,6 +11418,10 @@ same information listed twice.
 **Lesson 5 Project Organization** **283**
 
 
+
+
+--- end of page=305 ---
+
 **3** With the four clips still selected, type **SLOT CANYON** into the Keyword field of the
 
 Metadata panel and press Enter (Return).
@@ -10217,6 +11441,10 @@ whether you want to apply or discard your metadata changes.
 
 **Lesson 5 Project Organization** **284**
 
+
+
+
+--- end of page=306 ---
 
 **5** In the Smart Bins area of the media pool’s bin list, click the Keywords smart bin folder,
 
@@ -10273,6 +11501,10 @@ applied to the selected clip(s).
 **Lesson 5 Project Organization** **285**
 
 
+
+
+--- end of page=307 ---
+
 ##### **Automatic Scene Smart Bins**
 
 Another advantage of adding metadata to your clips is that keywords, scene, and shot
@@ -10306,6 +11538,10 @@ Scene and People folders appear in the Smart Bins list.
 **Lesson 5 Project Organization** **286**
 
 
+
+
+--- end of page=308 ---
+
 **3** Click the disclosure arrow for the Scene smart bins to reveal the appropriate scene
 
 metadata from the clips in the project.
@@ -10335,6 +11571,10 @@ but you won’t be able to perform the steps.
 **Lesson 5 Project Organization** **287**
 
 
+
+
+--- end of page=309 ---
+
 **1** Select all the clips in the Scene 3 smart bin, right-click, and choose AI Tools > Analyze
 
 Clips for People.
@@ -10355,6 +11595,10 @@ displayed in the People window, allowing you to manage the People metadata.
 
 **Lesson 5 Project Organization** **288**
 
+
+
+
+--- end of page=310 ---
 
 **2** In the People window, select the clips identified as “Person 1.”
 
@@ -10380,6 +11624,10 @@ make it easier to identify them.
 **Lesson 5 Project Organization** **289**
 
 
+
+
+--- end of page=311 ---
+
 **6** Select the Other People group.
 
 
@@ -10403,6 +11651,10 @@ rather than a different person helps prevent misidentification.
 
 **Lesson 5 Project Organization** **290**
 
+
+
+
+--- end of page=312 ---
 
 **8** Right-click the other instance of the fire dancer clip and choose Tag As > SAM.
 
@@ -10437,6 +11689,10 @@ although this field is not directly editable.
 **Lesson 5 Project Organization** **291**
 
 
+
+
+--- end of page=313 ---
+
 ## **Configuring Metadata Presets**
 
 As useful as metadata is, there is a lot of it, and it can often seem overwhelming, especially
@@ -10466,6 +11722,10 @@ metadata presets.
 **Lesson 5 Project Organization** **292**
 
 
+
+
+--- end of page=314 ---
+
 The newly created My Favorite Metadata preset appears in the Metadata Presets list.
 
 
@@ -10482,6 +11742,10 @@ this lesson.
 
 **Lesson 5 Project Organization** **293**
 
+
+
+
+--- end of page=315 ---
 
 **5** In the upper right of the Metadata Options, click Save to save your changes to
 
@@ -10506,6 +11770,10 @@ show all groups or a subset that contains the fields of your preset.
 
 **Lesson 5 Project Organization** **294**
 
+
+
+
+--- end of page=316 ---
 
 And…relax. Only the selected metadata fields for the My Favorite Metadata preset
 
@@ -10535,6 +11803,10 @@ hours of work in the edit suite!
 
 **Lesson 5 Project Organization** **295**
 
+
+
+
+--- end of page=317 ---
 
 **1** Choose File > Import Metadata To > Media Pool.
 
@@ -10572,6 +11844,10 @@ because that information is not included in the .csv file you’re importing.
 **Lesson 5 Project Organization** **296**
 
 
+
+
+--- end of page=318 ---
+
 **4** Deselect the “Match using clip start and end Timecode” checkbox since the .csv file
 
 does not contain this information.
@@ -10599,6 +11875,10 @@ than the cryptic filenames given to them by the camera.
 
 **Lesson 5 Project Organization** **297**
 
+
+
+
+--- end of page=319 ---
 
 **Exporting Metadata and Bins**
 
@@ -10670,6 +11950,10 @@ imported to change the current clip names in the media pool to more descriptive 
 **Lesson 5 Project Organization** **298**
 
 
+
+
+--- end of page=320 ---
+
 **1** Select the B-ROLL bin and press Command-A (macOS) or Ctrl-A (Windows) to select all
 
 the clips in the media pool.
@@ -10690,6 +11974,10 @@ A list of potential variables appears that contain “comments.”
 
 **Lesson 5 Project Organization** **299**
 
+
+
+
+--- end of page=321 ---
 
 **4** In the list of variables, click Comments to add it to the Clip Name field.
 
@@ -10723,6 +12011,10 @@ reference the original filename.
 **Lesson 5 Project Organization** **300**
 
 
+
+
+--- end of page=322 ---
+
 TIP To switch between viewing the clip names and original filenames across
 
 the project, choose View > Show File Names.
@@ -10750,6 +12042,10 @@ keywords, camera #, and take number.
 
 **Lesson 5 Project Organization** **301**
 
+
+
+
+--- end of page=323 ---
 
 TIP To reset any custom names you’ve applied to any clips, simply delete the
 
@@ -10788,6 +12084,10 @@ clips you marked as Good Takes earlier.
 **Lesson 5 Project Organization** **302**
 
 
+
+
+--- end of page=324 ---
+
 NOTE The media pool will display the results of the smart bin criteria as you
 
 choose them.
@@ -10824,6 +12124,10 @@ this smart bin.
 **Lesson 5 Project Organization** **303**
 
 
+
+
+--- end of page=325 ---
+
 **7** Click the Add Criteria (+) button to add another set of criteria.
 
 
@@ -10852,6 +12156,10 @@ This sorts the contents of this smart bin to include only interview clips from t
 
 **Lesson 5 Project Organization** **304**
 
+
+
+
+--- end of page=326 ---
 
 **10** Click Create.
 
@@ -10883,6 +12191,10 @@ third dropdown menu is set to “is,” and in the final field, type **5** .
 **Lesson 5 Project Organization** **305**
 
 
+
+
+--- end of page=327 ---
+
 The smart bin now contains the three clips for the 5th take from the interview.
 
 ##### **Using Additional Match Options**
@@ -10907,6 +12219,10 @@ true” to reveal the good takes in the media pool.
 **Lesson 5 Project Organization** **306**
 
 
+
+
+--- end of page=328 ---
+
 **4** Option-click (macOS) or Alt-click (Windows) the Add Criteria button (+) to add a new
 
 subset of Any/All rules.
@@ -10926,6 +12242,10 @@ This will filter just the Good Takes from _either_ scene 2 _or_ scene 3 in the m
 
 **Lesson 5 Project Organization** **307**
 
+
+
+
+--- end of page=329 ---
 
 If your new smart bin is empty, find some clips in the Scene 2 and Scene 3 smart bins
 
@@ -10991,6 +12311,10 @@ edit page.
 **Lesson 5 Project Organization** **308**
 
 
+
+
+--- end of page=330 ---
+
 **1** Select all the clips in the INTERVIEW A CAM smart bin and drag them into the viewer.
 
 **2** In the INTERVIEW bin, create a new bin and name it **SUBCLIPS** .
@@ -11005,6 +12329,10 @@ Source Clip.
 
 **Lesson 5 Project Organization** **309**
 
+
+
+
+--- end of page=331 ---
 
 **4** Set an In point just before Chris says, “My name’s Chris Lang…” and an Out point after
 
@@ -11032,6 +12360,10 @@ is the same filename as the original clip but with the word “Subclip” added 
 **Lesson 5 Project Organization** **310**
 
 
+
+
+--- end of page=332 ---
+
 **7** From the viewer’s recent clips menu, choose the clip **CL INTERVIEW A 8** and set an In
 
 point just before Chris says, “That’s what really inspires us…” and an Out point after he
@@ -11049,6 +12381,10 @@ in the New Subclip window.
 **Lesson 5 Project Organization** **311**
 
 
+
+
+--- end of page=333 ---
+
 **10** Set an In point just before Chris says, “We want people to experience…” and an Out
 
 point after he says “…changed my life.”
@@ -11065,6 +12401,10 @@ Chris says, “Our brand is really a reflection of our community and who we are.
 
 **Lesson 5 Project Organization** **312**
 
+
+
+
+--- end of page=334 ---
 
 **13** Drag the clip into the SUBCLIPS bin and click Create.
 
@@ -11086,6 +12426,10 @@ You now have five subclips in the SUBCLIPS bin.
 **Lesson 5 Project Organization** **313**
 
 
+
+
+--- end of page=335 ---
+
 ##### **Modifying Subclip Metadata**
 
 Now that you’ve created the subclips, you can use some of the metadata tricks you’ve
@@ -11104,6 +12448,10 @@ their starting timecode.
 
 **Lesson 5 Project Organization** **314**
 
+
+
+
+--- end of page=336 ---
 
 **4** In the Metadata panel, type **intro** in the Description field.
 
@@ -11135,6 +12483,10 @@ starting timecode puts these clips in the order they were recorded.
 **Lesson 5 Project Organization** **315**
 
 
+
+
+--- end of page=337 ---
+
 **9** Select all the clips in the SUBCLIPS bin and, in the Metadata panel, delete the
 
 INTERVIEW keyword and type **SUBCLIPS** in the Keyword field.
@@ -11151,6 +12503,10 @@ they appear.
 
 **Lesson 5 Project Organization** **316**
 
+
+
+
+--- end of page=338 ---
 
 **12** Click away from the Name field to rename all the subclips appropriately.
 
@@ -11202,6 +12558,10 @@ current project, power bins are available across every project within the curren
 **Lesson 5 Project Organization** **317**
 
 
+
+
+--- end of page=339 ---
+
 library. They are useful for storing elements you want to reuse across separate projects,
 
 such as graphics, titles, sound effects, or music files.
@@ -11214,6 +12574,10 @@ Power bins are displayed in the media pool above the smart bins.
 
 **Lesson 5 Project Organization** **318**
 
+
+
+
+--- end of page=340 ---
 
 **2** Select the Power Bins Master bin and press Shift-Command-N (macOS) or Shift-Ctrl-N
 
@@ -11243,6 +12607,10 @@ clips and any required metadata into different projects.
 **Lesson 5 Project Organization** **319**
 
 
+
+
+--- end of page=341 ---
+
 NOTE Multicam clips, compound clips, timelines, and Fusion clips cannot be
 
 placed in power bins. Instead, you can choose to export a bin with these elements
@@ -11269,6 +12637,10 @@ as you edit.
 
 **Lesson 5 Project Organization** **320**
 
+
+
+
+--- end of page=342 ---
 
 ## **Lesson Review**
 
@@ -11310,6 +12682,10 @@ current project library?
 **Lesson 5 Project Organization** **321**
 
 
+
+
+--- end of page=343 ---
+
 ##### **Answers**
 
 **1** True. Project presets are saved in the Presets panel of the Project Settings.
@@ -11329,6 +12705,10 @@ the original media file.
 
 **Lesson 5 Project Organization** **322**
 
+
+
+
+--- end of page=344 ---
 
 ### Lesson 6
 # AI Workflows
@@ -11414,6 +12794,10 @@ AI Music Editor (Studio Only) 381
 Lesson Review 387
 
 
+
+
+--- end of page=345 ---
+
 Moreover, the dramatic increase in the capabilities of AI (artificial intelligence) models has
 
 extended into many areas of creative work, and video editing has not remained untouched.
@@ -11485,6 +12869,10 @@ indicator is green, all is well. However, if it changes to red, this indicates t
 **Lesson 6 AI Workflows** **324**
 
 
+
+
+--- end of page=346 ---
+
 GPU power of your computer is insufficient for real-time playback, and the frame rate
 
 indicator drops accordingly.
@@ -11531,8 +12919,16 @@ step to understanding broader DaVinci Resolve workflows.
 **Lesson 6 AI Workflows** **325**
 
 
+
+
+--- end of page=347 ---
+
 **Lesson 6 AI Workflows** **326**
 
+
+
+
+--- end of page=348 ---
 
 ##### **Using Blackmagic Proxy Generator**
 
@@ -11569,6 +12965,10 @@ which the Proxy Generator will continue to monitor.
 **Lesson 6 AI Workflows** **327**
 
 
+
+
+--- end of page=349 ---
+
 **2** Click the Add button to add a watch folder location, navigate to R20 Editors Guide /
 
 Media / OMO, and click Open.
@@ -11604,6 +13004,10 @@ and the low resolution.
 
 **Lesson 6 AI Workflows** **328**
 
+
+
+
+--- end of page=350 ---
 
 **4** Click Start.
 
@@ -11646,6 +13050,10 @@ available for a clip.
 **Lesson 6 AI Workflows** **329**
 
 
+
+
+--- end of page=351 ---
+
 **6** In the viewer, click the Proxy Handling Selector menu.
 
 
@@ -11680,6 +13088,10 @@ Originals.
 **Lesson 6 AI Workflows** **330**
 
 
+
+
+--- end of page=352 ---
+
 The icons for the clips in the media pool return to normal, indicating that the proxy
 
 files are no longer being used, but the proxy media remains available.
@@ -11701,6 +13113,10 @@ media on your system.
 
 **Lesson 6 AI Workflows** **331**
 
+
+
+
+--- end of page=353 ---
 
 NOTE Clip information, such as resolution and codec. will still refer to the
 
@@ -11733,6 +13149,10 @@ OMO source media folder.
 **Lesson 6 AI Workflows** **332**
 
 
+
+
+--- end of page=354 ---
+
 **3** Open the B-ROLL folder to reveal the source files and a new Proxy subfolder.
 
 
@@ -11750,6 +13170,10 @@ without you having to do anything except generate the files in this location.
 
 **Lesson 6 AI Workflows** **333**
 
+
+
+
+--- end of page=355 ---
 
 **5** In Blackmagic Proxy Generator, click the Extract Proxies button.
 
@@ -11773,6 +13197,10 @@ copy it to the new location.
 
 **Lesson 6 AI Workflows** **334**
 
+
+
+
+--- end of page=356 ---
 
 This folder contains the same file structure used for the source media but crucially
 
@@ -11808,6 +13236,10 @@ source clips are safe from being deleted.
 **Lesson 6 AI Workflows** **335**
 
 
+
+
+--- end of page=357 ---
+
 **10** Click Delete, and once the delete proxies process has completed, click Done.
 
 
@@ -11840,6 +13272,10 @@ if you prefer.
 **Lesson 6 AI Workflows** **336**
 
 
+
+
+--- end of page=358 ---
+
 Instantly, DaVinci Resolve looks to the new location for the media, and because the
 
 proxy files are in this location, the proxy status indicators (without the HQ option)
@@ -11868,6 +13304,10 @@ proxy files.
 **Lesson 6 AI Workflows** **337**
 
 
+
+
+--- end of page=359 ---
+
 All the media in the bin now displays as offline since the original media is not available
 
 in this location.
@@ -11894,11 +13334,23 @@ quick and easy, but it can also be used to quickly manage all your proxy media f
 **Lesson 6 AI Workflows** **338**
 
 
+
+
+--- end of page=360 ---
+
 **Lesson 6 AI Workflows** **339**
 
 
+
+
+--- end of page=361 ---
+
 **Lesson 6 AI Workflows** **340**
 
+
+
+
+--- end of page=362 ---
 
 ## AI Transcription (Studio Only)
 
@@ -11940,6 +13392,10 @@ the clips and choose AI Tools > Audio Transcription > Transcribe.
 **Lesson 6 AI Workflows** **341**
 
 
+
+
+--- end of page=363 ---
+
 The Transcribing Audio window will display the progress and speed of the audio
 
 transcription process.
@@ -11952,6 +13408,10 @@ four selected clips.
 
 **Lesson 6 AI Workflows** **342**
 
+
+
+
+--- end of page=364 ---
 
 You will also see that a new icon has appeared on the clips’ thumbnails in the media
 
@@ -11977,6 +13437,10 @@ automatically open it in the viewer.
 
 **Lesson 6 AI Workflows** **343**
 
+
+
+
+--- end of page=365 ---
 
 The word is highlighted by the red indicator, and the playhead moves to the same
 
@@ -12013,6 +13477,10 @@ identifying that different people are speaking, but it could probably use a bit 
 **Lesson 6 AI Workflows** **344**
 
 
+
+
+--- end of page=366 ---
+
 **2** Change Speaker 1 to **Interviewer** and press Return (Enter).
 
 
@@ -12025,6 +13493,10 @@ speaker, and press Return (Enter).
 
 **Lesson 6 AI Workflows** **345**
 
+
+
+
+--- end of page=367 ---
 
 NOTE You can change the speaker assigned to any part of the transcription
 
@@ -12045,6 +13517,10 @@ to search through all the currently loaded clips.
 **Lesson 6 AI Workflows** **346**
 
 
+
+
+--- end of page=368 ---
+
 **5** Click the Replace option to open a second text field. You will use this to specify the
 
 correction to the transcript.
@@ -12058,6 +13534,10 @@ Every instance of the word “Oregon” is highlighted in the transcript.
 
 **Lesson 6 AI Workflows** **347**
 
+
+
+
+--- end of page=369 ---
 
 **7** In the Replace text field, type **Organ** and click Replace All.
 
@@ -12079,6 +13559,10 @@ Edit option. This will enable you to correct single words or entire phrases.
 
 **Lesson 6 AI Workflows** **348**
 
+
+
+
+--- end of page=370 ---
 
 ## **Creating Subclips with Transcription**
 
@@ -12109,6 +13593,10 @@ The subclip is added to the SUBCLIPS bin. Notice that it also has the transcript
 **Lesson 6 AI Workflows** **349**
 
 
+
+
+--- end of page=371 ---
+
 Unfortunately, selecting parts of the transcript like this is very unrefined, and the
 
 subclips will probably need to be adjusted afterward to give you a few extra seconds of
@@ -12135,6 +13623,10 @@ However, you can use your judgment to add your own In and Out points.
 
 **Lesson 6 AI Workflows** **350**
 
+
+
+
+--- end of page=372 ---
 
 **8** In the Transcription window, select the first word of Chris’s next answer, where he
 
@@ -12168,6 +13660,10 @@ Out points by clicking the Play In to Out button or by pressing Option-/
 
 **Lesson 6 AI Workflows** **351**
 
+
+
+
+--- end of page=373 ---
 
 The Transcription window opens immediately because the subclips already have the
 
@@ -12215,6 +13711,10 @@ Command-N (macOS) or Shift-Ctrl-N (Windows).
 **Lesson 6 AI Workflows** **352**
 
 
+
+
+--- end of page=374 ---
+
 **5** In the New Timeline window, change the name to **OMO SYNC PULL** and change the
 
 Audio Track Type to Mono.
@@ -12232,6 +13732,10 @@ than appeared in the media page.
 
 **Lesson 6 AI Workflows** **353**
 
+
+
+
+--- end of page=375 ---
 
 TIP You may want to resize the AI Transcription window so it sits over the
 
@@ -12265,6 +13769,10 @@ timeline toolbar buttons.
 **Lesson 6 AI Workflows** **354**
 
 
+
+
+--- end of page=376 ---
+
 **10** In the timeline, click the Full Extent Zoom button.
 
 
@@ -12280,6 +13788,10 @@ Three clips have the word “experience” in their transcription.
 
 **Lesson 6 AI Workflows** **355**
 
+
+
+
+--- end of page=377 ---
 
 **13** Select the third clip to open **CL INTERVIEW A 12** in the source viewer and highlight the
 
@@ -12300,6 +13812,10 @@ design process starts.”
 
 **Lesson 6 AI Workflows** **356**
 
+
+
+
+--- end of page=378 ---
 
 **17** Press Shift-F12 to perform an Append edit.
 
@@ -12331,6 +13847,10 @@ and choosing Audio Transcription > Clear Transcription.
 **Lesson 6 AI Workflows** **357**
 
 
+
+
+--- end of page=379 ---
+
 ## **Editing Transcribed Clips** **in the Timeline**
 
 You can also use the Transcription window for editing transcribed clips directly in the timeline.
@@ -12357,6 +13877,10 @@ timeline clips are trimmed accordingly!
 
 **Lesson 6 AI Workflows** **358**
 
+
+
+
+--- end of page=380 ---
 
 This makes it so easy to trim long interviews down with one click!
 
@@ -12407,6 +13931,10 @@ no problem because you can always trim the clips directly in the timeline.
 **Lesson 6 AI Workflows** **359**
 
 
+
+
+--- end of page=381 ---
+
 **6** Work through each edit point in the timeline, rippling the start and end points of each
 
 clip to refine the edits between the soundbites as necessary.
@@ -12455,6 +13983,10 @@ order in the timeline will be reflected in the Transcription window.
 
 **Lesson 6 AI Workflows** **360**
 
+
+
+
+--- end of page=382 ---
 
 **Transferring Transcriptions**
 
@@ -12518,6 +14050,10 @@ is limited.
 **Lesson 6 AI Workflows** **361**
 
 
+
+
+--- end of page=383 ---
+
 ## Using IntelliScript (Studio Only)
 
 Instead of using a generated transcription to manually piece together a sync pull, you can
@@ -12543,6 +14079,10 @@ processing application.
 
 **Lesson 6 AI Workflows** **362**
 
+
+
+
+--- end of page=384 ---
 
 TIP You can export a text file of a transcribed clip by clicking the Export
 
@@ -12572,6 +14112,10 @@ alternative takes.
 **Lesson 6 AI Workflows** **363**
 
 
+
+
+--- end of page=385 ---
+
 **5** Using Selection mode, select the clip on Video 1, right-click it, and deselect Enable Clip,
 
 or press D to disable the clip in the timeline.
@@ -12594,6 +14138,10 @@ did in Lesson 1.
 
 **Lesson 6 AI Workflows** **364**
 
+
+
+
+--- end of page=386 ---
 
 ## **Timeline Editing**
 
@@ -12639,6 +14187,10 @@ in this bin.
 
 **Lesson 6 AI Workflows** **365**
 
+
+
+
+--- end of page=387 ---
 
 **7** In the media pool, ensure that the current timeline is selected and click the Transcribe
 
@@ -12699,6 +14251,10 @@ contents of a selected bin(s).
 **Lesson 6 AI Workflows** **366**
 
 
+
+
+--- end of page=388 ---
+
 **10** In the media pool, open the Keywords smart bin list and Command-click (macOS) or
 
 Ctrl-click (Windows) the PINA BLANCA, PINE TRAIL, RETAIL, TIMELAPSE, and WHITE
@@ -12712,11 +14268,19 @@ Selecting all these smart bins displays their contents together in the media poo
 **Lesson 6 AI Workflows** **367**
 
 
+
+
+--- end of page=389 ---
+
 **11** In the media pool Sort menu, choose to sort the footage by Scene.
 
 
 **Lesson 6 AI Workflows** **368**
 
+
+
+
+--- end of page=390 ---
 
 **12** Select all the clips displayed in the media pool, right-click them, and choose Create
 
@@ -12730,6 +14294,10 @@ uncheck Use Selected Mark In/Out, and then click Create.
 
 **Lesson 6 AI Workflows** **369**
 
+
+
+
+--- end of page=391 ---
 
 **14** The new timeline is created in the media pool and opens in the timeline panel.
 
@@ -12760,6 +14328,10 @@ reopen the **OMO PROMO RE-EDIT** timeline.
 **Lesson 6 AI Workflows** **370**
 
 
+
+
+--- end of page=392 ---
+
 Now, you’ll use the OMO B-ROLL as a source for your edits. This requires opening the
 
 OMO B-ROLL timeline in the _source viewer_ .
@@ -12781,6 +14353,10 @@ timeline symbol next to the name.
 
 **Lesson 6 AI Workflows** **371**
 
+
+
+
+--- end of page=393 ---
 
 **19** Close the media pool.
 
@@ -12805,6 +14381,10 @@ after he says, “We want people to experience the southwest because….”
 **Lesson 6 AI Workflows** **372**
 
 
+
+
+--- end of page=394 ---
+
 The content of the source viewer opens in a read-only timeline (as denoted by the
 
 blue playhead).
@@ -12819,6 +14399,10 @@ source playhead’s position.
 
 **Lesson 6 AI Workflows** **373**
 
+
+
+
+--- end of page=395 ---
 
 **4** Press F12 to make a Place on Top edit and switch back to the timeline in the
 
@@ -12842,6 +14426,10 @@ guy enters with his left leg outstretched.
 **Lesson 6 AI Workflows** **374**
 
 
+
+
+--- end of page=396 ---
+
 **7** Press F12 to make a Place on Top edit.
 
 
@@ -12860,6 +14448,10 @@ sprinkles sand from her hand.
 **Lesson 6 AI Workflows** **375**
 
 
+
+
+--- end of page=397 ---
+
 **10** Press Q to switch back to the timeline viewer, press Option-Command-1 (macOS) or
 
 Alt-Ctrl-1 (Windows) to disable the A1 destination control in the timeline, and press F12
@@ -12877,6 +14469,10 @@ Chris says “… the food….”
 
 **Lesson 6 AI Workflows** **376**
 
+
+
+
+--- end of page=398 ---
 
 **13** Press F12 for a Place on Top edit.
 
@@ -12898,6 +14494,10 @@ Remember, though, that you only need an Out point in the source or timeline view
 
 **Lesson 6 AI Workflows** **377**
 
+
+
+
+--- end of page=399 ---
 
 **17** In the timeline, set an In point after Chris says “…we bring it back to the store…” and an
 
@@ -12923,6 +14523,10 @@ set an Out point just before the black circle appears on his screen for the firs
 **Lesson 6 AI Workflows** **378**
 
 
+
+
+--- end of page=400 ---
+
 **22** Press Q and set an Out point on the shot of the girl hanging up the T-shirt.
 
 
@@ -12935,6 +14539,10 @@ the southwest.”
 
 **Lesson 6 AI Workflows** **379**
 
+
+
+
+--- end of page=401 ---
 
 **25** Press Q to switch to the source viewer and set an Out point on the shot where the girl
 
@@ -12965,6 +14573,10 @@ using this technique instead of copying and pasting between timelines.
 
 **Lesson 6 AI Workflows** **380**
 
+
+
+
+--- end of page=402 ---
 
 ## AI Music Editor (Studio Only)
 
@@ -12998,6 +14610,10 @@ in the timeline.
 **Lesson 6 AI Workflows** **381**
 
 
+
+
+--- end of page=403 ---
+
 **3** Press F12 to make a Place on Top edit, adding the music track to a new Audio 3 track.
 
 
@@ -13017,6 +14633,10 @@ jagged lines representing where the track has been edited.
 
 **Lesson 6 AI Workflows** **382**
 
+
+
+
+--- end of page=404 ---
 
 NOTE The edited clip is actually a specialized Music Editor clip, which allows
 
@@ -13059,6 +14679,10 @@ However, you can also drag the clip to the desired duration.
 **Lesson 6 AI Workflows** **383**
 
 
+
+
+--- end of page=405 ---
+
 **8** In the AI Music Editor controls, enable the Live Trim option.
 
 
@@ -13076,8 +14700,16 @@ icon that indicates you’re live trimming the clip.
 **Lesson 6 AI Workflows** **384**
 
 
+
+
+--- end of page=406 ---
+
 **Lesson 6 AI Workflows** **385**
 
+
+
+
+--- end of page=407 ---
 
 Congratulations! You have successfully re-edited another rough cut of the Organ Mountain
 
@@ -13094,6 +14726,10 @@ precision yourself!
 
 **Lesson 6 AI Workflows** **386**
 
+
+
+
+--- end of page=408 ---
 
 ## **Lesson Review**
 
@@ -13131,6 +14767,10 @@ music clips to achieve the best timing.
 **Lesson 6 AI Workflows** **387**
 
 
+
+
+--- end of page=409 ---
+
 ##### **Answers**
 
 **1** b) Blackmagic Proxy Generator.
@@ -13152,6 +14792,10 @@ editing techniques to fit the material to the desired duration.
 
 **Lesson 6 AI Workflows** **388**
 
+
+
+
+--- end of page=410 ---
 
 ### Lesson 7
 # Edit Page Effects
@@ -13225,6 +14869,10 @@ Video Collage 463
 Lesson Review 473
 
 
+
+
+--- end of page=411 ---
+
 ## **Setting Up the Project**
 
 To begin this lesson, you will import a DaVinci Resolve project and configure the edit page
@@ -13257,6 +14905,10 @@ throughout this lesson.
 **Lesson 7 Edit Page Effects** **390**
 
 
+
+
+--- end of page=412 ---
+
 **4** Click the Select Timeline dropdown menu above the timeline viewer.
 
 
@@ -13275,6 +14927,10 @@ Recently Used order, so recently accessed timelines appear at the top.
 
 **Lesson 7 Edit Page Effects** **391**
 
+
+
+
+--- end of page=413 ---
 
 **7** Click Save to save the change and close the Preferences window.
 
@@ -13311,6 +14967,10 @@ _Living in the Age of Airplanes_ .
 **Lesson 7 Edit Page Effects** **392**
 
 
+
+
+--- end of page=414 ---
+
 Your job is to use the compositing functions available in the edit page to stylize the final
 
 archive image and place it in the bottom right corner of the timeline viewer.
@@ -13330,6 +14990,10 @@ This clip is a short archive clip from the early days of powered flight.
 
 **Lesson 7 Edit Page Effects** **393**
 
+
+
+
+--- end of page=415 ---
 
 A new, empty track, Video 5, is created in the timeline above the track you initially
 
@@ -13353,6 +15017,10 @@ matter which one you selected before choosing Mark Selection.
 
 **Lesson 7 Edit Page Effects** **394**
 
+
+
+
+--- end of page=416 ---
 
 **5** In the track header, click the V5 destination control, or press Option-5 (macOS) or Alt-5
 
@@ -13392,6 +15060,10 @@ using that clip’s duration without the need to add separate In and Out points.
 **Lesson 7 Edit Page Effects** **395**
 
 
+
+
+--- end of page=417 ---
+
 **6** Drag the clip from the source viewer to the Fit to Fill option in the timeline
 
 viewer overlays.
@@ -13414,6 +15086,10 @@ The clip is now running at about 65% of its original speed.
 
 **Lesson 7 Edit Page Effects** **396**
 
+
+
+
+--- end of page=418 ---
 
 NOTE When editing a longer source clip to a shorter timeline duration, the speed
 
@@ -13446,6 +15122,10 @@ The New Compound Clip window opens.
 **Lesson 7 Edit Page Effects** **397**
 
 
+
+
+--- end of page=419 ---
+
 **3** Name the compound clip you are creating **Archive 4** and click Create.
 
 
@@ -13459,6 +15139,10 @@ The new compound clip is added to the selected bin in the media pool.
 
 **Lesson 7 Edit Page Effects** **398**
 
+
+
+
+--- end of page=420 ---
 
 ##### **Adding the Traveling Matte**
 
@@ -13482,6 +15166,10 @@ did in Lesson 4.
 
 **Lesson 7 Edit Page Effects** **399**
 
+
+
+
+--- end of page=421 ---
 
 Similar to that multicam clip, any changes you make in this timeline will be seen in the
 
@@ -13510,6 +15198,10 @@ alpha channel that you will use to composite it with the **AOA Archive 4** clip.
 **Lesson 7 Edit Page Effects** **400**
 
 
+
+
+--- end of page=422 ---
+
 **6** In the Timeline View Options menu, select Viewer Background > Checkerboard.
 
 
@@ -13529,6 +15221,10 @@ as a matte by using the image’s luminance, or luma.
 
 **Lesson 7 Edit Page Effects** **401**
 
+
+
+
+--- end of page=423 ---
 
 **7** Drag the matte from the source viewer to the Fit to Fill overlay, or press Shift-F11, to
 
@@ -13554,6 +15250,10 @@ NOTE If you were using matte without an alpha channel, you can use Lum
 **Lesson 7 Edit Page Effects** **402**
 
 
+
+
+--- end of page=424 ---
+
 **9** Select the **AOA Archive 4** clip in the timeline and change the Composite Mode to
 
 Foreground to composite the clip using the matte’s alpha channel.
@@ -13572,6 +15272,10 @@ Composite timeline.
 **Lesson 7 Edit Page Effects** **403**
 
 
+
+
+--- end of page=425 ---
+
 ##### **Resizing the Composited Image**
 
 The final stage is to adjust the size and positioning of this clip in the overall composite.
@@ -13588,6 +15292,10 @@ and drag the image into the lower right corner of the timeline viewer.
 
 **Lesson 7 Edit Page Effects** **404**
 
+
+
+
+--- end of page=426 ---
 
 TIP You can use the Zoom and Position controls in the Video tab in the
 
@@ -13617,6 +15325,10 @@ applied) and choose Edit > Copy or press Command-C (macOS) or Ctrl-C (Windows).
 **Lesson 7 Edit Page Effects** **405**
 
 
+
+
+--- end of page=427 ---
+
 **5** Select the Archive 4 compound clip in the timeline and choose Edit > Paste Attributes
 
 or press Option-V (macOS) or Alt-V (Windows).
@@ -13629,6 +15341,10 @@ the Position, Yaw, and Zoom parameters, and click Apply.
 
 **Lesson 7 Edit Page Effects** **406**
 
+
+
+
+--- end of page=428 ---
 
 **7** With the Archive 4 clip still selected, click the Effects tab in the Inspector and adjust the
 
@@ -13655,6 +15371,10 @@ the Zoom and/or Position values as required.
 
 **Lesson 7 Edit Page Effects** **407**
 
+
+
+
+--- end of page=429 ---
 
 **About Real-Time Performance and the Render Cache**
 
@@ -13722,6 +15442,10 @@ caching options.
 **Lesson 7 Edit Page Effects** **408**
 
 
+
+
+--- end of page=430 ---
+
 ## **Changing Clip Speed**
 
 Changing the speed of a clip is a very common task for many editors and can be easily
@@ -13757,6 +15481,10 @@ Viewer’s Options (…) menu.
 **Lesson 7 Edit Page Effects** **409**
 
 
+
+
+--- end of page=431 ---
+
 **2** Choose Workspace > Single Viewer Mode.
 
 
@@ -13772,6 +15500,10 @@ per second, and the final clip is 60 fps.
 
 **Lesson 7 Edit Page Effects** **410**
 
+
+
+
+--- end of page=432 ---
 
 **4** Choose Timeline > Find Timeline in Media Pool to reveal the current timeline in the
 
@@ -13790,6 +15522,10 @@ clip and the frame rate of the timeline.
 
 **Lesson 7 Edit Page Effects** **411**
 
+
+
+
+--- end of page=433 ---
 
 **6** Close the media pool and place your playhead over the first clip in the timeline of the
 
@@ -13810,6 +15546,10 @@ clip’s speed.
 
 **Lesson 7 Edit Page Effects** **412**
 
+
+
+
+--- end of page=434 ---
 
 **9** Click the first Direction control to return the clip back to forward playback.
 
@@ -13860,6 +15600,10 @@ speed that is comparable to the timeline frame rate.
 **Lesson 7 Edit Page Effects** **413**
 
 
+
+
+--- end of page=435 ---
+
 **13** In the Inspector, click the Change Speed field and type **200** to change the playback
 
 speed to 200%, or around 47.96 frames per second.
@@ -13877,6 +15621,10 @@ takeoff from a lake in Alaska.
 
 **Lesson 7 Edit Page Effects** **414**
 
+
+
+
+--- end of page=436 ---
 
 **16** Play back the clip to review the speed change.
 
@@ -13919,6 +15667,10 @@ the change.
 **Lesson 7 Edit Page Effects** **415**
 
 
+
+
+--- end of page=437 ---
+
 Frame Blend applies short dissolves between the duplicated frames to smooth out the
 
 movement within the slowed clip. Depending on the footage, it can often create a
@@ -13947,6 +15699,10 @@ dancing with the flaming sticks.
 
 **Lesson 7 Edit Page Effects** **416**
 
+
+
+
+--- end of page=438 ---
 
 This clip was originally shot at 60 frames per second. You previously used this shot in
 
@@ -13990,6 +15746,10 @@ which can be achieved using Resolve’s Retime controls.
 **Lesson 7 Edit Page Effects** **417**
 
 
+
+
+--- end of page=439 ---
+
 **1** From the Timeline dropdown menu, choose the **03 Variable Speed Changes** timeline,
 
 or choose Playback > Next Timeline.
@@ -14016,6 +15776,10 @@ controls, select the Ripple Timeline option and change the Speed% to **800** .
 **Lesson 7 Edit Page Effects** **418**
 
 
+
+
+--- end of page=440 ---
+
 Because you changed the Ripple Timeline option before you adjusted the speed of the
 
 clip, the rest of the footage in the timeline has rippled to accommodate the clip’s new,
@@ -14039,6 +15803,10 @@ passing the T-shirt to the second girl (around a third of the way into the clip)
 **Lesson 7 Edit Page Effects** **419**
 
 
+
+
+--- end of page=441 ---
+
 **3** Select the clip in the timeline and choose Clip > Retime Controls or press Command-R
 
 (macOS) or Ctrl-R (Windows) to display the clip’s retime controls along the top of the
@@ -14059,6 +15827,10 @@ now display two 800% speed segments on this clip.
 **Lesson 7 Edit Page Effects** **420**
 
 
+
+
+--- end of page=442 ---
+
 **5** Move the playhead forward until the second girl has taken the T-shirt and is reaching
 
 for the clothing hanger.
@@ -14078,6 +15850,10 @@ speed points.
 
 **Lesson 7 Edit Page Effects** **421**
 
+
+
+
+--- end of page=443 ---
 
 **7** Place the playhead at the point where the second girl hangs the T-shirt in the shop and
 
@@ -14103,6 +15879,10 @@ speed point) and choose Change Speed > 400%.
 
 **Lesson 7 Edit Page Effects** **422**
 
+
+
+
+--- end of page=444 ---
 
 This segment of the clip, between the first and second speed points, will now play back
 
@@ -14140,6 +15920,10 @@ each speed segment.
 **Lesson 7 Edit Page Effects** **423**
 
 
+
+
+--- end of page=445 ---
+
 **12** Select the lower part of the first speed point and drag it to the left until the viewer
 
 shows the girl behind the store’s door.
@@ -14159,6 +15943,10 @@ Again, this refines the position of the speed point to a slightly later frame.
 
 **Lesson 7 Edit Page Effects** **424**
 
+
+
+
+--- end of page=446 ---
 
 ##### **Adjusting the Retime Curve**
 
@@ -14183,6 +15971,10 @@ of the interface and resize the Keyframes panel.
 **Lesson 7 Edit Page Effects** **425**
 
 
+
+
+--- end of page=447 ---
+
 You can see your Speed Points represented by a series of keyframes in the Keyframes
 
 panel under the Retime Speed and Retime Frame controls.
@@ -14197,6 +15989,10 @@ represented by two uninterrupted horizontal lines.
 
 **Lesson 7 Edit Page Effects** **426**
 
+
+
+
+--- end of page=448 ---
 
 **4** In the Keyframes Curves display, click the Parameters > Video menu, deselect the
 
@@ -14217,6 +16013,10 @@ between the second and third speed points up to around 900%.
 **Lesson 7 Edit Page Effects** **427**
 
 
+
+
+--- end of page=449 ---
+
 This adjusts the relevant speed segment of the clip in the timeline.
 
 
@@ -14232,6 +16032,10 @@ natural changes between each segment.
 
 **Lesson 7 Edit Page Effects** **428**
 
+
+
+
+--- end of page=450 ---
 
 Bézier handles are added to each of the selected speed points.
 
@@ -14258,6 +16062,10 @@ introduction for a character in a film or as a teaching aid in a training video.
 **Lesson 7 Edit Page Effects** **429**
 
 
+
+
+--- end of page=451 ---
+
 **1** Place the playhead over the second clip in the timeline on a frame where the airplane’s
 
 undercarriage is clearly visible.
@@ -14272,6 +16080,10 @@ choose Freeze Frame.
 
 **Lesson 7 Edit Page Effects** **430**
 
+
+
+
+--- end of page=452 ---
 
 Two Speed Points are added to the clip, with a 2-second freeze frame between them,
 
@@ -14290,6 +16102,10 @@ Speed curve.
 
 **Lesson 7 Edit Page Effects** **431**
 
+
+
+
+--- end of page=453 ---
 
 ##### **Changing Retime Processing** **and Motion Estimation**
 
@@ -14324,6 +16140,10 @@ Optical Flow in the clip or Project Settings.
 
 **Lesson 7 Edit Page Effects** **432**
 
+
+
+
+--- end of page=454 ---
 
 Motion Estimation has several settings that become increasingly demanding: Standard
 
@@ -14371,6 +16191,10 @@ Cache Color Output.
 **Lesson 7 Edit Page Effects** **433**
 
 
+
+
+--- end of page=455 ---
+
 With AI Speed Warp Faster enabled in the Motion Estimation settings for this clip, the
 
 results are vastly superior. AI Speed Warp, however, is such an intensive process that it
@@ -14416,6 +16240,10 @@ but as part of a batch operation.
 **Lesson 7 Edit Page Effects** **434**
 
 
+
+
+--- end of page=456 ---
+
 **2** In the timeline, right-click the **ST MAARTEN OVERHEAD** clip and choose
 
 Render in Place.
@@ -14455,6 +16283,10 @@ Name] > Renders.
 **Lesson 7 Edit Page Effects** **435**
 
 
+
+
+--- end of page=457 ---
+
 The new media file is created in the chosen location.
 
 
@@ -14486,6 +16318,10 @@ effects further.
 
 **Lesson 7 Edit Page Effects** **436**
 
+
+
+
+--- end of page=458 ---
 
 **5** In the timeline, right-click the **ST MAARTEN OVERHEAD Render.mov** clip and choose
 
@@ -14542,6 +16378,10 @@ film _Hyperlight_ .
 **Lesson 7 Edit Page Effects** **437**
 
 
+
+
+--- end of page=459 ---
+
 **1** Close the media pool and select the **04 3D Keyer** timeline from the timeline viewer
 
 menu, or choose Playback > Next > Timeline.
@@ -14565,6 +16405,10 @@ background plate of the planet.
 **Lesson 7 Edit Page Effects** **438**
 
 
+
+
+--- end of page=460 ---
+
 This is the view that the man should have outside the spaceship’s window. To achieve
 
 this, you need to apply the 3D Keyer filter.
@@ -14581,6 +16425,10 @@ locate the Resolve FX Key filters.
 
 **Lesson 7 Edit Page Effects** **439**
 
+
+
+
+--- end of page=461 ---
 
 NOTE Each of the Resolve FX Key filters is based on the appropriate color
 
@@ -14628,6 +16476,10 @@ the viewer.
 **Lesson 7 Edit Page Effects** **440**
 
 
+
+
+--- end of page=462 ---
+
 **9** With the first Eyedropper tool selected in the 3D Keyer controls, click and drag across
 
 the center area of the green screen.
@@ -14656,6 +16508,10 @@ screen that fell outside your initial selection.
 
 **Lesson 7 Edit Page Effects** **441**
 
+
+
+
+--- end of page=463 ---
 
 **12** Click and drag again to create additional selections for the key across the areas of
 
@@ -14693,6 +16549,10 @@ To refine the key, you need to access the Matte Finesse controls.
 **Lesson 7 Edit Page Effects** **442**
 
 
+
+
+--- end of page=464 ---
+
 **15** In the Effects Inspector, click the disclosure arrow to collapse the Usage Options
 
 controls, and then click the disclosure arrow for the Matte Finesse controls.
@@ -14718,6 +16578,10 @@ viewer when you’re happy with your results.
 
 **Lesson 7 Edit Page Effects** **443**
 
+
+
+
+--- end of page=465 ---
 
 **17** Change the Output menu back to Final Composite to see the results so far.
 
@@ -14751,6 +16615,10 @@ the foreground elements.
 
 **Lesson 7 Edit Page Effects** **444**
 
+
+
+
+--- end of page=466 ---
 
 Look carefully, and you should see that the man’s face reflects some of the green.
 
@@ -14790,6 +16658,10 @@ for adding simple rectangular or circular mattes.
 **Lesson 7 Edit Page Effects** **445**
 
 
+
+
+--- end of page=467 ---
+
 ## **Transform FX**
 
 Another common compositing task many editors must undertake is adding elements to
@@ -14826,6 +16698,10 @@ Library, and locate the Resolve FX Transform group of filters.
 **Lesson 7 Edit Page Effects** **446**
 
 
+
+
+--- end of page=468 ---
+
 **3** Double-click the Transform filter to apply it to the **CC-Logo.png** clip in the timeline and
 
 close the Effects library.
@@ -14847,6 +16723,10 @@ and cropping controls.
 
 **Lesson 7 Edit Page Effects** **447**
 
+
+
+
+--- end of page=469 ---
 
 **4** Change the Control Mode menu to Interactive – Canvas.
 
@@ -14873,6 +16753,10 @@ and edges of the window in the underlying video clip.
 **Lesson 7 Edit Page Effects** **448**
 
 
+
+
+--- end of page=470 ---
+
 NOTE You will need to judge where the top left corner will sit based on how
 
 the graphic’s edges align with the edges of the window because the top left
@@ -14896,6 +16780,10 @@ No problem. A couple of keyframes should help.
 **Lesson 7 Edit Page Effects** **449**
 
 
+
+
+--- end of page=471 ---
+
 **7** Return your playhead to the start of the timeline and, in the Effects Inspector, click the
 
 disclosure arrow to open the Animation controls, and then click the keyframe button
@@ -14916,6 +16804,10 @@ keyframe is automatically added to the clip at the playhead location.
 
 **Lesson 7 Edit Page Effects** **450**
 
+
+
+
+--- end of page=472 ---
 
 **9** Press Shift-` (grave accent) to disable the timeline viewer’s onscreen controls and
 
@@ -14964,6 +16856,10 @@ for any editor to have up their sleeve!
 
 **Lesson 7 Edit Page Effects** **451**
 
+
+
+
+--- end of page=473 ---
 
 NOTE The final control mode for the Transform filter is Interactive – Pins.
 
@@ -15014,6 +16910,10 @@ different tracks.
 **Lesson 7 Edit Page Effects** **452**
 
 
+
+
+--- end of page=474 ---
+
 Typically, to create a picture-in-picture effect, all the clips on the upper video tracks
 
 would need to be scaled and positioned accordingly, similar to how the composite in
@@ -15051,6 +16951,10 @@ Collage controls.
 **Lesson 7 Edit Page Effects** **453**
 
 
+
+
+--- end of page=475 ---
+
 Each of the tiles is now clearly highlighted and denoted by a number. The actual
 
 number of tiles is dictated by the Columns and Rows controls in the Inspector. The tile
@@ -15067,6 +16971,10 @@ This is the correct basic layout for this exercise.
 
 **Lesson 7 Edit Page Effects** **454**
 
+
+
+
+--- end of page=476 ---
 
 These controls allow you to customize the tiles either as a group or individually. Since
 
@@ -15088,6 +16996,10 @@ With no Tile 3, Tile 2 now becomes the currently active tile by default.
 **Lesson 7 Edit Page Effects** **455**
 
 
+
+
+--- end of page=477 ---
+
 **6** From the Active Tile menu, choose Tile 1 to make it the currently active tile.
 
 **7** Click the Custom Size/Shape disclosure arrow to reveal the controls.
@@ -15107,6 +17019,10 @@ With the layout of the tiles now set, you will customize their look all together
 
 **Lesson 7 Edit Page Effects** **456**
 
+
+
+
+--- end of page=478 ---
 
 **10** Increase the Tile Border to about 0.025 to add a consistent border around all the tiles.
 
@@ -15141,6 +17057,10 @@ animated, rather than their content, so Fade or Shrink are good choices here.
 **Lesson 7 Edit Page Effects** **457**
 
 
+
+
+--- end of page=479 ---
+
 **13** Change the Animate menu to Intro Only, uncheck the Shrink checkbox, select the Fade
 
 checkbox, and change the Duration slider to 24 to create a 1-second fade for the tiles
@@ -15174,6 +17094,10 @@ can clearly see the three tiles after their 24-frame fade-in.
 **Lesson 7 Edit Page Effects** **458**
 
 
+
+
+--- end of page=480 ---
+
 Once again, the clip on Video 3 becomes visible through the holes created by each tile.
 
 You now need to scale the clip to fit the hole created by Tile 2.
@@ -15194,6 +17118,10 @@ clip in the hole created by Tile 3, with the girl dominant in the frame.
 
 **Lesson 7 Edit Page Effects** **459**
 
+
+
+
+--- end of page=481 ---
 
 **6** As the clip’s edges extend untidily beyond the edges of the tile, choose View > Viewer
 
@@ -15221,6 +17149,10 @@ Awesome! However, as always, there’s one final touch to add.
 
 **Lesson 7 Edit Page Effects** **460**
 
+
+
+
+--- end of page=482 ---
 
 ##### **Stacking and Reordering Effects**
 
@@ -15254,6 +17186,10 @@ filter because it was applied after the Video Collage.
 **Lesson 7 Edit Page Effects** **461**
 
 
+
+
+--- end of page=483 ---
+
 **3** Click the Up Arrow control for the Gaussian Blur filter (to the left of the trash can icon)
 
 to move the blur effect above the Video Collage filter.
@@ -15278,6 +17214,10 @@ Blur filter.
 
 **Lesson 7 Edit Page Effects** **462**
 
+
+
+
+--- end of page=484 ---
 
 Excellent. You’ve seen how the Video Collage filter can be used to create effective picture
 in-picture effects over and above just using the transform controls available in the Video
@@ -15325,6 +17265,10 @@ that you will use to build a custom animated intro for Organ Mountain Outfitters
 **Lesson 7 Edit Page Effects** **463**
 
 
+
+
+--- end of page=485 ---
+
 **3** Move your playhead to the point where she has turned to look at the camera
 
 (at about 3:00).
@@ -15349,6 +17293,10 @@ displays as a picture-in-picture.
 
 **Lesson 7 Edit Page Effects** **464**
 
+
+
+
+--- end of page=486 ---
 
 **6** Click the Preview Layout checkbox to view the familiar tile preview and change the
 
@@ -15375,6 +17323,10 @@ outer margins haven’t changed.
 
 **Lesson 7 Edit Page Effects** **465**
 
+
+
+
+--- end of page=487 ---
 
 **8** Click the Tiles button and open the Tile Styling controls.
 
@@ -15406,6 +17358,10 @@ The filter is now ready to be copied to the other clips in the tracks Video 4 an
 **Lesson 7 Edit Page Effects** **466**
 
 
+
+
+--- end of page=488 ---
+
 ##### **Copying and Pasting Attributes**
 
 The easiest way to apply the same effect, with the same settings, to the other clips is to use
@@ -15435,6 +17391,10 @@ to paste just the Video Collage plug-in from the copied clip, and click Apply.
 **Lesson 7 Edit Page Effects** **467**
 
 
+
+
+--- end of page=489 ---
+
 The Video Collage filter is applied to the selected clips with the same settings as the
 
 original clip from which it was copied. You will need to make a few changes to these
@@ -15461,6 +17421,10 @@ selected clip.
 
 **Lesson 7 Edit Page Effects** **468**
 
+
+
+
+--- end of page=490 ---
 
 **9** Select the clip on Video 5, change the Active Tile menu to Tile 3 and, in the Resize
 
@@ -15493,6 +17457,10 @@ are collapsed into a single compound clip, leaving two empty timeline tracks.
 **Lesson 7 Edit Page Effects** **469**
 
 
+
+
+--- end of page=491 ---
+
 **13** Right-click the timeline track headers and choose Delete Empty Tracks to remove the
 
 redundant video tracks.
@@ -15520,6 +17488,10 @@ adding a new keyframe to this position automatically.
 **Lesson 7 Edit Page Effects** **470**
 
 
+
+
+--- end of page=492 ---
+
 **16** With the compound clip still selected in the timeline, open the Keyframes panel.
 
 From the Keyframes Curves Parameters menu, select the Position Y parameter
@@ -15534,6 +17506,10 @@ to apply a Bézier handle to the curve.
 
 **Lesson 7 Edit Page Effects** **471**
 
+
+
+
+--- end of page=493 ---
 
 **18** To change the timing of the animation, select the compound clip in the timeline, and
 
@@ -15583,6 +17559,10 @@ Lesson 07 / Timelines.
 **Lesson 7 Edit Page Effects** **472**
 
 
+
+
+--- end of page=494 ---
+
 ## **Lesson Review**
 
 **1** Which DaVinci Resolve FX can be used to key blue- or green-screen footage over
@@ -15626,6 +17606,10 @@ in Project Settings.
 **Lesson 7 Edit Page Effects** **473**
 
 
+
+
+--- end of page=495 ---
+
 ##### **Answers**
 
 **1** b) and c). The Luma Keyer has no controls for selecting hue and saturation values.
@@ -15641,6 +17625,10 @@ in Project Settings.
 
 **Lesson 7 Edit Page Effects** **474**
 
+
+
+
+--- end of page=496 ---
 
 ### Lesson 8
 # Audio Editing
@@ -15722,6 +17710,10 @@ Mixing the Music 539
 Lesson Review 543
 
 
+
+
+--- end of page=497 ---
+
 ## **Preparing the Project**
 
 For this lesson, you will work with a version of the Organ Mountain Outfitters promo you’ve
@@ -15759,6 +17751,10 @@ You are now ready to start adding the sound design elements for this timeline.
 
 **Lesson 8 Audio Editing** **476**
 
+
+
+
+--- end of page=498 ---
 
 ## **When Should You Start Mixing?**
 
@@ -15832,6 +17828,10 @@ enhance the audience’s emotion.
 **Lesson 8 Audio Editing** **477**
 
 
+
+
+--- end of page=499 ---
+
 ## **Organizing the Timeline**
 
 Before you start editing sound effects and other audio clips into the timeline, it’s worth
@@ -15869,6 +17869,10 @@ tracks. This will help you visually identify the different audio elements.
 **Lesson 8 Audio Editing** **478**
 
 
+
+
+--- end of page=500 ---
+
 **4** Right-click the track controls for the DIALOGUE track and choose Change Track
 
 Color > Teal.
@@ -15887,6 +17891,10 @@ supplant the color assigned to the track.
 
 **Lesson 8 Audio Editing** **479**
 
+
+
+
+--- end of page=501 ---
 
 ## **Adding the Sound Effects**
 
@@ -15922,6 +17930,10 @@ _Fairlight Audio Guide to DaVinci Resolve 20_ .
 **Lesson 8 Audio Editing** **480**
 
 
+
+
+--- end of page=502 ---
+
 **2** Open the clips one at a time in the source viewer.
 
 
@@ -15949,6 +17961,10 @@ Add Track > Stereo.
 **Lesson 8 Audio Editing** **481**
 
 
+
+
+--- end of page=503 ---
+
 A new track (Audio 3) is added to the timeline below the SOT track.
 
 
@@ -15975,6 +17991,10 @@ TIP Deselect the clips in the timeline to better see the marked duration.
 **Lesson 8 Audio Editing** **482**
 
 
+
+
+--- end of page=504 ---
+
 **7** Choose Timeline > Track Destination Selection > Audio Destination 3 or press Option
 Command-3 (macOS) or Alt-Ctrl-3 (Windows) to change the A1 destination control to
 
@@ -15988,6 +18008,10 @@ set an In point at an appropriate location.
 
 **Lesson 8 Audio Editing** **483**
 
+
+
+
+--- end of page=505 ---
 
 **9** Make an Overwrite edit.
 
@@ -16005,6 +18029,10 @@ mark an In point at an appropriate location.
 **Lesson 8 Audio Editing** **484**
 
 
+
+
+--- end of page=506 ---
+
 **12** Make an Overwrite edit.
 
 **13** Select the **STORE 2** and **STORE 34** clips and press Shift-A to mark the selection.
@@ -16018,6 +18046,10 @@ appropriate location.
 **Lesson 8 Audio Editing** **485**
 
 
+
+
+--- end of page=507 ---
+
 **15** Make an Overwrite edit.
 
 **16** Select the **STORE 28** clip and press Shift-A to mark the selection.
@@ -16030,6 +18062,10 @@ add an In point at an appropriate location.
 
 **Lesson 8 Audio Editing** **486**
 
+
+
+
+--- end of page=508 ---
 
 **18** Make another Overwrite edit and click Full Extent Zoom.
 
@@ -16065,6 +18101,10 @@ already cut to the shot of the smiling friends.
 **Lesson 8 Audio Editing** **487**
 
 
+
+
+--- end of page=509 ---
+
 **4** Using the fade handle at the end of **Exterior Atmos Birds.wav**, add a 10-frame
 
 fade-out and then trim the end of this clip forward by six frames so the fade-out
@@ -16084,6 +18124,10 @@ happens across the video edit at the end of **PINA BLANCA 44** .
 
 **Lesson 8 Audio Editing** **488**
 
+
+
+
+--- end of page=510 ---
 
 An audio crossfade is added to the edit point.
 
@@ -16108,6 +18152,10 @@ This gives a more natural feel to the cross-fades.
 
 **Lesson 8 Audio Editing** **489**
 
+
+
+
+--- end of page=511 ---
 
 **10** Close the Inspector and click Full Extent Zoom.
 
@@ -16158,6 +18206,10 @@ Track Type to.”
 **Lesson 8 Audio Editing** **490**
 
 
+
+
+--- end of page=512 ---
+
 A new mono track (Audio 4) is added below the ATMOS track.
 
 
@@ -16182,6 +18234,10 @@ jump onto the rocks, and click the Detail Zoom button.
 **Lesson 8 Audio Editing** **491**
 
 
+
+
+--- end of page=513 ---
+
 **5** Jog through the footage trying to identify where he places his right foot on the rock,
 
 although since you can’t see his foot actually touching the rock, you’ll need to use your
@@ -16198,6 +18254,10 @@ the first step.
 
 **Lesson 8 Audio Editing** **492**
 
+
+
+
+--- end of page=514 ---
 
 **8** Make a Replace edit.
 
@@ -16219,6 +18279,10 @@ down in the same shot.
 
 **Lesson 8 Audio Editing** **493**
 
+
+
+
+--- end of page=515 ---
 
 **12** Select the **Boots on Rough Dirt Footsteps.wav** clip in the timeline and choose
 
@@ -16245,6 +18309,10 @@ audio clip.
 **Lesson 8 Audio Editing** **494**
 
 
+
+
+--- end of page=516 ---
+
 **16** Select the second **Boots on Rough Dirt Footsteps.wav** and choose Trim > Trim End
 
 or press Shift-] (closing square bracket) to trim the end of this clip to the
@@ -16267,6 +18335,10 @@ if necessary.
 
 **Lesson 8 Audio Editing** **495**
 
+
+
+
+--- end of page=517 ---
 
 **Subframe Audio Editing**
 
@@ -16314,6 +18386,10 @@ clicked. You’ll use this in place of the sound of the T-shirt being put on dis
 **Lesson 8 Audio Editing** **496**
 
 
+
+
+--- end of page=518 ---
+
 Don’t worry if you can’t precisely align the playhead with the waveform. You can always
 
 slide the clip at the subframe level once it’s in the timeline. If in any doubt, place the
@@ -16339,6 +18415,10 @@ precisely align it with the onscreen action.
 
 **Lesson 8 Audio Editing** **497**
 
+
+
+
+--- end of page=519 ---
 
 ##### **Linking Clips**
 
@@ -16370,6 +18450,10 @@ Slip or Move the clips back into sync.
 **Lesson 8 Audio Editing** **498**
 
 
+
+
+--- end of page=520 ---
+
 **2** Scroll back through the timeline until you see the **Boots on Rough Dirt**
 
 **Footsteps.wav** clips.
@@ -16399,6 +18483,10 @@ before simplifying the timeline by combining them into a compound clip.
 **Lesson 8 Audio Editing** **499**
 
 
+
+
+--- end of page=521 ---
+
 **1** Right-click any of the track controls and choose Add Tracks.
 
 
@@ -16417,6 +18505,10 @@ Type as Stereo.
 
 **Lesson 8 Audio Editing** **500**
 
+
+
+
+--- end of page=522 ---
 
 **4** Click Add Tracks to add the audio tracks (Audio 5 and Audio 6) to the timeline below
 
@@ -16440,6 +18532,10 @@ destination control to WHOOSH (A5).
 **Lesson 8 Audio Editing** **501**
 
 
+
+
+--- end of page=523 ---
+
 **7** Move the timeline playhead to the start of **PINA BLANCA 70** and move forward until
 
 the point where the flaming torches are closest to the camera.
@@ -16460,6 +18556,10 @@ of a sound effect library, and is a good substitute for the sound of flaming tor
 
 **Lesson 8 Audio Editing** **502**
 
+
+
+
+--- end of page=524 ---
 
 **11** Move the timeline playhead forward a few frames until the flaming torches are back
 
@@ -16495,6 +18595,10 @@ two WHOOSH tracks to enable them together.
 **Lesson 8 Audio Editing** **503**
 
 
+
+
+--- end of page=525 ---
+
 **18** Click the SFX bin to make the media pool active and choose File > New Bin to create a
 
 new bin inside the SFX bin and rename this new bin **COMPOUND CLIPS** .
@@ -16520,6 +18624,10 @@ redundant WHOOSH 2 track (along with any other empty tracks).
 **Lesson 8 Audio Editing** **504**
 
 
+
+
+--- end of page=526 ---
+
 **21** Select **PINA BLANCA 70** and **WHOOSHES** and choose Clip > Link Clips or press
 
 Option-Command-L (macOS) or Alt-Ctrl-L (Windows) to link the two clips together in
@@ -16541,6 +18649,10 @@ Lesson 8 / TIMELINES, select **OMO AUDIO CATCHUP 1.drt**, and click Open.
 
 **Lesson 8 Audio Editing** **505**
 
+
+
+
+--- end of page=527 ---
 
 ## **Recording a Voiceover**
 
@@ -16575,6 +18687,10 @@ OMO VO bin.
 **Lesson 8 Audio Editing** **506**
 
 
+
+
+--- end of page=528 ---
+
 **4** In the media pool, create a new bin in the VOICEOVER bin called **MY VO** and
 
 select that bin.
@@ -16605,6 +18721,10 @@ the current Project media location.
 **Lesson 8 Audio Editing** **507**
 
 
+
+
+--- end of page=529 ---
+
 **7** Click the Browse button for the Project media location and choose R20 Editors Guide /
 
 Lesson 8 / VO RECORDINGS and click Open.
@@ -16625,6 +18745,10 @@ The Voiceover Tool opens.
 
 **Lesson 8 Audio Editing** **508**
 
+
+
+
+--- end of page=530 ---
 
 NOTE The Voiceover Tool automatically selects a timeline track to record to
 
@@ -16650,6 +18774,10 @@ prevent audio feedback during the recording process.
 **Lesson 8 Audio Editing** **509**
 
 
+
+
+--- end of page=531 ---
+
 NOTE By default the audio recorded will be a mono recording. If you have a
 
 stereo microphone and wish to record in stereo, you will be able to enable the
@@ -16674,6 +18802,10 @@ The recording is added as a new clip to the VO track in the timeline.
 
 **Lesson 8 Audio Editing** **510**
 
+
+
+
+--- end of page=532 ---
 
 And also to the MY VO bin you selected in the media pool.
 
@@ -16719,6 +18851,10 @@ will import a timeline that uses the pre-recorded VO clips in the OMO VO bin.
 
 **Lesson 8 Audio Editing** **511**
 
+
+
+
+--- end of page=533 ---
 
 ## **Balancing the Audio Clips**
 
@@ -16770,6 +18906,10 @@ Chris’s interview.
 **Lesson 8 Audio Editing** **512**
 
 
+
+
+--- end of page=534 ---
+
 **2** In the top right corner of the interface, click the Mixer button to open the Audio Mixer
 
 to the right side of the timeline and drag the left edge of the mixer to expand it out to
@@ -16784,6 +18924,10 @@ track (A1) so you will hear only the audio for the latter.
 
 **Lesson 8 Audio Editing** **513**
 
+
+
+
+--- end of page=535 ---
 
 **4** Play through the interview, looking at the audio levels for the track in the mixer.
 
@@ -16839,6 +18983,10 @@ need for keyframes.
 **Lesson 8 Audio Editing** **514**
 
 
+
+
+--- end of page=536 ---
+
 **1** Place the timeline playhead over any of Chris’s interview clips.
 
 
@@ -16863,6 +19011,10 @@ header for the DIALOGUE track.
 **Lesson 8 Audio Editing** **515**
 
 
+
+
+--- end of page=537 ---
+
 **3** Enable the AI Dialogue Leveler for the DIALOGUE track to reveal the controls and
 
 change the mode to “Optimize moderate levels.”
@@ -16882,6 +19034,10 @@ each of these clips.
 
 **Lesson 8 Audio Editing** **516**
 
+
+
+
+--- end of page=538 ---
 
 In the controls window, you will see a real-time graph detailing how the audio levels
 
@@ -16909,6 +19065,10 @@ controls for this track.
 **Lesson 8 Audio Editing** **517**
 
 
+
+
+--- end of page=539 ---
+
 The Dynamics controls for this track open in a separate window.
 
 
@@ -16933,6 +19093,10 @@ Again, both are currently the same since you have yet to adjust anything.
 
 **Lesson 8 Audio Editing** **518**
 
+
+
+
+--- end of page=540 ---
 
 **9** In the Dynamics window, enable the Compressor.
 
@@ -16961,6 +19125,10 @@ be affected.
 **Lesson 8 Audio Editing** **519**
 
 
+
+
+--- end of page=541 ---
+
 **11** Adjust the Compressor’s Threshold level to around -35.
 
 
@@ -16984,6 +19152,10 @@ above the Threshold level, the Compressor will only allow a 1 dB increase.
 **Lesson 8 Audio Editing** **520**
 
 
+
+
+--- end of page=542 ---
+
 **13** Adjust the Ratio to 4.0:1 so that for every 4 dB above the Threshold, the level will only
 
 be allowed to increase by 1 dB.
@@ -16998,6 +19170,10 @@ consistent but much lower than you’d ideally want it.
 
 **Lesson 8 Audio Editing** **521**
 
+
+
+
+--- end of page=543 ---
 
 **15** Play back the soundbites to review the changes.
 
@@ -17022,6 +19198,10 @@ mouth noise and breaths from Chris.
 
 **Lesson 8 Audio Editing** **522**
 
+
+
+
+--- end of page=544 ---
 
 Whoa! The background noise has been eliminated as if by magic! Of course, it’s not
 
@@ -17068,6 +19248,10 @@ disable the Dynamics and re-enable the AI Dialogue Leveler.
 **Lesson 8 Audio Editing** **523**
 
 
+
+
+--- end of page=545 ---
+
 ## **Adjusting Track EQ**
 
 Another set of controls you can use to help _sweeten_ your audio, especially regarding
@@ -17095,6 +19279,10 @@ The track’s 6-band EQ controls open.
 **Lesson 8 Audio Editing** **524**
 
 
+
+
+--- end of page=546 ---
+
 **2** Play back the first two soundbite clips in the timeline.
 
 
@@ -17114,6 +19302,10 @@ levels around the various frequencies.
 **Lesson 8 Audio Editing** **525**
 
 
+
+
+--- end of page=547 ---
+
 In the EQ window, you can see that this preset _rolls off_ the frequencies at the lower end
 
 and increases the level of the frequencies around the 250 Hz range and again around
@@ -17126,6 +19318,10 @@ the 4 kHz range.
 
 **Lesson 8 Audio Editing** **526**
 
+
+
+
+--- end of page=548 ---
 
 You should hear that Chris’s audio sounds slightly warmer, thanks to the adjustment
 
@@ -17154,6 +19350,10 @@ between 300 Hz and 3 kHz, while slightly reducing the level at around 1 kHz.
 **Lesson 8 Audio Editing** **527**
 
 
+
+
+--- end of page=549 ---
+
 **6** Play back the first two clips again to hear Chris sounding like he’s speaking on a
 
 telephone call!
@@ -17173,6 +19373,10 @@ may want to reduce.
 
 **Lesson 8 Audio Editing** **528**
 
+
+
+
+--- end of page=550 ---
 
 **8** Once again, play back the first two soundbites in the timeline and, as the clips are
 
@@ -17200,6 +19404,10 @@ Next, you will do the same, but at the upper end of the frequency range.
 **Lesson 8 Audio Editing** **529**
 
 
+
+
+--- end of page=551 ---
+
 **11** This time, raise the Band 3 control to the 10 dB line and move it to the right to sweep
 
 the higher-range frequencies.
@@ -17221,6 +19429,10 @@ by rolling off the very lowest frequencies that don’t tend to impact the human
 **Lesson 8 Audio Editing** **530**
 
 
+
+
+--- end of page=552 ---
+
 **13** Click the Band 1 button to enable Band 1, which by default is set to _high pass_ .
 
 
@@ -17238,6 +19450,10 @@ about +3 dB.
 
 **Lesson 8 Audio Editing** **531**
 
+
+
+
+--- end of page=553 ---
 
 **17** Play back the first two soundbite clips to hear the adjustment to the EQ for
 
@@ -17257,6 +19473,10 @@ You will be asked if you want to create a new preset.
 **Lesson 8 Audio Editing** **532**
 
 
+
+
+--- end of page=554 ---
+
 **19** Click Create New and, in the Create New Equalizer Preset dialog, type **CHRIS LANG EQ**
 
 and click OK.
@@ -17274,6 +19494,10 @@ from the EQ Presets menu.
 
 **Lesson 8 Audio Editing** **533**
 
+
+
+
+--- end of page=555 ---
 
 ##### **Extra Credit**
 
@@ -17328,6 +19552,10 @@ macOS or Alt-Shift-= (equals) on Windows to raise the level of these clips by 3 
 **Lesson 8 Audio Editing** **534**
 
 
+
+
+--- end of page=556 ---
+
 TIP You can also use Clip > Audio Operations > Trim Audio Levels > Increase/
 
 Decrease Audio Level by 1dB, or press Option-Command-= (equeals) on
@@ -17374,6 +19602,10 @@ Audio Levels.
 **Lesson 8 Audio Editing** **535**
 
 
+
+
+--- end of page=557 ---
+
 **6** In the Normalize Audio Level window, leave the Normalization Mode set to Sample
 
 Peak Program, change the Target Level to -18 dBFS, and change Set Level
@@ -17417,6 +19649,10 @@ more consistent.
 **Lesson 8 Audio Editing** **536**
 
 
+
+
+--- end of page=558 ---
+
 **8** Play the clips again and, in the mixer, reduce the level of the ATMOS track (A4) by
 
 about -15 dB.
@@ -17441,6 +19677,10 @@ applied to the clips on the ATMOS track, and click Normalize.
 **Lesson 8 Audio Editing** **537**
 
 
+
+
+--- end of page=559 ---
+
 **12** In the mixer, reduce the FOLEY track (A4) by about -9.0 dB.
 
 
@@ -17453,6 +19693,10 @@ you’re listening to.
 
 **Lesson 8 Audio Editing** **538**
 
+
+
+
+--- end of page=560 ---
 
 **15** Return the playhead to the beginning of the timeline and play back to listen to how the
 
@@ -17495,6 +19739,10 @@ _DaVinci Resolve 20_ and the _DaVinci Resolve Manual_ .
 **Lesson 8 Audio Editing** **539**
 
 
+
+
+--- end of page=561 ---
+
 **1** Click and drag across the active Solo controls in either the mixer or the timeline track
 
 controls to un-solo all the tracks so you will hear the entire mix.
@@ -17523,6 +19771,10 @@ Zoom button.
 
 **Lesson 8 Audio Editing** **540**
 
+
+
+
+--- end of page=562 ---
 
 **5** Option-click the gain line for the music clip on either side of the playhead, adding a
 
@@ -17556,6 +19808,10 @@ as Chris finishes the first soundbite and twice more just before the next soundb
 **Lesson 8 Audio Editing** **541**
 
 
+
+
+--- end of page=563 ---
+
 **10** Drag the gain line between the two middle keyframes and increase the level for this
 
 part of the clip by about 8 dB (around -14.00 dB on the tooltip) since you don’t want the
@@ -17587,6 +19843,10 @@ fit along the way.
 
 **Lesson 8 Audio Editing** **542**
 
+
+
+
+--- end of page=564 ---
 
 NOTE To import a finished version of the timeline for this lesson, select the
 
@@ -17645,6 +19905,10 @@ the timeline.
 **Lesson 8 Audio Editing** **543**
 
 
+
+
+--- end of page=565 ---
+
 ##### **Answers**
 
 **1** False. Mono clips can be edited on stereo audio tracks in the timeline, although they
@@ -17668,6 +19932,10 @@ you to reduce the dynamic range of the audio on a track.
 
 **Lesson 8 Audio Editing** **544**
 
+
+
+
+--- end of page=566 ---
 
 ### Lesson 9
 # Delivering Projects
@@ -17764,6 +20032,10 @@ Timeline Media Management 614
 Lesson Review 617
 
 
+
+
+--- end of page=567 ---
+
 Therefore, this lesson will shed some light on how to customize your export options, along
 
 with how to manage the media and timelines once your projects have been delivered. You
@@ -17790,6 +20062,10 @@ the Project Manager.
 
 **Lesson 9 Delivering Projects** **546**
 
+
+
+
+--- end of page=568 ---
 
 A new folder called Delivery is created in the Project Manager.
 
@@ -17823,6 +20099,10 @@ the lesson.
 
 **Lesson 9 Delivering Projects** **547**
 
+
+
+
+--- end of page=569 ---
 
 ## **Exporting AAF for Pro Tools**
 
@@ -17863,6 +20143,10 @@ for a Pro Tools system, where the audio will be mixed for you.
 **Lesson 9 Delivering Projects** **548**
 
 
+
+
+--- end of page=570 ---
+
 **4** Click the Deliver button or press Shift-8 to switch to the deliver page.
 
 
@@ -17898,6 +20182,10 @@ options, such as different resolutions.
 
 **Lesson 9 Delivering Projects** **549**
 
+
+
+
+--- end of page=571 ---
 
 NOTE Resolve uses AAF (Advanced Authoring Format) to output timeline
 
@@ -17936,6 +20224,10 @@ timeline timecode displayed on the video, a feature referred to as a BiTC (prono
 **Lesson 9 Delivering Projects** **550**
 
 
+
+
+--- end of page=572 ---
+
 **8** In the Data Burn-In window, select Record Timecode to display the timeline’s timecode.
 
 Increase the size to about 85 and the background opacity to 80.
@@ -17949,6 +20241,10 @@ The BiTC is now visible in the viewer.
 
 **Lesson 9 Delivering Projects** **551**
 
+
+
+
+--- end of page=573 ---
 
 **10** In the Render Settings, ensure that Export Video is selected and change the format to
 
@@ -17970,6 +20266,10 @@ there’s enough media for the dialogue editor specifically to work with.
 
 **Lesson 9 Delivering Projects** **552**
 
+
+
+
+--- end of page=574 ---
 
 **13** Click the Add to Render Queue button at the bottom of the Render Settings to add this
 
@@ -18017,6 +20317,10 @@ interface.
 **Lesson 9 Delivering Projects** **553**
 
 
+
+
+--- end of page=575 ---
+
 **4** From the Select Timeline dropdown menu, open the **OMO PROMO FINISHED** timeline.
 
 
@@ -18037,6 +20341,10 @@ You’ll begin by duplicating the current timeline.
 
 **Lesson 9 Delivering Projects** **554**
 
+
+
+
+--- end of page=576 ---
 
 A duplicate of the current timeline, called **OMO PROMO FINISHED copy**, is added to
 
@@ -18059,6 +20367,10 @@ clips you might have to reframe or even replace.
 **Lesson 9 Delivering Projects** **555**
 
 
+
+
+--- end of page=577 ---
+
 **9** In the Guides menu, disable the Default guide, and enable the 9:16 Social
 
 Media option.
@@ -18071,6 +20383,10 @@ and which might need some attention.
 
 **Lesson 9 Delivering Projects** **556**
 
+
+
+
+--- end of page=578 ---
 
 For example, you’ll probably notice that the opening graphic doesn’t fit, and some of
 
@@ -18108,6 +20424,10 @@ Timeline Settings.
 **Lesson 9 Delivering Projects** **557**
 
 
+
+
+--- end of page=579 ---
+
 The Timeline Settings window opens.
 
 
@@ -18134,6 +20454,10 @@ _letterboxed_ with black lines at the top and bottom of the image.
 **Lesson 9 Delivering Projects** **558**
 
 
+
+
+--- end of page=580 ---
+
 **4** Click OK to accept these changes to the timeline’s settings.
 
 
@@ -18158,6 +20482,10 @@ In the media pool, the timeline’s icon has changed too.
 **Lesson 9 Delivering Projects** **559**
 
 
+
+
+--- end of page=581 ---
+
 The new timeline icon in the bottom left corner of the thumbnail indicates that this
 
 timeline has its own _customized_ settings, separate from the project settings.
@@ -18178,6 +20506,10 @@ _are_ using the project’s settings.
 
 **Lesson 9 Delivering Projects** **560**
 
+
+
+
+--- end of page=582 ---
 
 **7** Click the Safe Guides button to remove the safe areas and choose Workspace > Single
 
@@ -18202,6 +20534,10 @@ DaVinci Resolve has several ways for you to reframe content appropriately.
 **Lesson 9 Delivering Projects** **561**
 
 
+
+
+--- end of page=583 ---
+
 **2** Click the Retime and Scaling panel to reveal the controls and, in the Scaling menu,
 
 select Fit.
@@ -18218,6 +20554,10 @@ reposition the graphic above the mountain range.
 
 **Lesson 9 Delivering Projects** **562**
 
+
+
+
+--- end of page=584 ---
 
 **4** Place the timeline playhead over the second shot of Chris’s interview, **INTERVIEW C 5** .
 
@@ -18241,6 +20581,10 @@ shots that will never fit the new aspect ratio properly.
 **Lesson 9 Delivering Projects** **563**
 
 
+
+
+--- end of page=585 ---
+
 **7** In the timeline, place the playhead near the start of **WHITE SANDS 11** and click the
 
 Detail Zoom button.
@@ -18258,6 +20602,10 @@ current playhead position.
 
 **Lesson 9 Delivering Projects** **564**
 
+
+
+
+--- end of page=586 ---
 
 **10** Move the timeline playhead toward the end of the **WHITE SANDS 11** clip.
 
@@ -18278,6 +20626,10 @@ with the adjusted Position parameter.
 
 **Lesson 9 Delivering Projects** **565**
 
+
+
+
+--- end of page=587 ---
 
 **14** Enable the Keyframe Tray.
 
@@ -18304,6 +20656,10 @@ Keyframes button.
 **Lesson 9 Delivering Projects** **566**
 
 
+
+
+--- end of page=588 ---
+
 **17** Open the Keyframes Panel and display the Keyframes Curve.
 
 
@@ -18315,6 +20671,10 @@ displayed (you can disable any other active curves if you want).
 **Lesson 9 Delivering Projects** **567**
 
 
+
+
+--- end of page=589 ---
+
 **19** Select both keyframes on the Position X curve and click the Ease In and Out button.
 
 
@@ -18323,6 +20683,10 @@ Handles appear for each keyframe.
 
 **Lesson 9 Delivering Projects** **568**
 
+
+
+
+--- end of page=590 ---
 
 **20** Adjust the size of the handles to refine the keyframed animation to your taste.
 
@@ -18348,6 +20712,10 @@ using the Smart Reframe feature in DaVinci Resolve Studio can be a huge timesave
 **Lesson 9 Delivering Projects** **569**
 
 
+
+
+--- end of page=591 ---
+
 **1** Place the playhead over the **PINA BLANCA 70** clip and, in the Inspector, click the
 
 disclosure arrow for the AI Smart Reframe controls and then click the Reframe button.
@@ -18358,6 +20726,10 @@ After a short analysis, the shot reframes itself, centering on the dancer!
 
 **Lesson 9 Delivering Projects** **570**
 
+
+
+
+--- end of page=592 ---
 
 In the Keyframe Tray, you will see that the AI Smart Reframe function has automatically
 
@@ -18375,6 +20747,10 @@ the subject.
 
 **Lesson 9 Delivering Projects** **571**
 
+
+
+
+--- end of page=593 ---
 
 Smart Reframe has successfully identified the subject of this clip and keeps him in
 
@@ -18401,6 +20777,10 @@ drifts back to the second guy.
 **Lesson 9 Delivering Projects** **572**
 
 
+
+
+--- end of page=594 ---
+
 **7** In the Inspector, click the Reset button for the Position parameters of **PINA BLANCA 5**
 
 to remove all the position keyframes from this clip.
@@ -18414,6 +20794,10 @@ the clip on the second guy.
 **Lesson 9 Delivering Projects** **573**
 
 
+
+
+--- end of page=595 ---
+
 **9** In the AI Smart Reframe controls, change the Object of Interest menu to Reference
 
 Point and click the reference point button to display the reference point in the
@@ -18426,6 +20810,10 @@ timeline viewer.
 
 **Lesson 9 Delivering Projects** **574**
 
+
+
+
+--- end of page=596 ---
 
 **11** Click the Reframe button.
 
@@ -18461,6 +20849,10 @@ and clicking Open.
 **Lesson 9 Delivering Projects** **575**
 
 
+
+
+--- end of page=597 ---
+
 ## **Adding the Vertical Timeline** **to the Render Queue**
 
 Now that you have successfully created a vertical version of the OMO Promo, you can
@@ -18489,6 +20881,10 @@ anything else.
 
 **Lesson 9 Delivering Projects** **576**
 
+
+
+
+--- end of page=598 ---
 
 **4** Click the Browse button next to the Location field, navigate to R20 Editors Guide /
 
@@ -18524,6 +20920,10 @@ video you stream doesn’t have you reaching for your volume control to turn it 
 **Lesson 9 Delivering Projects** **577**
 
 
+
+
+--- end of page=599 ---
+
 Thankfully, Resolve has a simple way of ensuring that your audio adheres to the
 
 various loudness standards, whether you’re delivering your content to YouTube,
@@ -18556,6 +20956,10 @@ _Audio Guide to DaVinci Resolve 20_ and the _DaVinci Resolve Manual_ .
 **Lesson 9 Delivering Projects** **578**
 
 
+
+
+--- end of page=600 ---
+
 ## **Creating a Custom Render Preset**
 
 You may want to save the current settings as a custom render preset so that you can
@@ -18580,6 +20984,10 @@ The new preset is added to the list of presets in the Render Settings.
 
 **Lesson 9 Delivering Projects** **579**
 
+
+
+
+--- end of page=601 ---
 
 **4** Switch to the edit page and open the Quick Export window to verify the preset has also
 
@@ -18610,6 +21018,10 @@ Add to Render Queue Using > [Your Preset].
 **Lesson 9 Delivering Projects** **580**
 
 
+
+
+--- end of page=602 ---
+
 ## **Creating an M&E Bus**
 
 A common requirement for many editors responsible for delivering audio is to set up a
@@ -18634,6 +21046,10 @@ and then open the mixer.
 **Lesson 9 Delivering Projects** **581**
 
 
+
+
+--- end of page=603 ---
+
 By default, all timelines created in DaVinci Resolve have a single stereo bus. All the
 
 audio tracks are routed to this bus and is ultimately what you listen to when playing
@@ -18652,6 +21068,10 @@ The Bus Format window opens, listing the default stereo bus.
 **Lesson 9 Delivering Projects** **582**
 
 
+
+
+--- end of page=604 ---
+
 **3** Double-click Bus 1 and rename it **MAIN MIX** .
 
 **4** Click the Add Bus button to add a second stereo bus, called Bus 2.
@@ -18664,6 +21084,10 @@ The Bus Format window opens, listing the default stereo bus.
 
 **Lesson 9 Delivering Projects** **583**
 
+
+
+
+--- end of page=605 ---
 
 **7** Expand the mixer to reveal the new Bus.
 
@@ -18687,6 +21111,10 @@ the current timeline.
 
 **Lesson 9 Delivering Projects** **584**
 
+
+
+
+--- end of page=606 ---
 
 Currently, all the timeline tracks are being routed to Bus 1 Out, as represented by B1o
 
@@ -18716,6 +21144,10 @@ Chris’s dialogue or the VO.
 
 **Lesson 9 Delivering Projects** **585**
 
+
+
+
+--- end of page=607 ---
 
 **14** Change the Control Room menu back to MAIN MIX to monitor the full mix once more.
 
@@ -18767,6 +21199,10 @@ including which languages are supported, see the _DaVinci Resolve User Manual_ .
 **Lesson 9 Delivering Projects** **586**
 
 
+
+
+--- end of page=608 ---
+
 **2** Leave all the options set to the default and click Create.
 
 
@@ -18801,6 +21237,10 @@ feature, it’s not always perfect.
 **Lesson 9 Delivering Projects** **587**
 
 
+
+
+--- end of page=609 ---
+
 You can see that the subtitle reads “Oregon Mountain Outfitters.”
 
 **5** Select the subtitle clip in the timeline and, in the Inspector, change the text to **Organ**
@@ -18821,6 +21261,10 @@ Here, the timing of the transcription could use a little adjustment.
 **Lesson 9 Delivering Projects** **588**
 
 
+
+
+--- end of page=610 ---
+
 **7** Start by rolling the edit between the two subtitle clips forward by about a second
 
 (+01:00 on the tooltip).
@@ -18840,6 +21284,10 @@ the comma and the space after “Outfitters”!)
 
 **Lesson 9 Delivering Projects** **589**
 
+
+
+
+--- end of page=611 ---
 
 **10** This updates the timing of the subtitles in the timeline, although you should continue
 
@@ -18883,6 +21331,10 @@ out against the picture it’s displayed over.
 **Lesson 9 Delivering Projects** **590**
 
 
+
+
+--- end of page=612 ---
+
 **1** In the timeline, select any of the subtitles and click the Track tab in the Inspector.
 
 
@@ -18909,6 +21361,10 @@ the same track for consistency.
 
 **Lesson 9 Delivering Projects** **591**
 
+
+
+
+--- end of page=613 ---
 
 However, there are times when it may be necessary to adjust the controls of individual
 
@@ -18937,6 +21393,10 @@ selected caption.
 
 **Lesson 9 Delivering Projects** **592**
 
+
+
+
+--- end of page=614 ---
 
 **6** Change the Font Face to Semibold Italic and the Font Case to All Caps to distinguish
 
@@ -18976,6 +21436,10 @@ your video file with subtitles.
 **Lesson 9 Delivering Projects** **593**
 
 
+
+
+--- end of page=615 ---
+
 ##### **Importing Subtitles**
 
 Instead of generating your subtitles within DaVinci Resolve, you can import a supported
@@ -19014,6 +21478,10 @@ track called Subtitle 2.
 **Lesson 9 Delivering Projects** **594**
 
 
+
+
+--- end of page=616 ---
+
 **5** Click the Enable Subtitle Track button for Subtitle 2.
 
 
@@ -19033,6 +21501,10 @@ the subtitles are in.
 **Lesson 9 Delivering Projects** **595**
 
 
+
+
+--- end of page=617 ---
+
 **7** Rename Subtitle 1 **EN** and Subtitle 2 DE to denote the different languages.
 
 
@@ -19045,6 +21517,10 @@ the subtitles are in.
 
 **Lesson 9 Delivering Projects** **596**
 
+
+
+
+--- end of page=618 ---
 
 NOTE You can import a completed version of this timeline with multiple subtitle
 
@@ -19075,6 +21551,10 @@ ProRes, and the Type to Apple ProRes 422 HQ.
 
 **Lesson 9 Delivering Projects** **597**
 
+
+
+
+--- end of page=619 ---
 
 **4** Ensure the Resolution and Frame Rate options are set to Timeline Resolution and
 
@@ -19113,6 +21593,10 @@ AI-Animated Subtitles or other styled captions as part of your video (see above)
 **Lesson 9 Delivering Projects** **598**
 
 
+
+
+--- end of page=620 ---
+
 **6** Ensure that the Format menu is set to “As a separate file.”
 
 **7** In the Export As menu, choose SRT and select the options for the EN and DE
@@ -19134,6 +21618,10 @@ that Output Track 2 is set to the M+E bus.
 
 **Lesson 9 Delivering Projects** **599**
 
+
+
+
+--- end of page=621 ---
 
 NOTE You can specify any bus or individual timeline track as an Output Track.
 
@@ -19164,6 +21652,10 @@ presets also exist for delivering audio for Netflix, YouTube, and Disney.
 
 **Lesson 9 Delivering Projects** **600**
 
+
+
+
+--- end of page=622 ---
 
 **15** Click Save to save this preset.
 
@@ -19207,6 +21699,10 @@ Levels correctly for your intended distribution.
 **Lesson 9 Delivering Projects** **601**
 
 
+
+
+--- end of page=623 ---
+
 ## **Changing and Rendering Jobs** **from Multiple Projects**
 
 The Render Queue can show jobs from the current project or from all projects in your
@@ -19228,6 +21724,10 @@ displayed for you to select and render.
 **Lesson 9 Delivering Projects** **602**
 
 
+
+
+--- end of page=624 ---
+
 **2** In the Render Queue Options menu (…), choose Show Job Details to display the specific
 
 settings for each job, including resolutions, codec, and frame rate.
@@ -19241,6 +21741,10 @@ over another.
 **Lesson 9 Delivering Projects** **603**
 
 
+
+
+--- end of page=625 ---
+
 **3** In the Render Queue, use the handle to the left of the Job name to drag Job 1 to the
 
 bottom of the queue.
@@ -19248,6 +21752,10 @@ bottom of the queue.
 
 **Lesson 9 Delivering Projects** **604**
 
+
+
+
+--- end of page=626 ---
 
 This job will now be rendered last.
 
@@ -19266,6 +21774,10 @@ settings or remove them from the queue entirely.
 
 **Lesson 9 Delivering Projects** **605**
 
+
+
+
+--- end of page=627 ---
 
 The **OMO PROMO VERTICAL** timeline reopens, and the settings for the selected job
 
@@ -19294,6 +21806,10 @@ corner of the job.
 **Lesson 9 Delivering Projects** **606**
 
 
+
+
+--- end of page=628 ---
+
 **7** Finally, click in an empty area of the Render Queue panel to deselect Job 1, and then
 
 click the Render All button to create the output files.
@@ -19301,6 +21817,10 @@ click the Render All button to create the output files.
 
 **Lesson 9 Delivering Projects** **607**
 
+
+
+
+--- end of page=629 ---
 
 DaVinci Resolve renders each of the jobs in the Render Queue sequentially.
 
@@ -19326,6 +21846,10 @@ Finder (macOS) or Open File Location (Windows) to quickly locate the exported fi
 
 **Lesson 9 Delivering Projects** **608**
 
+
+
+
+--- end of page=630 ---
 
 **1** Press Shift-1 to open the Project Manager. Click New Project, name your new project
 
@@ -19354,6 +21878,10 @@ Don’t Change.
 **Lesson 9 Delivering Projects** **609**
 
 
+
+
+--- end of page=631 ---
+
 You can now verify the individual files you exported from the previous projects.
 
 **4** In the Web bin, select **OMO PROMO VERTICAL.mp4** and play it to ensure that it looks
@@ -19372,6 +21900,10 @@ Tracks to **2**, and uncheck the Use Selected Mark In/Out option.
 
 **Lesson 9 Delivering Projects** **610**
 
+
+
+
+--- end of page=632 ---
 
 **7** Deselect the Use Project Settings option and, in the Format tab, change the Timeline
 
@@ -19393,6 +21925,10 @@ This timeline contains two stereo audio tracks.
 **Lesson 9 Delivering Projects** **611**
 
 
+
+
+--- end of page=633 ---
+
 Finally, to preview the Pro Tools export, you’ll need to import the .aaf file.
 
 **12** In the media pool, select the PRO TOOLS AAF bin.
@@ -19409,6 +21945,10 @@ TOOLS AAF and select the **.aaf** file.
 
 **Lesson 9 Delivering Projects** **612**
 
+
+
+
+--- end of page=634 ---
 
 **14** Click Import. The Import AAF window opens.
 
@@ -19432,6 +21972,10 @@ delivered at their optimal quality as well as adhering to industry standards.
 
 **Lesson 9 Delivering Projects** **613**
 
+
+
+
+--- end of page=635 ---
 
 ## **Timeline Media Management**
 
@@ -19464,6 +22008,10 @@ MEDIA MANAGEMENT, and click Open.
 **Lesson 9 Delivering Projects** **614**
 
 
+
+
+--- end of page=636 ---
+
 **6** Make sure the “Used media and trim keeping 24 frame handles” option is selected.
 
 
@@ -19492,6 +22040,10 @@ levels” options.
 **Lesson 9 Delivering Projects** **615**
 
 
+
+
+--- end of page=637 ---
+
 **8** Click Start to begin the media management process.
 
 **9** Once completed, choose File > Open Recent Project > EXPORT CHECK.
@@ -19515,6 +22067,10 @@ later date.
 
 **Lesson 9 Delivering Projects** **616**
 
+
+
+
+--- end of page=638 ---
 
 ## **Lesson Review**
 
@@ -19555,6 +22111,10 @@ Tools system?
 
 **Lesson 9 Delivering Projects** **617**
 
+
+
+
+--- end of page=639 ---
 
 ##### **Answers**
 
@@ -19609,6 +22169,10 @@ DaVinci Resolve Training page— _The Editor’s Guide to DaVinci Resolve 20_ On
 
 **Lesson 9 Delivering Projects** **618**
 
+
+
+
+--- end of page=640 ---
 
 ## **Index**
 
@@ -19733,6 +22297,10 @@ subclips with transcription, _349–352_
 
 **Index** **619**
 
+
+
+
+--- end of page=641 ---
 
 AI workflows _(continued)_
 timeline editing, _365–380_
@@ -19884,6 +22452,10 @@ BEST TAKES smart bin, _153–154_
 **Index** **620**
 
 
+
+
+--- end of page=642 ---
+
 Bézier handles
 adding, _431_
 applying to curve in Video Collage, _471_
@@ -20021,6 +22593,10 @@ jumping to, _112_
 
 **Index** **621**
 
+
+
+
+--- end of page=643 ---
 
 clips ( _continued_ )
 
@@ -20183,6 +22759,10 @@ verifying exported files, _608–613_
 **Index** **622**
 
 
+
+
+--- end of page=644 ---
+
 deselect all, _192_
 
 despill, adjusting, _444–445_
@@ -20344,6 +22924,10 @@ enabling onscreen controls for, _440_
 **Index** **623**
 
 
+
+
+--- end of page=645 ---
+
 Effects Library, _116–117_, _439_
 
 embedded audio, retaining, _274_
@@ -20495,6 +23079,10 @@ IDKN MUSIC angle, _220_
 **Index** **624**
 
 
+
+
+--- end of page=646 ---
+
 IDKN MUSIC audio clip, _215_
 
 IDKN SYNC clip, _216_, _219_
@@ -20628,6 +23216,10 @@ snapping, _85_
 
 **Index** **625**
 
+
+
+
+--- end of page=647 ---
 
 keyboard shortcuts ( _continued_ )
 source viewer and timeline, _36_
@@ -20771,6 +23363,10 @@ Media Storage Locations, _248_
 **Index** **626**
 
 
+
+
+--- end of page=648 ---
+
 metadata. _See also_ _clips with metadata_
 
 displaying in media page, _248_
@@ -20912,6 +23508,10 @@ OMO EDIT CATCHUP 3.drt, _66_
 
 **Index** **627**
 
+
+
+
+--- end of page=649 ---
 
 OMO EDIT CATCHUP 4.drt, _76_
 
@@ -21065,6 +23665,10 @@ linking clips, _499_
 **Index** **628**
 
 
+
+
+--- end of page=650 ---
+
 replace edits, _106_
 
 replacing clips, _104_
@@ -21207,6 +23811,10 @@ Project Settings, adjusting, _261–264_
 
 **Index** **629**
 
+
+
+
+--- end of page=651 ---
 
 Project Settings window, _249_
 
@@ -21366,6 +23974,10 @@ adding final soundbites, _36–40_
 **Index** **630**
 
 
+
+
+--- end of page=652 ---
+
 adding logo, _69–72_
 
 adding music, _66–68_
@@ -21523,6 +24135,10 @@ sound design. _See_ _audio editing_
 **Index** **631**
 
 
+
+
+--- end of page=653 ---
+
 sound effects
 
 adding, _480–490_
@@ -21676,6 +24292,10 @@ pool, _265_, _267_
 **Index** **632**
 
 
+
+
+--- end of page=654 ---
+
 subframe audio editing, _496_
 
 subtitle regions, _593_
@@ -21827,6 +24447,10 @@ TML GARRET 2, _153_, _160_, _169_
 
 **Index** **633**
 
+
+
+
+--- end of page=655 ---
 
 TML HARPER 2, _162_
 
@@ -21990,6 +24614,10 @@ technique, _417–419_
 **Index** **634**
 
 
+
+
+--- end of page=656 ---
+
 variables (%), entering, _299_
 
 versions and copies of timelines, _78_
@@ -22106,6 +24734,10 @@ _Dynamic Zoom_ ; _Full Extent Zoom_
 **Index** **635**
 
 
+
+
+--- end of page=657 ---
+
 The Editor’s Guide To DaVinci Resolve 20 is a step by step training
 guide tailored to the art and craft of editing. Using a project
 based approach focusing on the edit page, hands on lessons
@@ -22168,4 +24800,8 @@ will help make you a master at editing with DaVinci Resolve!
 
 **Build Eye-Catching Effects**
 
+
+
+
+--- end of page=658 ---
 

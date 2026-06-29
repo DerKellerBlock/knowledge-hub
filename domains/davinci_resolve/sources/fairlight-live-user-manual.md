@@ -71,6 +71,10 @@
   - Sub Drive (p.57)
 - Using ATEM Switchers (p.58)
 -->
+
+
+--- end of page=0 ---
+
 ##### Welcome
 
 Welcome to Fairlight Live for Mac and Windows!
@@ -117,6 +121,10 @@ projects with Fairlight Live.
 
 CEO Blackmagic Design
 
+
+
+
+--- end of page=1 ---
 
 ## **Contents**
 
@@ -270,6 +278,10 @@ Fairlight Live | Contents
 **3**
 
 
+
+
+--- end of page=2 ---
+
 ## **Getting Started with Fairlight Live**
 
 Fairlight Live is a powerful software-based live audio mixer that supports hundreds of
@@ -304,6 +316,10 @@ Fairlight Live Installer on macOS
 Fairlight Live | Installing the Software **4**
 
 
+
+
+--- end of page=3 ---
+
 Installer - Installation Successful Screen
 
 #### **First Launch**
@@ -333,6 +349,10 @@ Show just as you would after first launch.
 Fairlight Live | Installing the Software **5**
 
 
+
+
+--- end of page=4 ---
+
 #### **Create a New Show**
 
 To open a new Show, you’ll choose New Show from the File menu. This opens the New Show dialog
@@ -360,6 +380,10 @@ _Busses and Patching_ later in this document.
 
 Fairlight Live | Installing the Software **6**
 
+
+
+
+--- end of page=5 ---
 
 ## **Fairlight Live Show**
 
@@ -406,6 +430,10 @@ allowing you to do complete setups in preparation for use.
 Fairlight Live | Fairlight Live Show **7**
 
 
+
+
+--- end of page=6 ---
+
 ## **Show Settings**
 
 The Show Settings dialog allows you to set various parameters that affect Show operations.
@@ -444,6 +472,10 @@ to have some headroom warning before clip occurs.
 
 Fairlight Live | Show Settings **8**
 
+
+
+
+--- end of page=7 ---
 
 **Decay:** Sets the rate of decay for the meter. The default is 1.7 seconds. Setting a lower value,
 like .300 (300 ms.) can be useful to get more responsive ballistics to track transients.
@@ -501,6 +533,10 @@ double‑height view.
 Fairlight Live | Meter and Master Monitoring Panel **9**
 
 
+
+
+--- end of page=8 ---
+
 Hovering your mouse along the lower edge panel reveals a cursor that lets you change the height,
 and hovering over the divider to the left edge of the first Bus meter changes the width of that section.
 
@@ -549,6 +585,10 @@ toggled on and off by clicking it.
 Fairlight Live | Meter and Master Monitoring Panel **10**
 
 
+
+
+--- end of page=9 ---
+
 Control Room Meter Studio Meter Loudness Meter
 
 #### **Studio Meter**
@@ -591,6 +631,10 @@ measurement of the selected scale type.
 
 Fairlight Live | Meter and Master Monitoring Panel **11**
 
+
+
+
+--- end of page=10 ---
 
 Loudness Options Menu
 
@@ -645,6 +689,10 @@ broadcast quality control (QC) standards.
 Fairlight Live | Meter and Master Monitoring Panel **12**
 
 
+
+
+--- end of page=11 ---
+
   - The steel-blue meter on the left displays as many channels as the selected bus you’re
 monitoring, excluding the LFE channel(s) of surround formats, which aren’t factored into
 loudness metering. This discrete-channel analysis is used to calculate all other values of the
@@ -692,6 +740,10 @@ Controls
 
 Fairlight Live | Meter and Master Monitoring Panel **13**
 
+
+
+
+--- end of page=12 ---
 
 On Air Button Active
 
@@ -766,6 +818,10 @@ camera is active, the display area to the right of the button is blank.
 Fairlight Live | Meter and Master Monitoring Panel **14**
 
 
+
+
+--- end of page=13 ---
+
 Lock
 
 Fairlight Live Audio Panel control surfaces have a master lock mode that, when enabled, “locks out”
@@ -803,6 +859,10 @@ heard at any given time.
 
 Fairlight Live | Meter and Master Monitoring Panel **15**
 
+
+
+
+--- end of page=14 ---
 
  - Command-click on a solo button to set that channel to Solo Safe mode. The solo button then turns
 blue instead of the usual green.
@@ -858,6 +918,10 @@ This button enables the Player/Recorder, which can be opened via the Window menu
 Fairlight Live | Meter and Master Monitoring Panel **16**
 
 
+
+
+--- end of page=15 ---
+
 Player/Recorder window (Window > Open Player Recorder). A real time counter in Controls
 or the Player/Recorder window shows you elapsed recording time or playback position.
 
@@ -899,6 +963,10 @@ Monitoring Panel.
 
 Fairlight Live | The Mixer **17**
 
+
+
+
+--- end of page=16 ---
 
 #### **Channel Number**
 
@@ -942,6 +1010,10 @@ The Generator Settings Window
 
 Fairlight Live | The Mixer **18**
 
+
+
+
+--- end of page=17 ---
 
 **Oscillator**
 
@@ -1016,6 +1088,10 @@ In a broadcast-specific context, the slate function is also used to:
 Fairlight Live | The Mixer **19**
 
 
+
+
+--- end of page=18 ---
+
 Fairlight Live’s Slate functionality includes the following options:
 
  - **Enable/Disable:** Switches the Slate on and off.
@@ -1073,6 +1149,10 @@ This knob lets you attenuate or boost the incoming audio signal, with a range of
 
 Fairlight Live | The Mixer **20**
 
+
+
+
+--- end of page=19 ---
 
 **Balance**
 
@@ -1137,6 +1217,10 @@ momentary fashion.
 Fairlight Live | The Mixer **21**
 
 
+
+
+--- end of page=20 ---
+
 **Direct Out**
 
 A channel direct output signal can be provided to either the talkback system or as a basic direct
@@ -1199,6 +1283,10 @@ the control sets it back to 0 (unity gain).
 Fairlight Live | The Mixer **22**
 
 
+
+
+--- end of page=21 ---
+
 #### **Effects**
 
 Fairlight FX, VST, and Audio Unit effects that you apply to a mixer channel from the Effects Library
@@ -1236,6 +1324,10 @@ boosting and attenuating different frequency ranges.
 Fairlight Live | The Mixer **23**
 
 
+
+
+--- end of page=22 ---
+
 Each band has controls for the filter type (Bell, Lo-Shelf, Hi-Shelf, Notch), Frequency, Gain, and Q-factor
 (sharpness of the band), and the available controls for each band of EQ vary by filter type.
 
@@ -1266,6 +1358,10 @@ available Talkback groups, allowing communication with multiple channels simulta
 
 Fairlight Live | The Mixer **24**
 
+
+
+
+--- end of page=23 ---
 
 Talkback Group
 3 button active
@@ -1307,6 +1403,10 @@ cameras, up to 128.
 
 Fairlight Live | The Mixer **25**
 
+
+
+
+--- end of page=24 ---
 
  - **Camera Name:** Double click a default camera name/number to change it.
 
@@ -1351,6 +1451,10 @@ exponential, and often better for natural sounding longer fades.
 
 Fairlight Live | The Mixer **26**
 
+
+
+
+--- end of page=25 ---
 
 Configuring ATEM Switchers for AFV
 
@@ -1399,6 +1503,10 @@ Mix Minus Busses in the Bus Management Window
 Fairlight Live | The Mixer **27**
 
 
+
+
+--- end of page=26 ---
+
 **Routing to Mix Minus Busses**
 
 To route a channel to a mix minus bus, click the plus sign on the dedicated Mix Minus row in the mixer.
@@ -1442,6 +1550,10 @@ layer of independent level and routing control on top.
 Fairlight Live | The Mixer **28**
 
 
+
+
+--- end of page=27 ---
+
 Matrix Mixing Setup
 
 To use matrix mixing, one or more matrix mix bus destinations must be created. If you don’t have any
@@ -1470,6 +1582,10 @@ matrix bus mixes in the Matrix View window.
 
 Fairlight Live | The Mixer **29**
 
+
+
+
+--- end of page=28 ---
 
 Matrix View
 
@@ -1508,6 +1624,10 @@ channel fader movements.
 Fairlight Live | The Mixer **30**
 
 
+
+
+--- end of page=29 ---
+
 Bus Contributors Window
 
 Sometimes, keeping track of which channels are routed to a particular bus (Main, Sub, Aux, Mix Minus,
@@ -1536,6 +1656,10 @@ Simple Stereo Panner
 
 Fairlight Live | The Mixer **31**
 
+
+
+
+--- end of page=30 ---
 
 Channel Strip Panning Controls
 
@@ -1582,6 +1706,10 @@ on the format you’re mixing in.
 Fairlight Live | The Mixer **32**
 
 
+
+
+--- end of page=31 ---
+
  - **Rotate:** This controller rotates the sound source (or sources) around the listening position in the
 center of the sound field.
 
@@ -1619,6 +1747,10 @@ such as 5.1.
 
 Fairlight Live | The Mixer **33**
 
+
+
+
+--- end of page=32 ---
 
 Clicking the 3D button changes the Panner interface to the 3D Cartesian view, which includes a few
 more controls than the 2D Pan window:
@@ -1693,6 +1825,10 @@ parameter value.
 Fairlight Live | The Mixer **34**
 
 
+
+
+--- end of page=33 ---
+
  - **Boom:** This adjusts the send level to the LFE part of the mix (the Low-Frequency Extension
 subwoofer system).
 
@@ -1732,6 +1868,10 @@ on a numeric scale of 1-99, where 1 is labeled PNT (“Point”) and 99 is label
 
 Fairlight Live | The Mixer **35**
 
+
+
+
+--- end of page=34 ---
 
  - **Size:** Refers to the perceived spatial extent of the sound source (i.e. how large the source sounds
 in the 3D field), as opposed to being a discrete point source. At 0 (as shown), the source is treated
@@ -1793,6 +1933,10 @@ Window menu.
 Fairlight Live | The Mixer **36**
 
 
+
+
+--- end of page=35 ---
+
 #### **VCA**
 
 Clicking this area of a channel, bus, or VCA opens a dropdown that lets you assign it to an available
@@ -1838,6 +1982,10 @@ Solo section of the Show Settings window The Solo in Place & Clear buttons
 
 Fairlight Live | The Mixer **37**
 
+
+
+
+--- end of page=36 ---
 
 **PFL Mode (Pre-Fade Listen)**
 
@@ -1891,6 +2039,10 @@ solo buttons.
 
 Fairlight Live | The Mixer **38**
 
+
+
+
+--- end of page=37 ---
 
 **AFL Mode (After-Fade Listen)**
 
@@ -1949,6 +2101,10 @@ soloed and heard at any given time.
 
 Fairlight Live | The Mixer **39**
 
+
+
+
+--- end of page=38 ---
 
  - Option-clicking one or more solo buttons sets the channel strips to Solo Safe mode, in which the
 button will turn blue instead of the usual green.
@@ -2018,6 +2174,10 @@ any mute button
 Fairlight Live | The Mixer **40**
 
 
+
+
+--- end of page=39 ---
+
 #### **dB Display**
 
 Displays the volume level in decibels that the channel strip is set to.
@@ -2075,6 +2235,10 @@ inputs will be locked to prevent disrupting the live Show.
 
 Fairlight Live | Setting Up Channels, Busses and Patching **41**
 
+
+
+
+--- end of page=40 ---
 
 #### **Creating and Defining Input Channels**
 
@@ -2135,6 +2299,10 @@ Management window.
 Fairlight Live | Setting Up Channels, Busses and Patching **42**
 
 
+
+
+--- end of page=41 ---
+
 Using the Bus Management Window
 
 Choosing Window > Open Bus Management opens the Bus Format window, which lets you create the
@@ -2156,6 +2324,10 @@ Bus Management Window
 
 Fairlight Live | Setting Up Channels, Busses and Patching **43**
 
+
+
+
+--- end of page=42 ---
 
 **Types of busses:**
 
@@ -2205,6 +2377,10 @@ above the control strip label
 
 Fairlight Live | Creating and Assigning VCAs **44**
 
+
+
+
+--- end of page=43 ---
 
 #### **Making Fader VCA Assignments**
 
@@ -2261,6 +2437,10 @@ the upper right of the window.
 Fairlight Live | Creating and Assigning VCAs **45**
 
 
+
+
+--- end of page=44 ---
+
 VCA Assign Window showing Audio 14 about to be assigned to VCA 1 (highlighted).
 
 #### **Using VCA Faders**
@@ -2277,6 +2457,10 @@ Ref LS and FX3 faders that are assigned to that VCA.
 
 Fairlight Live | Creating and Assigning VCAs **46**
 
+
+
+
+--- end of page=45 ---
 
 When controlling faders belonging to a VCA, you can still move each individual channel strip
 fader independently to make relative adjustments.
@@ -2336,6 +2520,10 @@ specific sequence order.
 Fairlight Live | Creating and Using Snapshots **47**
 
 
+
+
+--- end of page=46 ---
+
 Managing Snapshot Presets
 
 After a Snapshot Preset is created, you can perform the following operations via the buttons on the
@@ -2363,6 +2551,10 @@ Snapshot Recall Settings Window
 
 Fairlight Live | Creating and Using Snapshots **48**
 
+
+
+
+--- end of page=47 ---
 
 Snapshot Sequences
 
@@ -2413,6 +2605,10 @@ The window is divided into 2 tabs, one for Inputs and one for Outputs.
 Fairlight Live | The Patching Matrix **49**
 
 
+
+
+--- end of page=48 ---
+
 Patching Matrix Window showing Inputs tab.
 
 #### **Input and Output Tabs**
@@ -2448,6 +2644,10 @@ and assign.
 Fairlight Live | The Patching Matrix **50**
 
 
+
+
+--- end of page=49 ---
+
 Display Channel Cluster enabled, showing a 5.1 grouping (in red)
 and Main ST, Main Quad and ASAF busses “folded down.”
 
@@ -2467,6 +2667,10 @@ Hovering over a crosspoint shows where a connection will be made.
 
 Fairlight Live | The Patching Matrix **51**
 
+
+
+
+--- end of page=50 ---
 
 ## **The Index**
 
@@ -2521,6 +2725,10 @@ from the Change Track Color submenu of the contextual menu.
 Fairlight Live | The Index **52**
 
 
+
+
+--- end of page=51 ---
+
 #### **Toggling Solo and Mute Controls**
 
 As with visibility, you can use the Solo and Mute controls to quickly enable or disable multiple tracks
@@ -2539,6 +2747,10 @@ series of tracks and drag them all to a new position in the Index at once.
 
 Fairlight Live | The Index **53**
 
+
+
+
+--- end of page=52 ---
 
 **Managing the Dividing Line**
 
@@ -2598,6 +2810,10 @@ aggregate amount of delay compensation.
 Fairlight Live | The Index **54**
 
 
+
+
+--- end of page=53 ---
+
 ## **The Monitoring Window**
 
 The Monitoring Window, found in Window > Opening Monitoring Window, allows you to configure
@@ -2632,6 +2848,10 @@ The Monitoring Window
 
 Fairlight Live | The Monitoring Window **55**
 
+
+
+
+--- end of page=54 ---
 
 #### **Monitor System External Inputs**
 
@@ -2671,6 +2891,10 @@ The Fairlight Graphic EQ
 Fairlight Live | Specialized Fairlight Live Effects **56**
 
 
+
+
+--- end of page=55 ---
+
 #### **Bass Enhancement**
 
 An effects plugin that can synthesize subharmonics below the fundamental bass signals fed into the
@@ -2693,6 +2917,10 @@ The Fairlight Sub Drive
 
 Fairlight Live | Specialized Fairlight Live Effects **57**
 
+
+
+
+--- end of page=56 ---
 
 ## **Using ATEM Switchers**
 
@@ -2748,6 +2976,10 @@ information). Camera connections are automatically recognized and passed to Fair
 Fairlight Live | Using ATEM Switchers **58**
 
 
+
+
+--- end of page=57 ---
+
 Fairlight Live Preferences Audio I/O
 
 
@@ -2764,6 +2996,14 @@ Fairlight Live software once again.
 Fairlight Live | Using ATEM Switchers **59**
 
 
+
+
+--- end of page=58 ---
+
 ### blackmagicdesign.com
 
+
+
+
+--- end of page=59 ---
 

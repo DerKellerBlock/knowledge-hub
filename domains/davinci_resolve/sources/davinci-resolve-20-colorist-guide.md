@@ -100,8 +100,16 @@
 - Appendix B – Setup and Delivery on Macs (p.481)
 - Index (p.483)
 -->
+
+
+--- end of page=0 ---
+
 ## The Colorist Guide to
 
+
+
+
+--- end of page=1 ---
 
 **The Colorist Guide to DaVinci Resolve 20**
 
@@ -173,6 +181,10 @@ registered trademark of Microsoft Inc., registered in the U.S. and other countri
 
 ISBN 13: 979-8-9924874-1-1
 
+
+
+
+--- end of page=2 ---
 
 ## **Contents**
 
@@ -250,6 +262,10 @@ Organizing Shots Using Flags and Filters 48
 
 **Contents** **iii**
 
+
+
+
+--- end of page=3 ---
 
 Applying Shot Match 52
 
@@ -329,6 +345,10 @@ Creating Separate Processing Branches with a Parallel Mixer Node 198
 **Contents** **iv**
 
 
+
+
+--- end of page=4 ---
+
 Compositing Color Effects with the Layer Mixer Node 205
 
 
@@ -406,6 +426,10 @@ Lesson Review 341
 
 **Contents** **v**
 
+
+
+
+--- end of page=5 ---
 
 8 Adjusting Image Properties 343
 
@@ -485,6 +509,10 @@ Index 457
 **Contents** **vi**
 
 
+
+
+--- end of page=6 ---
+
 ## **Foreword**
 
 **Welcome to The Colorist Guide to DaVinci Resolve 20.**
@@ -535,6 +563,10 @@ Blackmagic Design
 
 **Foreword** **vii**
 
+
+
+
+--- end of page=7 ---
 
 ## **Acknowledgments**
 
@@ -605,6 +637,10 @@ SAE Institute London, MET Film School, Central Film School, The National Film an
 **About the Author** **viii**
 
 
+
+
+--- end of page=8 ---
+
 Television School (NFTS), and London South Bank University. She wrote a training series
 
 for Nobe Omniscope and is a contributing author on Mixing Light. In her spare time, she
@@ -674,6 +710,10 @@ about the art of color grading.
 **Getting Started** **ix**
 
 
+
+
+--- end of page=9 ---
+
 This guide blends practical, hands-on exercises with the aesthetic and technical aspects of
 
 the colorist’s art. You’ll learn how to use the program’s many grading tools and workflows
@@ -741,6 +781,10 @@ efficient, quick workflows.
 
 **Getting Started** **x**
 
+
+
+
+--- end of page=10 ---
 
 **Part III**
 
@@ -840,6 +884,10 @@ advanced editing techniques, color grading, sound mixing, or visual effects, our
 **Getting Started** **xi**
 
 
+
+
+--- end of page=11 ---
+
 ##### **Getting Certified**
 
 After completing this book, you are encouraged to take a 1-hour, 50-question online
@@ -907,6 +955,10 @@ exercises may display a watermark.
 **Getting Started** **xii**
 
 
+
+
+--- end of page=12 ---
+
 When you’ve completed the software installation, follow the instructions in the following
 
 section to download the content for this book.
@@ -940,6 +992,10 @@ detailing the new features available in the current version.
 **Getting Started** **xiii**
 
 
+
+
+--- end of page=13 ---
+
 **1** If required, you can change the language used. You can also learn more about these
 
 and hundreds of other amazing features available in DaVinci Resolve 20 by clicking
@@ -959,6 +1015,10 @@ how Resolve is working.
 **Getting Started** **xiv**
 
 
+
+
+--- end of page=14 ---
+
 **2** Click the Quick Setup button.
 
 
@@ -969,6 +1029,10 @@ card will perform well. If both pass this test, click Continue.
 
 **Getting Started** **xv**
 
+
+
+
+--- end of page=15 ---
 
 Next, you will be asked what type of project you would like to begin. DaVinci Resolve
 
@@ -995,6 +1059,10 @@ Videos folder (Windows).
 **Getting Started** **xvi**
 
 
+
+
+--- end of page=16 ---
+
 **5** Leave this set to the default location and click Continue.
 
 
@@ -1011,6 +1079,10 @@ find those shortcuts won’t work.
 
 **Getting Started** **xvii**
 
+
+
+
+--- end of page=17 ---
 
 **6** For now, leave the layout set to DaVinci Resolve and click Continue.
 
@@ -1037,6 +1109,10 @@ first lesson in this book.
 
 **Getting Started** **xviii**
 
+
+
+
+--- end of page=18 ---
 
 **8** Choose DaVinci Resolve > Quit DaVinci Resolve or press Command-Q (macOS) or
 
@@ -1106,6 +1182,10 @@ comparison and troubleshooting.
 **Getting Started** **xix**
 
 
+
+
+--- end of page=19 ---
+
 # Interface Review
 
 _“No matter how much post experience you have, there’s always something new to learn_
@@ -1162,6 +1242,10 @@ and organized into albums.
 **Interface Review** **xx**
 
 
+
+
+--- end of page=20 ---
+
 **Viewer** displays the selected clip with playback controls and offers additional
 
 interface tools.
@@ -1216,6 +1300,10 @@ training manual.
 **Interface Review** **xxi**
 
 
+
+
+--- end of page=21 ---
+
 ## **Viewer**
 
 The viewer shows the frame that the playhead is currently on. By default, images are
@@ -1262,6 +1350,10 @@ navigate the clip as you would in the edit page.
 
 **Interface Review** **xxii**
 
+
+
+
+--- end of page=22 ---
 
 ## **Primaries Color Wheels**
 
@@ -1310,6 +1402,10 @@ and so on.
 **Interface Review** **xxiii**
 
 
+
+
+--- end of page=23 ---
+
 ## **Palette Panel**
 
 A series of buttons under the timelines allow you to navigate the palettes of the color page.
@@ -1339,6 +1435,10 @@ button itself when your mouse pointer hovers over it.
 
 **Interface Review** **xxiv**
 
+
+
+
+--- end of page=24 ---
 
 ## **Introducing Blackmagic Cloud**
 
@@ -1403,6 +1503,10 @@ To find out more about these exciting workflows, visit:
 **Introducing Blackmagic Cloud** **xxv**
 
 
+
+
+--- end of page=25 ---
+
 ### Part I
 # Color Correcting a DaVinci Resolve Timeline
 ## **Lessons**
@@ -1452,8 +1556,16 @@ encouraged to do so to learn these advanced tools and techniques.
 **Color Correcting a DaVinci Resolve Timeline** **1**
 
 
+
+
+--- end of page=26 ---
+
 **This page is intentionally left blank** **2**
 
+
+
+
+--- end of page=27 ---
 
 ### Lesson 1
 # Balancing Footage
@@ -1534,6 +1646,10 @@ Self-Guided Exercises 42
 Lesson Review 43
 
 
+
+
+--- end of page=28 ---
+
 You wouldn’t color grade a somber documentary about rhinoceros sanctuaries as you
 
 would grade a 30-second perfume ad featuring the latest Hollywood A-lister, even if
@@ -1591,6 +1707,10 @@ NOTE For a quick refresher on the DaVinci Resolve interface, see the
 **Lesson 1 Balancing Footage** **4**
 
 
+
+
+--- end of page=29 ---
+
 **1** Open DaVinci Resolve 20.
 
 **2** Right-click in the Project Manager window and choose Restore Project Archive.
@@ -1632,6 +1752,10 @@ your project is being backed up correctly.
 
 **Lesson 1 Balancing Footage** **5**
 
+
+
+
+--- end of page=30 ---
 
 ## **Setting Up Project Backups**
 
@@ -1686,6 +1810,10 @@ sorting through thousands of backed-up project files.
 
 **Lesson 1 Balancing Footage** **6**
 
+
+
+
+--- end of page=31 ---
 
 **6** Increase the hourly backups to 24 hours. That means that at the start of every hour, a
 
@@ -1759,6 +1887,10 @@ grading process.
 **Lesson 1 Balancing Footage** **7**
 
 
+
+
+--- end of page=32 ---
+
 ## **Understanding the** **Grading Workflow**
 
 It is good practice to have a clear idea of what your workflow is before beginning a grade.
@@ -1813,6 +1945,10 @@ for your scene grade.
 
 **Lesson 1 Balancing Footage** **8**
 
+
+
+
+--- end of page=33 ---
 
 ##### **Secondary Grading**
 
@@ -1884,6 +2020,10 @@ or time (for nonlinear stories).
 **Lesson 1 Balancing Footage** **9**
 
 
+
+
+--- end of page=34 ---
+
 NOTE The grading workflow described here does not rigidly dictate the order in
 
 which these grades should be performed by the colorist. Although balancing and
@@ -1919,6 +2059,10 @@ helpful to think of this chart as a live signal flow rather than an order of ope
 
 **Lesson 1 Balancing Footage** **10**
 
+
+
+
+--- end of page=35 ---
 
 ## **Primary Grading** **with Color Wheels**
 
@@ -1961,6 +2105,10 @@ of an image.
 **Lesson 1 Balancing Footage** **11**
 
 
+
+
+--- end of page=36 ---
+
 By default, the palette in the lower right corner of the DaVinci Resolve interface is set
 
 to the Keyframes palette. You will switch it to display scopes so you can analyze your
@@ -1993,6 +2141,10 @@ full range and distribution of values in the image.
 
 **Lesson 1 Balancing Footage** **12**
 
+
+
+
+--- end of page=37 ---
 
 The horizontal axis scans the image itself and produces a readout (also known as a
 
@@ -2046,6 +2198,10 @@ order to best represent the original lighting in a scene.
 **Lesson 1 Balancing Footage** **13**
 
 
+
+
+--- end of page=38 ---
+
 When normalizing footage, a good starting point is to ensure that the shadows are
 
 floating at around 5–10% above the black point (0) on the scope, while highlights stop
@@ -2088,6 +2244,10 @@ black level. Try to locate their respective positions in the viewer.
 
 **Lesson 1 Balancing Footage** **14**
 
+
+
+
+--- end of page=39 ---
 
 Those three dark areas correspond to places where the barrier is visible behind the
 
@@ -2132,6 +2292,10 @@ contrast control to refine the distinction between the darker and lighter areas.
 **Lesson 1 Balancing Footage** **15**
 
 
+
+
+--- end of page=40 ---
+
 **13** At the top of the Primaries palette, in the adjustment controls, drag the Contrast
 
 setting to the right to increase the level of detail in the skin and the wooden poles.
@@ -2174,6 +2338,10 @@ If necessary, activate the three RGB channel indicators.
 **Lesson 1 Balancing Footage** **16**
 
 
+
+
+--- end of page=41 ---
+
 **3** Click anywhere outside the Settings window to close it.
 
 
@@ -2213,6 +2381,10 @@ other clips on the timeline, even if you graded them more recently.
 **Lesson 1 Balancing Footage** **17**
 
 
+
+
+--- end of page=42 ---
+
 One of the unique challenges of this shot is that there are many naturally red elements
 
 in it—the wood posts and fence, and the earthy ground in the back. This can create the
@@ -2250,6 +2422,10 @@ is a safe choice.
 **Lesson 1 Balancing Footage** **18**
 
 
+
+
+--- end of page=43 ---
+
 **9** Drag the Gain color wheel indicator away from red until the channels in that section of
 
 the waveform overlap to produce a white trace.
@@ -2286,6 +2462,10 @@ and you will find that you get faster as you get more practice.
 **Lesson 1 Balancing Footage** **19**
 
 
+
+
+--- end of page=44 ---
+
 ## **Precision Grading with Curves**
 
 Curves are another major grading tool used to perform primary and secondary adjustments.
@@ -2299,6 +2479,10 @@ means you can manipulate the image with far greater precision and flexibility.
 
 **Lesson 1 Balancing Footage** **20**
 
+
+
+
+--- end of page=45 ---
 
 ##### **Setting Contrast with Increased Flexibility**
 
@@ -2337,6 +2521,10 @@ of the viewer panel. The image is now much easier to see for grading work.
 
 **Lesson 1 Balancing Footage** **21**
 
+
+
+
+--- end of page=46 ---
 
 The lower left of the curve graph represents the blackest potential point of the image,
 
@@ -2389,6 +2577,10 @@ of the waveform graph.
 **Lesson 1 Balancing Footage** **22**
 
 
+
+
+--- end of page=47 ---
+
 **10** To raise the top of the waveform, drag the white point across the top of the graph.
 
 
@@ -2425,6 +2617,10 @@ the scale.
 **Lesson 1 Balancing Footage** **23**
 
 
+
+
+--- end of page=48 ---
+
 Many colorists prefer setting the tonal range using curves because curves offer much
 
 finer control over luminance and allow for customizable contrast.
@@ -2456,6 +2652,10 @@ slightly warm appearance.
 **Lesson 1 Balancing Footage** **24**
 
 
+
+
+--- end of page=49 ---
+
 **4** Click the top of the red curve and drag it downward. Pay attention to the waveform and
 
 drag until the red highlight overlaps the blue and green channels, resulting in a white
@@ -2474,6 +2674,10 @@ blue channel has less presence in the highlights and midtones.
 
 **Lesson 1 Balancing Footage** **25**
 
+
+
+
+--- end of page=50 ---
 
 **6** Click B to isolate the blue channel.
 
@@ -2512,8 +2716,16 @@ and effects, and further hone your primary grading skillset.
 **Lesson 1 Balancing Footage** **26**
 
 
+
+
+--- end of page=51 ---
+
 **Lesson 1 Balancing Footage** **27**
 
+
+
+
+--- end of page=52 ---
 
 ## **Comparing Color and Log Wheels**
 
@@ -2551,6 +2763,10 @@ from left to right from 0 to 1023, indicating its linear transition from black t
 **Lesson 1 Balancing Footage** **28**
 
 
+
+
+--- end of page=53 ---
+
 **2** Drag the Gain master wheel to the left to darken the upper ranges of the gradient.
 
 
@@ -2569,6 +2785,10 @@ remainder of the luminance range.
 
 **Lesson 1 Balancing Footage** **29**
 
+
+
+
+--- end of page=54 ---
 
 In contrast to the Gain wheel, most of the Lift wheel’s impact is on the darkest portion
 
@@ -2618,6 +2838,10 @@ adjustments to the shadows, midtones, and highlights react very differently.
 **Lesson 1 Balancing Footage** **30**
 
 
+
+
+--- end of page=55 ---
+
 **7** Drag the Highlight master wheel to the left to darken the highlights of the gradient.
 
 
@@ -2642,6 +2866,10 @@ between the shadows and midtones (low range) and the midtones and highlights
 
 **Lesson 1 Balancing Footage** **31**
 
+
+
+
+--- end of page=56 ---
 
 **9** In the log adjustment controls, drag the Low Range value left to move the shadow
 
@@ -2669,6 +2897,10 @@ This produces a pleasing transition from the black to the white point of the gra
 
 **Lesson 1 Balancing Footage** **32**
 
+
+
+
+--- end of page=57 ---
 
 **14** In the Primaries log wheels palette, drag the Shadow color indicator toward blue and
 
@@ -2707,6 +2939,10 @@ the Pivot does.
 
 **Lesson 1 Balancing Footage** **33**
 
+
+
+
+--- end of page=58 ---
 
 **19** Drag the Contrast parameter to the right until you reach the maximum value of 2.0.
 
@@ -2751,6 +2987,10 @@ switching between color wheels and log wheels.
 **Lesson 1 Balancing Footage** **34**
 
 
+
+
+--- end of page=59 ---
+
 ##### **Restoring Shadows Using Log Wheels**
 
 With a better understanding of how you can target different tonal ranges, you can now
@@ -2782,6 +3022,10 @@ scopes to determine the distribution of color in the image.
 
 **Lesson 1 Balancing Footage** **35**
 
+
+
+
+--- end of page=60 ---
 
 **5** Switch the Scopes palette to Parade.
 
@@ -2838,6 +3082,10 @@ sufficiently expand the compressed shadows.
 **Lesson 1 Balancing Footage** **36**
 
 
+
+
+--- end of page=61 ---
+
 **9** To confirm this, drag the Lift master wheel to the left to see how dramatically it affects
 
 the foreground. The compressed shadows are pulled down until the entire image
@@ -2885,6 +3133,10 @@ peach, purple, and blue gradients throughout the sky. You will strive to retain 
 
 **Lesson 1 Balancing Footage** **37**
 
+
+
+
+--- end of page=62 ---
 
 striking hues while balancing the colors in the foreground—most notably, the
 
@@ -2935,6 +3187,10 @@ NOTE The following exercise requires DaVinci Resolve Studio to complete.
 **Lesson 1 Balancing Footage** **38**
 
 
+
+
+--- end of page=63 ---
+
 **1** In the interface toolbar, click the Effects button to open the Effects panel library.
 
 
@@ -2956,6 +3212,10 @@ white image (called a _matte_ ) of the scene.
 
 **Lesson 1 Balancing Footage** **39**
 
+
+
+
+--- end of page=64 ---
 
 NOTE If you’re not using DaVinci Resolve Studio, a watermark will appear over
 
@@ -2993,6 +3253,10 @@ access to the Limit and Gamma controls.
 **Lesson 1 Balancing Footage** **40**
 
 
+
+
+--- end of page=65 ---
+
 **8** Decrease the Gamma (0.750) to offset the background range.
 
 
@@ -3021,6 +3285,10 @@ refining controls.
 
 **Lesson 1 Balancing Footage** **41**
 
+
+
+
+--- end of page=66 ---
 
 **13** Press Command-D (macOS) or Ctrl-D (Windows) to disable the corrector node and
 
@@ -3078,6 +3346,10 @@ where necessary.
 **Lesson 1 Balancing Footage** **42**
 
 
+
+
+--- end of page=67 ---
+
 **Clips 4, 12, 16, and 17** —Use the Curves palette and the Parade scope to establish the
 
 tonal range and contrast on these clips. Balance their colors and increase saturation
@@ -3104,6 +3376,10 @@ work to the Lum and Balance nodes in this “solved” timeline.
 **Lesson 1 Balancing Footage** **43**
 
 
+
+
+--- end of page=68 ---
+
 ##### **Answers**
 
 **1** Yes. Archived projects (.dra) consolidate all related project media within a single folder
@@ -3127,6 +3403,10 @@ restricted to their respective tonal ranges.
 
 **Lesson 1 Balancing Footage** **44**
 
+
+
+
+--- end of page=69 ---
 
 ### Lesson 2
 # Creating Color Continuity
@@ -3205,6 +3485,10 @@ Self-Guided Exercises 70
 Lesson Review 71
 
 
+
+
+--- end of page=70 ---
+
 In the previous lesson, you looked at the most common tools and workflows for
 
 normalizing and balancing shots in preparation for a grade. In this lesson, you’ll examine
@@ -3268,6 +3552,10 @@ point for the scene grade. This approach is more common to standard
 **Lesson 2 Creating Color Continuity** **46**
 
 
+
+
+--- end of page=71 ---
+
 grading practices and usually applies to pick-up shots captured on a different day or
 
 stock footage captured by a third party.
@@ -3318,6 +3606,10 @@ other shots.
 **Lesson 2 Creating Color Continuity** **47**
 
 
+
+
+--- end of page=72 ---
+
 The exercises in the following lessons will focus on the practical implementation of shot
 
 matching based on these methods. Understanding the variety of matching methods
@@ -3364,6 +3656,10 @@ Another method for applying flags is to use a keyboard shortcut.
 
 **Lesson 2 Creating Color Continuity** **48**
 
+
+
+
+--- end of page=73 ---
 
 **3** Select clip 05.
 
@@ -3412,6 +3708,10 @@ picked, that clip will be flagged.
 **Lesson 2 Creating Color Continuity** **49**
 
 
+
+
+--- end of page=74 ---
+
 **10** Select clip 04 and hold Command (macOS) or Ctrl (Windows) to select clip 06 at the
 
 same time.
@@ -3446,6 +3746,10 @@ visible due to the filter.
 
 **Lesson 2 Creating Color Continuity** **50**
 
+
+
+
+--- end of page=75 ---
 
 You have temporarily hidden all clips that do not have a green flag. The result is a
 
@@ -3502,6 +3806,10 @@ addressing just one category of clips at a time.
 **Lesson 2 Creating Color Continuity** **51**
 
 
+
+
+--- end of page=76 ---
+
 ## **Applying Shot Match**
 
 The Shot Match function in DaVinci Resolve analyzes the colors in one image and
@@ -3538,6 +3846,10 @@ overall workflow.
 
 **Lesson 2 Creating Color Continuity** **52**
 
+
+
+
+--- end of page=77 ---
 
 **3** Right-click the new node and choose Node Label. Name the node **Shot Match** .
 
@@ -3586,6 +3898,10 @@ match more closely.
 **Lesson 2 Creating Color Continuity** **53**
 
 
+
+
+--- end of page=78 ---
+
 **7** Drag the Gamma master wheel right to brighten the image and increase contrast in
 
 the details.
@@ -3631,6 +3947,10 @@ In this exercise, you will use stills to manually match clips.
 **Lesson 2 Creating Color Continuity** **54**
 
 
+
+
+--- end of page=79 ---
+
 **1** In the green flag-filtered timeline, select clip 05.
 
 
@@ -3651,6 +3971,10 @@ number, and the number of stills generated for that clip.
 **Lesson 2 Creating Color Continuity** **55**
 
 
+
+
+--- end of page=80 ---
+
 **4** In the timeline, select clip 06. You will use the Primaries color bars and the Parade
 
 scope to match this shot to the still.
@@ -3668,6 +3992,10 @@ you can drag.
 
 **Lesson 2 Creating Color Continuity** **56**
 
+
+
+
+--- end of page=81 ---
 
 A set of controls appears in the upper left corner of the viewer, allowing you to change
 
@@ -3704,6 +4032,10 @@ proportions in the clip that you’re matching.
 
 **Lesson 2 Creating Color Continuity** **57**
 
+
+
+
+--- end of page=82 ---
 
 TIP Labeling nodes has many benefits. Labels clarify the grading workflow by
 
@@ -3750,6 +4082,10 @@ more precision.
 **Lesson 2 Creating Color Continuity** **58**
 
 
+
+
+--- end of page=83 ---
+
 **10** Drag the Gain Y bar down until the arc in the green highlights matches across the
 
 two shots.
@@ -3793,6 +4129,10 @@ The result is a quick matching of the two clips using the Primaries color bars.
 **Lesson 2 Creating Color Continuity** **59**
 
 
+
+
+--- end of page=84 ---
+
 **16** To turn off the reference wipe, in the upper left of the viewer, click the Image Wipe
 
 button or open the viewer options in the upper right and choose Show
@@ -3834,6 +4174,10 @@ Ctrl-C (Windows).
 
 **Lesson 2 Creating Color Continuity** **60**
 
+
+
+
+--- end of page=85 ---
 
 **23** Select the newly created node and choose Edit > Paste or press Command-V (macOS)
 
@@ -3885,6 +4229,10 @@ previously balanced clip 03.
 **Lesson 2 Creating Color Continuity** **61**
 
 
+
+
+--- end of page=86 ---
+
 You can see distinct differences in the shapes of the three channels. The red channel
 
 has the widest spread, extending beyond the green and blue channels in both the
@@ -3935,6 +4283,10 @@ continuously as they match the grade in the active clip.
 **Lesson 2 Creating Color Continuity** **62**
 
 
+
+
+--- end of page=87 ---
+
 In the timeline, a blue highlight indicates that clip 03 is currently being used as a
 
 reference.
@@ -3954,6 +4306,10 @@ zoom in and reposition it for a better representation in the Parade scope.
 
 **Lesson 2 Creating Color Continuity** **63**
 
+
+
+
+--- end of page=88 ---
 
 The Reference Sizing tool applies the transform changes only to the reference image in
 
@@ -3987,6 +4343,10 @@ and the midtone distributions of the traces.
 
 **Lesson 2 Creating Color Continuity** **64**
 
+
+
+
+--- end of page=89 ---
 
 **10** In the Node Editor, label node 01 **Match** .
 
@@ -4049,6 +4409,10 @@ once again.
 **Lesson 2 Creating Color Continuity** **65**
 
 
+
+
+--- end of page=90 ---
+
 **17** Isolate the R curve again and drag the black and white points until the red channel in
 
 both parades has an equal spread.
@@ -4080,6 +4444,10 @@ channel is mismatched between clips 04 and 05.
 
 **Lesson 2 Creating Color Continuity** **66**
 
+
+
+
+--- end of page=91 ---
 
 **20** Add a control point to the green curve and drag until the midtones of the
 
@@ -4137,6 +4505,10 @@ more empirical yet creative mindset.
 **Lesson 2 Creating Color Continuity** **67**
 
 
+
+
+--- end of page=92 ---
+
 ##### **Using Split-Screen Views to Compare Clips**
 
 An alternative method of visually comparing clips within the viewer is by using a split
@@ -4168,8 +4540,14 @@ in the upper right and choose Split Screen > On.
 
 
 
+
+
 **Lesson 2 Creating Color Continuity** **68**
 
+
+
+
+--- end of page=93 ---
 
 **4** In the upper left dropdown menu, choose Selected Clips to display all four clips.
 
@@ -4202,6 +4580,10 @@ highly valued skill set that requires plenty of patience and experience, so keep
 **Lesson 2 Creating Color Continuity** **69**
 
 
+
+
+--- end of page=94 ---
+
 ## **Self-Guided Exercises**
 
 Complete the following exercises in the green flag-filtered 02 Balanced Timeline to test
@@ -4226,6 +4608,10 @@ matching to the Match nodes in this “solved” timeline.
 **Lesson 2 Creating Color Continuity** **70**
 
 
+
+
+--- end of page=95 ---
+
 ## **Lesson Review**
 
 **1** How can you filter a timeline to show only clips with a flag?
@@ -4248,6 +4634,10 @@ trace of the other two channels?
 **Lesson 2 Creating Color Continuity** **71**
 
 
+
+
+--- end of page=96 ---
+
 ##### **Answers**
 
 **1** Click the disclosure arrow next to the Clips button and choose Flagged Clips.
@@ -4267,6 +4657,10 @@ on the timeline and “Shot Match to this Clip” will appear in the contextual 
 
 **Lesson 2 Creating Color Continuity** **72**
 
+
+
+
+--- end of page=97 ---
 
 ### Lesson 3
 # Correcting and Enhancing Isolated Areas
@@ -4346,6 +4740,10 @@ Self-Guided Exercises 138
 Lesson Review 139
 
 
+
+
+--- end of page=98 ---
+
 In the second part of this lesson, you will use more nuanced tools to clean up overcast (or
 
 overblown) skies, adjust regions of an image based on hue, and calibrate skin tones to
@@ -4389,6 +4787,10 @@ labeled Lum.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **74**
 
+
+
+
+--- end of page=99 ---
 
 **5** Create a second node and label it **Sunlight** .
 
@@ -4440,6 +4842,10 @@ the path of the sunlight.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **75**
 
 
+
+
+--- end of page=100 ---
+
 **11** In the viewer, drag the red points of the window outline to increase the softness
 
 around its upper and lower edges.
@@ -4457,6 +4863,10 @@ in this node and turns the area outside of this selection gray.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **76**
 
+
+
+
+--- end of page=101 ---
 
 **13** Click the Highlight button again to disable highlight mode and return to your
 
@@ -4506,6 +4916,10 @@ Contrast (0.900).
 **Lesson 3 Correcting and Enhancing Isolated Areas** **77**
 
 
+
+
+--- end of page=102 ---
+
 Doing so creates a dark framing effect around the figure of the man and further draws
 
 the eye toward the sunlight on the field.
@@ -4519,6 +4933,10 @@ After
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **78**
 
+
+
+
+--- end of page=103 ---
 
 ##### **Mimicking a Shallow Depth of Field**
 
@@ -4575,6 +4993,10 @@ the man in front of the camera and the rhinos hundreds of yards in front of him.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **79**
 
 
+
+
+--- end of page=104 ---
+
 TIP Repeatedly select and deselect Depth Map Preview to visually assess the
 
 position of the Tilt-Shift Blur matte in relation to the image when determining
@@ -4605,6 +5027,10 @@ After
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **80**
 
+
+
+
+--- end of page=105 ---
 
 ##### **Focusing Attention with Vignettes**
 
@@ -4662,6 +5088,10 @@ invert this selection.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **81**
 
+
+
+
+--- end of page=106 ---
 
 **7** In the viewer’s Window palette, on the right side of the circle window row, click the
 
@@ -4727,8 +5157,16 @@ immersion in the narrative.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **82**
 
 
+
+
+--- end of page=107 ---
+
 **Lesson 3 Correcting and Enhancing Isolated Areas** **83**
 
+
+
+
+--- end of page=108 ---
 
 ## **Sharpening Key Elements**
 
@@ -4756,6 +5194,10 @@ adding effects.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **84**
 
+
+
+
+--- end of page=109 ---
 
 **3** Create a second node and label it **Sharp** .
 
@@ -4807,6 +5249,10 @@ the Radius adjustment.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **85**
 
 
+
+
+--- end of page=110 ---
+
 With the sharpening affecting the image uniformly, you might see some unwanted
 
 artifacts, like the increased noise pattern throughout the frame. You can limit the
@@ -4851,6 +5297,10 @@ to limit this sharpening effect to a specific area in the shot.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **86**
 
 
+
+
+--- end of page=111 ---
+
 ##### **Tracking Obscured Objects**
 
 Adding a simple circular window to the Sharp node will allow you to confine the sharpening
@@ -4888,6 +5338,10 @@ with the shotgun.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **87**
 
+
+
+
+--- end of page=112 ---
 
 As the analysis runs forward, the window disconnects from the shotgun detail due to
 
@@ -4931,6 +5385,10 @@ data has become distorted. To fix the track, you must first remove the unusable
 **Lesson 3 Correcting and Enhancing Isolated Areas** **88**
 
 
+
+
+--- end of page=113 ---
+
 **7** Drag within the tracker graph to draw a dotted selection outline around the bad
 
 track data.
@@ -4963,6 +5421,10 @@ and the area appears to be trackable again.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **89**
 
 
+
+
+--- end of page=114 ---
+
 **11** Manually reposition the window to the area of the breech that you were previously
 
 tracking. Use the anchor point in the center of the window as a visual guide, if necessary.
@@ -4977,6 +5439,10 @@ interpolated (mathematically calculated) between it and the last tracked moment.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **90**
 
+
+
+
+--- end of page=115 ---
 
 **Using the Mini Panel—Tracking**
 
@@ -5022,6 +5488,10 @@ replay the clip you’re working on.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **91**
 
+
+
+
+--- end of page=116 ---
 
 **What About the Hand?**
 
@@ -5090,6 +5560,10 @@ highlights, and it is vital to understand how to adjust them effectively.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **92**
 
 
+
+
+--- end of page=117 ---
+
 There are several approaches to correcting or matching a sky when working with standard
 
 dynamic range footage. The fastest is to apply a gradient window and blend color into the
@@ -5122,6 +5596,10 @@ only this selection.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **93**
 
+
+
+
+--- end of page=118 ---
 
 **5** Switch the viewer to Highlight mode. Ensure that the mode on the row below is set
 
@@ -5180,6 +5658,10 @@ there is any.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **94**
 
 
+
+
+--- end of page=119 ---
+
 **9** Drag the left side of the Luminance selection (Low) to further refine the selection. Aim
 
 to include the darker areas of sky between the trees.
@@ -5198,6 +5680,10 @@ white representation of the matte.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **95**
 
+
+
+
+--- end of page=120 ---
 
 You will use the Matte Finesse controls in the Qualifier palette to further clean up this
 
@@ -5239,6 +5725,10 @@ the edges of the trees.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **96**
 
+
+
+
+--- end of page=121 ---
 
 **12** The Clean Black and Clean White parameters eliminate noise by shrinking very small
 
@@ -5297,6 +5787,10 @@ selection so that your secondary grade will only impact the sky.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **97**
 
 
+
+
+--- end of page=122 ---
+
 **3** Drag its corners around the sky selection to exclude the lower regions of the matte.
 
 
@@ -5315,6 +5809,10 @@ saturation changes.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **98**
 
+
+
+
+--- end of page=123 ---
 
 Making luminance and color adjustments within a qualifier selection sometimes
 
@@ -5381,6 +5879,10 @@ slider at the top of the panel to increase or decrease the size of the nodes.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **99**
 
 
+
+
+--- end of page=124 ---
+
 **3** At the bottom of the Window palette’s preset list, activate the Gradient window button
 
 and label it **Atmosphere** .
@@ -5431,6 +5933,10 @@ it **Foreground** .
 **Lesson 3 Correcting and Enhancing Isolated Areas** **100**
 
 
+
+
+--- end of page=125 ---
+
 **9** In the viewer, click around the foreground hill and the lower half of the frame to create
 
 a custom shape. To close the loop and define the shape, click the first point that
@@ -5461,6 +5967,10 @@ shape from the final key of the node.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **101**
 
+
+
+
+--- end of page=126 ---
 
 **12** To the right of the Window palette, adjust the Softness parameters to feather the edge
 
@@ -5505,6 +6015,10 @@ NOTE This exercise requires DaVinci Resolve Studio to complete.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **102**
 
 
+
+
+--- end of page=127 ---
+
 **3** Type **sky** to filter the library contents.
 
 
@@ -5540,6 +6054,10 @@ effect into the clip pipeline.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **103**
 
+
+
+
+--- end of page=128 ---
 
 Note that the key connection between the Sky and Outside node remains. This ensures
 
@@ -5596,6 +6114,10 @@ the Source Sky Appearance category as they are.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **104**
 
 
+
+
+--- end of page=129 ---
+
 **Artificial Sky** allows you to generate your own sky using a variety of color and
 
 gradient parameters, as well as controls for cloud and sun detail.
@@ -5613,6 +6135,10 @@ gradient in the viewer.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **105**
 
+
+
+
+--- end of page=130 ---
 
 When working with larger sky areas or designing more intricate sky hues, adjust the
 
@@ -5665,6 +6191,10 @@ incoming matte is filled with the sky image.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **106**
 
 
+
+
+--- end of page=131 ---
+
 **20** Since there is a slight camera wobble in this locked-off shot, click Track Foreground to
 
 analyze the footage outside the input key. This will result in the artificial sky moving
@@ -5696,6 +6226,10 @@ After
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **107**
 
+
+
+
+--- end of page=132 ---
 
 TIP As well as a method of correcting blown-out or overcast skies, Sky
 
@@ -5746,6 +6280,10 @@ You will continue to work on clip 01 in the yellow flag-filtered timeline.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **108**
 
 
+
+
+--- end of page=133 ---
+
 The Color Warper’s Chroma Warp tool features a chromaticity diagram that represents
 
 all the potential hues you can target and adjust. A white trace showing the distribution
@@ -5790,6 +6328,10 @@ precise adjustments.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **109**
 
 
+
+
+--- end of page=134 ---
+
 **4** In the sidebar, under Tools, ensure that Add Stroke - Normal Mode is selected.
 
 
@@ -5821,6 +6363,10 @@ which areas of the image will be affected by the warper.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **110**
 
+
+
+
+--- end of page=135 ---
 
 This results in more saturated greens, but the effect overpowers other regions of the
 
@@ -5856,6 +6402,10 @@ Another pin appears on the trace, and the result in the viewer is further improv
 **Lesson 3 Correcting and Enhancing Isolated Areas** **111**
 
 
+
+
+--- end of page=136 ---
+
 **10** If necessary, choose the Select tool and refine the hue and saturation of the grass
 
 points directly in the Chroma Warp diagram.
@@ -5882,6 +6432,10 @@ the ground, unaffected.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **112**
 
+
+
+
+--- end of page=137 ---
 
 The Color Warper enables intuitive adjustment of color, hue, and saturation directly within
 
@@ -5923,6 +6477,10 @@ when working with bright areas, such as skies, lights, and windows.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **113**
 
 
+
+
+--- end of page=138 ---
+
 The Chroma-Luma panel features a pair of mesh grids that depict the cross sections of
 
 a 3D chroma-luma cube. A trace is projected behind the grids, representing the
@@ -5952,6 +6510,10 @@ subtle adjustments.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **114**
 
+
+
+
+--- end of page=139 ---
 
 **5** Reset the Color Warper by clicking the reset arrow in the upper right corner of
 
@@ -5992,6 +6554,10 @@ bottom two rows.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **115**
 
 
+
+
+--- end of page=140 ---
+
 **9** In the Tools sidebar, click the Select Row button to expand the selection to the
 
 entire row.
@@ -6030,6 +6596,10 @@ drag right and slightly upward to push a vibrant pink hue into the sky.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **116**
 
 
+
+
+--- end of page=141 ---
+
 **16** In the viewer, click the orange region right above the mountains and drag left and
 
 upward to brighten the sky and give the sunrise a warmer, more pronounced glow.
@@ -6055,6 +6625,10 @@ After
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **117**
 
+
+
+
+--- end of page=142 ---
 
 **17** When finished, copy the Sky node and paste it into a new node in clip 04 to keep the
 
@@ -6087,6 +6661,10 @@ our best to make skin look clear and natural.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **118**
 
 
+
+
+--- end of page=143 ---
+
 In DaVinci Resolve, this is achieved with a combination of primary adjustments aimed at
 
 ensuring skin is well exposed and balanced, and secondary grading methods and effects
@@ -6118,6 +6696,10 @@ has already has a luminance adjustment on the first node.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **119**
 
+
+
+
+--- end of page=144 ---
 
 NOTE If you are not using DaVinci Resolve Studio, a watermark will appear
 
@@ -6153,6 +6735,10 @@ tracks the face and constructs a traveling matte.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **120**
 
 
+
+
+--- end of page=145 ---
+
 When the analysis is complete, you will see a collection of green trackers outlining the
 
 woman’s facial features.
@@ -6185,8 +6771,16 @@ part of the tan hat that the woman is wearing, which you will remove in the next
 **Lesson 3 Correcting and Enhancing Isolated Areas** **121**
 
 
+
+
+--- end of page=146 ---
+
 **Lesson 3 Correcting and Enhancing Isolated Areas** **122**
 
+
+
+
+--- end of page=147 ---
 
 ##### **Combining Windows with Face Refinement**
 
@@ -6221,6 +6815,10 @@ excluding the hat.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **123**
 
+
+
+
+--- end of page=148 ---
 
 **9** Click the Track Reverse button to track the motion of her face backward
 
@@ -6292,6 +6890,10 @@ result, known in the industry as “beauty work.”
 **Lesson 3 Correcting and Enhancing Isolated Areas** **124**
 
 
+
+
+--- end of page=149 ---
+
 **1** In the Workspace menu, choose Full Screen Viewer or press Shift-F to expand the
 
 viewer to fill your screen while still giving you access to the Effects panel to the right.
@@ -6337,6 +6939,10 @@ Color Boost enhances saturation in areas of the skin that are undersaturated.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **125**
 
+
+
+
+--- end of page=150 ---
 
 **5** Drag the Color Boost until you reach 0.020.
 
@@ -6404,6 +7010,10 @@ type of adjustment, so you can skip these settings too.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **126**
 
 
+
+
+--- end of page=151 ---
+
 **14** Scroll down to the Eyes category and click the header to expand it.
 
 
@@ -6455,6 +7065,10 @@ lighting or patchy skin tones.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **127**
 
+
+
+
+--- end of page=152 ---
 
 You have completed the work required on this clip. If you are generally happy with the
 
@@ -6508,6 +7122,10 @@ the primary grading palettes combined with secondary grading selection technique
 **Lesson 3 Correcting and Enhancing Isolated Areas** **128**
 
 
+
+
+--- end of page=153 ---
+
 ## **Adjusting Skin Tones Manually**
 
 The Curve palette’s HSL curves allow you to make rapid, targeted secondary adjustments
@@ -6542,6 +7160,10 @@ the aim of adjusting its brightness (lum).
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **129**
 
+
+
+
+--- end of page=154 ---
 
 The Hue Vs Hue palette displays the full range of colors in a linear fashion, looping
 
@@ -6581,6 +7203,10 @@ skin tone.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **130**
 
 
+
+
+--- end of page=155 ---
+
 TIP For more precision when moving a control point, use the Input Hue
 
 and Hue Rotate fields in the lower right corner of the palette.
@@ -6619,6 +7245,10 @@ to the vectorscope.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **131**
 
 
+
+
+--- end of page=156 ---
+
 **10** In the Scopes palette, choose Vectorscope as the scope type.
 
 
@@ -6648,6 +7278,10 @@ setting is still helpful for checking hue distribution in low-saturation images.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **132**
 
+
+
+
+--- end of page=157 ---
 
 **13** Select Show Skin Tone Indicator to display a line that indicates the angle for skin
 
@@ -6681,6 +7315,10 @@ magenta tint.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **133**
 
 
+
+
+--- end of page=158 ---
+
 **16** Add additional control points in the Hue Vs Hue curve and aim to place the man’s skin
 
 vectorscope trace parallel to the Skin Tone Indicator line.
@@ -6713,6 +7351,10 @@ refined selection.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **134**
 
+
+
+
+--- end of page=159 ---
 
 **How Do We Color Grade Skin?**
 
@@ -6784,6 +7426,10 @@ to Workspace > Layout Presets > Save Layout as Preset.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **135**
 
 
+
+
+--- end of page=160 ---
+
 ##### **Setting Skin Tone Saturation**
 
 With the skin hue adjusted, you can make use of another HSL curve to address skin
@@ -6834,6 +7480,10 @@ will appear oversaturated on the screen.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **136**
 
 
+
+
+--- end of page=161 ---
+
 Be careful not to get too aggressive when adjusting skin tones. The aim is not to produce a
 
 magazine-cover look but to reduce minor imperfections and enhance the visibility of the
@@ -6875,10 +7525,12 @@ learn which are the most visually successful and time efficient for you.
 
 
 
-
-
 **Lesson 3 Correcting and Enhancing Isolated Areas** **137**
 
+
+
+
+--- end of page=162 ---
 
 ## **Self-Guided Exercises**
 
@@ -6937,6 +7589,10 @@ Studio effects.
 **Lesson 3 Correcting and Enhancing Isolated Areas** **138**
 
 
+
+
+--- end of page=163 ---
+
 ## **Lesson Review**
 
 **1** How are secondary color corrections different from primary color corrections?
@@ -6956,6 +7612,10 @@ onto another window or node.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **139**
 
+
+
+
+--- end of page=164 ---
 
 ##### **Answers**
 
@@ -6984,6 +7644,10 @@ Tracker palette.
 
 **Lesson 3 Correcting and Enhancing Isolated Areas** **140**
 
+
+
+
+--- end of page=165 ---
 
 ### Part II
 # Managing Nodes and Grades
@@ -7023,8 +7687,16 @@ instructions on how to do so.
 **Managing Nodes and Grades** **141**
 
 
+
+
+--- end of page=166 ---
+
 **This page is intentionally left blank** **142**
 
+
+
+
+--- end of page=167 ---
 
 ### Lesson 4
 # Conforming an XML Timeline
@@ -7082,6 +7754,10 @@ Maximizing the Dynamic Range 168
 Lesson Review 179
 
 
+
+
+--- end of page=168 ---
+
 To ensure that an imported timeline is an exact replica of the editor’s work, you must use a
 
 verification process known as _conforming_ to compare the reconstructed edit with a
@@ -7137,6 +7813,10 @@ timeline and choose File > Import > Timeline.
 **Lesson 4 Conforming an XML Timeline** **144**
 
 
+
+
+--- end of page=169 ---
+
 **7** In the BMD 20 CC - Project 02 folder, navigate to the XMLs subfolder. Locate the
 
 **01_TooMuchLife_Trailer.xml** file and import it.
@@ -7167,6 +7847,10 @@ you will learn about later in this lesson.
 
 **Lesson 4 Conforming an XML Timeline** **145**
 
+
+
+
+--- end of page=170 ---
 
 **8** Click OK to close the dialog.
 
@@ -7223,6 +7907,10 @@ missing media. You will resolve this during the conforming stage.
 **Lesson 4 Conforming an XML Timeline** **146**
 
 
+
+
+--- end of page=171 ---
+
 **15** Click No to indicate that you do not wish to keep searching for media and want to
 
 proceed with the timeline import.
@@ -7259,6 +7947,10 @@ original camera filenames throughout the entire post-production process.
 **Lesson 4 Conforming an XML Timeline** **147**
 
 
+
+
+--- end of page=172 ---
+
 ##### **Project Housekeeping**
 
 For easier project management, you will organize the imported files into bins and color
@@ -7293,6 +7985,10 @@ moved or renamed after the XML was generated. However, the XML file provided
 **Lesson 4 Conforming an XML Timeline** **148**
 
 
+
+
+--- end of page=173 ---
+
 enough metadata to still represent the image in the timeline and media pool without
 
 a link to the actual file asset. You will replace the file source to re-establish a link with
@@ -7321,6 +8017,10 @@ graphic with the updated name.
 
 **Lesson 4 Conforming an XML Timeline** **149**
 
+
+
+
+--- end of page=174 ---
 
 You can further organize your media by separating the VFX composites from the
 
@@ -7355,6 +8055,10 @@ will give you access to the customizable track label.
 
 **Lesson 4 Conforming an XML Timeline** **150**
 
+
+
+
+--- end of page=175 ---
 
 **13** Repeat steps 11-12 for Audio 2 (new name **SFX** for “sound effects”) and Audio 3 (new
 
@@ -7403,6 +8107,10 @@ corner, which indicates its status as an offline reference clip.
 **Lesson 4 Conforming an XML Timeline** **151**
 
 
+
+
+--- end of page=176 ---
+
 **5** Open the edit page.
 
 **6** In the 03 Timelines bin, right-click 01_TooMuchLife_Trailer and choose Timelines > Link
@@ -7447,6 +8155,10 @@ the start timecode of the reference clip to match the timeline.
 
 **Lesson 4 Conforming an XML Timeline** **152**
 
+
+
+
+--- end of page=177 ---
 
 **11** In the Clip Attributes window, click the Timecode tab and enter **01** as the Current
 
@@ -7500,6 +8212,10 @@ Additional_Media.
 **Lesson 4 Conforming an XML Timeline** **153**
 
 
+
+
+--- end of page=178 ---
+
 NOTE If your **Chyron.png** graphic was missing during the “Project
 
 Housekeeping” exercise, navigate to the BMD 20 CC - Project 02 folder >
@@ -7550,6 +8266,10 @@ To resolve this, you can manually import and assign the correct clip to the time
 
 **Lesson 4 Conforming an XML Timeline** **154**
 
+
+
+
+--- end of page=179 ---
 
 **10** Drag all the remaining video clips ( **A205_C010_0527Q2.mov**,
 
@@ -7602,6 +8322,10 @@ edit points, transitions, and effects.
 
 **Lesson 4 Conforming an XML Timeline** **155**
 
+
+
+
+--- end of page=180 ---
 
 In the reference movie, the transition is a bright flash, mimicking the camera flash and
 
@@ -7663,6 +8387,10 @@ can help you check whether clips are identically framed.
 **Lesson 4 Conforming an XML Timeline** **156**
 
 
+
+
+--- end of page=181 ---
+
 **6** Right-click the timeline viewer and choose Horizontal Wipe.
 
 
@@ -7685,6 +8413,10 @@ misaligned.
 
 **Lesson 4 Conforming an XML Timeline** **157**
 
+
+
+
+--- end of page=182 ---
 
 **9** In the timeline, click clip 5 and open the Inspector panel in the upper right corner of
 
@@ -7728,6 +8460,10 @@ would become black to signify that no visual differences remained between the cl
 **Lesson 4 Conforming an XML Timeline** **158**
 
 
+
+
+--- end of page=183 ---
+
 **12** Right-click the timeline viewer and choose No Wipe to return to the standard viewer.
 
 **13** Close the Inspector. If you are working on a 1920 x 1080 resolution (or smaller)
@@ -7765,6 +8501,10 @@ according to the reference movie and burn-in.
 
 **Lesson 4 Conforming an XML Timeline** **159**
 
+
+
+
+--- end of page=184 ---
 
 **18** In the Conflict Resolution window, select the clip of the boy in the classroom
 
@@ -7805,6 +8545,10 @@ The image in the timeline viewer does not match the reference movie.
 
 **Lesson 4 Conforming an XML Timeline** **160**
 
+
+
+
+--- end of page=185 ---
 
 **2** Press the Right Arrow until you reach the cut in the reference movie, which should be
 
@@ -7853,6 +8597,10 @@ that appears between the In and Out points.
 **Lesson 4 Conforming an XML Timeline** **161**
 
 
+
+
+--- end of page=186 ---
+
 **8** Slip the clip right until the mixed images in the timeline viewer are lined up, and then
 
 release the mouse button.
@@ -7900,6 +8648,10 @@ risk of your project being rejected or incapable of playback on a device.
 
 **Lesson 4 Conforming an XML Timeline** **162**
 
+
+
+
+--- end of page=187 ---
 
 You have now successfully conformed this timeline. Although it’s natural to feel that
 
@@ -7973,6 +8725,10 @@ be conformed.
 **Lesson 4 Conforming an XML Timeline** **163**
 
 
+
+
+--- end of page=188 ---
+
 TIP When sharing a timeline with someone who is also working in DaVinci Resolve,
 
 you have several options:
@@ -8039,6 +8795,10 @@ too large to share with you. If you are curious, the trimmed camera footage for 
 **Lesson 4 Conforming an XML Timeline** **164**
 
 
+
+
+--- end of page=189 ---
+
 ##### **Swapping Transcoded Media** **for Camera Originals**
 
 If you receive a timeline that is edited with transcoded media, you can link it to the camera
@@ -8076,6 +8836,10 @@ media that shares similar metadata.
 
 **Lesson 4 Conforming an XML Timeline** **165**
 
+
+
+
+--- end of page=190 ---
 
 The Conform from Media Storage window allows you to refine the media that is
 
@@ -8135,6 +8899,10 @@ and original camera footage in your timeline.
 
 **Lesson 4 Conforming an XML Timeline** **166**
 
+
+
+
+--- end of page=191 ---
 
 **Generate Proxy Media in the Media Pool**
 
@@ -8203,6 +8971,10 @@ media, cut, edit, color, and deliver pages.
 **Lesson 4 Conforming an XML Timeline** **167**
 
 
+
+
+--- end of page=192 ---
+
 ## **Maximizing the Dynamic Range**
 
 The grading potential of an image is determined primarily by its dynamic range, which is
@@ -8234,6 +9006,10 @@ Ungraded video with a 2.4 gamma curve
 
 **Lesson 4 Conforming an XML Timeline** **168**
 
+
+
+
+--- end of page=193 ---
 
 Ungraded footage within a log curve
 
@@ -8269,6 +9045,10 @@ deliverable standard. This is known as _scene-referred color management._ DaVinc
 
 **Lesson 4 Conforming an XML Timeline** **169**
 
+
+
+
+--- end of page=194 ---
 
 interprets the color profile of the camera sensor used to capture the media and precisely
 
@@ -8317,6 +9097,10 @@ underneath will summarize the preset’s intended use.
 **Lesson 4 Conforming an XML Timeline** **170**
 
 
+
+
+--- end of page=195 ---
+
 **4** Deselect “Automatic color management.”
 
 
@@ -8356,6 +9140,10 @@ the color page grading tools and nodes.
 
 **Lesson 4 Conforming an XML Timeline** **171**
 
+
+
+
+--- end of page=196 ---
 
 **7** Set the “Timeline color space” to REDWideGamutRGB/Log3G10 too.
 
@@ -8418,6 +9206,10 @@ parameter as P3-D65 and the right parameter as sRGB.
 
 **Lesson 4 Conforming an XML Timeline** **172**
 
+
+
+
+--- end of page=197 ---
 
 If you are working with a grading monitor, change your output color space to match
 
@@ -8486,6 +9278,10 @@ in the pool.
 **Lesson 4 Conforming an XML Timeline** **173**
 
 
+
+
+--- end of page=198 ---
+
 **13** Right-click any of the selected clips and choose Input Color Space > Project 
 REDWideGamutRGB/Log3G10. This will not only indicate the input color space of the
 
@@ -8538,6 +9334,10 @@ their input color spaces in batches to save time.
 
 **Lesson 4 Conforming an XML Timeline** **174**
 
+
+
+
+--- end of page=199 ---
 
 With project-wide color management set up, you are ready to begin grading. In later
 
@@ -8597,6 +9397,10 @@ professional deliverable standards.
 
 **Lesson 4 Conforming an XML Timeline** **175**
 
+
+
+
+--- end of page=200 ---
 
 Note that color management does not eliminate the need for balancing and matching.
 
@@ -8663,6 +9467,10 @@ color transformations without the need to regrade the timeline.
 **Lesson 4 Conforming an XML Timeline** **176**
 
 
+
+
+--- end of page=201 ---
+
 **1** Open Project Settings > Color Management.
 
 **2** Set the Output Color Space to P3-D65 ST2084 4000 nits.
@@ -8727,6 +9535,10 @@ preferred display.
 **Lesson 4 Conforming an XML Timeline** **177**
 
 
+
+
+--- end of page=202 ---
+
 TIP If you know in advance that you will deliver content in multiple standards, you
 
 should start your workflow in the widest gamut and then work your way down. For
@@ -8778,6 +9590,10 @@ lessons in this book.
 **Lesson 4 Conforming an XML Timeline** **178**
 
 
+
+
+--- end of page=203 ---
+
 ## **Lesson Review**
 
 **1** During project migration, what is a translation error?
@@ -8795,6 +9611,10 @@ when matching”?
 
 **Lesson 4 Conforming an XML Timeline** **179**
 
+
+
+
+--- end of page=204 ---
 
 ##### **Answers**
 
@@ -8825,6 +9645,10 @@ Color Managed.
 
 **Lesson 4 Conforming an XML Timeline** **180**
 
+
+
+
+--- end of page=205 ---
 
 ### Lesson 5
 # Mastering Node Trees
@@ -8881,6 +9705,10 @@ Self-Guided Exercises 222
 Lesson Review 223
 
 
+
+
+--- end of page=206 ---
+
 ## **Understanding Node-Based** **Grade Compositing**
 
 Node-based compositing differs from the layer-based system familiar to many post
@@ -8924,6 +9752,10 @@ and output.
 
 **Lesson 5 Mastering Node Trees** **182**
 
+
+
+
+--- end of page=207 ---
 
 Standard corrector nodes have two inputs and two outputs.
 
@@ -8979,6 +9811,10 @@ following nodes by removing its saturation and observing the results.
 **Lesson 5 Mastering Node Trees** **183**
 
 
+
+
+--- end of page=208 ---
+
 **4** Label the first node **BW** .
 
 **5** In the left palettes, open the RGB Mixer palette.
@@ -9033,6 +9869,10 @@ the two nodes.
 **Lesson 5 Mastering Node Trees** **184**
 
 
+
+
+--- end of page=209 ---
+
 **12** Click node 02 (Sepia) and press E to extract it from the node tree.
 
 **13** Drag the disconnected node onto the connection line to the left of node 01 until the
@@ -9074,6 +9914,10 @@ the RGB Mixer in the BW node.
 **Lesson 5 Mastering Node Trees** **185**
 
 
+
+
+--- end of page=210 ---
+
 **What If You Made Both Adjustments in One Node?**
 
 The order in which the RGB signal is impacted by the tools in the color page is
@@ -9102,6 +9946,10 @@ the workflow light, intuitive, and consistent.
 **Lesson 5 Mastering Node Trees** **186**
 
 
+
+
+--- end of page=211 ---
+
 ##### **Visualizing Node Processing**
 
 While it’s good to see how grading tools operate in practice, using DaVinci Resolve’s
@@ -9127,6 +9975,10 @@ clip so that it can take on video properties.
 
 **Lesson 5 Mastering Node Trees** **187**
 
+
+
+
+--- end of page=212 ---
 
 **5** In the timeline, right-click the generator and choose New Compound Clip.
 
@@ -9158,6 +10010,10 @@ the generator.
 **Lesson 5 Mastering Node Trees** **188**
 
 
+
+
+--- end of page=213 ---
+
 **12** Click the newly green (previously yellow) bar in the viewer.
 
 
@@ -9184,6 +10040,10 @@ spike on the yellow vector.
 
 **Lesson 5 Mastering Node Trees** **189**
 
+
+
+
+--- end of page=214 ---
 
 **16** In the viewer, click either of the green bars.
 
@@ -9225,6 +10085,10 @@ does not require additional processing prior to keying.
 **Lesson 5 Mastering Node Trees** **190**
 
 
+
+
+--- end of page=215 ---
+
 ##### **Adjusting Contrast and Luminance on Nodes**
 
 With a clearer understanding of the function of RGB inputs and outputs, you can now
@@ -9265,6 +10129,10 @@ You can use the palette itself to read how the tool interprets the incoming sign
 **Lesson 5 Mastering Node Trees** **191**
 
 
+
+
+--- end of page=216 ---
+
 The histogram changes to show the state of the video signal entering the selected
 
 node. This can be useful for determining where to click in the curves graph to target
@@ -9302,6 +10170,10 @@ from the bottom.
 
 **Lesson 5 Mastering Node Trees** **192**
 
+
+
+
+--- end of page=217 ---
 
 Although the waveform distribution appears similar to the original, ungraded signal, the
 
@@ -9379,6 +10251,10 @@ nodes because no other nodes rely on them for RGB info.
 **Lesson 5 Mastering Node Trees** **193**
 
 
+
+
+--- end of page=218 ---
+
 ##### **Impact of Dominant Color Grades** **on Surrounding Nodes**
 
 Another consideration when grading is choosing the order in which to apply color changes
@@ -9392,6 +10268,10 @@ retaining control over the subjects’ skin tones.
 
 **Lesson 5 Mastering Node Trees** **194**
 
+
+
+
+--- end of page=219 ---
 
 **2** To save time, a Balance node for this clip has already been created. Open the gallery
 
@@ -9428,6 +10308,10 @@ viewer’s eyes.
 
 **Lesson 5 Mastering Node Trees** **195**
 
+
+
+
+--- end of page=220 ---
 
 For a more dynamic look, you will aim to create _color separation_ between the
 
@@ -9467,6 +10351,10 @@ node tree for keying or grading skin.
 **Lesson 5 Mastering Node Trees** **196**
 
 
+
+
+--- end of page=221 ---
+
 **13** Reset the qualifier on the Skin node and drag to select the skin again. In the Qualifier
 
 palette, adjust the HSL and Matte Finesse controls to get the best extraction.
@@ -9487,6 +10375,10 @@ Offset wheel slightly toward orange.
 
 **Lesson 5 Mastering Node Trees** **197**
 
+
+
+
+--- end of page=222 ---
 
 The resulting grade is much more appealing. You were able to produce a clean key for
 
@@ -9545,6 +10437,10 @@ routing of the RGB signal.
 **Lesson 5 Mastering Node Trees** **198**
 
 
+
+
+--- end of page=223 ---
+
 **3** Right-click node 03 (Blue look) and choose Add Node > Add Parallel or press Option-P
 
 (macOS) or Alt-P (Windows) to add a parallel mixer node.
@@ -9593,6 +10489,10 @@ scrub in the Thumbnail and Viewer, Thumbnail only, or neither.
 **Lesson 5 Mastering Node Trees** **199**
 
 
+
+
+--- end of page=224 ---
+
 In the viewer, you should notice a subtle change in skin saturation. This is because the
 
 Skin node is now impacting the neutral colors of the Balance node rather than
@@ -9628,6 +10528,10 @@ the image.
 
 **Lesson 5 Mastering Node Trees** **200**
 
+
+
+
+--- end of page=225 ---
 
 **2** In the Node Editor, right-click the parallel mixer node and choose “Morph into Layer
 
@@ -9672,6 +10576,10 @@ at how they operate.
 
 **Lesson 5 Mastering Node Trees** **201**
 
+
+
+
+--- end of page=226 ---
 
 ##### **Visualizing Mixer Nodes**
 
@@ -9721,6 +10629,10 @@ layer nodes.
 **Lesson 5 Mastering Node Trees** **202**
 
 
+
+
+--- end of page=227 ---
+
 Leaving a blank node before the layer stack makes it easier to add upstream
 
 (“serial before”) nodes and navigate the node tree when needed.
@@ -9754,6 +10666,10 @@ black point.
 
 **Lesson 5 Mastering Node Trees** **203**
 
+
+
+
+--- end of page=228 ---
 
 The result demonstrates how nodes interact when combined in a layer mixer node.
 
@@ -9805,6 +10721,10 @@ layer mixer.
 **Lesson 5 Mastering Node Trees** **204**
 
 
+
+
+--- end of page=229 ---
+
 **24** Drag the RGB output of the Blue node to the top input of the layer mixer.
 
 
@@ -9846,6 +10766,10 @@ element separately.
 **Lesson 5 Mastering Node Trees** **205**
 
 
+
+
+--- end of page=230 ---
+
 **1** Select clip 03 in the 01_TooMuchLife_Trailer timeline.
 
 **2** In the viewer, drag the playhead to the last frame of the clip, where you can clearly see
@@ -9874,6 +10798,10 @@ clip to the one in the reference video.
 
 **Lesson 5 Mastering Node Trees** **206**
 
+
+
+
+--- end of page=231 ---
 
 As you can see, the client’s vision is to enhance the red elements, especially the jacket
 
@@ -9914,6 +10842,10 @@ HSL to 3D.
 **Lesson 5 Mastering Node Trees** **207**
 
 
+
+
+--- end of page=232 ---
+
 Whereas the other qualifier modes are linear, the 3D qualifier features a radial
 
 distribution of the color vectors, making it optimal for complex color selections. It was
@@ -9944,6 +10876,10 @@ reference.
 **Lesson 5 Mastering Node Trees** **208**
 
 
+
+
+--- end of page=233 ---
+
 **14** Drag in the viewer to remove the qualifier selection from the wooden paneling
 
 behind the desk.
@@ -9957,6 +10893,10 @@ After
 
 **Lesson 5 Mastering Node Trees** **209**
 
+
+
+
+--- end of page=234 ---
 
 Every time you create a stroke (additive or subtractive), a swatch is added to the 3D
 
@@ -10027,6 +10967,10 @@ the viewer.
 **Lesson 5 Mastering Node Trees** **210**
 
 
+
+
+--- end of page=235 ---
+
 **18** Drag the playhead to the first frame and use the Picker Add and Picker Subtract tools
 
 to further clean up the matte. Ensure that you remove the selection of the chair and
@@ -10052,6 +10996,10 @@ You have successfully extracted the red objects in the scene.
 
 **Lesson 5 Mastering Node Trees** **211**
 
+
+
+
+--- end of page=236 ---
 
 **22** Return to node 02 (BG), raise the saturation (35.00), and cool the Temp (-100.00) in the
 
@@ -10099,6 +11047,10 @@ whole ticket and no other red elements.
 **Lesson 5 Mastering Node Trees** **212**
 
 
+
+
+--- end of page=237 ---
+
 **6** In the Window palette, click the Invert icon to remove the pink ticket selection from the
 
 Jacket node key.
@@ -10140,6 +11092,10 @@ label it **Reds** .
 **Lesson 5 Mastering Node Trees** **213**
 
 
+
+
+--- end of page=238 ---
+
 **12** To reuse the matte data of the keyed Jacket node, drag the key output square of the
 
 Jacket node toward the key input triangle of the Reds node.
@@ -10170,6 +11126,10 @@ of the clip.
 
 **Lesson 5 Mastering Node Trees** **214**
 
+
+
+
+--- end of page=239 ---
 
 **18** Scrub through the clip and change the gradient position and rotation until the
 
@@ -10204,6 +11164,10 @@ The nodes appear just as they did before you turned them into a compound node.
 
 **Lesson 5 Mastering Node Trees** **215**
 
+
+
+
+--- end of page=240 ---
 
 **22** To navigate back to the main Node Editor, double-click Project 02 – Too Much Life
 
@@ -10263,6 +11227,10 @@ Other > Mattes.
 **Lesson 5 Mastering Node Trees** **216**
 
 
+
+
+--- end of page=241 ---
+
 **4** Drag **Rainbow_matte.png** into the 05 VFX > 05.01 Mattes bin of the media pool.
 
 
@@ -10313,6 +11281,10 @@ prominent rainbows.
 **Lesson 5 Mastering Node Trees** **217**
 
 
+
+
+--- end of page=242 ---
+
 When working on projects that feature a lot of CGI and 2D composting, it is standard for
 
 colorists to receive such matte assets from post houses since these mattes are generally
@@ -10357,6 +11329,10 @@ image assets labeled pic_1, pic_2, pic_3, etc.).
 **Lesson 5 Mastering Node Trees** **218**
 
 
+
+
+--- end of page=243 ---
+
 **3** From the options menu (…), choose Frame Display Mode > Sequence.
 
 
@@ -10400,6 +11376,10 @@ the content of the shot.
 **Lesson 5 Mastering Node Trees** **219**
 
 
+
+
+--- end of page=244 ---
+
 **13** Zoom in to the viewer to review the external matte overlay. Scrub the playhead to
 
 check the timing.
@@ -10427,6 +11407,10 @@ the beach. That means you need to sync the start time of the matte to the video 
 
 **Lesson 5 Mastering Node Trees** **220**
 
+
+
+
+--- end of page=245 ---
 
 **16** Click the Loop parameter checkbox to disable looping.
 
@@ -10474,6 +11458,10 @@ The person on the beach disappears.
 
 **Lesson 5 Mastering Node Trees** **221**
 
+
+
+
+--- end of page=246 ---
 
 The exercises in this lesson gave you an advanced overview of the potential of the Node
 
@@ -10533,6 +11521,10 @@ left of the settings panel to link it to the project-wide color management setti
 **Lesson 5 Mastering Node Trees** **222**
 
 
+
+
+--- end of page=247 ---
+
 ## **Lesson Review**
 
 **1** True or False? A corrector node can have multiple RGB inputs.
@@ -10550,6 +11542,10 @@ parallel or layer node stack.
 
 **Lesson 5 Mastering Node Trees** **223**
 
+
+
+
+--- end of page=248 ---
 
 ##### **Answers**
 
@@ -10572,6 +11568,10 @@ to force an image sequence to display (and import) as a single video file.
 
 **Lesson 5 Mastering Node Trees** **224**
 
+
+
+
+--- end of page=249 ---
 
 ### Lesson 6
 # Managing Grades Across Clips and Timelines
@@ -10653,6 +11653,10 @@ Self-Guided Exercises 258
 Lesson Review 259
 
 
+
+
+--- end of page=250 ---
+
 ## **Working with Versions**
 
 Versions enable you to associate multiple grades with a single clip in a timeline. You can
@@ -10685,6 +11689,10 @@ the edit page timeline, click the Unmix button in the lower left corner of the v
 **Lesson 6 Managing Grades Across Clips and Timelines** **226**
 
 
+
+
+--- end of page=251 ---
+
 **4** In the gallery, open the Base grades album and apply the **1.5.1 Balance** still to
 
 balance clip 05.
@@ -10716,6 +11724,10 @@ upward to add a slight red tint to the midtones.
 
 **Lesson 6 Managing Grades Across Clips and Timelines** **227**
 
+
+
+
+--- end of page=252 ---
 
 To address the vibrant blues in the shot, you’ll use the ColorSlice. This palette features
 
@@ -10766,6 +11778,10 @@ performers’ faces.
 **Lesson 6 Managing Grades Across Clips and Timelines** **228**
 
 
+
+
+--- end of page=253 ---
+
 TIP The Highlights and Shadows parameters in the adjustment controls feature
 
 unique tonal ranges designed for better retrieval of detail from the highlights and
@@ -10804,6 +11820,10 @@ gallery album.
 
 **Lesson 6 Managing Grades Across Clips and Timelines** **229**
 
+
+
+
+--- end of page=254 ---
 
 **5** Reset the split-tone grade by choosing Color > Reset > All Grades and Nodes or press
 
@@ -10868,6 +11888,10 @@ Resolve effect.
 **Lesson 6 Managing Grades Across Clips and Timelines** **230**
 
 
+
+
+--- end of page=255 ---
+
 ##### **Designing Grades with the Film Look Creator**
 
 The Film Look Creator is a collection of tools that emulate the appearance of film stock.
@@ -10920,6 +11944,10 @@ of this base look, and Skin Bias tweaks skin tones relative to the base hues.
 
 **Lesson 6 Managing Grades Across Clips and Timelines** **231**
 
+
+
+
+--- end of page=256 ---
 
 Use the Color Settings to affect the photometric properties of the footage. Notice that
 
@@ -10993,6 +12021,10 @@ collaboration based on the looks you create in the Film Look Creator.
 **Lesson 6 Managing Grades Across Clips and Timelines** **232**
 
 
+
+
+--- end of page=257 ---
+
 Having created four distinct looks for this scene, you can now compare them in the
 
 viewer using the split-screen display.
@@ -11018,6 +12050,10 @@ Ctrl-F (Windows).
 
 **Lesson 6 Managing Grades Across Clips and Timelines** **233**
 
+
+
+
+--- end of page=258 ---
 
 TIP To remove the white outline around the active version, go to the viewer
 
@@ -11085,6 +12121,10 @@ applied on a project basis.
 **Lesson 6 Managing Grades Across Clips and Timelines** **234**
 
 
+
+
+--- end of page=259 ---
+
 ## **Appending Grades and Nodes**
 
 Having created a look on the key shot of this sequence, you will now transfer the grade to
@@ -11138,6 +12178,10 @@ Instead, you will _append_ the split-tone grade to the current node tree.
 **Lesson 6 Managing Grades Across Clips and Timelines** **235**
 
 
+
+
+--- end of page=260 ---
+
 **4** Right-click the **1.5.1 Split tone** still and choose Append Node Graph.
 
 
@@ -11174,6 +12218,10 @@ However, when _appending_ nodes, window tracking data is preserved.
 **Lesson 6 Managing Grades Across Clips and Timelines** **236**
 
 
+
+
+--- end of page=261 ---
+
 ##### **Copying Individual Nodes**
 
 So far, you’ve used all the grading data stored in the stills. You copied and appended an
@@ -11208,6 +12256,10 @@ correct contrast, you only need to transfer the Split tone node itself.
 
 **Lesson 6 Managing Grades Across Clips and Timelines** **237**
 
+
+
+
+--- end of page=262 ---
 
 **3** Open the Clip 05 grades album, right-click the **1.5.1 Split tone** still, and choose Display
 
@@ -11250,6 +12302,10 @@ and refine the grades to ensure color consistency and maximum visual quality.
 
 **Lesson 6 Managing Grades Across Clips and Timelines** **238**
 
+
+
+
+--- end of page=263 ---
 
 **Shared Nodes**
 
@@ -11326,6 +12382,10 @@ acquire more tools, and develop your own grading techniques.
 **Lesson 6 Managing Grades Across Clips and Timelines** **239**
 
 
+
+
+--- end of page=264 ---
+
 Generally, you will want to start with corrector nodes aimed at addressing luminance,
 
 color balance, and saturation. You will then want to address the secondary needs using
@@ -11365,6 +12425,10 @@ Next, you will learn how to quickly transfer grade changes across clips.
 **Lesson 6 Managing Grades Across Clips and Timelines** **240**
 
 
+
+
+--- end of page=265 ---
+
 This setting forces the channels to maintain constant luminance as you mix their red,
 
 green, and blue values.
@@ -11387,6 +12451,10 @@ more cyan.
 
 **Lesson 6 Managing Grades Across Clips and Timelines** **241**
 
+
+
+
+--- end of page=266 ---
 
 **12** In the Color menu, choose Ripple Node Changes to Selected Clips.
 
@@ -11456,6 +12524,10 @@ color and saturation.
 **Lesson 6 Managing Grades Across Clips and Timelines** **242**
 
 
+
+
+--- end of page=267 ---
+
 ##### **Activating Node Stacks**
 
 While some colorists love having every stage of the grade under their fingertips, others
@@ -11498,6 +12570,10 @@ The Node Editor now has the label “Clip – PRIMARY” in the upper right corn
 **Lesson 6 Managing Grades Across Clips and Timelines** **243**
 
 
+
+
+--- end of page=268 ---
+
 **6** Click the dropdown arrow next to the label.
 
 
@@ -11534,6 +12610,10 @@ this stand-alone version gives you much more control over the final look.
 
 **Lesson 6 Managing Grades Across Clips and Timelines** **244**
 
+
+
+
+--- end of page=269 ---
 
 **12** Open the Effects panel and drag the Halation effect onto the node.
 
@@ -11589,6 +12669,10 @@ primary and secondary passes.
 
 **Lesson 6 Managing Grades Across Clips and Timelines** **245**
 
+
+
+
+--- end of page=270 ---
 
 Node stacks can help keep your workflow manageable by reducing the complexity of the
 
@@ -11646,6 +12730,10 @@ with _memories_ .
 **Lesson 6 Managing Grades Across Clips and Timelines** **246**
 
 
+
+
+--- end of page=271 ---
+
 This reveals a section of the Gallery panel that can retain stills for quick access. You will
 
 create a memory still for converting footage into black and white.
@@ -11683,6 +12771,10 @@ Project Memories panel.
 
 **Lesson 6 Managing Grades Across Clips and Timelines** **247**
 
+
+
+
+--- end of page=272 ---
 
 **10** Close the Gallery View window.
 
@@ -11725,6 +12817,10 @@ significantly reduce the time you spend managing and applying stills.
 **Lesson 6 Managing Grades Across Clips and Timelines** **248**
 
 
+
+
+--- end of page=273 ---
+
 ##### **Exporting and Importing Stills**
 
 Outside of using project libraries and PowerGrade albums, you can also share grades
@@ -11759,6 +12855,10 @@ will generate the DPX and DRX files after LUT signal processing.
 
 **Lesson 6 Managing Grades Across Clips and Timelines** **249**
 
+
+
+
+--- end of page=274 ---
 
 **5** Open the file browser on your workstation and locate the two files.
 
@@ -11796,6 +12896,10 @@ the DPX, and its grading data will be included automatically upon import.
 
 **Lesson 6 Managing Grades Across Clips and Timelines** **250**
 
+
+
+
+--- end of page=275 ---
 
 Here are some additional still options that colorists use for organizational and
 
@@ -11864,6 +12968,10 @@ match, and the grading data is transferred instantaneously.
 **Lesson 6 Managing Grades Across Clips and Timelines** **251**
 
 
+
+
+--- end of page=276 ---
+
 **4** In the Load XML window, deselect the option “Automatically import source clips into
 
 media pool” and click OK.
@@ -11916,6 +13024,10 @@ timeline you are right-clicking is the active timeline in the edit page.
 
 **Lesson 6 Managing Grades Across Clips and Timelines** **252**
 
+
+
+
+--- end of page=277 ---
 
 **11** In the ColorTrace Setup’s Project List window, expand the project library folder and
 
@@ -11973,6 +13085,10 @@ assign grades when the original filenames or metadata were changed between edits
 **Lesson 6 Managing Grades Across Clips and Timelines** **253**
 
 
+
+
+--- end of page=278 ---
+
 The bottom of the interface provides additional information and control over the copy
 
 parameters. To the left is a table that compares the metadata of the source and target
@@ -12012,6 +13128,10 @@ clips are proposed as possible options in the Matching Source Clips list above i
 
 **Lesson 6 Managing Grades Across Clips and Timelines** **254**
 
+
+
+
+--- end of page=279 ---
 
 Clip 07 clearly corresponds to the clip numbered 24 in the Matching Source Clips
 
@@ -12062,6 +13182,10 @@ green and magenta clips.
 
 **Lesson 6 Managing Grades Across Clips and Timelines** **255**
 
+
+
+
+--- end of page=280 ---
 
 The source timeline does not contain this clip. However, it features a similar clip 01,
 
@@ -12118,6 +13242,10 @@ background.
 **Lesson 6 Managing Grades Across Clips and Timelines** **256**
 
 
+
+
+--- end of page=281 ---
+
 **6** Drag the Magenta Center parameter to adjust the vector range. You want the selection
 
 to focus more on the background and furniture and less on the pink flowers in the
@@ -12142,6 +13270,10 @@ Trailer timeline.
 
 **Lesson 6 Managing Grades Across Clips and Timelines** **257**
 
+
+
+
+--- end of page=282 ---
 
 **10** Use the pop-up menu at the top to access the 02_TooMuchLife_30second_Trailer
 
@@ -12189,6 +13321,10 @@ yellow look across the rest of the broadcast studio sequence.
 **Lesson 6 Managing Grades Across Clips and Timelines** **258**
 
 
+
+
+--- end of page=283 ---
+
 When you’ve completed these lessons, you can import **01_TooMuchLife_Trailer_**
 
 **COMPLETED.drt** and **02_TooMuchLife_30second_Trailer_COMPLETED.drt** to compare
@@ -12221,6 +13357,10 @@ settings panel to link it to the project-wide color management settings.
 **Lesson 6 Managing Grades Across Clips and Timelines** **259**
 
 
+
+
+--- end of page=284 ---
+
 ##### **Answers**
 
 **1** Right-click and choose Local Versions > Create New Version or press Command-Y
@@ -12242,6 +13382,10 @@ necessary node into the Node Editor of the active clip.
 
 **Lesson 6 Managing Grades Across Clips and Timelines** **260**
 
+
+
+
+--- end of page=285 ---
 
 ### Part III
 # Optimizing the Grading Workflow
@@ -12285,8 +13429,16 @@ instructions on how to do so.
 **Optimizing the Grading Workflow** **261**
 
 
+
+
+--- end of page=286 ---
+
 **This page is intentionally left blank** **262**
 
+
+
+
+--- end of page=287 ---
 
 ### Lesson 7
 # Using Groups
@@ -12360,6 +13512,10 @@ Self-Guided Exercises 340
 Lesson Review 341
 
 
+
+
+--- end of page=288 ---
+
 ## **Preparing Media Using** **Scene Cut Detection**
 
 The first video project in this section is a single self-contained video file. Placing the video
@@ -12411,6 +13567,10 @@ generated media.
 **Lesson 7 Using Groups** **264**
 
 
+
+
+--- end of page=289 ---
+
 **9** In the folder, right-click the **Project 03 - The Long Workday SCD.mov** file and choose
 
 Scene Cut Detection.
@@ -12439,6 +13599,10 @@ Detect graph, and their timecodes are recorded in the Cut List.
 
 **Lesson 7 Using Groups** **265**
 
+
+
+
+--- end of page=290 ---
 
 TIP The height of the vertical green cut lines indicates DaVinci Resolve’s
 
@@ -12477,6 +13641,10 @@ by two similar images in the center and right corner viewers.
 
 **Lesson 7 Using Groups** **266**
 
+
+
+
+--- end of page=291 ---
 
 Although DaVinci Resolve detected a cut here, it is actually part of the same take. The
 
@@ -12527,6 +13695,10 @@ end of the timeline.
 
 **Lesson 7 Using Groups** **267**
 
+
+
+
+--- end of page=292 ---
 
 **20** Click Add to add the edit to the Cut List.
 
@@ -12594,6 +13766,10 @@ be edited via the rolling trim tool or deleted using the Delete (Backspace) key.
 **Lesson 7 Using Groups** **268**
 
 
+
+
+--- end of page=293 ---
+
 Although colorists ordinarily prefer to work with raw camera materials, flattened video
 
 renders are still popular for their lighter file size and faster transfer speed. This method of
@@ -12643,6 +13819,10 @@ to descending.
 **Lesson 7 Using Groups** **269**
 
 
+
+
+--- end of page=294 ---
+
 **3** Enter the edit page.
 
 **4** Select all the media in the Video bin by clicking one clip and pressing Command-A
@@ -12686,6 +13866,10 @@ to white as the playhead reaches the cut point.
 
 **Lesson 7 Using Groups** **270**
 
+
+
+
+--- end of page=295 ---
 
 This is why clients should be advised not to leave transitions in self-contained video
 
@@ -12750,6 +13934,10 @@ data you need are the edit points in a self-contained video file.
 **Lesson 7 Using Groups** **271**
 
 
+
+
+--- end of page=296 ---
+
 **5** Click X in the upper left corner to close the Scene Cut Detection interface.
 
 
@@ -12802,6 +13990,10 @@ at the end.
 
 **Lesson 7 Using Groups** **272**
 
+
+
+
+--- end of page=297 ---
 
 **19** Go to the color page.
 
@@ -12868,6 +14060,10 @@ scenes based on their locations and times of day.
 **Lesson 7 Using Groups** **273**
 
 
+
+
+--- end of page=298 ---
+
 **1** Select clip 06 and Shift-click clip 13 to select the eight consecutive garage clips in
 
 the timeline. Ignore for now that clip 13 is a highway clip.
@@ -12918,6 +14114,10 @@ become tedious as you navigate up and down the timeline to compare them.
 **Lesson 7 Using Groups** **274**
 
 
+
+
+--- end of page=299 ---
+
 **9** In the interface toolbar, choose Clips > Grouped > Highway.
 
 
@@ -12949,6 +14149,10 @@ different light sources separately.
 
 **Lesson 7 Using Groups** **275**
 
+
+
+
+--- end of page=300 ---
 
 ##### **Adopting Groups in a Classic** **Color Grading Workflow**
 
@@ -12997,6 +14201,10 @@ including balancing, matching, and secondary grade adjustments.
 
 **Lesson 7 Using Groups** **276**
 
+
+
+
+--- end of page=301 ---
 
 - **Group post-clip** is best utilized for creative scene grading. By this stage, your clips
 
@@ -13069,6 +14277,10 @@ effects after the color map, such as vignettes, halation, and grain.
 **Lesson 7 Using Groups** **277**
 
 
+
+
+--- end of page=302 ---
+
 There is no limit to how you employ CSTs in your workflow, but two common
 
 approaches are:
@@ -13118,6 +14330,10 @@ Wide Gamut working color space.
 **Lesson 7 Using Groups** **278**
 
 
+
+
+--- end of page=303 ---
+
 **3** Open the Effects panel and drag the Color Space Transform effect onto the node.
 
 
@@ -13148,8 +14364,16 @@ deliverable output.
 **Lesson 7 Using Groups** **279**
 
 
+
+
+--- end of page=304 ---
+
 **Lesson 7 Using Groups** **280**
 
+
+
+
+--- end of page=305 ---
 
 **7** Set the Output Gamma to DaVinci Intermediate.
 
@@ -13214,6 +14438,10 @@ space to DaVinci WG/Intermediate.
 **Lesson 7 Using Groups** **281**
 
 
+
+
+--- end of page=306 ---
+
 **16** The Output color space will determine the color space metadata encoded in your
 
 rendered video file. This should match your deliverable standard when you export
@@ -13271,6 +14499,10 @@ A different camera was used to capture this footage.
 **Lesson 7 Using Groups** **282**
 
 
+
+
+--- end of page=307 ---
+
 **5** Select INPUT CST and change the Input Color Space to Blackmagic Design 4.6K Film
 
 Gen 1 and the Input Gamma to Blackmagic Design 4.6K Film.
@@ -13327,6 +14559,10 @@ color-managed in their Pre- and Post-Clip Node Editors.
 
 **Lesson 7 Using Groups** **283**
 
+
+
+
+--- end of page=308 ---
 
 TIP To remove a clip from a group but retain all the nodes you created in the
 
@@ -13392,6 +14628,10 @@ stack layers, in versions, and even in shared nodes.
 **Lesson 7 Using Groups** **284**
 
 
+
+
+--- end of page=309 ---
+
 ##### **Using a Color Chart to Balance a Group**
 
 One method of balancing a sequence of clips is to use the calibration charts that are
@@ -13435,6 +14675,10 @@ every new scene, light change, or location during filming.
 **Lesson 7 Using Groups** **285**
 
 
+
+
+--- end of page=310 ---
+
 **6** In the viewer’s onscreen controls dropdown menu, choose Color Chart.
 
 
@@ -13456,6 +14700,10 @@ in the shot.
 
 **Lesson 7 Using Groups** **286**
 
+
+
+
+--- end of page=311 ---
 
 **9** Set the Source Gamma to DaVinci Intermediate.
 
@@ -13531,6 +14779,10 @@ and creative grading later.
 **Lesson 7 Using Groups** **287**
 
 
+
+
+--- end of page=312 ---
+
 ## **Making Clip-Specific Adjustments** **at the Clip Group Level**
 
 When working with groups, you continue to have access to the standard Node Editor in
@@ -13557,6 +14809,10 @@ other clips in the scene.
 
 **Lesson 7 Using Groups** **288**
 
+
+
+
+--- end of page=313 ---
 
 **4** Drag the viewer playhead to the end of clip 1.
 
@@ -13585,6 +14841,10 @@ the viewer.
 
 **Lesson 7 Using Groups** **289**
 
+
+
+
+--- end of page=314 ---
 
 **8** Open the Sizing palette in Reference Sizing mode and pan and zoom clip 05 to see the
 
@@ -13632,6 +14892,10 @@ throughout. The color bars can more accurately be used to fix this color imbalan
 **Lesson 7 Using Groups** **290**
 
 
+
+
+--- end of page=315 ---
+
 **17** Drag the red Gamma and Gain bars down to address the resulting red tint.
 
 
@@ -13651,6 +14915,10 @@ too bright overall, which will affect the consistency of the post-clip grade.
 
 **Lesson 7 Using Groups** **291**
 
+
+
+
+--- end of page=316 ---
 
 **21** Label node 01 **Match** .
 
@@ -13672,8 +14940,14 @@ ceiling, which should match in all shots.
 
 
 
+
+
 **Lesson 7 Using Groups** **292**
 
+
+
+
+--- end of page=317 ---
 
 ##### **Intermediary Matching Between Clips**
 
@@ -13715,6 +14989,10 @@ surrounding clips 23 and 25.
 **Lesson 7 Using Groups** **293**
 
 
+
+
+--- end of page=318 ---
+
 **9** Reduce the contrast in the adjustment controls until the window frames and furniture
 
 have the same flat shadows.
@@ -13751,6 +15029,10 @@ same group in the viewer.
 
 **Lesson 7 Using Groups** **294**
 
+
+
+
+--- end of page=319 ---
 
 ## **Automatically Tracking** **People and Objects**
 
@@ -13810,6 +15092,10 @@ Matte Finesse
 Click List
 
 
+
+
+--- end of page=320 ---
+
 The AI Magic Mask 2 palette is made up of three areas:
 
 
@@ -13846,6 +15132,10 @@ initial selection in the viewer.
 **Lesson 7 Using Groups** **296**
 
 
+
+
+--- end of page=321 ---
+
 With only a single click to guide it, the Magic Mask has highlighted the man’s hair.
 
 
@@ -13865,6 +15155,10 @@ can now track the mask.
 
 **Lesson 7 Using Groups** **297**
 
+
+
+
+--- end of page=322 ---
 
 **7** In the Magic Mask toolbar, click Track Forward.
 
@@ -13891,6 +15185,10 @@ wheel toward orange to emphasize the warm sunrise.
 **Lesson 7 Using Groups** **298**
 
 
+
+
+--- end of page=323 ---
+
 **12** Use Contrast and Pivot to create a dynamic look with enhanced shadows
 
 and highlights.
@@ -13915,6 +15213,10 @@ or use dedicated nodes for each individual.
 
 **Lesson 7 Using Groups** **299**
 
+
+
+
+--- end of page=324 ---
 
 ##### **Masking Physical Features**
 
@@ -13947,6 +15249,10 @@ face is underlit. You will use the Magic Mask to track and brighten his face.
 **Lesson 7 Using Groups** **300**
 
 
+
+
+--- end of page=325 ---
+
 **7** Click Toggle Mask Overlay to review the selection.
 
 
@@ -13967,6 +15273,10 @@ Although accurate, the edge is harsh and might stand out when you start grading.
 
 **Lesson 7 Using Groups** **301**
 
+
+
+
+--- end of page=326 ---
 
 The Magic Mask adjustment controls feature a Quality parameter that determines the
 
@@ -13998,6 +15308,10 @@ When the track is finished, review the traveling mask.
 **Lesson 7 Using Groups** **302**
 
 
+
+
+--- end of page=327 ---
+
 **11** On the last frame of the clip, enable Highlight mode in the viewer.
 
 
@@ -14022,6 +15336,10 @@ confidence” edge around the rest of the face.
 
 **Lesson 7 Using Groups** **303**
 
+
+
+
+--- end of page=328 ---
 
 **13** Disable Highlight mode in the viewer.
 
@@ -14084,6 +15402,10 @@ to brighten the image and remove the magenta tint from the highlights.
 **Lesson 7 Using Groups** **304**
 
 
+
+
+--- end of page=329 ---
+
 **3** Create a new node after the Balance node and label it **Car** .
 
 **4** Open the AI Magic Mask 2 palette.
@@ -14102,6 +15424,10 @@ should click a surface on the opposite side of it.
 
 **Lesson 7 Using Groups** **305**
 
+
+
+
+--- end of page=330 ---
 
 **8** If satisfied, click Track Forward.
 
@@ -14141,6 +15467,10 @@ grading process.
 **Lesson 7 Using Groups** **306**
 
 
+
+
+--- end of page=331 ---
+
 **13** In the Primaries palette, drag the Gamma master wheel right (0.02) to brighten the car.
 
 **14** Increase the Contrast (1.100) and drag the Pivot left (0.100) to emphasize the shine on
@@ -14169,6 +15499,10 @@ environments, strong shadows, and even motion blur.
 
 **Lesson 7 Using Groups** **307**
 
+
+
+
+--- end of page=332 ---
 
 NOTE You may have noticed that the colors and contrast in the viewer are
 
@@ -14202,6 +15536,10 @@ Defocus Background effect
 
 **Lesson 7 Using Groups** **308**
 
+
+
+
+--- end of page=333 ---
 
 **1** Select the Car node.
 
@@ -14278,6 +15616,10 @@ his hair and suit.
 **Lesson 7 Using Groups** **309**
 
 
+
+
+--- end of page=334 ---
+
 **2** Create a new node and label it **Masks** .
 
 **3** Open the AI Magic Mask 2 palette.
@@ -14306,6 +15648,10 @@ man. You will use subtractive clicks to fine-tune the selection.
 **Lesson 7 Using Groups** **310**
 
 
+
+
+--- end of page=335 ---
+
 The highlight is removed from his shirt and face, resulting in clear selections on just his
 
 hair and suit. Note that subtractive clicks are indicated with red dots.
@@ -14332,6 +15678,10 @@ In the viewer, your cursor will adopt a green paintbrush overlay.
 
 **Lesson 7 Using Groups** **311**
 
+
+
+
+--- end of page=336 ---
 
 **14** Hold Command (macOS) or Ctrl (Windows) and drag in the viewer to resize the brush.
 
@@ -14373,6 +15723,10 @@ Mask 2 palette via Options > Legacy Object Mask.
 
 **Lesson 7 Using Groups** **312**
 
+
+
+
+--- end of page=337 ---
 
 ## **Creating a Unifying Look Using** **the Post-Clip Group Level**
 
@@ -14421,6 +15775,10 @@ identify all files rather than just the default .dpx format files.
 **Lesson 7 Using Groups** **313**
 
 
+
+
+--- end of page=338 ---
+
 **7** Double-click the still to wipe it in the viewer.
 
 
@@ -14446,6 +15804,10 @@ increase contrast by raising the upper midtones.
 
 **Lesson 7 Using Groups** **314**
 
+
+
+
+--- end of page=339 ---
 
 Recall the message about breaking rules in Lesson 5. When designing a look, it’s
 
@@ -14495,6 +15857,10 @@ are desaturating.
 **Lesson 7 Using Groups** **315**
 
 
+
+
+--- end of page=340 ---
+
 The overall look of the scene is set. You can now place a second node to enhance the
 
 garage’s red columns and pipes.
@@ -14533,6 +15899,10 @@ This makes the reds denser, matching them more closely to the dark environment.
 **Lesson 7 Using Groups** **316**
 
 
+
+
+--- end of page=341 ---
+
 **20** Create a Vignette node after the Red Pipes node for a moodier environment and to
 
 draw attention to the action in the center of each shot.
@@ -14565,6 +15935,10 @@ make further adjustments.
 
 **Lesson 7 Using Groups** **317**
 
+
+
+
+--- end of page=342 ---
 
 ##### **Adjusting Clips After a Post-Clip Grade**
 
@@ -14610,6 +15984,10 @@ the result superimposed on the original image.
 **Lesson 7 Using Groups** **318**
 
 
+
+
+--- end of page=343 ---
+
 **7** Increase the Colorize value to 0.200 and use the swatch underneath to change the
 
 color to purple.
@@ -14645,6 +16023,10 @@ the man’s face.
 **Lesson 7 Using Groups** **319**
 
 
+
+
+--- end of page=344 ---
+
 **11** Right-click clip 07 and select Wipe Timeline Clip.
 
 
@@ -14672,6 +16054,10 @@ needed, all while continuously seeing the final output in the viewer.
 
 **Lesson 7 Using Groups** **320**
 
+
+
+
+--- end of page=345 ---
 
 ## **Working with Lookup Tables**
 
@@ -14717,6 +16103,10 @@ LUT, and learn to work with emulation LUTs.
 
 **Lesson 7 Using Groups** **321**
 
+
+
+
+--- end of page=346 ---
 
 NOTE A LUT designed to encapsulate the look of a project (or sections of it) is
 
@@ -14776,6 +16166,10 @@ Gamut environment (input to output).
 **Lesson 7 Using Groups** **322**
 
 
+
+
+--- end of page=347 ---
+
 **11** Return to the Project Settings window and click Update Lists to refresh the LUT folder.
 
 
@@ -14822,6 +16216,10 @@ thumbnails will give you a preview of their operation.
 **Lesson 7 Using Groups** **323**
 
 
+
+
+--- end of page=348 ---
+
 Notice that many of the LUT names indicate their color mapping. If you check the
 
 Blackmagic Design folder, the LUTs have names like “Blackmagic 4.6K Film to Rec709,”
@@ -14856,6 +16254,10 @@ DaVinci Resolve, third-party applications, and monitoring hardware.
 
 **Lesson 7 Using Groups** **324**
 
+
+
+
+--- end of page=349 ---
 
 ##### **Developing a Monitoring LUT**
 
@@ -14926,6 +16328,10 @@ You are now ready to create a Rec.709 monitoring LUT for Blackmagic Design
 **Lesson 7 Using Groups** **325**
 
 
+
+
+--- end of page=350 ---
+
 **7** Create a new serial node before the OUTPUT CST node and label it **Contrast** .
 
 Technically, this node can be placed at any point in the node tree between the input
@@ -14971,6 +16377,10 @@ a shot in the active color space and mark the resulting spike in the Curves pale
 **Lesson 7 Using Groups** **326**
 
 
+
+
+--- end of page=351 ---
+
 **8** In the left palettes, open the High Dynamic Range Color Wheels palette. You will
 
 examine this palette more closely when you start working with RAW media in Lesson 9.
@@ -15002,6 +16412,10 @@ Gamma, such as ARRI LogC4.
 **Lesson 7 Using Groups** **327**
 
 
+
+
+--- end of page=352 ---
+
 The middle gray value is reflected in the scopes, but you can also reveal it in the Curves
 
 histogram graph.
@@ -15021,6 +16435,10 @@ DaVinci Intermediate middle gray in the waveform scope
 
 **Lesson 7 Using Groups** **328**
 
+
+
+
+--- end of page=353 ---
 
 NOTE The middle gray may appear a little brighter than expected in the
 
@@ -15058,6 +16476,10 @@ move) the middle gray point to raise visibility in the upper midtones.
 
 **Lesson 7 Using Groups** **329**
 
+
+
+
+--- end of page=354 ---
 
 NOTE In the industry, this is known as an s-curve and is commonly used as a
 
@@ -15118,6 +16540,10 @@ This node order will result in less saturated shadows.
 **Lesson 7 Using Groups** **330**
 
 
+
+
+--- end of page=355 ---
+
 **20** Go to the ColorSlice palette and increase the global Density parameter for deeper,
 
 more saturated hues.
@@ -15146,6 +16572,10 @@ parameters that can be retained in a lookup table remain available.
 
 **Lesson 7 Using Groups** **331**
 
+
+
+
+--- end of page=356 ---
 
 **23** In your file browser, place the Office_BMDtoRec709.cube file in the Colorist Guide
 
@@ -15190,6 +16620,10 @@ After
 
 **Lesson 7 Using Groups** **332**
 
+
+
+
+--- end of page=357 ---
 
 NOTE LUTS can also be applied to clips in the media pool via the contextual menu.
 
@@ -15240,6 +16674,10 @@ look of film in digital deliverables.
 **Lesson 7 Using Groups** **333**
 
 
+
+
+--- end of page=358 ---
+
 The folder contains a list of popular Fujifilm and Kodak film stocks. Their naming
 
 convention describes their output color space, the film stock variant, and the white
@@ -15287,6 +16725,10 @@ mapped to in the Group Post-Clip layer.
 
 **Lesson 7 Using Groups** **334**
 
+
+
+
+--- end of page=359 ---
 
 NOTE The gamma has been remapped several times at this point. This is
 
@@ -15348,6 +16790,10 @@ Next, you will look at another form of emulation that re-creates the look of ana
 **Lesson 7 Using Groups** **335**
 
 
+
+
+--- end of page=360 ---
+
 ##### **Creating an Analog Video Look** **on an Entire Timeline**
 
 Artificial film grain and analog video artifacts can be added to digital media for a variety of
@@ -15391,6 +16837,10 @@ Beneath, individual parameter controls allow you to adjust a wide variety of dam
 **Lesson 7 Using Groups** **336**
 
 
+
+
+--- end of page=361 ---
+
 components, such as vignetting, noise, scan lines, screen curvature, foot jitter, and
 
 many others.
@@ -15426,6 +16876,10 @@ the project.
 
 **Lesson 7 Using Groups** **337**
 
+
+
+
+--- end of page=362 ---
 
 ##### **Adding Data Burn-In to the** **Viewer and Final Video**
 
@@ -15467,6 +16921,10 @@ have the same source clip name.
 
 **Lesson 7 Using Groups** **338**
 
+
+
+
+--- end of page=363 ---
 
 **4** Select Custom Text1, and in the Custom Text field on the right, type **PLEASE DO NOT**
 
@@ -15515,6 +16973,10 @@ opacity using the transform controls on the right.
 
 **Lesson 7 Using Groups** **339**
 
+
+
+
+--- end of page=364 ---
 
 TIP A quick way to remove data burn-ins from the viewer is to press the Reset All
 
@@ -15575,6 +17037,10 @@ the screen. Then, append this node to clip 02.
 **Lesson 7 Using Groups** **340**
 
 
+
+
+--- end of page=365 ---
+
 ##### **Office Group**
 
 
@@ -15629,6 +17095,10 @@ Project 03 media on your workstation.
 **Lesson 7 Using Groups** **341**
 
 
+
+
+--- end of page=366 ---
+
 ##### **Answers**
 
 **1** False. A clip can have only one pre-clip and post-clip Node Editor mode. Adding a clip
@@ -15652,6 +17122,10 @@ convention of the LUT file or from the text of the LUT itself.
 
 **Lesson 7 Using Groups** **342**
 
+
+
+
+--- end of page=367 ---
 
 ### Lesson 8
 # Adjusting Image Properties
@@ -15723,6 +17197,10 @@ Self-Guided Exercises 378
 Lesson Review 379
 
 
+
+
+--- end of page=368 ---
+
 ## **Understanding Timeline** **Resolutions and Sizing** **Palette Modes**
 
 In the following set of exercises, you will address the variety of ways in which you can
@@ -15752,6 +17230,10 @@ Resize and reposition it to the man at the window.
 
 **Lesson 8 Adjusting Image Properties** **344**
 
+
+
+
+--- end of page=369 ---
 
 **4** Drag the Gamma master wheel left to darken the edges of the frame and then drag
 
@@ -15786,6 +17268,10 @@ may compromise real-time playback.
 **Lesson 8 Adjusting Image Properties** **345**
 
 
+
+
+--- end of page=370 ---
+
 **7** Click Save to exit the Project Settings.
 
 **8** If the video appears zoomed in, press Shift-Z to fit the video frame to the viewer panel.
@@ -15808,6 +17294,10 @@ center of the Power Window.
 
 **Lesson 8 Adjusting Image Properties** **346**
 
+
+
+
+--- end of page=371 ---
 
 This behavior is one of the most invaluable features of DaVinci Resolve when grading
 
@@ -15871,6 +17361,10 @@ an individual and timeline basis.
 **Lesson 8 Adjusting Image Properties** **347**
 
 
+
+
+--- end of page=372 ---
+
 **3** Select clip 03.
 
 
@@ -15924,6 +17418,10 @@ want to exclude resizing from the color grade (or vice versa).
 
 **Lesson 8 Adjusting Image Properties** **348**
 
+
+
+
+--- end of page=373 ---
 
 **12** Reset the Input and Output sizing data on clips 03 and 05.
 
@@ -15991,6 +17489,10 @@ before grading and compositing.
 **Lesson 8 Adjusting Image Properties** **349**
 
 
+
+
+--- end of page=374 ---
+
 ##### **Sampling Visual Data with Node Sizing**
 
 The ability to change a clip’s sizing data at the node level allows for some practical
@@ -16035,6 +17537,10 @@ edge blur.
 
 **Lesson 8 Adjusting Image Properties** **350**
 
+
+
+
+--- end of page=375 ---
 
 **6** Open the Sizing palette and set it to Node Sizing mode.
 
@@ -16086,6 +17592,10 @@ with changing light.
 **Lesson 8 Adjusting Image Properties** **351**
 
 
+
+
+--- end of page=376 ---
+
 ##### **Creating Cover-Ups with** **the Patch Replacer Effect**
 
 In this exercise, you will use the more sophisticated Patch Replacer effect to perform a
@@ -16127,6 +17637,10 @@ its surroundings.
 
 **Lesson 8 Adjusting Image Properties** **352**
 
+
+
+
+--- end of page=377 ---
 
 **5** Drag the target patch over the wall and resize it to outline the thermostat (including
 
@@ -16180,6 +17694,10 @@ busy visuals.
 **Lesson 8 Adjusting Image Properties** **353**
 
 
+
+
+--- end of page=378 ---
+
 NOTE When working in Window mode, you also have the Cloud Tracker
 
 option, which follows the motion of the pixel data within a Power Window.
@@ -16219,6 +17737,10 @@ patch cover-up.
 
 **Lesson 8 Adjusting Image Properties** **354**
 
+
+
+
+--- end of page=379 ---
 
 **17** If necessary, turn off the viewer onscreen controls to hide the tracking point and
 
@@ -16262,6 +17784,10 @@ scene blue over 20 frames.
 
 **Lesson 8 Adjusting Image Properties** **355**
 
+
+
+
+--- end of page=380 ---
 
 ##### **Animating Position Values with** **Dynamic Keyframes**
 
@@ -16309,6 +17835,10 @@ and ending with a close-up of the city skyline.
 
 **Lesson 8 Adjusting Image Properties** **356**
 
+
+
+
+--- end of page=381 ---
 
 **4** To the right of the palettes in the color page, open the Keyframes Editor.
 
@@ -16364,6 +17894,10 @@ as dynamic keyframes.
 **Lesson 8 Adjusting Image Properties** **357**
 
 
+
+
+--- end of page=382 ---
+
 **7** While on the first frame of the clip, right-click the circular keyframe next to Sizing and
 
 choose “Change to Dynamic Keyframe” to convert the default static keyframe to a
@@ -16416,6 +17950,10 @@ camera zoom by altering the animation speed and style using dynamic attributes.
 **Lesson 8 Adjusting Image Properties** **358**
 
 
+
+
+--- end of page=383 ---
+
 **1** In the Keyframes palette, select the first keyframe of the Sizing parameter.
 
 **2** Right-click the keyframe and choose Change Dynamic Attributes.
@@ -16434,6 +17972,10 @@ constant (linear) speed toward the end.
 
 **Lesson 8 Adjusting Image Properties** **359**
 
+
+
+
+--- end of page=384 ---
 
 **4** Click OK to confirm.
 
@@ -16493,6 +18035,10 @@ color wheel toward blue to imitate a cool night color temperature.
 **Lesson 8 Adjusting Image Properties** **360**
 
 
+
+
+--- end of page=385 ---
+
 **5** Reduce Saturation to 35.00 to imitate the limited perception of color in dark
 
 environments.
@@ -16525,6 +18071,10 @@ remove the dark blue look.
 
 **Lesson 8 Adjusting Image Properties** **361**
 
+
+
+
+--- end of page=386 ---
 
 **11** Increase the Highlights (50.00) in the adjustment controls to brighten the sunlight on
 
@@ -16573,6 +18123,10 @@ noise patterns.
 **Lesson 8 Adjusting Image Properties** **362**
 
 
+
+
+--- end of page=387 ---
+
 NOTE DaVinci Resolve Studio is required to complete the following exercise.
 
 
@@ -16597,6 +18151,10 @@ and midtones.
 
 **Lesson 8 Adjusting Image Properties** **363**
 
+
+
+
+--- end of page=388 ---
 
 This palette is divided into three control areas:
 
@@ -16672,6 +18230,10 @@ entering any number and then dragging left or right to refine the result.
 **Lesson 8 Adjusting Image Properties** **364**
 
 
+
+
+--- end of page=389 ---
+
 **9** Enter **40.0** as the starting Threshold for the linked channels.
 
 
@@ -16730,6 +18292,10 @@ Spatial NR to analyze and remove the generic noise pattern in the frame.
 **Lesson 8 Adjusting Image Properties** **365**
 
 
+
+
+--- end of page=390 ---
+
 At the top of the controls, you can select which noise reduction mode you wish to use.
 
 
@@ -16767,6 +18333,10 @@ than our eyes.
 
 **Lesson 8 Adjusting Image Properties** **366**
 
+
+
+
+--- end of page=391 ---
 
 You can also manually adjust the Noise Profile Luma and Chroma Threshold settings,
 
@@ -16819,6 +18389,10 @@ color management.
 
 **Lesson 8 Adjusting Image Properties** **367**
 
+
+
+
+--- end of page=392 ---
 
 **23** Create a new local grade version (version 3).
 
@@ -16886,6 +18460,10 @@ enable render caching to ensure smooth system performance.
 **Lesson 8 Adjusting Image Properties** **368**
 
 
+
+
+--- end of page=393 ---
+
 ## **Optimizing Performance** **with Render Cache**
 
 Almost anyone who has worked with raw footage or done graphic-intensive work on a
@@ -16945,6 +18523,10 @@ Cache > Smart.
 
 **Lesson 8 Adjusting Image Properties** **369**
 
+
+
+
+--- end of page=394 ---
 
 A red bar appears above the edit page timeline and gradually turns blue as frames are
 
@@ -17018,6 +18600,10 @@ mini-timeline, in which you can observe the video tracks and their cache process
 **Lesson 8 Adjusting Image Properties** **370**
 
 
+
+
+--- end of page=395 ---
+
 **4** In the adjustment controls, drag the Saturation value to 0.
 
 
@@ -17060,6 +18646,10 @@ of operations.
 **Lesson 8 Adjusting Image Properties** **371**
 
 
+
+
+--- end of page=396 ---
+
 **7** After the nodes turn blue, click the BW node and raise the contrast to 1.100.
 
 
@@ -17098,6 +18688,10 @@ clips of the timeline.
 
 **Lesson 8 Adjusting Image Properties** **372**
 
+
+
+
+--- end of page=397 ---
 
 **6** Under Rich Text, enter the project name **The Long Workday** .
 
@@ -17146,6 +18740,10 @@ render caching will occur only on your command.
 
 **Lesson 8 Adjusting Image Properties** **373**
 
+
+
+
+--- end of page=398 ---
 
 Some colorists prefer to work in this mode when they don’t want an entire timeline to
 
@@ -17199,6 +18797,10 @@ a re-cache.
 **Lesson 8 Adjusting Image Properties** **374**
 
 
+
+
+--- end of page=399 ---
+
 **8** Remove the Magenta Look node.
 
 
@@ -17244,6 +18846,10 @@ the quality of the cache.
 
 **Lesson 8 Adjusting Image Properties** **375**
 
+
+
+
+--- end of page=400 ---
 
 The “Render cache format” field allows you to choose the codec used to encode your
 
@@ -17304,6 +18910,10 @@ project files.
 **Lesson 8 Adjusting Image Properties** **376**
 
 
+
+
+--- end of page=401 ---
+
 ##### **Clearing a Cache**
 
 Although caching is triggered on multiple levels, only one cached file is ever active for each
@@ -17361,6 +18971,10 @@ You can also opt to clear the render cache of specific projects in your librarie
 
 **Lesson 8 Adjusting Image Properties** **377**
 
+
+
+
+--- end of page=402 ---
 
 **3** Choose Playback > Manage Render Cache.
 
@@ -17433,6 +19047,10 @@ Project 03 media on your workstation.
 **Lesson 8 Adjusting Image Properties** **378**
 
 
+
+
+--- end of page=403 ---
+
 ## **Lesson Review**
 
 **1** True or False? If you change a project’s timeline resolution, you will need to review your
@@ -17452,6 +19070,10 @@ new resolution.
 
 **Lesson 8 Adjusting Image Properties** **379**
 
+
+
+
+--- end of page=404 ---
 
 ##### **Answers**
 
@@ -17479,6 +19101,10 @@ Cached node, it would trigger a re-cache.
 
 **Lesson 8 Adjusting Image Properties** **380**
 
+
+
+
+--- end of page=405 ---
 
 ### Lesson 9
 # Setting Up Raw Projects
@@ -17558,6 +19184,10 @@ Self-Guided Exercises 408
 Lesson Review 409
 
 
+
+
+--- end of page=406 ---
+
 ## **Adjusting Raw Settings** **at the Project Level**
 
 The color management exercises you completed in Lessons 4 and 7 demonstrated how to
@@ -17627,6 +19257,10 @@ Camera Raw palette will remain inactive.
 **Lesson 9 Setting Up Raw Projects** **382**
 
 
+
+
+--- end of page=407 ---
+
 In this lesson, you will work with Blackmagic RAW media. This raw format is unique in that it
 
 undergoes partial debayering in the camera hardware, which results in much smaller file
@@ -17681,6 +19315,10 @@ intermediaries and need constant debayering and caching.
 **Lesson 9 Setting Up Raw Projects** **383**
 
 
+
+
+--- end of page=408 ---
+
 When reviewing the clips in the timeline viewer, you will see that two of them have
 
 black bars at the top and bottom of the image. This is known as letterboxing and
@@ -17720,6 +19358,10 @@ Next, you will set up the project color management.
 
 **Lesson 9 Setting Up Raw Projects** **384**
 
+
+
+
+--- end of page=409 ---
 
 ##### **Color Managing with ACES**
 
@@ -17766,6 +19408,10 @@ ACEScc
 **Lesson 9 Setting Up Raw Projects** **385**
 
 
+
+
+--- end of page=410 ---
+
 - **ACEScct** is a ACEScc variant with a higher toe that results in “milkier” shadows in lift
 
 operations. Some colorists prefer it for its film-like appearance, and it is also used for
@@ -17805,6 +19451,10 @@ output transforms in XML. You can leave this setting set to None.
 
 **Lesson 9 Setting Up Raw Projects** **386**
 
+
+
+
+--- end of page=411 ---
 
 DaVinci Resolve automatically detects all supported raw formats. Thus, when color
 
@@ -17872,6 +19522,10 @@ lens model.
 **Lesson 9 Setting Up Raw Projects** **387**
 
 
+
+
+--- end of page=412 ---
+
 ##### **Reviewing Raw Settings on the Project Level**
 
 With the project color management set up, you can also review the raw project settings to
@@ -17928,6 +19582,10 @@ the settings made by the camera operator during media capture. Changing it to
 
 **Lesson 9 Setting Up Raw Projects** **388**
 
+
+
+
+--- end of page=413 ---
 
 associated sidecar file metadata. Setting the decode method to Project will reveal the
 
@@ -17997,6 +19655,10 @@ adjustments on a clip-by-clip basis.
 **Lesson 9 Setting Up Raw Projects** **389**
 
 
+
+
+--- end of page=414 ---
+
 **3** In the left palettes of the color page, open the Camera Raw palette.
 
 **4** Set Decode Using to Clip. Doing so will disassociate it from the Project Settings and
@@ -18050,6 +19712,10 @@ exposure in smaller amounts than the whole values featured in the ISO dropdown.
 **Lesson 9 Setting Up Raw Projects** **390**
 
 
+
+
+--- end of page=415 ---
+
 However, looking at the waveform, it is clear that the overexposure in the sky cannot
 
 be resolved with just ISO or Exposure adjustments.
@@ -18089,6 +19755,10 @@ Balance dropdown menu on the left and choose As Shot.
 
 **Lesson 9 Setting Up Raw Projects** **391**
 
+
+
+
+--- end of page=416 ---
 
 When working on a raw timeline, you will often want to reuse the Camera Raw controls
 
@@ -18150,6 +19820,10 @@ Highlight Recovery.
 
 **Lesson 9 Setting Up Raw Projects** **392**
 
+
+
+
+--- end of page=417 ---
 
 **17** Select clip 04 (E004).
 
@@ -18221,6 +19895,10 @@ of a raw image within a single interface.
 **Lesson 9 Setting Up Raw Projects** **393**
 
 
+
+
+--- end of page=418 ---
+
 ##### **Targeting Individual Tonal Ranges**
 
 As established, a major benefit of the HDR palette is its advanced tonal range control.
@@ -18267,6 +19945,10 @@ one or more wheels at a time.
 **Lesson 9 Setting Up Raw Projects** **394**
 
 
+
+
+--- end of page=419 ---
+
 Another major difference is in the way the global wheel impacts the image. Whereas
 
 the Primaries offset wheel affects the image uniformly, the global wheel pinches the
@@ -18306,6 +19988,10 @@ This results in more natural temperature changes in the image.
 
 **Lesson 9 Setting Up Raw Projects** **395**
 
+
+
+
+--- end of page=420 ---
 
 Although you will be familiar with the adjustment controls across the bottom of the
 
@@ -18357,6 +20043,10 @@ aggressively in the shadows or in the clouds.
 **Lesson 9 Setting Up Raw Projects** **396**
 
 
+
+
+--- end of page=421 ---
+
 With the global values set, you can proceed to the individual tonal zones. The six
 
 default zone wheels are divided into two categories: dark zones and light zones.
@@ -18403,6 +20093,10 @@ the waveform.
 
 **Lesson 9 Setting Up Raw Projects** **397**
 
+
+
+
+--- end of page=422 ---
 
 **10** Drag the Highlight Exp (-0.80) left until the top of the waveform sits just under the
 
@@ -18452,6 +20146,10 @@ Several options allow you to review and modify how the tonal zones affect the im
 **Lesson 9 Setting Up Raw Projects** **398**
 
 
+
+
+--- end of page=423 ---
+
 **14** Click and hold the symbol to the left of the Light zone name.
 
 
@@ -18490,6 +20188,10 @@ distributed across this image.
 
 **Lesson 9 Setting Up Raw Projects** **399**
 
+
+
+
+--- end of page=424 ---
 
 **16** In the HDR palette header, click the Zones Graph button.
 
@@ -18537,6 +20239,10 @@ the histogram data to cache.
 **Lesson 9 Setting Up Raw Projects** **400**
 
 
+
+
+--- end of page=425 ---
+
 **17** In the Zones Graph, drag the Light range indicator to +0.10. The selection in the viewer
 
 contracts, resulting in better separation of the branches and mountaintops from the sky.
@@ -18556,6 +20262,10 @@ Before After
 
 **Lesson 9 Setting Up Raw Projects** **401**
 
+
+
+
+--- end of page=426 ---
 
 ##### **Correcting Scenes with a Wide Dynamic Range**
 
@@ -18590,6 +20300,10 @@ this image.
 
 **Lesson 9 Setting Up Raw Projects** **402**
 
+
+
+
+--- end of page=427 ---
 
 **4** To open the Zones Graph panel without hiding the HDR color wheels, click the Expand
 
@@ -18642,6 +20356,10 @@ predominantly be looking.
 **Lesson 9 Setting Up Raw Projects** **403**
 
 
+
+
+--- end of page=428 ---
+
 **7** Increase the Shadow Sat (1.10) to make the colors in the shop more vibrant.
 
 **8** Increase the Shadow Range (+3.00) to spread the adjustment throughout the room.
@@ -18683,6 +20401,10 @@ Before
 
 **Lesson 9 Setting Up Raw Projects** **404**
 
+
+
+
+--- end of page=429 ---
 
 After
 
@@ -18735,6 +20457,10 @@ soft keys to navigate all available zones.
 **Lesson 9 Setting Up Raw Projects** **405**
 
 
+
+
+--- end of page=430 ---
+
 ## **Setting Up a Render Cache** **for Raw Media Projects**
 
 In Lesson 8, you set up your project render cache to a full-quantization (444 or 4444),
@@ -18775,6 +20501,10 @@ pronounced banding in the sky.
 
 **Lesson 9 Setting Up Raw Projects** **406**
 
+
+
+
+--- end of page=431 ---
 
 Instead of a smooth blue gradient, the sky now appears to be made up of blue, purple,
 
@@ -18827,6 +20557,10 @@ these render-cached materials to generate cinema and streaming deliverables.
 **Lesson 9 Setting Up Raw Projects** **407**
 
 
+
+
+--- end of page=432 ---
+
 ## **Self-Guided Exercises**
 
 Complete the following self-guided exercises in the Blackmagic RAW Timeline to get more
@@ -18862,6 +20596,10 @@ on your workstation.
 **Lesson 9 Setting Up Raw Projects** **408**
 
 
+
+
+--- end of page=433 ---
+
 ## **Lesson Review**
 
 **1** When color managing raw media, where do you set the input camera format?
@@ -18877,6 +20615,10 @@ on your workstation.
 
 **Lesson 9 Setting Up Raw Projects** **409**
 
+
+
+
+--- end of page=434 ---
 
 ##### **Answers**
 
@@ -18911,6 +20653,10 @@ all times and even include the cached files in the final project render.
 
 **Lesson 9 Setting Up Raw Projects** **410**
 
+
+
+
+--- end of page=435 ---
 
 ### Lesson 10
 # Delivering Projects
@@ -18966,6 +20712,10 @@ Render Settings 438
 Lesson Review 447
 
 
+
+
+--- end of page=436 ---
+
 ## **Using Lightbox to Check** **Timelines Before Delivery**
 
 The Lightbox feature of the color page gives you an alternative, expanded representation
@@ -19001,6 +20751,10 @@ formats (444 or 4444).
 
 **Lesson 10 Delivering Projects** **412**
 
+
+
+
+--- end of page=437 ---
 
 The Lightbox is a full-screen representation of your project timeline from left to right,
 
@@ -19040,6 +20794,10 @@ the Garage group but must have been overlooked during grading.
 
 **Lesson 10 Delivering Projects** **413**
 
+
+
+
+--- end of page=438 ---
 
 **11** Select both clips and choose Groups > Garage > Assign to Group.
 
@@ -19092,6 +20850,10 @@ matte clip 27.
 **Lesson 10 Delivering Projects** **414**
 
 
+
+
+--- end of page=439 ---
+
 Next, you’ll review the status of the denoise nodes in the timeline.
 
 **17** In the Clip Filter list, select Noise Reduction.
@@ -19143,6 +20905,10 @@ you use and what is important to verify before delivering a project.
 
 **Lesson 10 Delivering Projects** **415**
 
+
+
+
+--- end of page=440 ---
 
 In addition to the default filters already present in the Clip Filter panel, you can also use the
 
@@ -19204,6 +20970,10 @@ NOTE DaVinci Resolve Studio is required to complete the following exercise.
 **Lesson 10 Delivering Projects** **416**
 
 
+
+
+--- end of page=441 ---
+
 **3** In the Remote Monitor window, select the Video Codec and Bitrate you wish to use for
 
 the session.
@@ -19235,6 +21005,10 @@ client using any text-based communication method (email, text message, etc.).
 
 **Lesson 10 Delivering Projects** **417**
 
+
+
+
+--- end of page=442 ---
 
 Once the client has input the session code, a link will be established between their
 
@@ -19271,6 +21045,10 @@ Monitor without Blackmagic Cloud to access the IP login fields.
 
 **Lesson 10 Delivering Projects** **418**
 
+
+
+
+--- end of page=443 ---
 
 **4** Select the Output Display you wish to use for monitoring.
 
@@ -19327,6 +21105,10 @@ Presentation in your account before uploading a timeline.
 **Lesson 10 Delivering Projects** **419**
 
 
+
+
+--- end of page=444 ---
+
 **3** On the left side of the page, click Add Presentation at the bottom of the Presentations
 
 sidebar and give it a name.
@@ -19354,6 +21136,10 @@ upload the timeline.
 
 **Lesson 10 Delivering Projects** **420**
 
+
+
+
+--- end of page=445 ---
 
 **9** Click Export.
 
@@ -19391,8 +21177,16 @@ _continues_
 **Lesson 10 Delivering Projects** **421**
 
 
+
+
+--- end of page=446 ---
+
 **Lesson 10 Delivering Projects** **422**
 
+
+
+
+--- end of page=447 ---
 
 ## **Understanding the Render** **Workflow and Presets**
 
@@ -19430,6 +21224,10 @@ At the top of the Render Settings panel, you will find a horizontal list of rend
 **Lesson 10 Delivering Projects** **423**
 
 
+
+
+--- end of page=448 ---
+
 **Custom Export** opens the full range of render settings in the panel below.
 
 
@@ -19458,6 +21256,10 @@ timelines to Presentations and Dropbox file-hosting services.
 
 **Lesson 10 Delivering Projects** **424**
 
+
+
+
+--- end of page=449 ---
 
 **IMF** features a set of SMPTE ST.2067-compliant resolutions and codecs for tapeless
 
@@ -19499,6 +21301,10 @@ external audio engineer in Pro Tools.
 **Lesson 10 Delivering Projects** **425**
 
 
+
+
+--- end of page=450 ---
+
 **2** Click the disclosure arrow next to the YouTube preset and choose 2160p to load the 4K
 
 UHD version of the preset.
@@ -19511,6 +21317,10 @@ YouTube preset.
 
 **Lesson 10 Delivering Projects** **426**
 
+
+
+
+--- end of page=451 ---
 
 To name the video file, you will use the File Name and Location fields under the
 
@@ -19547,6 +21357,10 @@ intentional.
 
 **Lesson 10 Delivering Projects** **427**
 
+
+
+
+--- end of page=452 ---
 
 TIP If you’re rendering a video project at a higher resolution than the original
 
@@ -19595,6 +21409,10 @@ which resolution is best suited for playback.
 
 **Lesson 10 Delivering Projects** **428**
 
+
+
+
+--- end of page=453 ---
 
 ## **Creating Custom Renders**
 
@@ -19648,6 +21466,10 @@ across the full width of the deliver page.
 
 **Lesson 10 Delivering Projects** **429**
 
+
+
+
+--- end of page=454 ---
 
 **5** The lessons throughout this training manual did not focus on audio syncing or editing;
 
@@ -19715,6 +21537,10 @@ the location.
 **Lesson 10 Delivering Projects** **430**
 
 
+
+
+--- end of page=455 ---
+
 **15** In the Timeline panel, ensure that the render range is set to Entire Timeline.
 
 **16** Click Add to Render Queue.
@@ -19772,6 +21598,10 @@ up for DCP delivery.
 **Lesson 10 Delivering Projects** **431**
 
 
+
+
+--- end of page=456 ---
+
 The resolution for your DCP will be 2K Flat because it’s the closest resolution option
 
 when starting from full HD. You’ll need to scale up the project slightly and crop the top
@@ -19810,6 +21640,10 @@ when working with higher-resolution content.
 
 **Lesson 10 Delivering Projects** **432**
 
+
+
+
+--- end of page=457 ---
 
 NOTE You will not be able to see the correct colors for this deliverable if you
 
@@ -19879,6 +21713,10 @@ be rendered as a single self-contained video file.
 **Lesson 10 Delivering Projects** **433**
 
 
+
+
+--- end of page=458 ---
+
 **4** In the Video tab, set the Format to DCP.
 
 **5** Set the Codec to Kakadu JPEG 2000.
@@ -19932,6 +21770,10 @@ separate tracks and disable them prior to rendering.
 
 **Lesson 10 Delivering Projects** **434**
 
+
+
+
+--- end of page=459 ---
 
 **10** Leave the default Disable set to Video 2 to remove “The Long Workday” text from the
 
@@ -19989,6 +21831,10 @@ theater management systems.
 **Lesson 10 Delivering Projects** **435**
 
 
+
+
+--- end of page=460 ---
+
 **4** Enter the Film Title as **TheLongWorkday**, leave the Content Type as ADV
 
 (Advertisement), and set the Audio Language to EN (English).
@@ -20008,6 +21854,10 @@ timeline settings.
 
 **Lesson 10 Delivering Projects** **436**
 
+
+
+
+--- end of page=461 ---
 
 **5** Click OK to close the window.
 
@@ -20082,6 +21932,10 @@ will never be able to truly represent how a film will appear when projected.
 **Lesson 10 Delivering Projects** **437**
 
 
+
+
+--- end of page=462 ---
+
 ## **Exploring Advanced** **Render Settings**
 
 In addition to choosing how your footage is compressed, you have additional control over
@@ -20148,6 +22002,10 @@ data to generate a smaller file size.
 **Lesson 10 Delivering Projects** **438**
 
 
+
+
+--- end of page=463 ---
+
 **7** Restrict the Quality setting to 7500 Kb/s. This will reduce the file’s data rate,
 
 significantly lowering the file size while still maintaining a good level of visual quality.
@@ -20205,6 +22063,10 @@ visual quality.
 
 **Lesson 10 Delivering Projects** **439**
 
+
+
+
+--- end of page=464 ---
 
 **10** Leave “Frame reordering” enabled.
 
@@ -20269,6 +22131,10 @@ to Video and/or Full until you find the correct data level.
 **Lesson 10 Delivering Projects** **440**
 
 
+
+
+--- end of page=465 ---
+
 **13** Leave the Data Levels set to Auto.
 
 
@@ -20318,6 +22184,10 @@ uploaded to a UGC website that does not read/interpret gamma tags.
 
 **Lesson 10 Delivering Projects** **441**
 
+
+
+
+--- end of page=466 ---
 
 **15** Set the “Data burn-in” to None to ensure that the viewer’s data burn-ins will not appear
 
@@ -20376,6 +22246,10 @@ during rendering.
 **Lesson 10 Delivering Projects** **442**
 
 
+
+
+--- end of page=467 ---
+
 **19** Selecting the debayer option is unnecessary because this project does not contain
 
 any raw media.
@@ -20433,6 +22307,10 @@ rendering before launching the next render.
 **Lesson 10 Delivering Projects** **443**
 
 
+
+
+--- end of page=468 ---
+
 **27** In the options menu, deselect Show All Projects to return to the current project’s
 
 Render Queue.
@@ -20482,6 +22360,10 @@ Export panel.
 **Lesson 10 Delivering Projects** **444**
 
 
+
+
+--- end of page=469 ---
+
 ##### **Editing Render Jobs**
 
 A job can be removed or modified even after it has already been added to the
@@ -20526,6 +22408,10 @@ to Render All.
 
 **Lesson 10 Delivering Projects** **445**
 
+
+
+
+--- end of page=470 ---
 
 Using the correct render settings is vital for delivering technically correct, visually
 
@@ -20594,6 +22480,10 @@ settings until you reach the consistency you need to deliver your projects with 
 **Lesson 10 Delivering Projects** **446**
 
 
+
+
+--- end of page=471 ---
+
 ## **Lesson Review**
 
 **1** True or False? You cannot grade media while using the Lightbox panel.
@@ -20615,6 +22505,10 @@ render of a raw project?
 
 **Lesson 10 Delivering Projects** **447**
 
+
+
+
+--- end of page=472 ---
 
 ##### **Answers**
 
@@ -20693,6 +22587,10 @@ class color correction tools to be intuitive to learn and a perfect fit for your
 **Lesson 10 Delivering Projects** **448**
 
 
+
+
+--- end of page=473 ---
+
 ### Appendix A
 # Using the DaVinci Resolve Panels
 
@@ -20719,6 +22617,10 @@ Micro Color Panel
 
 **Appendix A Using the DaVinci Resolve Panels** **449**
 
+
+
+
+--- end of page=474 ---
 
 ##### **DaVinci Resolve Micro Color Panel**
 
@@ -20771,6 +22673,10 @@ and many more.
 **Appendix A Using the DaVinci Resolve Panels** **450**
 
 
+
+
+--- end of page=475 ---
+
 ##### **DaVinci Resolve Advanced Panel**
 
 For the ultimate in speed, power, and control, Blackmagic Design offers the DaVinci Resolve
@@ -20804,6 +22710,10 @@ the Davinci Resolve Advanced Panel is the ultimate control surface for Davinci R
 
 **Appendix A Using the DaVinci Resolve Panels** **451**
 
+
+
+
+--- end of page=476 ---
 
 ##### **DaVinci Resolve Mini Panel Overview**
 
@@ -20867,10 +22777,12 @@ introduce you to its layout and key functions.
 
 
 
-
-
 **Appendix A Using the DaVinci Resolve Panels** **452**
 
+
+
+
+--- end of page=477 ---
 
 To the right of the Gain trackball are useful playback and shuttle controls to help you
 
@@ -20892,8 +22804,16 @@ will temporarily disable the selected node of a clip.
 **Appendix A Using the DaVinci Resolve Panels** **453**
 
 
+
+
+--- end of page=478 ---
+
 **This page is intentionally left blank** **454**
 
+
+
+
+--- end of page=479 ---
 
 ### Appendix B
 # Setup and Delivery on Macs
@@ -20943,6 +22863,10 @@ note that this will only affect the appearance of the footage in the viewers.
 **Appendix B Setup and Delivery on Macs** **455**
 
 
+
+
+--- end of page=480 ---
+
 ## **Gamma Tags**
 
 When exporting from a Mac, you can change the Gamma Tag to Rec.709-A to leave the
@@ -20972,6 +22896,10 @@ if uploaded to a UGC website that does not read/interpret gamma tags.
 
 **Appendix B Setup and Delivery on Macs** **456**
 
+
+
+
+--- end of page=481 ---
 
 ## **Index**
 
@@ -21124,6 +23052,10 @@ Blue look serial node, creating, _195_
 
 **Index** **457**
 
+
+
+
+--- end of page=482 ---
 
 blurring backgrounds, _308–309_
 
@@ -21284,6 +23216,10 @@ color ranges, warping, _108_
 
 **Index** **458**
 
+
+
+
+--- end of page=483 ---
 
 color space finding middle gray of, _330_ .
 _See also_ _output color space_
@@ -21447,6 +23383,10 @@ DaVinci Resolve panels, _449–453_
 **Index** **459**
 
 
+
+
+--- end of page=484 ---
+
 DaVinci Wide Gamut, _280_ . _See also_ _gamut_
 _sizes_
 
@@ -21604,6 +23544,10 @@ translation errors, _155–160_
 
 **Index** **460**
 
+
+
+
+--- end of page=485 ---
 
 flags and filters, organizing shots
 with, _48–51_
@@ -21766,6 +23710,10 @@ Highlight master wheel, _31_
 **Index** **461**
 
 
+
+
+--- end of page=486 ---
+
 Highlight Recovery, using with raw
 projects, _391_
 
@@ -21925,6 +23873,10 @@ _static keyframes_
 
 **Index** **462**
 
+
+
+
+--- end of page=487 ---
 
 Keyframes palette
 
@@ -22090,6 +24042,10 @@ matte preview, disabling, _98_
 **Index** **463**
 
 
+
+
+--- end of page=488 ---
+
 mattes. _See_ _external mattes_ ; _image_
 _sequence mattes_
 
@@ -22251,6 +24207,10 @@ obscured objects, tracking, _87–91_
 **Index** **464**
 
 
+
+
+--- end of page=489 ---
+
 Office Group self-guided exercise, _341_
 
 offline and online workflows, _164_
@@ -22410,6 +24370,10 @@ proxy workflows, exploring, _166–167_
 
 **Index** **465**
 
+
+
+
+--- end of page=490 ---
 
 **Q**
 
@@ -22573,6 +24537,10 @@ media, _264–273_
 
 **Index** **466**
 
+
+
+
+--- end of page=491 ---
 
 scene-referred color management, _169_ .
 _See also_ _color management_
@@ -22741,6 +24709,10 @@ exporting and importing, _249–251_
 **Index** **467**
 
 
+
+
+--- end of page=492 ---
+
 saving and applying to raw clips, _392_
 
 saving for other projects, _246–251_
@@ -22904,6 +24876,10 @@ removing blue dot from, _304_
 **Index** **468**
 
 
+
+
+--- end of page=493 ---
+
 viewer’s eye, controlling, _74–83_
 
 Vignette node, creating, _344_
@@ -23012,6 +24988,10 @@ into reference image, _64_
 **Index** **469**
 
 
+
+
+--- end of page=494 ---
+
 DaVinci Resolve 20 is Hollywood’s most popular color correction
 software and is used to color grade more feature films, television
 shows and commercials than any other application. This official
@@ -23074,4 +25054,8 @@ scopes, create unique looks and much more!
 
 **Node Editor Pipeline**
 
+
+
+
+--- end of page=495 ---
 

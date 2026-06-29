@@ -74,8 +74,16 @@
   - Lesson Review (p.212)
 - Index (p.214)
 -->
+
+
+--- end of page=0 ---
+
 ## The Visual Effects Guide to
 
+
+
+
+--- end of page=1 ---
 
 **The Visual Effects Guide to DaVinci Resolve 20**
 
@@ -150,6 +158,10 @@ aregistered trademark of Microsoft Inc., registered in the U.S. and other countr
 
 ISBN 13: 979-8-9924874-4-2
 
+
+
+
+--- end of page=2 ---
 
 ## **Contents**
 
@@ -228,6 +240,10 @@ Lesson Review 57
 **Contents** **iii**
 
 
+
+
+--- end of page=3 ---
+
 3 Replacing a Sky 59
 
 
@@ -291,6 +307,10 @@ Lesson Review 137
 **Contents** **iv**
 
 
+
+
+--- end of page=4 ---
+
 6 Addendum: Creating Title Animations 139
 
 
@@ -343,6 +363,10 @@ Index 193
 **Contents** **v**
 
 
+
+
+--- end of page=5 ---
+
 ## **Foreword**
 
 **Welcome to The Visual Effects Guide to DaVinci Resolve 20.**
@@ -393,6 +417,10 @@ Blackmagic Design
 
 **Foreword** **vi**
 
+
+
+
+--- end of page=6 ---
 
 ## **Acknowledgments**
 
@@ -462,6 +490,10 @@ held the position of Senior Product Manager for Pro Applications at Apple Inc.
 **About the Authors** **vii**
 
 
+
+
+--- end of page=7 ---
+
 ## **Who This Book Is For**
 
 This hands-on training guide is designed for DaVinci Resolve editors and colorists who
@@ -488,6 +520,10 @@ from [www.blackmagicdesign.com.](http://www.blackmagicdesign.com)
 
 **Who This Book Is For** **viii**
 
+
+
+
+--- end of page=8 ---
 
 ## **Getting Started**
 
@@ -554,6 +590,10 @@ You’ll acquire real-world skills that you can apply to real-world productions.
 
 **Getting Started** **ix**
 
+
+
+
+--- end of page=9 ---
 
 Lesson 1 begins with a quick start guide that lets you explore the user interface by
 
@@ -653,6 +693,10 @@ DaVinci Resolve 20. They include:
 **Getting Started** **x**
 
 
+
+
+--- end of page=10 ---
+
 Whether you want an introductory guide to DaVinci Resolve or want to learn more
 
 advanced editing techniques, color grading, sound mixing, or visual effects, our certified
@@ -720,6 +764,10 @@ sections to launch DaVinci Resolve and download the media files used throughout 
 **Getting Started** **xi**
 
 
+
+
+--- end of page=11 ---
+
 ##### **DaVinci Resolve 20 Quick Setup**
 
 When DaVinci Resolve 20 is successfully installed, you can launch the application for the
@@ -748,6 +796,10 @@ detailing the new features available in the current version.
 **Getting Started** **xii**
 
 
+
+
+--- end of page=12 ---
+
 **1** If required, you can change the language used. You can also learn more about these
 
 and hundreds of other amazing features available in DaVinci Resolve 20 by clicking
@@ -767,6 +819,10 @@ how Resolve is working.
 **Getting Started** **xiii**
 
 
+
+
+--- end of page=13 ---
+
 **2** Click the Quick Setup button.
 
 
@@ -777,6 +833,10 @@ card will perform well. If both pass this test, click Continue.
 
 **Getting Started** **xiv**
 
+
+
+
+--- end of page=14 ---
 
 Next, you will be asked what type of project you would like to begin. DaVinci Resolve
 
@@ -803,6 +863,10 @@ Videos folder (Windows).
 **Getting Started** **xv**
 
 
+
+
+--- end of page=15 ---
+
 **5** Leave this set to the default location and click Continue.
 
 
@@ -820,6 +884,10 @@ may find those shortcuts won’t work.
 **Getting Started** **xvi**
 
 
+
+
+--- end of page=16 ---
+
 **6** For now, leave the layout set to DaVinci Resolve and click Continue.
 
 
@@ -834,6 +902,10 @@ well as you continue learning about the application and how it uses your system.
 
 **Getting Started** **xvii**
 
+
+
+
+--- end of page=17 ---
 
 **7** Click Start to launch and begin enjoying DaVinci Resolve 20!
 
@@ -856,6 +928,10 @@ DaVinci Resolve 20 will close.
 
 **Getting Started** **xviii**
 
+
+
+
+--- end of page=18 ---
 
 ##### **Get the Lesson Files**
 
@@ -907,6 +983,10 @@ to begin Lesson 1.
 
 **Getting Started** **xix**
 
+
+
+
+--- end of page=19 ---
 
 ## **Introducing Blackmagic Cloud**
 
@@ -977,6 +1057,10 @@ To find out more about these exciting workflows, visit
 
 **Introducing Blackmagic Cloud** **xx**
 
+
+
+
+--- end of page=20 ---
 
 ### Lesson 1
 # Getting Started: Learning the Fusion Page
@@ -1059,6 +1143,10 @@ Returning to the Timeline 29
 Lesson Review 29
 
 
+
+
+--- end of page=21 ---
+
 ## **Exploring the Fusion Interface**
 
 In most editing systems, you put together your rough cut and then refine your edited
@@ -1125,6 +1213,10 @@ form of the term is _CGI_, or “computer-generated imagery.”
 
 **Lesson 1 Getting Started: Learning the Fusion Page** **2**
 
+
+
+
+--- end of page=22 ---
 
 **8** Click the Fusion page button or press Shift-5.
 
@@ -1194,6 +1286,10 @@ determines the layering of images and the order the effects are applied.
 **Lesson 1 Getting Started: Learning the Fusion Page** **3**
 
 
+
+
+--- end of page=23 ---
+
 As mentioned at the start of this lesson, nodes aren’t hard to understand; they just
 
 require a different way of thinking and take a little time to get used to. Before we dive
@@ -1257,6 +1353,10 @@ and right to zoom.
 **Lesson 1 Getting Started: Learning the Fusion Page** **4**
 
 
+
+
+--- end of page=24 ---
+
 **4** With your mouse pointer still hovering over the right viewer, press Command-F
 
 (macOS) or Ctrl-F (PC) to fit the image into the full area of the viewer.
@@ -1293,6 +1393,10 @@ Keyframes Editor.
 
 **Lesson 1 Getting Started: Learning the Fusion Page** **5**
 
+
+
+
+--- end of page=25 ---
 
 ##### **Setting Up the Node Editor**
 
@@ -1351,6 +1455,10 @@ the nodes.
 **Lesson 1 Getting Started: Learning the Fusion Page** **6**
 
 
+
+
+--- end of page=26 ---
+
 **2** Right-click in an empty space in the Node Editor and choose Force Source Tile Pictures.
 
 
@@ -1381,6 +1489,10 @@ or image.
 
 **Lesson 1 Getting Started: Learning the Fusion Page** **7**
 
+
+
+
+--- end of page=27 ---
 
 **6** Select the MediaIn1 node. Press the F2 key and rename the MediaIn1 node
 
@@ -1451,6 +1563,10 @@ system, the longer the cached region for RAM playback can be.
 **Lesson 1 Getting Started: Learning the Fusion Page** **8**
 
 
+
+
+--- end of page=28 ---
+
 TIP You can assign more or less RAM for Fusion RAM playback in the
 
 Preferences panel. The amount of RAM assigned to Fusion RAM playback is
@@ -1481,6 +1597,10 @@ around it) and press 1 to load it into the left viewer.
 
 **Lesson 1 Getting Started: Learning the Fusion Page** **9**
 
+
+
+
+--- end of page=29 ---
 
 **4** Drag in the time ruler to preview the clip and update the tile picture.
 
@@ -1525,6 +1645,10 @@ right viewer.)
 **Lesson 1 Getting Started: Learning the Fusion Page** **10**
 
 
+
+
+--- end of page=30 ---
+
 TIP The term _composite_ refers to the result of combining two or more images
 
 to create a final effects shot.
@@ -1565,6 +1689,10 @@ DriveDock over the background plate in the right viewer.
 
 **Lesson 1 Getting Started: Learning the Fusion Page** **11**
 
+
+
+
+--- end of page=31 ---
 
 The blue input is for masking effects (we’ll cover those a little later), and the small white
 
@@ -1623,6 +1751,10 @@ in viewer 2 once again.
 **Lesson 1 Getting Started: Learning the Fusion Page** **12**
 
 
+
+
+--- end of page=32 ---
+
 ## **Adding Effects**
 
 Let’s look at the current composite.
@@ -1679,6 +1811,10 @@ selected node.
 **Lesson 1 Getting Started: Learning the Fusion Page** **13**
 
 
+
+
+--- end of page=33 ---
+
 TIP New nodes are always added directly after the selected node.
 
 
@@ -1718,6 +1854,10 @@ Post-Multiply option in the color corrector.
 **Lesson 1 Getting Started: Learning the Fusion Page** **14**
 
 
+
+
+--- end of page=34 ---
+
 **6** In the Inspector, click the Options button to switch to the options section of the color
 
 corrector interface. Enable Pre-Divide/Post-Multiply.
@@ -1756,6 +1896,10 @@ should be a very subtle adjustment: a value of around -0.03 should work.
 **Lesson 1 Getting Started: Learning the Fusion Page** **15**
 
 
+
+
+--- end of page=35 ---
+
 TIP In color correction, the Lift control adjusts the level of the dark pixels in an
 
 image, while the Gain control adjusts the level of the bright pixels.
@@ -1786,6 +1930,10 @@ the color correction to see how things looked before we started.
 
 **Lesson 1 Getting Started: Learning the Fusion Page** **16**
 
+
+
+
+--- end of page=36 ---
 
 **11** Make sure ColorCorrector1 is selected (outlined in red), and then click the red switch at
 
@@ -1830,6 +1978,10 @@ traditional timeline.
 
 **Lesson 1 Getting Started: Learning the Fusion Page** **17**
 
+
+
+
+--- end of page=37 ---
 
 **2** Click the DriveDock node and press 1 to load it into viewer 1.
 
@@ -1885,6 +2037,10 @@ little experiment.
 **Lesson 1 Getting Started: Learning the Fusion Page** **18**
 
 
+
+
+--- end of page=38 ---
+
 **4** Hold down the Shift key, and in the Node Editor, drag the Color Corrector node to the
 
 right, away from the nodes it’s connected to. Release the mouse button and then the
@@ -1932,6 +2088,10 @@ commands until ColorCorrector1 is re-inserted after the DriveDock.
 **Lesson 1 Getting Started: Learning the Fusion Page** **19**
 
 
+
+
+--- end of page=39 ---
+
 ## **Working with Masks**
 
 As mentioned earlier, dragging the playhead past frame 75 reveals a problem: since our
@@ -1977,6 +2137,10 @@ earlier, we called the blue triangle the “mask” input. Let’s use it now.
 **Lesson 1 Getting Started: Learning the Fusion Page** **20**
 
 
+
+
+--- end of page=40 ---
+
 **5** Drag from the output square of HandRoto to the blue, mask input of DriveDock to
 
 create a connecting pipe.
@@ -2011,6 +2175,10 @@ DriveDock image.
 
 **Lesson 1 Getting Started: Learning the Fusion Page** **21**
 
+
+
+
+--- end of page=41 ---
 
 You won’t see the inverted image reflected in the thumbnail tile of HandRoto. We
 
@@ -2064,6 +2232,10 @@ DaVinci Resolve, all the tools or effects can be found in the Effects library.
 **Lesson 1 Getting Started: Learning the Fusion Page** **22**
 
 
+
+
+--- end of page=42 ---
+
 **2** At the top of the Fusion page, click the Media Pool tab to close the Media Pool panel,
 
 and then click Effects to open the Effects Library.
@@ -2076,6 +2248,10 @@ and then click Effects to open the Effects Library.
 
 **Lesson 1 Getting Started: Learning the Fusion Page** **23**
 
+
+
+
+--- end of page=43 ---
 
 **5** Drag a connecting pipe from the output square of the DriveDock and hover it over the
 
@@ -2114,6 +2290,10 @@ We can use this to mask off the area where we want to apply color correction.
 **Lesson 1 Getting Started: Learning the Fusion Page** **24**
 
 
+
+
+--- end of page=44 ---
+
 **9** Select Merge1 in the Node Editor, and then from the Effects Library, select the
 
 Color category.
@@ -2148,6 +2328,10 @@ Let’s blur the luma key a little to create more of a glow effect.
 
 **Lesson 1 Getting Started: Learning the Fusion Page** **25**
 
+
+
+
+--- end of page=45 ---
 
 **13** Select LumaKeyer1 in the Node Editor.
 
@@ -2185,6 +2369,10 @@ Saturation to 2.0 and Gain to around 1.7.
 
 **Lesson 1 Getting Started: Learning the Fusion Page** **26**
 
+
+
+
+--- end of page=46 ---
 
 We’re back to the same color strength, but we now have a little glow around the edges
 
@@ -2225,6 +2413,10 @@ way to 1.0. The diamond should be red.
 
 **Lesson 1 Getting Started: Learning the Fusion Page** **27**
 
+
+
+
+--- end of page=47 ---
 
 When you clicked the diamond button, you enabled auto keyframing, indicated by the
 
@@ -2271,6 +2463,10 @@ up to around 0.8 and bring Softness down to about 0.4.
 **Lesson 1 Getting Started: Learning the Fusion Page** **28**
 
 
+
+
+--- end of page=48 ---
+
 ## **Returning to the Timeline**
 
 The beauty of Fusion existing as a page in Resolve is that returning from performing
@@ -2314,6 +2510,10 @@ because you have no use for it.
 **Lesson 1 Getting Started: Learning the Fusion Page** **29**
 
 
+
+
+--- end of page=49 ---
+
 ##### **Answers**
 
 **1** In the Fusion page, to display the output of a node in viewer 1, select the node and
@@ -2333,6 +2533,10 @@ Node Editor results back to the edit page timeline.
 
 **Lesson 1 Getting Started: Learning the Fusion Page** **30**
 
+
+
+
+--- end of page=50 ---
 
 ### Lesson 2
 # Compositing Split Screens
@@ -2380,6 +2584,10 @@ Restoring Camera Motion 53
 
 Lesson Review 57
 
+
+
+
+--- end of page=51 ---
 
 One of the most critical aspects when compositing is to have all the different elements
 
@@ -2436,6 +2644,10 @@ the Fusion page.
 **Lesson 2 Compositing Split Screens** **32**
 
 
+
+
+--- end of page=52 ---
+
 **4** From the Timelines bin, double-click **Fusion VFX Lessons -START** .
 
 **5** Move the playhead over the first red marker in the timeline. Use Command + (macOS)
@@ -2456,6 +2668,10 @@ speaking and the less affirming passenger on video track 1.
 
 **Lesson 2 Compositing Split Screens** **33**
 
+
+
+
+--- end of page=53 ---
 
 **7** Press D a second time to enable the video track 2 clip again.
 
@@ -2483,6 +2699,10 @@ are collapsed into the container.
 
 **Lesson 2 Compositing Split Screens** **34**
 
+
+
+
+--- end of page=54 ---
 
 TIP You can display all the layers of a Fusion clip in the edit page timeline by
 
@@ -2542,6 +2762,10 @@ identically matches the timeline layering.
 **Lesson 2 Compositing Split Screens** **35**
 
 
+
+
+--- end of page=55 ---
+
 To better keep track of each MediaIn node, you can change their default names to be
 
 more descriptive of the contents.
@@ -2570,6 +2794,10 @@ using that tracking data to stabilize it.
 
 **Lesson 2 Compositing Split Screens** **36**
 
+
+
+
+--- end of page=56 ---
 
 ## **Tracking in the Fusion Page**
 
@@ -2605,6 +2833,10 @@ although in this case the node we want—Tracker—is already the default select
 
 **Lesson 2 Compositing Split Screens** **37**
 
+
+
+
+--- end of page=57 ---
 
 **5** Press Return/Enter to add the selected Tracker tool. It is added after the selected
 
@@ -2663,6 +2895,10 @@ input as the clip to track.
 **Lesson 2 Compositing Split Screens** **38**
 
 
+
+
+--- end of page=58 ---
+
 **8** In viewer 1, drag the handle in the upper left corner of the pattern box to position the
 
 tracker over the lock on the back door.
@@ -2710,6 +2946,10 @@ point tracker, since it is available to all users.
 **Lesson 2 Compositing Split Screens** **39**
 
 
+
+
+--- end of page=59 ---
+
 Because the camera does not move very quickly in this shot, the tracked objects will
 
 not move very far from one frame to the next. So we can leave the search box at its
@@ -2742,6 +2982,10 @@ the right of our passenger’s head.
 
 **Lesson 2 Compositing Split Screens** **40**
 
+
+
+
+--- end of page=60 ---
 
 The high-contrast parts of the car are good tracking points. They are “nailed to
 
@@ -2786,6 +3030,10 @@ Viewer 1 displays the progress of the trackers until the analysis is complete.
 **Lesson 2 Compositing Split Screens** **41**
 
 
+
+
+--- end of page=61 ---
+
 You now have three reliable trackers that follow the camera movement. However, tracking
 
 is not the effect; it is only the means to an end. The next step is to put that tracking data to
@@ -2820,6 +3068,10 @@ done here. Then you set the match move operation to apply to the background.
 
 **Lesson 2 Compositing Split Screens** **42**
 
+
+
+
+--- end of page=62 ---
 
 **4** Play the clip to view the stabilized clip in viewer 1.
 
@@ -2865,6 +3117,10 @@ trackers in roughly the same locations as you did for the PASSENGER clip.
 
 **Lesson 2 Compositing Split Screens** **43**
 
+
+
+
+--- end of page=63 ---
 
 **5** Once the trackers are correctly positioned, click the Track Forward button.
 
@@ -2934,6 +3190,10 @@ shape animation.”
 **Lesson 2 Compositing Split Screens** **44**
 
 
+
+
+--- end of page=64 ---
+
 **3** Drag the Polygon shape tool from the toolbar just below Merge2 for better organization.
 
 
@@ -2974,6 +3234,10 @@ mask off part of an image.
 **Lesson 2 Compositing Split Screens** **45**
 
 
+
+
+--- end of page=65 ---
+
 **6** To ensure that you draw the matte around the frame, move the mouse pointer over
 
 the viewer. Hold down the Command (macOS) or Ctrl key (PC) and scroll the middle
@@ -3002,6 +3266,10 @@ corner and click to create a spline running down the left side of the frame.
 
 **Lesson 2 Compositing Split Screens** **46**
 
+
+
+
+--- end of page=66 ---
 
 You don’t need to add many points along the straight edges of the frame, because
 
@@ -3032,6 +3300,10 @@ then click to add a new control point just before they separate.
 **Lesson 2 Compositing Split Screens** **47**
 
 
+
+
+--- end of page=67 ---
+
 **11** Move your mouse pointer up and over to the left to the lower left corner of the back
 
 door window.
@@ -3046,6 +3318,10 @@ window frame.
 
 **Lesson 2 Compositing Split Screens** **48**
 
+
+
+
+--- end of page=68 ---
 
 **13** Move your mouse pointer up and into the center of the window frame to avoid the
 
@@ -3085,6 +3361,10 @@ switch back and forth so you can see the results more clearly.
 
 **Lesson 2 Compositing Split Screens** **49**
 
+
+
+
+--- end of page=69 ---
 
 **17** Select Merge1, and then press 2 to load it into viewer 2.
 
@@ -3148,6 +3428,10 @@ actors, and you’ll notice a “tear” resulting from the misalignment.
 **Lesson 2 Compositing Split Screens** **50**
 
 
+
+
+--- end of page=70 ---
+
 Let’s start by fixing the latter issue: aligning the starting position of the two shots.
 
 **2** Click the connecting pipe between Polygon1 and Merge2 to disconnect it.
@@ -3181,6 +3465,10 @@ considered, the background of the car should be identical in both shots.
 
 **Lesson 2 Compositing Split Screens** **51**
 
+
+
+
+--- end of page=71 ---
 
 **4** In the Inspector, click and drag in the Center X and Center Y numeric entry fields to
 
@@ -3226,6 +3514,10 @@ lighting differences between the takes.
 **Lesson 2 Compositing Split Screens** **52**
 
 
+
+
+--- end of page=72 ---
+
 **6** Select Polygon1. In the Inspector, drag Soft Edge to around 0.02 to smooth the border
 
 between the two takes.
@@ -3254,6 +3546,10 @@ viewer setup.
 
 **Lesson 2 Compositing Split Screens** **53**
 
+
+
+
+--- end of page=73 ---
 
 **3** Select the Merge2 node, press Shift-Spacebar to open the Select Tool dialog, type **TRA**,
 
@@ -3286,6 +3582,10 @@ onscreen control in the viewer and using the Connect To menu.
 
 **Lesson 2 Compositing Split Screens** **54**
 
+
+
+
+--- end of page=74 ---
 
 **6** At the bottom of the contextual menu, choose Tranform1: Center > Connect To >
 
@@ -3324,6 +3624,10 @@ concatenate as long as a mask is not connected to any of the nodes.
 **Lesson 2 Compositing Split Screens** **55**
 
 
+
+
+--- end of page=75 ---
+
 The last piece of the puzzle in finishing this composite is to scale the final result so the
 
 image fills the frame. Because of the stabilization, you can see that the lower right
@@ -3354,6 +3658,10 @@ Completed node tree for Lesson 2.
 **Lesson 2 Compositing Split Screens** **56**
 
 
+
+
+--- end of page=76 ---
+
 ## **Lesson Review**
 
 **1** True or False? A Fusion clip is used to take multiple timeline layers from the edit page
@@ -3378,6 +3686,10 @@ Tracker node.
 **Lesson 2 Compositing Split Screens** **57**
 
 
+
+
+--- end of page=77 ---
+
 ##### **Answers**
 
 **1** True. A Fusion clip is used to take multiple timeline layers from the edit page into the
@@ -3397,6 +3709,10 @@ stabilize the clip that is connected to the yellow background input of the Track
 
 **Lesson 2 Compositing Split Screens** **58**
 
+
+
+
+--- end of page=78 ---
 
 ### Lesson 3
 # Replacing a Sky
@@ -3458,6 +3774,10 @@ Blending In the Original Sky 83
 Lesson Review 85
 
 
+
+
+--- end of page=79 ---
+
 In this lesson, you’ll learn an indispensable node structure for a sky replacement.
 
 During the process of learning how to perform a sky replacement, you’ll also look closer
@@ -3485,6 +3805,10 @@ open the same timeline and begin with the clips located at the second red marker
 
 **Lesson 3 Replacing a Sky** **60**
 
+
+
+
+--- end of page=80 ---
 
 DaVinci Resolve in general, and the Fusion page specifically, are resolution
 
@@ -3525,6 +3849,10 @@ and reposition it without losing quality.
 **Lesson 3 Replacing a Sky** **61**
 
 
+
+
+--- end of page=81 ---
+
 **5** Select the Sky with Rainbow clip on video track 1 in the timeline, and then in the
 
 Inspector, use the zoom controls to scale up the clip to about 1.5 and drag the X
@@ -3560,6 +3888,10 @@ above Merge1, MediaIn2 directly above Merge2.
 
 **Lesson 3 Replacing a Sky** **62**
 
+
+
+
+--- end of page=82 ---
 
 NOTE This lesson uses dual viewers. If your workspace is using a single
 
@@ -3600,6 +3932,10 @@ the remaining image that falls outside the frame boundary.
 
 **Lesson 3 Replacing a Sky** **63**
 
+
+
+
+--- end of page=83 ---
 
 **12** Select the Transform node and, in the Inspector, drag the Size slider down to around 0.5.
 
@@ -3645,6 +3981,10 @@ With the clips returned to individual layers in the edit page, we can disable vi
 **Lesson 3 Replacing a Sky** **64**
 
 
+
+
+--- end of page=84 ---
+
 **2** Select the clip on video track 2 and press D to disable the clip.
 
 **3** Select the Sky image on video track 1 and reset the scale you applied in the Inspector.
@@ -3674,6 +4014,10 @@ right corner of the Blackmagic URSA clip.
 
 **Lesson 3 Replacing a Sky** **65**
 
+
+
+
+--- end of page=85 ---
 
 The metadata badge reveals a pop-up with some basic metadata about the clip. One
 
@@ -3722,6 +4066,10 @@ Sky as the background.
 **Lesson 3 Replacing a Sky** **66**
 
 
+
+
+--- end of page=86 ---
+
 **10** Select the Merge node and press 2 to see it in viewer 2.
 
 
@@ -3760,6 +4108,10 @@ image resolution.
 
 **Lesson 3 Replacing a Sky** **67**
 
+
+
+
+--- end of page=87 ---
 
 **13** Click the Auto Resolution button to disable the automatic resolution setting and
 
@@ -3802,6 +4154,10 @@ but cropped by the 1920 x 1080 Merge2 node.
 **Lesson 3 Replacing a Sky** **68**
 
 
+
+
+--- end of page=88 ---
+
 TIP Click in the viewer and press Command-F (macOS) or Ctrl-F (PC) to fill the
 
 viewer with the image.
@@ -3841,6 +4197,10 @@ much better choice is to start with an apply mode located in the merge you alrea
 **Lesson 3 Replacing a Sky** **69**
 
 
+
+
+--- end of page=89 ---
+
 The Darken apply mode shows the darkest pixel wherever the foreground and
 
 background overlap. Since the sky image is darker than the overexposed sky in the
@@ -3871,6 +4231,10 @@ the rainbow. (The Center X control in the Inspector can be set anywhere from 0.6
 
 **Lesson 3 Replacing a Sky** **70**
 
+
+
+
+--- end of page=90 ---
 
 ## **Adding Effects from** **the Effects Library**
 
@@ -3911,6 +4275,10 @@ Luma Keyer.
 **Lesson 3 Replacing a Sky** **71**
 
 
+
+
+--- end of page=91 ---
+
 Nodes can have multiple outputs without causing any reduction in quality or
 
 duplicating layers.
@@ -3949,6 +4317,10 @@ opaque. Areas of semitransparency will be some shade of gray.
 **Lesson 3 Replacing a Sky** **72**
 
 
+
+
+--- end of page=92 ---
+
 **7** In the Inspector, drag the High threshold slider to the left until the majority of the sky
 
 appears solid white. The High threshold should end up at around 0.9.
@@ -3983,6 +4355,10 @@ cause problems in our matte.
 
 **Lesson 3 Replacing a Sky** **73**
 
+
+
+
+--- end of page=93 ---
 
 ## **Fixing Holes in a Key**
 
@@ -4025,6 +4401,10 @@ first Erode/Dilate.
 **Lesson 3 Replacing a Sky** **74**
 
 
+
+
+--- end of page=94 ---
+
 **7** In the Inspector, in the Amount slider, type **0.007** .
 
 
@@ -4058,6 +4438,10 @@ background input.
 
 **Lesson 3 Replacing a Sky** **75**
 
+
+
+
+--- end of page=95 ---
 
 **1** From the toolbar, drag the Matte Control tool to the Node Editor near the Erode/
 
@@ -4093,6 +4477,10 @@ the bottom of the Inspector properties.
 
 **Lesson 3 Replacing a Sky** **76**
 
+
+
+
+--- end of page=96 ---
 
 By choosing Combine Alpha, we’re telling Fusion to copy the alpha channel from our
 
@@ -4139,6 +4527,10 @@ Multiply Image checkbox).
 **Lesson 3 Replacing a Sky** **77**
 
 
+
+
+--- end of page=97 ---
+
 Before going any further, it helps to view the composite of the foreground with the sky.
 
 The Matte Control output forms our new foreground with alpha, while the output of
@@ -4177,6 +4569,10 @@ lesson, you’ll apply the Tracker as a modifier.
 **Lesson 3 Replacing a Sky** **78**
 
 
+
+
+--- end of page=98 ---
+
 You’ll need to apply the Tracker modifier to a node that contains position controls.
 
 The Merge tool includes center X and Y controls that can be used to reposition the
@@ -4205,6 +4601,10 @@ simple tracks, as we have here.
 
 **Lesson 3 Replacing a Sky** **79**
 
+
+
+
+--- end of page=99 ---
 
 Adding a Tracker modifier displays the tracker pattern and search rectangles over the
 
@@ -4244,6 +4644,10 @@ high-contrast tracking points that we can use for the Tracker.
 
 **Lesson 3 Replacing a Sky** **80**
 
+
+
+
+--- end of page=100 ---
 
 NOTE As in Lesson 2, this lesson describes using the Point tracker found in
 
@@ -4298,6 +4702,10 @@ box or making the pattern box slightly smaller, and then track the clip again.
 **Lesson 3 Replacing a Sky** **81**
 
 
+
+
+--- end of page=101 ---
+
 ## **Fixing Interrupted Trackers**
 
 You now have a solid track for the first 90 frames or so, but you’ll need another solution for
@@ -4324,6 +4732,10 @@ re-open it.
 
 **Lesson 3 Replacing a Sky** **82**
 
+
+
+
+--- end of page=102 ---
 
 The Track Center (Append) setting allows you to move the pattern box over a new
 
@@ -4369,6 +4781,10 @@ a more natural composite.
 **Lesson 3 Replacing a Sky** **83**
 
 
+
+
+--- end of page=103 ---
+
 **2** Adjust the Gamma up to blend back some of the original sky. A value of around 1.5
 
 should work.
@@ -4388,6 +4804,10 @@ Completed node tree for Lesson 3.
 
 **Lesson 3 Replacing a Sky** **84**
 
+
+
+
+--- end of page=104 ---
 
 ## **Lesson Review**
 
@@ -4413,6 +4833,10 @@ Tracker node.
 **Lesson 3 Replacing a Sky** **85**
 
 
+
+
+--- end of page=105 ---
+
 ##### **Answers**
 
 **1** False. Adding a clip from the media pool to the Node Editor uses the clip’s native
@@ -4434,6 +4858,10 @@ can track multiple patterns.
 
 **Lesson 3 Replacing a Sky** **86**
 
+
+
+
+--- end of page=106 ---
 
 ### Lesson 4
 # Replacing Signs and Screens
@@ -4487,6 +4915,10 @@ Finalizing the Composite 106
 Lesson Review 109
 
 
+
+
+--- end of page=107 ---
+
 In this lesson, you’ll add a new sign to the side of a moving van. The process of adding a
 
 new sign to a moving vehicle (or a screen to a tablet) is made up of three parts. First, you’ll
@@ -4529,6 +4961,10 @@ motion. Let’s take a look at our clip.
 **Lesson 4 Replacing Signs and Screens** **88**
 
 
+
+
+--- end of page=108 ---
+
 **3** Move the playhead over the third edit and the third red marker, and press Shift-5 to
 
 switch to the Fusion page.
@@ -4566,6 +5002,10 @@ is large in the frame but moving slowly, effectively eliminating motion blur.
 
 **Lesson 4 Replacing Signs and Screens** **89**
 
+
+
+
+--- end of page=109 ---
 
 **9** Move to frame 65 in the comp.
 
@@ -4618,6 +5058,10 @@ as, in this example, the background behind the van or even the rotating tires.
 **Lesson 4 Replacing Signs and Screens** **90**
 
 
+
+
+--- end of page=110 ---
+
 **10** In viewer 1, draw a very simple shape that fits around the side of the van. Do not go
 
 outside the van, and do not include the wheels.
@@ -4646,6 +5090,10 @@ button before resuming the tracking process.
 
 **Lesson 4 Replacing Signs and Screens** **91**
 
+
+
+
+--- end of page=111 ---
 
 **12** At the bottom of the Inspector, click the Track to Start button.
 
@@ -4687,6 +5135,10 @@ If you do see errors, readjust your tracking shape at frame 65 and try again.
 **Lesson 4 Replacing Signs and Screens** **92**
 
 
+
+
+--- end of page=112 ---
+
 ## **Painting with the Clone Tool**
 
 With the tracking done, we can now focus on removing the tracking markers. You will
@@ -4724,6 +5176,10 @@ a timeline.
 
 **Lesson 4 Replacing Signs and Screens** **93**
 
+
+
+
+--- end of page=113 ---
 
 A freeze frame is created for frame 65, which holds for the duration of the clip.
 
@@ -4768,6 +5224,10 @@ paint tasks.
 **Lesson 4 Replacing Signs and Screens** **94**
 
 
+
+
+--- end of page=114 ---
+
 **8** In the Inspector, click the Clone Apply Mode button to switch from painting with color
 
 to painting with a clone brush.
@@ -4806,6 +5266,10 @@ viewer to pan.
 **Lesson 4 Replacing Signs and Screens** **95**
 
 
+
+
+--- end of page=115 ---
+
 **11** If necessary, Option-click (macOS) or Alt-click (PC) a new offset for the next marker and
 
 paint over it. Command-drag (macOS) or Ctrl-drag (PC) to resize the brush. Continue
@@ -4835,6 +5299,10 @@ clicking in an empty area.
 **Lesson 4 Replacing Signs and Screens** **96**
 
 
+
+
+--- end of page=116 ---
+
 **2** From the Fusion menu, choose Import > PSD. Then, navigate to the DR20 Fusion VFX
 
 Training Media folder > Graphics, and import the **PIZZA SIGN.psd** file.
@@ -4859,6 +5327,10 @@ which provides access to the individual layers from the Inspector.
 
 **Lesson 4 Replacing Signs and Screens** **97**
 
+
+
+
+--- end of page=117 ---
 
 This photoshop image is 1920 x 1080 resolution and includes three layers. One layer is
 
@@ -4889,6 +5361,10 @@ However, with some blending you can make it appear much more realistic.
 **Lesson 4 Replacing Signs and Screens** **98**
 
 
+
+
+--- end of page=118 ---
+
 **6** In the Inspector, set the Apply Mode to Soft Light.
 
 
@@ -4912,6 +5388,10 @@ slider until the logo appears less diffused.
 
 **Lesson 4 Replacing Signs and Screens** **99**
 
+
+
+
+--- end of page=119 ---
 
 Although it’s looking much better, the edges of the graphic have become a bit ragged.
 
@@ -4939,8 +5419,16 @@ actually painted on the side of the van.
 **Lesson 4 Replacing Signs and Screens** **100**
 
 
+
+
+--- end of page=120 ---
+
 **Lesson 4 Replacing Signs and Screens** **101**
 
+
+
+
+--- end of page=121 ---
 
 ## **Combining Mattes and Images**
 
@@ -4966,6 +5454,10 @@ them automatically.
 
 **Lesson 4 Replacing Signs and Screens** **102**
 
+
+
+
+--- end of page=122 ---
 
 You now have a matte, but you have nowhere to connect it into the node tree. None of
 
@@ -5017,6 +5509,10 @@ reverse this operation.
 **Lesson 4 Replacing Signs and Screens** **103**
 
 
+
+
+--- end of page=123 ---
+
 **7** With the Polygon node selected, in the Inspector, click the Invert button.
 
 
@@ -5050,6 +5546,10 @@ image or matte, thereby saving lots of time compared to rotoscoping objects.
 
 **Lesson 4 Replacing Signs and Screens** **104**
 
+
+
+
+--- end of page=124 ---
 
 **3** Connect the output of the Matte Control to the yellow input of the Planar Transform.
 
@@ -5093,6 +5593,10 @@ cleanup areas to finish this shot.
 **Lesson 4 Replacing Signs and Screens** **105**
 
 
+
+
+--- end of page=125 ---
+
 ## **Finalizing the Composite**
 
 If you look carefully at later frames (such as frame 90), you’ll see a clear shift in the
@@ -5124,6 +5628,10 @@ keyframes and interpolating between adjustments.
 
 **Lesson 4 Replacing Signs and Screens** **106**
 
+
+
+
+--- end of page=126 ---
 
 **3** Select the Polygon node and, at the top of the viewer, click the Make Double
 
@@ -5163,6 +5671,10 @@ no motion blur.
 **Lesson 4 Replacing Signs and Screens** **107**
 
 
+
+
+--- end of page=127 ---
+
 **7** With the Planar Transform node selected, in the Inspector, click the Settings tab.
 
 **8** Click the checkbox for Motion blur.
@@ -5189,6 +5701,10 @@ Completed node tree for Lesson 4.
 
 **Lesson 4 Replacing Signs and Screens** **108**
 
+
+
+
+--- end of page=128 ---
 
 ## **Lesson Review**
 
@@ -5224,6 +5740,10 @@ pressed while you paint over the destination.
 **Lesson 4 Replacing Signs and Screens** **109**
 
 
+
+
+--- end of page=129 ---
+
 ##### **Answers**
 
 **1** True. Clicking Set identifies the reference frame for the planar tracker.
@@ -5249,6 +5769,10 @@ you begin painting over the destination.
 
 **Lesson 4 Replacing Signs and Screens** **110**
 
+
+
+
+--- end of page=130 ---
 
 ### Lesson 5
 # Compositing Green‑Screen Content
@@ -5296,6 +5820,10 @@ Color Page  134
 Lesson Review 137
 
 
+
+
+--- end of page=131 ---
+
 The keying process is a procedural method of generating a matte, rather than the
 
 manually drawn mattes you used in previous lessons. The process of compositing with
@@ -5332,6 +5860,10 @@ node trees.
 
 **Lesson 5 Compositing Green‑Screen Content** **112**
 
+
+
+
+--- end of page=132 ---
 
 **1** Open DaVinci Resolve and, in the Project Manager, open the **DR20 Fusion VFX**
 
@@ -5372,6 +5904,10 @@ for keying are located in the Tools > Matte category.
 
 **Lesson 5 Compositing Green‑Screen Content** **113**
 
+
+
+
+--- end of page=133 ---
 
 **6** Click the tools disclosure arrow and select the Matte category. Click the Clean Plate
 
@@ -5419,6 +5955,10 @@ _the workflow_ .
 
 **Lesson 5 Compositing Green‑Screen Content** **114**
 
+
+
+
+--- end of page=134 ---
 
 The next step is to remove any errant non-green edge pixels from the cutout with the
 
@@ -5468,6 +6008,10 @@ most of the heavy work with the Clean Plate.
 **Lesson 5 Compositing Green‑Screen Content** **115**
 
 
+
+
+--- end of page=135 ---
+
 TIP The term _chroma key_ represents a specific, simplified process of
 
 extracting a matte based on a range of hue and saturation in an image.
@@ -5513,6 +6057,10 @@ keying, however, it’s best to use one of the viewers to view your matte.
 **Lesson 5 Compositing Green‑Screen Content** **116**
 
 
+
+
+--- end of page=136 ---
+
 **8** Above viewer 1, click the Color Controls button, or click the mouse button in viewer 1
 
 to make it the active window and press the A key.
@@ -5547,6 +6095,10 @@ areas intended to be transparent appear as solid black.
 
 **Lesson 5 Compositing Green‑Screen Content** **117**
 
+
+
+
+--- end of page=137 ---
 
 The Matte tab in the Delta Keyer contains parameters for modifying the density and
 
@@ -5594,6 +6146,10 @@ your foreground subject can be handled using various types of mattes.
 **Lesson 5 Compositing Green‑Screen Content** **118**
 
 
+
+
+--- end of page=138 ---
+
 The next steps are very subtle adjustments using the Clean Foreground and Clean
 
 Background controls. You generally apply these with an extremely light touch because
@@ -5639,6 +6195,10 @@ Plate and Delta Keyer combination is always a useful starting point for any key.
 
 **Lesson 5 Compositing Green‑Screen Content** **119**
 
+
+
+
+--- end of page=139 ---
 
 ## **Rotoscoping Auxiliary Mattes**
 
@@ -5699,6 +6259,10 @@ curve you need.
 **Lesson 5 Compositing Green‑Screen Content** **120**
 
 
+
+
+--- end of page=140 ---
+
 **4** In the upper right corner of viewer 1, click the Single Viewer button and drag down on
 
 the divider line between the transport controls and the toolbar to expand the viewer.
@@ -5728,6 +6292,10 @@ gMatte output to the Delta Keyer node.
 
 **Lesson 5 Compositing Green‑Screen Content** **121**
 
+
+
+
+--- end of page=141 ---
 
 **7** Release the mouse button and, in the Input pop-up list, choose Garbage Matte.
 
@@ -5776,6 +6344,10 @@ points along the B-Spline.
 
 **Lesson 5 Compositing Green‑Screen Content** **122**
 
+
+
+
+--- end of page=142 ---
 
 TIP When animating a spline, you can move the entire shape by clicking the
 
@@ -5846,6 +6418,10 @@ shapes, one for each leg, that will cover up the dark gray holes in your matte.
 **Lesson 5 Compositing Green‑Screen Content** **123**
 
 
+
+
+--- end of page=143 ---
+
 **1** Move to the end of the render range, where you can clearly see the leg on the left
 
 completely in the frame.
@@ -5871,6 +6447,10 @@ it **LegLeft** .
 
 **Lesson 5 Compositing Green‑Screen Content** **124**
 
+
+
+
+--- end of page=144 ---
 
 The MultiPoly node doesn’t auto-animate like the B-Spline node you used earlier
 
@@ -5906,6 +6486,10 @@ and speed.
 **Lesson 5 Compositing Green‑Screen Content** **125**
 
 
+
+
+--- end of page=145 ---
+
 **7** Move the points of the shape to match the leg position, and then move to the start of
 
 the render range and reposition the points again.
@@ -5938,6 +6522,10 @@ roughly outlining the leg on the right.
 **Lesson 5 Compositing Green‑Screen Content** **126**
 
 
+
+
+--- end of page=146 ---
+
 **11** Once again, draw a very rough shape and then use the divide and conquer technique
 
 to adjust the rough shape to fit the leg on the right.
@@ -5959,6 +6547,10 @@ they are needed to better fit the rough shapes to the legs.
 
 **Lesson 5 Compositing Green‑Screen Content** **127**
 
+
+
+
+--- end of page=147 ---
 
 TIP Pressing Shift-S will smooth corners of the selected point, while pressing
 
@@ -6013,6 +6605,10 @@ right now. Using auxiliary mattes is not an admission of a failed key. The use o
 **Lesson 5 Compositing Green‑Screen Content** **128**
 
 
+
+
+--- end of page=148 ---
+
 mattes means that you are being smart about your time and are aware of the entire
 
 process. Use a keyer for what it’s good at: creating soft edges and extracting fine hair
@@ -6055,6 +6651,10 @@ button to open the Keyframe panel.
 **Lesson 5 Compositing Green‑Screen Content** **129**
 
 
+
+
+--- end of page=149 ---
+
 The Keyframes Editor shows all the tracks, including the Background node, which is
 
 currently labeled MediaIn1. The Background node clip begins at frame 231 which is the
@@ -6096,6 +6696,10 @@ existing connection.
 
 **Lesson 5 Compositing Green‑Screen Content** **130**
 
+
+
+
+--- end of page=150 ---
 
 **13** Select the MediaOut node and press 2 to display it in viewer 2 to see the initial
 
@@ -6141,6 +6745,10 @@ Replace Mode to Source.
 **Lesson 5 Compositing Green‑Screen Content** **131**
 
 
+
+
+--- end of page=151 ---
+
 **2** At the bottom of the Inspector, set the Replace Mode dropdown menu to Source.
 
 
@@ -6166,6 +6774,10 @@ and shadows, as well as spill suppression.
 
 **Lesson 5 Compositing Green‑Screen Content** **132**
 
+
+
+
+--- end of page=152 ---
 
 **4** At the top of the Color Corrector Inspector, choose Suppress from the menu.
 
@@ -6193,6 +6805,10 @@ image brightness. You can counteract this effect by slightly raising luminance.
 
 **Lesson 5 Compositing Green‑Screen Content** **133**
 
+
+
+
+--- end of page=153 ---
 
 **6** With the Color Corrector node selected in the Node Editor, press Command-P (macOS)
 
@@ -6256,6 +6872,10 @@ sending multiple mattes.
 **Lesson 5 Compositing Green‑Screen Content** **134**
 
 
+
+
+--- end of page=154 ---
+
 ##### **Setting Up the Color Page**
 
 Most of the time that you use nodes in the color page, you are processing color data.
@@ -6295,6 +6915,10 @@ limited by the mask from the Fusion page.
 **Lesson 5 Compositing Green‑Screen Content** **135**
 
 
+
+
+--- end of page=155 ---
+
 **4** Using the color page Gamma color wheel, lower the master wheel, push the color
 
 toward yellow/green, and lower the overall saturation to better match the guitarist
@@ -6326,6 +6950,10 @@ Completed node tree for Lesson 5.
 **Lesson 5 Compositing Green‑Screen Content** **136**
 
 
+
+
+--- end of page=156 ---
+
 ## **Lesson Review**
 
 **1** In the Fusion page, what is the primary tool for pulling a green-screen key?
@@ -6350,6 +6978,10 @@ to the color page.
 **Lesson 5 Compositing Green‑Screen Content** **137**
 
 
+
+
+--- end of page=157 ---
+
 ##### **Answers**
 
 **1** The Delta Keyer is the primary tool for green-screen keying.
@@ -6373,6 +7005,10 @@ the matte.
 
 **Lesson 5 Compositing Green‑Screen Content** **138**
 
+
+
+
+--- end of page=158 ---
 
 ### Lesson 6
 # Addendum: Creating Title Animations
@@ -6449,6 +7085,10 @@ Saving a Template 163
 Lesson Review 167
 
 
+
+
+--- end of page=159 ---
+
 In this lesson, you’ll create different versions of an animated lower third and then save it as
 
 a template that you can reuse directly in the edit page or cut page.
@@ -6479,6 +7119,10 @@ Project Archive.
 **Lesson 6 Addendum: Creating Title Animations** **140**
 
 
+
+
+--- end of page=160 ---
+
 **2** Navigate to the R20 Fusion Training Media folder you downloaded at the start of this
 
 book and restore the **DR20 Fusion Animation.dra** project. Open the project and,
@@ -6508,6 +7152,10 @@ we’ll use in our template.
 **Lesson 6 Addendum: Creating Title Animations** **141**
 
 
+
+
+--- end of page=161 ---
+
 **6** Set the font to Open Sans and set the font typeface to Extrabold.
 
 
@@ -6536,6 +7184,10 @@ position the person’s name as a lower third title.
 **Lesson 6 Addendum: Creating Title Animations** **142**
 
 
+
+
+--- end of page=162 ---
+
 **10** In the Inspector, drag over the Center X and Y fields to move the text to the left lower
 
 third of the frame.
@@ -6560,6 +7212,10 @@ color, you can convert the fill type to a gradient.
 
 **Lesson 6 Addendum: Creating Title Animations** **143**
 
+
+
+
+--- end of page=163 ---
 
 In the gradient bar, you can assign the various colors that fill the text. The first white
 
@@ -6595,6 +7251,10 @@ so the gradient travels horizontally across each letter.
 
 **Lesson 6 Addendum: Creating Title Animations** **144**
 
+
+
+
+--- end of page=164 ---
 
 **16** From the Mapping Level menu, choose Line so the gradient is spread across the entire
 
@@ -6650,6 +7310,10 @@ merged. The original Template is connected to the background input on the Merge,
 **Lesson 6 Addendum: Creating Title Animations** **145**
 
 
+
+
+--- end of page=165 ---
+
 and the new Template node is connected to the foreground input. Rearrange the
 
 nodes so that Template_1 appears above Merge1.
@@ -6696,6 +7360,10 @@ text below the FULL NAME text.
 **Lesson 6 Addendum: Creating Title Animations** **146**
 
 
+
+
+--- end of page=166 ---
+
 **8** At the top of the Inspector, click the Shading tab and click Solid for the fill type. Then
 
 select a dark gray color.
@@ -6731,6 +7399,10 @@ banner background.
 **Lesson 6 Addendum: Creating Title Animations** **147**
 
 
+
+
+--- end of page=167 ---
+
 **2** Press 2 to see the default black color in the viewer.
 
 
@@ -6755,6 +7427,10 @@ color swatch.
 **Lesson 6 Addendum: Creating Title Animations** **148**
 
 
+
+
+--- end of page=168 ---
+
 **5** Select the far-right color stop on the gradient bar and assign a creamy yellow color
 
 from the color swatch.
@@ -6776,6 +7452,10 @@ centered in the frame.
 
 **Lesson 6 Addendum: Creating Title Animations** **149**
 
+
+
+
+--- end of page=169 ---
 
 **8** Drag the corner radius slider to 1.0 to create a rounded pill shape.
 
@@ -6811,6 +7491,10 @@ With the banner in place, we can now start our animation.
 
 **Lesson 6 Addendum: Creating Title Animations** **150**
 
+
+
+
+--- end of page=170 ---
 
 ## **Revealing Text with Mattes**
 
@@ -6857,6 +7541,10 @@ slides into place.
 **Lesson 6 Addendum: Creating Title Animations** **151**
 
 
+
+
+--- end of page=171 ---
+
 **3** Move to the start of the render range in the timeline.
 
 **4** Select the TITLE node and, in the Inspector, click the Layout tab.
@@ -6892,6 +7580,10 @@ straightforward setup.
 
 **Lesson 6 Addendum: Creating Title Animations** **152**
 
+
+
+
+--- end of page=172 ---
 
 ## **Animating with the Follower**
 
@@ -6947,6 +7639,10 @@ section in the correct tab—in this case, the Modifiers tab.
 **Lesson 6 Addendum: Creating Title Animations** **153**
 
 
+
+
+--- end of page=173 ---
+
 **4** In the Follower section of the Inspector, click the Transform tab.
 
 
@@ -6974,6 +7670,10 @@ follower controls.
 
 **Lesson 6 Addendum: Creating Title Animations** **154**
 
+
+
+
+--- end of page=174 ---
 
 **8** Drag the Y Offset value left to around -0.2.
 
@@ -7016,6 +7716,10 @@ apply the delay again. In doing so, you’ll keep your sanity intact.
 
 **Lesson 6 Addendum: Creating Title Animations** **155**
 
+
+
+
+--- end of page=175 ---
 
 **12** Play the animation to review it and then stop playback.
 
@@ -7072,6 +7776,10 @@ minutes, you can see why this modifier is a fantastic tool for motion graphics.
 **Lesson 6 Addendum: Creating Title Animations** **156**
 
 
+
+
+--- end of page=176 ---
+
 ## **Adjusting Keyframe Timing**
 
 The Fusion page has incredible Keyframe and Spline Editor tools for refining animation.
@@ -7118,6 +7826,10 @@ view all nodes or only nodes with keyframes applied.
 **Lesson 6 Addendum: Creating Title Animations** **157**
 
 
+
+
+--- end of page=177 ---
+
 **4** From the Sort menu in the upper right corner of the Keyframes Editor, choose
 
 Animated from the bottom of the menu to show only tracks with keyframes applied.
@@ -7150,6 +7862,10 @@ each track.
 
 **Lesson 6 Addendum: Creating Title Animations** **158**
 
+
+
+
+--- end of page=178 ---
 
 TIP When a keyframe is selected in the Keyframes Editor’s timeline, you can
 
@@ -7201,6 +7917,10 @@ value to move them. Let’s move the TITLE text so it begins 10 frames later.
 **Lesson 6 Addendum: Creating Title Animations** **159**
 
 
+
+
+--- end of page=179 ---
+
 **11** With the keyframe selected, in the lower right of the Keyframes Editor, from the Time
 
 dropdown menu, choose T Offset.
@@ -7229,6 +7949,10 @@ make some interpolation changes to smooth animations.
 
 **Lesson 6 Addendum: Creating Title Animations** **160**
 
+
+
+
+--- end of page=180 ---
 
 **2** From the contextual menu, choose Smooth.
 
@@ -7286,6 +8010,10 @@ outline gradient.
 **Lesson 6 Addendum: Creating Title Animations** **161**
 
 
+
+
+--- end of page=181 ---
+
 **7** Click back on the Version 2 button to return to the updated look.
 
 
@@ -7336,6 +8064,10 @@ Composition 2.
 
 **Lesson 6 Addendum: Creating Title Animations** **162**
 
+
+
+
+--- end of page=182 ---
 
 **3** Select the Merge2 node and, in the Effects Library, choose the Tools: Blur category,
 
@@ -7388,6 +8120,10 @@ nodes into one single node that displays only the parameters you want to be able
 **Lesson 6 Addendum: Creating Title Animations** **163**
 
 
+
+
+--- end of page=183 ---
+
 The order you select the nodes is the order they appear in the macro list, making it
 
 easier to place the most important nodes at the top of the list.
@@ -7415,6 +8151,10 @@ for changing the text and size.
 
 **Lesson 6 Addendum: Creating Title Animations** **164**
 
+
+
+
+--- end of page=184 ---
 
 **7** Click the checkbox to the right of the StyledText field, and then replace the Styled Text
 
@@ -7470,6 +8210,10 @@ This location saves the template so it will show up in the edit page Effects Lib
 **Lesson 6 Addendum: Creating Title Animations** **165**
 
 
+
+
+--- end of page=185 ---
+
 **14** Open the **DR20 Fusion Animation** project and switch to the edit page.
 
 **15** In the Effects Library, select the Titles category and scroll down to locate the 2D
@@ -7500,6 +8244,10 @@ as a template that can be accessed in the edit page.
 **Lesson 6 Addendum: Creating Title Animations** **166**
 
 
+
+
+--- end of page=186 ---
+
 ## **Lesson Review**
 
 **1** True or False? Timeline versions save only the appearance of text.
@@ -7522,6 +8270,10 @@ save the settings for any node connected to the selected node.
 **Lesson 6 Addendum: Creating Title Animations** **167**
 
 
+
+
+--- end of page=187 ---
+
 ##### **Answers**
 
 **1** False. Timeline versions save the entire composition in its current state.
@@ -7541,6 +8293,10 @@ selected node.
 
 **Lesson 6 Addendum: Creating Title Animations** **168**
 
+
+
+
+--- end of page=188 ---
 
 ### Lesson 7
 # Addendum: Animating with Keyframes and Modifiers
@@ -7606,6 +8362,10 @@ Customizing Motion Blur 189
 Lesson Review 191
 
 
+
+
+--- end of page=189 ---
+
 The motion design you’ll create in this lesson borrows a lot from major Hollywood movies.
 
 You will create a vintage travel map look, complete with a plane and animated travel line.
@@ -7650,6 +8410,10 @@ the timeline’s resolution.
 
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **170**
 
+
+
+
+--- end of page=190 ---
 
 **2** Click the Fusion page tab or press Shift-5.
 
@@ -7698,6 +8462,10 @@ Node Editor.
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **171**
 
 
+
+
+--- end of page=191 ---
+
 **3** With the MediaIn2 node selected, press 2 to display it in viewer 2, then press F2, and
 
 rename the node **BIPLANE** .
@@ -7724,6 +8492,10 @@ within the vintage map background.
 
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **172**
 
+
+
+
+--- end of page=192 ---
 
 **7** Select the BIPLANE node and, in the toolbar, click the Transform tool.
 
@@ -7762,6 +8534,10 @@ frame. You’ll use this space to position the plane out of the frame.
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **173**
 
 
+
+
+--- end of page=193 ---
+
 **11** Using the plane’s center control in the viewer, drag the plane offscreen left, just off the
 
 coast of Mexico.
@@ -7792,6 +8568,10 @@ As you drag the plane, a line representing the motion path is drawn in the viewe
 
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **174**
 
+
+
+
+--- end of page=194 ---
 
 **16** Finally, move to frame 100 and drag the plane offscreen, somewhere near
 
@@ -7835,6 +8615,10 @@ You can use that path modifier to drive the animation of other elements.
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **175**
 
 
+
+
+--- end of page=195 ---
+
 ## **Auto-Orienting Objects**
 
 This animation would be better if the nose of the plane followed the direction of the plane’s
@@ -7874,6 +8658,10 @@ along the path.
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **176**
 
 
+
+
+--- end of page=196 ---
+
 ## **Straightening Out Alpha Channels**
 
 To better integrate the plane with the map, let’s give the plane a more weathered,
@@ -7906,6 +8694,10 @@ the root cause of this behavior and its solution are the same.
 
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **177**
 
+
+
+
+--- end of page=197 ---
 
 **3** In the Inspector, click the Options tab and then select the Pre-Divide/Post
 Multiply checkbox.
@@ -7958,6 +8750,10 @@ drawing tool: you click to add control points that create a _painted_ stroke.
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **178**
 
 
+
+
+--- end of page=198 ---
+
 For your plane path, you’ll only need to add two points to create a line of any length,
 
 anywhere on the screen. Once you have a polyline stroke, you can modify it to use the
@@ -7983,6 +8779,10 @@ created the keyframes. You’ll need to make it available to all other tools.
 
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **179**
 
+
+
+
+--- end of page=199 ---
 
 The Modifiers tab shows the Path 1 that you created when you keyframed the plane.
 
@@ -8025,6 +8825,10 @@ Once you have a paint stroke, any changes are made in the Modifiers tab.
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **180**
 
 
+
+
+--- end of page=200 ---
+
 **9** At the top of the Modifiers tab in the Inspector, expand the brush controls (you might
 
 need to double-click the PolylineStroke1 section to expand it first). Change the Size to
@@ -8048,6 +8852,10 @@ scale the slider’s range to allow for the new larger value.
 
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **181**
 
+
+
+
+--- end of page=201 ---
 
 **12** In the spacing numeric field, enter **1.5** and press Enter.
 
@@ -8082,6 +8890,10 @@ sliders. Dragging the End slider changes the end of the paint stroke, creating a
 
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **182**
 
+
+
+
+--- end of page=202 ---
 
 paint-on effect. You can animate this control by connecting it to the path’s
 
@@ -8154,6 +8966,10 @@ different nodes.
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **183**
 
 
+
+
+--- end of page=203 ---
+
 **8** In the Node Editor, select the Paint node and then select the Modifiers tab in
 
 the Inspector.
@@ -8198,6 +9014,10 @@ plane’s displacement.
 
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **184**
 
+
+
+
+--- end of page=204 ---
 
 **13** Play the composition to see the offset paint stroke.
 
@@ -8253,6 +9073,10 @@ parameters.
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **185**
 
 
+
+
+--- end of page=205 ---
+
 **3** In the upper right corner of the Spline Editor, click the Zoom to Fit button to fill the
 
 graph area with the selected displacement spline.
@@ -8288,6 +9112,10 @@ the rate of change on specific keyframes.
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **186**
 
 
+
+
+--- end of page=206 ---
+
 ## **Applying Random** **Animation Modifiers**
 
 Modifiers can do so many amazing things for your animations, like converting splines to
@@ -8322,6 +9150,10 @@ results in the viewer.
 
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **187**
 
+
+
+
+--- end of page=207 ---
 
 **4** Play the composition to review the newly added filter.
 
@@ -8370,6 +9202,10 @@ dragging the Focal Factor slider.
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **188**
 
 
+
+
+--- end of page=208 ---
+
 Other controls—such as strength, wobble, and speed—control how far the focal factor
 
 parameter varies from the initial value, setting how erratic the motion is and the speed
@@ -8408,6 +9244,10 @@ connected to the biplane.
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **189**
 
 
+
+
+--- end of page=209 ---
+
 **3** In the Inspector, select Tools, and then click the Settings tab and select the Motion
 
 Blur checkbox.
@@ -8433,6 +9273,10 @@ to having the shutter in a camera open for an exposure of one whole frame.
 
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **190**
 
+
+
+
+--- end of page=210 ---
 
 TIP Right-clicking to the right or left of the transport controls allows you to
 
@@ -8481,6 +9325,10 @@ motion path.
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **191**
 
 
+
+
+--- end of page=211 ---
+
 ##### **Answers**
 
 **1** False. You can connect the output of a MediaIn node directly to the input of a
@@ -8504,6 +9352,10 @@ parameter and choose Connect To > Path > Heading.
 
 **Lesson 7 Addendum: Animating with Keyframes and Modifiers** **192**
 
+
+
+
+--- end of page=212 ---
 
 ## **Index**
 
@@ -8634,6 +9486,10 @@ _chroma subsampling_
 
 **Index** **193**
 
+
+
+
+--- end of page=213 ---
 
 Clean Background slider, _119_ .
 _See also_ _backgrounds_
@@ -8782,6 +9638,10 @@ _See also_ _viewers_
 **Index** **194**
 
 
+
+
+--- end of page=214 ---
+
 **E**
 
 edges, smoothing, _73_
@@ -8929,6 +9789,10 @@ filling viewer with, _69_
 **Index** **195**
 
 
+
+
+--- end of page=215 ---
+
 images ( _continued_ )
 fitting into viewer, _5_
 layering over backgrounds, _10_
@@ -9059,6 +9923,10 @@ masks, working with, _20–22_
 
 **Index** **196**
 
+
+
+
+--- end of page=216 ---
 
 match moves, _32_
 
@@ -9223,6 +10091,10 @@ nudging clips, _50–53_
 **Index** **197**
 
 
+
+
+--- end of page=217 ---
+
 **O**
 
 objects, auto-orienting, _176_
@@ -9372,6 +10244,10 @@ Restore Project Archive, _140_
 **Index** **198**
 
 
+
+
+--- end of page=218 ---
+
 RGB images, combining mattes
 with, _75–78_
 
@@ -9505,6 +10381,10 @@ timeline tracks, centering, _129_
 
 **Index** **199**
 
+
+
+
+--- end of page=219 ---
 
 timeline versions, _162–163_
 
@@ -9655,8 +10535,16 @@ in Node Editor, _4_
 **Index** **200**
 
 
+
+
+--- end of page=220 ---
+
 **This page is intentionally left blank ﻿** **201**
 
+
+
+
+--- end of page=221 ---
 
 The Fusion page in DaVinci Resolve 20 features hundreds of
 advanced tools for visual effects compositing. This official
@@ -9718,4 +10606,8 @@ and tricks that will transform how you work!
 
 **Create Believable Split-Screen Shots**
 
+
+
+
+--- end of page=222 ---
 

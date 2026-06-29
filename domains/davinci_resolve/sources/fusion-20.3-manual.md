@@ -1274,6 +1274,10 @@
 **Leading the Creative Video Revolution**
 
 
+
+
+--- end of page=0 ---
+
 #### Welcome
 
 Welcome to Fusion for Mac, Linux and Windows!
@@ -1320,6 +1324,10 @@ CEO Blackmagic Design
 
 **2**
 
+
+
+
+--- end of page=1 ---
 
 #### **Contents**
 
@@ -1379,6 +1387,10 @@ CEO Blackmagic Design
 
 Contents **3**
 
+
+
+
+--- end of page=2 ---
 
 **3D Compositing**
 
@@ -1448,6 +1460,10 @@ Contents **3**
 Contents **4**
 
 
+
+
+--- end of page=3 ---
+
 53 Paint Node���������������������������������������������������������������������������������������������������������������������������������������������������������������� 1398
 
 54 Particle Nodes���������������������������������������������������������������������������������������������������������������������������������������������������������� 1407
@@ -1485,6 +1501,10 @@ Contents
 **5**
 
 
+
+
+--- end of page=4 ---
+
 ## Fusion Fundamentals
 
 CONTENTS
@@ -1521,6 +1541,10 @@ CONTENTS
 15 Preferences���������������������������������������������������������������������������������������������������������������������������������������������� 369
 
 
+
+
+--- end of page=5 ---
+
 #### **Chapter 1**
 ### Introduction to Compositing in Fusion
 
@@ -1549,6 +1573,10 @@ How Hard Will This Be to Learn?����������������
 
 Fusion Fundamentals | Chapter 1 Introduction to Compositing in Fusion **7**
 
+
+
+
+--- end of page=6 ---
 
 #### **What Is Fusion?**
 
@@ -1586,6 +1614,10 @@ the Timeline to show that clip has a composition applied to it.
 
 Fusion Fundamentals | Chapter 1 Introduction to Compositing in Fusion **8**
 
+
+
+
+--- end of page=7 ---
 
 Clips with Fusion page compositions have a
 Fusion badge to the right of the name.
@@ -1637,6 +1669,10 @@ better suited to the Fusion page.
 Fusion Fundamentals | Chapter 1 Introduction to Compositing in Fusion **9**
 
 
+
+
+--- end of page=8 ---
+
 ###### **The Fusion Studio Stand-Alone Application**
 
 Creating visual effects with the stand-alone Fusion Studio software begins with opening Fusion,
@@ -1686,6 +1722,10 @@ abstract particle effects for motion graphics.
 Fusion Fundamentals | Chapter 1 Introduction to Compositing in Fusion **10**
 
 
+
+
+--- end of page=9 ---
+
 A 3D particle system, also created entirely within Fusion
 
 
@@ -1712,6 +1752,10 @@ problems, and flying multi-layered motion graphics animations through your progr
 Fusion Fundamentals | Chapter 1 Introduction to Compositing in Fusion **11**
 
 
+
+
+--- end of page=10 ---
+
 ###### **How Hard Will This Be to Learn?**
 
 That depends on what you want to do, but honestly it’s not so bad with this PDF at your side, helping
@@ -1728,6 +1772,10 @@ on understanding the central operational concept of compositing in Fusion.
 
 Fusion Fundamentals | Chapter 1 Introduction to Compositing in Fusion **12**
 
+
+
+
+--- end of page=11 ---
 
 #### **Chapter 2**
 ### Exploring the Fusion Interface
@@ -1785,6 +1833,10 @@ The Fusion RAM Cache for Playback����������������
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **13**
 
+
+
+
+--- end of page=12 ---
 
 **Toolbar** ���������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������� 34
 
@@ -1872,6 +1924,10 @@ Fusion Studio Floating Frame�����������������
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **14**
 
 
+
+
+--- end of page=13 ---
+
 #### **The Fusion User Interface**
 
 If you open up everything at once, Fusion is divided into four principal regions designed to help
@@ -1894,6 +1950,10 @@ A simplified set of Fusion controls for everyday working
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **15**
 
+
+
+
+--- end of page=14 ---
 
 ###### **The Work Area**
 
@@ -1948,6 +2008,10 @@ current composition.
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **16**
 
 
+
+
+--- end of page=15 ---
+
  - **Console (Fusion Studio only):** The Console is a window in which you can see the error, log,
 script, and input messages that may explain something Fusion is trying to do in greater detail. The
 Console is also where you can read FusionScript outputs, or input FusionScripts directly.
@@ -1994,6 +2058,10 @@ The focus indicator shown at the top edge of the Media Pool, shown next to a vie
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **17**
 
 
+
+
+--- end of page=16 ---
+
 #### **Viewers**
 
 The viewer area displays either one or two viewers at the top of the Fusion page, and this is
@@ -2020,6 +2088,10 @@ Loading a 3D node into a viewer switches on a Perspective view
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **18**
 
+
+
+
+--- end of page=17 ---
 
 **TIP:** In Perspective view, you can hold down the middle and right mouse buttons, then drag
 in the viewer to pivot the view around the center of the world. All other methods of navigating
@@ -2092,6 +2164,10 @@ one of them.
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **19**
 
 
+
+
+--- end of page=18 ---
+
 **To load specific nodes into specific viewers:**
 
  - Hover the pointer over a node, and click one of two buttons that appear at the bottom
@@ -2142,6 +2218,10 @@ two buffers, which can be dragged left or right via the handle of the onscreen c
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **20**
 
+
+
+
+--- end of page=19 ---
 
 by dragging anywhere on the dividing line on the onscreen control. Alternatively, you can switch
 between each full-screen buffer to compare them (or to dismiss a split-screen) by pressing Comma
@@ -2207,6 +2287,10 @@ will snap to pixel locations.
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **21**
 
 
+
+
+--- end of page=20 ---
+
 **Smooth Resize:** This option uses a smoother bilinear interpolated resizing method when zooming
 into an image in the viewer; otherwise, scaling uses the nearest neighbor method and shows
 noticeable aliasing artifacts. However, this is more useful when you zoom in at a pixel level since
@@ -2264,6 +2348,10 @@ duration of that clip.
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **22**
 
+
+
+
+--- end of page=21 ---
 
 The Time Ruler displaying ranges for a Fusion clip in the Timeline
 
@@ -2331,6 +2419,10 @@ Range to the extent of the node.
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **23**
 
 
+
+
+--- end of page=22 ---
+
 Render Range
 
 The render range determines the range of frames used for interactive playback, disk caches, and
@@ -2389,6 +2481,10 @@ The Fusion page controls for playback
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **24**
 
 
+
+
+--- end of page=23 ---
+
 Navigation Shortcuts
 
 Many standard transport control keyboard shortcuts you may be familiar with work in Fusion, but some
@@ -2439,6 +2535,10 @@ increment in which to move the playhead.
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **25**
 
+
+
+
+--- end of page=24 ---
 
 Looping Options
 
@@ -2496,6 +2596,10 @@ audio playback.
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **26**
 
+
+
+
+--- end of page=25 ---
 
 ###### **The Current Time Field**
 
@@ -2561,6 +2665,10 @@ Proxy section of the Fusion > Fusion Settings > General panel.
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **27**
 
+
+
+
+--- end of page=26 ---
 
 **Selective Updates**
 
@@ -2628,6 +2736,10 @@ and L to play forward.
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **28**
 
 
+
+
+--- end of page=27 ---
+
 Real-Time Playback Not Guaranteed
 
 Because many of the effects you can create in the Fusion page are processor-intensive, there is
@@ -2673,6 +2785,10 @@ range and render range in Fusion Studio.
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **29**
 
+
+
+
+--- end of page=28 ---
 
 Global Time Fields to the left of the transport controls
 
@@ -2728,6 +2844,10 @@ options, and image-processing update settings.
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **30**
 
+
+
+
+--- end of page=29 ---
 
 **HiQ**
 
@@ -2790,6 +2910,10 @@ The options are also available in the Fusion Preferences General panel.
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **31**
 
 
+
+
+--- end of page=30 ---
+
 ###### **Changing the Time Display Format**
 
 By default, all time fields and markers in Fusion count in frames, but you can also set the time display
@@ -2849,6 +2973,10 @@ located in the DaVinci Resolve Preferences Memory and GPU panel.
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **32**
 
 
+
+
+--- end of page=31 ---
+
 **Limit Fusion Memory Cache To:** This slider sets the maximum amount of RAM that Fusion can
 access for caching. It is a subset of the RAM allocated to DaVinci Resolve. You can assign a
 maximum of 75% to Fusion from DaVinci Resolve’s total RAM allocation. When not using the
@@ -2899,6 +3027,10 @@ different quality or proxy setting are being preserved.
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **33**
 
+
+
+
+--- end of page=32 ---
 
 There’s one exception to this, however. When you cache frames at the High Quality setting,
 and you then turn off High Quality, the green frames won’t turn red. Instead, the High Quality
@@ -2958,6 +3090,10 @@ common operations you’ll use.
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **34**
 
+
+
+
+--- end of page=33 ---
 
 ###### **Customizing the Toolbar**
 
@@ -3044,6 +3180,10 @@ Fusion’s default toolbar.
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **35**
 
 
+
+
+--- end of page=34 ---
+
 **TIP:** Adding and deleting tools from a custom toolbar is not undoable. If you are creating a
 complex toolset, make a new custom toolbar based on your current toolbar in between major
 changes and work off that. That way if you make an error, you can revert back to the last
@@ -3078,6 +3218,10 @@ then new nodes are added as disconnected from anything else.
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **36**
 
 
+
+
+--- end of page=35 ---
+
 ###### **Removing Nodes from Your Composition**
 
 Removing nodes is as simple as selecting one or more nodes, and then pressing the Delete or
@@ -3094,6 +3238,10 @@ displays the same name right over the node.
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **37**
 
+
+
+
+--- end of page=36 ---
 
 ###### **Node Editing Essentials**
 
@@ -3130,6 +3278,10 @@ Nodes can be oriented in any direction; the input arrows let you follow the flow
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **38**
 
+
+
+
+--- end of page=37 ---
 
 ###### **Navigating the Node Editor**
 
@@ -3170,6 +3322,10 @@ contextual menu.
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **39**
 
 
+
+
+--- end of page=38 ---
+
 ###### **Vertical Node Editor Layouts**
 
 Alternative Node View Layout presets located in the Fusion page allow for positioning the Node Editor
@@ -3201,6 +3357,10 @@ Frame to position the Node Editor wherever you like.
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **40**
 
 
+
+
+--- end of page=39 ---
+
 ###### **Keeping Organized**
 
 As you work, it’s important to keep the node trees that you create tidy to facilitate a clear
@@ -3231,6 +3391,10 @@ A notification that there’s a message in the Console
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **41**
 
 
+
+
+--- end of page=40 ---
+
 #### **Effects Library**
 
 The Effects Library in Fusion shows all the nodes and effects available in Fusion, including thirdparty OFX plugins, if installed. If you are using DaVinci Resolve, Resolve FX also appear in the OFX
@@ -3260,6 +3424,10 @@ the UI toolbar.
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **42**
 
+
+
+
+--- end of page=41 ---
 
 #### **The Inspector**
 
@@ -3302,6 +3470,10 @@ Common Inspector controls
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **43**
 
+
+
+
+--- end of page=42 ---
 
 **Set Color:** A pop-up menu that lets you assign one of 16 colors to a node, overriding a
 node’s own color.
@@ -3347,6 +3519,10 @@ The Keyframes Editor is used to adjust the timing of clips, effects, and keyfram
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **44**
 
+
+
+
+--- end of page=43 ---
 
 ###### **Keyframes Editor Control Summary**
 
@@ -3412,6 +3588,10 @@ a timeline.
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **45**
 
 
+
+
+--- end of page=44 ---
+
 ###### **Adjusting Keyframe Timings**
 
 When you’ve animated an effect by adding keyframes to a parameter in the Inspector, the Keyframes
@@ -3475,6 +3655,10 @@ Time stretching keyframes
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **46**
 
 
+
+
+--- end of page=45 ---
+
 The Keyframe Spreadsheet
 
 If you turn on the Spreadsheet and then click on the name of a layer in the keyframe track, the numeric
@@ -3506,6 +3690,10 @@ Parameter list at left, Graph Editor, and toolbar.
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **47**
 
+
+
+
+--- end of page=46 ---
 
 ###### **Spline Editor Control Summary**
 
@@ -3587,6 +3775,10 @@ but the following overview will get you started using this tool for creating and
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **48**
 
 
+
+
+--- end of page=47 ---
+
 ###### **Essential Spline Editing Tools and Modes**
 
 The Spline Editor toolbar at the bottom contains a mix of control point interpolation buttons, Spline
@@ -3652,6 +3844,10 @@ steadily increases or decreases with each subsequent loop.
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **49**
 
 
+
+
+--- end of page=48 ---
+
 Spline Editing Tools
 
 The next five buttons provide specialized Spline editing tools.
@@ -3700,6 +3896,10 @@ The Thumbnail timeline lets you navigate the Timeline and manage versions of com
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **50**
 
+
+
+
+--- end of page=49 ---
 
 **To open another clip:**
 
@@ -3757,6 +3957,10 @@ nodes to connect them all.
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **51**
 
 
+
+
+--- end of page=50 ---
+
 ###### **Importing Media Into the Media Pool on the Fusion Page**
 
 If you find yourself in the Fusion page and you need to quickly import a few clips for immediate use,
@@ -3787,6 +3991,10 @@ _20.3 Reference Manual._
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **52**
 
+
+
+
+--- end of page=51 ---
 
 #### **Bins in Fusion Studio**
 
@@ -3820,6 +4028,10 @@ The Bin list sidebar
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **53**
 
+
+
+
+--- end of page=52 ---
 
 The Bin list organizes content into bins or folders using a hierarchical List view. These folders can be
 organized to suit your workflow, but standard folders are provided for Clips, Compositions, Favorites,
@@ -3856,6 +4068,10 @@ timeline.
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **54**
 
 
+
+
+--- end of page=53 ---
+
 **Icon/List view:** This button toggles between showing contents of a bin in thumbnail view
 and list view.
 
@@ -3884,6 +4100,10 @@ For more information on Bins, _see Chapter 13, “Bins,”_ [in the Fusion Refer
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **55**
 
+
+
+
+--- end of page=54 ---
 
 #### **The Console**
 
@@ -3918,6 +4138,10 @@ executed immediately. For more information on scripting, see the Fusion Scriptin
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **56**
 
 
+
+
+--- end of page=55 ---
+
 #### **Customizing Fusion**
 
 This section explains how you can customize Fusion to accommodate whatever workflow
@@ -3950,6 +4174,10 @@ Choose Workspace > Layout Presets > Save Layout Presets.
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **57**
 
+
+
+
+--- end of page=56 ---
 
 **In Fusion Studio, configure and resize the panels you want displayed and then:**
 
@@ -3997,6 +4225,10 @@ greater flexibility.
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **58**
 
 
+
+
+--- end of page=57 ---
+
 #### **Fusion Keyboard Remapping**
 
 When using the Fusion page, functions and tools can be mapped to hot keys on your keyboard by
@@ -4023,6 +4255,10 @@ The Fusion Studio Hotkey Manager window
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **59**
 
+
+
+
+--- end of page=58 ---
 
 For instance, if you want to add a shortcut for a specific node:
 
@@ -4065,6 +4301,10 @@ Choose Edit > Redo (Shift-Command-Z) to redo to the next change.
 
 Fusion Fundamentals | Chapter 2 Exploring the Fusion Interface **60**
 
+
+
+
+--- end of page=59 ---
 
 #### **Chapter 3**
 ### Getting Clips into Fusion
@@ -4127,6 +4367,10 @@ Loading Audio WAV Files in Fusion Studio�������������
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **61**
 
 
+
+
+--- end of page=60 ---
+
 #### **Preparing Compositions in the Fusion Page**
 
 Ordinarily, clips come into the Fusion page from the Edit or Cut page Timeline as either a single clip,
@@ -4167,6 +4411,10 @@ resolution of the source clip, not the Timeline resolution.
 
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **62**
 
+
+
+
+--- end of page=61 ---
 
 Once you’ve finished, simply go back to the Edit or Cut page and continue editing, because the
 entire Fusion composition is encapsulated within that clip, similarly to how grades in the Color page
@@ -4219,6 +4467,10 @@ those clips in the Fusion page Node Editor.
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **63**
 
 
+
+
+--- end of page=62 ---
+
 A stack of clips to use in a composite (Top), and turning that stack into a Fusion clip in the Edit page (Bottom).
 
 
@@ -4234,6 +4486,10 @@ The initial node tree of the three clips we turned into a Fusion clip.
 
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **64**
 
+
+
+
+--- end of page=63 ---
 
 **TIP:** Fusion clips change the working resolution of the individual clips to match the Timeline
 resolution. For instance, if two 4K clips are stacked one on top of the other in an HD Timeline,
@@ -4295,6 +4551,10 @@ on a truck.
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **65**
 
 
+
+
+--- end of page=64 ---
+
 Creating a reference composition by selecting multiple overlapping clips, and
 then Create Referenced Composition from the contextual menu.
 
@@ -4308,6 +4568,10 @@ thumbnail in the Media Pool
 
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **66**
 
+
+
+
+--- end of page=65 ---
 
 Adding Additional Referenced Clips
 
@@ -4326,6 +4590,10 @@ composition to affect the other clips.
 
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **67**
 
+
+
+
+--- end of page=66 ---
 
 Referenced Composition Behaviors and Rules
 
@@ -4397,6 +4665,10 @@ generators, and other effects you require.
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **68**
 
 
+
+
+--- end of page=67 ---
+
 ###### **Creating a Fusion Composition Clip in a Bin**
 
 You can create an empty Fusion Composition clip in any bin in the Media Pool without creating a
@@ -4453,6 +4725,10 @@ A Noise Dissolve Transition opened in the Fusion page.
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **69**
 
 
+
+
+--- end of page=68 ---
+
 To learn about creating custom Fusion Transitions that appear in the Effects Library, _see_
 _Chapter 6, “Node Groups, Macros, and Fusion Templates,”_ or Chapter 68 in the _[DaVinci](https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion)_
 _[Resolve 20.3 Reference Manual](https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion)_ .
@@ -4482,6 +4758,10 @@ clip’s grade.
 
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **70**
 
+
+
+
+--- end of page=69 ---
 
 Audio with Media Pool Clips
 
@@ -4538,6 +4818,10 @@ can connect the mask node to the MediaIn node’s input, and you’re good to go
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **71**
 
 
+
+
+--- end of page=70 ---
+
 ###### **Inspector Properties of MediaIn Nodes**
 
 Which Inspector options are available for MediaIn nodes of your composition depends on how you
@@ -4579,6 +4863,10 @@ of each of the layers.
 
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **72**
 
+
+
+
+--- end of page=71 ---
 
 Source Color Space
 
@@ -4633,6 +4921,10 @@ The MediaIn Audio tab
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **73**
 
 
+
+
+--- end of page=72 ---
+
 The Audio tab in the MediaIn node is used to select the track for playback, slip the audio timing, and
 reset the audio cache
 
@@ -4672,6 +4964,10 @@ imported from the Media Pool
 
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **74**
 
+
+
+
+--- end of page=73 ---
 
 Below is a list of controls that are added beyond the controls that appear when a clip is added from
 the Edit or Cut page Timeline.
@@ -4735,6 +5031,10 @@ in the Media Pool.
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **75**
 
 
+
+
+--- end of page=74 ---
+
 Loader Node Parameters
 
 The image tab of Loader nodes shares parameters with MediaIn nodes, as described previously in
@@ -4763,6 +5063,10 @@ Inspector and click Browse to choose a name and location for the rendered result
 
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **76**
 
+
+
+
+--- end of page=75 ---
 
 When naming the file, you must add the .exr file extension. Fusion sets the output format accordingly.
 A four-digit frame number is automatically added before the filename extension. However, you can
@@ -4807,6 +5111,10 @@ Three compositions opened as tabs in Fusion Studio.
 
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **77**
 
+
+
+
+--- end of page=76 ---
 
 **To create a second new composition:**
 
@@ -4882,6 +5190,10 @@ unreadable to Fusion.
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **78**
 
 
+
+
+--- end of page=77 ---
+
 Importing and Exporting a Composition from DaVinci Resolve
 
 Although the compositions created in DaVinci Resolve’s Fusion page are saved in the DaVinci Resolve
@@ -4952,6 +5264,10 @@ preferences of the currently opened composition.
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **79**
 
 
+
+
+--- end of page=78 ---
+
 **To set up the default Frame Format for new compositions, do the following:**
 
 **1** Choose Fusion Studio > Preferences.
@@ -4973,6 +5289,10 @@ For more information on preferences, _see Chapter 15, “Preferences,”_ or Cha
 
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **80**
 
+
+
+
+--- end of page=79 ---
 
 ###### **Reading Clips into Fusion Studio**
 
@@ -5027,6 +5347,10 @@ For more information about the Loader node, _see Chapter 45, “I/O Nodes,”_ o
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **81**
 
 
+
+
+--- end of page=80 ---
+
 ###### **Aligning Clips in a Fusion Studio Composition**
 
 When you add a clip into a composition, the resulting Loader node is added at frame 0 of the
@@ -5069,6 +5393,10 @@ Reference Manual.
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **82**
 
 
+
+
+--- end of page=81 ---
+
 ###### **Loader Node Inputs**
 
 Loader nodes have one Effects mask input and one output. In the case of the Effects mask input,
@@ -5110,6 +5438,10 @@ disk using the Proxy and Auto Proxy options in the transport controls area.
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **83**
 
 
+
+
+--- end of page=82 ---
+
 The Proxy menu sets the ratio for
 skipping pixels when processing.
 
@@ -5146,6 +5478,10 @@ scale the images so they refer to original resolutions.
 
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **84**
 
+
+
+
+--- end of page=83 ---
 
 #### **File Format Options**
 
@@ -5189,6 +5525,10 @@ Each method is explained below for the Fusion page and Fusion Studio.
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **85**
 
 
+
+
+--- end of page=84 ---
+
 To load all layers individually from a PSD file, with appropriate blend modes, do one of the following:
 
  - In DaVinci Resolve, switch to the Fusion page and choose Fusion > Import > PSD.
@@ -5213,6 +5553,10 @@ select one of the tracks.
 
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **86**
 
+
+
+
+--- end of page=85 ---
 
 ###### **Loading Audio WAV Files in Fusion Studio**
 
@@ -5258,6 +5602,10 @@ over the audio waveform to hear the audio.
 
 Fusion Fundamentals | Chapter 3 Getting Clips into Fusion **87**
 
+
+
+
+--- end of page=86 ---
 
 #### **Chapter 4**
 ### Rendering Using Saver Nodes
@@ -5318,6 +5666,10 @@ Installing Third-Party Plugins on Render Nodes�����������
 
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **88**
 
+
+
+
+--- end of page=87 ---
 
 **Other Uses of Network Rendering** ����������������������������������������������������������������������������������������������������������������������������������������������� 108
 
@@ -5387,6 +5739,10 @@ The Saver node determines the name, format, and location of the rendered files.
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **89**
 
 
+
+
+--- end of page=88 ---
+
 #### **Rendering with the Saver Node**
 
 To begin rendering in Fusion Studio, you must add at least one Saver node to the node tree. Most of
@@ -5411,6 +5767,10 @@ formats. The below example uses the three Savers to export different formats of 
 
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **90**
 
+
+
+
+--- end of page=89 ---
 
 Multiple Saver nodes can be added to create different formats for output.
 
@@ -5437,6 +5797,10 @@ The Saver’s Format tab with controls for QuickTime
 
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **91**
 
+
+
+
+--- end of page=90 ---
 
 If you decide to output an image sequence, a four-digit frame number is automatically added before
 the filename extension. For example, naming your file image_name.exr results in files named
@@ -5475,6 +5839,10 @@ Ensure that the frame range and other parameters are correct and click Start Ren
 
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **92**
 
+
+
+
+--- end of page=91 ---
 
 Saver nodes in the DaVinci Resolve Fusion page
 
@@ -5528,6 +5896,10 @@ the node you’re previewing are rendered.
 
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **93**
 
+
+
+
+--- end of page=92 ---
 
 Size
 
@@ -5584,6 +5956,10 @@ previously used settings.
 
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **94**
 
+
+
+
+--- end of page=93 ---
 
 #### **Setting Up Network** **Rendering in Fusion Studio**
 
@@ -5646,6 +6022,10 @@ on the same subnet, it can automatically find the license server and check out a
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **95**
 
 
+
+
+--- end of page=94 ---
+
 Multi-seat dongles can be combined together to tailor the number of Fusion seats in a larger facility.
 For example, three dongles each licensed for 10 Fusion Studios would serve up 30 licenses. This
 also allows for redundancy. For instance, in the example above, three computers can act as license
@@ -5705,6 +6085,10 @@ should not be replaced with typographer’s, or curly, quotes (“ ”).
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **96**
 
 
+
+
+--- end of page=95 ---
+
 ###### **Configuring the Render Master and Render nodes**
 
 There are two roles played by computers involved in network rendering.
@@ -5739,6 +6123,10 @@ computers a Render Master.
 
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **97**
 
+
+
+
+--- end of page=96 ---
 
 **To set up the Render Master:**
 
@@ -5802,6 +6190,10 @@ Allow Network Renders.
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **98**
 
 
+
+
+--- end of page=97 ---
+
 ###### **Setting Up the Render Manager**
 
 The Render Manager window is used to monitor the progress of rendering. It can be used to reorder,
@@ -5826,6 +6218,10 @@ The Render Manager is used to add Render nodes.
 
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **99**
 
+
+
+
+--- end of page=98 ---
 
 Scanning for Render Nodes
 
@@ -5871,6 +6267,10 @@ nodes by choosing Render Node > Save Render Node List and Load Render Node list 
 
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **100**
 
+
+
+
+--- end of page=99 ---
 
 #### **Submitting Comps to Network Render**
 
@@ -5919,6 +6319,10 @@ comp to the queue for batch rendering over the network.
 
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **101**
 
+
+
+
+--- end of page=100 ---
 
 Removing a Composition from the Queue
 
@@ -5989,6 +6393,10 @@ choose to submit it to other groups in the list.
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **102**
 
 
+
+
+--- end of page=101 ---
+
 **To submit a comp to a group from the Render Settings dialog:**
 
 **1** Click the Render button in the transport controls area.
@@ -6049,6 +6457,10 @@ assigned to each Render node and when they are completed.
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **103**
 
 
+
+
+--- end of page=102 ---
+
 ###### **Using Third-Party Render Managers with Fusion Studio**
 
 You can make use of third-party render manager software to control network rendering. This allows
@@ -6097,6 +6509,10 @@ The following table lists additional command line features.
 
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **104**
 
+
+
+
+--- end of page=103 ---
 
 **Command** **Description**
 
@@ -6151,6 +6567,10 @@ Below are more details about some of these items.
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **105**
 
 
+
+
+--- end of page=104 ---
+
 ###### **Using Relative Paths**
 
 The file paths used to load a composition and its media, and to save the composition’s rendered
@@ -6190,10 +6610,12 @@ media regardless of the actual hard drive name.
 
 
 
-
-
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **106**
 
+
+
+
+--- end of page=105 ---
 
 If your source media’s actual file path uses a subfolder in the same folder as the comp
 file’s folder:
@@ -6240,6 +6662,10 @@ installed will fail to render. Licensed plugins are required on each Render node
 
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **107**
 
+
+
+
+--- end of page=106 ---
 
 #### **Other Uses of Network Rendering**
 
@@ -6291,6 +6717,10 @@ ready to render again, and new frames will be assigned to that Render node.
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **108**
 
 
+
+
+--- end of page=107 ---
+
 This is why it is important to set the Render Master in the network preferences of the Render
 nodes. If the master is not set, the Render node will not know what master to contact when it
 becomes available.
@@ -6336,6 +6766,10 @@ menu and enter the number of seconds you want for the Time Out.
 
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **109**
 
+
+
+
+--- end of page=108 ---
 
 ###### **Heartbeats**
 
@@ -6387,6 +6821,10 @@ compositions with many layers.
 
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **110**
 
+
+
+
+--- end of page=109 ---
 
 #### **Limitations of Render Nodes**
 
@@ -6443,6 +6881,10 @@ a frame, or simply stops responding, it will be recorded here.
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **111**
 
 
+
+
+--- end of page=110 ---
+
 ###### **Check the Composition**
 
 The Render Manager’s Status field in the render log indicates if a composition fails to render. Some
@@ -6493,6 +6935,10 @@ is not functioning and should be examined further.
 
 Fusion Fundamentals | Chapter 4 Rendering Using Saver Nodes **112**
 
+
+
+
+--- end of page=111 ---
 
 #### **Chapter 5**
 ### Working in the Node Editor
@@ -6558,6 +7004,10 @@ Upstream and Downstream Nodes �����������������
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **113**
 
+
+
+
+--- end of page=112 ---
 
 Disconnecting and Reconnecting Nodes���������������������������������������������������������������������������������������������������������������������������������� 136
 
@@ -6645,6 +7095,10 @@ Adding Saved Settings from the File System�������������
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **114**
 
 
+
+
+--- end of page=113 ---
+
 #### **Learning to Use the Node Editor**
 
 The Node Editor (formerly called the Flow or Flow Editor) is the heart of Fusion’s compositing interface.
@@ -6673,6 +7127,10 @@ The Nodes button in the UI toolbar.
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **115**
 
+
+
+
+--- end of page=114 ---
 
 #### **Navigating within the Node Editor**
 
@@ -6723,6 +7181,10 @@ The Node Navigator.
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **116**
 
+
+
+
+--- end of page=115 ---
 
 **To display or hide the Node Navigator, do one of the following:**
 
@@ -6777,6 +7239,10 @@ Add button.
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **117**
 
 
+
+
+--- end of page=116 ---
+
 **TIP:** You can return the Node Editor to the default scale by right-clicking in the Node Editor
 and choosing Scale > Default Scale or pressing Cmd-1.
 
@@ -6808,6 +7274,10 @@ the name of the bookmark you want to find.
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **118**
 
+
+
+
+--- end of page=117 ---
 
 Changing the Sort Order and Assigning Keyboard Shortcuts
 
@@ -6861,6 +7331,10 @@ node, it won’t automatically connect, because those two nodes cannot be connec
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **119**
 
+
+
+
+--- end of page=118 ---
 
 ###### **Adding, Inserting, and Replacing Nodes Using the Toolbar**
 
@@ -6920,6 +7394,10 @@ Merge will copy the existing center and angle values from the Transform to the M
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **120**
 
 
+
+
+--- end of page=119 ---
+
 ###### **Adding Nodes Quickly Using the Select Tool Window**
 
 The next fastest way of adding or inserting nodes to the Node Editor is using the Select Tool window,
@@ -6962,6 +7440,10 @@ Return to add the second Blur node.
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **121**
 
 
+
+
+--- end of page=120 ---
+
 ###### **Adding Nodes from the Effects Library**
 
 While the toolbar shows many of the most common nodes you’ll be using in any composition, the
@@ -6991,6 +7473,10 @@ within each category.
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **122**
 
+
+
+
+--- end of page=121 ---
 
 The categories are:
 
@@ -7059,6 +7545,10 @@ Editor that you want replaced. When that node is highlighted, drop it.
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **123**
 
 
+
+
+--- end of page=122 ---
+
 Adding, Inserting, and Replacing Templates Using the Effects Library
 
 Adding items from DaVinci Resolve’s Fusion page Templates category is often a bit different.
@@ -7082,6 +7572,10 @@ Adding a LightWrap effect from the “How to” bin of the Templates category of
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **124**
 
+
+
+
+--- end of page=123 ---
 
 ###### **Adding, Inserting, and Replacing** **Nodes Using the Contextual Menu**
 
@@ -7129,6 +7623,10 @@ but you want to save the original nodes just in case you need to redo your work.
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **125**
 
+
+
+
+--- end of page=124 ---
 
 #### **Selecting and Deselecting Nodes**
 
@@ -7182,6 +7680,10 @@ The active node is highlighted orange, while other selected nodes are highlighte
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **126**
 
 
+
+
+--- end of page=125 ---
+
 ###### **Deselecting Nodes**
 
 Deselecting nodes, when necessary, works pretty much as you would expect.
@@ -7213,6 +7715,10 @@ A node tree for doing a simple rotoscoping job.
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **127**
 
+
+
+
+--- end of page=126 ---
 
 As seen in the screenshot above, you’ll want to load the upstream MediaIn or Loader node into a
 viewer while the Polygon node is selected for editing in order to see the full image you’re rotoscoping
@@ -7268,6 +7774,10 @@ consecutive number between 3 and 9.
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **128**
 
 
+
+
+--- end of page=127 ---
+
 The more viewers you add, the more you may need help remembering which viewer is
 represented by which View indicator. Positioning the pointer over the View indicator in
 question will display a tooltip with the name of the viewer it represents.
@@ -7313,6 +7823,10 @@ used to create a preview.
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **129**
 
 
+
+
+--- end of page=128 ---
+
 #### **Connecting and Disconnecting Nodes**
 
 Once you’ve started to add nodes to your composition, you need to connect them to perform their
@@ -7349,6 +7863,10 @@ line and dropping it to connect two nodes.
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **130**
 
 
+
+
+--- end of page=129 ---
+
 Dropping Connections on Top of Nodes
 
 To make your life a bit easier, you can also drag a connection line and drop it directly on top of the
@@ -7377,6 +7895,10 @@ Merge3D node. These nodes simply add another input whenever you drop a connectio
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **131**
 
 
+
+
+--- end of page=130 ---
+
 After dragging a connection line and dropping
 it on top of a Merge3D node.
 
@@ -7401,6 +7923,10 @@ another node exposes a node input menu.
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **132**
 
+
+
+
+--- end of page=131 ---
 
 Automatically and Manually Attaching Mask Nodes
 
@@ -7439,6 +7965,10 @@ Fusion Studio.
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **133**
 
 
+
+
+--- end of page=132 ---
+
 Adding a Defocus effect first, then the TV node second.
 
 
@@ -7451,6 +7981,10 @@ operations you apply makes a big difference.
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **134**
 
+
+
+
+--- end of page=133 ---
 
 Adding a TV effect first, and a Defocus second.
 
@@ -7470,6 +8004,10 @@ clearly represented via the node tree, it’s easy to see everything that’s ha
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **135**
 
+
+
+
+--- end of page=134 ---
 
 The output of five Text nodes being combined using Merge
 nodes is modified by a single Transform node.
@@ -7506,6 +8044,10 @@ connection. The half your pointer is over is highlighted in blue.
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **136**
 
 
+
+
+--- end of page=135 ---
+
 **To disconnect two nodes, do one of the following:**
 
  - Click once on the input half of the connection between two nodes.
@@ -7541,6 +8083,10 @@ what kinds of inputs are connected.
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **137**
 
 
+
+
+--- end of page=136 ---
+
 ###### **Branching**
 
 A node’s input can only have one connection attached to it. However, a tool’s output can be
@@ -7565,6 +8111,10 @@ kinds of inputs, used separately.
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **138**
 
+
+
+
+--- end of page=137 ---
 
 #### **Connecting Merge Nodes**
 
@@ -7614,6 +8164,10 @@ before it.
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **139**
 
 
+
+
+--- end of page=138 ---
+
 ###### **Automatically Creating a Merge Node When Adding Nodes**
 
 There’s a nice shortcut for connecting Merge nodes if you want to connect the incoming clip
@@ -7652,6 +8206,10 @@ and dropping it to create a Merge node composite (bottom).
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **140**
 
 
+
+
+--- end of page=139 ---
+
 #### **Connection Options and Routers**
 
 By default, the Node Editor uses linear connections that are drawn straight between any two
@@ -7685,6 +8243,10 @@ contextual menu.
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **141**
 
 
+
+
+--- end of page=140 ---
+
 ###### **Using Routers to Reshape and Branch Connections**
 
 If you want to force a particular connection to be drawn at an angle to keep your node tree tidy,
@@ -7710,6 +8272,10 @@ A router branching its output to multiple nodes.
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **142**
 
+
+
+
+--- end of page=141 ---
 
 **Methods of using routers:**
 
@@ -7750,6 +8316,10 @@ instead, the inputs change color to indicate you’ve reversed the background (o
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **143**
 
+
+
+
+--- end of page=142 ---
 
 #### **Extracting and Inserting Nodes**
 
@@ -7797,6 +8367,10 @@ with a single drag.
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **144**
 
+
+
+
+--- end of page=143 ---
 
 #### **Cut, Copy, and Paste Nodes**
 
@@ -7858,6 +8432,10 @@ changed using the Defaults panel in the Auto tools section of the Fusion > Fusio
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **145**
 
 
+
+
+--- end of page=144 ---
+
 ###### **Pasting Node Settings**
 
 Instead of pasting a node, you can choose to paste just the parameter settings that you copied from
@@ -7901,6 +8479,10 @@ The same three nodes pasted into a text editor.
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **146**
 
 
+
+
+--- end of page=145 ---
+
 At this point, you have the option of editing the text (if you know what you’re doing), emailing it to
 colleagues, or storing it in a digital notepad of some sort for future use. To use this script in Fusion
 again, you need only copy it and paste it back into the Node Editor.
@@ -7927,6 +8509,10 @@ drop-down menu.
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **147**
 
+
+
+
+--- end of page=146 ---
 
 Using the Layer drop-down in the Viewer to select just the Asteroids layer from a multilayer file for viewing
 
@@ -7957,6 +8543,10 @@ allows you to quickly create perfect masks of any layer in the file.
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **148**
 
+
+
+
+--- end of page=147 ---
 
 Tools with other named inputs (like **Image** ) can show additional layer controls with a
 corresponding name (like **Image Layer** ).
@@ -8012,6 +8602,10 @@ as well as an obvious visual cue in your node tree as to what’s going on.
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **149**
 
 
+
+
+--- end of page=148 ---
+
 ###### **Using Instanced Nodes**
 
 Instanced nodes are nodes that have been created using the Paste Instance command, and
@@ -8058,6 +8652,10 @@ adjustments, you can “de-instance” the node.
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **150**
 
+
+
+
+--- end of page=149 ---
 
 **To de-instance a node, making it independent:**
 
@@ -8116,6 +8714,10 @@ associate collections of nodes more definitively. These tools are covered later 
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **151**
 
+
+
+
+--- end of page=150 ---
 
 Snapping Nodes to the Grid
 
@@ -8181,6 +8783,10 @@ name for each tool.
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **152**
 
 
+
+
+--- end of page=151 ---
+
 Since Fusion can be scripted and use expressions, the names of nodes must adhere to a
 scriptable syntax. Only use alphanumeric characters (no special characters), and do not use
 any spaces.
@@ -8232,6 +8838,10 @@ any other text editor.
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **153**
 
+
+
+
+--- end of page=152 ---
 
  - **To rename a Sticky Note:** Right-click a Sticky Note, choose Rename, type a new name into the
 Rename dialog, and click OK. Alternatively, you can select a Sticky Note, press F2 to open the
@@ -8289,6 +8899,10 @@ not the contents, and then right-click it and choose a color from the Set Color 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **154**
 
 
+
+
+--- end of page=153 ---
+
  - **To put nodes inside of an Underlay Box:** Select the nodes you want to place inside an
 Underlay Box, and then drag them to fit inside. The Underlay Box must be big enough to fit all the
 nodes. Alternatively, you can place an Underlay Box near a collection of nodes you want to put
@@ -8338,6 +8952,10 @@ Node Editor and viewing the tooltip bar below.
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **155**
 
+
+
+
+--- end of page=154 ---
 
 ###### **Choosing Which Nodes Show Thumbnails**
 
@@ -8400,6 +9018,10 @@ those nodes are selected.
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **156**
 
 
+
+
+--- end of page=155 ---
+
 ###### **Switching Thumbnails between Images and Icons**
 
 Whenever you enable node thumbnails, you have the choice of having these thumbnails either display
@@ -8446,6 +9068,10 @@ The Find dialog lets you quickly locate nodes wherever they are in the Node Edit
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **157**
 
+
+
+
+--- end of page=156 ---
 
 ###### **Performing Simple Searches**
 
@@ -8532,6 +9158,10 @@ will find nodes numbered with 5, 6, or 7
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **158**
 
 
+
+
+--- end of page=157 ---
+
 #### **Custom Node Settings**
 
 When a node is added to the Node Editor, its parameters are set to the default values for that type
@@ -8584,6 +9214,10 @@ that happen to have the same name.
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **159**
 
+
+
+
+--- end of page=158 ---
 
 ###### **Resetting Defaults**
 
@@ -8649,6 +9283,10 @@ that connection.
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **160**
 
 
+
+
+--- end of page=159 ---
+
 #### **Node Modes Including Disable and Lock**
 
 Right-clicking one or more nodes and opening the contextual menu reveals a series of commands in
@@ -8713,6 +9351,10 @@ orphaned routers.
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **161**
 
 
+
+
+--- end of page=160 ---
+
  - **Show Navigator:** Enabling this option displays a small overview window of the entire node tree in
 the Node Editor’s top-right corner. For more information, see the Navigator section in this chapter.
 
@@ -8744,6 +9386,10 @@ The Status bar located beneath the Node Editor.
 
 Fusion Fundamentals | Chapter 5 Working in the Node Editor **162**
 
+
+
+
+--- end of page=161 ---
 
 #### **Chapter 6**
 ### Node Groups, Macros, and Fusion Templates
@@ -8819,6 +9465,10 @@ Using Fusion Template Bundles�����������������
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **163**
 
 
+
+
+--- end of page=162 ---
+
 #### **Groups**
 
 When you work on complex visual effects, node trees can become sprawling and unwieldy, so
@@ -8853,6 +9503,10 @@ displayed on the Group node.
 
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **164**
 
+
+
+
+--- end of page=163 ---
 
 ###### **Deleting Groups**
 
@@ -8903,6 +9557,10 @@ main node tree.
 
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **165**
 
+
+
+
+--- end of page=164 ---
 
 ###### **Saving and Reusing Groups**
 
@@ -8962,6 +9620,10 @@ customizable they are, but they’re easier to reuse in other comps.
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **166**
 
 
+
+
+--- end of page=165 ---
+
 ###### **Creating Macros**
 
 While macros let you save complex functions for future use in very customized ways, they’re actually
@@ -8992,6 +9654,10 @@ The macro editor with a Blur node and Color Corrector node.
 
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **167**
 
+
+
+
+--- end of page=166 ---
 
 **3** First, enter a name for the macro in the field at the top of the Macro Editor. This name should
 be short but descriptive of the macro’s purpose. No spaces are allowed, and you should
@@ -9056,6 +9722,10 @@ and you can make your changes and save the result.
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **168**
 
 
+
+
+--- end of page=167 ---
+
 **Groups Can Be Accessed Like Macros**
 
 Groups can also be loaded from the Insert Tool > Macros submenu if you save a
@@ -9090,6 +9760,10 @@ Building a composition to turn into a title template.
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **169**
 
 
+
+
+--- end of page=168 ---
+
 ###### **Saving a Title Macro**
 
 Macros are basically Fusion compositions that have been turned into self-contained nodes. Ordinarily,
@@ -9120,6 +9794,10 @@ Creating a macro from the selected nodes.
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **170**
 
 
+
+
+--- end of page=169 ---
+
 The Macro Editor window appears, filled to the brim with a hierarchical list of every parameter in
 the composition you’ve just selected.
 
@@ -9142,6 +9820,10 @@ select that macro, or the node or clip that macro will become.
 
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **171**
 
+
+
+
+--- end of page=170 ---
 
 So all we have to do now is to turn on the checkboxes of all the parameters we’d like to be able
 to customize. For this example, we’ll check the Text3D node’s Styled Text checkbox, the Cloth
@@ -9181,6 +9863,10 @@ go in the Fusion Titles list.
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **172**
 
 
+
+
+--- end of page=171 ---
+
 Custom titles appear in the Fusion Titles section of the Effects Library.
 
 
@@ -9196,6 +9882,10 @@ And that’s it!
 
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **173**
 
+
+
+
+--- end of page=172 ---
 
 ###### **Getting Started with a Fusion Transition Template**
 
@@ -9225,6 +9915,10 @@ Right-clicking over a Fusion Transition in the DaVinci Resolve Edit page.
 
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **174**
 
+
+
+
+--- end of page=173 ---
 
 The Fusion page opens, displaying the node tree used to create the Fusion transition.
 
@@ -9271,6 +9965,10 @@ and cannot be performed in Fusion Studio.
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **175**
 
 
+
+
+--- end of page=174 ---
+
 Having made this selection, right-click one of the selected nodes and choose Macro >
 Create Macro from the contextual menu.
 
@@ -9308,6 +10006,10 @@ Support\Fusion\Templates\Edit\Transitions
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **176**
 
 
+
+
+--- end of page=175 ---
+
 Using Your New Transition Template
 
 After you’ve saved your macro, you’ll need to quit and reopen DaVinci Resolve. When you open the
@@ -9342,6 +10044,10 @@ pop-up menu.
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **177**
 
 
+
+
+--- end of page=176 ---
+
 The Fusion page opens, displaying the node tree that is used to create the Fusion Generator.
 
 ###### **Creating a Fusion Generator Template**
@@ -9363,6 +10069,10 @@ adding a Fusion Composition Effect to a Timeline in the Edit page.
 
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **178**
 
+
+
+
+--- end of page=177 ---
 
 Saving a New Fusion Generator
 
@@ -9400,6 +10110,10 @@ appear in the Edit page Effects Library.
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **179**
 
 
+
+
+--- end of page=178 ---
+
 To have the Generator template appear in the Effects Library > Fusion Generators category of DaVinci
 Resolve, save the macro in the following locations:
 
@@ -9436,6 +10150,10 @@ Correction nodes, you can create a simple color corrector you can use on the Edi
 
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **180**
 
+
+
+
+--- end of page=179 ---
 
 **.To create a simple Color Corrector effect, do the following:**
 
@@ -9503,6 +10221,10 @@ checkbox when creating the Macro.
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **181**
 
 
+
+
+--- end of page=180 ---
+
 ###### **Changing Durations of a Template**
 
 After you make a template in Fusion, you may want to change its duration in the Edit or Cut page
@@ -9557,6 +10279,10 @@ the template with the chosen media.
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **182**
 
 
+
+
+--- end of page=181 ---
+
 The Clip Name parameters are checked for
 MediaIn2 and MediaIn1 nodes in the Macro Editor,
 allowing media drop zones for both incoming
@@ -9595,6 +10321,10 @@ A Custom Icon added to a fisheye template, before (left) and after (right)
 
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **183**
 
+
+
+
+--- end of page=182 ---
 
 ###### **Using Fusion Template Bundles**
 
@@ -9665,6 +10395,10 @@ associated templates inside that bundle will be removed as well.
 Fusion Fundamentals | Chapter 6 Node Groups, Macros, and Fusion Templates **184**
 
 
+
+
+--- end of page=183 ---
+
 #### **Chapter 7**
 ### Using Viewers
 
@@ -9732,6 +10466,10 @@ Moving the Wipe Divider�������������������
 
 Fusion Fundamentals | Chapter 7 Using Viewers **185**
 
+
+
+
+--- end of page=184 ---
 
 **Subviews** ���������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������� 199
 
@@ -9815,6 +10553,10 @@ Saving Custom LUTs���������������������
 Fusion Fundamentals | Chapter 7 Using Viewers **186**
 
 
+
+
+--- end of page=185 ---
+
 #### **Viewer Overview**
 
 Viewers in Fusion display the current frame of the current composition in a variety of ways to help you
@@ -9835,6 +10577,10 @@ Viewer with a 3D Histogram subview at the upper left-hand corner
 
 Fusion Fundamentals | Chapter 7 Using Viewers **187**
 
+
+
+
+--- end of page=186 ---
 
 ###### **Single vs. Dual Viewers**
 
@@ -9894,6 +10640,10 @@ first begin a comp, nothing is displayed in the viewers.
 Fusion Fundamentals | Chapter 7 Using Viewers **188**
 
 
+
+
+--- end of page=187 ---
+
 - Right-click the control header of a node in the Inspector, and choose View On > None/Left View/
 Right View from the contextual menu.
 
@@ -9936,6 +10686,10 @@ scrollbar between the viewers and the work area below them.
 Fusion Fundamentals | Chapter 7 Using Viewers **189**
 
 
+
+
+--- end of page=188 ---
+
 The viewer divider bar
 
 #### **Zooming and Panning into Viewers**
@@ -9974,6 +10728,10 @@ right button to zoom out. The scaling uses a fixed amount, centered on the posit
 
 Fusion Fundamentals | Chapter 7 Using Viewers **190**
 
+
+
+
+--- end of page=189 ---
 
  - Click a viewer and press Command-F or Command-1 to reset the image in the viewer
 to fit the viewer.
@@ -10016,6 +10774,10 @@ Adding a Resolve Guide will make the guideline visible in other pages in DaVinci
 
 Fusion Fundamentals | Chapter 7 Using Viewers **191**
 
+
+
+
+--- end of page=190 ---
 
 **3** In the Add Guide dialog, choose the position and orientation you want the new guide to be,
 and click OK.
@@ -10065,6 +10827,10 @@ Creating a Flipbook Preview is relatively fast, once you know where to look.
 
 Fusion Fundamentals | Chapter 7 Using Viewers **192**
 
+
+
+
+--- end of page=191 ---
 
 **To create a Flipbook Preview:**
 
@@ -10117,6 +10883,10 @@ through it using the mouse and the keyboard.
 
 Fusion Fundamentals | Chapter 7 Using Viewers **193**
 
+
+
+
+--- end of page=192 ---
 
 **To play back a Flipbook using the keyboard, do one of the following:**
 
@@ -10185,6 +10955,10 @@ resolution to a setting that delivers the best quality/duration ratio for your p
 Fusion Fundamentals | Chapter 7 Using Viewers **194**
 
 
+
+
+--- end of page=193 ---
+
 Network
 
 Network rendering is only available in Fusion Studio.
@@ -10232,6 +11006,10 @@ The Angle preview control
 
 Fusion Fundamentals | Chapter 7 Using Viewers **195**
 
+
+
+
+--- end of page=194 ---
 
 The viewers show onscreen controls for manipulating the parameters of the currently
 selected node. Common onscreen controls include crosshairs, angle indicators, polylines,
@@ -10281,6 +11059,10 @@ each step by a factor of ten. Holding Shift increases the scale of each step by 
 Fusion Fundamentals | Chapter 7 Using Viewers **196**
 
 
+
+
+--- end of page=195 ---
+
 #### **Toolbars**
 
 There are two toolbars in the viewer: a viewer toolbar, which always appears at the top of each
@@ -10319,6 +11101,10 @@ The contextual menu for the node toolbar
 
 Fusion Fundamentals | Chapter 7 Using Viewers **197**
 
+
+
+
+--- end of page=196 ---
 
 #### **A/B Buffers**
 
@@ -10380,6 +11166,10 @@ holding the Shift key snaps it to the nearest 45-degree angle.
 Fusion Fundamentals | Chapter 7 Using Viewers **198**
 
 
+
+
+--- end of page=197 ---
+
 **4** (Optional) If you want to change the image that’s displayed on that side of the split, you can drag
 new nodes onto either half of the viewer.
 
@@ -10407,6 +11197,10 @@ different information about the image.
 
 Fusion Fundamentals | Chapter 7 Using Viewers **199**
 
+
+
+
+--- end of page=198 ---
 
 The Subview menu with the Histogram subview displayed
 
@@ -10440,6 +11234,10 @@ chose. You can change this at any time.
 
 Fusion Fundamentals | Chapter 7 Using Viewers **200**
 
+
+
+
+--- end of page=199 ---
 
 **To change which subview type is displayed, do one of the following:**
 
@@ -10476,11 +11274,23 @@ different view types available.
 Fusion Fundamentals | Chapter 7 Using Viewers **201**
 
 
+
+
+--- end of page=200 ---
+
 Fusion Fundamentals | Chapter 7 Using Viewers **202**
 
 
+
+
+--- end of page=201 ---
+
 Fusion Fundamentals | Chapter 7 Using Viewers **203**
 
+
+
+
+--- end of page=202 ---
 
 #### **Viewing Selective Channels**
 
@@ -10502,6 +11312,10 @@ alpha channel.
 
 Fusion Fundamentals | Chapter 7 Using Viewers **204**
 
+
+
+
+--- end of page=203 ---
 
 The Channel toolbar button for switching
 between color, alpha, and depth channels
@@ -10543,6 +11357,10 @@ layers unmodified.
 Fusion Fundamentals | Chapter 7 Using Viewers **205**
 
 
+
+
+--- end of page=204 ---
+
 ###### **Viewer**
 
 When loading a multilayer file, you can preview specific layers in the Viewer and select a layer
@@ -10552,6 +11370,10 @@ drop-down menu.
 
 Fusion Fundamentals | Chapter 7 Using Viewers **206**
 
+
+
+
+--- end of page=205 ---
 
 Using the Layer drop-down in the Viewer to select just the Asteroids layer from a multilayer file for viewing
 
@@ -10581,6 +11403,10 @@ slowly, and the keyboard will move more quickly.
 
 Fusion Fundamentals | Chapter 7 Using Viewers **207**
 
+
+
+
+--- end of page=206 ---
 
 Critically, the 3D Viewer gives you additional control to rotate the viewer within the three
 dimensions of the scene to better see your scene from different angles as you work.
@@ -10640,6 +11466,10 @@ instead change the rotation, position, and scale of the camera, light, or other 
 Fusion Fundamentals | Chapter 7 Using Viewers **208**
 
 
+
+
+--- end of page=207 ---
+
 ###### **Copying a Viewer’s POV to a Camera**
 
 There are many times you will have used the default perspective view to set up your scene and then
@@ -10685,6 +11515,10 @@ need to switch modes to see what they affect as you work.
 Fusion Fundamentals | Chapter 7 Using Viewers **209**
 
 
+
+
+--- end of page=208 ---
+
 **To see the effects of the default light on the scene:**
 
  - Right-click within the 3D Viewer and choose 3D Options > Default Lights from the
@@ -10714,6 +11548,10 @@ you’ve created, you must turn them on.
 
 Fusion Fundamentals | Chapter 7 Using Viewers **210**
 
+
+
+
+--- end of page=209 ---
 
 **To toggle shadows rendering within a 3D scene:**
 
@@ -10760,6 +11598,10 @@ Fusion Settings window, available from the Fusion menu.
 Fusion Fundamentals | Chapter 7 Using Viewers **211**
 
 
+
+
+--- end of page=210 ---
+
 **To toggle the grid on and off:**
 
 Right-click anywhere within the 3D Viewer and choose 3D Options > Grid from the contextual menu.
@@ -10785,6 +11627,10 @@ The normals viewed in a 3D scene
 
 Fusion Fundamentals | Chapter 7 Using Viewers **212**
 
+
+
+
+--- end of page=211 ---
 
 #### **Quad View**
 
@@ -10832,6 +11678,10 @@ submenu of the contextual menu.
 
 Fusion Fundamentals | Chapter 7 Using Viewers **213**
 
+
+
+
+--- end of page=212 ---
 
 ###### **Using Quad Views for 2D Scenes**
 
@@ -10882,6 +11732,10 @@ enabled and disabled.
 Fusion Fundamentals | Chapter 7 Using Viewers **214**
 
 
+
+
+--- end of page=213 ---
+
 **Monitor Safety:** Monitor Safety indicates the safe action area viewable on most monitors
 and TV screens.
 
@@ -10911,6 +11765,10 @@ The Frame Format Guides settings
 
 Fusion Fundamentals | Chapter 7 Using Viewers **215**
 
+
+
+
+--- end of page=214 ---
 
 #### **Domain of Definition and Region of Interest**
 
@@ -10949,6 +11807,10 @@ stored in OpenEXR format.
 
 Fusion Fundamentals | Chapter 7 Using Viewers **216**
 
+
+
+
+--- end of page=215 ---
 
 The DoD is established as soon as the image is created or loaded into the composition. From there,
 it passes downstream, where viewers combine it with their Region of Interest in order to determine
@@ -11019,6 +11881,10 @@ Sometimes, it’s faster to simply draw a rectangle where you want the RoI to be
 Fusion Fundamentals | Chapter 7 Using Viewers **217**
 
 
+
+
+--- end of page=216 ---
+
 **To quickly draw the RoI at the desired size:**
 
 **1** Choose Set from the viewer menu next to the RoI button, or right-click anywhere within the viewer
@@ -11076,6 +11942,10 @@ controls will override the RoI, forcing renders of pixels for the entire image.
 
 Fusion Fundamentals | Chapter 7 Using Viewers **218**
 
+
+
+
+--- end of page=217 ---
 
 #### Managing Viewer Lookup Tables (LUTs)
 
@@ -11136,6 +12006,10 @@ However, in more elaborate production pipelines, you may need to apply multiple 
 
 Fusion Fundamentals | Chapter 7 Using Viewers **219**
 
+
+
+
+--- end of page=218 ---
 
 ###### **Types of Viewer LUTs**
 
@@ -11202,6 +12076,10 @@ _Fusion Templates,”_ or Chapter 68 in the _[DaVinci Resolve 20.3 Reference Man
 Fusion Fundamentals | Chapter 7 Using Viewers **220**
 
 
+
+
+--- end of page=219 ---
+
 LUT Presets
 
 All LUTs available to DaVinci Resolve are also accessible to the Fusion page, which includes custom
@@ -11231,6 +12109,10 @@ the Fusion page in DaVinci Resolve
 
 Fusion Fundamentals | Chapter 7 Using Viewers **221**
 
+
+
+
+--- end of page=220 ---
 
 **To turn the current viewer LUT on and off:**
 
@@ -11296,6 +12178,10 @@ channel of an image, or when viewing masks.
 Fusion Fundamentals | Chapter 7 Using Viewers **222**
 
 
+
+
+--- end of page=221 ---
+
 The LUT Editor for the default Fusion View LUT
 
 
@@ -11319,6 +12205,10 @@ The Gamut View LUT Editor The Log-Lin LUT Editor
 
 Fusion Fundamentals | Chapter 7 Using Viewers **223**
 
+
+
+
+--- end of page=222 ---
 
 Editing the Log-Lin View LUT
 
@@ -11415,6 +12305,10 @@ described below.
 Fusion Fundamentals | Chapter 7 Using Viewers **224**
 
 
+
+
+--- end of page=223 ---
+
 ###### **Saving Custom LUTs**
 
 There are a variety of ways to create and use different viewer LUTs in Fusion. You can save LUTs
@@ -11479,6 +12373,10 @@ access standard format LUT files for different projects.
 Fusion Fundamentals | Chapter 7 Using Viewers **225**
 
 
+
+
+--- end of page=224 ---
+
 Settings and Macros
 
 Since LUTs are a form of color correction, you can also use any node, macro, or group of nodes as a
@@ -11514,6 +12412,10 @@ of the Fusion Settings window
 
 Fusion Fundamentals | Chapter 7 Using Viewers **226**
 
+
+
+
+--- end of page=225 ---
 
 #### **Viewer Preferences and Settings**
 
@@ -11579,6 +12481,10 @@ image when the image is scaled past a certain threshold. The default is Off.
 Fusion Fundamentals | Chapter 7 Using Viewers **227**
 
 
+
+
+--- end of page=226 ---
+
 **Smooth Resize**
 
 The Smooth Resize option uses a smoother bilinear interpolated resizing method when zooming into
@@ -11621,6 +12527,10 @@ does not update. By default, the viewer is unlocked.
 
 Fusion Fundamentals | Chapter 7 Using Viewers **228**
 
+
+
+
+--- end of page=227 ---
 
 #### **Additional Viewer Options**
 
@@ -11683,6 +12593,10 @@ The status bar showing coordinates and color information
 
 Fusion Fundamentals | Chapter 7 Using Viewers **229**
 
+
+
+
+--- end of page=228 ---
 
 #### **Chapter 8**
 ### Editing Parameters in the Inspector
@@ -11772,6 +12686,10 @@ An Example of Customizing Directional Blur��� 253
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **230**
 
 
+
+
+--- end of page=229 ---
+
 #### **Overview of the Inspector**
 
 While the creation and connection of nodes in the Node Editor determines the tools and order of
@@ -11793,6 +12711,10 @@ Click the Inspector button on the UI toolbar.
 
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **231**
 
+
+
+
+--- end of page=230 ---
 
 ###### **The Tools and Modifiers Panels**
 
@@ -11826,6 +12748,10 @@ and half-height views, depending on how much room you need for editing parameter
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **232**
 
 
+
+
+--- end of page=231 ---
+
 ###### **Inspector Display Preferences**
 
 By default, you see only selected nodes in the Inspector, and only the Active node is expanded to
@@ -11858,6 +12784,10 @@ the Inspector; multi-selected nodes highlighted in white do not appear.
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **233**
 
 
+
+
+--- end of page=232 ---
+
 #### **Opening Nodes in the Inspector**
 
 Before you can edit a node’s parameters, you need to open it in the Inspector.
@@ -11881,6 +12811,10 @@ selected node (highlighted in white in the Node Editor), but the parameters for 
 
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **234**
 
+
+
+
+--- end of page=233 ---
 
 #### **Pinning Multiple Nodes in the Inspector**
 
@@ -11907,6 +12841,10 @@ To remove a pinned node from the Inspector, just turn off its Pin button in the 
 
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **235**
 
+
+
+
+--- end of page=234 ---
 
 #### **Hiding Inspector Controls**
 
@@ -11960,6 +12898,10 @@ Spline Editor. All animated splines for the parameters of that node will automat
 
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **236**
 
+
+
+
+--- end of page=235 ---
 
 ###### **Using Header Controls**
 
@@ -12021,6 +12963,10 @@ version number and choose Clear from the contextual menu.
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **237**
 
 
+
+
+--- end of page=236 ---
+
 #### **Parameter Tabs**
 
 Underneath the Inspector header is a series of panel tabs, displayed as thematic icons. Clicking one of
@@ -12053,6 +12999,10 @@ The Settings tab in the Inspector
 
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **238**
 
+
+
+
+--- end of page=237 ---
 
 The following controls are common to most nodes, although some are node-specific. For example,
 Motion Blur settings have no purpose in a Color Space node.
@@ -12093,6 +13043,10 @@ node set so that only the green channel is affected.
 
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **239**
 
+
+
+
+--- end of page=238 ---
 
 Skipping Channel Processing
 
@@ -12147,6 +13101,10 @@ with those channels included.
 
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **240**
 
+
+
+
+--- end of page=239 ---
 
  - **Correct Edges:** The Correct Edges checkbox is only displayed once the Use Object or Use
 Material checkbox is enabled. When the Correct Edges checkbox is enabled, the Coverage and
@@ -12209,6 +13167,10 @@ _Resolve 20.3 Reference Manual_ .
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **241**
 
 
+
+
+--- end of page=240 ---
+
 #### **Editing Individual Tool Controls** **From the Inspector Context Menu**
 
 By right-clicking in the Inspector and selecting Edit Control, you can bring up the Control Editor, letting
@@ -12238,6 +13200,10 @@ with sliders.
 
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **242**
 
+
+
+
+--- end of page=241 ---
 
 While slider controls use a minimum and maximum value range, entering a value in the edit
 box outside that range will often expand the range of the slider to accommodate the new
@@ -12287,6 +13253,10 @@ A Matte Threshold Range control Checkboxes used to select options for tracking
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **243**
 
 
+
+
+--- end of page=242 ---
+
 ###### **Checkboxes**
 
 Checkboxes are controls that have either an On or Off value. Clicking on the checkbox control will
@@ -12330,6 +13300,10 @@ The Color panel with transparency preview
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **244**
 
 
+
+
+--- end of page=243 ---
+
 **TIP:** Color can be represented by 0–1, 0.255, or 0–65000 by setting the range you want in
 the Preferences > General panel.
 
@@ -12359,6 +13333,10 @@ the Background node
 
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **245**
 
+
+
+
+--- end of page=244 ---
 
 Picking Colors from an Image
 
@@ -12396,8 +13374,16 @@ The Gradient Type button array is used to select the form used to draw the gradi
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **246**
 
 
+
+
+--- end of page=245 ---
+
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **247**
 
+
+
+
+--- end of page=246 ---
 
 Angle gradient
 
@@ -12473,6 +13459,10 @@ to render but will be more precise.
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **248**
 
 
+
+
+--- end of page=247 ---
+
 Gradient Contextual Menu
 
 Gradients have their own contextual menu that you can bring up by right-clicking on the Gradient bar.
@@ -12525,6 +13515,10 @@ node has been animated.
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **249**
 
 
+
+
+--- end of page=248 ---
+
 ###### **Removing Animation From a Parameter**
 
 **To remove all keyframes from a parameter:**
@@ -12571,6 +13565,10 @@ contextual menu.
 
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **250**
 
+
+
+
+--- end of page=249 ---
 
 **To Publish and Connect parameters:**
 
@@ -12620,6 +13618,10 @@ Reference Manual.
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **251**
 
 
+
+
+--- end of page=250 ---
+
 #### **Contextual Menus**
 
 There are two types of contextual menus you can invoke within the Inspector.
@@ -12658,6 +13660,10 @@ The Edit Control window
 
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **252**
 
+
+
+
+--- end of page=251 ---
 
 In the Input attributes, you can select an existing control or create a new one, name it, define
 the type, and assign it to a tab. In the Type attributes, you define the input controls, the
@@ -12698,6 +13704,10 @@ atan2(Center.Y-.5)/(Input.OriginalWidth/Input.X, .5-Center.X) * 180 / pi
 
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **253**
 
+
+
+
+--- end of page=252 ---
 
 Directional Blur controlled
 by the Center’s position
@@ -12750,8 +13760,16 @@ iif(TypeNew==0, 0, 2).
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **254**
 
 
+
+
+--- end of page=253 ---
+
 Fusion Fundamentals | Chapter 8 Editing Parameters in the Inspector **255**
 
+
+
+
+--- end of page=254 ---
 
 #### **Chapter 9**
 ### Animating in Fusion’s Keyframes Editor
@@ -12851,6 +13869,10 @@ Display Point Values��������������������
 Fusion Fundamentals | Chapter 9 Animating in Fusion’s Keyframes Editor **256**
 
 
+
+
+--- end of page=255 ---
+
 #### **Keyframing in the Inspector**
 
 Most parameters in most effects nodes can be keyframed in order to create animated effects such as
@@ -12888,6 +13910,10 @@ show there’s a keyframe at that frame
 
 Fusion Fundamentals | Chapter 9 Animating in Fusion’s Keyframes Editor **257**
 
+
+
+
+--- end of page=256 ---
 
 ###### **Attaching a Parameter to an Existing Animation Curve**
 
@@ -12937,6 +13963,10 @@ on and off.
 Fusion Fundamentals | Chapter 9 Animating in Fusion’s Keyframes Editor **258**
 
 
+
+
+--- end of page=257 ---
+
 ###### **Keyframes Editor Tracks**
 
 While each clip and effect node in your composition is represented by a track, keyframed parameters
@@ -12976,6 +14006,10 @@ dragged by the pointer
 
 Fusion Fundamentals | Chapter 9 Animating in Fusion’s Keyframes Editor **259**
 
+
+
+
+--- end of page=258 ---
 
 You must click on the playhead directly to drag it, even within the Timeline ruler (clicking and
 dragging anywhere else in the Timeline ruler scales the Timeline). Additionally, you can jump the
@@ -13024,6 +14058,10 @@ tracks and controlling visible options.
 
 Fusion Fundamentals | Chapter 9 Animating in Fusion’s Keyframes Editor **260**
 
+
+
+
+--- end of page=259 ---
 
 #### **Working with Segments in the Timeline**
 
@@ -13084,6 +14122,10 @@ time until needed.
 Fusion Fundamentals | Chapter 9 Animating in Fusion’s Keyframes Editor **261**
 
 
+
+
+--- end of page=260 ---
+
 **To trim a segment in the Timeline, do the following:**
 
  - Drag on either end of the node’s segment in the Timeline.
@@ -13139,6 +14181,10 @@ change keyframe interpolation, copy/paste keyframes, or even create new keyframe
 Fusion Fundamentals | Chapter 9 Animating in Fusion’s Keyframes Editor **262**
 
 
+
+
+--- end of page=261 ---
+
 ###### **Keyframe Editing Using the Time Editor**
 
 A drop-down and editing field at the bottom right of the Keyframes Editor lets you numerically edit the
@@ -13191,6 +14237,10 @@ even just create identically-timed keyframes on two different segments.
 Fusion Fundamentals | Chapter 9 Animating in Fusion’s Keyframes Editor **263**
 
 
+
+
+--- end of page=262 ---
+
 ###### **Time Stretching Keyframes**
 
 If you select a range of keyframes in a keyframe track, you can turn on the Time Stretch tool in the
@@ -13239,6 +14289,10 @@ Default Timeline filters include;
 Fusion Fundamentals | Chapter 9 Animating in Fusion’s Keyframes Editor **264**
 
 
+
+
+--- end of page=263 ---
+
 **To create a Timeline filter:**
 
 **1** Choose Create/Edit Filters from the Keyframes Editor Option menu to open the Timeline panel of
@@ -13265,6 +14319,10 @@ Keyframes Editor Option menu.
 
 Fusion Fundamentals | Chapter 9 Animating in Fusion’s Keyframes Editor **265**
 
+
+
+
+--- end of page=264 ---
 
 **To delete a filter:**
 
@@ -13317,6 +14375,10 @@ order, you can choose Restart to begin numbering again or choose Cancel to keep 
 Fusion Fundamentals | Chapter 9 Animating in Fusion’s Keyframes Editor **266**
 
 
+
+
+--- end of page=265 ---
+
 ###### **The Sort Menu**
 
 The Sort menu reorders how the layers of each node appear in the Keyframes Editor. Setting the
@@ -13348,6 +14410,10 @@ handle with a line extending vertically through the graph view when selected.
 Fusion Fundamentals | Chapter 9 Animating in Fusion’s Keyframes Editor **267**
 
 
+
+
+--- end of page=266 ---
+
 **NOTE:** Markers attached to clips in the Edit page Timeline are visible on MediaIn nodes in
 Fusion’s Keyframes Editor but not editable. They are not visible in the Spline Editor.
 
@@ -13368,6 +14434,10 @@ right-clicking over a marker or Keyframe Editor Time Ruler.
 
 Fusion Fundamentals | Chapter 9 Animating in Fusion’s Keyframes Editor **268**
 
+
+
+
+--- end of page=267 ---
 
 ###### **Show Marker List**
 
@@ -13407,6 +14477,10 @@ snapping behavior. The options are:
 
 Fusion Fundamentals | Chapter 9 Animating in Fusion’s Keyframes Editor **269**
 
+
+
+
+--- end of page=268 ---
 
    - **None:** None allows free positioning of keyframes and segment edges with
 subframe accuracy.
@@ -13458,6 +14532,10 @@ you to change the frame number the keyframe is on or the parameter’s value for
 Fusion Fundamentals | Chapter 9 Animating in Fusion’s Keyframes Editor **270**
 
 
+
+
+--- end of page=269 ---
+
 Clicking on the parameter’s keyframe
 value allows you to change it
 
@@ -13503,6 +14581,10 @@ Large, and Huge.
 Fusion Fundamentals | Chapter 9 Animating in Fusion’s Keyframes Editor **271**
 
 
+
+
+--- end of page=270 ---
+
 ###### **Display Point Values**
 
 A more traditional view of keyframes is to view them as control points instead of vertical bars, making
@@ -13530,6 +14612,10 @@ Waveforms are displayed in the Keyframes Editor for all MediaIn nodes
 
 Fusion Fundamentals | Chapter 9 Animating in Fusion’s Keyframes Editor **272**
 
+
+
+
+--- end of page=271 ---
 
 **To display the audio waveform in the Keyframes Editor:**
 
@@ -13575,6 +14661,10 @@ Keyframes Editor.
 
 Fusion Fundamentals | Chapter 9 Animating in Fusion’s Keyframes Editor **273**
 
+
+
+
+--- end of page=272 ---
 
 #### **Chapter 10**
 ### Animating in Fusion’s Spline Editor
@@ -13655,6 +14745,10 @@ Ease In/Out �����������������������
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **274**
 
 
+
+
+--- end of page=273 ---
+
 #### **Spline Editor Overview**
 
 The Spline Editor is the main area where animation is manipulated and refined. You primarily use the
@@ -13696,6 +14790,10 @@ in order to take up the entire work area.
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **275**
 
 
+
+
+--- end of page=274 ---
+
 ###### **The Graph, Header, and Toolbar**
 
 The Spline Editor has three main working areas: the graph, header, and toolbar. On the left side of the
@@ -13729,6 +14827,10 @@ The Spline header
 
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **276**
 
+
+
+
+--- end of page=275 ---
 
 Spline Editor Toolbar
 
@@ -13786,6 +14888,10 @@ contextual menu.
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **277**
 
 
+
+
+--- end of page=276 ---
+
 ###### **Navigating Around the Spline Editor**
 
 It is often necessary to magnify and pan around the graph area to ensure that the splines you want
@@ -13839,6 +14945,10 @@ the right button to zoom out.
 
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **278**
 
+
+
+
+--- end of page=277 ---
 
 **To pan the graph area:**
 
@@ -13901,6 +15011,10 @@ selected markers display a vertical line running through the graph
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **279**
 
 
+
+
+--- end of page=278 ---
+
 Working with Markers
 
 Markers call attention to a particular frame within a comp. They can be named, displayed in a list, and
@@ -13960,6 +15074,10 @@ The Marker List above shows markers in the current comp.
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **280**
 
 
+
+
+--- end of page=279 ---
+
 If markers currently exist in the comp, they are automatically displayed in the Marker List,
 regardless of whether they were added in the Keyframes Editor or the Spline Editor or any
 other page in DaVinci Resolve. You can also add markers directly from the Marker List, which
@@ -14017,6 +15135,10 @@ the contextual menu.
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **281**
 
 
+
+
+--- end of page=280 ---
+
 #### **Creating Animation Splines**
 
 Animation splines are created automatically when you keyframe a parameter in the Inspector or the
@@ -14052,6 +15174,10 @@ With contextual submenu before creating any keyframes.
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **282**
 
 
+
+
+--- end of page=281 ---
+
 Three spline types in the Modify With menu
 
 
@@ -14076,6 +15202,10 @@ B-spline
 
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **283**
 
+
+
+
+--- end of page=282 ---
 
  - **Modify with > Cubic Spline:** Cubic splines are similar to Bézier splines, in that the spline
 passes through the control point. However, Cubic splines do not display handles and always
@@ -14112,6 +15242,10 @@ where you want to add the new keyframe.
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **284**
 
 
+
+
+--- end of page=283 ---
+
 ###### **Locked and Unlocked Controls Points**
 
 When animating the Center X/Y or Pivot X/Y parameters on any tool, you create a displacement spline
@@ -14126,6 +15260,10 @@ The displacement spline represents the relative position along a motion path
 
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **285**
 
+
+
+
+--- end of page=284 ---
 
 Displacement paths are composed of locked and unlocked points. Whether a point is locked is
 determined by how you added it to the polyline. Locked points on the spline have an associated point
@@ -14188,6 +15326,10 @@ contextual menu to select all keyframes from the active splines.
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **286**
 
 
+
+
+--- end of page=285 ---
+
 Moving Keyframes
 
 You can freely move keyframes with the mouse, keyboard, or the edit point controls. Keyframes can
@@ -14241,6 +15383,10 @@ The key markers show keyframes in the horizontal axis using the same color as th
 
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **287**
 
+
+
+
+--- end of page=286 ---
 
 ###### **Copying and Pasting Keyframes**
 
@@ -14315,6 +15461,10 @@ the values or shift the timing using an offset to X or Y.
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **288**
 
 
+
+
+--- end of page=287 ---
+
 **To paste keyframes points and values with an X or Y offset:**
 
 **1** Make one spline the active visible spline and select the desired keyframes on the spline.
@@ -14372,6 +15522,10 @@ cannot enter a time.
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **289**
 
 
+
+
+--- end of page=288 ---
+
 **Time Offset**
 
 Selecting T Offset from the drop-down menu changes the mode of the number field to Time
@@ -14425,6 +15579,10 @@ amount. For example, entering a value of 0.5 changes a keyframe’s value from 1
 
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **290**
 
+
+
+
+--- end of page=289 ---
 
 ###### **Modifying Spline Handles**
 
@@ -14483,6 +15641,10 @@ shape of your original spline.
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **291**
 
 
+
+
+--- end of page=290 ---
+
 **TIP:** When the value is 100, no points will be removed from the spline. Use smaller values to
 eliminate more points.
 
@@ -14520,6 +15682,10 @@ an animation spline for it if one does not exist.
 
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **292**
 
+
+
+
+--- end of page=291 ---
 
 With a large number of nodes displayed, which themselves might have a large number of
 parameters, this might lead to cluttering and slowing down the interface. This option is most
@@ -14574,6 +15740,10 @@ unchecked.
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **293**
 
 
+
+
+--- end of page=292 ---
+
 **To apply a filter to the Spline Editor:**
 
  - Choose the desired filter by name from the Options menu. The filter applies to both the Spline
@@ -14612,6 +15782,10 @@ checkbox sets the state for all splines for that node.
 
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **294**
 
+
+
+
+--- end of page=293 ---
 
 **Active:** When the checkbox is enabled with a
 check mark, the spline is displayed in the graph
@@ -14671,6 +15845,10 @@ or deleted.
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **295**
 
 
+
+
+--- end of page=294 ---
+
 #### **Reshaping Splines Using the Toolbar**
 
 There are several ways to manipulate the shape of a spline, thereby altering the animation that spline
@@ -14700,6 +15878,10 @@ Smooth interpolation between keyframes
 
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **296**
 
+
+
+
+--- end of page=295 ---
 
 Linear
 
@@ -14731,6 +15913,10 @@ keyframe is reached in the comp
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **297**
 
 
+
+
+--- end of page=296 ---
+
 Step Out causes the value of the selected keyframe to hold right up to the next keyframe.
 
 
@@ -14759,6 +15945,10 @@ keyboard shortcuts I and O can also be used to enable Step In and Step Out on se
 
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **298**
 
+
+
+
+--- end of page=297 ---
 
 Set Loop
 
@@ -14791,6 +15981,10 @@ A ping-pong section in the graph
 
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **299**
 
+
+
+
+--- end of page=298 ---
 
 Relative Loop
 
@@ -14826,6 +16020,10 @@ The Duplicate contextual submenu
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **300**
 
 
+
+
+--- end of page=299 ---
+
 Gradient Extrapolation
 
 You can choose Gradient Extrapolation by right-clicking in the graph area and choosing it from the
@@ -14857,6 +16055,10 @@ The Time Stretch bars in the graph
 
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **301**
 
+
+
+
+--- end of page=300 ---
 
 **TIP:** If no keyframes are selected when you enable Time Stretch, drag a rectangle to set the
 boundaries of the Time Stretch.
@@ -14899,6 +16101,10 @@ drag out a new rectangle at any time.
 
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **302**
 
+
+
+
+--- end of page=301 ---
 
 ###### **Ease In/Out**
 
@@ -14956,6 +16162,10 @@ Importing a new curve will replace any existing animation on the selected spline
 Fusion Fundamentals | Chapter 10 Animating in Fusion’s Spline Editor **303**
 
 
+
+
+--- end of page=302 ---
+
 #### **Chapter 11**
 ### Animating with Motion Paths
 
@@ -15003,6 +16213,10 @@ Native Format����������������������
 
 Fusion Fundamentals | Chapter 11 Animating with Motion Paths **304**
 
+
+
+
+--- end of page=303 ---
 
 #### **Animating Using Motion Paths**
 
@@ -15055,6 +16269,10 @@ each corner of the corner-pinned effect.
 
 Fusion Fundamentals | Chapter 11 Animating with Motion Paths **305**
 
+
+
+
+--- end of page=304 ---
 
 **NOTE:** It’s not possible to add a motion path to a one-dimensional value, such as blur
 strength or merge angle. However, you can use the Spline Editor to edit these kinds of values
@@ -15112,6 +16330,10 @@ coordinate control in the viewer.
 Fusion Fundamentals | Chapter 11 Animating with Motion Paths **306**
 
 
+
+
+--- end of page=305 ---
+
 **To apply a Polyline path to the Center X/Y parameter:**
 
 **1** Position the playhead on the frame where the motion will begin.
@@ -15140,6 +16362,10 @@ Two keyframes spaced several frames apart display a motion path showing the dire
 
 Fusion Fundamentals | Chapter 11 Animating with Motion Paths **307**
 
+
+
+
+--- end of page=306 ---
 
 **6** The position of the center control is interpolated between the two keyframes. You can continue
 adding points by moving the playhead and adjusting the object’s position until the entire motion
@@ -15185,6 +16411,10 @@ choose Remove Polygon1Polyline.
 Fusion Fundamentals | Chapter 11 Animating with Motion Paths **308**
 
 
+
+
+--- end of page=307 ---
+
 Right-clicking at the bottom of the Inspector to
 remove auto-keyframing from a mask shape
 
@@ -15227,6 +16457,10 @@ The Displacement slider is meant to be keyframed for animating the object along 
 Fusion Fundamentals | Chapter 11 Animating with Motion Paths **309**
 
 
+
+
+--- end of page=308 ---
+
 ###### **Path Modifier**
 
 In terms of functionality, it makes no difference which method you use to generate the path modifier.
@@ -15259,6 +16493,10 @@ end of the path.
 
 Fusion Fundamentals | Chapter 11 Animating with Motion Paths **310**
 
+
+
+
+--- end of page=309 ---
 
 **To use the Displacement parameter to control the speed of an object on a path, do the following.**
 
@@ -15296,6 +16534,10 @@ between two points.
 Fusion Fundamentals | Chapter 11 Animating with Motion Paths **311**
 
 
+
+
+--- end of page=310 ---
+
 A Displacement curve in the Spline Editor
 
 
@@ -15327,6 +16569,10 @@ the bee’s angle to the Heading parameter.
 Fusion Fundamentals | Chapter 11 Animating with Motion Paths **312**
 
 
+
+
+--- end of page=311 ---
+
 ###### **XY Path**
 
 Unlike a Polyline path, the XY path modifier uses separate splines in the Spline Editor to calculate
@@ -15349,6 +16595,10 @@ Adding the XY Path modifier to a Center parameter in the Inspector
 
 Fusion Fundamentals | Chapter 11 Animating with Motion Paths **313**
 
+
+
+
+--- end of page=312 ---
 
 Instead of dragging in the viewer, you can use the controls in the Modifiers tab to create a motion path,
 while using the object’s original Inspector controls as an offset to this motion path. You can use the
@@ -15381,6 +16631,10 @@ XY Path displays X and Y curves in the Spline Editor but does not include a Disp
 
 Fusion Fundamentals | Chapter 11 Animating with Motion Paths **314**
 
+
+
+
+--- end of page=313 ---
 
 Switching Default Paths
 
@@ -15418,6 +16672,10 @@ Deleting a locked point from the motion path will change the overall timing of t
 Fusion Fundamentals | Chapter 11 Animating with Motion Paths **315**
 
 
+
+
+--- end of page=314 ---
+
 **To change the duration of a path using locked points:**
 
 **1** Connect an object to a Transform node.
@@ -15449,6 +16707,10 @@ This sets the second locked point.
 Fusion Fundamentals | Chapter 11 Animating with Motion Paths **316**
 
 
+
+
+--- end of page=315 ---
+
 **7** View the Spline Editor and display Path1’s Displacement spline.
 
 
@@ -15477,6 +16739,10 @@ This will create an additional locked point and set a new ending for the path.
 
 Fusion Fundamentals | Chapter 11 Animating with Motion Paths **317**
 
+
+
+
+--- end of page=316 ---
 
 ###### **Unlocked Points**
 
@@ -15513,6 +16779,10 @@ Spline Editor can be used to make the object’s motion pause briefly.
 
 Fusion Fundamentals | Chapter 11 Animating with Motion Paths **318**
 
+
+
+
+--- end of page=317 ---
 
 ###### **Locking and Unlocking Points**
 
@@ -15556,6 +16826,10 @@ choose Remove Polygon Polyline to remove the auto-animation behavior.
 
 Fusion Fundamentals | Chapter 11 Animating with Motion Paths **319**
 
+
+
+
+--- end of page=318 ---
 
 **6** Right-click over the Path1 Center X/Y parameter and choose Path.
 
@@ -15607,6 +16881,10 @@ Remove Path1 from the submenu of the NameOfObject; Center submenu.
 Fusion Fundamentals | Chapter 11 Animating with Motion Paths **320**
 
 
+
+
+--- end of page=319 ---
+
 Removing an entire motion path at once
 
 ###### **Recording Motion Paths**
@@ -15646,6 +16924,10 @@ new composition.
 
 Fusion Fundamentals | Chapter 11 Animating with Motion Paths **321**
 
+
+
+
+--- end of page=320 ---
 
 #### **Chapter 12**
 ### Using Modifiers, Expressions, and Custom Controls
@@ -15693,6 +16975,10 @@ Removing SimpleExpressions������������������
 Fusion Fundamentals | Chapter 12 Using Modifiers, Expressions, and Custom Controls **322**
 
 
+
+
+--- end of page=321 ---
+
 #### **The Contextual Menu for** **Parameters in the Inspector**
 
 Most of the features in this chapter are accessed via a contextual menu that appears when you rightclick most parameters in the Inspector. Different contextual menus are available based on where in the
@@ -15727,6 +17013,10 @@ modifier to the Center X and Y parameters
 Fusion Fundamentals | Chapter 12 Using Modifiers, Expressions, and Custom Controls **323**
 
 
+
+
+--- end of page=322 ---
+
 ###### **Combining Modifiers and Keyframes**
 
 Modifiers that auto-animate parameters like Perturb and Shake can be combined with keyframes to
@@ -15756,6 +17046,10 @@ the Strength, Wobble, and Speed parameters while the animation plays.
 
 Fusion Fundamentals | Chapter 12 Using Modifiers, Expressions, and Custom Controls **324**
 
+
+
+
+--- end of page=323 ---
 
 ###### **Publishing a Parameter**
 
@@ -15798,6 +17092,10 @@ the modified parameter, use the Insert submenu of the parameter’s contextual m
 
 Fusion Fundamentals | Chapter 12 Using Modifiers, Expressions, and Custom Controls **325**
 
+
+
+
+--- end of page=324 ---
 
 **Available Modifiers in Fusion:**
 
@@ -15873,6 +17171,10 @@ any other parameter.
 Fusion Fundamentals | Chapter 12 Using Modifiers, Expressions, and Custom Controls **326**
 
 
+
+
+--- end of page=325 ---
+
 For more information on all modifiers available in Fusion, _see Chapter 64, “Modifiers,”_ and
 Chapter 124 in the _[DaVinci Resolve 20.3 Reference Manual](https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion)_ .
 
@@ -15928,6 +17230,10 @@ shorthand. Some examples of Simple Expressions and their syntax include:
 Fusion Fundamentals | Chapter 12 Using Modifiers, Expressions, and Custom Controls **327**
 
 
+
+
+--- end of page=326 ---
+
 **Expression** **Description**
 
 
@@ -15951,6 +17257,10 @@ Fusion Fundamentals | Chapter 12 Using Modifiers, Expressions, and Custom Contro
 
 Fusion Fundamentals | Chapter 12 Using Modifiers, Expressions, and Custom Controls **328**
 
+
+
+
+--- end of page=327 ---
 
 **TIP:** When working with long SimpleExpressions, it may be helpful to drag the Inspector
 panel out to make it wider or to copy/paste from a text editor or the Console.
@@ -15986,6 +17296,10 @@ SimpleExpression will be plotted in the Spline Editor, allowing you to see the r
 Fusion Fundamentals | Chapter 12 Using Modifiers, Expressions, and Custom Controls **329**
 
 
+
+
+--- end of page=328 ---
+
 ###### **Removing SimpleExpressions**
 
 To remove a SimpleExpression, right-click the name of the parameter, and choose Remove Expression
@@ -16016,6 +17330,10 @@ Edit Control dialog
 Fusion Fundamentals | Chapter 12 Using Modifiers, Expressions, and Custom Controls **330**
 
 
+
+
+--- end of page=329 ---
+
 You use the page list to assign the new control to one of the tabs in the Inspector. There are also
 settings to determine the defaults and ranges, and whether it has an onscreen preview control. The
 Input Ctrl box contains settings specific to the selected Type, and the View Ctrl attributes box contains
@@ -16045,6 +17363,10 @@ must save the node settings, and add them to the Bins in Fusion Studio or to you
 
 Fusion Fundamentals | Chapter 12 Using Modifiers, Expressions, and Custom Controls **331**
 
+
+
+
+--- end of page=330 ---
 
 This admittedly somewhat advanced function does the job fine. Dragging the onscreen
 control adjusts the angle and length for the directional blur. However, now the names of the
@@ -16097,6 +17419,10 @@ Center, so our SimpleExpressions did not change.
 
 Fusion Fundamentals | Chapter 12 Using Modifiers, Expressions, and Custom Controls **332**
 
+
+
+
+--- end of page=331 ---
 
 **Finally, to remove Radial and Zoom options from the Type menu:**
 
@@ -16167,6 +17493,10 @@ into the Console.
 Fusion Fundamentals | Chapter 12 Using Modifiers, Expressions, and Custom Controls **333**
 
 
+
+
+--- end of page=332 ---
+
 Other script types are available as well, such as Startup Scripts, Scriptlibs, Bin Scripts, Event Suites,
 Hotkey Scripts, Intool Scripts, and SimpleExpressions. Fusion Studio allows external and commandline scripting as well and network rendering Job and Render node scripting.
 
@@ -16180,6 +17510,10 @@ from the Documentation submenu of the Help menu.
 
 Fusion Fundamentals | Chapter 12 Using Modifiers, Expressions, and Custom Controls **334**
 
+
+
+
+--- end of page=333 ---
 
 #### **Chapter 13**
 ### Bins
@@ -16234,6 +17568,10 @@ Studio Player and Bin Server�����������������
 Fusion Fundamentals | Chapter 13 Bins **335**
 
 
+
+
+--- end of page=334 ---
+
 #### **Bins Overview**
 
 Bins are folders that provide an easy way of accessing commonly used tools, settings, macros,
@@ -16264,6 +17602,10 @@ The Bins sidebar
 
 Fusion Fundamentals | Chapter 13 Bins **336**
 
+
+
+
+--- end of page=335 ---
 
 **TIP:** When opening the Bins window on macOS, the window may open behind the current
 Fusion Studio window. Check in the dock for the Bins window icon or move the Fusion Studio
@@ -16305,6 +17647,10 @@ as a list.
 Fusion Fundamentals | Chapter 13 Bins **337**
 
 
+
+
+--- end of page=336 ---
+
 Each bin in the sidebar can be set to List view or Icon view independently of each other.
 So while you may have some bins you want to see as a list, others may be easier to
 view as icons.
@@ -16332,6 +17678,10 @@ the icon size in the bin.
 
 Fusion Fundamentals | Chapter 13 Bins **338**
 
+
+
+
+--- end of page=337 ---
 
 #### **Organizing Bins**
 
@@ -16374,6 +17724,10 @@ You can also click the New Folder icon in the toolbar.
 Fusion Fundamentals | Chapter 13 Bins **339**
 
 
+
+
+--- end of page=338 ---
+
 Drag a folder from the Contents panel to move it in the sidebar.
 
 
@@ -16414,6 +17768,10 @@ Add Item in the contextual menu
 
 Fusion Fundamentals | Chapter 13 Bins **340**
 
+
+
+
+--- end of page=339 ---
 
 **To remove an item from the bins:**
 
@@ -16467,6 +17825,10 @@ with a DSLR. The numbers maybe sequential, but you just need one still image fro
 Fusion Fundamentals | Chapter 13 Bins **341**
 
 
+
+
+--- end of page=340 ---
+
 ###### **Using Content from Bins**
 
 Once you have content in your bins, you’ll want to add them to a composition. In general, you can
@@ -16515,6 +17877,10 @@ Jog and Shuttle contextual menu
 
 Fusion Fundamentals | Chapter 13 Bins **342**
 
+
+
+
+--- end of page=341 ---
 
 Shuttle mode begins playing the clip forward or backward once you press the right mouse
 button and drag either left or right. The clip continues to play until the mouse button is
@@ -16580,6 +17946,10 @@ access the same projects simultaneously.
 Fusion Fundamentals | Chapter 13 Bins **343**
 
 
+
+
+--- end of page=342 ---
+
   - Remote sync allows multiple Studio Players to follow the master. Actions performed on the
 master, such as playback and scrubbing, will also be executed on the slaves, allowing the
 reel to be reviewed across multiple workstations or sites.
@@ -16620,6 +17990,10 @@ You can quickly preview the clip by scrubbing through it rather than playing it.
 
 Fusion Fundamentals | Chapter 13 Bins **344**
 
+
+
+
+--- end of page=343 ---
 
 Closing the Studio Player
 
@@ -16677,6 +18051,10 @@ Individual clip color controls can also be applied using another menu.
 Fusion Fundamentals | Chapter 13 Bins **345**
 
 
+
+
+--- end of page=344 ---
+
  - **Video:** Outputs the image to Blackmagic Design DeckLink and UltraStudio devices.
 
  - **Transport controls:** Used to play forward, backward, fast forward, and fast backward, as well as go
@@ -16722,6 +18100,10 @@ has three versions, the second shot has one version, and the last clip has two v
 Fusion Fundamentals | Chapter 13 Bins **346**
 
 
+
+
+--- end of page=345 ---
+
 Clip versions are visible by the number in the lower right and
 graphically represented by the number of stacked icons.
 
@@ -16756,6 +18138,10 @@ The Shot menu lets you modify the clip in the player.
 Fusion Fundamentals | Chapter 13 Bins **347**
 
 
+
+
+--- end of page=346 ---
+
 - **Trim:** Opens the Trim dialog to adjust the clip In point and Out point on the Timeline.
 
 - **Notes:** Opens the Notes window to the right of the interface, allowing you to add a note to the
@@ -16781,6 +18167,10 @@ The naming is from the bin login name and computer name.
 Fusion Fundamentals | Chapter 13 Bins **348**
 
 
+
+
+--- end of page=347 ---
+
 Guides
 
 You can assign customizable guide overlays to three Guide buttons along the bottom of the Studio
@@ -16796,6 +18186,10 @@ guide overlays in the viewer.
 
 Fusion Fundamentals | Chapter 13 Bins **349**
 
+
+
+
+--- end of page=348 ---
 
 Guides can be customized and placed in the Guides folder:
 
@@ -16872,6 +18266,10 @@ VLine { X1=”5%” },
 Fusion Fundamentals | Chapter 13 Bins **350**
 
 
+
+
+--- end of page=349 ---
+
 HLine { Y1=”50%”, Pattern = 0xF0F0, Color = { R =
 1.0, G = 0.75, B = 0.05, A=1.0 } },
 
@@ -16943,6 +18341,10 @@ without any fill.
 Fusion Fundamentals | Chapter 13 Bins **351**
 
 
+
+
+--- end of page=350 ---
+
 #### **Connecting Bins Over a Network**
 
 You can share bins among computers running Fusion on the network so that multiple visual effects
@@ -16966,6 +18368,10 @@ deleted from the list.
 
 Fusion Fundamentals | Chapter 13 Bins **352**
 
+
+
+
+--- end of page=351 ---
 
 #### **Adding a Remote Bin Entry**
 
@@ -17008,6 +18414,10 @@ administer the bins.
 Fusion Fundamentals | Chapter 13 Bins **353**
 
 
+
+
+--- end of page=352 ---
+
 ###### **Studio Player and Bin Server**
 
 Reel projects can be shared by multiple artists across the studio via the bin server system, reviewing
@@ -17031,6 +18441,10 @@ causing playback to follow the master.
 
 Fusion Fundamentals | Chapter 13 Bins **354**
 
+
+
+
+--- end of page=353 ---
 
 #### **Chapter 14**
 ### Fusion Connect
@@ -17098,6 +18512,10 @@ Environment Variables��������������������
 Fusion Fundamentals | Chapter 14 Fusion Connect **355**
 
 
+
+
+--- end of page=354 ---
+
 #### **Fusion Connect Overview**
 
 Fusion Connect is an AVX2 plug-in for Avid Media Composer. It allows editors to create a conduit
@@ -17137,6 +18555,10 @@ Blackmagic category and Fusion Connect AVX plug-in.
 
 Fusion Fundamentals | Chapter 14 Fusion Connect **356**
 
+
+
+
+--- end of page=355 ---
 
 #### **The Layer Input Dialog**
 
@@ -17182,6 +18604,10 @@ Media Composer installed.
 Fusion Fundamentals | Chapter 14 Fusion Connect **357**
 
 
+
+
+--- end of page=356 ---
+
 When using Fusion on the same computer as Media Composer, there is no need to export the clips
 explicitly by checking the Export Clips checkbox. Without this option enabled, Fusion Connect saves
 the source frames each time images are displayed, scrubbed, or played back from the Timeline.
@@ -17212,6 +18638,10 @@ Fusion Connect AVX2 plug-in is applied.
 
 Fusion Fundamentals | Chapter 14 Fusion Connect **358**
 
+
+
+
+--- end of page=357 ---
 
 ###### **Browse for Location**
 
@@ -17261,6 +18691,10 @@ Studio on a separate computer than the one running the Media Composer software.
 
 Fusion Fundamentals | Chapter 14 Fusion Connect **359**
 
+
+
+
+--- end of page=358 ---
 
 #### **Versioning**
 
@@ -17316,6 +18750,10 @@ can reside on any other computer.
 Fusion Fundamentals | Chapter 14 Fusion Connect **360**
 
 
+
+
+--- end of page=359 ---
+
 The following diagram shows typical workflows for manual and automatic renders.
 
 
@@ -17368,6 +18806,10 @@ Avid/Fusion layer to comp relationship for auto and manual renders
 Fusion Fundamentals | Chapter 14 Fusion Connect **361**
 
 
+
+
+--- end of page=360 ---
+
 Once the initial trip from Avid to Fusion is complete, depending on the type of clip to which you
 assigned the effect, in Fusion Studio you will be presented with one of the following:
 
@@ -17408,6 +18850,10 @@ imaging within the composition as Fusion is resolution independent.
 Fusion Fundamentals | Chapter 14 Fusion Connect **362**
 
 
+
+
+--- end of page=361 ---
+
 Fusion Connect AVX uses frame rate and resolution from the Media Composer Timeline.
 
 ###### **Rendering with Fusion**
@@ -17430,6 +18876,10 @@ but is overwritten to avoid multiple copies of identical media.
 Fusion Fundamentals | Chapter 14 Fusion Connect **363**
 
 
+
+
+--- end of page=362 ---
+
 If you apply the effect to a transition, the naming behavior might be somewhat different.
 
 By default, Media Composer refers to the two clips of a transition as “Clip_001” and “Clip_002”. Based
@@ -17440,6 +18890,10 @@ will be incremented automatically.
 
 Fusion Fundamentals | Chapter 14 Fusion Connect **364**
 
+
+
+
+--- end of page=363 ---
 
 Likewise, “_001” will be added incrementally to the group folder name, if a folder of that name already
 exists. The corresponding comp file will be named accordingly.
@@ -17476,6 +18930,10 @@ using environment variables.
 
 Fusion Fundamentals | Chapter 14 Fusion Connect **365**
 
+
+
+
+--- end of page=364 ---
 
 ###### **Configuring Paths on Windows**
 
@@ -17516,6 +18974,10 @@ macOS and Windows are described in the following table:
 
 Fusion Fundamentals | Chapter 14 Fusion Connect **366**
 
+
+
+
+--- end of page=365 ---
 
 ###### **Environment Variables**
 
@@ -17579,6 +19041,10 @@ macOS Terminal and restart the Media Composer.
 Fusion Fundamentals | Chapter 14 Fusion Connect **367**
 
 
+
+
+--- end of page=366 ---
+
 Other values you can control derived from your Avid Bin include:
 
 |Values|Description|
@@ -17605,6 +19071,10 @@ Windows environment user variable editor
 
 Fusion Fundamentals | Chapter 14 Fusion Connect **368**
 
+
+
+
+--- end of page=367 ---
 
 #### **Chapter 15**
 ### Preferences
@@ -17688,6 +19158,10 @@ Customizing Preferences�������������������
 Fusion Fundamentals | Chapter 15 Preferences **369**
 
 
+
+
+--- end of page=368 ---
+
 #### **Preferences Overview**
 
 The Preferences window provides a wide variety of optional settings available for you to configure
@@ -17731,6 +19205,10 @@ open but not displayed.
 Fusion Fundamentals | Chapter 15 Preferences **370**
 
 
+
+
+--- end of page=369 ---
+
 #### **Categories of Preferences**
 
 The first entry in the Preferences sidebar is assigned to the Global preferences. Clicking the Global
@@ -17767,6 +19245,10 @@ menu, like settings for Tile picture, the Navigator, and pipe style.
 
 Fusion Fundamentals | Chapter 15 Preferences **371**
 
+
+
+
+--- end of page=370 ---
 
 Frame Format
 
@@ -17837,6 +19319,10 @@ use for editing scripts, and the default Python version to use.
 Fusion Fundamentals | Chapter 15 Preferences **372**
 
 
+
+
+--- end of page=371 ---
+
 Spline Editor
 
 The Spline Editor preferences allow you to set various spline options for Autosnap behavior, handles,
@@ -17901,6 +19387,10 @@ from an EDL.
 Fusion Fundamentals | Chapter 15 Preferences **373**
 
 
+
+
+--- end of page=372 ---
+
 #### **Preferences In Depth**
 
 Within each category is a deep set of controls for configuring Fusion so that it better fits your working
@@ -17934,6 +19424,10 @@ appears too small compared to the size of your geometry.
 
 Fusion Fundamentals | Chapter 15 Preferences **374**
 
+
+
+
+--- end of page=373 ---
 
 Perspective Views
 
@@ -17998,6 +19492,10 @@ Rate To option is selected.
 Fusion Fundamentals | Chapter 15 Preferences **375**
 
 
+
+
+--- end of page=374 ---
+
 ###### **Defaults**
 
 The choices made here are used to determine Fusion’s behavior when new tools are added to the
@@ -18042,6 +19540,10 @@ Flow area.
 Fusion Fundamentals | Chapter 15 Preferences **376**
 
 
+
+
+--- end of page=375 ---
+
 Global Range
 
 Using the Start and End fields, you can define the Global Start and End frames used when creating
@@ -18072,6 +19574,10 @@ just Source and Mask tools.
 
 Fusion Fundamentals | Chapter 15 Preferences **377**
 
+
+
+
+--- end of page=376 ---
 
 When All is enabled, the picture shown will either be a thumbnail of the image rendered by the tool
 if the tool has rendered, or if the Show Thumbnails option is disabled, the tool’s default icon is used.
@@ -18144,6 +19650,10 @@ composition is created.
 Fusion Fundamentals | Chapter 15 Preferences **378**
 
 
+
+
+--- end of page=377 ---
+
 Pipe Grab Distance
 
 The Pipe Grab Distance slider allows you to choose how close the pointer must be (in pixels) to a
@@ -18184,6 +19694,10 @@ button and enter a name for the setting in the dialog box that appears and enter
 
 Fusion Fundamentals | Chapter 15 Preferences **379**
 
+
+
+
+--- end of page=378 ---
 
 Settings
 
@@ -18256,6 +19770,10 @@ launched. This has no effect in DaVinci Resolve’s Fusion page.
 Fusion Fundamentals | Chapter 15 Preferences **380**
 
 
+
+
+--- end of page=379 ---
+
 The General preferences
 
 
@@ -18296,6 +19814,10 @@ figure out adjustments a bit easier.
 
 Fusion Fundamentals | Chapter 15 Preferences **381**
 
+
+
+
+--- end of page=380 ---
 
 Auto Save
 
@@ -18360,6 +19882,10 @@ drivers are installed.
 Fusion Fundamentals | Chapter 15 Preferences **382**
 
 
+
+
+--- end of page=381 ---
+
 The GPU preferences
 
 
@@ -18395,6 +19921,10 @@ layout, size, and position of various windows in Fusion’s interface at startup
 
 Fusion Fundamentals | Chapter 15 Preferences **383**
 
+
+
+
+--- end of page=382 ---
 
 There are a lot of options, but in practice, you simply organize the interface the way you prefer it on
 startup and when a new composition is created, then open this Preferences panel and click on the
@@ -18435,6 +19965,10 @@ below will be recalled when a saved composition is loaded.
 Fusion Fundamentals | Chapter 15 Preferences **384**
 
 
+
+
+--- end of page=383 ---
+
  - **Grab Document Layout:** Pressing this button stores the entire interface setup, including all the
 internal positions and sizes of panels and work areas.
 
@@ -18470,6 +20004,10 @@ The Loader preferences
 
 Fusion Fundamentals | Chapter 15 Preferences **385**
 
+
+
+
+--- end of page=384 ---
 
 Defaults
 
@@ -18534,6 +20072,10 @@ or a Windows Explorer window.
 Fusion Fundamentals | Chapter 15 Preferences **386**
 
 
+
+
+--- end of page=385 ---
+
 ###### **Memory**
 
 The Memory preferences are only available in Fusion Studio. To control Fusion’s memory when using
@@ -18570,6 +20112,10 @@ The Memory preferences
 Fusion Fundamentals | Chapter 15 Preferences **387**
 
 
+
+
+--- end of page=386 ---
+
 Interactive Render
 
 The Interactive Render option allows you to optimize Fusion’s processing based on the amount of
@@ -18601,6 +20147,10 @@ The Network preferences
 
 Fusion Fundamentals | Chapter 15 Preferences **388**
 
+
+
+
+--- end of page=387 ---
 
 Submit Network Render Compositions
 
@@ -18662,6 +20212,10 @@ _[Nodes,”](https://www.blackmagicdesign.com/au/support/family/davinci-resolve-
 Fusion Fundamentals | Chapter 15 Preferences **389**
 
 
+
+
+--- end of page=388 ---
+
 ###### **Path Maps**
 
 Path Maps are virtual paths used to replace segments of file paths with variables. For example, define
@@ -18690,6 +20244,10 @@ The Path Map preferences
 
 Fusion Fundamentals | Chapter 15 Preferences **390**
 
+
+
+
+--- end of page=389 ---
 
 As with other preferences in Fusion Studio, paths maps are available in both Global and Composition
 preferences. Global preferences are applied to all new compositions, while Composition path maps
@@ -18764,6 +20322,10 @@ location can be overridden in the Cache to Disk window.
 Fusion Fundamentals | Chapter 15 Preferences **391**
 
 
+
+
+--- end of page=390 ---
+
 **Edit templates:** The location where Fusion macros are saved in order to appear as templates in
 the DaVinci Resolve Effects Library.
 
@@ -18833,6 +20395,10 @@ Loaders instead of actual file paths.
 Fusion Fundamentals | Chapter 15 Preferences **392**
 
 
+
+
+--- end of page=391 ---
+
 Modifying a System Path Map
 
 To modify an existing System path map, select the path map in the System section. Click the folder
@@ -18880,6 +20446,10 @@ The Preview preferences
 Fusion Fundamentals | Chapter 15 Preferences **393**
 
 
+
+
+--- end of page=392 ---
+
 Options
 
  - **Render Previews Using Proxy Scaling:** When checked, this option scales down the images to the
@@ -18918,6 +20488,10 @@ Higher values produce clearer images but larger files. Not all codecs support th
 
 Fusion Fundamentals | Chapter 15 Preferences **394**
 
+
+
+
+--- end of page=393 ---
 
  - **Key Frame Every X Frames:** When checked, the codec will create key frames at specified
 intervals. Key frames are not compressed in conjunction with previous frames and are, therefore,
@@ -18959,6 +20533,10 @@ the script.
 
 Fusion Fundamentals | Chapter 15 Preferences **395**
 
+
+
+
+--- end of page=394 ---
 
 Options
 
@@ -19003,6 +20581,10 @@ submenu when right-clicking in the Spline Editor graph.
 
 Fusion Fundamentals | Chapter 15 Preferences **396**
 
+
+
+
+--- end of page=395 ---
 
  - **Autosnap Points:** When moving points in the Spline Editor, these will snap to the fields or frames
 or can be moved freely. This option is also available via the Options submenu when right-clicking
@@ -19049,6 +20631,10 @@ The Splines preferences
 Fusion Fundamentals | Chapter 15 Preferences **397**
 
 
+
+
+--- end of page=396 ---
+
  - **Autosmooth:** Automatically smooths out any newly created points or key frames on the splines
 selected in this section. You can choose to automatically smooth animation splines, B-Splines,
 polyline matte shapes, LUTs, paths, and meshes.
@@ -19086,6 +20672,10 @@ default options for the Keyframes Editor.
 The Timeline preferences
 Fusion Fundamentals | Chapter 15 Preferences **398**
 
+
+
+
+--- end of page=397 ---
 
 Filter/Filter to Use
 
@@ -19156,6 +20746,10 @@ wait for a render salve to respond before using another render slave.
 Fusion Fundamentals | Chapter 15 Preferences **399**
 
 
+
+
+--- end of page=398 ---
+
 The Tweaks preferences
 
 
@@ -19186,6 +20780,10 @@ less responsive it will be to changes that require disk access interactively.
 
 Fusion Fundamentals | Chapter 15 Preferences **400**
 
+
+
+
+--- end of page=399 ---
 
 Area Sampling
 
@@ -19255,6 +20853,10 @@ this to flt16 or int.
 Fusion Fundamentals | Chapter 15 Preferences **401**
 
 
+
+
+--- end of page=400 ---
+
  - **Auto Detect Graphics Memory (MB):** Having Fusion open alongside other OpenGL programs
 like 3D animation software can lead to a shortage of graphics memory. In those cases, you can
 manually reduce the amount of memory Fusion is allowed to use on the card. Setting this too low
@@ -19286,6 +20888,10 @@ This group of checkboxes manages how the controls in the Inspector are displayed
 
 Fusion Fundamentals | Chapter 15 Preferences **402**
 
+
+
+
+--- end of page=401 ---
 
  - **Auto Control Open:** When disabled, only the header of the selected node is displayed in the
 Inspector. You must double-click the header to display the parameters. When enabled, the
@@ -19342,6 +20948,10 @@ zoom a panel when using a trackpad or middle mouse wheel.
 Fusion Fundamentals | Chapter 15 Preferences **403**
 
 
+
+
+--- end of page=402 ---
+
 ###### **Video Monitoring**
 
 This setting is only available in Fusion Studio. Control over video hardware for the Fusion Page is
@@ -19374,6 +20984,10 @@ luminance level your HDMI connected HDR display is capable of.
 Fusion Fundamentals | Chapter 15 Preferences **404**
 
 
+
+
+--- end of page=403 ---
+
 Stereo Mode
 
 This group of settings configures the output hardware for displaying stereo 3D content.
@@ -19400,6 +21014,10 @@ The View preferences
 
 Fusion Fundamentals | Chapter 15 Preferences **405**
 
+
+
+
+--- end of page=404 ---
 
 Saved View Settings
 
@@ -19471,6 +21089,10 @@ as well as the video layout of the 360° view.
 Fusion Fundamentals | Chapter 15 Preferences **406**
 
 
+
+
+--- end of page=405 ---
+
 The VR Headsets preferences
 
 
@@ -19513,6 +21135,10 @@ comp is displayed in a VR headset.
 Fusion Fundamentals | Chapter 15 Preferences **407**
 
 
+
+
+--- end of page=406 ---
+
 3D
 
 Similar to normal viewer options for 3D comps, these preferences control how a 3D comp is displayed
@@ -19551,6 +21177,10 @@ The Bins Security preferences
 
 Fusion Fundamentals | Chapter 15 Preferences **408**
 
+
+
+
+--- end of page=407 ---
 
 Users List
 
@@ -19598,6 +21228,10 @@ The Bin Servers preferences
 Fusion Fundamentals | Chapter 15 Preferences **409**
 
 
+
+
+--- end of page=408 ---
+
 Servers
 
 This dialog lists the servers that are currently in the connection list. You can select one of the entries
@@ -19644,6 +21278,10 @@ The Bins Settings preferences
 Fusion Fundamentals | Chapter 15 Preferences **410**
 
 
+
+
+--- end of page=409 ---
+
 Stamp Quality
 
 The Stamp Quality is a percentage slider that determines the compression ratio used for Stamp
@@ -19676,6 +21314,10 @@ The EDL Import preferences
 
 Fusion Fundamentals | Chapter 15 Preferences **411**
 
+
+
+
+--- end of page=410 ---
 
 Flow Format
 
@@ -19720,6 +21362,10 @@ dialog; and in the Spline editor, it will fit the splines to the window.
 Fusion Fundamentals | Chapter 15 Preferences **412**
 
 
+
+
+--- end of page=411 ---
+
 On the right is a hierarchy tree of each section of Fusion and a list of currently set hotkeys.
 By choosing New or Edit, another dialog will appear, which will give specific control over
 that hotkey.
@@ -19762,6 +21408,10 @@ sure the FUSION_PROFILE is set to the name of the logged in user.
 Fusion Fundamentals | Chapter 15 Preferences **413**
 
 
+
+
+--- end of page=412 ---
+
 Creating a Master Preferences File
 
 When working with multiple Fusion users in a studio, you may want to standardize on a few settings.
@@ -19782,6 +21432,10 @@ and override any other preferences. Locked preferences cannot be altered by the 
 
 Fusion Fundamentals | Chapter 15 Preferences **414**
 
+
+
+
+--- end of page=413 ---
 
 ## 2D Compositing
 
@@ -19806,6 +21460,10 @@ CONTENTS
 
 24 Using Open FX, Resolve FX, and Fuse Plugins��������������������������������������������������������������������������� 594
 
+
+
+
+--- end of page=414 ---
 
 #### **Chapter 16**
 ### Controlling Image Processing and Resolution
@@ -19850,6 +21508,10 @@ Advantages of Floating-Point Processing��������������
 
 2D Compositing | Chapter 16 Controlling Image Processing and Resolution **416**
 
+
+
+
+--- end of page=415 ---
 
 #### **Fusion’s Place in the DaVinci Resolve** **Image-Processing Pipeline**
 
@@ -19909,6 +21571,10 @@ described as follows:
 2D Compositing | Chapter 16 Controlling Image Processing and Resolution **417**
 
 
+
+
+--- end of page=416 ---
+
 ###### **Forcing Effects into the Fusion Page**
 
 There is a way you can force clips with Edit page Inspector adjustments, plugins, retiming, and Color
@@ -19960,6 +21626,10 @@ Fusion page effects applied.
 2D Compositing | Chapter 16 Controlling Image Processing and Resolution **418**
 
 
+
+
+--- end of page=417 ---
+
 #### **Managing Resolution In Fusion**
 
 There is no formal resolution for a comp in Fusion.
@@ -20009,6 +21679,10 @@ image size.
 2D Compositing | Chapter 16 Controlling Image Processing and Resolution **419**
 
 
+
+
+--- end of page=418 ---
+
 **TIP:** To change resolution and reposition a frame without changing the pixel
 resolution of a clip, use the Transform node.
 
@@ -20032,6 +21706,10 @@ However, all the pixels of the larger foreground are available for repositioning
 
 2D Compositing | Chapter 16 Controlling Image Processing and Resolution **420**
 
+
+
+
+--- end of page=419 ---
 
 ###### **Downscale Clip Compositions to Timeline Resolution**
 
@@ -20125,6 +21803,10 @@ Fusion timeline sizing for Fusion and Compound clips
 2D Compositing | Chapter 16 Controlling Image Processing and Resolution **421**
 
 
+
+
+--- end of page=420 ---
+
 #### **Color Bit Depths**
 
 The term _bit depth_ describes how many colors are available in the color palette used to make up an
@@ -20171,6 +21853,10 @@ memory and processing requirements.
 2D Compositing | Chapter 16 Controlling Image Processing and Resolution **422**
 
 
+
+
+--- end of page=421 ---
+
 ###### **Setting Color Depth in Fusion Studio**
 
 As we said earlier, DaVinci Resolve always processes at 32-bit float bits per channel; however, you can
@@ -20210,6 +21896,10 @@ The Frame Format Color Depth settings
 2D Compositing | Chapter 16 Controlling Image Processing and Resolution **423**
 
 
+
+
+--- end of page=422 ---
+
 If you aren’t sure what the color depth process is for a tool, you can position the pointer over the
 node’s tile in the Node Editor, and a tooltip listing the color depth for that node will appear on the
 Status bar.
@@ -20248,6 +21938,10 @@ applied to an image.
 
 2D Compositing | Chapter 16 Controlling Image Processing and Resolution **424**
 
+
+
+
+--- end of page=423 ---
 
 If you have an 8-bit pixel with a red value of 75 (dark red) and that pixel is halved using a
 Color Correction tool, the pixel’s red value is now 37.5. Since you cannot store decimal or
@@ -20301,6 +21995,10 @@ for you to determine the overall dynamic range of an image.
 2D Compositing | Chapter 16 Controlling Image Processing and Resolution **425**
 
 
+
+
+--- end of page=424 ---
+
 Clipping Out-of-Range Values
 
 When processing in floating point, there may be situations where the out-of-range values in an image
@@ -20316,6 +22014,10 @@ need to be clipped. The Brightness/Contrast tool provides checkboxes that can be
 
 2D Compositing | Chapter 16 Controlling Image Processing and Resolution **426**
 
+
+
+
+--- end of page=425 ---
 
 #### **Chapter 17**
 ### Managing Color for Visual Effects
@@ -20348,6 +22050,10 @@ Applying OCIO LUTs in the Viewer����������������
 
 2D Compositing | Chapter 17 Managing Color for Visual Effects **427**
 
+
+
+
+--- end of page=426 ---
 
 #### **Color Management**
 
@@ -20383,6 +22089,10 @@ A clip displayed with a nonlinear, log gamma curve (left) and corrected in the v
 
 2D Compositing | Chapter 17 Managing Color for Visual Effects **428**
 
+
+
+
+--- end of page=427 ---
 
 ###### **All Compositing Is Math**
 
@@ -20431,6 +22141,10 @@ your target output format.
 2D Compositing | Chapter 17 Managing Color for Visual Effects **429**
 
 
+
+
+--- end of page=428 ---
+
 ###### **Converting to Linear Gamma**
 
 Whether an image comes from the Edit page in DaVinci Resolve, or from a Loader in Fusion Studio,
@@ -20472,6 +22186,10 @@ the Output Space controls.
 2D Compositing | Chapter 17 Managing Color for Visual Effects **430**
 
 
+
+
+--- end of page=429 ---
+
 Add a Gamut tool to convert gamma curves
 to linear based on color space.
 
@@ -20495,6 +22213,10 @@ enabled, to format the output of the Gamut node for your final output.
 
 2D Compositing | Chapter 17 Managing Color for Visual Effects **431**
 
+
+
+
+--- end of page=430 ---
 
 Output Space is used to convert from linear gamma.
 
@@ -20524,6 +22246,10 @@ and Loader nodes into linear.
 2D Compositing | Chapter 17 Managing Color for Visual Effects **432**
 
 
+
+
+--- end of page=431 ---
+
 ###### **Applying LUTs to a Viewer**
 
 Images converted to a linear gamma don’t look correct. They usually look very dark, with extremely
@@ -20543,6 +22269,10 @@ A clip displayed with a nonlinear, log gamma curve (left) and the clip transform
 
 2D Compositing | Chapter 17 Managing Color for Visual Effects **433**
 
+
+
+
+--- end of page=432 ---
 
 **To preview the images in the viewer using sRGB or Rec. 709 color space:**
 
@@ -20584,6 +22314,10 @@ _[DaVinci Resolve 20.3 Reference Manual](https://www.blackmagicdesign.com/suppor
 
 2D Compositing | Chapter 17 Managing Color for Visual Effects **434**
 
+
+
+
+--- end of page=433 ---
 
 #### **Using Resolve Color Management**
 
@@ -20641,6 +22375,10 @@ based on the RCM output color space.
 2D Compositing | Chapter 17 Managing Color for Visual Effects **435**
 
 
+
+
+--- end of page=434 ---
+
 For more information on Resolve Color Management, see Chapter 9, “Data Levels, Color
 Management, and ACES,” in the _[DaVinci Resolve 20.3 Reference Manual](https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion)_
 
@@ -20681,6 +22419,10 @@ to linear, so whoever does the grading has more of a reason to choose one or the
 
 2D Compositing | Chapter 17 Managing Color for Visual Effects **436**
 
+
+
+
+--- end of page=435 ---
 
 **ACEScc:** Choose ACEScc color science to apply a standard Cineon style log encoding to the
 ACES data before it is processed by DaVinci Resolve.
@@ -20739,6 +22481,10 @@ OCIO Color Space nodes can be used to work in an ACES color managed environment.
 2D Compositing | Chapter 17 Managing Color for Visual Effects **437**
 
 
+
+
+--- end of page=436 ---
+
 Within the Inspector for OCIO Color Space node, Fusion includes default Source and Output
 transforms for standard color spaces. However, to use the full OCIO standard, you’ll need to download
 and install the OCIO config file. You can download the config file from the OCIO website.
@@ -20773,6 +22519,10 @@ the Viewer LUT menu in Fusion Studio.
 
 2D Compositing | Chapter 17 Managing Color for Visual Effects **438**
 
+
+
+
+--- end of page=437 ---
 
 By default, the same standard options are available in the View LUT. However, clicking the Browse
 button allows you to load the same config file you loaded into the OCIO Color Space node. Once
@@ -20814,6 +22564,10 @@ viewer is preconfigured based on the saved defaults.
 
 2D Compositing | Chapter 17 Managing Color for Visual Effects **439**
 
+
+
+
+--- end of page=438 ---
 
 #### **Chapter 18**
 ### Understanding Image Channels
@@ -20877,6 +22631,10 @@ Creating Auxiliary Channels in Fusion��������������
 
 2D Compositing | Chapter 18 Understanding Image Channels **440**
 
+
+
+
+--- end of page=439 ---
 
 #### **Channels in Fusion**
 
@@ -20942,6 +22700,10 @@ auxiliary channels.
 2D Compositing | Chapter 18 Understanding Image Channels **441**
 
 
+
+
+--- end of page=440 ---
+
 The reason to use auxiliary data is that 3D rendering is computationally expensive and time-consuming,
 so outputting descriptive information about a 3D image that’s been rendered empowers compositing
 artists to make sophisticated alterations in 2D. You can add motion blur, perform relighting, and
@@ -20990,6 +22752,10 @@ sparkly highlight effect.
 2D Compositing | Chapter 18 Understanding Image Channels **442**
 
 
+
+
+--- end of page=441 ---
+
 MediaIn node connected to a Highlight node connected to MediaOut node in the Fusion page.
 
 
@@ -21025,6 +22791,10 @@ Polygon node connected to the GarbageMatte input of a MatteControl node for roto
 2D Compositing | Chapter 18 Understanding Image Channels **443**
 
 
+
+
+--- end of page=442 ---
+
 In another example, the DeltaKeyer node has a primary input (labeled “Input”) that accepts RGBA
 channels, but it also has three Matte inputs. These SolidMatte, GarbageMatte, and EffectsMask inputs
 on the Delta Keyer accept alpha or mask channels to modify the matte being extracted from the image
@@ -21056,6 +22826,10 @@ Side by side, dropping a connection on a node’s body to connect to that node�
 
 2D Compositing | Chapter 18 Understanding Image Channels **444**
 
+
+
+
+--- end of page=443 ---
 
 However, if you drop a connection line right on top of a specific input, then you’ll connect to that
 input, so it’s important to be mindful of where you drop connection lines as you wire up different node
@@ -21101,6 +22875,10 @@ background inputs are always orange, and foreground inputs are always green.
 2D Compositing | Chapter 18 Understanding Image Channels **445**
 
 
+
+
+--- end of page=444 ---
+
 When you first connect any node’s output to a multi-input node, you usually want to connect the
 background input first. This is handled for you automatically when you first drop a connection line onto
 the body of a new multi-input node. The orange-colored background input is almost always connected
@@ -21141,6 +22919,10 @@ and may optionally output auxiliary channels for doing advanced compositing oper
 
 2D Compositing | Chapter 18 Understanding Image Channels **446**
 
+
+
+
+--- end of page=445 ---
 
 Because these are sources of images, both kinds of nodes can be attached to a wide variety of
 other nodes for effects creation besides just 2D nodes. For example, you can also connect MediaIn
@@ -21212,6 +22994,10 @@ be affected by a particular node operation (Effects masks).
 2D Compositing | Chapter 18 Understanding Image Channels **447**
 
 
+
+
+--- end of page=446 ---
+
 #### **Using Channels in a Composition**
 
 When you connect one node’s Output to another node’s Input, you feed all of the channels that are
@@ -21232,6 +23018,10 @@ connected to a Vortex node; note how this auxiliary channel warps along with the
 
 2D Compositing | Chapter 18 Understanding Image Channels **448**
 
+
+
+
+--- end of page=447 ---
 
 This is appropriate because in most cases, you want to make sure that all channels are transformed,
 warped, or adjusted together. You wouldn’t want to shrink the image without also shrinking the alpha
@@ -21267,6 +23057,10 @@ a Transform node, so only the Green channel is affected
 
 2D Compositing | Chapter 18 Understanding Image Channels **449**
 
+
+
+
+--- end of page=448 ---
 
 Skipping Channel Processing
 
@@ -21313,6 +23107,10 @@ input of a MediaIn or Loader node.
 2D Compositing | Chapter 18 Understanding Image Channels **450**
 
 
+
+
+--- end of page=449 ---
+
 In both cases, you can see how the node tree’s ability to carry a single channel or multiple
 channels of image data over a single connection line simplifies the compositing process.
 
@@ -21355,6 +23153,10 @@ other intersection operations to create a very specific blend of the two.
 
 2D Compositing | Chapter 18 Understanding Image Channels **451**
 
+
+
+
+--- end of page=450 ---
 
 The following nodes are used to re-combine channels in different ways:
 
@@ -21409,6 +23211,10 @@ A RGB image (left) and its alpha channel (right)
 2D Compositing | Chapter 18 Understanding Image Channels **452**
 
 
+
+
+--- end of page=451 ---
+
 Non-premultiplied images, sometimes called “straight” alpha channels, have RGB channels that are
 unaltered (not multiplied) by the alpha channel. The result is that the RGB image has no anti-aliased
 edges and no semi-transparency. It’s usually obvious where the RGB image ends and the alpha matte
@@ -21450,6 +23256,10 @@ fully opaque.
 
 2D Compositing | Chapter 18 Understanding Image Channels **453**
 
+
+
+
+--- end of page=452 ---
 
  - **RGB Pixel value x 0.3 = A different color:** Along the edges of an alpha channel are gray pixels,
 indicating semi-transparency. These semi-transparent pixels have a value falling somewhere
@@ -21495,6 +23305,10 @@ premultiplied edges in an additive Merge (right)
 2D Compositing | Chapter 18 Understanding Image Channels **454**
 
 
+
+
+--- end of page=453 ---
+
 **TIP:** When an RGB image and a Mask node are combined using, for instance, a Matte
 Control node, if the RGB image is not multiplied by the mask in the Matte control, the
 checkerboard background pattern in the viewer will appear only semi-transparent when it
@@ -21535,6 +23349,10 @@ premultiplied image with correct edges (right)
 
 2D Compositing | Chapter 18 Understanding Image Channels **455**
 
+
+
+
+--- end of page=454 ---
 
 Premultiplied Alpha Channels and Filtering
 
@@ -21588,6 +23406,10 @@ to control premultiplication before and after such an adjustment manually.
 2D Compositing | Chapter 18 Understanding Image Channels **456**
 
 
+
+
+--- end of page=455 ---
+
 A node tree with explicit Alpha Divide and Alpha Multiply nodes
 
 #### **Multi Channel Compositing**
@@ -21635,6 +23457,10 @@ handled similarly in Fusion using either method.
 2D Compositing | Chapter 18 Understanding Image Channels **457**
 
 
+
+
+--- end of page=456 ---
+
 A single MediaIn or Loader node only handles a single beauty pass since only one set of RGBA
 channels gets output per node. Setting up your composite in Fusion requires you to use a separate
 MediaIn or Loader node for each pass.
@@ -21668,6 +23494,10 @@ Multiple Loader or MediaIn nodes connect to a multi-part EXR image sequence
 2D Compositing | Chapter 18 Understanding Image Channels **458**
 
 
+
+
+--- end of page=457 ---
+
 Mapping Each Set of Beauty Passes to a Particular Node
 
 Depending on whether you’re using a MediaIn node or a Loader node, beauty passes can be mapped
@@ -21696,6 +23526,10 @@ to the channels of the MediaIn node.
 
 2D Compositing | Chapter 18 Understanding Image Channels **459**
 
+
+
+
+--- end of page=458 ---
 
 The MediaIn node’s Channels tab or the Loader’s
 Format tab provides access to individual channels.
@@ -21727,6 +23561,10 @@ combined with the Ambient Occlusion pass
 
 2D Compositing | Chapter 18 Understanding Image Channels **460**
 
+
+
+
+--- end of page=459 ---
 
 **TIP:** When using the Format tab in the Loader node, the checkbox next to each channel needs
 to be turned on for the corresponding channel to become available in the node’s output.
@@ -21764,6 +23602,10 @@ in any particular way, although in most situations a simple additive composite s
 
 2D Compositing | Chapter 18 Understanding Image Channels **461**
 
+
+
+
+--- end of page=460 ---
 
 Compositing beauty passes starts by connecting a
 background and foreground into a Merge node
@@ -21811,6 +23653,10 @@ the best results.
 
 2D Compositing | Chapter 18 Understanding Image Channels **462**
 
+
+
+
+--- end of page=461 ---
 
 Embedding Alpha into Beauty Passes
 
@@ -21866,6 +23712,10 @@ by the Renderer 3D node, by the Optical Flow node, or by the Disparity node.
 2D Compositing | Chapter 18 Understanding Image Channels **463**
 
 
+
+
+--- end of page=462 ---
+
 An RGBA 3D rendered scene that also contains auxiliary channels
 
 
@@ -21889,6 +23739,10 @@ mapped to their aux channels in a MediaIn node
 
 2D Compositing | Chapter 18 Understanding Image Channels **464**
 
+
+
+
+--- end of page=463 ---
 
 Displaying Channels in the Viewer
 
@@ -21914,6 +23768,10 @@ channels that are supported in Fusion are described below.
 
 2D Compositing | Chapter 18 Understanding Image Channels **465**
 
+
+
+
+--- end of page=464 ---
 
 Z-Depth
 
@@ -21959,6 +23817,10 @@ Lightness to the Z-Depth channel.
 2D Compositing | Chapter 18 Understanding Image Channels **466**
 
 
+
+
+--- end of page=465 ---
+
 The Depth Blur node is one of the nodes that take advantage of a Z-channel in order to create blurry
 depth-of-field simulations. To set this up, the output of the MediaIn node connects to the background
 input on the Depth Blur.
@@ -21990,6 +23852,10 @@ An image using a Z-Depth channel for blurring
 
 2D Compositing | Chapter 18 Understanding Image Channels **467**
 
+
+
+
+--- end of page=466 ---
 
 **TIP:** Z-Depth channels often contain negative values. If this causes problems, you can
 choose Normalize Color Range from the viewer’s Options menu to apply a normalization to
@@ -22041,6 +23907,10 @@ contains ObjectID controls.
 2D Compositing | Chapter 18 Understanding Image Channels **468**
 
 
+
+
+--- end of page=467 ---
+
 Material ID
 
 Most 3D applications are capable of assigning ID values to materials in a scene. Each pixel in the
@@ -22084,6 +23954,10 @@ red to U and green to V in a Channel Booleans node.
 2D Compositing | Chapter 18 Understanding Image Channels **469**
 
 
+
+
+--- end of page=468 ---
+
 X, Y, and Z Normals
 
 The X, Y, and Z Normal channels contain information about each pixel’s orientation (the direction
@@ -22116,6 +23990,10 @@ Original 2D image (left) and Normals used for relighting (right)
 
 2D Compositing | Chapter 18 Understanding Image Channels **470**
 
+
+
+
+--- end of page=469 ---
 
 XY Vector and XY BackVector
 
@@ -22160,6 +24038,10 @@ Booleans node, which then feeds the Vector Motion Blur node.
 2D Compositing | Chapter 18 Understanding Image Channels **471**
 
 
+
+
+--- end of page=470 ---
+
 World Position
 
 World Position Pass (WPP) is an auxiliary channel, sometimes referred to as Point Position, XYZ pass,
@@ -22190,6 +24072,10 @@ Combined X and Y Disparity channels
 
 2D Compositing | Chapter 18 Understanding Image Channels **472**
 
+
+
+
+--- end of page=471 ---
 
 ###### **Propagating Auxiliary Channels**
 
@@ -22237,6 +24123,10 @@ values from the image and to define the Near and Far planes of the fog’s effec
 
 2D Compositing | Chapter 18 Understanding Image Channels **473**
 
+
+
+
+--- end of page=472 ---
 
 - **Lumakeyer:** The Lumakeyer tool can be used to perform a key on the Z-Depth channel by
 selecting the Z-Depth in the channel drop-down list.
@@ -22297,6 +24187,10 @@ found in the Settings tab of that node’s controls in the Inspector.
 2D Compositing | Chapter 18 Understanding Image Channels **474**
 
 
+
+
+--- end of page=473 ---
+
 ###### **Image Formats That Support Aux Channels**
 
 Fusion supports auxiliary channel information contained in a variety of image formats. The number of
@@ -22339,6 +24233,10 @@ frames to determine likely movements of features in the image.
 
 2D Compositing | Chapter 18 Understanding Image Channels **475**
 
+
+
+
+--- end of page=474 ---
 
 #### **Chapter 19**
 ### Compositing Layers in Fusion
@@ -22395,6 +24293,10 @@ Masking a Graphic���������������������
 2D Compositing | Chapter 19 Compositing Layers in Fusion **476**
 
 
+
+
+--- end of page=475 ---
+
 #### **Applying Effects**
 
 Before we dive into multi-layered composites, let’s start by looking at some very simple effects and
@@ -22431,6 +24333,10 @@ the Effects Library as you get started.
 2D Compositing | Chapter 19 Compositing Layers in Fusion **477**
 
 
+
+
+--- end of page=476 ---
+
 ###### **Editing Parameters in the Inspector**
 
 To improve an effect, you can make an adjustment to a node’s parameters in the Inspector at the
@@ -22463,6 +24369,10 @@ The original TV effect (left), and modifications to the TV effect to make the cl
 
 2D Compositing | Chapter 19 Compositing Layers in Fusion **478**
 
+
+
+
+--- end of page=477 ---
 
 ###### **Replacing Nodes**
 
@@ -22506,6 +24416,10 @@ Entering a larger value to expand the range over which a slider will operate
 2D Compositing | Chapter 19 Compositing Layers in Fusion **479**
 
 
+
+
+--- end of page=478 ---
+
 #### **Compositing Two Clips Together**
 
 As entertaining as it is adding individual nodes to create simple effects, eventually you’ll need to
@@ -22533,6 +24447,10 @@ The Media Pool as seen in the Fusion page
 
 2D Compositing | Chapter 19 Compositing Layers in Fusion **480**
 
+
+
+
+--- end of page=479 ---
 
 ###### **Automatically Creating Merge Nodes**
 
@@ -22579,8 +24497,16 @@ alpha channels to be premultiplied. But this is something that’s easily fixed.
 2D Compositing | Chapter 19 Compositing Layers in Fusion **481**
 
 
+
+
+--- end of page=480 ---
+
 2D Compositing | Chapter 19 Compositing Layers in Fusion **482**
 
+
+
+
+--- end of page=481 ---
 
 ###### **Using Composite Modes in the Merge Node**
 
@@ -22618,6 +24544,10 @@ and small.
 
 2D Compositing | Chapter 19 Compositing Layers in Fusion **483**
 
+
+
+
+--- end of page=482 ---
 
 #### **Creating and Using Text**
 
@@ -22658,6 +24588,10 @@ for text entry, kerning, and outline controls
 2D Compositing | Chapter 19 Compositing Layers in Fusion **484**
 
 
+
+
+--- end of page=483 ---
+
 If you’re viewing the Merge, the text appears in the viewer superimposed against the background clip.
 Onscreen controls appear that let you rotate (the circle) and reposition (the red center handle and two
 arrows) the text, and we can see a faint cursor that lets us edit and kern the text using other tools in
@@ -22681,6 +24615,10 @@ down” the adjustment so that you can make smaller and more gradual adjustments
 
 2D Compositing | Chapter 19 Compositing Layers in Fusion **485**
 
+
+
+
+--- end of page=484 ---
 
 Selecting the Manual Kerning tool in the viewer toolbar (second tool from the left) reveals small red
 dots underneath each letter of text.
@@ -22709,6 +24647,10 @@ Kerning tool to manually adjust kerning
 
 2D Compositing | Chapter 19 Compositing Layers in Fusion **486**
 
+
+
+
+--- end of page=485 ---
 
 ###### **Using Text as a Mask**
 
@@ -22740,6 +24682,10 @@ connected and the text node disconnected
 
 2D Compositing | Chapter 19 Compositing Layers in Fusion **487**
 
+
+
+
+--- end of page=486 ---
 
 Using Matte Control Nodes
 
@@ -22776,6 +24722,10 @@ another node exposes a node input menu
 2D Compositing | Chapter 19 Compositing Layers in Fusion **488**
 
 
+
+
+--- end of page=487 ---
+
 One alternate method of connecting nodes together is to hold down the Option key while dragging a
 connection from one node’s output and dropping it onto the body of another node. This opens a popup menu from which you can choose the specific input you want to connect to, by name. Note that
 the menu only appears after you’ve dropped the connection on the node and released your pointing
@@ -22799,6 +24749,10 @@ the text mask filled with the image instead of cutting a hole in the image.
 
 2D Compositing | Chapter 19 Compositing Layers in Fusion **489**
 
+
+
+
+--- end of page=488 ---
 
 ###### **Using Transform Controls in the Merge Node**
 
@@ -22824,6 +24778,10 @@ The final composite
 
 2D Compositing | Chapter 19 Compositing Layers in Fusion **490**
 
+
+
+
+--- end of page=489 ---
 
 #### **Building a Simple Green-Screen Composite**
 
@@ -22858,6 +24816,10 @@ Chapter 65 in the _[DaVinci Resolve 20.3 Reference Manual](https://www.blackmagi
 2D Compositing | Chapter 19 Compositing Layers in Fusion **491**
 
 
+
+
+--- end of page=490 ---
+
 A stack of clips to use in a composite (previous page), and turning that
 stack into a Fusion clip in DaVinci Resolve’s Edit page (above)
 
@@ -22882,6 +24844,10 @@ adding the nodes we’ll need to each branch of this tree to create the green-sc
 
 2D Compositing | Chapter 19 Compositing Layers in Fusion **492**
 
+
+
+
+--- end of page=491 ---
 
 ###### **Pulling a Green-Screen Key Using the Delta Keyer**
 
@@ -22918,6 +24884,10 @@ samples the screen color
 
 2D Compositing | Chapter 19 Compositing Layers in Fusion **493**
 
+
+
+
+--- end of page=492 ---
 
 With the DeltaKeyer selected, we’ll use the Inspector controls to pull our key by quickly sampling
 the shade of green from the background of the image. To sample the green-screen color, drag the
@@ -22957,6 +24927,10 @@ primary adjustments to make.
 2D Compositing | Chapter 19 Compositing Layers in Fusion **494**
 
 
+
+
+--- end of page=493 ---
+
 After making the screen selection with the Eyedropper, try the following adjustments to
 improve the key.
 
@@ -22992,6 +24966,10 @@ Matte panel of the DeltaKeyer controls
 2D Compositing | Chapter 19 Compositing Layers in Fusion **495**
 
 
+
+
+--- end of page=494 ---
+
 With this accomplished, we’re happy with the key, so we load the Merge1 node back into the
 viewer, and press C to set the Color control of the viewer back to RGB. We can see the graphic
 in the background, but right now it’s too small to cover the whole frame, so we need to make
@@ -23022,6 +25000,10 @@ spill suppression is handled in the DeltaKeyer
 2D Compositing | Chapter 19 Compositing Layers in Fusion **496**
 
 
+
+
+--- end of page=495 ---
+
 Spill can now be handled using a color correction node placed directly after the DeltaKeyer or
 branched from the original MediaIn or Loader node and combined with a MatteControl.
 
@@ -23046,6 +25028,10 @@ A graphic of multiple logos that must be cropped down to isolate just one
 2D Compositing | Chapter 19 Compositing Layers in Fusion **497**
 
 
+
+
+--- end of page=496 ---
+
 Now, all we need to do is to use the onscreen controls of the Rectangle mask to crop the area we want
 to use, dragging the position of the mask using the center handle, and resizing it by dragging the top/
 bottom and left/right handles of the outer border.
@@ -23066,6 +25052,10 @@ the edges using the Corner Radius Inspector control
 2D Compositing | Chapter 19 Compositing Layers in Fusion **498**
 
 
+
+
+--- end of page=497 ---
+
 **NOTE:** The Resize, Letterbox, and Scale nodes also change the resolution of an image.
 
 
@@ -23079,6 +25069,10 @@ Placing the logo using the foreground input transform controls of the Merge2 nod
 
 2D Compositing | Chapter 19 Compositing Layers in Fusion **499**
 
+
+
+
+--- end of page=498 ---
 
 #### **Chapter 20**
 ### Rotoscoping with Masks
@@ -23175,6 +25169,10 @@ Publishing Specific Control Points���������������
 2D Compositing | Chapter 20 Rotoscoping with Masks **500**
 
 
+
+
+--- end of page=499 ---
+
 #### **Introduction to Masks and Polylines**
 
 Polylines are splines that are used whenever a control is animated with a motion path or when a
@@ -23216,6 +25214,10 @@ them to the Node Editor.
 
 2D Compositing | Chapter 20 Rotoscoping with Masks **501**
 
+
+
+
+--- end of page=500 ---
 
 Bitmap Masks
 
@@ -23271,6 +25273,10 @@ extended to create a smooth curve
 2D Compositing | Chapter 20 Rotoscoping with Masks **502**
 
 
+
+
+--- end of page=501 ---
+
 B-Spline Polylines
 
 A B-Spline polyline is similar to a Bézier spline; however, these polylines excel at creating smooth
@@ -23296,6 +25302,10 @@ Bézier from the spline’s contextual menu (only the appropriate option will be
 
 2D Compositing | Chapter 20 Rotoscoping with Masks **503**
 
+
+
+
+--- end of page=502 ---
 
 When converting from one type to another, the original shape is preserved. The new polyline
 generally has twice as many control points as the original shape to ensure the minimum change to the
@@ -23331,6 +25341,10 @@ directly to the specialized inputs of other nodes to limit or create different k
 
 2D Compositing | Chapter 20 Rotoscoping with Masks **504**
 
+
+
+
+--- end of page=503 ---
 
 ###### **Attaching Masks to an Image for Rotoscoping**
 
@@ -23381,6 +25395,10 @@ connect the Mask node to the MediaIn or Loader’s input, and you’re good to g
 2D Compositing | Chapter 20 Rotoscoping with Masks **505**
 
 
+
+
+--- end of page=504 ---
+
 ###### **Combining Multiple Masks**
 
 Masks are designed to be added one after the other, with each Mask node acting as an additional
@@ -23412,6 +25430,10 @@ connects to the open effect mask input.
 2D Compositing | Chapter 20 Rotoscoping with Masks **506**
 
 
+
+
+--- end of page=505 ---
+
 Effects Mask Inputs
 
 Almost every node in Fusion has an Effect mask input (colored blue), which lets you choose which
@@ -23439,6 +25461,10 @@ A Polygon node used as a mask to limit the Blur node’s effect
 
 2D Compositing | Chapter 20 Rotoscoping with Masks **507**
 
+
+
+
+--- end of page=506 ---
 
 Pre-Masking Inputs
 
@@ -23489,6 +25515,10 @@ the soft edges of the talent’s hair leaves holes in the mask of the woman’s 
 2D Compositing | Chapter 20 Rotoscoping with Masks **508**
 
 
+
+
+--- end of page=507 ---
+
 DeltaKeyer to create a solid matte for the interior of the key that can be eroded to be smaller than the
 original matte lets you fill the holes while leaving the soft edges alone. This is also sometimes known
 as a hold-out matte.
@@ -23522,6 +25552,10 @@ right-clicking on the toolbar and selecting from the options displayed in the co
 
 2D Compositing | Chapter 20 Rotoscoping with Masks **509**
 
+
+
+
+--- end of page=508 ---
 
 ###### **Selecting a Specific Polyline**
 
@@ -23581,6 +25615,10 @@ relative to the previous point. This can be very helpful when drawing regular ge
 2D Compositing | Chapter 20 Rotoscoping with Masks **510**
 
 
+
+
+--- end of page=509 ---
+
 Insert and Modify
 
 Masks, which are created in Click Append mode, automatically switch to Insert and Modify mode when
@@ -23627,6 +25665,10 @@ The Modify Only toolbar button (Shift-M)
 
 2D Compositing | Chapter 20 Rotoscoping with Masks **511**
 
+
+
+
+--- end of page=510 ---
 
 Done
 
@@ -23675,6 +25717,10 @@ but also includes more complex adjustment techniques for scale, skewing, and twi
 
 2D Compositing | Chapter 20 Rotoscoping with Masks **512**
 
+
+
+
+--- end of page=511 ---
 
 **To add or remove points from the current selection, do one of the following:**
 
@@ -23732,6 +25778,10 @@ The Smooth button in the toolbar (Shift-S)
 2D Compositing | Chapter 20 Rotoscoping with Masks **513**
 
 
+
+
+--- end of page=512 ---
+
 ###### **Linearizing a Polyline Segment**
 
 To make certain that a polyline segment is perfectly straight, that segment must be linearized. A linear
@@ -23783,6 +25833,10 @@ polyline, you must delete the node or modifier that created the polyline.
 2D Compositing | Chapter 20 Rotoscoping with Masks **514**
 
 
+
+
+--- end of page=513 ---
+
 ###### **Editing Bézier Handles**
 
 For Bézier polylines, each control point has two direction handles that adjust the slope of a curve
@@ -23828,6 +25882,10 @@ use the Next and Previous buttons that appear at the bottom of the dialog to cha
 2D Compositing | Chapter 20 Rotoscoping with Masks **515**
 
 
+
+
+--- end of page=514 ---
+
 ###### **Reduce Points**
 
 When freehand drawing a polyline or an editable paint stroke, the spline is often created using more
@@ -23865,6 +25923,10 @@ in the Polyline toolbar
 2D Compositing | Chapter 20 Rotoscoping with Masks **516**
 
 
+
+
+--- end of page=515 ---
+
 If there are selected points on the polyline when the Shape Box mode is enabled, the shape box is
 drawn around those points. Otherwise, you can drag the shape box around the area of control points
 you want to include.
@@ -23897,6 +25959,10 @@ Handles buttons in the toolbar
 
 2D Compositing | Chapter 20 Rotoscoping with Masks **517**
 
+
+
+
+--- end of page=516 ---
 
 You use these options to simplify the screen display when adjusting control points placed closely
 together and to avoid accidentally modifying controls and handles that are adjacent to the
@@ -23945,11 +26011,19 @@ shape becomes.
 2D Compositing | Chapter 20 Rotoscoping with Masks **518**
 
 
+
+
+--- end of page=517 ---
+
 A double polyline uses an inner and outer shape for non-uniform softness
 
 
 2D Compositing | Chapter 20 Rotoscoping with Masks **519**
 
+
+
+
+--- end of page=518 ---
 
 ###### **Converting a Single Polyline to a Double Polyline**
 
@@ -24001,6 +26075,10 @@ this polyline by selecting Polygon: Outer Polygon > Follow Inner Polyline from t
 
 2D Compositing | Chapter 20 Rotoscoping with Masks **520**
 
+
+
+
+--- end of page=519 ---
 
 ###### **Locking/Unlocking Point Pairs**
 
@@ -24058,6 +26136,10 @@ expose one or more specific control points on a polyline by _publishing_ them.
 2D Compositing | Chapter 20 Rotoscoping with Masks **521**
 
 
+
+
+--- end of page=520 ---
+
 Be aware that publishing a control point on a polyline removes that point from the standard
 animation spline. From that point forward, that control point can only be animated via its own
 keyframes on its own animation spline. Once removed, this point will not be connected to
@@ -24106,8 +26188,16 @@ Points” using the Polyline’s contextual menu.
 2D Compositing | Chapter 20 Rotoscoping with Masks **522**
 
 
+
+
+--- end of page=521 ---
+
 2D Compositing | Chapter 20 Rotoscoping with Masks **523**
 
+
+
+
+--- end of page=522 ---
 
 #### **Chapter 21**
 ### Paint
@@ -24154,6 +26244,10 @@ Using the Planar Tracker with the Paint Tool������������
 2D Compositing | Chapter 21 Paint **524**
 
 
+
+
+--- end of page=523 ---
+
 #### **Paint Overview**
 
 The Paint node is a procedural paint tool, which means that each paint stroke is a live, editable object
@@ -24184,6 +26278,10 @@ The Paint node available in the Paint category of the Effects Library
 
 2D Compositing | Chapter 21 Paint **525**
 
+
+
+
+--- end of page=524 ---
 
 #### **Setting Up the Paint Node**
 
@@ -24229,6 +26327,10 @@ you want to paint on using the merge
 2D Compositing | Chapter 21 Paint **526**
 
 
+
+
+--- end of page=525 ---
+
 Setting this up requires some configuration of the nodes. The Background node must be fully
 transparent and, unless you are doing something simple like using the Stroke tool set to Color to paint
 over an image, you must drag the image you want to clone or smudge into the Source Tool field in the
@@ -24270,6 +26372,10 @@ non-editable single frame stroke types
 
 2D Compositing | Chapter 21 Paint **527**
 
+
+
+
+--- end of page=526 ---
 
 Editable Stroke Types
 
@@ -24319,6 +26425,10 @@ or mask. You can also use this method if you import SVG graphics and want to “
 2D Compositing | Chapter 21 Paint **528**
 
 
+
+
+--- end of page=527 ---
+
 The Polyline Stroke Shape Animation label
 
 
@@ -24343,6 +26453,10 @@ connected to the Paint tool and set to Image
 
 2D Compositing | Chapter 21 Paint **529**
 
+
+
+
+--- end of page=528 ---
 
 ###### **Setting the Brush Size**
 
@@ -24377,6 +26491,10 @@ Clicking it opens the OS Color Picker window
 
 2D Compositing | Chapter 21 Paint **530**
 
+
+
+
+--- end of page=529 ---
 
 **To select a color for the paint brush, do one of the following:**
 
@@ -24423,6 +26541,10 @@ the center of what you’re sampling from.
 2D Compositing | Chapter 21 Paint **531**
 
 
+
+
+--- end of page=530 ---
+
 The Clone source starting area identified by the X
 and the paint brush size represented by the circle
 
@@ -24458,6 +26580,10 @@ the Node Editor into the Source Tool field
 2D Compositing | Chapter 21 Paint **532**
 
 
+
+
+--- end of page=531 ---
+
 **5** Click the Overlay checkbox to see the current frame and the offset frame superimposed.
 
 **6** Drag the Time Offset slider to select the source frame you want to use.
@@ -24484,6 +26610,10 @@ frame from the same clip
 
 2D Compositing | Chapter 21 Paint **533**
 
+
+
+
+--- end of page=532 ---
 
 **TIP:** When using a Clone Apply Mode, you can hold down the O key instead of clicking the
 Overlay checkbox in Inspector to see the Overlay. Releasing the O key will return to normal
@@ -24523,6 +26653,10 @@ by selecting the stroke in the viewer
 2D Compositing | Chapter 21 Paint **534**
 
 
+
+
+--- end of page=533 ---
+
 ###### **Editing Paint Strokes in the Modifiers Tab**
 
 When you paint a stroke, the settings for that stroke appear in the Inspector’s Modifiers tab. You can
@@ -24561,6 +26695,10 @@ There are two ways you can delete paint strokes.
 
 2D Compositing | Chapter 21 Paint **535**
 
+
+
+
+--- end of page=534 ---
 
 #### **Animating and Tracking Paint Strokes**
 
@@ -24616,6 +26754,10 @@ Trackers can be attached to the Center parameters of a paint stroke
 2D Compositing | Chapter 21 Paint **536**
 
 
+
+
+--- end of page=535 ---
+
 Right-clicking over the Stroke’s Center control in the view allows you to apply a tracker modifier
 
 
@@ -24648,6 +26790,10 @@ reposition the paint stroke, if necessary.
 
 2D Compositing | Chapter 21 Paint **537**
 
+
+
+
+--- end of page=536 ---
 
 Tracking a Group of Paint Strokes
 
@@ -24690,6 +26836,10 @@ two powerful tools together.
 2D Compositing | Chapter 21 Paint **538**
 
 
+
+
+--- end of page=537 ---
+
 Setting Up the Planar Tracker for Stabilization
 
 The best way to do this is to use the Planar Tracker, so we’ll add the PlanarTracker node after the
@@ -24715,6 +26865,10 @@ points, and then clicking the first one we created to close the shape.
 2D Compositing | Chapter 21 Paint **539**
 
 
+
+
+--- end of page=538 ---
+
 Drawing a shape over the man’s forehead to prepare for Planar Tracking
 
 
@@ -24736,6 +26890,10 @@ reference before continuing to track forward towards the end of the clip.
 
 2D Compositing | Chapter 21 Paint **540**
 
+
+
+
+--- end of page=539 ---
 
 The Pattern controls let you set up how you want to handle the analysis. Of these controls, the Motion
 Type menu is perhaps the most important. In this particular case, Perspective tracking is the analysis
@@ -24772,6 +26930,10 @@ shape you drew pinned in place. In this case, this sets up the man’s head as a
 2D Compositing | Chapter 21 Paint **541**
 
 
+
+
+--- end of page=540 ---
+
 Steadying the image results in warping as the forehead is pinned in place for painting
 
 
@@ -24800,6 +26962,10 @@ sidebar all the way up in the Color Picker.
 2D Compositing | Chapter 21 Paint **542**
 
 
+
+
+--- end of page=541 ---
+
 The Color Picker in the
 Background node set
 to be transparent
@@ -24825,6 +26991,10 @@ Choosing the Clone mode in the Inspector
 
 2D Compositing | Chapter 21 Paint **543**
 
+
+
+
+--- end of page=542 ---
 
 **Setting a Clone Source**
 
@@ -24854,6 +27024,10 @@ pointer over the viewer, a circle shows us the paint tool, ready to go.
 2D Compositing | Chapter 21 Paint **544**
 
 
+
+
+--- end of page=543 ---
+
 Original image (left), and after painting out two scars on the man’s forehead with the Stroke tool set to Clone
 
 
@@ -24882,6 +27056,10 @@ Pasting a second copy of the PlanarTracker node after the Paint node
 
 2D Compositing | Chapter 21 Paint **545**
 
+
+
+
+--- end of page=544 ---
 
 With the second PlanarTracker node selected, we go into the Inspector and turn on the Invert Steady
 Transform checkbox, which inverts the steady warp transform to restore the image back to the
@@ -24925,6 +27103,10 @@ good frame to freeze.
 
 2D Compositing | Chapter 21 Paint **546**
 
+
+
+
+--- end of page=545 ---
 
 To create the clean plate, you connect the paint node to the output of the Time Stretcher. Clone over
 the areas you want to hide, and you now have a single clean frame. Now you need to composite the
@@ -24970,6 +27152,10 @@ environments, including the Color page:
 2D Compositing | Chapter 21 Paint **547**
 
 
+
+
+--- end of page=546 ---
+
 Inverting the Garbage Input
 
 Selecting the MatteControl1 node, we open the Garbage Matte controls and click the Invert checkbox,
@@ -24991,6 +27177,10 @@ fixed forehead on top of the original image.
 
 2D Compositing | Chapter 21 Paint **548**
 
+
+
+
+--- end of page=547 ---
 
 The painted forehead composited against the original image
 
@@ -25017,6 +27207,10 @@ for the Planar Tracker, and it can be disconnected or deleted from the Node Edit
 2D Compositing | Chapter 21 Paint **549**
 
 
+
+
+--- end of page=548 ---
+
 We can insert this new node into the node tree to use it by holding down the Shift key and dragging
 the node over the connection between the Polygon node and the MatteControl node, dropping it
 when the connection highlights.
@@ -25037,6 +27231,10 @@ The final painted image, along with the final node tree
 
 2D Compositing | Chapter 21 Paint **550**
 
+
+
+
+--- end of page=549 ---
 
 #### **Chapter 22**
 ### Using the Tracker Node
@@ -25087,6 +27285,10 @@ Using Adaptive Pattern Tracking����������������
 
 2D Compositing | Chapter 22 Using the Tracker Node **551**
 
+
+
+
+--- end of page=550 ---
 
 **Dealing with Obscured Patterns** �������������������������������������������������������������������������������������������������������������������������������������������������� 567
 
@@ -25139,6 +27341,10 @@ Offsetting the Position of a Match Moved Image�����������
 
 2D Compositing | Chapter 22 Using the Tracker Node **552**
 
+
+
+
+--- end of page=551 ---
 
 #### **Introduction to Tracking**
 
@@ -25197,6 +27403,10 @@ images can be composited together.
 2D Compositing | Chapter 22 Using the Tracker Node **553**
 
 
+
+
+--- end of page=552 ---
+
 Corner Positioning
 
 Corner positioning tracks four patterns that are then used to map the four corners of a new foreground
@@ -25246,6 +27456,10 @@ to other nodes and not used directly
 2D Compositing | Chapter 22 Using the Tracker Node **554**
 
 
+
+
+--- end of page=553 ---
+
 ###### **Analyze the Image to be Tracked**
 
 After constructing the node tree and inserting the Tracker where you want, you can set up the tracker
@@ -25276,6 +27490,10 @@ Using a Tracker node in line for a match move
 
 2D Compositing | Chapter 22 Using the Tracker Node **555**
 
+
+
+
+--- end of page=554 ---
 
 Setting the Operation parameter in the Operation tab in the Inspector to Match Move, Corner Position,
 or Perspective Position always applies the motion to the foreground input (if one is connected). This
@@ -25309,6 +27527,10 @@ contextual menu.
 2D Compositing | Chapter 22 Using the Tracker Node **556**
 
 
+
+
+--- end of page=555 ---
+
 Once the tip of the ray gun has been tracked, this tracking data is then connected to the Center
 parameter of an Ellipse node that’s limiting a Glow effect by right-clicking the label of the Center
 parameter in the Inspector, and choosing Tracker1 > Ray Gun Glow: Offset position from the Connect
@@ -25330,6 +27552,10 @@ Connect To submenu.
 
 2D Compositing | Chapter 22 Using the Tracker Node **557**
 
+
+
+
+--- end of page=556 ---
 
 #### **Viewing Tracking Data in the Spline Editor**
 
@@ -25357,6 +27583,10 @@ _Editor,”_ or Chapter 72 in the _[DaVinci Resolve 20.3 Reference Manual](https
 2D Compositing | Chapter 22 Using the Tracker Node **558**
 
 
+
+
+--- end of page=557 ---
+
 #### **Tracker Inspector Controls**
 
 The layout of the Tracker node’s tabs in the Inspector reflects this workflow. It’s divided into three main
@@ -25382,6 +27612,10 @@ The Tracker Control tab
 
 2D Compositing | Chapter 22 Using the Tracker Node **559**
 
+
+
+
+--- end of page=558 ---
 
 #### **Motion Tracking Workflow In Depth**
 
@@ -25416,6 +27650,10 @@ trackers can be added by clicking the Add button immediately above the Tracker L
 
 2D Compositing | Chapter 22 Using the Tracker Node **560**
 
+
+
+
+--- end of page=559 ---
 
 Working in the Tracker list:
 
@@ -25461,6 +27699,10 @@ A pattern box positioned over an eye you want to track
 
 2D Compositing | Chapter 22 Using the Tracker Node **561**
 
+
+
+
+--- end of page=560 ---
 
 When you add a Tracker node to the Node Editor, you start with one pattern box displayed in the
 viewer as a small rectangle. When the cursor is placed over the pattern rectangle, the control expands
@@ -25521,6 +27763,10 @@ you are tracking.
 2D Compositing | Chapter 22 Using the Tracker Node **562**
 
 
+
+
+--- end of page=561 ---
+
 ###### **Refine the Search Area**
 
 A second rectangle with a dotted border surrounds the pattern box. This is the search area. When
@@ -25550,6 +27796,10 @@ The tracking transport buttons and analysis parameters
 
 2D Compositing | Chapter 22 Using the Tracker Node **563**
 
+
+
+
+--- end of page=562 ---
 
 **To begin tracking, do one of the following:**
 
@@ -25618,6 +27868,10 @@ channel to determine the channel used for tracking.
 2D Compositing | Chapter 22 Using the Tracker Node **564**
 
 
+
+
+--- end of page=563 ---
+
 Selecting Patterns for Stabilization
 
 Selecting patterns for stabilization can be a tricky business. The location of the pattern, when it is
@@ -25648,6 +27902,10 @@ The Tracker Pattern Selection and Flipbook thumbnails
 
 2D Compositing | Chapter 22 Using the Tracker Node **565**
 
+
+
+
+--- end of page=564 ---
 
 Each pattern that’s stored is added to a Flipbook. Once the render is complete, you can play this
 Pattern Flipbook to help you evaluate the accuracy of the tracked path. If you notice any jumps in the
@@ -25699,6 +27957,10 @@ use the Adaptive mode, disable all other patterns in the list before tracking.
 2D Compositing | Chapter 22 Using the Tracker Node **566**
 
 
+
+
+--- end of page=565 ---
+
 #### **Dealing with Obscured Patterns**
 
 Often, an otherwise ideal pattern can be temporarily obscured (occluded) or blocked from tracking—
@@ -25744,6 +28006,10 @@ to the last frame that tracked successfully.
 2D Compositing | Chapter 22 Using the Tracker Node **567**
 
 
+
+
+--- end of page=566 ---
+
 When selecting a pattern to use in appending to an existing path, a pattern that is close to the old
 pattern and at the same apparent depth in the frame generates the best results. The further away
 the new pattern is, the more likely it is that the difference in perspective and axial rotation will reduce
@@ -25769,6 +28035,10 @@ The Tracker Offset controls in the Inspector
 
 2D Compositing | Chapter 22 Using the Tracker Node **568**
 
+
+
+
+--- end of page=567 ---
 
 #### **Stabilizing with the Tracker Node**
 
@@ -25810,6 +28080,10 @@ operations will appear in the Operation tab.
 
 2D Compositing | Chapter 22 Using the Tracker Node **569**
 
+
+
+
+--- end of page=568 ---
 
 Merge
 
@@ -25869,6 +28143,10 @@ the existing unsteady move.
 2D Compositing | Chapter 22 Using the Tracker Node **570**
 
 
+
+
+--- end of page=569 ---
+
 #### **Using the Tracker Node for Match Moving**
 
 A simple match moving example is shown at the beginning of this chapter, but this section presents
@@ -25901,6 +28179,10 @@ in the Node Editor.
 
 2D Compositing | Chapter 22 Using the Tracker Node **571**
 
+
+
+
+--- end of page=570 ---
 
 Connect a foreground image to the Tracker’s foreground input
 
@@ -25949,6 +28231,10 @@ use as connections that are available to other nodes in the Node Editor.
 
 2D Compositing | Chapter 22 Using the Tracker Node **572**
 
+
+
+
+--- end of page=571 ---
 
 You connect a node’s position parameters to a tracker by selecting the connection type from
 the controls contextual menu (for example, Transform 1: Center > Connect To > Tracker 1 >
@@ -26000,6 +28286,10 @@ basically an offset in the same direction as the original motion.
 2D Compositing | Chapter 22 Using the Tracker Node **573**
 
 
+
+
+--- end of page=572 ---
+
 ###### **Steady Size**
 
 The Steady Size connection outputs the inverse of the tracked pattern’s scale. When you connect a
@@ -26046,6 +28336,10 @@ The background branched to go to a Tracker and a Transform
 2D Compositing | Chapter 22 Using the Tracker Node **574**
 
 
+
+
+--- end of page=573 ---
+
 The tracker publishes its output for other nodes to connect to, as done here to stabilize the clip
 
 
@@ -26076,6 +28370,10 @@ to counteract the movement and return the pattern of pixels back to where they w
 2D Compositing | Chapter 22 Using the Tracker Node **575**
 
 
+
+
+--- end of page=574 ---
+
 #### **Using the Tracker as a Modifier**
 
 Another technique for adding a tracker directly to a control is to add it as a modifier. Choosing the
@@ -26105,6 +28403,10 @@ Modify With > Tracker Position to add a Tracker modifier
 
 2D Compositing | Chapter 22 Using the Tracker Node **576**
 
+
+
+
+--- end of page=575 ---
 
 **As an example, to apply the Tracker as a modifier, do the following:**
 
@@ -26137,6 +28439,10 @@ A Tracker modifier applied to the Ellipse to create a green glow on an actor’s
 2D Compositing | Chapter 22 Using the Tracker Node **577**
 
 
+
+
+--- end of page=576 ---
+
 You can set a different source image for the Tracker modifier by typing in the name of the node
 or dragging and dropping the node from the Node Editor into the Tracker Source field control.
 If you have a node (let’s call it node#1) connected to the node that contains the modifier (let’s call it
@@ -26167,6 +28473,10 @@ Some text superimposed against a background, ready to track
 2D Compositing | Chapter 22 Using the Tracker Node **578**
 
 
+
+
+--- end of page=577 ---
+
 Our goal for this composition is to motion track the background image so that the text moves
 along with the scene as the camera flies along.
 
@@ -26191,6 +28501,10 @@ analysis that must be referred to in a way other than a “physical” connectio
 
 2D Compositing | Chapter 22 Using the Tracker Node **579**
 
+
+
+
+--- end of page=578 ---
 
 Branching a Tracker node to use to analyze an image
 
@@ -26237,6 +28551,10 @@ tracker seen in isolation
 2D Compositing | Chapter 22 Using the Tracker Node **580**
 
 
+
+
+--- end of page=579 ---
+
 Using the Tracker’s Inspector Controls to Perform the Analysis
 
 At this point, let’s look at the Tracker node’s controls in the Inspector. There are a lot of controls, but for
@@ -26248,6 +28566,10 @@ be analyzed all at once for different workflows, but we don’t need that for no
 
 2D Compositing | Chapter 22 Using the Tracker Node **581**
 
+
+
+
+--- end of page=580 ---
 
 Tracker Inspector controls, with the tracking
 analysis buttons at top, the tracker options in
@@ -26281,6 +28603,10 @@ Backward, Stop Tracking, Track Forward, Track from First Frame
 
 2D Compositing | Chapter 22 Using the Tracker Node **582**
 
+
+
+
+--- end of page=581 ---
 
 For now, clicking the Track from Beginning button will analyze the entire range of this clip, from the first
 frame to the last. A dialog lets you know when the analysis is completed, and clicking the OK button
@@ -26316,6 +28642,10 @@ Renaming a tracker to make it easier to find
 2D Compositing | Chapter 22 Using the Tracker Node **583**
 
 
+
+
+--- end of page=582 ---
+
 Now it’s time to connect the track we’ve just made to the text in order to start it in motion. After loading
 the Merge1 node into the viewer to see the text in context with the overall composite we’re creating,
 we’ll select the Text1 node to open its parameters in the Inspector, and click the Layout panel icon
@@ -26350,6 +28680,10 @@ motion track path.
 2D Compositing | Chapter 22 Using the Tracker Node **584**
 
 
+
+
+--- end of page=583 ---
+
 The text now aligns with the motion track coordinate
 
 ###### **Offsetting the Position of a Match Moved Image**
@@ -26374,6 +28708,10 @@ The text offset from the tracked motion path; the offset can be seen as a dotted
 2D Compositing | Chapter 22 Using the Tracker Node **585**
 
 
+
+
+--- end of page=584 ---
+
 Now, if we play through this clip, we can see the text moving along with the bridge.
 
 
@@ -26382,6 +28720,10 @@ Two frames of the text being match moved to follow the bridge in the shot
 
 2D Compositing | Chapter 22 Using the Tracker Node **586**
 
+
+
+
+--- end of page=585 ---
 
 #### **Chapter 23**
 ### Planar Tracking
@@ -26413,6 +28755,10 @@ Check for Lens Distortion������������������
 
 2D Compositing | Chapter 23 Planar Tracking **587**
 
+
+
+
+--- end of page=586 ---
 
 #### **Introduction to Tracking**
 
@@ -26467,6 +28813,10 @@ overall camera motion that was intended.
 2D Compositing | Chapter 23 Planar Tracking **588**
 
 
+
+
+--- end of page=587 ---
+
 #### **Setting Up to Use the Planar Tracker**
 
 Similar to the Tracker node, to do a planar track, you need to connect the output of the image you
@@ -26507,6 +28857,10 @@ planar tracking.
 2D Compositing | Chapter 23 Planar Tracking **589**
 
 
+
+
+--- end of page=588 ---
+
 #### **A Basic Planar Tracker** **Match Move Workflow**
 
 Using the Planar Tracker is a process, but it’s straightforward once you’ve learned how to use it. The
@@ -26545,6 +28899,10 @@ corner pin (which always has four corners and is separately specified in Corner 
 
 2D Compositing | Chapter 23 Planar Tracking **590**
 
+
+
+
+--- end of page=589 ---
 
 **4** (Optional) If moving objects partially cover up or occlude the planar surface, you may wish to
 connect a mask that surrounds and identifies these occlusions to the white “occlusion mask” input
@@ -26586,6 +28944,10 @@ use to transform other images or masks
 2D Compositing | Chapter 23 Planar Tracking **591**
 
 
+
+
+--- end of page=590 ---
+
 In this case, the Planar Transform node will be inserted after a pair of Background and Paint nodes
 that are being used to put some irritatingly trendy tech jargon graffiti on the wall. The Planar
 Transform will automatically transform the Paint node’s output connected to its background input
@@ -26611,6 +28973,10 @@ to composite.
 
 2D Compositing | Chapter 23 Planar Tracking **592**
 
+
+
+
+--- end of page=591 ---
 
 #### **Tips for Choosing Good Planes to Track**
 
@@ -26644,6 +29010,10 @@ down to a simpler motion type can help in this situation.
 2D Compositing | Chapter 23 Planar Tracking **593**
 
 
+
+
+--- end of page=592 ---
+
 #### **Chapter 24**
 ### Using Open FX, Resolve FX, and Fuse Plugins
 
@@ -26674,6 +29044,10 @@ scripting Fusion’s native Fuse plugins.
 
 2D Compositing | Chapter 24 Using Open FX, Resolve FX, and Fuse Plugins **594**
 
+
+
+
+--- end of page=593 ---
 
 #### **What Are Open FX?**
 
@@ -26713,6 +29087,10 @@ has editable settings, you can adjust these in the Inspector.
 
 2D Compositing | Chapter 24 Using Open FX, Resolve FX, and Fuse Plugins **595**
 
+
+
+
+--- end of page=594 ---
 
 #### **DaVinci Resolve OFX Renderer** **for Fusion Studio**
 
@@ -26764,6 +29142,10 @@ export a .DRX file.
 2D Compositing | Chapter 24 Using Open FX, Resolve FX, and Fuse Plugins **596**
 
 
+
+
+--- end of page=595 ---
+
 **3** In Fusion Studio, apply the DaVinci Resolve Renderer plugin where appropriate
 for your composition.
 
@@ -26780,6 +29162,10 @@ Select the .DRX file you exported from DaVinci Resolve in the plugin
 
 2D Compositing | Chapter 24 Using Open FX, Resolve FX, and Fuse Plugins **597**
 
+
+
+
+--- end of page=596 ---
 
 #### **Introduction to Fuse Plugins**
 
@@ -26828,6 +29214,10 @@ the composition.
 2D Compositing | Chapter 24 Using Open FX, Resolve FX, and Fuse Plugins **598**
 
 
+
+
+--- end of page=597 ---
+
 ## 3D Compositing
 
 CONTENTS
@@ -26839,6 +29229,10 @@ CONTENTS
 
 27 Particle Systems����������������������������������������������������������������������������������������������������������������������������������������� 676
 
+
+
+
+--- end of page=598 ---
 
 #### **Chapter 25**
 ### 3D Compositing Basics
@@ -26949,6 +29343,10 @@ Using Text3D�����������������������
 3D Compositing | Chapter 25 3D Compositing Basics **600**
 
 
+
+
+--- end of page=599 ---
+
 #### **An Overview of 3D Compositing**
 
 Traditional image-based compositing is a two-dimensional process. Image layers have only the
@@ -26990,6 +29388,10 @@ An example 3D scene in Fusion
 3D Compositing | Chapter 25 3D Compositing Basics **601**
 
 
+
+
+--- end of page=600 ---
+
 #### **3D Compositing Fundamentals**
 
 The 3D category of nodes (which includes the Light, Material, and Texture subcategories) work
@@ -27021,6 +29423,10 @@ A simple 3D scene with a Text3D node connected directly to a Renderer3D node
 3D Compositing | Chapter 25 3D Compositing Basics **602**
 
 
+
+
+--- end of page=601 ---
+
 More realistically, each 3D scene that you want to create will probably have three to five nodes to give
 you a better lit and framed result. These include:
 
@@ -27051,6 +29457,10 @@ The same text, this time lit and framed using Text3D, Camera, and SpotLight node
 
 3D Compositing | Chapter 25 3D Compositing Basics **603**
 
+
+
+
+--- end of page=602 ---
 
 #### **The Elements of a 3D Scene**
 
@@ -27085,6 +29495,10 @@ input of a Shape3D, Cube3D, or other compatible node, as shown below.
 3D Compositing | Chapter 25 3D Compositing Basics **604**
 
 
+
+
+--- end of page=603 ---
+
 An image connected to the material input of a Shape3D node set to
 Torus, with the image (left), and the shaded torus (right)
 
@@ -27105,6 +29519,10 @@ ReplaceMaterial3D node that’s connected downstream of the object you want to s
 
 3D Compositing | Chapter 25 3D Compositing Basics **605**
 
+
+
+
+--- end of page=604 ---
 
 ###### **The Merge3D Node**
 
@@ -27132,6 +29550,10 @@ eventual connection to a Renderer3D node.
 3D Compositing | Chapter 25 3D Compositing Basics **606**
 
 
+
+
+--- end of page=605 ---
+
 Connecting one Shape3D node to another directly to combine them
 Transforming the last downstream 3D object also transforms all
 upstream objects; the last Shape3D node is viewed, showing both
@@ -27149,6 +29571,10 @@ You can build elaborate scenes using multiple Merge3D nodes connected together
 
 3D Compositing | Chapter 25 3D Compositing Basics **607**
 
+
+
+
+--- end of page=606 ---
 
 Lighting Multiple Merge3D Nodes
 
@@ -27198,6 +29624,10 @@ allowing you to make transforms specific to that particular node’s scene.
 3D Compositing | Chapter 25 3D Compositing Basics **608**
 
 
+
+
+--- end of page=607 ---
+
 The Transform tab of a Merge3D node
 
 
@@ -27217,6 +29647,10 @@ the 3D objects placed within the scene, while the last Merge3D node (orange) lig
 
 3D Compositing | Chapter 25 3D Compositing Basics **609**
 
+
+
+
+--- end of page=608 ---
 
 ###### **The Renderer3D Node**
 
@@ -27265,6 +29699,10 @@ texture images larger than 8K you should choose the software renderer to obtain 
 3D Compositing | Chapter 25 3D Compositing Basics **610**
 
 
+
+
+--- end of page=609 ---
+
 Second, the software renderer is required to enable the rendering of “constant” and “variable” soft
 shadows with adjustable Spread, which is not supported by the OpenGL renderer. Soft shadows
 are more natural, and they’re enabled in the Shadows parameters of the Controls tab of light nodes;
@@ -27305,6 +29743,10 @@ rendered images.
 3D Compositing | Chapter 25 3D Compositing Basics **611**
 
 
+
+
+--- end of page=610 ---
+
 ###### **OpenGL UV Renderer**
 
 When you choose the OpenGL UV Renderer option, a Renderer3D node outputs an “unwrapped”
@@ -27343,6 +29785,10 @@ back down.
 3D Compositing | Chapter 25 3D Compositing Basics **612**
 
 
+
+
+--- end of page=611 ---
+
 #### **Loading 3D Nodes into the Viewer**
 
 When you load a 3D node into the viewer, it switches to a 3D Viewer, which lets you pan, zoom, and
@@ -27366,6 +29812,10 @@ A 3D Viewer’s default perspective view
 3D Compositing | Chapter 25 3D Compositing Basics **613**
 
 
+
+
+--- end of page=612 ---
+
 To change the viewpoint, right-click in the viewer and choose the desired viewpoint from the ones
 listed in the Camera submenu. A shortcut to the Camera submenu is to right-click on the axis label
 displayed in the bottom corner of the viewer.
@@ -27382,6 +29832,10 @@ to change the viewpoint
 
 3D Compositing | Chapter 25 3D Compositing Basics **614**
 
+
+
+
+--- end of page=613 ---
 
 ###### **Navigating the 3D View**
 
@@ -27448,6 +29902,10 @@ the camera.
 3D Compositing | Chapter 25 3D Compositing Basics **615**
 
 
+
+
+--- end of page=614 ---
+
 When a viewer is set to display the view of a camera or light, panning, zooming, or rotating the viewer
 (seen at right) actually transforms the camera or light you’re viewing through (seen at left)
 
@@ -27481,6 +29939,10 @@ back to Z-buffer (Fast).
 
 3D Compositing | Chapter 25 3D Compositing Basics **616**
 
+
+
+
+--- end of page=615 ---
 
 #### **Material Viewer**
 
@@ -27521,6 +29983,10 @@ choosing an option from the Renderer submenu of the contextual menu.
 3D Compositing | Chapter 25 3D Compositing Basics **617**
 
 
+
+
+--- end of page=616 ---
+
 #### **Transformations**
 
 Merge3D, 3D Objects, and Transform3D all have Transform parameters that are collected together into
@@ -27552,6 +30018,10 @@ modes, or you can use the keyboard shortcuts.
 
 3D Compositing | Chapter 25 3D Compositing Basics **618**
 
+
+
+
+--- end of page=617 ---
 
 Using Onscreen Transform Controls
 
@@ -27592,6 +30062,10 @@ position and animate.
 3D Compositing | Chapter 25 3D Compositing Basics **619**
 
 
+
+
+--- end of page=618 ---
+
 **To enable a target for a 3D object:**
 
 **1** Select that object’s node.
@@ -27624,6 +30098,10 @@ Now, no matter where the spotlight is moved, it will rotate to face the image pl
 3D Compositing | Chapter 25 3D Compositing Basics **620**
 
 
+
+
+--- end of page=619 ---
+
 A light made to face the wall using its enabled target control
 
 #### **Parenting**
@@ -27642,6 +30120,10 @@ and animated together, and which are transformed and animated separately.
 
 3D Compositing | Chapter 25 3D Compositing Basics **621**
 
+
+
+
+--- end of page=620 ---
 
 **Here are the two simple rules of transforming parented Merge3D nodes:**
 
@@ -27675,6 +30157,10 @@ when it moves.
 
 3D Compositing | Chapter 25 3D Compositing Basics **622**
 
+
+
+
+--- end of page=621 ---
 
 ###### **Quickly Viewing a Scene Through a Camera**
 
@@ -27734,6 +30220,10 @@ located in the top group of parameters in the Camera3D node’s Controls tab.
 3D Compositing | Chapter 25 3D Compositing Basics **623**
 
 
+
+
+--- end of page=622 ---
+
 Turning on the Focal Plane checkbox in the Camera3D node
 
 
@@ -27769,6 +30259,10 @@ application before importing it into Fusion often produces more reliable results
 
 3D Compositing | Chapter 25 3D Compositing Basics **624**
 
+
+
+
+--- end of page=623 ---
 
 #### **Lighting and Shadows**
 
@@ -27814,6 +30308,10 @@ control how each object interacts with light and shadows
 
 3D Compositing | Chapter 25 3D Compositing Basics **625**
 
+
+
+
+--- end of page=624 ---
 
 ###### **Lighting Types Explained**
 
@@ -27868,6 +30366,10 @@ background image plane receive lighting.
 3D Compositing | Chapter 25 3D Compositing Basics **626**
 
 
+
+
+--- end of page=625 ---
+
 Pass Through Lights is disabled, so only the front two shapes are illuminated (left) Pass Through
 Lights is enabled, so all shapes connected to both Merge3D nodes are illuminated (right)
 
@@ -27896,6 +30398,10 @@ you can disable the Enable Shadows checkbox in the node’s Inspector.
 
 3D Compositing | Chapter 25 3D Compositing Basics **627**
 
+
+
+
+--- end of page=626 ---
 
 An image with spotlight casting a variable soft shadow
 
@@ -27943,6 +30449,10 @@ The Constant option will generate shadows where the softness is uniform across t
 3D Compositing | Chapter 25 3D Compositing Basics **628**
 
 
+
+
+--- end of page=627 ---
+
 regardless of the shadow’s distance from the casting geometry. The Variable option generates
 shadows that become softer as they get farther from the geometry that is casting the shadow. This is
 a more realistic effect, but the shadows are somewhat harder to control. When this option is selected,
@@ -27980,6 +30490,10 @@ Results of shadow map Z-fighting (Left), and the corrected shadow shown using Bi
 
 3D Compositing | Chapter 25 3D Compositing Basics **629**
 
+
+
+
+--- end of page=628 ---
 
 Two Biasing sliders in the Shadows group of Spotlight parameters work by adding a small depth offset
 to move the shadow away from the surface it is shadowing, eliminating the Z-fighting. When too little
@@ -28031,6 +30545,10 @@ environmental maps, which mimic reflection and refraction.
 3D Compositing | Chapter 25 3D Compositing Basics **630**
 
 
+
+
+--- end of page=629 ---
+
 Material examples from the bin
 
 ###### **Material Components**
@@ -28061,6 +30579,10 @@ cannot be mapped; it is applied to the entire material.
 
 3D Compositing | Chapter 25 3D Compositing Basics **631**
 
+
+
+
+--- end of page=630 ---
 
 Specular
 
@@ -28095,6 +30617,10 @@ are essential to creating the appearance of stained glass.
 
 3D Compositing | Chapter 25 3D Compositing Basics **632**
 
+
+
+
+--- end of page=631 ---
 
 **TIP:** You can adjust the opacity and transmittance of a material separately. It is possible to
 have a surface that is fully opaque yet transmits 100% of the light arriving upon it, so in a
@@ -28133,6 +30659,10 @@ Alpha Detail set to 1; the alpha channel determines the density of the shadow
 3D Compositing | Chapter 25 3D Compositing Basics **633**
 
 
+
+
+--- end of page=632 ---
+
 Alpha Detail set to 0; a dense-colored shadow results
 
 
@@ -28151,6 +30681,10 @@ Color Detail set to 0; no color is visible in the shadow.
 
 3D Compositing | Chapter 25 3D Compositing Basics **634**
 
+
+
+
+--- end of page=633 ---
 
 **Saturation**
 
@@ -28204,6 +30738,10 @@ grazing incidence. Phong is also able to make sharper specular highlights at hig
 3D Compositing | Chapter 25 3D Compositing Basics **635**
 
 
+
+
+--- end of page=634 ---
+
 Cook-Torrance
 
 The Cook-Torrance material combines the diffuse illumination model of the Blinn material with a
@@ -28241,6 +30779,10 @@ to X and Y coordinates in a frame, U and V are the coordinates for textures on 3
 3D Compositing | Chapter 25 3D Compositing Basics **636**
 
 
+
+
+--- end of page=635 ---
+
 A node that outputs a material is frequently used, instead of an image, to provide other shading
 options. Materials passed between nodes are RGBA samples; they contain no other information about
 the shading or textures that produced them.
@@ -28266,6 +30808,10 @@ of shaders.
 
 3D Compositing | Chapter 25 3D Compositing Basics **637**
 
+
+
+
+--- end of page=636 ---
 
 ###### **Reflections and Refractions**
 
@@ -28300,6 +30846,10 @@ Cook-Torrance, Phong, or Ward nodes.
 
 3D Compositing | Chapter 25 3D Compositing Basics **638**
 
+
+
+
+--- end of page=637 ---
 
 Reflection
 
@@ -28362,6 +30912,10 @@ Tint Material input, double-check the alpha/opacity values of the background mat
 3D Compositing | Chapter 25 3D Compositing Basics **639**
 
 
+
+
+--- end of page=638 ---
+
 ###### **Bump Maps**
 
 Bump mapping helps add details and small irregularities to the surface appearance of an object. Bump
@@ -28409,6 +30963,10 @@ packed bump map or height map and will do the conversion of the bump map to work
 3D Compositing | Chapter 25 3D Compositing Basics **640**
 
 
+
+
+--- end of page=639 ---
+
 If your bump mapping doesn’t appear correct, here are a few things to look for:
 
   - Make sure you have the nodes connected correctly. The height/bump map should connect
@@ -28455,6 +31013,10 @@ Camera node used for a projection map
 3D Compositing | Chapter 25 3D Compositing Basics **641**
 
 
+
+
+--- end of page=640 ---
+
 Project a Texture onto a Catcher Material
 
 If you do not want to work with light sources, you can use the projector or camera as a texture
@@ -28473,6 +31035,10 @@ Camera projection used with a Catcher node (example from an older version of Fus
 
 3D Compositing | Chapter 25 3D Compositing Basics **642**
 
+
+
+
+--- end of page=641 ---
 
 Project Using the UVMap Node
 
@@ -28520,6 +31086,10 @@ lighting and casting shadows into the scene as if it were there.
 3D Compositing | Chapter 25 3D Compositing Basics **643**
 
 
+
+
+--- end of page=642 ---
+
 The new 3D scene casting reflections and lighting onto a 3D car,
 and receiving shadows caused by the car
 
@@ -28563,6 +31133,10 @@ The particles are then rendered using the Renderer3D instead of the Particle ren
 
 3D Compositing | Chapter 25 3D Compositing Basics **644**
 
+
+
+
+--- end of page=643 ---
 
 For more information, _see Chapter 54, “Particle Nodes,”_ or Chapter 114 in the _[DaVinci Resolve](https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion)_
 _[20.3 Reference Manual](https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion)_ .
@@ -28616,6 +31190,10 @@ that is transparent in different areas; it would be useful to have the whole obj
 3D Compositing | Chapter 25 3D Compositing Basics **645**
 
 
+
+
+--- end of page=644 ---
+
 ###### **Adding FBX Models**
 
 The Filmbox FBX format is a scene interchange format that facilitates moving 3D scene information
@@ -28649,6 +31227,10 @@ something that matches Fusion’s 3D scene.
 
 3D Compositing | Chapter 25 3D Compositing Basics **646**
 
+
+
+
+--- end of page=645 ---
 
 FBX Exporter
 
@@ -28699,6 +31281,10 @@ want differently styled words in the same scene.
 3D Compositing | Chapter 25 3D Compositing Basics **647**
 
 
+
+
+--- end of page=646 ---
+
 The text entry and styling parameters in the Text tab
 
 
@@ -28721,6 +31307,10 @@ Transform tab.
 3D Compositing | Chapter 25 3D Compositing Basics **648**
 
 
+
+
+--- end of page=647 ---
+
 Text3D nodes also have Transform parameters built-in
 
 
@@ -28735,6 +31325,10 @@ Text3D nodes also have Transform parameters built-in
 
 3D Compositing | Chapter 25 3D Compositing Basics **649**
 
+
+
+
+--- end of page=648 ---
 
 Layout Parameters
 
@@ -28770,6 +31364,10 @@ Shading controls for text objects
 3D Compositing | Chapter 25 3D Compositing Basics **650**
 
 
+
+
+--- end of page=649 ---
+
 #### **Fog 3D and Soft Clipping**
 
 The Fog3D node helps to create atmospheric depth cues.
@@ -28797,6 +31395,10 @@ can be thought of as a 3D garbage matte for the renderer.
 
 3D Compositing | Chapter 25 3D Compositing Basics **651**
 
+
+
+
+--- end of page=650 ---
 
 Circle shape used as a Matte
 object to see the floor
@@ -28838,6 +31440,10 @@ matte object by selecting its node in the node tree.
 3D Compositing | Chapter 25 3D Compositing Basics **652**
 
 
+
+
+--- end of page=651 ---
+
 #### **Material and Object IDs**
 
 Most nodes in Fusion that support effect masking can use Object ID and Material ID auxiliary channels
@@ -28877,6 +31483,10 @@ rendered in 32-bit float.
 3D Compositing | Chapter 25 3D Compositing Basics **653**
 
 
+
+
+--- end of page=652 ---
+
 A World Position Pass rendering of a scene with its center at (0,0,0) The actual image is on the top left
 
 
@@ -28912,6 +31522,10 @@ Without a bounding mesh to generate Position values, the fog fills in the backgr
 
 3D Compositing | Chapter 25 3D Compositing Basics **654**
 
+
+
+
+--- end of page=653 ---
 
 #### **Point Clouds**
 
@@ -28951,6 +31565,10 @@ point in the cloud can be used to drive the animation of other parameters.
 3D Compositing | Chapter 25 3D Compositing Basics **655**
 
 
+
+
+--- end of page=654 ---
+
 **To find a point in the point cloud, do the following:**
 
 **1** Right-click anywhere within a viewer.
@@ -28974,6 +31592,10 @@ not be found if the search is for “Tracker15”.
 3D Compositing | Chapter 25 3D Compositing Basics **656**
 
 
+
+
+--- end of page=655 ---
+
 Renaming a Point in the Cloud
 
 You can use the Point Cloud contextual menu to rename a selected point. This works only for a single
@@ -28992,6 +31614,10 @@ Publishing a point using the viewer contextual menu
 
 3D Compositing | Chapter 25 3D Compositing Basics **657**
 
+
+
+
+--- end of page=656 ---
 
 #### **Chapter 26**
 ### 3D Camera Tracking
@@ -29065,6 +31691,10 @@ Viewing the Exported Results�����������������
 3D Compositing | Chapter 26 3D Camera Tracking **658**
 
 
+
+
+--- end of page=657 ---
+
 #### **Introduction to Tracking**
 
 Tracking is one of the most useful and essential techniques available to a compositor. It can roughly
@@ -29088,6 +31718,10 @@ An example of 3D elements integrated in a live-action scene
 
 3D Compositing | Chapter 26 3D Camera Tracking **659**
 
+
+
+
+--- end of page=658 ---
 
 ###### **How Camera Tracking Works**
 
@@ -29135,6 +31769,10 @@ The Camera Tracker tab
 
 3D Compositing | Chapter 26 3D Camera Tracking **660**
 
+
+
+
+--- end of page=659 ---
 
 ###### **Clips That Don’t Work Well for Camera Tracking**
 
@@ -29192,6 +31830,10 @@ from these applications can then be imported in the Camera3D node in Fusion.
 3D Compositing | Chapter 26 3D Camera Tracking **661**
 
 
+
+
+--- end of page=660 ---
+
 #### **Outputting from the Camera Tracker**
 
 Unlike most Fusion nodes, the Camera Tracker node has two outputs:
@@ -29222,6 +31864,10 @@ The Camera Tracker 2D output with toolbar and auto-track points
 3D Compositing | Chapter 26 3D Camera Tracking **662**
 
 
+
+
+--- end of page=661 ---
+
 ###### **3D View**
 
 The second output of the Camera Tracker node displays a 3D scene. To view this, connect this 3D
@@ -29243,6 +31889,10 @@ point cloud.
 
 3D Compositing | Chapter 26 3D Camera Tracking **663**
 
+
+
+
+--- end of page=662 ---
 
 #### **Auto-Tracking in the Camera Tracker**
 
@@ -29289,6 +31939,10 @@ considering the benefit.
 3D Compositing | Chapter 26 3D Camera Tracking **664**
 
 
+
+
+--- end of page=663 ---
+
 Choosing a Tracking Algorithm
 
 There are three available choices for the algorithm to use when tracking. The three options in the
@@ -29327,6 +31981,10 @@ Masks used to omit the moving clouds and waves from being tracked by the Camera 
 3D Compositing | Chapter 26 3D Camera Tracking **665**
 
 
+
+
+--- end of page=664 ---
+
 By doing this, the tracker ignores the waves of the water and moving clouds. Unlike drawing a mask
 for an effect, the mask in this case does not have to be perfect. You are just trying to identify the rough
 area to occlude from the tracking analysis.
@@ -29362,6 +32020,10 @@ The Camera tab in the Camera Tracker tool
 
 3D Compositing | Chapter 26 3D Camera Tracking **666**
 
+
+
+
+--- end of page=665 ---
 
 If the actual values are not known, try a best guess. The solver attempts to find a camera near these
 parameters, and it helps the solver by giving parameters as close to the live action as possible. The
@@ -29405,6 +32067,10 @@ an average solve error of 04367 pixels
 
 3D Compositing | Chapter 26 3D Camera Tracking **667**
 
+
+
+
+--- end of page=666 ---
 
 ###### **How Do You Know When to Stop?**
 
@@ -29461,6 +32127,10 @@ When choosing seed frames, it is important to satisfy two main characteristics:
 
 3D Compositing | Chapter 26 3D Camera Tracking **668**
 
+
+
+
+--- end of page=667 ---
 
 Sometimes There’s Nothing You Can Do
 
@@ -29520,6 +32190,10 @@ corresponding tracking point. The more the two objects overlap, the lower the so
 3D Compositing | Chapter 26 3D Camera Tracking **669**
 
 
+
+
+--- end of page=668 ---
+
 Reprojection locators displayed with tracking points, and tooltip
 
 
@@ -29570,6 +32244,10 @@ it easier to see and select poor tracks
 
 3D Compositing | Chapter 26 3D Camera Tracking **670**
 
+
+
+
+--- end of page=669 ---
 
 To begin deleting poor-quality tracks, you can drag a selection box around a group of tracks you
 want to remove and then either click the Delete Tracks button in the Camera Tracker toolbar or press
@@ -29623,6 +32301,10 @@ tab provides various translation, rotation, and scale controls to set these opti
 3D Compositing | Chapter 26 3D Camera Tracking **671**
 
 
+
+
+--- end of page=670 ---
+
 ###### **Unalign the 3D Scene Transforms**
 
 By default, the Export tab is set to Aligned in the 3D Scene Transform section. The Aligned setting
@@ -29647,6 +32329,10 @@ Drag a selection box around marks that represent the ground
 
 3D Compositing | Chapter 26 3D Camera Tracking **672**
 
+
+
+
+--- end of page=671 ---
 
 **To set the ground plane, do the following:**
 
@@ -29705,6 +32391,10 @@ nodes automatically added to the node tree.
 3D Compositing | Chapter 26 3D Camera Tracking **673**
 
 
+
+
+--- end of page=672 ---
+
 Five nodes created as a result of exporting from the Camera Tracker
 
 
@@ -29717,6 +32407,10 @@ Viewing the Merge 3D shows the point cloud, ground plane, and camera
 
 3D Compositing | Chapter 26 3D Camera Tracking **674**
 
+
+
+
+--- end of page=673 ---
 
 When the Merge 3D is selected, a toolbar above the viewer can add 3D test geometry like an image
 plane or cube to verify the precision of the 3D scene and camera. You can then connect actual
@@ -29734,6 +32428,10 @@ solver. Otherwise, you can save some memory by deleting the Camera Tracker node.
 
 3D Compositing | Chapter 26 3D Camera Tracking **675**
 
+
+
+
+--- end of page=674 ---
 
 #### **Chapter 27**
 ### Particle Systems
@@ -29771,6 +32469,10 @@ Rendering������������������������
 3D Compositing | Chapter 27 Particle Systems **676**
 
 
+
+
+--- end of page=675 ---
+
 #### **Introduction to Particle Systems**
 
 Particle systems are computer simulations that use customizable rules to automatically generate and
@@ -29804,6 +32506,10 @@ Particles bin of the Effects Library
 
 3D Compositing | Chapter 27 Particle Systems **677**
 
+
+
+
+--- end of page=676 ---
 
 All particle nodes begin with the letter “p,” and they’re designed to work together to produce
 sophisticated effects from relatively simple operations and settings. The next section shows
@@ -29842,6 +32548,10 @@ to add complexity to the particle animation
 3D Compositing | Chapter 27 Particle Systems **678**
 
 
+
+
+--- end of page=677 ---
+
 You can also attach the following types of nodes to a pEmitter node to deeply customize a
 particle system:
 
@@ -29868,6 +32578,10 @@ subject to lighting and shadows within a 3D scene
 3D Compositing | Chapter 27 Particle Systems **679**
 
 
+
+
+--- end of page=678 ---
+
 The Output Mode of the pRender node, at the very top of the controls exposed in the Inspector, can
 be set to either 2D or 3D, depending on whether you want to combine the result of the particle system
 with 2D layers or with objects in a 3D scene.
@@ -29888,6 +32602,10 @@ nodes in the Inspector, you cannot change the output mode.
 
 3D Compositing | Chapter 27 Particle Systems **680**
 
+
+
+
+--- end of page=679 ---
 
 #### **Particle System Distribution**
 
@@ -29916,6 +32634,10 @@ Translation, Rotation, and Pivot. All these controls can be animated.
 
 3D Compositing | Chapter 27 Particle Systems **681**
 
+
+
+
+--- end of page=680 ---
 
 A pEmitter node’s Region controls open in the Inspector
 
@@ -29954,6 +32676,10 @@ of controls at the bottom lets you choose how animated effects are timed.
 
 3D Compositing | Chapter 27 Particle Systems **682**
 
+
+
+
+--- end of page=681 ---
 
 **Region:** The Region tab lets you choose what kind of geometric region is used to disperse
 particles into space and whether you’re emitting particles from the region’s volume or surface.
@@ -30009,6 +32735,10 @@ resolution, and color space settings of the output.
 3D Compositing | Chapter 27 Particle Systems **683**
 
 
+
+
+--- end of page=682 ---
+
 #### **Example Particle Systems**
 
 The Templates category in the Inspector in the Fusion page of DaVinci Resolve or in the Bins window
@@ -30030,6 +32760,10 @@ The Blowing Leaves preset from the Templates category
 3D Compositing | Chapter 27 Particle Systems **684**
 
 
+
+
+--- end of page=683 ---
+
 ## Advanced Compositing Techniques
 
 CONTENTS
@@ -30037,6 +32771,10 @@ CONTENTS
 
 28 Optical Flow and Stereoscopic Nodes�������������������������������������������������������������������������������������������� 686
 
+
+
+
+--- end of page=684 ---
 
 #### **Chapter 28**
 ### Optical Flow and Stereoscopic Nodes
@@ -30116,6 +32854,10 @@ Vector and Disparity Channels�����������������
 Advanced Compositing Techniques | Chapter 28 Optical Flow and Stereoscopic Nodes **686**
 
 
+
+
+--- end of page=685 ---
+
 #### **Overview**
 
 Fusion includes 3D stereoscopic and optical flow-based nodes, which can work together or
@@ -30138,6 +32880,10 @@ eye separation issues. The stereo nodes can also be used for creating depth maps
 
 Advanced Compositing Techniques | Chapter 28 Optical Flow and Stereoscopic Nodes **687**
 
+
+
+
+--- end of page=686 ---
 
 ###### **Optical Flow Overview**
 
@@ -30201,6 +32947,10 @@ so they can be processed together.
 
 Advanced Compositing Techniques | Chapter 28 Optical Flow and Stereoscopic Nodes **688**
 
+
+
+
+--- end of page=687 ---
 
 #### **Working with Aux Deep Channels**
 
@@ -30277,6 +33027,10 @@ mapping from EXR attributes to Fusion Aux channels using CopyAux.
 Advanced Compositing Techniques | Chapter 28 Optical Flow and Stereoscopic Nodes **689**
 
 
+
+
+--- end of page=688 ---
+
 #### **Optical Flow Workflows**
 
 The Optical Flow analysis is a non real-time process, and depending on your computer, the clip’s
@@ -30330,6 +33084,10 @@ the _[DaVinci Resolve 20.3 Reference Manual](https://www.blackmagicdesign.com/su
 Advanced Compositing Techniques | Chapter 28 Optical Flow and Stereoscopic Nodes **690**
 
 
+
+
+--- end of page=689 ---
+
 ###### **Advanced Optical Flow Processing**
 
 The Optical Flow, Repair Frame, and Tween nodes include a faster GPU-based Optical Flow algorithm.
@@ -30366,6 +33124,10 @@ The toolset is designed around this philosophy.
 Advanced Compositing Techniques | Chapter 28 Optical Flow and Stereoscopic Nodes **691**
 
 
+
+
+--- end of page=690 ---
+
 ###### **Stereo Camera**
 
 There are two ways to set up a stereoscopic camera. The common way is to simply add a Camera 3D
@@ -30394,6 +33156,10 @@ channel and stores it in the hidden aux channels of their output image.
 
 Advanced Compositing Techniques | Chapter 28 Optical Flow and Stereoscopic Nodes **692**
 
+
+
+
+--- end of page=691 ---
 
 ###### **NewEye, StereoAlign**
 
@@ -30440,6 +33206,10 @@ Two stereoscopic workflows.
 
 Advanced Compositing Techniques | Chapter 28 Optical Flow and Stereoscopic Nodes **693**
 
+
+
+
+--- end of page=692 ---
 
 In the above example, the workflow on the right takes the left and right eye, generates the
 disparity, and then NewEye is used to generate a new eye for the image right away.
@@ -30496,6 +33266,10 @@ the current RGB channels, freeing up valuable memory so you can cache more frame
 Advanced Compositing Techniques | Chapter 28 Optical Flow and Stereoscopic Nodes **694**
 
 
+
+
+--- end of page=693 ---
+
 **TIP:** Although you can use the Channel Booleans to copy any aux channel into RGBA, it
 involves a few additional clicks when compared to CopyAux.
 
@@ -30542,6 +33316,10 @@ the results.
 
 Advanced Compositing Techniques | Chapter 28 Optical Flow and Stereoscopic Nodes **695**
 
+
+
+
+--- end of page=694 ---
 
 For example, if you have composited a lens flare in, it is better to compute OpticalFlow/
 Disparity before that, since the semi-transparent lens flare will confuse the tracking algorithms.
@@ -30599,6 +33377,10 @@ would still be picking the wrong value since you would be picking from the align
 
 Advanced Compositing Techniques | Chapter 28 Optical Flow and Stereoscopic Nodes **696**
 
+
+
+
+--- end of page=695 ---
 
 Although this picking functionality does not operate any differently from normal picking of color
 channels, this issue may cause some confusion. If it helps, the analogous workflow mistake with color
@@ -30660,6 +33442,10 @@ to be filled with the flow between sequential frames.
 Advanced Compositing Techniques | Chapter 28 Optical Flow and Stereoscopic Nodes **697**
 
 
+
+
+--- end of page=696 ---
+
 More precisely, if you have sequence of three frames A, B, C, then:
 
 |B|Vector will contain the flow B>C|
@@ -30682,6 +33468,10 @@ channels to contain flow forward/back by 1 frame.
 
 Advanced Compositing Techniques | Chapter 28 Optical Flow and Stereoscopic Nodes **698**
 
+
+
+
+--- end of page=697 ---
 
 ## Fusion Page Effects
 
@@ -30763,6 +33553,10 @@ CONTENTS
 
 64 Modifiers������������������������������������������������ 1744
 
+
+
+
+--- end of page=698 ---
 
 #### **Chapter 29**
 ### 3D Nodes
@@ -30850,6 +33644,10 @@ interchangeable with Loader nodes in Fusion Studio, unless otherwise noted.
 Fusion Page Effects | Chapter 29 3D Nodes **700**
 
 
+
+
+--- end of page=699 ---
+
 #### Alembic Mesh 3D [Abc]
 
 The Alembic Mesh 3D node
@@ -30893,6 +33691,10 @@ Alembic Import options
 
 Fusion Page Effects | Chapter 29 3D Nodes **701**
 
+
+
+
+--- end of page=700 ---
 
 The top half of the Import dialog displays information about the selected file including the name of the
 plugin/application that created the Alembic file, the version of the Alembic software developer kit used
@@ -30961,6 +33763,10 @@ Alembic objects combine with the other 3D geometry.
 Fusion Page Effects | Chapter 29 3D Nodes **702**
 
 
+
+
+--- end of page=701 ---
+
 ###### **Basic Node Setup**
 
 The AlembicMesh3D node is designed to be part of a larger 3D scene. Typically, when imported, a
@@ -30995,6 +33801,10 @@ or update the file linked to this node.
 
 Fusion Page Effects | Chapter 29 3D Nodes **703**
 
+
+
+
+--- end of page=702 ---
 
 **Object Name**
 
@@ -31050,6 +33860,10 @@ to connect another node that creates or contains a 3D scene or object.
 Fusion Page Effects | Chapter 29 3D Nodes **704**
 
 
+
+
+--- end of page=703 ---
+
 ###### **Basic Node Setup**
 
 The Bender 3D node works by connecting a 3D node that contains geometry, like an image plane 3D,
@@ -31079,6 +33893,10 @@ four modes available: Bend, Taper, Twist, and Shear.
 
 Fusion Page Effects | Chapter 29 3D Nodes **705**
 
+
+
+
+--- end of page=704 ---
 
 **Amount**
 
@@ -31144,6 +33962,10 @@ Camera 3D node in the Node Editor.
 Fusion Page Effects | Chapter 29 3D Nodes **706**
 
 
+
+
+--- end of page=705 ---
+
 Stereoscopic
 
 The Camera node has built-in stereoscopic features. They offer control over eye separation and
@@ -31194,6 +34016,10 @@ corner of each 3D viewer also displays the Camera submenu.
 Fusion Page Effects | Chapter 29 3D Nodes **707**
 
 
+
+
+--- end of page=706 ---
+
 The aspect of the viewer may be different from the aspect of the camera, so the camera view may not
 match the actual boundaries of the image rendered by the Renderer 3D node. Guides can be enabled
 to represent the portion of the view that the camera sees and assist you in framing the shot. Right-click
@@ -31236,6 +34062,10 @@ camera, as well as objects that are too far away to be useful, are excluded from
 
 Fusion Page Effects | Chapter 29 3D Nodes **708**
 
+
+
+
+--- end of page=707 ---
 
 The default perspective camera ignores this setting unless the Adaptive Near/Far Clip checkbox
 located under the Near/Far Clip control is disabled.
@@ -31309,6 +34139,10 @@ object. It is used by the OpenGL renderer in the Renderer 3D node to calculate d
 Fusion Page Effects | Chapter 29 3D Nodes **709**
 
 
+
+
+--- end of page=708 ---
+
 Stereo
 
 The Stereo section includes options for setting up 3D stereoscopic cameras. 3D stereoscopic
@@ -31366,6 +34200,10 @@ Parallel 3D camera setup
 
 Fusion Page Effects | Chapter 29 3D Nodes **710**
 
+
+
+
+--- end of page=709 ---
 
 **Rig Attached To**
 
@@ -31437,6 +34275,10 @@ cropping of the image source in Y or the image source not covering the mask’s 
 Fusion Page Effects | Chapter 29 3D Nodes **711**
 
 
+
+
+--- end of page=710 ---
+
  - **Height:** The image source defined by the film gate is scaled uniformly until its height (Y) fits the
 height of the resolution gate mask. Depending on the relative dimensions of image source and
 mask, the image source’s X-dimension might not fit the mask’s X-dimension, resulting in either
@@ -31502,6 +34344,10 @@ field of view.
 Fusion Page Effects | Chapter 29 3D Nodes **712**
 
 
+
+
+--- end of page=711 ---
+
 Except for the controls listed below, the options in this tab are identical to those commonly found
 in other 3D nodes. For more detail on visibility, lighting, matte, blend mode, normals/tangents, and
 Object ID, see “The Common Controls” section at the end of this chapter.
@@ -31548,6 +34394,10 @@ dimension of the mask.
 Fusion Page Effects | Chapter 29 3D Nodes **713**
 
 
+
+
+--- end of page=712 ---
+
 Materials Tab
 
 The options presented in the Materials tab are identical to those commonly found in other 3D nodes.
@@ -31591,6 +34441,10 @@ Camera 3D projection tab
 
 Fusion Page Effects | Chapter 29 3D Nodes **714**
 
+
+
+
+--- end of page=713 ---
 
 Common Controls
 
@@ -31646,6 +34500,10 @@ For other basic primitives, see the Shape 3D node in this chapter.
 Fusion Page Effects | Chapter 29 3D Nodes **715**
 
 
+
+
+--- end of page=714 ---
+
 ###### **Inputs**
 
 The following are optional inputs that appear on the Cube3D node in the Node Editor:
@@ -31674,6 +34532,10 @@ Cube 3D controls
 
 Fusion Page Effects | Chapter 29 3D Nodes **716**
 
+
+
+
+--- end of page=715 ---
 
 Controls Tab
 
@@ -31734,6 +34596,10 @@ descriptions can be found in “The Common Controls” section at the end of thi
 Fusion Page Effects | Chapter 29 3D Nodes **717**
 
 
+
+
+--- end of page=716 ---
+
 #### Custom Vertex 3D [3CV]
 
 The Custom Vertex 3D node
@@ -31785,6 +34651,10 @@ To change this, you could use a ReplaceNormals node beforehand to generate them.
 Fusion Page Effects | Chapter 29 3D Nodes **718**
 
 
+
+
+--- end of page=717 ---
+
 ###### **Basic Node Setup**
 
 The object you want to manipulate connects to the orange scene input of the Custom Vertex 3D node.
@@ -31812,6 +34682,10 @@ Vertex color is the Red, Green, Blue, and Alpha color of the point as vcr, vcg, 
 
 Fusion Page Effects | Chapter 29 3D Nodes **719**
 
+
+
+
+--- end of page=718 ---
 
 Numbers Tab
 
@@ -31847,6 +34721,10 @@ Custom Vertex 3D node Points tab
 
 Fusion Page Effects | Chapter 29 3D Nodes **720**
 
+
+
+
+--- end of page=719 ---
 
 LUT Tab
 
@@ -31886,6 +34764,10 @@ Custom Vertex 3D node Setup tab
 
 Fusion Page Effects | Chapter 29 3D Nodes **721**
 
+
+
+
+--- end of page=720 ---
 
 For example, Setup scripts can be used to transform vertex from model to world space.
 
@@ -31933,6 +34815,10 @@ Number text field to change its name.
 Fusion Page Effects | Chapter 29 3D Nodes **722**
 
 
+
+
+--- end of page=721 ---
+
 **Point Controls**
 
 There are eight sets of Point controls, corresponding to the eight controls in the Points tab. Disable the
@@ -31975,6 +34861,10 @@ particle vertices are individually displaced, which may or may not be the prefer
 Fusion Page Effects | Chapter 29 3D Nodes **723**
 
 
+
+
+--- end of page=722 ---
+
 ###### **Inputs**
 
 The following two inputs appear on the Displace 3D node in the Node Editor:
@@ -32010,6 +34900,10 @@ contains the dedicated Displace 3D controls.
 
 Fusion Page Effects | Chapter 29 3D Nodes **724**
 
+
+
+
+--- end of page=723 ---
 
 **Channel**
 
@@ -32069,6 +34963,10 @@ The mesh can be any 3D model, either generated in Fusion or imported.
 Fusion Page Effects | Chapter 29 3D Nodes **725**
 
 
+
+
+--- end of page=724 ---
+
 ###### **Basic Node Setup**
 
 The output of a Duplicate 3D node typically connects to a Merge 3D node, integrating it into a
@@ -32086,6 +34984,10 @@ Duplicate 3D controls
 
 Fusion Page Effects | Chapter 29 3D Nodes **726**
 
+
+
+
+--- end of page=725 ---
 
 Controls Tab
 
@@ -32147,6 +35049,10 @@ The three Rotation sliders set the amount of rotation applied to each copy.
 Fusion Page Effects | Chapter 29 3D Nodes **727**
 
 
+
+
+--- end of page=726 ---
+
 **Pivot**
 
 The pivot controls determine the position of the pivot point used when rotating each copy.
@@ -32190,6 +35096,10 @@ means 100% of the copies are affected, while a value of 0.5 means 50% are affect
 
 Fusion Page Effects | Chapter 29 3D Nodes **728**
 
+
+
+
+--- end of page=727 ---
 
 **Time Offset**
 
@@ -32243,6 +35153,10 @@ region has on the duplicate objects.
 
 Fusion Page Effects | Chapter 29 3D Nodes **729**
 
+
+
+
+--- end of page=728 ---
 
  - **Region Mode:** There are three options in the Region Mode menu. The default, labeled
 “Ignore region” bypasses the node entirely and causes no change to the copies of objects from
@@ -32300,6 +35214,10 @@ Z-axis. Additional beveling can be applied to create polished edges and chamfers
 Fusion Page Effects | Chapter 29 3D Nodes **730**
 
 
+
+
+--- end of page=729 ---
+
 ###### **Inputs**
 
 There are three inputs to this node, one for inputing the shape itself, and two for materials.
@@ -32334,6 +35252,10 @@ A simple sRectangle extruded into 3D space and beveled
 
 Fusion Page Effects | Chapter 29 3D Nodes **731**
 
+
+
+
+--- end of page=730 ---
 
 ###### **Inspector**
 
@@ -32399,6 +35321,10 @@ Controls” section.
 Fusion Page Effects | Chapter 29 3D Nodes **732**
 
 
+
+
+--- end of page=731 ---
+
 #### FBX Exporter 3D [FBX]
 
 The FBX Exporter node
@@ -32440,6 +35366,10 @@ An FBX Exporter 3D branched off from the Duplicate 3D node
 
 Fusion Page Effects | Chapter 29 3D Nodes **733**
 
+
+
+
+--- end of page=732 ---
 
 ###### **Inspector**
 
@@ -32498,6 +35428,10 @@ cameras currently in the scene.
 
 Fusion Page Effects | Chapter 29 3D Nodes **734**
 
+
+
+
+--- end of page=733 ---
 
 **Render Range**
 
@@ -32562,6 +35496,10 @@ to import.
 Fusion Page Effects | Chapter 29 3D Nodes **735**
 
 
+
+
+--- end of page=734 ---
+
 ###### **Inputs**
 
 **SceneInput:** The orange scene input is an optional connection if you wish to combine other 3D
@@ -32593,6 +35531,10 @@ tab are primarily information and not adjustments.
 
 Fusion Page Effects | Chapter 29 3D Nodes **736**
 
+
+
+
+--- end of page=735 ---
 
 **Size**
 
@@ -32649,6 +35591,10 @@ Their descriptions can be found in “The Common Controls” section at the end 
 Fusion Page Effects | Chapter 29 3D Nodes **737**
 
 
+
+
+--- end of page=736 ---
+
 #### Fog 3D [3Fo]
 
 The Fog 3D node
@@ -32686,6 +35632,10 @@ A Fog 3D node placed after the Merge 3D scene
 
 Fusion Page Effects | Chapter 29 3D Nodes **738**
 
+
+
+
+--- end of page=737 ---
 
 ###### **Inspector**
 
@@ -32734,6 +35684,10 @@ fixes this. Radial fog is not always desirable, however.
 Fusion Page Effects | Chapter 29 3D Nodes **739**
 
 
+
+
+--- end of page=738 ---
+
 **Type**
 
 This control is used to determine the type of falloff applied to the fog.
@@ -32764,6 +35718,10 @@ Common Controls” section at the end of this chapter.
 
 Fusion Page Effects | Chapter 29 3D Nodes **740**
 
+
+
+
+--- end of page=739 ---
 
 #### Image Plane 3D [3Im]
 
@@ -32803,6 +35761,10 @@ Multiple Image Plane 3D nodes connected to a Merge 3D
 
 Fusion Page Effects | Chapter 29 3D Nodes **741**
 
+
+
+
+--- end of page=740 ---
 
 ###### **Inspector**
 
@@ -32848,6 +35810,10 @@ Their descriptions can be found in “The Common Controls” section at the end 
 Fusion Page Effects | Chapter 29 3D Nodes **742**
 
 
+
+
+--- end of page=741 ---
+
 #### Locator 3D [3Lo]
 
 The Locator 3D node
@@ -32892,6 +35858,10 @@ Locator 3D connected after a Merge 3D with the SpotLight as the target
 
 Fusion Page Effects | Chapter 29 3D Nodes **743**
 
+
+
+
+--- end of page=742 ---
 
 ###### **Inspector**
 
@@ -32942,6 +35912,10 @@ individual character produced by a Text 3D node or a specific copy created by a 
 
 Fusion Page Effects | Chapter 29 3D Nodes **744**
 
+
+
+
+--- end of page=743 ---
 
 **Make Renderable**
 
@@ -33006,6 +35980,10 @@ Fusion’s 3D environment.
 Fusion Page Effects | Chapter 29 3D Nodes **745**
 
 
+
+
+--- end of page=744 ---
+
 ###### **Inputs**
 
 The Merge node displays only two inputs initially, but as each input is connected a new input appears
@@ -33048,6 +36026,10 @@ later in the scene.
 Fusion Page Effects | Chapter 29 3D Nodes **746**
 
 
+
+
+--- end of page=745 ---
+
 Common Controls
 
 
@@ -33085,6 +36067,10 @@ Override 3D connected to a Replace Material node
 Fusion Page Effects | Chapter 29 3D Nodes **747**
 
 
+
+
+--- end of page=746 ---
+
 ###### **Inspector**
 
 Override 3D controls
@@ -33121,6 +36107,10 @@ Common Controls” section at the end of this chapter.
 Fusion Page Effects | Chapter 29 3D Nodes **748**
 
 
+
+
+--- end of page=747 ---
+
 #### Point Cloud 3D [3PC]
 
 The PointCloud 3D node
@@ -33155,6 +36145,10 @@ Point Cloud 3D connected and viewed through a Merge 3D
 
 Fusion Page Effects | Chapter 29 3D Nodes **749**
 
+
+
+
+--- end of page=748 ---
 
 ###### **Inspector**
 
@@ -33205,6 +36199,10 @@ The Import Point Cloud button displays a dialog to import a point cloud from ano
 
 Fusion Page Effects | Chapter 29 3D Nodes **750**
 
+
+
+
+--- end of page=749 ---
 
 **Make Renderable**
 
@@ -33258,6 +36256,10 @@ The Point Cloud 3D contextual menu options
 Fusion Page Effects | Chapter 29 3D Nodes **751**
 
 
+
+
+--- end of page=750 ---
+
 The contextual menu contains the following options:
 
 **Find:** Selecting this option from the viewer contextual menu opens a dialog to search for and
@@ -33297,6 +36299,10 @@ point’s current location.
 
 Fusion Page Effects | Chapter 29 3D Nodes **752**
 
+
+
+
+--- end of page=751 ---
 
 #### Projector 3D [3Pj]
 
@@ -33349,6 +36355,10 @@ Use Texture mode instead.
 Fusion Page Effects | Chapter 29 3D Nodes **753**
 
 
+
+
+--- end of page=752 ---
+
 To project re-lightable textures or textures for non-diffuse color channels (like Specular
 Intensity or Bump), use the Texture projection mode instead:
 
@@ -33394,6 +36404,10 @@ Projector 3D texturing groups of shapes to construct a set
 
 Fusion Page Effects | Chapter 29 3D Nodes **754**
 
+
+
+
+--- end of page=753 ---
 
 ###### **Inspector**
 
@@ -33447,6 +36461,10 @@ The Fit Method determines how the projection is fitted within the projection con
 
 Fusion Page Effects | Chapter 29 3D Nodes **755**
 
+
+
+
+--- end of page=754 ---
 
 The first thing to know is that although this documentation may call it a “cone,” the Projector 3D
 and Camera 3D nodes do not project an actual cone; it’s more of a pyramid of light with its apex
@@ -33520,6 +36538,10 @@ produces a completely transparent shadow, whereas lower values make the shadow t
 Fusion Page Effects | Chapter 29 3D Nodes **756**
 
 
+
+
+--- end of page=755 ---
+
  - **Shadow Map Size:** The Shadow Map Size control determines the size of the bitmap used to create
 the shadow map. Larger values produce more detailed shadow maps at the expense of memory
 and performance.
@@ -33589,6 +36611,10 @@ found in “The Common Controls” section at the end of this chapter.
 Fusion Page Effects | Chapter 29 3D Nodes **757**
 
 
+
+
+--- end of page=756 ---
+
 #### Renderer3D [3Rn]
 
 The Renderer 3D node
@@ -33639,6 +36665,10 @@ convert to 2D.
 Fusion Page Effects | Chapter 29 3D Nodes **758**
 
 
+
+
+--- end of page=757 ---
+
 ###### **Basic Node Setup**
 
 All 3D scenes must end with a Renderer 3D node. The Renderer 3D node is used to convert a
@@ -33668,6 +36698,10 @@ Render 3D controls
 
 Fusion Page Effects | Chapter 29 3D Nodes **759**
 
+
+
+
+--- end of page=758 ---
 
 Controls Tab
 
@@ -33741,6 +36775,10 @@ channel containing values in a range from [–1,1] represents each axis.
 Fusion Page Effects | Chapter 29 3D Nodes **760**
 
 
+
+
+--- end of page=759 ---
+
  - **TexCoord:** This option enables rendering of the U and V mapping coordinate channels. The pixels
 in these channels contain the texture coordinates of the pixel. Although texture coordinates are
 processed internally within the 3D system as three-component UVW, Fusion images store only
@@ -33783,6 +36821,10 @@ memory and processing time, so these should be used only when required.
 
 Fusion Page Effects | Chapter 29 3D Nodes **761**
 
+
+
+
+--- end of page=760 ---
 
  - **RGBA:** This option tells the renderer to produce the Red, Green, Blue, and Alpha color channels of
 the image. These channels are required, and they cannot be disabled.
@@ -33845,6 +36887,10 @@ from their original sizes, and likely appear much thinner than expected.
 Fusion Page Effects | Chapter 29 3D Nodes **762**
 
 
+
+
+--- end of page=761 ---
+
 **Anti-Aliasing of Aux Channels in the OpenGL Renderer**
 
 The reason Fusion supplies separate anti-aliasing options for color and aux channels in the AntiAliasing preset is that supersampling of color channels is quite a bit slower than aux channels. You
@@ -33904,6 +36950,10 @@ The functions of these filters are shown in the image above. From left to right 
 Fusion Page Effects | Chapter 29 3D Nodes **763**
 
 
+
+
+--- end of page=762 ---
+
 |Box|This is a simple interpolation scale of the image.|
 |---|---|
 |**Bi-Linear (triangle)**|This uses a simplistic filter, which produces relatively clean and fast results.|
@@ -33960,6 +37010,10 @@ unsupported bit depth that Fusion can’t process.
 
 Fusion Page Effects | Chapter 29 3D Nodes **764**
 
+
+
+
+--- end of page=763 ---
 
 **Lighting Mode**
 
@@ -34020,6 +37074,10 @@ Render 3D Open GL UV controls
 Fusion Page Effects | Chapter 29 3D Nodes **765**
 
 
+
+
+--- end of page=764 ---
+
 Below are some issues to be aware of when using the OpenGL UV renderer.
 
 **Baked-in lighting:** After you have baked lighting into a model’s texture, you need to be careful
@@ -34069,6 +37127,10 @@ material shaders to the text.
 Fusion Page Effects | Chapter 29 3D Nodes **766**
 
 
+
+
+--- end of page=765 ---
+
 ###### **Inputs**
 
 The Replace Material node has two inputs: one for the 3D scene, object, or 3D text that contains the
@@ -34107,6 +37169,10 @@ scripts in the Settings tab, still process as normal.
 
 Fusion Page Effects | Chapter 29 3D Nodes **767**
 
+
+
+
+--- end of page=766 ---
 
 **Replace Mode**
 
@@ -34162,6 +37228,10 @@ coordinates you want to modify.
 Fusion Page Effects | Chapter 29 3D Nodes **768**
 
 
+
+
+--- end of page=767 ---
+
 ###### **Basic Node Setup**
 
 The Replace Normals 3D node is inserted directly after the 3D object or scene whose normals you
@@ -34201,6 +37271,10 @@ Controls when normals/tangents are recomputed.
 
 Fusion Page Effects | Chapter 29 3D Nodes **769**
 
+
+
+
+--- end of page=768 ---
 
 **Smoothing Angle**
 
@@ -34262,6 +37336,10 @@ Common Controls” section at the end of this chapter.
 Fusion Page Effects | Chapter 29 3D Nodes **770**
 
 
+
+
+--- end of page=769 ---
+
 #### Replicate 3D [3Rep]
 
 The Replicate 3D node
@@ -34299,6 +37377,10 @@ Replicate 3D used to create an armada of swarming spaceships
 
 Fusion Page Effects | Chapter 29 3D Nodes **771**
 
+
+
+
+--- end of page=770 ---
 
 ###### **Inspector**
 
@@ -34343,6 +37425,10 @@ The Input Mode Loop vs. Random order
 Fusion Page Effects | Chapter 29 3D Nodes **772**
 
 
+
+
+--- end of page=771 ---
+
 **Time Offset**
 
 Use the Time Offset slider to offset any animations that are applied to the input geometry by a set
@@ -34363,6 +37449,10 @@ particle rotation.
 Fusion Page Effects | Chapter 29 3D Nodes **773**
 
 
+
+
+--- end of page=772 ---
+
 **Color**
 
 Affects the diffuse color or shader of each copy based on the input’s particle color.
@@ -34375,6 +37465,10 @@ Affects the diffuse color or shader of each copy based on the input’s particle
 
 Fusion Page Effects | Chapter 29 3D Nodes **774**
 
+
+
+
+--- end of page=773 ---
 
 **Translation**
 
@@ -34430,6 +37524,10 @@ Click the Randomize button to assign a Random Seed value.
 
 Fusion Page Effects | Chapter 29 3D Nodes **775**
 
+
+
+
+--- end of page=774 ---
 
 **Time Offset**
 
@@ -34489,6 +37587,10 @@ the ribbon appearance may vary based on your computer’s graphics card.
 Fusion Page Effects | Chapter 29 3D Nodes **776**
 
 
+
+
+--- end of page=775 ---
+
 ###### **Inputs**
 
 There are two inputs on the Ribbon 3D node: one for the destination geometry that contains the
@@ -34517,6 +37619,10 @@ Ribbon 3D controls
 
 Fusion Page Effects | Chapter 29 3D Nodes **777**
 
+
+
+
+--- end of page=776 ---
 
 Controls Tab
 
@@ -34583,6 +37689,10 @@ chapter in “The Common Controls” section.
 Fusion Page Effects | Chapter 29 3D Nodes **778**
 
 
+
+
+--- end of page=777 ---
+
 #### Shape 3D [3Sh]
 
 The Shape 3D node
@@ -34617,6 +37727,10 @@ Shape 3D nodes combined with Projector 3D to create a realistic 3D set
 
 Fusion Page Effects | Chapter 29 3D Nodes **779**
 
+
+
+
+--- end of page=778 ---
 
 ###### **Inspector**
 
@@ -34672,6 +37786,10 @@ draw half of the shape.
 Fusion Page Effects | Chapter 29 3D Nodes **780**
 
 
+
+
+--- end of page=779 ---
+
 **Start/End Latitude**
 
 When a Sphere or Torus is selected in the Shape menu, this range control is used to crop or slice the
@@ -34726,6 +37844,10 @@ Spherical mapping differences
 Fusion Page Effects | Chapter 29 3D Nodes **781**
 
 
+
+
+--- end of page=780 ---
+
 **NOTE:** If you pipe the texture directly into the sphere, it is also mirrored horizontally. You can
 change this by using a Transform node first.
 
@@ -34761,6 +37883,10 @@ Soft Clip placed between a Merge 3D and a Renderer 3D node
 
 Fusion Page Effects | Chapter 29 3D Nodes **782**
 
+
+
+
+--- end of page=781 ---
 
 ###### **Inspector**
 
@@ -34821,6 +37947,10 @@ camera along the Z-axis.
 Fusion Page Effects | Chapter 29 3D Nodes **783**
 
 
+
+
+--- end of page=782 ---
+
 Common Controls
 
 
@@ -34865,6 +37995,10 @@ Spherical Camera placed inside a sphere
 
 Fusion Page Effects | Chapter 29 3D Nodes **784**
 
+
+
+
+--- end of page=783 ---
 
 ###### **Inspector**
 
@@ -34916,6 +38050,10 @@ above. This option is not available for orthographic cameras.
 
 Fusion Page Effects | Chapter 29 3D Nodes **785**
 
+
+
+
+--- end of page=784 ---
 
 **Viewing Volume Size**
 
@@ -34990,6 +38128,10 @@ shift when in Parallel mode.
 Fusion Page Effects | Chapter 29 3D Nodes **786**
 
 
+
+
+--- end of page=785 ---
+
  - **Plane of Focus:** The camera focal point according to the Plane of Focus slider explained above.
 This plane can be subdivided for better visibility.
 
@@ -35044,6 +38186,10 @@ selected in the Bevel Type menu.
 Fusion Page Effects | Chapter 29 3D Nodes **787**
 
 
+
+
+--- end of page=786 ---
+
 ###### **Basic Node Setup**
 
 The Text 3D node generates text, so most often this node starts a branch of your node tree. However,
@@ -35079,6 +38225,10 @@ formatting options.
 
 Fusion Page Effects | Chapter 29 3D Nodes **788**
 
+
+
+
+--- end of page=787 ---
 
 **Font**
 
@@ -35153,6 +38303,10 @@ or right to left.
 Fusion Page Effects | Chapter 29 3D Nodes **789**
 
 
+
+
+--- end of page=788 ---
+
 **Write On**
 
 This range control is used to quickly apply simple Write On and Write Off animation to the text.
@@ -35215,6 +38369,10 @@ sure the first and last point have their profiles set to 0.
 Fusion Page Effects | Chapter 29 3D Nodes **790**
 
 
+
+
+--- end of page=789 ---
+
 **Force Monospaced**
 
 This slider control can be used to override the kerning (spacing between characters) that is defined
@@ -35252,6 +38410,10 @@ the layout of the text block
 
 Fusion Page Effects | Chapter 29 3D Nodes **791**
 
+
+
+
+--- end of page=790 ---
 
 **Layout Type**
 
@@ -35325,6 +38487,10 @@ spline points on the path over time.
 Fusion Page Effects | Chapter 29 3D Nodes **792**
 
 
+
+
+--- end of page=791 ---
+
 Transform Tab
 
 There are actually two Transform tabs in the Text 3D Inspector. The first Transform tab is unique to
@@ -35387,6 +38553,10 @@ Adjust these sliders to modify the size of the text elements along the X- and Y-
 Fusion Page Effects | Chapter 29 3D Nodes **793**
 
 
+
+
+--- end of page=792 ---
+
 **Shading**
 
 The Shading tab for the Text 3D node controls the overall appearance of the text and how lights affect
@@ -35432,6 +38602,10 @@ has a valid input, then this value is multiplied by the Alpha value of the input
 
 Fusion Page Effects | Chapter 29 3D Nodes **794**
 
+
+
+
+--- end of page=793 ---
 
 **Specular Exponent**
 
@@ -35497,6 +38671,10 @@ Use the Animate command to set to a keyframe on the entered text and animate the
 Fusion Page Effects | Chapter 29 3D Nodes **795**
 
 
+
+
+--- end of page=794 ---
+
 **Character Level Styling**
 
 The Text 3D node doesn’t support Character Level Styling directly. However, you can create a Text+
@@ -35560,6 +38738,10 @@ objects that are merged into a scene multiple times. Its controls are identical 
 Fusion Page Effects | Chapter 29 3D Nodes **796**
 
 
+
+
+--- end of page=795 ---
+
 ###### **Inputs**
 
 The Transform node has a single required input for a 3D scene or 3D object.
@@ -35595,6 +38777,10 @@ or scale all elements within a scene without requiring a Merge 3D node.
 
 Fusion Page Effects | Chapter 29 3D Nodes **797**
 
+
+
+
+--- end of page=796 ---
 
 **Rotation**
 
@@ -35650,6 +38836,10 @@ cameras, consider using the File > FBX Import option from the menus.
 Fusion Page Effects | Chapter 29 3D Nodes **798**
 
 
+
+
+--- end of page=797 ---
+
 Import Transform Browser
 
 
@@ -35683,6 +38873,10 @@ complex polygon shapes into a mesh for easier processing.
 
 Fusion Page Effects | Chapter 29 3D Nodes **799**
 
+
+
+
+--- end of page=798 ---
 
 ###### **Inputs**
 
@@ -35720,6 +38914,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 
 Fusion Page Effects | Chapter 29 3D Nodes **800**
 
+
+
+
+--- end of page=799 ---
 
 #### UV Map 3D [3UV]
 
@@ -35778,6 +38976,10 @@ Map mode menu is set to Camera.
 Fusion Page Effects | Chapter 29 3D Nodes **801**
 
 
+
+
+--- end of page=800 ---
+
 ###### **Basic Node Setup**
 
 The UV Map 3D node is placed after all the geometry and set to Camera Map. Connecting a camera to
@@ -35804,6 +39006,10 @@ animated geometry do not slide.
 
 Fusion Page Effects | Chapter 29 3D Nodes **802**
 
+
+
+
+--- end of page=801 ---
 
 **Map Mode**
 
@@ -35889,6 +39095,10 @@ Mirrors the texture coordinates on the individual faces of the cube.
 Fusion Page Effects | Chapter 29 3D Nodes **803**
 
 
+
+
+--- end of page=802 ---
+
 **NOTE:** To utilize the full capabilities of the UV Map 3D node, it helps to have a basic
 understanding of how 2D images are mapped onto 3D geometry. When a 2D image is
 applied to a 3D surface, it is converted into a texture map that uses UV coordinates to
@@ -35947,6 +39157,10 @@ their old values. This can lead to hard edges in certain situations.
 Fusion Page Effects | Chapter 29 3D Nodes **804**
 
 
+
+
+--- end of page=803 ---
+
 ###### **Inputs**
 
 The Weld 3D node has a single input for a 3D scene or 3D object you want to repair.
@@ -35989,6 +39203,10 @@ It can also be adjusted manually if needed.
 
 Fusion Page Effects | Chapter 29 3D Nodes **805**
 
+
+
+
+--- end of page=804 ---
 
 **USAGE** Use Weld 3D when issues occur with the geometry. Don’t use it everywhere just
 because it’s there, as it influences render time.
@@ -36037,6 +39255,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 29 3D Nodes **806**
 
 
+
+
+--- end of page=805 ---
+
 #### **Modifier**
 
 ###### **Coordinate Transform 3D**
@@ -36083,6 +39305,10 @@ or right-click the control and select an object from the Connect To submenu.
 Fusion Page Effects | Chapter 29 3D Nodes **807**
 
 
+
+
+--- end of page=806 ---
+
 #### **The Common Controls**
 
 Nodes that handle 3D geometry share several identical controls in the Inspector. This section
@@ -36122,6 +39348,10 @@ were excluded by the software and Open GL render options in the Renderer 3D node
 
 Fusion Page Effects | Chapter 29 3D Nodes **808**
 
+
+
+
+--- end of page=807 ---
 
 more specific, the software renderer excluded pixels with R,G,B,A set to 0, and the GL renderer
 excluded pixels with A set to 0. This is now optional. The reason you might want to do this is to
@@ -36191,6 +39421,10 @@ modes described in the Merge node documentation, except for the Dissolve mode.
 Fusion Page Effects | Chapter 29 3D Nodes **809**
 
 
+
+
+--- end of page=808 ---
+
 **Normal/Tangents**
 
 Normals are imaginary lines perpendicular to each point on the surface of an object. They are used
@@ -36234,6 +39468,10 @@ currently in use.
 
 Fusion Page Effects | Chapter 29 3D Nodes **810**
 
+
+
+
+--- end of page=809 ---
 
 Diffuse
 
@@ -36305,6 +39543,10 @@ blue shadow.
 Fusion Page Effects | Chapter 29 3D Nodes **811**
 
 
+
+
+--- end of page=810 ---
+
 There is a separate opacity option. Opacity determines how transparent the actual surface is when
 it is rendered. Fusion allows adjusting both opacity and transmittance separately. This might be a bit
 counter-intuitive to artists who are unfamiliar with 3D software at first. It is possible to have a surface
@@ -36374,6 +39616,10 @@ still apply and produce a result that is counterintuitive. If you view from the 
 Fusion Page Effects | Chapter 29 3D Nodes **812**
 
 
+
+
+--- end of page=811 ---
+
 Material ID
 
 This control is used to set the numeric identifier assigned to this material. The Material ID is an integer
@@ -36420,6 +39666,10 @@ then the rotation is relative to the position of the target; otherwise, the glob
 
 Fusion Page Effects | Chapter 29 3D Nodes **813**
 
+
+
+
+--- end of page=812 ---
 
 Pivot
 
@@ -36485,6 +39735,10 @@ Unlock the Lock X/Y/Z Scale checkbox to scale an object on a single axis only.
 Fusion Page Effects | Chapter 29 3D Nodes **814**
 
 
+
+
+--- end of page=813 ---
+
 ###### **Settings Tab**
 
 Common Settings 3D controls
@@ -36521,6 +39775,10 @@ scripting documentation.
 Fusion Page Effects | Chapter 29 3D Nodes **815**
 
 
+
+
+--- end of page=814 ---
+
 #### **Chapter 30**
 ### 3D Light Nodes
 
@@ -36550,6 +39808,10 @@ interchangeable with Loader nodes in Fusion Studio, unless otherwise noted.
 
 Fusion Page Effects | Chapter 30 3D Light Nodes **816**
 
+
+
+
+--- end of page=815 ---
 
 #### Ambient Light [3AL]
 
@@ -36584,6 +39846,10 @@ Ambient Light node structure
 
 Fusion Page Effects | Chapter 30 3D Light Nodes **817**
 
+
+
+
+--- end of page=816 ---
 
 ###### **Inspector**
 
@@ -36629,6 +39895,10 @@ this chapter.
 Fusion Page Effects | Chapter 30 3D Light Nodes **818**
 
 
+
+
+--- end of page=817 ---
+
 #### Directional Light [3DL]
 
 The Directional Light node
@@ -36661,6 +39931,10 @@ Directional Light node structure
 
 Fusion Page Effects | Chapter 30 3D Light Nodes **819**
 
+
+
+
+--- end of page=818 ---
 
 ###### **Inspector**
 
@@ -36709,6 +39983,10 @@ Renderer3D node, for shadows to be seen in the 3D viewer.
 
 Fusion Page Effects | Chapter 30 3D Light Nodes **820**
 
+
+
+
+--- end of page=819 ---
 
 **Enable Shadows**
 
@@ -36782,6 +40060,10 @@ so it is fast.
 Fusion Page Effects | Chapter 30 3D Light Nodes **821**
 
 
+
+
+--- end of page=820 ---
+
    - **Constant:** Shadows edges have a constant softness. A filter with a constant width is used when
 sampling the shadow map. Adjusting the Constant Softness slider controls the size of the filter.
 Note that the larger you make the filter, the longer it takes to render the shadows.
@@ -36842,6 +40124,10 @@ with the image, similar to environment light. This light shows an onscreen contr
 Fusion Page Effects | Chapter 30 3D Light Nodes **822**
 
 
+
+
+--- end of page=821 ---
+
 ###### **Inputs**
 
 This node includes an optional orange input for a 3D scene or 3D geometry, and a white Dome
@@ -36886,6 +40172,10 @@ Use this slider to set the intensity of the light. A value of 0.2 indicates 20% 
 Fusion Page Effects | Chapter 30 3D Light Nodes **823**
 
 
+
+
+--- end of page=822 ---
+
 #### Point Light [3PL]
 
 The Point Light node
@@ -36921,6 +40211,10 @@ Point Light node structure
 
 Fusion Page Effects | Chapter 30 3D Light Nodes **824**
 
+
+
+
+--- end of page=823 ---
 
 ###### **Inspector**
 
@@ -36971,6 +40265,10 @@ _[DaVinci Resolve 20.3 Reference Manual](https://www.blackmagicdesign.com/suppor
 
 Fusion Page Effects | Chapter 30 3D Light Nodes **825**
 
+
+
+
+--- end of page=824 ---
 
 **NOTE:** The Point light requires Hardware Renderer set as the Rendering Type in the
 Renderer3D node for shadows to be seen in the 3D viewer.
@@ -37037,6 +40335,10 @@ Sets the quality for sampling of the shadow map.
 Fusion Page Effects | Chapter 30 3D Light Nodes **826**
 
 
+
+
+--- end of page=825 ---
+
 **Softness**
 
 Soft edges in shadows are produced by filtering the shadow map when it is sampled. Fusion provides
@@ -37099,6 +40401,10 @@ this chapter.
 Fusion Page Effects | Chapter 30 3D Light Nodes **827**
 
 
+
+
+--- end of page=826 ---
+
 #### Spot Light [3SL]
 
 The Spot Light node
@@ -37132,6 +40438,10 @@ Spot Light node structure
 
 Fusion Page Effects | Chapter 30 3D Light Nodes **828**
 
+
+
+
+--- end of page=827 ---
 
 ###### **Inspector**
 
@@ -37179,6 +40489,10 @@ The larger the angle, the wider the cone angle, up to a limit of 90 degrees.
 
 Fusion Page Effects | Chapter 30 3D Light Nodes **829**
 
+
+
+
+--- end of page=828 ---
 
 **Penumbra Angle**
 
@@ -37248,6 +40562,10 @@ first, and then fine tune the result using the Additive Bias control.
 Fusion Page Effects | Chapter 30 3D Light Nodes **830**
 
 
+
+
+--- end of page=829 ---
+
 For more information, see the Multiplicative and Additive Bias section of _see Chapter 25, “3D_
 _Compositing Basics,”_ or Chapter 85 in the _[DaVinci Resolve 20.3 Reference Manual](https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion)_ .
 
@@ -37316,6 +40634,10 @@ softer it is, up to the limit set by this slider.
 Fusion Page Effects | Chapter 30 3D Light Nodes **831**
 
 
+
+
+--- end of page=830 ---
+
 Common Controls
 
 
@@ -37358,6 +40680,10 @@ example, XYZ would apply the rotation to the X axis first, followed by the Y axi
 
 Fusion Page Effects | Chapter 30 3D Light Nodes **832**
 
+
+
+
+--- end of page=831 ---
 
 **X, Y, Z Rotation**
 
@@ -37418,6 +40744,10 @@ Viewer Transform buttons
 Fusion Page Effects | Chapter 30 3D Light Nodes **833**
 
 
+
+
+--- end of page=832 ---
+
 **Viewer Transform buttons**
 
 Most of the controls in the Transform tab are represented in the viewer with onscreen controls for
@@ -37466,6 +40796,10 @@ scripting documentation.
 Fusion Page Effects | Chapter 30 3D Light Nodes **834**
 
 
+
+
+--- end of page=833 ---
+
 #### **Chapter 31**
 ### 3D Material Nodes
 
@@ -37501,6 +40835,10 @@ interchangeable with Loader nodes in Fusion Studio, unless otherwise noted.
 
 Fusion Page Effects | Chapter 31 3D Material Nodes **835**
 
+
+
+
+--- end of page=834 ---
 
 #### Blinn [3Bl]
 
@@ -37558,6 +40896,10 @@ input uses the RGB information as texture-space normals.
 Fusion Page Effects | Chapter 31 3D Material Nodes **836**
 
 
+
+
+--- end of page=835 ---
+
 When nodes have as many inputs as this one does, it is often difficult to make connections with any
 precision. Hold down the Option (macOS) or Alt (Windows) key while dragging the output from another
 node over the node tile, and keep holding Option or Alt when releasing the left mouse button. A small
@@ -37582,6 +40924,10 @@ Blinn controls
 
 Fusion Page Effects | Chapter 31 3D Material Nodes **837**
 
+
+
+
+--- end of page=836 ---
 
 Controls Tab
 
@@ -37647,6 +40993,10 @@ provided, then this value is multiplied by the Alpha value of the texture map.
 
 Fusion Page Effects | Chapter 31 3D Material Nodes **838**
 
+
+
+
+--- end of page=837 ---
 
 Transmittance
 
@@ -37715,6 +41065,10 @@ which has its normals facing the opposite way.
 Fusion Page Effects | Chapter 31 3D Material Nodes **839**
 
 
+
+
+--- end of page=838 ---
+
 Fusion does exactly the same thing as 3D applications when you make a surface two sided.
 The confusion about what two-sided lighting does arises because Fusion does not cull back-facing
 polygons by default. If you revolve around a one-sided plane in Fusion, you still see it from the
@@ -37768,6 +41122,10 @@ or Phong node.
 Fusion Page Effects | Chapter 31 3D Material Nodes **840**
 
 
+
+
+--- end of page=839 ---
+
 ###### **Basic Node Setup**
 
 There are many uses for the material 3D Channel Boolean. Most often it is used to combine material
@@ -37788,6 +41146,10 @@ Channel Boolean controls
 
 Fusion Page Effects | Chapter 31 3D Material Nodes **841**
 
+
+
+
+--- end of page=840 ---
 
 Controls Tab
 
@@ -37816,6 +41178,10 @@ Operation menu.
 
 Fusion Page Effects | Chapter 31 3D Material Nodes **842**
 
+
+
+
+--- end of page=841 ---
 
 **Operation**
 
@@ -37867,6 +41233,10 @@ The Cook Torrance node outputs a 3D Material that can be connected to the materi
 
 Fusion Page Effects | Chapter 31 3D Material Nodes **843**
 
+
+
+
+--- end of page=842 ---
 
 ###### **Inputs**
 
@@ -37922,6 +41292,10 @@ A Cook Torrance shader with diffuse and specular color materials connected
 Fusion Page Effects | Chapter 31 3D Material Nodes **844**
 
 
+
+
+--- end of page=843 ---
+
 ###### **Inspector**
 
 Controls Tab
@@ -37966,6 +41340,10 @@ colors equally, making the material transparent.
 
 Fusion Page Effects | Chapter 31 3D Material Nodes **845**
 
+
+
+
+--- end of page=844 ---
 
 Specular
 
@@ -38035,6 +41413,10 @@ glass”-styled shadows.
 Fusion Page Effects | Chapter 31 3D Material Nodes **846**
 
 
+
+
+--- end of page=845 ---
+
 **Alpha Detail**
 
 When the Alpha Detail slider is set to 0, the Alpha channel of the object is ignored and the entire
@@ -38101,6 +41483,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 31 3D Material Nodes **847**
 
 
+
+
+--- end of page=846 ---
+
 #### Material Merge 3D [3MM]
 
 The Material Merge node
@@ -38136,6 +41522,10 @@ A Material Merge node combining a Blinn-based shader (teal underlay) and a Ward-
 
 Fusion Page Effects | Chapter 31 3D Material Nodes **848**
 
+
+
+
+--- end of page=847 ---
 
 ###### **Inspector**
 
@@ -38191,6 +41581,10 @@ shiny/polished plastic surfaces.
 Fusion Page Effects | Chapter 31 3D Material Nodes **849**
 
 
+
+
+--- end of page=848 ---
+
 ###### **Inputs**
 
 There are five inputs on the Phong node that accept 2D images or 3D materials. These inputs
@@ -38237,6 +41631,10 @@ A Phong node with a diffuse color and Bump Map input
 Fusion Page Effects | Chapter 31 3D Material Nodes **850**
 
 
+
+
+--- end of page=849 ---
+
 ###### **Inspector**
 
 Controls Tab
@@ -38282,6 +41680,10 @@ colors equally, making the material transparent.
 
 Fusion Page Effects | Chapter 31 3D Material Nodes **851**
 
+
+
+
+--- end of page=850 ---
 
 Specular
 
@@ -38352,6 +41754,10 @@ Alpha to still transmit its color to the shadow.
 Fusion Page Effects | Chapter 31 3D Material Nodes **852**
 
 
+
+
+--- end of page=851 ---
+
 **Saturation**
 
 The Saturation slider controls the saturation of the color component transmitted to the shadow. Setting
@@ -38407,6 +41813,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 
 Fusion Page Effects | Chapter 31 3D Material Nodes **853**
 
+
+
+
+--- end of page=852 ---
 
 #### Reflect [3RR]
 
@@ -38464,6 +41874,10 @@ desired input to complete the connection.
 Fusion Page Effects | Chapter 31 3D Material Nodes **854**
 
 
+
+
+--- end of page=853 ---
+
 ###### **Basic Node Setup**
 
 The Reflection node can be the main shader for an object as it is in the example below, or it can be
@@ -38487,6 +41901,10 @@ the object, as well as the tint color of the Reflect shader node.
 
 Fusion Page Effects | Chapter 31 3D Material Nodes **855**
 
+
+
+
+--- end of page=854 ---
 
 Reflection
 
@@ -38563,6 +41981,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 31 3D Material Nodes **856**
 
 
+
+
+--- end of page=855 ---
+
 #### Stereo Mix [3SMM]
 
 The Stereo Mix node
@@ -38604,6 +42026,10 @@ Stereo Mix controls
 
 Fusion Page Effects | Chapter 31 3D Material Nodes **857**
 
+
+
+
+--- end of page=856 ---
 
 Controls Tab
 
@@ -38665,6 +42091,10 @@ to be used as a highlight color and texture of the object.
 Fusion Page Effects | Chapter 31 3D Material Nodes **858**
 
 
+
+
+--- end of page=857 ---
+
 **Specular Intensity Material:** The magenta Specular Intensity material input accepts a 2D image or a
 3D material to be used as an intensity map for the material’s highlights. When the input is a 2D image,
 the Alpha channel is used to create the map, while the color channels are discarded.
@@ -38699,6 +42129,10 @@ A Ward node used with a diffuse connection and specular color connection
 
 Fusion Page Effects | Chapter 31 3D Material Nodes **859**
 
+
+
+
+--- end of page=858 ---
 
 ###### **Inspector**
 
@@ -38744,6 +42178,10 @@ colors equally, making the material transparent.
 
 Fusion Page Effects | Chapter 31 3D Material Nodes **860**
 
+
+
+
+--- end of page=859 ---
 
 Specular
 
@@ -38814,6 +42252,10 @@ cast a shadow.
 Fusion Page Effects | Chapter 31 3D Material Nodes **861**
 
 
+
+
+--- end of page=860 ---
+
 **Color Detail**
 
 The Color Detail slider modulates light passing through the surface by the diffuse color + texture
@@ -38879,6 +42321,10 @@ described in detail in the following “The Common Controls” section.
 Fusion Page Effects | Chapter 31 3D Material Nodes **862**
 
 
+
+
+--- end of page=861 ---
+
 #### **The Common Controls**
 
 Nodes that handle 3D geometry share a number of identical controls in the Inspector. This section
@@ -38920,6 +42366,10 @@ scripting documentation.
 Fusion Page Effects | Chapter 31 3D Material Nodes **863**
 
 
+
+
+--- end of page=862 ---
+
 #### **Chapter 32**
 ### 3D Texture Nodes
 
@@ -38958,6 +42408,10 @@ interchangeable with Loader nodes in Fusion Studio, unless otherwise noted.
 Fusion Page Effects | Chapter 32 3D Texture Nodes **864**
 
 
+
+
+--- end of page=863 ---
+
 #### Bump Map [3Bu]
 
 The Bump Map node
@@ -38988,6 +42442,10 @@ A Bump Map is connected to the Bump Map material input on a material node.
 
 Fusion Page Effects | Chapter 32 3D Texture Nodes **865**
 
+
+
+
+--- end of page=864 ---
 
 ###### **Inspector**
 
@@ -39043,6 +42501,10 @@ Wraps the image at the borders, so the filter produces correct result when using
 Fusion Page Effects | Chapter 32 3D Texture Nodes **866**
 
 
+
+
+--- end of page=865 ---
+
 Common Controls
 
 
@@ -39080,6 +42542,10 @@ replacing the existing normals (usually given in tangent or object space)
 
 Fusion Page Effects | Chapter 32 3D Texture Nodes **867**
 
+
+
+
+--- end of page=866 ---
 
 #### Catcher [3Ca]
 
@@ -39132,6 +42598,10 @@ input of the Blinn, Cook Torrance, or other material node applied to the 3D geom
 Fusion Page Effects | Chapter 32 3D Texture Nodes **868**
 
 
+
+
+--- end of page=867 ---
+
 ###### **Basic Node Setup**
 
 The output of a Catcher node should be connected to the material input of your 3D geometry node.
@@ -39171,6 +42641,10 @@ OpenGL renderer.
 
 Fusion Page Effects | Chapter 32 3D Texture Nodes **869**
 
+
+
+
+--- end of page=868 ---
 
 **Alpha Mode**
 
@@ -39228,6 +42702,10 @@ texture map. The Cube Map node is typically used to produce environment maps for
 Fusion Page Effects | Chapter 32 3D Texture Nodes **870**
 
 
+
+
+--- end of page=869 ---
+
 Sample cube map
 
 ###### **Inputs**
@@ -39255,6 +42733,10 @@ A Cube Map node receives a cross image input, creating an environment for the Sh
 
 Fusion Page Effects | Chapter 32 3D Texture Nodes **871**
 
+
+
+
+--- end of page=870 ---
 
 ###### **Inspector**
 
@@ -39301,6 +42783,10 @@ The coordinate system menu sets the position values used when converting the ima
 Fusion Page Effects | Chapter 32 3D Texture Nodes **872**
 
 
+
+
+--- end of page=871 ---
+
 **Rotation**
 
 The rotation controls are divided into buttons that select the order of rotation along each axis of the
@@ -39346,6 +42832,10 @@ Falloff example
 Fusion Page Effects | Chapter 32 3D Texture Nodes **873**
 
 
+
+
+--- end of page=872 ---
+
 ###### **Inputs**
 
 The two Inputs on the Falloff node are used to connect two images or materials. One is used to reflect
@@ -39380,6 +42870,10 @@ Falloff controls
 
 Fusion Page Effects | Chapter 32 3D Texture Nodes **874**
 
+
+
+
+--- end of page=873 ---
 
 Controls Tab
 
@@ -39448,6 +42942,10 @@ mode for creating seamless textures in conjunction with nodes providing UVW text
 Fusion Page Effects | Chapter 32 3D Texture Nodes **875**
 
 
+
+
+--- end of page=874 ---
+
 ###### **Inputs**
 
 The Fast Noise Texture node includes an optional input that can be used to connect a 2D image
@@ -39488,6 +42986,10 @@ using the UV Map node. The 3D setting does not support animation of the noise pa
 
 Fusion Page Effects | Chapter 32 3D Texture Nodes **876**
 
+
+
+
+--- end of page=875 ---
 
 **Detail**
 
@@ -39564,6 +43066,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 32 3D Texture Nodes **877**
 
 
+
+
+--- end of page=876 ---
+
 #### Gradient 3D [3Gd]
 
 The Gradient node
@@ -39601,6 +43107,10 @@ A Gradient 3D node generates a resolution-independent gradient texture positione
 
 Fusion Page Effects | Chapter 32 3D Texture Nodes **878**
 
+
+
+
+--- end of page=877 ---
 
 ###### **Inspector**
 
@@ -39643,6 +43153,10 @@ can be applied to the gradient to evaluate it from an image.
 
 Fusion Page Effects | Chapter 32 3D Texture Nodes **879**
 
+
+
+
+--- end of page=878 ---
 
 **Interpolation Space**
 
@@ -39693,6 +43207,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 32 3D Texture Nodes **880**
 
 
+
+
+--- end of page=879 ---
+
 #### Sphere Map [3SpM]
 
 The SphereMap node
@@ -39725,6 +43243,10 @@ A Sphere Map node generates a reflective environment when connected to a Reflect
 
 Fusion Page Effects | Chapter 32 3D Texture Nodes **881**
 
+
+
+
+--- end of page=880 ---
 
 ###### **Inspector**
 
@@ -39778,6 +43300,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 32 3D Texture Nodes **882**
 
 
+
+
+--- end of page=881 ---
+
 Sphere Map vs. Connecting the Texture to a Sphere Directly
 
 You can connect an equirectangular texture map directly to a sphere instead of piping it through the
@@ -39811,6 +43337,10 @@ on the Alpha of the object, or its Object or Material ID channel.
 
 Fusion Page Effects | Chapter 32 3D Texture Nodes **883**
 
+
+
+
+--- end of page=882 ---
 
 For more information, _see Chapter 18, “Understanding Image Channels,”_ or Chapter 78 in the
 _[DaVinci Resolve 20.3 Reference Manual](https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion)_ .
@@ -39850,6 +43380,10 @@ These sliders can be used to scale the texture along the U and V coordinates.
 
 Fusion Page Effects | Chapter 32 3D Texture Nodes **884**
 
+
+
+
+--- end of page=883 ---
 
 **Wrap Mode**
 
@@ -39910,6 +43444,10 @@ of a 3D object. While the input can also be an image, the output is always a mat
 Fusion Page Effects | Chapter 32 3D Texture Nodes **885**
 
 
+
+
+--- end of page=884 ---
+
 ###### **Inputs**
 
 The Texture Transform node includes a single input that is used to connect the image or material you
@@ -39937,6 +43475,10 @@ Texture Transform controls
 
 Fusion Page Effects | Chapter 32 3D Texture Nodes **886**
 
+
+
+
+--- end of page=885 ---
 
 Controls Tab
 
@@ -39983,6 +43525,10 @@ described in the following “The Common Controls” section.
 Fusion Page Effects | Chapter 32 3D Texture Nodes **887**
 
 
+
+
+--- end of page=886 ---
+
 #### **The Common Controls**
 
 Nodes that handle 3D geometry share a number of identical controls in the Inspector. This section
@@ -40024,6 +43570,10 @@ scripting documentation.
 Fusion Page Effects | Chapter 32 3D Texture Nodes **888**
 
 
+
+
+--- end of page=887 ---
+
 #### **Chapter 33**
 ### Blur Nodes
 
@@ -40061,6 +43611,10 @@ interchangeable with Loader nodes in Fusion Studio, unless otherwise noted.
 
 Fusion Page Effects | Chapter 33 Blur Nodes **889**
 
+
+
+
+--- end of page=888 ---
 
 #### Blur [Blur]
 
@@ -40103,6 +43657,10 @@ Blur controls
 
 Fusion Page Effects | Chapter 33 Blur Nodes **890**
 
+
+
+
+--- end of page=889 ---
 
 **NOTE:** Since a perfect Gaussian filter would require examining an infinite number of pixels,
 all practical Gaussians are, of necessity, approximations. The algorithm Fusion uses is a
@@ -40164,6 +43722,10 @@ independent control over each axis is provided.
 Fusion Page Effects | Chapter 33 Blur Nodes **891**
 
 
+
+
+--- end of page=890 ---
+
 **Clipping Mode**
 
 This option determines how edges are handled when performing domain-of-definition rendering.
@@ -40212,6 +43774,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 33 Blur Nodes **892**
 
 
+
+
+--- end of page=891 ---
+
 #### Defocus [Dfo]
 
 The Defocus node
@@ -40248,6 +43814,10 @@ Defocus controls
 
 Fusion Page Effects | Chapter 33 Blur Nodes **893**
 
+
+
+
+--- end of page=892 ---
 
 Controls Tab
 
@@ -40325,6 +43895,10 @@ DoD is treated as black/transparent.
 Fusion Page Effects | Chapter 33 Blur Nodes **894**
 
 
+
+
+--- end of page=893 ---
+
 Common Controls
 
 
@@ -40364,6 +43938,10 @@ A Directional Blur node applied to a MediaIn1 node
 
 Fusion Page Effects | Chapter 33 Blur Nodes **895**
 
+
+
+
+--- end of page=894 ---
 
 ###### **Inspector**
 
@@ -40425,6 +44003,10 @@ exposure to light caused by longer shutter speeds.
 Fusion Page Effects | Chapter 33 Blur Nodes **896**
 
 
+
+
+--- end of page=895 ---
+
 **Clipping Mode**
 
 This option determines how edges are handled when performing domain-of-definition rendering.
@@ -40485,6 +44067,10 @@ of the glow to only those pixels within the mask.
 Fusion Page Effects | Chapter 33 Blur Nodes **897**
 
 
+
+
+--- end of page=896 ---
+
 Glow masks are identical to Effect masks in every other respect.
 
 ###### **Basic Node Setup**
@@ -40525,6 +44111,10 @@ than the Gaussian filter, and without any ringing.
 
 Fusion Page Effects | Chapter 33 Blur Nodes **898**
 
+
+
+
+--- end of page=897 ---
 
  - **Fast Gaussian:** Fast Gaussian adds a soft glow, blurred by the Gaussian algorithm. This is the
 default method.
@@ -40596,6 +44186,10 @@ DoD is treated as black/transparent.
 Fusion Page Effects | Chapter 33 Blur Nodes **899**
 
 
+
+
+--- end of page=898 ---
+
 **Blend**
 
 The Blend slider determines the percentage of the affected image that is mixed with original image. It
@@ -40658,6 +44252,10 @@ the area affected by the sharpen.
 Fusion Page Effects | Chapter 33 Blur Nodes **900**
 
 
+
+
+--- end of page=899 ---
+
 **Input:** The orange input is used for the primary 2D image for sharpening.
 
 **Effect Mask:** The blue input is for a mask shape created by polylines, basic primitive shapes, paint
@@ -40703,6 +44301,10 @@ by default.
 
 Fusion Page Effects | Chapter 33 Blur Nodes **901**
 
+
+
+
+--- end of page=900 ---
 
 **Amount**
 
@@ -40763,6 +44365,10 @@ like environments.
 Fusion Page Effects | Chapter 33 Blur Nodes **902**
 
 
+
+
+--- end of page=901 ---
+
 ###### **Inputs**
 
 Like the Glow node, Soft Glow also has three inputs: an orange one for the primary image input, a blue
@@ -40801,6 +44407,10 @@ Soft Glow controls
 
 Fusion Page Effects | Chapter 33 Blur Nodes **903**
 
+
+
+
+--- end of page=902 ---
 
 Controls Tab
 
@@ -40877,6 +44487,10 @@ outside the current domain.
 Fusion Page Effects | Chapter 33 Blur Nodes **904**
 
 
+
+
+--- end of page=903 ---
+
  - **Frame:** The default option is Frame, which automatically sets the node’s domain of definition
 to use the full frame of the image, effectively ignoring the current domain of definition.
 If the upstream DoD is smaller than the frame, the remaining area in the frame is treated as
@@ -40935,6 +44549,10 @@ and the blurred image are likely to be an edge detail. The pixel is then brighte
 Fusion Page Effects | Chapter 33 Blur Nodes **905**
 
 
+
+
+--- end of page=904 ---
+
 ###### **Inputs**
 
 The two inputs on the Unsharp Mask node are used to connect a 2D image and an effect mask for
@@ -40981,6 +44599,10 @@ the node has processed.
 
 Fusion Page Effects | Chapter 33 Blur Nodes **906**
 
+
+
+
+--- end of page=905 ---
 
 **Lock X/Y**
 
@@ -41044,6 +44666,10 @@ Vari Blur to only those pixels within the mask. An effect mask is applied to the
 Fusion Page Effects | Chapter 33 Blur Nodes **907**
 
 
+
+
+--- end of page=906 ---
+
 ###### **Basic Node Setup**
 
 The Vari Blur node receives a 2D image like the MediaIn1 shown below. A gradient Background tool
@@ -41088,6 +44714,10 @@ A Quality of 4 is generally good enough for most jobs unless Blur Size is partic
 
 Fusion Page Effects | Chapter 33 Blur Nodes **908**
 
+
+
+
+--- end of page=907 ---
 
 **Blur Channel**
 
@@ -41144,6 +44774,10 @@ A value of 1 in the X channel would indicate that pixel has moved one pixel to t
 Fusion Page Effects | Chapter 33 Blur Nodes **909**
 
 
+
+
+--- end of page=908 ---
+
 ###### **Inputs**
 
 The Vector Motion Blur node has three inputs for a 2D image, a motion vector pass, and an
@@ -41186,6 +44820,10 @@ Blur operation.
 
 Fusion Page Effects | Chapter 33 Blur Nodes **910**
 
+
+
+
+--- end of page=909 ---
 
 **X Channel**
 
@@ -41237,6 +44875,10 @@ Common Blur settings
 
 Fusion Page Effects | Chapter 33 Blur Nodes **911**
 
+
+
+
+--- end of page=910 ---
 
 Settings Tab
 
@@ -41310,6 +44952,10 @@ _[Reference Manual](https://www.blackmagicdesign.com/support/family/davinci-reso
 Fusion Page Effects | Chapter 33 Blur Nodes **912**
 
 
+
+
+--- end of page=911 ---
+
 **Object ID/Material ID (Sliders)**
 
 Use these sliders to select which ID is used to create a mask from the object or material channels
@@ -41364,6 +45010,10 @@ nodes, please consult the Fusion scripting documentation.
 
 Fusion Page Effects | Chapter 33 Blur Nodes **913**
 
+
+
+
+--- end of page=912 ---
 
 #### **Chapter 34**
 ### Color Nodes
@@ -41440,6 +45090,10 @@ The Common Controls��������������������
 Fusion Page Effects | Chapter 34 Color Nodes **914**
 
 
+
+
+--- end of page=913 ---
+
 #### **ColorFX**
 
 A sub category of the Color tools in Fusion that gives you access to various color
@@ -41477,6 +45131,10 @@ An ACES Transform node applied to a MediaIn1 node
 
 Fusion Page Effects | Chapter 34 Color Nodes **915**
 
+
+
+
+--- end of page=914 ---
 
 ###### **Inspector**
 
@@ -41528,6 +45186,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 34 Color Nodes **916**
 
 
+
+
+--- end of page=915 ---
+
 #### Chromatic Adaptation [CrA]
 
 The Chromatic Adaptation node
@@ -41564,6 +45226,10 @@ A Chromatic Adaptation node applied to a MediaIn1 node
 
 Fusion Page Effects | Chapter 34 Color Nodes **917**
 
+
+
+
+--- end of page=916 ---
 
 ###### **Inspector**
 
@@ -41617,6 +45283,10 @@ human eye to colors lit by different illuminants.
 Fusion Page Effects | Chapter 34 Color Nodes **918**
 
 
+
+
+--- end of page=917 ---
+
 **Current Color Space and Gamma**
 
 This node also takes into account the current color space and gamma of the clip, which default to
@@ -41665,6 +45335,10 @@ A Color Space Transform node applied to a MediaIn1 node
 Fusion Page Effects | Chapter 34 Color Nodes **919**
 
 
+
+
+--- end of page=918 ---
+
 ###### **Inspector**
 
 Controls Tab
@@ -41707,6 +45381,10 @@ some clipping of the highlights above 5500 nits.
 
 Fusion Page Effects | Chapter 34 Color Nodes **920**
 
+
+
+
+--- end of page=919 ---
 
  - **Luminance Mapping:** Same as DaVinci, but more accurate when the Input Color Space of all your
 media is in a single standards-based color space, such as Rec. 709 or Rec. 2020.
@@ -41772,6 +45450,10 @@ use the ACES Transform node, which uses transforms specified by the Academy.
 Fusion Page Effects | Chapter 34 Color Nodes **921**
 
 
+
+
+--- end of page=920 ---
+
 **Advanced**
 
 This drop-down menu exposes the advanced features of the Color Space Transform node.
@@ -41830,6 +45512,10 @@ those pixels within the mask. An effect mask is applied to the tool after the to
 Fusion Page Effects | Chapter 34 Color Nodes **922**
 
 
+
+
+--- end of page=921 ---
+
 ###### **Basic Node Setup**
 
 The Gamut Limiter node, like many 2D image-processing nodes, receives a 2D image, such as a
@@ -41877,6 +45563,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 34 Color Nodes **923**
 
 
+
+
+--- end of page=922 ---
+
 #### Gamut Mapping [GMp]
 
 The Gamut Mapping node
@@ -41910,6 +45600,10 @@ A Gamut Map node applied to a MediaIn1 node
 
 Fusion Page Effects | Chapter 34 Color Nodes **924**
 
+
+
+
+--- end of page=923 ---
 
 ###### **Inspector**
 
@@ -41960,6 +45654,10 @@ use when mixing media from different cameras.
 
 Fusion Page Effects | Chapter 34 Color Nodes **925**
 
+
+
+
+--- end of page=924 ---
 
  - **Saturation Preserving:** This option has a smooth luminance roll-off in the shadows and highlights
 but does so without desaturating dark shadows and bright highlights, so this is an effective option
@@ -42029,6 +45727,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 34 Color Nodes **926**
 
 
+
+
+--- end of page=925 ---
+
 #### **Revival**
 
 A sub category of the Color tools in Fusion that pertains to fixing common technical
@@ -42068,6 +45770,10 @@ A Chromatic Aberration Removal node applied to a MediaIn1 node
 
 Fusion Page Effects | Chapter 34 Color Nodes **927**
 
+
+
+
+--- end of page=926 ---
 
 ###### **Inspector**
 
@@ -42109,6 +45815,10 @@ Estimated Fringes checkboxes.
 Fusion Page Effects | Chapter 34 Color Nodes **928**
 
 
+
+
+--- end of page=927 ---
+
 **Aberration Correction**
 
 These tools let you make manual adjustments to correct aberration issues.
@@ -42137,6 +45847,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 
 Fusion Page Effects | Chapter 34 Color Nodes **929**
 
+
+
+
+--- end of page=928 ---
 
 #### **Color**
 
@@ -42180,6 +45894,10 @@ An Auto Gain node applied to a MediaIn1 node
 
 Fusion Page Effects | Chapter 34 Color Nodes **930**
 
+
+
+
+--- end of page=929 ---
 
 ###### **Inspector**
 
@@ -42235,6 +45953,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 34 Color Nodes **931**
 
 
+
+
+--- end of page=930 ---
+
 #### Brightness Contrast [BC]
 
 The Brightness Contrast node
@@ -42272,6 +45994,10 @@ A Brightness Contrast node applied to a MediaIn1 node
 
 Fusion Page Effects | Chapter 34 Color Nodes **932**
 
+
+
+
+--- end of page=931 ---
 
 ###### **Inspector**
 
@@ -42325,6 +46051,10 @@ affected the most.
 
 Fusion Page Effects | Chapter 34 Color Nodes **933**
 
+
+
+
+--- end of page=932 ---
 
 **Contrast**
 
@@ -42393,6 +46123,10 @@ in detail at the end of this chapter in “The Common Controls” section.
 Fusion Page Effects | Chapter 34 Color Nodes **934**
 
 
+
+
+--- end of page=933 ---
+
 #### Channel Booleans [Bol]
 
 The Channel Booleans node
@@ -42437,6 +46171,10 @@ A Channel Booleans set to copy from foreground to background
 
 Fusion Page Effects | Chapter 34 Color Nodes **935**
 
+
+
+
+--- end of page=934 ---
 
 ###### **Inspector**
 
@@ -42506,6 +46244,10 @@ higher than mid-gray, which is useful for creating effects with embossed gray im
 Fusion Page Effects | Chapter 34 Color Nodes **936**
 
 
+
+
+--- end of page=935 ---
+
 **To Red, To Green, To Blue, To Alpha**
 
 These menus represent the four color channels of the output image. Use the drop-down menu to
@@ -42535,6 +46277,10 @@ Aux Channels tab can copy data into the auxiliary channels.
 
 Fusion Page Effects | Chapter 34 Color Nodes **937**
 
+
+
+
+--- end of page=936 ---
 
 **Examples**
 
@@ -42593,6 +46339,10 @@ the tool is processed.
 Fusion Page Effects | Chapter 34 Color Nodes **938**
 
 
+
+
+--- end of page=937 ---
+
 **Match Reference:** The green input is used to connect an image that can be a reference for histogram
 matching.
 
@@ -42623,6 +46373,10 @@ method’s controls to appear. The Color method is described in detail below.
 
 Fusion Page Effects | Chapter 34 Color Nodes **939**
 
+
+
+
+--- end of page=938 ---
 
 **Range**
 
@@ -42686,6 +46440,10 @@ the wheel.
 
 Fusion Page Effects | Chapter 34 Color Nodes **940**
 
+
+
+
+--- end of page=939 ---
 
 **Saturation**
 
@@ -42754,6 +46512,10 @@ Selecting this button returns all color controls in this section to their defaul
 Fusion Page Effects | Chapter 34 Color Nodes **941**
 
 
+
+
+--- end of page=940 ---
+
 Correction Tab Levels Menu
 
 The main Correction tab is further separated into four types of correction methods: colors, levels,
@@ -42799,6 +46561,10 @@ value, the higher that portion of the chart is.
 
 Fusion Page Effects | Chapter 34 Color Nodes **942**
 
+
+
+
+--- end of page=941 ---
 
 Luminance is calculated per channel; therefore, the red, green, and blue channels all have their own
 histogram, and the combined result of these comprises the Master Histogram.
@@ -42871,6 +46637,10 @@ This menu is used to select and display the histogram for each color channel or 
 Fusion Page Effects | Chapter 34 Color Nodes **943**
 
 
+
+
+--- end of page=942 ---
+
 Color Correction in Histogram mode
 
 
@@ -42915,6 +46685,10 @@ processing.
 
 Fusion Page Effects | Chapter 34 Color Nodes **944**
 
+
+
+
+--- end of page=943 ---
 
 **Histogram Type**
 
@@ -42986,6 +46760,10 @@ to match a changing source to a changing reference.
 Fusion Page Effects | Chapter 34 Color Nodes **945**
 
 
+
+
+--- end of page=944 ---
+
 **Release Match**
 
 Click this button to release the current snapshot of the histogram and return to using the live
@@ -43032,6 +46810,10 @@ already included in the shadows or the highlights.
 
 Fusion Page Effects | Chapter 34 Color Nodes **946**
 
+
+
+
+--- end of page=945 ---
 
 Color Corrector Luminance controls
 
@@ -43086,6 +46868,10 @@ These two buttons can be used to return the spline ranges to either Smooth (defa
 Fusion Page Effects | Chapter 34 Color Nodes **947**
 
 
+
+
+--- end of page=946 ---
+
 Options Tab
 
 The Options tab includes a few very important processing operations including a simple solution when
@@ -43137,6 +46923,10 @@ be applied to the image using RGB, YUV, YIQ, CMY, or HLS color spaces.
 Fusion Page Effects | Chapter 34 Color Nodes **948**
 
 
+
+
+--- end of page=947 ---
+
 The LUT view in the Color Corrector can be scaled using the + and - keys on the numeric keypad.
 The color curves LUT fully supports out-of-range values—i.e., pixels with color values above 1.0 or
 below 0.0.
@@ -43180,6 +46970,10 @@ Color Curves controls
 
 Fusion Page Effects | Chapter 34 Color Nodes **949**
 
+
+
+
+--- end of page=948 ---
 
 Controls Tab
 
@@ -43253,6 +47047,10 @@ without affecting other color values.
 Fusion Page Effects | Chapter 34 Color Nodes **950**
 
 
+
+
+--- end of page=949 ---
+
 **In and Out**
 
 Use the In and Out controls to manipulate the precise values of a selected point. To change a value,
@@ -43322,6 +47120,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 34 Color Nodes **951**
 
 
+
+
+--- end of page=950 ---
+
 #### Color Gain [Clr]
 
 The Color Gain node
@@ -43358,6 +47160,10 @@ A Color Gain node applied to a MediaIn1 node
 
 Fusion Page Effects | Chapter 34 Color Nodes **952**
 
+
+
+
+--- end of page=951 ---
 
 ###### **Inspector**
 
@@ -43405,6 +47211,10 @@ midrange pixels into black or white, depending on the value used.
 Fusion Page Effects | Chapter 34 Color Nodes **953**
 
 
+
+
+--- end of page=952 ---
+
 **Pre-Divide/Post-Multiply**
 
 Selecting this checkbox causes the image pixel values to be divided by the Alpha values prior to
@@ -43442,6 +47252,10 @@ Color Gain Balance tab
 
 Fusion Page Effects | Chapter 34 Color Nodes **954**
 
+
+
+
+--- end of page=953 ---
 
 **CMY Brightness Highs/Mids/Darks**
 
@@ -43485,6 +47299,10 @@ Color Gain Ranges tab
 
 Fusion Page Effects | Chapter 34 Color Nodes **955**
 
+
+
+
+--- end of page=954 ---
 
 **Spline Display**
 
@@ -43535,6 +47353,10 @@ it is processed.
 Fusion Page Effects | Chapter 34 Color Nodes **956**
 
 
+
+
+--- end of page=955 ---
+
 ###### **Basic Node Setup**
 
 The Color Matrix node, like many 2D image-processing nodes, receives a 2D image like a Loader
@@ -43583,6 +47405,10 @@ By default, the output values are identical to the input values.
 Fusion Page Effects | Chapter 34 Color Nodes **957**
 
 
+
+
+--- end of page=956 ---
+
 Written as mathematical equations, the default settings of the matrix would appear as follows:
 
 [R out] = 1 * [R in] + 0 * [G in] + 0 * [B in] + 0 * [A in] + 0
@@ -43624,6 +47450,10 @@ Original Grayscale
 Fusion Page Effects | Chapter 34 Color Nodes **958**
 
 
+
+
+--- end of page=957 ---
+
 **2** RGB set to -1. The values get inverted but fall below 0.
 
 
@@ -43648,6 +47478,10 @@ Brightness per channel example
 
 Fusion Page Effects | Chapter 34 Color Nodes **959**
 
+
+
+
+--- end of page=958 ---
 
 Example 3: Copying Values
 
@@ -43691,6 +47525,10 @@ is never changed by the color space conversion.)
 
 Fusion Page Effects | Chapter 34 Color Nodes **960**
 
+
+
+
+--- end of page=959 ---
 
 ###### **Inputs**
 
@@ -43745,6 +47583,10 @@ reflect the input image’s current color space. There are eight color space opt
 Fusion Page Effects | Chapter 34 Color Nodes **961**
 
 
+
+
+--- end of page=960 ---
+
  - **HSV (Hue, Saturation, and Value):** Each pixel in the HSV color space is described in terms of its
 Hue, Saturation, and Value components. Value is defined as the quality by which we distinguish
 a light color from a dark one or brightness. Decreasing saturation roughly corresponds to adding
@@ -43797,6 +47639,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 34 Color Nodes **962**
 
 
+
+
+--- end of page=961 ---
+
 #### Copy Aux [CpA]
 
 The Copy Aux node
@@ -43844,6 +47690,10 @@ A Copy Aux node applied to a MediaIn1 node
 
 Fusion Page Effects | Chapter 34 Color Nodes **963**
 
+
+
+
+--- end of page=962 ---
 
 ###### **Inspector**
 
@@ -43901,6 +47751,10 @@ channels are output as int16.
 Fusion Page Effects | Chapter 34 Color Nodes **964**
 
 
+
+
+--- end of page=963 ---
+
  - **Match Source Color Depth:** The bit depth of the RGBA channels of the output image is the same
 as the input image. This can have some unexpected consequences. For example, if your input
 image is int8, the XYZ components of normals that are floating-point numbers in the [-1, 1] range
@@ -43947,6 +47801,10 @@ applied before the conversion operation. This means you could set the From > Min
 
 Fusion Page Effects | Chapter 34 Color Nodes **965**
 
+
+
+
+--- end of page=964 ---
 
 Note that the Remapping options are per channel options. That means the default scale for normals
 can be set to [-1, +1] > [0, 1] and for Z it can be set [-1000, 0] > [0, 1]. When you flip between normals and
@@ -44008,6 +47866,10 @@ tool is processed.
 Fusion Page Effects | Chapter 34 Color Nodes **966**
 
 
+
+
+--- end of page=965 ---
+
 ###### **Basic Node Setup**
 
 A Gamut node is most often placed directly after the MediaIn node in DaVinci Resolve or a Loader
@@ -44051,6 +47913,10 @@ SMPTE-431-2 standard.
 
 Fusion Page Effects | Chapter 34 Color Nodes **967**
 
+
+
+
+--- end of page=966 ---
 
 **Custom**
 
@@ -44108,6 +47974,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 34 Color Nodes **968**
 
 
+
+
+--- end of page=967 ---
+
 #### Hue Curves [HCv]
 
 The Hue Curves node
@@ -44149,6 +48019,10 @@ A Hue Curves node applied to a Loader node in Fusion Studio
 
 Fusion Page Effects | Chapter 34 Color Nodes **969**
 
+
+
+
+--- end of page=968 ---
 
 ###### **Inspector**
 
@@ -44205,6 +48079,10 @@ importing external curves, adjusting the smoothness of the selected control poin
 
 Fusion Page Effects | Chapter 34 Color Nodes **970**
 
+
+
+
+--- end of page=969 ---
 
 **In and Out**
 
@@ -44265,6 +48143,10 @@ Fusion’s LUTs directory is used.
 Fusion Page Effects | Chapter 34 Color Nodes **971**
 
 
+
+
+--- end of page=970 ---
+
 For in-depth documentation of the format’s internals, please refer to the official pages on
 opencolorio.org.
 
@@ -44298,6 +48180,10 @@ OCIO Transform controls
 
 Fusion Page Effects | Chapter 34 Color Nodes **972**
 
+
+
+
+--- end of page=971 ---
 
 Controls Tab
 
@@ -44349,6 +48235,10 @@ Applies a Gamma Curve. This is an inverse of the Gamma function of the Brightnes
 Fusion Page Effects | Chapter 34 Color Nodes **973**
 
 
+
+
+--- end of page=972 ---
+
 **Saturation**
 
 Enhances or decreases the color saturation. This works the same as Saturation in the Brightness
@@ -44393,6 +48283,10 @@ OCIO config file.
 
 Fusion Page Effects | Chapter 34 Color Nodes **974**
 
+
+
+
+--- end of page=973 ---
 
 ###### **Inputs**
 
@@ -44446,6 +48340,10 @@ this menu.
 Fusion Page Effects | Chapter 34 Color Nodes **975**
 
 
+
+
+--- end of page=974 ---
+
 **Output Space**
 
 Based on the config file, the available output color spaces are listed here.
@@ -44492,6 +48390,10 @@ Node, performing the Display Transform, and passing it to Media Out
 
 Fusion Page Effects | Chapter 34 Color Nodes **976**
 
+
+
+
+--- end of page=975 ---
 
 ###### **Inspector**
 
@@ -44543,6 +48445,10 @@ Fusion’s LUTs directory is used.
 Fusion Page Effects | Chapter 34 Color Nodes **977**
 
 
+
+
+--- end of page=976 ---
+
 For in-depth documentation of the format’s internals, please refer to the official pages on
 opencolorio.org.
 
@@ -44589,6 +48495,10 @@ Displays a File > Open dialog to load the desired LUT.
 
 Fusion Page Effects | Chapter 34 Color Nodes **978**
 
+
+
+
+--- end of page=977 ---
 
 **CCC ID**
 
@@ -44643,6 +48553,10 @@ color in the status bar at the bottom left of the Fusion window.
 Fusion Page Effects | Chapter 34 Color Nodes **979**
 
 
+
+
+--- end of page=978 ---
+
 ###### **Inputs**
 
 The Set Canvas Color node includes two inputs: one for the main image and a second for a
@@ -44681,6 +48595,10 @@ foreground is connected, the tab is empty.
 
 Fusion Page Effects | Chapter 34 Color Nodes **980**
 
+
+
+
+--- end of page=979 ---
 
 **Color Picker**
 
@@ -44728,6 +48646,10 @@ it is processed.
 Fusion Page Effects | Chapter 34 Color Nodes **981**
 
 
+
+
+--- end of page=980 ---
+
 ###### **Basic Node Setup**
 
 The White Balance node, like many 2D image-processing nodes, receives a 2D image like the
@@ -44769,6 +48691,10 @@ shot be specified.
 
 Fusion Page Effects | Chapter 34 Color Nodes **982**
 
+
+
+
+--- end of page=981 ---
 
 **Lock Black/Mid/White**
 
@@ -44824,6 +48750,10 @@ checkbox is deselected, different results can be selected for each color range.
 Fusion Page Effects | Chapter 34 Color Nodes **983**
 
 
+
+
+--- end of page=982 ---
+
 **Use Gamma**
 
 This checkbox selects whether the node takes the gamma of the image into account when applying
@@ -44869,6 +48799,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 34 Color Nodes **984**
 
 
+
+
+--- end of page=983 ---
+
 #### **The Common Controls**
 
 Nodes that handle Color adjustment operations share several identical controls in the Inspector. This
@@ -44897,6 +48831,10 @@ Normally, this causes the tool to skip processing entirely, copying the input st
 
 Fusion Page Effects | Chapter 34 Color Nodes **985**
 
+
+
+
+--- end of page=984 ---
 
 **Process When Blend Is 0.0**
 
@@ -44963,6 +48901,10 @@ package with those channels included.
 
 Fusion Page Effects | Chapter 34 Color Nodes **986**
 
+
+
+
+--- end of page=985 ---
 
 **Clipping Mode**
 
@@ -45031,6 +48973,10 @@ nodes, please consult the Fusion scripting documentation.
 Fusion Page Effects | Chapter 34 Color Nodes **987**
 
 
+
+
+--- end of page=986 ---
+
 #### **Chapter 35**
 ### Composite Nodes
 
@@ -45057,6 +49003,10 @@ interchangeable with Loader nodes in Fusion Studio, unless otherwise noted.
 
 Fusion Page Effects | Chapter 35 Composite Nodes **988**
 
+
+
+
+--- end of page=987 ---
 
 #### Dissolve [DX]
 
@@ -45105,6 +49055,10 @@ best when both foreground and background inputs are connected to images with the
 Fusion Page Effects | Chapter 35 Composite Nodes **989**
 
 
+
+
+--- end of page=988 ---
+
 ###### **Basic Node Setup**
 
 Dissolve nodes are typically connected in the following way, with two input images connected to the
@@ -45150,6 +49104,10 @@ These are the main controls that govern the Dissolve node’s behavior.
 
 Fusion Page Effects | Chapter 35 Composite Nodes **990**
 
+
+
+
+--- end of page=989 ---
 
  - **Operation Pop-Up:** The Operation menu contains one of seven different methods for mixing
 the Foreground and Background inputs. The two images are mixed using the value of the
@@ -45218,6 +49176,10 @@ common controls are described in detail at the end of this chapter in “The Com
 Fusion Page Effects | Chapter 35 Composite Nodes **991**
 
 
+
+
+--- end of page=990 ---
+
 #### Merge [Mrg]
 
 ###### **Merge Node Introduction**
@@ -45269,6 +49231,10 @@ letting the background image show through by itself where the mask is black.
 Fusion Page Effects | Chapter 35 Composite Nodes **992**
 
 
+
+
+--- end of page=991 ---
+
 ###### **Basic Node Setup**
 
 Merge nodes are typically connected in the following way, with two input images connected to the
@@ -45298,6 +49264,10 @@ Merge node controls
 
 Fusion Page Effects | Chapter 35 Composite Nodes **993**
 
+
+
+
+--- end of page=992 ---
 
 Merge Tab
 
@@ -45366,6 +49336,10 @@ Darker group.
 Fusion Page Effects | Chapter 35 Composite Nodes **994**
 
 
+
+
+--- end of page=993 ---
+
 **Darker Color:** The Darker Color blending mode is very similar to Darken. This blending mode
 does not blend pixels. It only compares the base and blend colors, and it keeps the darkest of the
 two. The difference is that Darker Color looks at the composite of all the RGB channels, whereas
@@ -45431,6 +49405,10 @@ and the hue of the foreground color values.
 
 Fusion Page Effects | Chapter 35 Composite Nodes **995**
 
+
+
+
+--- end of page=994 ---
 
 **Saturation:** Saturation creates a result color with the luminance and hue of the base color and the
 saturation of the blend color.
@@ -45504,6 +49482,10 @@ x = 1-[background Alpha], y = 0
 
 Fusion Page Effects | Chapter 35 Composite Nodes **996**
 
+
+
+
+--- end of page=995 ---
 
 x = [background Alpha], y = 1-[foreground Alpha]
 
@@ -45581,6 +49563,10 @@ Additive and Subtractive, you can tweak the edge brightness to be just right for
 Fusion Page Effects | Chapter 35 Composite Nodes **997**
 
 
+
+
+--- end of page=996 ---
+
  - **Alpha Gain slider:** Alpha Gain linearly scales the values of the foreground’s Alpha channel. In
 Subtractive merges, this controls the density of the composite, similarly to Blend. In Additive
 merges, this effectively reduces the amount that the background is obscured, thus brightening the
@@ -45652,6 +49638,10 @@ windowing is selected.
 Fusion Page Effects | Chapter 35 Composite Nodes **998**
 
 
+
+
+--- end of page=997 ---
+
 **Blackman:** A window with a more sharply tapered falloff.
 
 **Kaiser:** A more complex window, with results between Hamming and Blackman.
@@ -45719,6 +49709,10 @@ Fusion displays the values of the Merge node’s center control.
 Fusion Page Effects | Chapter 35 Composite Nodes **999**
 
 
+
+
+--- end of page=998 ---
+
 Channels Tab
 
 
@@ -45763,6 +49757,10 @@ common controls are described in the following “The Common Controls” section
 Fusion Page Effects | Chapter 35 Composite Nodes **1000**
 
 
+
+
+--- end of page=999 ---
+
 #### MultiMerge [MMrg]
 
 The MultiMerge node
@@ -45793,6 +49791,10 @@ in the Layer List has a slight glow applied (Actors node to MultiMerge node).
 
 Fusion Page Effects | Chapter 35 Composite Nodes **1001**
 
+
+
+
+--- end of page=1000 ---
 
 ###### **Inputs**
 
@@ -45828,6 +49830,10 @@ of the output.
 
 Fusion Page Effects | Chapter 35 Composite Nodes **1002**
 
+
+
+
+--- end of page=1001 ---
 
 ###### **Inspector**
 
@@ -45881,6 +49887,10 @@ original tool. It does not delete the original tool.
 Fusion Page Effects | Chapter 35 Composite Nodes **1003**
 
 
+
+
+--- end of page=1002 ---
+
 **To Move a Layer up or down the List:**
 
 Click and drag on the Layer name and move it up or down the list. A grey line will highlight where in
@@ -45925,6 +49935,10 @@ chapter titled _Merge [Mrg]_ .
 Fusion Page Effects | Chapter 35 Composite Nodes **1004**
 
 
+
+
+--- end of page=1003 ---
+
 #### **The Common Controls**
 
 The Merge, MultiMerge, and Dissolve nodes share several identical controls in the Inspector.
@@ -45953,6 +49967,10 @@ Normally, this will cause the tool to skip processing entirely, copying the inpu
 
 Fusion Page Effects | Chapter 35 Composite Nodes **1005**
 
+
+
+
+--- end of page=1004 ---
 
 **Process When Blend Is 0.0**
 
@@ -46020,6 +50038,10 @@ with those channels included.
 Fusion Page Effects | Chapter 35 Composite Nodes **1006**
 
 
+
+
+--- end of page=1005 ---
+
 **Use GPU**
 
 The Use GPU menu has three settings. Setting the menu to Disable turns off hardware-accelerated
@@ -46086,6 +50108,10 @@ nodes, please consult the Fusion scripting documentation.
 Fusion Page Effects | Chapter 35 Composite Nodes **1007**
 
 
+
+
+--- end of page=1006 ---
+
 #### **Chapter 36**
 ### Deep Image Nodes
 
@@ -46127,6 +50153,10 @@ interchangeable with Loader nodes in Fusion Studio, unless otherwise noted.
 
 Fusion Page Effects | Chapter 36 Deep Image Nodes **1008**
 
+
+
+
+--- end of page=1007 ---
 
 #### **Deep Image Compositing Toolset** (Studio Version Only)
 
@@ -46173,6 +50203,10 @@ with an input mask.
 Fusion Page Effects | Chapter 36 Deep Image Nodes **1009**
 
 
+
+
+--- end of page=1008 ---
+
 ###### **Inputs**
 
 The dCrop tool uses one input.
@@ -46216,6 +50250,10 @@ Lets you crop the Z parameters of the deep image data.
 
 Fusion Page Effects | Chapter 36 Deep Image Nodes **1010**
 
+
+
+
+--- end of page=1009 ---
 
  - **Use Maximum Z:** Check this box to use a Maximum Z depth for the crop.
 
@@ -46261,6 +50299,10 @@ then sends the 2D image down the node tree.
 Fusion Page Effects | Chapter 36 Deep Image Nodes **1011**
 
 
+
+
+--- end of page=1010 ---
+
 ###### **Inspector**
 
 Controls Tab
@@ -46299,6 +50341,10 @@ Format preferences.
 
 Fusion Page Effects | Chapter 36 Deep Image Nodes **1012**
 
+
+
+
+--- end of page=1011 ---
 
 **Depth**
 
@@ -46363,6 +50409,10 @@ controls are described in detail at the end of this chapter in “The Common Con
 Fusion Page Effects | Chapter 36 Deep Image Nodes **1013**
 
 
+
+
+--- end of page=1012 ---
+
 #### Deep to Points [DTP]
 
 The Deep to Points node
@@ -46395,6 +50445,10 @@ before passing that visualization off to the rest of the node tree.
 
 Fusion Page Effects | Chapter 36 Deep Image Nodes **1014**
 
+
+
+
+--- end of page=1013 ---
 
 ###### **Inspector**
 
@@ -46445,6 +50499,10 @@ negative to positive
 Fusion Page Effects | Chapter 36 Deep Image Nodes **1015**
 
 
+
+
+--- end of page=1014 ---
+
 Transform Tab
 
 The controls in this tab are used to set the position and scaling parameters of the point cloud.
@@ -46489,6 +50547,10 @@ the center.
 
 Fusion Page Effects | Chapter 36 Deep Image Nodes **1016**
 
+
+
+
+--- end of page=1015 ---
 
 Scale
 
@@ -46550,6 +50612,10 @@ controls are described in detail at the end of this chapter in “The Common Con
 Fusion Page Effects | Chapter 36 Deep Image Nodes **1017**
 
 
+
+
+--- end of page=1016 ---
+
 #### dHoldout [dHld]
 
 The dHoldout node
@@ -46586,6 +50652,10 @@ dHolodout controls
 
 Fusion Page Effects | Chapter 36 Deep Image Nodes **1018**
 
+
+
+
+--- end of page=1017 ---
 
 Controls Tab
 
@@ -46638,6 +50708,10 @@ additional connections between the nodes.
 Fusion Page Effects | Chapter 36 Deep Image Nodes **1019**
 
 
+
+
+--- end of page=1018 ---
+
 ###### **Basic Node Setup**
 
 The dMerge node receives the background containing the deep image data. It then lets you merge
@@ -46677,6 +50751,10 @@ The dRecolor tool uses two inputs, one for deep color images and the other for R
 
 Fusion Page Effects | Chapter 36 Deep Image Nodes **1020**
 
+
+
+
+--- end of page=1019 ---
 
 ###### **Basic Node Setup**
 
@@ -46719,6 +50797,10 @@ controls are described in detail at the end of this chapter in “The Common Con
 Fusion Page Effects | Chapter 36 Deep Image Nodes **1021**
 
 
+
+
+--- end of page=1020 ---
+
 #### dResize [dRz]
 
 The dResize node
@@ -46759,6 +50841,10 @@ The Controls tab includes parameters for resizing the deep image.
 Fusion Page Effects | Chapter 36 Deep Image Nodes **1022**
 
 
+
+
+--- end of page=1021 ---
+
 Common Controls
 
 
@@ -46796,6 +50882,10 @@ dTransform accepts deep image data and lets you transform it.
 
 Fusion Page Effects | Chapter 36 Deep Image Nodes **1023**
 
+
+
+
+--- end of page=1022 ---
 
 ###### **Inspector**
 
@@ -46842,6 +50932,10 @@ controls are described in detail at the end of this chapter in “The Common Con
 Fusion Page Effects | Chapter 36 Deep Image Nodes **1024**
 
 
+
+
+--- end of page=1023 ---
+
 #### Image to Deep [ITD]
 
 The Image to Deep node
@@ -46875,6 +50969,10 @@ Image to Deep controls
 
 Fusion Page Effects | Chapter 36 Deep Image Nodes **1025**
 
+
+
+
+--- end of page=1024 ---
 
 Controls Tab
 
@@ -46916,6 +51014,10 @@ The Deep Image Settings tab
 Fusion Page Effects | Chapter 36 Deep Image Nodes **1026**
 
 
+
+
+--- end of page=1025 ---
+
 **Hide Incoming Connections**
 
 Enabling this checkbox can hide connection lines from incoming nodes, making a node tree appear
@@ -46942,6 +51044,10 @@ scripting documentation.
 
 Fusion Page Effects | Chapter 36 Deep Image Nodes **1027**
 
+
+
+
+--- end of page=1026 ---
 
 #### **Chapter 37**
 ### Deep Pixel Nodes
@@ -46974,6 +51080,10 @@ interchangeable with Loader nodes in Fusion Studio, unless otherwise noted.
 
 Fusion Page Effects | Chapter 37 Deep Pixel Nodes **1028**
 
+
+
+
+--- end of page=1027 ---
 
 #### Ambient Occlusion [SSAO]
 
@@ -47027,6 +51137,10 @@ Renderer3D node is then connected to the camera input on the AO node.
 Fusion Page Effects | Chapter 37 Deep Pixel Nodes **1029**
 
 
+
+
+--- end of page=1028 ---
+
 Ambient occlusion as a 2D post process
 
 ###### **Inspector**
@@ -47054,6 +51168,10 @@ passes in various ways.
 
 Fusion Page Effects | Chapter 37 Deep Pixel Nodes **1030**
 
+
+
+
+--- end of page=1029 ---
 
 **Kernal Type**
 
@@ -47110,6 +51228,10 @@ are described in detail at the end of this chapter in “The Common Controls” 
 Fusion Page Effects | Chapter 37 Deep Pixel Nodes **1031**
 
 
+
+
+--- end of page=1030 ---
+
 AO Tips and Limitations
 
 **Transparency/Translucency:** AO is designed to work with opaque objects. There are known
@@ -47163,6 +51285,10 @@ the tool is processed.
 Fusion Page Effects | Chapter 37 Deep Pixel Nodes **1032**
 
 
+
+
+--- end of page=1031 ---
+
 ###### **Basic Node Setup**
 
 The Depth Blur node receives the image containing the Z channel. Below, the Z depth channel is
@@ -47204,6 +51330,10 @@ green Blur Image input.
 
 Fusion Page Effects | Chapter 37 Deep Pixel Nodes **1033**
 
+
+
+
+--- end of page=1032 ---
 
 **Lock X/Y**
 
@@ -47266,6 +51396,10 @@ and another for an effect mask to limit the area where the depth blur is applied
 Fusion Page Effects | Chapter 37 Deep Pixel Nodes **1034**
 
 
+
+
+--- end of page=1033 ---
+
 **Input:** This orange input is the only required connection. It accepts a 2D image that includes
 a Z channel. The Z channel is used to determine the fog amount in different regions of the image.
 
@@ -47293,6 +51427,10 @@ Fog controls
 
 Fusion Page Effects | Chapter 37 Deep Pixel Nodes **1035**
 
+
+
+
+--- end of page=1034 ---
 
 Controls Tab
 
@@ -47356,6 +51494,10 @@ normals channel.
 Fusion Page Effects | Chapter 37 Deep Pixel Nodes **1036**
 
 
+
+
+--- end of page=1035 ---
+
 **Reflection Map Image:** The green reflection map image input projects an image onto all elements in
 the scene or to elements selected by the Object and Material ID channels in the Common Controls.
 Reflection maps work best as 32-bit floating point, equirectangular formatted images
@@ -47399,6 +51541,10 @@ light added to all pixels, even in completely shadowed areas.
 
 Fusion Page Effects | Chapter 37 Deep Pixel Nodes **1037**
 
+
+
+
+--- end of page=1036 ---
 
 **Diffuse**
 
@@ -47450,6 +51596,10 @@ Shader tab controls
 
 Fusion Page Effects | Chapter 37 Deep Pixel Nodes **1038**
 
+
+
+
+--- end of page=1037 ---
 
 Shader Tab
 
@@ -47508,6 +51658,10 @@ is applied.
 Fusion Page Effects | Chapter 37 Deep Pixel Nodes **1039**
 
 
+
+
+--- end of page=1038 ---
+
 **Input:** This orange input accepts a 2D image that includes UV channels. If the UV channels are not in
 the images, this node has no effect.
 
@@ -47552,6 +51706,10 @@ When this checkbox is selected, the U and V channels of the source image are swa
 Fusion Page Effects | Chapter 37 Deep Pixel Nodes **1040**
 
 
+
+
+--- end of page=1039 ---
+
 **Rotate 90**
 
 The texture map image is rotated 90 degrees when this checkbox is enabled.
@@ -47589,6 +51747,10 @@ Common Settings tab in Deep Pixel Nodes
 
 Fusion Page Effects | Chapter 37 Deep Pixel Nodes **1041**
 
+
+
+
+--- end of page=1040 ---
 
 Settings Tab
 
@@ -47662,6 +51824,10 @@ _[DaVinci Resolve 20.3 Reference Manual](https://www.blackmagicdesign.com/suppor
 Fusion Page Effects | Chapter 37 Deep Pixel Nodes **1042**
 
 
+
+
+--- end of page=1041 ---
+
 **Object ID/Material ID (Sliders)**
 
 Use these sliders to select which ID is used to create a mask from the object or material channels of
@@ -47717,6 +51883,10 @@ nodes, please consult the Fusion scripting documentation.
 Fusion Page Effects | Chapter 37 Deep Pixel Nodes **1043**
 
 
+
+
+--- end of page=1042 ---
+
 #### **Chapter 38**
 ### Effect Nodes
 
@@ -47756,6 +51926,10 @@ interchangeable with Loader nodes in Fusion Studio, unless otherwise noted.
 Fusion Page Effects | Chapter 38 Effect Nodes **1044**
 
 
+
+
+--- end of page=1043 ---
+
 #### Duplicate [Dup]
 
 The Duplicate node
@@ -47791,6 +51965,10 @@ A Duplicate node used to create a repeating circular object
 
 Fusion Page Effects | Chapter 38 Effect Nodes **1045**
 
+
+
+
+--- end of page=1044 ---
 
 ###### **Inspector**
 
@@ -47831,6 +52009,10 @@ each copy 1 unit along the X-axis from the last copy.
 
 Fusion Page Effects | Chapter 38 Effect Nodes **1046**
 
+
+
+
+--- end of page=1045 ---
 
 **Pivot**
 
@@ -47889,6 +52071,10 @@ the original lightness or darkness of the objects behind.
 
 Fusion Page Effects | Chapter 38 Effect Nodes **1047**
 
+
+
+
+--- end of page=1046 ---
 
  - **Soft Light:** Soft Light darkens or lightens the foreground object, depending on the color values of
 the objects behind them. The effect is similar to shining a diffused spotlight on the image.
@@ -47961,6 +52147,10 @@ foreground object. The color channels of the foreground object are ignored. Only
 
 Fusion Page Effects | Chapter 38 Effect Nodes **1048**
 
+
+
+
+--- end of page=1047 ---
 
 foreground object are seen in the final output. This essentially clips the foreground object using
 the mask from the background object.
@@ -48037,6 +52227,10 @@ All Gain values will compound based on the number of duplications.
 Fusion Page Effects | Chapter 38 Effect Nodes **1049**
 
 
+
+
+--- end of page=1048 ---
+
 **Blur**
 
 Adds a blurring effect to the duplicated layers.
@@ -48091,6 +52285,10 @@ Duplicate Jitter tab
 
 Fusion Page Effects | Chapter 38 Effect Nodes **1050**
 
+
+
+
+--- end of page=1049 ---
 
 **Random Seed**
 
@@ -48157,6 +52355,10 @@ for a highlight mask.
 Fusion Page Effects | Chapter 38 Effect Nodes **1051**
 
 
+
+
+--- end of page=1050 ---
+
 **Input:** The orange input is used for the primary 2D image that gets the highlight applied.
 
 **Effect Mask:** The blue input is for a mask shape created by polylines, basic primitive shapes, paint
@@ -48200,6 +52402,10 @@ highlight effect.
 
 Fusion Page Effects | Chapter 38 Effect Nodes **1052**
 
+
+
+
+--- end of page=1051 ---
 
 **Curve**
 
@@ -48262,6 +52468,10 @@ The Settings tab controls are common to all Effect nodes, so their descriptions 
 Fusion Page Effects | Chapter 38 Effect Nodes **1053**
 
 
+
+
+--- end of page=1052 ---
+
 #### Hot Spot [Hot]
 
 The Hot Spot node
@@ -48300,6 +52510,10 @@ Hot Spot node applied to an image
 
 Fusion Page Effects | Chapter 38 Effect Nodes **1054**
 
+
+
+
+--- end of page=1053 ---
 
 ###### **Inspector**
 
@@ -48352,6 +52566,10 @@ of the image from the primary hot spot.
 
 Fusion Page Effects | Chapter 38 Effect Nodes **1055**
 
+
+
+
+--- end of page=1054 ---
 
 **Secondary Size**
 
@@ -48408,6 +52626,10 @@ Hot Spot color controls
 Fusion Page Effects | Chapter 38 Effect Nodes **1056**
 
 
+
+
+--- end of page=1055 ---
+
 **Color Mode**
 
 This menu allows you to choose between animated or static color modifications using the small curves
@@ -48460,6 +52682,10 @@ _[DaVinci Resolve 20.3 Reference Manual](https://www.blackmagicdesign.com/suppor
 Fusion Page Effects | Chapter 38 Effect Nodes **1057**
 
 
+
+
+--- end of page=1056 ---
+
 Hot Spot Radial tab
 
 
@@ -48511,6 +52737,10 @@ This control rotates the effect of the Radial Length spline around the circumfer
 Fusion Page Effects | Chapter 38 Effect Nodes **1058**
 
 
+
+
+--- end of page=1057 ---
+
 **Density Angle**
 
 This control rotates the effect of the Radial Density spline around the circumference of the hot spot.
@@ -48554,6 +52784,10 @@ This determines the size of element reflections.
 
 Fusion Page Effects | Chapter 38 Effect Nodes **1059**
 
+
+
+
+--- end of page=1058 ---
 
 **Element Position**
 
@@ -48619,6 +52853,10 @@ objects get better results than larger objects, but your results really depend o
 Fusion Page Effects | Chapter 38 Effect Nodes **1060**
 
 
+
+
+--- end of page=1059 ---
+
 ###### **Inputs**
 
 You can add masks and clean plates to the Object Removal node.
@@ -48664,6 +52902,10 @@ in front of or behind other objects.
 Fusion Page Effects | Chapter 38 Effect Nodes **1061**
 
 
+
+
+--- end of page=1060 ---
+
 ###### **Inspector**
 
 
@@ -48678,6 +52920,10 @@ unwanted objects from an image.
 
 Fusion Page Effects | Chapter 38 Effect Nodes **1062**
 
+
+
+
+--- end of page=1061 ---
 
 Controls
 
@@ -48745,6 +52991,10 @@ Plate Source parameter set.
 Fusion Page Effects | Chapter 38 Effect Nodes **1063**
 
 
+
+
+--- end of page=1062 ---
+
 #### Pseudo Color [PSCL]
 
 The Pseudo Color node
@@ -48781,6 +53031,10 @@ Pseudo Color RGBA controls
 
 Fusion Page Effects | Chapter 38 Effect Nodes **1064**
 
+
+
+
+--- end of page=1063 ---
 
 Red/Green/Blue/Alpha Tabs
 
@@ -48848,6 +53102,10 @@ Common Controls” section at the end of this chapter.
 Fusion Page Effects | Chapter 38 Effect Nodes **1065**
 
 
+
+
+--- end of page=1064 ---
+
 #### Rays [CIR]
 
 ###### **Rays Node Introduction**
@@ -48896,6 +53154,10 @@ This coordinate control and related viewer crosshair set the center point for th
 
 Fusion Page Effects | Chapter 38 Effect Nodes **1066**
 
+
+
+
+--- end of page=1065 ---
 
 **Blend**
 
@@ -48962,6 +53224,10 @@ appears. An effects mask is applied to the tool after the tool is processed.
 Fusion Page Effects | Chapter 38 Effect Nodes **1067**
 
 
+
+
+--- end of page=1066 ---
+
 **NOTE:** The Shadow node is designed to create simple 2D drop shadows. Use a Spot Light
 node and an Image Plane 3D node for full 3D shadow casting.
 
@@ -48982,6 +53248,10 @@ Shadow node controls
 
 Fusion Page Effects | Chapter 38 Effect Nodes **1068**
 
+
+
+
+--- end of page=1067 ---
 
 Controls Tab
 
@@ -49052,6 +53322,10 @@ Common Controls” section at the end of this chapter.
 Fusion Page Effects | Chapter 38 Effect Nodes **1069**
 
 
+
+
+--- end of page=1068 ---
+
 #### Trails [TRLS]
 
 ###### **Trails Node Introduction**
@@ -49090,6 +53364,10 @@ A Trails node generates trails for the animation in the Text node
 
 Fusion Page Effects | Chapter 38 Effect Nodes **1070**
 
+
+
+
+--- end of page=1069 ---
 
 ###### **Inspector**
 
@@ -49138,6 +53416,10 @@ This allows for tinting of the Trails effect.
 
 Fusion Page Effects | Chapter 38 Effect Nodes **1071**
 
+
+
+
+--- end of page=1070 ---
 
 **Gain**
 
@@ -49215,6 +53497,10 @@ foreground objects to reflect the original lightness or darkness of the backgrou
 Fusion Page Effects | Chapter 38 Effect Nodes **1072**
 
 
+
+
+--- end of page=1071 ---
+
  - **Soft Light:** Soft Light darkens or lightens the foreground object, depending on the color values of
 the objects behind them. The effect is similar to shining a diffused spotlight on the image.
 
@@ -49281,6 +53567,10 @@ x = 1, y = 1 - [foreground object Alpha]
 
 Fusion Page Effects | Chapter 38 Effect Nodes **1073**
 
+
+
+
+--- end of page=1072 ---
 
  - **In:** The In mode multiplies the Alpha channel of the background object against the pixels in the
 foreground object. The color channels of the foreground object are ignored. Only pixels from the
@@ -49355,6 +53645,10 @@ similar to Blend.
 Fusion Page Effects | Chapter 38 Effect Nodes **1074**
 
 
+
+
+--- end of page=1073 ---
+
 **Burn In**
 
 The Burn In control adjusts the amount of Alpha used to darken the objects that trail under other
@@ -49410,6 +53704,10 @@ customized using the controls in the Inspector.
 Fusion Page Effects | Chapter 38 Effect Nodes **1075**
 
 
+
+
+--- end of page=1074 ---
+
 ###### **Inspector**
 
 Controls Tab
@@ -49461,6 +53759,10 @@ determine how often the distortion is repeated.
 
 Fusion Page Effects | Chapter 38 Effect Nodes **1076**
 
+
+
+
+--- end of page=1075 ---
 
 **Frequency**
 
@@ -49518,6 +53820,10 @@ bar becomes.
 Fusion Page Effects | Chapter 38 Effect Nodes **1077**
 
 
+
+
+--- end of page=1076 ---
+
 **Bar Size**
 
 Increase the value of this slider to make the bar taller.
@@ -49548,6 +53854,10 @@ The Common Effects Settings tab
 
 Fusion Page Effects | Chapter 38 Effect Nodes **1078**
 
+
+
+
+--- end of page=1077 ---
 
 Settings Tab
 
@@ -49620,6 +53930,10 @@ _Image Channels,”_ or Chapter 78 in the _[DaVinci Resolve 20.3 Reference Manua
 Fusion Page Effects | Chapter 38 Effect Nodes **1079**
 
 
+
+
+--- end of page=1078 ---
+
 **Object ID/Material ID (Sliders)**
 
 Use these sliders to select which ID is used to create a mask from the object or material channels of
@@ -49691,6 +54005,10 @@ nodes, please consult the Fusion scripting documentation.
 Fusion Page Effects | Chapter 38 Effect Nodes **1080**
 
 
+
+
+--- end of page=1079 ---
+
 #### **Chapter 39**
 ### Film Nodes
 
@@ -49721,6 +54039,10 @@ interchangeable with Loader nodes in Fusion Studio, unless otherwise noted.
 
 Fusion Page Effects | Chapter 39 Film Nodes **1081**
 
+
+
+
+--- end of page=1080 ---
 
 #### Cineon Log [Log]
 
@@ -49758,6 +54080,10 @@ Cineon Log controls
 
 Fusion Page Effects | Chapter 39 Film Nodes **1082**
 
+
+
+
+--- end of page=1081 ---
 
 Controls Tab
 
@@ -49857,6 +54183,10 @@ all out-of-range values that do not fit within the soft clip.
 Fusion Page Effects | Chapter 39 Film Nodes **1083**
 
 
+
+
+--- end of page=1082 ---
+
 **Film Stock Gamma, Conversion Gamma, and Conversion Table**
 
 These controls are used to set the response curves of the logarithmic data during conversion. In
@@ -49906,8 +54236,16 @@ if (c1< 1e-16, 1e-18 + (c1/1e-16)*(1e-16 - 1e-18), c1)
 Fusion Page Effects | Chapter 39 Film Nodes **1084**
 
 
+
+
+--- end of page=1083 ---
+
 Fusion Page Effects | Chapter 39 Film Nodes **1085**
 
+
+
+
+--- end of page=1084 ---
 
 #### Film Grain [FGr]
 
@@ -49947,6 +54285,10 @@ Film Grain node adding grain back before output
 
 Fusion Page Effects | Chapter 39 Film Nodes **1086**
 
+
+
+
+--- end of page=1085 ---
 
 ###### **Inspector**
 
@@ -49998,6 +54340,10 @@ becomes progressively clearer, more of the grain becomes evident in the result. 
 
 Fusion Page Effects | Chapter 39 Film Nodes **1087**
 
+
+
+
+--- end of page=1086 ---
 
 in the R, G, B, layer’s response to light also cause each color component of the film to present a
 different grain profile, typically with the blue channel presenting the most significant amount of grain.
@@ -50070,6 +54416,10 @@ differences in the luminance variation.
 Fusion Page Effects | Chapter 39 Film Nodes **1088**
 
 
+
+
+--- end of page=1087 ---
+
 **Offset**
 
 The Offset control helps to match the intensity of the grain in the deep blacks by offsetting the values
@@ -50091,6 +54441,10 @@ The Settings tab controls are common to all Film nodes, so their descriptions ca
 
 Fusion Page Effects | Chapter 39 Film Nodes **1089**
 
+
+
+
+--- end of page=1088 ---
 
 #### Grain [Grn]
 
@@ -50131,6 +54485,10 @@ Grain controls
 
 Fusion Page Effects | Chapter 39 Film Nodes **1090**
 
+
+
+
+--- end of page=1089 ---
 
 Controls Tab
 
@@ -50196,6 +54554,10 @@ spline area displays a contextual menu containing options related to modifying s
 Fusion Page Effects | Chapter 39 Film Nodes **1091**
 
 
+
+
+--- end of page=1090 ---
+
 For more information on the LUT Editor’s controls _see Chapter 47, “LUT Nodes,”_ or Chapter 107
 _[in the DaVinci Resolve 20.3 Reference Manual.](https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion)_
 
@@ -50216,6 +54578,10 @@ This control provides direct editing of points on the curve by setting In/Out po
 
 Fusion Page Effects | Chapter 39 Film Nodes **1092**
 
+
+
+
+--- end of page=1091 ---
 
 Common Controls
 
@@ -50257,6 +54623,10 @@ A Light Trim node used to adjust exposure on a LOG clip
 
 Fusion Page Effects | Chapter 39 Film Nodes **1093**
 
+
+
+
+--- end of page=1092 ---
 
 ###### **Inspector**
 
@@ -50310,6 +54680,10 @@ grain reappears. Repeat for the green and blue channels.
 Fusion Page Effects | Chapter 39 Film Nodes **1094**
 
 
+
+
+--- end of page=1093 ---
+
 ###### **Inputs**
 
 There are two inputs on the Remove Noise node: one for the 2D image and one for the effects mask.
@@ -50351,6 +54725,10 @@ This also gives you a different set of control sliders.
 Fusion Page Effects | Chapter 39 Film Nodes **1095**
 
 
+
+
+--- end of page=1094 ---
+
 **Lock**
 
 This checkbox links the Softness and Detail sliders of each channel together.
@@ -50383,6 +54761,10 @@ following “The Common Controls” section.
 
 Fusion Page Effects | Chapter 39 Film Nodes **1096**
 
+
+
+
+--- end of page=1095 ---
 
 #### **The Common Controls**
 
@@ -50418,6 +54800,10 @@ is scripted to trigger another task, but the value of the node is set to 0.0.
 
 Fusion Page Effects | Chapter 39 Film Nodes **1097**
 
+
+
+
+--- end of page=1096 ---
 
 **Red/Green/Blue/Alpha Channel Selector**
 
@@ -50479,6 +54865,10 @@ with those channels included.
 Fusion Page Effects | Chapter 39 Film Nodes **1098**
 
 
+
+
+--- end of page=1097 ---
+
 **Clipping Mode**
 
 This option determines how edges are handled when performing domain of definition rendering. This
@@ -50523,6 +54913,10 @@ nodes, please consult the Fusion scripting documentation.
 Fusion Page Effects | Chapter 39 Film Nodes **1099**
 
 
+
+
+--- end of page=1098 ---
+
 #### **Chapter 40**
 ### Filter Nodes
 
@@ -50553,6 +54947,10 @@ interchangeable with Loader nodes in Fusion Studio, unless otherwise noted.
 
 Fusion Page Effects | Chapter 40 Filter Nodes **1100**
 
+
+
+
+--- end of page=1099 ---
 
 #### Create Bump Map [CBu]
 
@@ -50588,6 +54986,10 @@ A Create Bump Map node produces a bump map as an RGB image for further image pro
 
 Fusion Page Effects | Chapter 40 Filter Nodes **1101**
 
+
+
+
+--- end of page=1100 ---
 
 ###### **Inspector**
 
@@ -50651,6 +55053,10 @@ existing normals (usually given in tangent or object space).
 Fusion Page Effects | Chapter 40 Filter Nodes **1102**
 
 
+
+
+--- end of page=1101 ---
+
 Common Controls
 
 
@@ -50703,6 +55109,10 @@ MediaIn node in DaVinci Resolve
 Fusion Page Effects | Chapter 40 Filter Nodes **1103**
 
 
+
+
+--- end of page=1102 ---
+
 ###### **Inspector**
 
 Controls Tab
@@ -50754,6 +55164,10 @@ If a larger Matrix size is set, more of the text boxes in the grid are enabled f
 Fusion Page Effects | Chapter 40 Filter Nodes **1104**
 
 
+
+
+--- end of page=1103 ---
+
 **Normalize**
 
 This controls the amount of filter normalization that is applied to the result. Zero gives a normalized
@@ -50786,8 +55200,16 @@ the image.
 Fusion Page Effects | Chapter 40 Filter Nodes **1105**
 
 
+
+
+--- end of page=1104 ---
+
 Fusion Page Effects | Chapter 40 Filter Nodes **1106**
 
+
+
+
+--- end of page=1105 ---
 
 Common Controls
 
@@ -50824,6 +55246,10 @@ is processed.
 Fusion Page Effects | Chapter 40 Filter Nodes **1107**
 
 
+
+
+--- end of page=1106 ---
+
 ###### **Basic Node Setup**
 
 The Erode Dilate node is commonly used to contract or expand mattes. Below, a Luma Keyer is
@@ -50859,6 +55285,10 @@ under the Common Controls tab are applied after the node has processed.
 
 Fusion Page Effects | Chapter 40 Filter Nodes **1108**
 
+
+
+
+--- end of page=1107 ---
 
 **Lock X/Y**
 
@@ -50914,6 +55344,10 @@ tool is processed.
 Fusion Page Effects | Chapter 40 Filter Nodes **1109**
 
 
+
+
+--- end of page=1108 ---
+
 ###### **Basic Node Setup**
 
 The Filter node can be inserted after an image, mask, or any node that needs a filter applied.
@@ -50937,6 +55371,10 @@ blends with the original image.
 
 Fusion Page Effects | Chapter 40 Filter Nodes **1110**
 
+
+
+
+--- end of page=1109 ---
 
 **Filter Type**
 
@@ -51008,6 +55446,10 @@ the noise or grain to change from frame to frame. To produce static noise, desel
 Fusion Page Effects | Chapter 40 Filter Nodes **1111**
 
 
+
+
+--- end of page=1110 ---
+
 Common Controls
 
 
@@ -51048,6 +55490,10 @@ MediaIn node in DaVinci Resolve
 
 Fusion Page Effects | Chapter 40 Filter Nodes **1112**
 
+
+
+
+--- end of page=1111 ---
 
 ###### **Inspector**
 
@@ -51090,6 +55536,10 @@ value (darkest pixel), and 1 is the highest value (brightest pixel).
 Fusion Page Effects | Chapter 40 Filter Nodes **1113**
 
 
+
+
+--- end of page=1112 ---
+
 #### **The Common Controls**
 
 Filter nodes share a number of identical controls in the Inspector. This section describes controls that
@@ -51124,6 +55574,10 @@ is scripted to trigger another task, but the value of the node is set to 0.0.
 
 Fusion Page Effects | Chapter 40 Filter Nodes **1114**
 
+
+
+
+--- end of page=1113 ---
 
 **Red/Green/Blue/Alpha Channel Selector**
 
@@ -51192,6 +55646,10 @@ GPU if one is available and falls back to software rendering when a capable GPU 
 Fusion Page Effects | Chapter 40 Filter Nodes **1115**
 
 
+
+
+--- end of page=1114 ---
+
 **Motion Blur**
 
  - **Motion Blur:** This toggles the rendering of Motion Blur on the tool. When this control is toggled
@@ -51232,6 +55690,10 @@ nodes, please consult the Fusion scripting documentation.
 Fusion Page Effects | Chapter 40 Filter Nodes **1116**
 
 
+
+
+--- end of page=1115 ---
+
 #### **Chapter 41**
 ### Flow Nodes
 
@@ -51262,6 +55724,10 @@ Usage�������������������������
 
 Fusion Page Effects | Chapter 41 Flow Nodes **1117**
 
+
+
+
+--- end of page=1116 ---
 
 #### Sticky Note [NTE]
 
@@ -51302,6 +55768,10 @@ below its title bar. If the note is not locked, you can edit the text.
 Fusion Page Effects | Chapter 41 Flow Nodes **1118**
 
 
+
+
+--- end of page=1117 ---
+
 #### Underlay [UND]
 
 ###### **Underlay Introduction**
@@ -51341,6 +55811,10 @@ the same right-click contextual menu.
 
 Fusion Page Effects | Chapter 41 Flow Nodes **1119**
 
+
+
+
+--- end of page=1118 ---
 
 #### **Chapter 42**
 ### Flow Organizational Nodes
@@ -51384,6 +55858,10 @@ Router�������������������������
 Fusion Page Effects | Chapter 42 Flow Organizational Nodes **1120**
 
 
+
+
+--- end of page=1119 ---
+
 #### **Groups**
 
 ###### **Groups Introduction**
@@ -51421,6 +55899,10 @@ choose Ungroup.
 Fusion Page Effects | Chapter 42 Flow Organizational Nodes **1121**
 
 
+
+
+--- end of page=1120 ---
+
 #### **Macro**
 
 Macros are not technically a node. Instead, they are a group of nodes that act as a single node.
@@ -51454,6 +55936,10 @@ The Macro Editor
 
 Fusion Page Effects | Chapter 42 Flow Organizational Nodes **1122**
 
+
+
+
+--- end of page=1121 ---
 
 After setting up the macro to your liking, click the Close button in the lower-right corner of the dialog.
 Then, in the Save dialog, click Yes to save the macro, click No to leave Macro Editor without saving the
@@ -51505,6 +55991,10 @@ influence on render times.
 Fusion Page Effects | Chapter 42 Flow Organizational Nodes **1123**
 
 
+
+
+--- end of page=1122 ---
+
 ###### **Usage**
 
 A Pipe Router usage example
@@ -51522,6 +56012,10 @@ An example comment in a Router node
 
 Fusion Page Effects | Chapter 42 Flow Organizational Nodes **1124**
 
+
+
+
+--- end of page=1123 ---
 
 #### **Chapter 43**
 ### Fuses
@@ -51543,6 +56037,10 @@ Working with Fuses in a Composition���������������
 
 Fusion Page Effects | Chapter 43 Fuses **1125**
 
+
+
+
+--- end of page=1124 ---
 
 #### Fuses [Fus]
 
@@ -51601,6 +56099,10 @@ close and reopen the composition.
 Fusion Page Effects | Chapter 43 Fuses **1126**
 
 
+
+
+--- end of page=1125 ---
+
 #### **Chapter 44**
 ### Generator Nodes
 
@@ -51654,6 +56156,10 @@ Time Code������������������������
 Fusion Page Effects | Chapter 44 Generator Nodes **1127**
 
 
+
+
+--- end of page=1126 ---
+
 #### Background [Bg]
 
 The Background node
@@ -51688,6 +56194,10 @@ The Background node controls
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1128**
 
+
+
+
+--- end of page=1127 ---
 
 Color Tab
 
@@ -51725,6 +56235,10 @@ direction can be customized.
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1129**
 
+
+
+
+--- end of page=1128 ---
 
 **Gradient Type**
 
@@ -51802,6 +56316,10 @@ described below.
 Fusion Page Effects | Chapter 44 Generator Nodes **1130**
 
 
+
+
+--- end of page=1129 ---
+
 **Repeat**
 
 This menu includes three options used to set the behavior of the gradient when the Offset control
@@ -51855,6 +56373,10 @@ can be found at the website for the Visual Simulation Group at the University of
 Fusion Page Effects | Chapter 44 Generator Nodes **1131**
 
 
+
+
+--- end of page=1130 ---
+
 ###### **Inputs**
 
 There is a single input on the Day Sky node for an effect mask to limit the area where the day sky
@@ -51886,6 +56408,10 @@ overall look that is generated.
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1132**
 
+
+
+
+--- end of page=1131 ---
 
 **Location**
 
@@ -51943,6 +56469,10 @@ Use this control to adjust the width of the gradient separating the horizon from
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1133**
 
+
+
+
+--- end of page=1132 ---
 
 **Circumsolar Region Intensity**
 
@@ -52002,6 +56532,10 @@ Fast Noise to only those pixels within the mask.
 Fusion Page Effects | Chapter 44 Generator Nodes **1134**
 
 
+
+
+--- end of page=1133 ---
+
 ###### **Basic Node Setup**
 
 The Fast Noise node is used to generate images for other nodes to take advantage of. For example,
@@ -52048,6 +56582,10 @@ longer to render but can produce a more natural result.
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1135**
 
+
+
+
+--- end of page=1134 ---
 
 **Brightness**
 
@@ -52100,6 +56638,10 @@ The Color tab allows you to adjust the gradient colors used in the generated noi
 Fusion Page Effects | Chapter 44 Generator Nodes **1136**
 
 
+
+
+--- end of page=1135 ---
+
 **Two Color**
 
 A simple two-color gradient is used to color the noise map. The noise function will smoothly transition
@@ -52148,6 +56690,10 @@ A Mandelbrot node applied as a background to the Merge node
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1137**
 
+
+
+
+--- end of page=1136 ---
 
 ###### **Inspector**
 
@@ -52212,6 +56758,10 @@ This causes the edges of the pattern to be solid.
 Fusion Page Effects | Chapter 44 Generator Nodes **1138**
 
 
+
+
+--- end of page=1137 ---
+
 The Mandelbrot node Color tab
 
 
@@ -52248,6 +56798,10 @@ Text 3D node.
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1139**
 
+
+
+
+--- end of page=1138 ---
 
 ###### **Inputs**
 
@@ -52308,6 +56862,10 @@ for locating text that has moved offscreen and is no longer rendering a visible 
 Fusion Page Effects | Chapter 44 Generator Nodes **1140**
 
 
+
+
+--- end of page=1139 ---
+
 **Show Always Text Outline**
 
 This button draws an outline around the edges of text, whether or not the text is visible within
@@ -52337,6 +56895,10 @@ MultiText node connected as the foreground to a Merge node
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1141**
 
+
+
+
+--- end of page=1140 ---
 
 ###### **Inspector**
 
@@ -52380,6 +56942,10 @@ Two Font menus are used to select the font family and typeface, such as Regular,
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1142**
 
+
+
+
+--- end of page=1141 ---
 
 **Size**
 
@@ -52457,6 +57023,10 @@ This enables kerning as specified in the TrueType font and is on by default.
 Fusion Page Effects | Chapter 44 Generator Nodes **1143**
 
 
+
+
+--- end of page=1142 ---
+
 **Use Ligatures**
 
 If your font supports ligatures, you can activate them here by choosing All Scripts. Ligatures combine
@@ -52510,6 +57080,10 @@ of the frame.
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1144**
 
+
+
+
+--- end of page=1143 ---
 
  - **Circle:** Circle layout places the text around the curve of a circle or oval. Control is offered over
 the diameter and width of the circular shape. When the layout is set to this mode, the Alignment
@@ -52568,6 +57142,10 @@ element. Control is provided for the X- and Y-axis independently.
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1145**
 
+
+
+
+--- end of page=1144 ---
 
 **Glow:** This slider will apply a glow to the softened portion of the shading element.
 
@@ -52638,6 +57216,10 @@ These parameters are the standard Settings controls for Fusion Generator Nodes.
 Fusion Page Effects | Chapter 44 Generator Nodes **1146**
 
 
+
+
+--- end of page=1145 ---
+
 #### Plasma [PLAS]
 
 The Plasma node
@@ -52672,6 +57254,10 @@ Plasma node Circles tab
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1147**
 
+
+
+
+--- end of page=1146 ---
 
 Circles Tab
 
@@ -52737,6 +57323,10 @@ controls are described in detail at the end of this chapter in “The Common Con
 Fusion Page Effects | Chapter 44 Generator Nodes **1148**
 
 
+
+
+--- end of page=1147 ---
+
 #### Text+ [TXT+]
 
 ###### **Text+ Node Introduction**
@@ -52781,6 +57371,10 @@ The Text+ on screen viewer editing controls in the Fusion viewer.
 Fusion Page Effects | Chapter 44 Generator Nodes **1149**
 
 
+
+
+--- end of page=1148 ---
+
 Within the Fusion viewer, you’ll also find pivot points for your Character, Word, and Line transforms.
 For easy access, a Pivot Points icon has been added to the popup toolbar, allowing you to toggle their
 visibility when adjusting rotation and scaling transformations.
@@ -52818,6 +57412,10 @@ options, and the Tab Spacing is used to define the location and alignment of tab
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1150**
 
+
+
+
+--- end of page=1149 ---
 
 **Styled Text**
 
@@ -52894,6 +57492,10 @@ often used when the Layout type is set to Frame in the Layout tab.
 Fusion Page Effects | Chapter 44 Generator Nodes **1151**
 
 
+
+
+--- end of page=1150 ---
+
 **H Anchor**
 
 The horizontal anchor controls consist of three buttons and a slider. The three buttons justify the text
@@ -52958,6 +57560,10 @@ The handle can be used to position the tab manually.
 Fusion Page Effects | Chapter 44 Generator Nodes **1152**
 
 
+
+
+--- end of page=1151 ---
+
 **Alignment**
 
 Each tab can be set either left aligned, right aligned, or centered. This slider ranges from -1.0 to 1.0,
@@ -52999,6 +57605,10 @@ Non-Latin setting.
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1153**
 
+
+
+
+--- end of page=1152 ---
 
 **Style Can Split Ligatures**
 
@@ -53051,6 +57661,10 @@ appears when this mode is selected.
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1154**
 
+
+
+
+--- end of page=1153 ---
 
 **Center X, Y, and Z**
 
@@ -53115,6 +57729,10 @@ _[DaVinci Resolve 20.3 Reference Manual](https://www.blackmagicdesign.com/suppor
 Fusion Page Effects | Chapter 44 Generator Nodes **1155**
 
 
+
+
+--- end of page=1154 ---
+
 Text+ Transform tab controls
 
 
@@ -53165,6 +57783,10 @@ These controls can be used to adjust the angle of the text elements in any of th
 Fusion Page Effects | Chapter 44 Generator Nodes **1156**
 
 
+
+
+--- end of page=1155 ---
+
 **Shear X and Y**
 
 Adjust these sliders to modify the slanting of the text elements along the X- and Y-axis.
@@ -53210,6 +57832,10 @@ This text label can be used to assign a more descriptive name to each shading el
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1157**
 
+
+
+
+--- end of page=1156 ---
 
 **Appearance**
 
@@ -53291,6 +57917,10 @@ a variety of dash and dot patterns are available.
 Fusion Page Effects | Chapter 44 Generator Nodes **1158**
 
 
+
+
+--- end of page=1157 ---
+
 **Extend Horizontal and Extend Vertical**
 
 (Border only) Use this slider to change the dimensions of each border.
@@ -53367,6 +57997,10 @@ the fill for text.
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1159**
 
+
+
+
+--- end of page=1158 ---
 
 **Color Image/Color Brush**
 
@@ -53448,6 +58082,10 @@ This slider will apply a glow to the softened portion of the shading element.
 Fusion Page Effects | Chapter 44 Generator Nodes **1160**
 
 
+
+
+--- end of page=1159 ---
+
 **Softness Blend**
 
 This slider controls the amount that the result of the softness control is blended back with the original.
@@ -53518,6 +58156,10 @@ Text+ toolbar
 Fusion Page Effects | Chapter 44 Generator Nodes **1161**
 
 
+
+
+--- end of page=1160 ---
+
 **Allow Typing in Viewer**
 
 When selected, you can type and edit text directly in the viewer. Clicking on the text in the viewer will
@@ -53573,6 +58215,10 @@ controls are described in detail at the end of this chapter in “The Common Con
 Fusion Page Effects | Chapter 44 Generator Nodes **1162**
 
 
+
+
+--- end of page=1161 ---
+
 #### **Text+ Modifiers**
 
 Text modifiers can be assigned by right-clicking in the Styled Text box and selecting a modifier from
@@ -53596,6 +58242,10 @@ the Text+, right-clicking on the Text 3D, and choosing Paste Settings.
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1163**
 
+
+
+
+--- end of page=1162 ---
 
 ###### **Inspector**
 
@@ -53648,6 +58298,10 @@ between characters.
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1164**
 
+
+
+
+--- end of page=1163 ---
 
 ###### **Inspector**
 
@@ -53713,6 +58367,10 @@ All character attributes will be reset to their original values.
 Fusion Page Effects | Chapter 44 Generator Nodes **1165**
 
 
+
+
+--- end of page=1164 ---
+
 **Text Controls, Alignment, Transform, and Shading Tabs**
 
 In these tabs, the actual animation for the characters is done. Observe that simply changing a value in
@@ -53769,6 +58427,10 @@ This switch has no effect when Randomness is set to 0.
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1166**
 
+
+
+
+--- end of page=1165 ---
 
 **Don’t Change Spaces**
 
@@ -53827,6 +58489,10 @@ Resets the Counter and Timer to the values set by the sliders.
 Fusion Page Effects | Chapter 44 Generator Nodes **1167**
 
 
+
+
+--- end of page=1166 ---
+
 ###### **Time Code**
 
 The Time Code only works on Text+ nodes. It sets the Styled text to become a counter based on the
@@ -53870,6 +58536,10 @@ NTSC formats.
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1168**
 
+
+
+
+--- end of page=1167 ---
 
 #### **The Common Controls**
 
@@ -53915,6 +58585,10 @@ resolution for the final render.
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1169**
 
+
+
+
+--- end of page=1168 ---
 
 **Width/Height**
 
@@ -53984,6 +58658,10 @@ to a linear output space.
 Fusion Page Effects | Chapter 44 Generator Nodes **1170**
 
 
+
+
+--- end of page=1169 ---
+
 Fast Noise Image Tab Options
 
 The following controls are specific the Image tab in the Fast Noise Node.
@@ -54036,6 +58714,10 @@ is scripted to trigger another task, but the value of the node is set to 0.0.
 
 Fusion Page Effects | Chapter 44 Generator Nodes **1171**
 
+
+
+
+--- end of page=1170 ---
 
 **Red/Green/Blue/Alpha Channel Selector**
 
@@ -54107,6 +58789,10 @@ produce smoother results but increase the render time.
 Fusion Page Effects | Chapter 44 Generator Nodes **1172**
 
 
+
+
+--- end of page=1171 ---
+
  - **Shutter Angle:** Shutter Angle controls the angle of the virtual shutter used to produce the motion
 blur effect. Larger angles create more blur but increase the render times. A value of 360 is the
 equivalent of having the shutter open for one whole frame exposure. Higher values are possible
@@ -54145,6 +58831,10 @@ nodes, please consult the Fusion scripting documentation.
 Fusion Page Effects | Chapter 44 Generator Nodes **1173**
 
 
+
+
+--- end of page=1172 ---
+
 #### **Chapter 45**
 ### I/O Nodes
 
@@ -54172,6 +58862,10 @@ searching for tools and in scripting references.
 
 Fusion Page Effects | Chapter 45 I/O Nodes **1174**
 
+
+
+
+--- end of page=1173 ---
 
 #### Loader Node [LD]
 
@@ -54222,6 +58916,10 @@ only within the mask. An effects mask is applied to the tool after the tool is p
 Fusion Page Effects | Chapter 45 I/O Nodes **1175**
 
 
+
+
+--- end of page=1174 ---
+
 ###### **Basic Node Setup**
 
 The Loader node is a 2D image of any format supported in Fusion Studio. It is limited to an EXR format
@@ -54261,6 +58959,10 @@ in the control.
 
 Fusion Page Effects | Chapter 45 I/O Nodes **1176**
 
+
+
+
+--- end of page=1175 ---
 
 To slide the clip in time or move it through the project without changing its length, place the mouse
 pointer in the middle of the range control and drag it to the new location, or enter the value manually in
@@ -54329,6 +59031,10 @@ can be stored locally, reducing network bandwidth, interactive render times, and
 
 Fusion Page Effects | Chapter 45 I/O Nodes **1177**
 
+
+
+
+--- end of page=1176 ---
 
 The proxy clip must have the same number of frames as the source clip, and the sequence numbers
 for the clip must start and end on the same frame numbers. It is strongly suggested that the proxies
@@ -54399,6 +59105,10 @@ that footage regardless of the actual hard drive or network share name.
 Fusion Page Effects | Chapter 45 I/O Nodes **1178**
 
 
+
+
+--- end of page=1177 ---
+
 You could, for example, copy an entire shot from the network to your local drive, set up your
 Loaders and Savers to use the Comp variable, work all your magic locally (i.e., set up your
 composition), and then copy just the composition back to the server and issue a net-render.
@@ -54441,6 +59151,10 @@ Loader Import tab
 
 Fusion Page Effects | Chapter 45 I/O Nodes **1179**
 
+
+
+
+--- end of page=1178 ---
 
 **Process Mode**
 
@@ -54507,6 +59221,10 @@ their aspects.
 
 Fusion Page Effects | Chapter 45 I/O Nodes **1180**
 
+
+
+
+--- end of page=1179 ---
 
 **Import Mode**
 
@@ -54580,6 +59298,10 @@ content or software settings used when rendering the content in another applicat
 Fusion Page Effects | Chapter 45 I/O Nodes **1181**
 
 
+
+
+--- end of page=1180 ---
+
 **Curve Type**
 
 This menu is used to determine the gamma curve of the footage. Once the Gamma Curve Type is set,
@@ -54628,6 +59350,10 @@ select one of the tracks.
 
 Fusion Page Effects | Chapter 45 I/O Nodes **1182**
 
+
+
+
+--- end of page=1181 ---
 
  - **Cinema DNG:** CinemaDNG is an open format capable of high-resolution raw image data with a
 wide dynamic range. It was one of the formats recorded by Blackmagic Design cameras before
@@ -54685,6 +59411,10 @@ footage, as well as setting the source’s color and gamma space.
 Fusion Page Effects | Chapter 45 I/O Nodes **1183**
 
 
+
+
+--- end of page=1182 ---
+
 ###### **Inputs**
 
 The single input on the MediaIn node is for an effect mask to crop the image brought in by
@@ -54719,6 +59449,10 @@ the MediaIn node is brought in from the Edit or Cut page Timeline.
 
 Fusion Page Effects | Chapter 45 I/O Nodes **1184**
 
+
+
+
+--- end of page=1183 ---
 
 **Global In and Out**
 
@@ -54791,6 +59525,10 @@ the first four frames. A value of 95 would stop loading frames after the 95th fr
 Fusion Page Effects | Chapter 45 I/O Nodes **1185**
 
 
+
+
+--- end of page=1184 ---
+
 **Hold First Frame/Hold Last Frame**
 
 The Hold First Frame and Hold Last Frame controls hold the first or last frame of the clip for the
@@ -54856,6 +59594,10 @@ for playback, slip the audio timing, and reset the audio cache.
 Fusion Page Effects | Chapter 45 I/O Nodes **1186**
 
 
+
+
+--- end of page=1185 ---
+
 If the audio is out of sync when playing back in Fusion, the Audio tab’s Sound Offset wheel allows you
 to slip the audio in subframe frame increments. The slipped audio is only modified in the Fusion page.
 All other pages retain the original audio placement.
@@ -54912,6 +59654,10 @@ Cut page. In most cases, it replaces the Saver node used in Fusion Studio for ex
 Fusion Page Effects | Chapter 45 I/O Nodes **1187**
 
 
+
+
+--- end of page=1186 ---
+
 The composition output by the Fusion page’s MediaOut node is propagated via the Color page’s
 source inputs, with the sole exception that if you’ve performed transforms or added plugins to that clip
 in the Edit or Cut page, then the handoff from the Fusion page to the Color page is as follows:
@@ -54962,6 +59708,10 @@ MediaOut1 node rendering to the Edit page, and MediaOut2 sending mattes to the C
 Fusion Page Effects | Chapter 45 I/O Nodes **1188**
 
 
+
+
+--- end of page=1187 ---
+
 ###### **Inspector**
 
 The MediaOut controls
@@ -54993,6 +59743,10 @@ composition resolution.
 Fusion Page Effects | Chapter 45 I/O Nodes **1189**
 
 
+
+
+--- end of page=1188 ---
+
 The Color Grade tab set to Color
 
 
@@ -55010,6 +59764,10 @@ to the timeline resolution.
 
 Fusion Page Effects | Chapter 45 I/O Nodes **1190**
 
+
+
+
+--- end of page=1189 ---
 
 #### Saver Node [SV]
 
@@ -55045,6 +59803,10 @@ Saver node added to the end of a node tree to render the composition
 
 Fusion Page Effects | Chapter 45 I/O Nodes **1191**
 
+
+
+
+--- end of page=1190 ---
 
 ###### **Inspector**
 
@@ -55098,6 +59860,10 @@ this feature can eliminate the need to perform a final render after rotoscoping.
 Fusion Page Effects | Chapter 45 I/O Nodes **1192**
 
 
+
+
+--- end of page=1191 ---
+
 **NOTE:** The High Quality Interactive setting can easily cause confusion when used in
 conjunction with a node tree that contains spline-animated parameters. If these splines are
 modified in such a way that frames already saved interactively are changed, the frames
@@ -55148,6 +59914,10 @@ footage, converting the footage from 24 fps to 30 fps.
 
 Fusion Page Effects | Chapter 45 I/O Nodes **1193**
 
+
+
+
+--- end of page=1192 ---
 
 **Clipping Mode**
 
@@ -55211,6 +59981,10 @@ Gamma Curve is applied, effectively converting from a linear working space.
 Fusion Page Effects | Chapter 45 I/O Nodes **1194**
 
 
+
+
+--- end of page=1193 ---
+
 Audio Tab
 
 
@@ -55252,6 +60026,10 @@ Saver Legal tab
 
 Fusion Page Effects | Chapter 45 I/O Nodes **1195**
 
+
+
+
+--- end of page=1194 ---
 
 **Video Type**
 
@@ -55301,6 +60079,10 @@ EXR is displayed above for reference.
 
 Fusion Page Effects | Chapter 45 I/O Nodes **1196**
 
+
+
+
+--- end of page=1195 ---
 
 When the Saver node is set to DPX, it’s important to understand the reason for the Bypass
 Conversion > Data is Linear option. When saving log data into a DPX, and not using the
@@ -55363,6 +60145,10 @@ disk are converted.
 Fusion Page Effects | Chapter 45 I/O Nodes **1197**
 
 
+
+
+--- end of page=1196 ---
+
 **Curve Type**
 
 This menu is used to select a Gamma curve of the rendered file. Once the gamma curve type is set,
@@ -55396,6 +60182,10 @@ Common Saver settings inspector
 
 Fusion Page Effects | Chapter 45 I/O Nodes **1198**
 
+
+
+
+--- end of page=1197 ---
 
 Settings Tab
 
@@ -55469,6 +60259,10 @@ _[Reference Manual](https://www.blackmagicdesign.com/support/family/davinci-reso
 Fusion Page Effects | Chapter 45 I/O Nodes **1199**
 
 
+
+
+--- end of page=1198 ---
+
 **Object ID/Material ID (Sliders)**
 
 Use these sliders to select which ID is used to create a mask from the object or material channels of
@@ -55504,6 +60298,10 @@ nodes, please consult the Fusion scripting documentation.
 Fusion Page Effects | Chapter 45 I/O Nodes **1200**
 
 
+
+
+--- end of page=1199 ---
+
 #### **Chapter 46**
 ### Layer Nodes
 
@@ -55530,6 +60328,10 @@ searching for tools and in scripting references.
 
 Fusion Page Effects | Chapter 46 Layer Nodes **1201**
 
+
+
+
+--- end of page=1200 ---
 
 #### Layer Muxer [LMx]
 
@@ -55564,6 +60366,10 @@ Layer Muxer controls
 
 Fusion Page Effects | Chapter 46 Layer Nodes **1202**
 
+
+
+
+--- end of page=1201 ---
 
 Controls Tab
 
@@ -55619,6 +60425,10 @@ based on the layer names.
 Fusion Page Effects | Chapter 46 Layer Nodes **1203**
 
 
+
+
+--- end of page=1202 ---
+
 Layer Regex filters layers from two multi layer images.
 
 ###### **Inspector**
@@ -55659,6 +60469,10 @@ the selected Image will be output as the tool’s Default/[Main] layer.
 
 Fusion Page Effects | Chapter 46 Layer Nodes **1204**
 
+
+
+
+--- end of page=1203 ---
 
 Examples
 
@@ -55725,6 +60539,10 @@ layers are removed.
 Fusion Page Effects | Chapter 46 Layer Nodes **1205**
 
 
+
+
+--- end of page=1204 ---
+
 Common Controls
 
 
@@ -55759,6 +60577,10 @@ Layer Remover lets you disable specific layers of a multilayer file.
 
 Fusion Page Effects | Chapter 46 Layer Nodes **1206**
 
+
+
+
+--- end of page=1205 ---
 
 ###### **Inspector**
 
@@ -55800,6 +60622,10 @@ layer, or remove channels from a source.
 Fusion Page Effects | Chapter 46 Layer Nodes **1207**
 
 
+
+
+--- end of page=1206 ---
+
 ###### **Inputs**
 
 The Swizzler tool uses multiple inputs.
@@ -55833,6 +60659,10 @@ to add a new layer to this list, introducing a new custom layer. For any layer s
 
 Fusion Page Effects | Chapter 46 Layer Nodes **1208**
 
+
+
+
+--- end of page=1207 ---
 
 options below allow you to choose which channels to include in the layer. Additionally, you can
 rename layers directly in this list.
@@ -55877,14 +60707,30 @@ with only RGB, then select the color channels (i.e., RG for UV Texture or RGB fo
 Fusion Page Effects | Chapter 46 Layer Nodes **1209**
 
 
+
+
+--- end of page=1208 ---
+
 Fusion Page Effects | Chapter 46 Layer Nodes **1210**
 
+
+
+
+--- end of page=1209 ---
 
 Fusion Page Effects | Chapter 46 Layer Nodes **1211**
 
 
+
+
+--- end of page=1210 ---
+
 Fusion Page Effects | Chapter 46 Layer Nodes **1212**
 
+
+
+
+--- end of page=1211 ---
 
 Common Controls
 
@@ -55917,6 +60763,10 @@ node tree, the line reappears.
 Fusion Page Effects | Chapter 46 Layer Nodes **1213**
 
 
+
+
+--- end of page=1212 ---
+
 **Comments Tab**
 
 The Comments tab contains a single text control that is used to add comments and notes to the tool.
@@ -55934,6 +60784,10 @@ scripting documentation.
 
 Fusion Page Effects | Chapter 46 Layer Nodes **1214**
 
+
+
+
+--- end of page=1213 ---
 
 #### **Chapter 47**
 ### LUT Nodes
@@ -55964,6 +60818,10 @@ otherwise noted.
 
 Fusion Page Effects | Chapter 47 LUT Nodes **1215**
 
+
+
+
+--- end of page=1214 ---
 
 #### File LUT [FLU]
 
@@ -56008,6 +60866,10 @@ A File LUT node applied at the end of a node tree as a colorist’s look
 
 Fusion Page Effects | Chapter 47 LUT Nodes **1216**
 
+
+
+
+--- end of page=1215 ---
 
 ###### **Inspector**
 
@@ -56068,6 +60930,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 47 LUT Nodes **1217**
 
 
+
+
+--- end of page=1216 ---
+
 #### LUT Cube Analyzer [LCA]
 
 The LUT Cube Analyzer node
@@ -56108,6 +60974,10 @@ LUT Cube Analyzer controls
 
 Fusion Page Effects | Chapter 47 LUT Nodes **1218**
 
+
+
+
+--- end of page=1217 ---
 
 Controls Tab
 
@@ -56171,6 +61041,10 @@ tool is processed.
 Fusion Page Effects | Chapter 47 LUT Nodes **1219**
 
 
+
+
+--- end of page=1218 ---
+
 ###### **Basic Node Setup**
 
 The example below shows a node tree starting with a LUT Cube Creator node and going through two
@@ -56215,6 +61089,10 @@ can be used to create a LUT.
 Fusion Page Effects | Chapter 47 LUT Nodes **1220**
 
 
+
+
+--- end of page=1219 ---
+
 ###### **Basic Node Setup**
 
 The example below shows a node tree starting with a LUT Cube Creator node and going through two
@@ -56253,6 +61131,10 @@ A Cube image created with the Rect type The resulting color cube
 Fusion Page Effects | Chapter 47 LUT Nodes **1221**
 
 
+
+
+--- end of page=1220 ---
+
 **Size**
 
 Determines the resolution of the color cube.
@@ -56290,6 +61172,10 @@ options, which are also covered here.
 Fusion Page Effects | Chapter 47 LUT Nodes **1222**
 
 
+
+
+--- end of page=1221 ---
+
 **Use GPU**
 
 The Use GPU menu has three settings. Setting the menu to Disable turns off hardware-accelerated
@@ -56323,6 +61209,10 @@ nodes, please consult the Fusion scripting documentation.
 
 Fusion Page Effects | Chapter 47 LUT Nodes **1223**
 
+
+
+
+--- end of page=1222 ---
 
 #### **Chapter 48**
 ### Mask Nodes
@@ -56364,6 +61254,10 @@ interchangeable with Loader nodes in Fusion Studio, unless otherwise noted.
 
 Fusion Page Effects | Chapter 48 Mask Nodes **1224**
 
+
+
+
+--- end of page=1223 ---
 
 #### Bitmap Mask [Bmp]
 
@@ -56411,6 +61305,10 @@ Bitmap nodes can be chained together for more advanced matte operations.
 Fusion Page Effects | Chapter 48 Mask Nodes **1225**
 
 
+
+
+--- end of page=1224 ---
+
 ###### **Inspector**
 
 Controls Tab
@@ -56447,6 +61345,10 @@ though the Rectangle mask beneath it is still opaque.
 
 Fusion Page Effects | Chapter 48 Mask Nodes **1226**
 
+
+
+
+--- end of page=1225 ---
 
 **Filter**
 
@@ -56525,8 +61427,16 @@ mask (gray).
 Fusion Page Effects | Chapter 48 Mask Nodes **1227**
 
 
+
+
+--- end of page=1226 ---
+
 Fusion Page Effects | Chapter 48 Mask Nodes **1228**
 
+
+
+
+--- end of page=1227 ---
 
 **Center X and Y**
 
@@ -56565,6 +61475,10 @@ controls are described in detail at the end of this chapter in “The Common Con
 
 Fusion Page Effects | Chapter 48 Mask Nodes **1229**
 
+
+
+
+--- end of page=1228 ---
 
 #### B-Spline Mask [BSp]
 
@@ -56606,6 +61520,10 @@ A B-Spline node generates a smooth, curved shape as a garbage matte
 
 Fusion Page Effects | Chapter 48 Mask Nodes **1230**
 
+
+
+
+--- end of page=1229 ---
 
 ###### **Inspector**
 
@@ -56653,6 +61571,10 @@ and quality.
 
 Fusion Page Effects | Chapter 48 Mask Nodes **1231**
 
+
+
+
+--- end of page=1230 ---
 
  - **Multi-box:** When selecting this filter, the Num Passes slider appears and lets you control the
 quality. At 1 and 2 passes, results are identical to Box and Bartlett, respectively. At 4 passes and
@@ -56729,6 +61651,10 @@ These controls adjust the position of the B-Spline mask.
 Fusion Page Effects | Chapter 48 Mask Nodes **1232**
 
 
+
+
+--- end of page=1231 ---
+
 **Size**
 
 Use the Size control to adjust the scale of the B-Spline effect mask, without affecting the relative
@@ -56783,6 +61709,10 @@ Adjusting Tension on a B-Spline
 Fusion Page Effects | Chapter 48 Mask Nodes **1233**
 
 
+
+
+--- end of page=1232 ---
+
 **B-Spline Toolbar**
 
 When a B-Spline mask is selected in the Node Editor, a toolbar appears above the viewer with buttons
@@ -56833,6 +61763,10 @@ generate a circular colored shape by cutting a circular shape from a background 
 Fusion Page Effects | Chapter 48 Mask Nodes **1234**
 
 
+
+
+--- end of page=1233 ---
+
 ###### **Inspector**
 
 Controls Tab
@@ -56872,6 +61806,10 @@ though the Rectangle mask beneath it is still opaque.
 
 Fusion Page Effects | Chapter 48 Mask Nodes **1235**
 
+
+
+
+--- end of page=1234 ---
 
 **Filter**
 
@@ -56953,6 +61891,10 @@ disabled, the spline is drawn as just an outline whose thickness is determined b
 Fusion Page Effects | Chapter 48 Mask Nodes **1236**
 
 
+
+
+--- end of page=1235 ---
+
 **Center X and Y**
 
 These controls adjust the position of the Ellipse mask.
@@ -57013,6 +61955,10 @@ The Paint mask node includes a single effect mask input.
 Fusion Page Effects | Chapter 48 Mask Nodes **1237**
 
 
+
+
+--- end of page=1236 ---
+
 **Effect Mask:** The optional blue input expects a mask shape created by polylines, basic primitive
 shapes, paint strokes, or bitmaps masks. Connecting a mask to this input combines the masks. How
 masks are combined is handled in the Paint mode menu in the Inspector.
@@ -57042,6 +61988,10 @@ Paint tool, so they are covered below.
 
 Fusion Page Effects | Chapter 48 Mask Nodes **1238**
 
+
+
+
+--- end of page=1237 ---
 
 The Mask Paint tab
 
@@ -57099,6 +62049,10 @@ to fade off well beyond the boundaries of the mask. A value of 0.0 creates a cri
 
 Fusion Page Effects | Chapter 48 Mask Nodes **1239**
 
+
+
+
+--- end of page=1238 ---
 
 **Paint Mode**
 
@@ -57167,6 +62121,10 @@ modification of specific shapes, toggling their visibility, and precise adjustme
 Fusion Page Effects | Chapter 48 Mask Nodes **1240**
 
 
+
+
+--- end of page=1239 ---
+
 ###### **Usage**
 
 After adding the MultiPoly, the tool is ready for you to start drawing your first mask.
@@ -57193,6 +62151,10 @@ of the Inspector.
 
 Fusion Page Effects | Chapter 48 Mask Nodes **1241**
 
+
+
+
+--- end of page=1240 ---
 
 To animate any of the drawn masks, select the animation diamond next to the text “Right-click
 here for shape animation,” at the bottom of the Inspector or you can right-click on this text and
@@ -57246,6 +62208,10 @@ shape as a solid matte on the Delta Keyer.
 Fusion Page Effects | Chapter 48 Mask Nodes **1242**
 
 
+
+
+--- end of page=1241 ---
+
 A Polygon node generates a detailed shape as a Solid matte.
 
 ###### **Inspector**
@@ -57281,6 +62247,10 @@ though the Rectangle mask beneath it is still opaque.
 
 Fusion Page Effects | Chapter 48 Mask Nodes **1243**
 
+
+
+
+--- end of page=1242 ---
 
 **Filter**
 
@@ -57357,6 +62327,10 @@ pixels, regardless of whether the new mask covers them or not.
 Fusion Page Effects | Chapter 48 Mask Nodes **1244**
 
 
+
+
+--- end of page=1243 ---
+
 **Solid**
 
 When the Solid checkbox is enabled, the mask is filled to be transparent (white) unless inverted.
@@ -57422,6 +62396,10 @@ B-Spline Mask Polygon toolbar
 
 Fusion Page Effects | Chapter 48 Mask Nodes **1245**
 
+
+
+
+--- end of page=1244 ---
 
 When a Polygon (or B-Spline) mask is added to a node, a toolbar appears above the viewer, offering
 easy access to modes. Hold the pointer over any button in the toolbar to display a tooltip that
@@ -57495,6 +62473,10 @@ down menu allows you to set the number of overlapping frames.
 Fusion Page Effects | Chapter 48 Mask Nodes **1246**
 
 
+
+
+--- end of page=1245 ---
+
  - **Roto Assist:** Enable the Roto Assist button when you begin painting with the Polyline Stroke
 tool. The polyline points snap to the closest edge as you click to add points to the shape. A cyan
 outline indicates the points that have snapped to an edge. There are three main Roto Assist
@@ -57547,6 +62529,10 @@ node takes the composite out of the merge, creating a mask for the color correct
 Fusion Page Effects | Chapter 48 Mask Nodes **1247**
 
 
+
+
+--- end of page=1246 ---
+
 A Ranges node selects a specific range in the image to create a mask.
 
 ###### **Inspector**
@@ -57570,6 +62556,10 @@ not appear when this checkbox is disabled, even when the node is selected.
 
 Fusion Page Effects | Chapter 48 Mask Nodes **1248**
 
+
+
+
+--- end of page=1247 ---
 
 **Level**
 
@@ -57645,6 +62635,10 @@ black and vice versa. Gray areas in the new mask are partially inverted.
 Fusion Page Effects | Chapter 48 Mask Nodes **1249**
 
 
+
+
+--- end of page=1248 ---
+
 **Invert**
 
 Selecting this checkbox inverts the entire mask. Unlike the Invert Paint mode, the checkbox affects all
@@ -57670,6 +62664,10 @@ generated mask.
 Fusion Page Effects | Chapter 48 Mask Nodes **1250**
 
 
+
+
+--- end of page=1249 ---
+
 **Channel**
 
 The Channel menu determines the Channel of the input image used to create the mask. Choices
@@ -57688,6 +62686,10 @@ of any color adjustments to that range.
 
 Fusion Page Effects | Chapter 48 Mask Nodes **1251**
 
+
+
+
+--- end of page=1250 ---
 
 **Channel**
 
@@ -57748,6 +62750,10 @@ masks are combined is handled in the Paint mode menu in the Inspector.
 Fusion Page Effects | Chapter 48 Mask Nodes **1252**
 
 
+
+
+--- end of page=1251 ---
+
 ###### **Basic Node Setup**
 
 The Rectangle mask node is useful for generating rectangular shapes. Below, the Rectangle mask is
@@ -57784,6 +62790,10 @@ transparent. The result is identical to lowering the Blend control of an effect.
 
 Fusion Page Effects | Chapter 48 Mask Nodes **1253**
 
+
+
+
+--- end of page=1252 ---
 
 **NOTE:** Lowering the level of a mask lowers the values of all pixels covered by the mask in
 the mask channel. For example, if a Circle mask is placed over a Rectangle mask, lowering
@@ -57859,6 +62869,10 @@ black and vice versa. Gray areas in the new mask are partially inverted.
 Fusion Page Effects | Chapter 48 Mask Nodes **1254**
 
 
+
+
+--- end of page=1253 ---
+
 **Invert**
 
 Selecting this checkbox inverts the entire mask. Unlike the Invert Paint mode, this checkbox affects all
@@ -57919,6 +62933,10 @@ motion path.
 Fusion Page Effects | Chapter 48 Mask Nodes **1255**
 
 
+
+
+--- end of page=1254 ---
+
 ###### **Inputs**
 
 The Triangle mask node includes a single effect mask input.
@@ -57957,6 +62975,10 @@ not appear when this checkbox is disabled, even when the node is selected.
 
 Fusion Page Effects | Chapter 48 Mask Nodes **1256**
 
+
+
+
+--- end of page=1255 ---
 
 **Level**
 
@@ -58029,6 +63051,10 @@ are combined.
 Fusion Page Effects | Chapter 48 Mask Nodes **1257**
 
 
+
+
+--- end of page=1256 ---
+
  - **Replace:** The new mask completely replaces the input mask wherever they intersect. Areas that
 are zero (completely black) in the new mask do not affect the input mask.
 
@@ -58090,6 +63116,10 @@ the color range of the mask.
 Fusion Page Effects | Chapter 48 Mask Nodes **1258**
 
 
+
+
+--- end of page=1257 ---
+
 ###### **Inputs**
 
 The Wand mask node includes two inputs in the Node Editor.
@@ -58124,6 +63154,10 @@ the viewer.
 
 Fusion Page Effects | Chapter 48 Mask Nodes **1259**
 
+
+
+
+--- end of page=1258 ---
 
 **Show View Controls**
 
@@ -58196,6 +63230,10 @@ are combined.
 Fusion Page Effects | Chapter 48 Mask Nodes **1260**
 
 
+
+
+--- end of page=1259 ---
+
  - **Replace:** The new mask completely replaces the input mask wherever they intersect. Areas that
 are zero (completely black) in the new mask do not affect the input mask.
 
@@ -58254,6 +63292,10 @@ quite within, the range included in the mask. These pixels are semitransparent i
 Fusion Page Effects | Chapter 48 Mask Nodes **1261**
 
 
+
+
+--- end of page=1260 ---
+
 #### **The Common Controls**
 
 Nodes that create masks share several identical controls in the Inspector. This section describes
@@ -58306,6 +63348,10 @@ sets the width, height, and pixel aspect to the values for that format.
 Fusion Page Effects | Chapter 48 Mask Nodes **1262**
 
 
+
+
+--- end of page=1261 ---
+
 **Clipping Mode**
 
 This option determines how the domain of definition rendering handles edges. The Clipping mode
@@ -58335,6 +63381,10 @@ covered here.
 
 Fusion Page Effects | Chapter 48 Mask Nodes **1263**
 
+
+
+
+--- end of page=1262 ---
 
 **Motion Blur**
 
@@ -58383,6 +63433,10 @@ nodes, please consult the Fusion scripting documentation.
 
 Fusion Page Effects | Chapter 48 Mask Nodes **1264**
 
+
+
+
+--- end of page=1263 ---
 
 #### **Chapter 49**
 ### Matte Nodes
@@ -58433,6 +63487,10 @@ interchangeable with Loader nodes in Fusion Studio, unless otherwise noted.
 Fusion Page Effects | Chapter 49 Matte Nodes **1265**
 
 
+
+
+--- end of page=1264 ---
+
 #### Alpha Divide [ADv]
 
 The Alpha Divide node
@@ -58473,6 +63531,10 @@ This node has no controls.
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1266**
 
+
+
+
+--- end of page=1265 ---
 
 #### Alpha Multiply [AML]
 
@@ -58515,6 +63577,10 @@ This node has no controls.
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1267**
 
+
+
+
+--- end of page=1266 ---
 
 #### Chroma Keyer [CKy]
 
@@ -58561,6 +63627,10 @@ A Chomra Keyer node creating transparency on the MediaIn node.
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1268**
 
+
+
+
+--- end of page=1267 ---
 
 ###### **Inspector**
 
@@ -58613,6 +63683,10 @@ sliders and controls maintain their values.
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1269**
 
+
+
+
+--- end of page=1268 ---
 
 The Chroma Key Image tab
 
@@ -58677,6 +63751,10 @@ new background.
 Fusion Page Effects | Chapter 49 Matte Nodes **1270**
 
 
+
+
+--- end of page=1269 ---
+
 The Chroma Key Matte tab
 
 
@@ -58730,6 +63808,10 @@ DoD will be treated as black/transparent.
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1271**
 
+
+
+
+--- end of page=1270 ---
 
 **Contract/Expand**
 
@@ -58807,6 +63889,10 @@ channel it creates for the image. This option is usually enabled and is on by de
 Fusion Page Effects | Chapter 49 Matte Nodes **1272**
 
 
+
+
+--- end of page=1271 ---
+
 Deselect this checkbox and the image can no longer be considered premultiplied for purposes
 of merging it with other images. Use the Subtractive option of the Merge node instead of the
 Additive option.
@@ -58851,6 +63937,10 @@ screen around the edges. Then, growing the pre‑matte fills in the holes until 
 Fusion Page Effects | Chapter 49 Matte Nodes **1273**
 
 
+
+
+--- end of page=1272 ---
+
 ###### **Inputs**
 
 The Clean Plate node includes three inputs in the Node Editor.
@@ -58885,6 +63975,10 @@ The Clean Plate tab
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1274**
 
+
+
+
+--- end of page=1273 ---
 
 Plate Tab
 
@@ -58956,6 +64050,10 @@ The garbage mask can be applied to clear areas before growing edges or filling r
 Fusion Page Effects | Chapter 49 Matte Nodes **1275**
 
 
+
+
+--- end of page=1274 ---
+
 **Invert**
 
 Invert uses the transparent parts of the mask to clear the image.
@@ -58997,6 +64095,10 @@ Cryptomatte taking in an EXR, selecting its mattes, and then passing them on to 
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1276**
 
+
+
+
+--- end of page=1275 ---
 
 ###### **Inspector**
 
@@ -59052,6 +64154,10 @@ controls are described in detail at the end of this chapter in “The Common Con
 Fusion Page Effects | Chapter 49 Matte Nodes **1277**
 
 
+
+
+--- end of page=1276 ---
+
 #### **Delta Keyer**
 
 The Delta Keyer node
@@ -59103,6 +64209,10 @@ makes it clear what branch of nodes is performing what operation.
 Fusion Page Effects | Chapter 49 Matte Nodes **1278**
 
 
+
+
+--- end of page=1277 ---
+
 Starting point for a Delta Keyer setup
 
 
@@ -59128,6 +64238,10 @@ When displaying the matte, set the viewer to show the alpha channel.
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1279**
 
+
+
+
+--- end of page=1278 ---
 
  - **Tuning Ranges:** Displays a false color for Shadow, Midtone, and Highlight ranges of the image.
 Shadows are in the red channel, Midtones are in the green channel, and Highlights are in
@@ -59179,6 +64293,10 @@ channels, where a value of 1 uses the maximum. A value of 0.5 uses half of each.
 Fusion Page Effects | Chapter 49 Matte Nodes **1280**
 
 
+
+
+--- end of page=1279 ---
+
 **Lock Alpha/Spill Removal Color Balance Reference**
 
 Unlocking this allows you to use different color references when generating the alpha and when
@@ -59220,6 +64338,10 @@ Erode contracts the edge of the pre matte, so the edge detail does not clip.
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1281**
 
+
+
+
+--- end of page=1280 ---
 
 **Blur**
 
@@ -59276,6 +64398,10 @@ keeping the matte solid.
 Fusion Page Effects | Chapter 49 Matte Nodes **1282**
 
 
+
+
+--- end of page=1281 ---
+
 **Erode/Dilate**
 
 Expands or contracts the matte.
@@ -59329,6 +64455,10 @@ apparent in the edges of the foreground subject.
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1283**
 
+
+
+
+--- end of page=1282 ---
 
 **Spill Method**
 
@@ -59386,6 +64516,10 @@ suppression based on tonal values.
 Fusion Page Effects | Chapter 49 Matte Nodes **1284**
 
 
+
+
+--- end of page=1283 ---
+
 **Range Controls**
 
 The range controls define how much color is considered to fall into the shadows, midtones, and
@@ -59432,6 +64566,10 @@ Used to combine the existing alpha from the source image with the solid mask.
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1285**
 
+
+
+
+--- end of page=1284 ---
 
 **Solid Replace Mode**
 
@@ -59489,6 +64627,10 @@ area that is affected by the resulting changes and black areas remaining unchang
 Fusion Page Effects | Chapter 49 Matte Nodes **1286**
 
 
+
+
+--- end of page=1285 ---
+
 ###### **Inputs**
 
 The Depth Map node includes two inputs in the Node Editor.
@@ -59528,6 +64670,10 @@ best results and should be turned on when the adjustments are finished.
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1287**
 
+
+
+
+--- end of page=1286 ---
 
  - **Depth Map Preview:** By default this box is checked and shows you the current Depth Map for
 making adjustments. When this check box is disabled, the resulting Alpha can then be used for
@@ -59597,6 +64743,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 49 Matte Nodes **1288**
 
 
+
+
+--- end of page=1287 ---
+
 #### Difference Keyer [DFK]
 
 The Difference Keyer node
@@ -59647,6 +64797,10 @@ matte that can be used to help but not solve the key.
 Fusion Page Effects | Chapter 49 Matte Nodes **1289**
 
 
+
+
+--- end of page=1288 ---
+
 ###### **Inspector**
 
 Controls Tab
@@ -59680,6 +64834,10 @@ The difference values in the range in between create a grayscale matte.
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1290**
 
+
+
+
+--- end of page=1289 ---
 
 **Filter**
 
@@ -59751,6 +64909,10 @@ areas to be transparent.
 Fusion Page Effects | Chapter 49 Matte Nodes **1291**
 
 
+
+
+--- end of page=1290 ---
+
 **Solid Matte**
 
 Solid Mattes are mask nodes or images connected to the solid matte input on the node. The solid
@@ -59810,6 +64972,10 @@ for extracting alpha channels based on luminance
 Fusion Page Effects | Chapter 49 Matte Nodes **1292**
 
 
+
+
+--- end of page=1291 ---
+
 ###### **Inputs**
 
 The Luma Keyer node includes four inputs in the Node Editor.
@@ -59846,6 +65012,10 @@ The Luma Keyer Controls tab
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1293**
 
+
+
+
+--- end of page=1292 ---
 
 Controls Tab
 
@@ -59915,6 +65085,10 @@ treated as black/transparent.
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1294**
 
+
+
+
+--- end of page=1293 ---
 
 **Contract/Expand**
 
@@ -59986,6 +65160,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 49 Matte Nodes **1295**
 
 
+
+
+--- end of page=1294 ---
+
 #### Magic Mask [MagM]
 
 Magic Mask v2 is now the default in the Fusion Magic Mask tool. It’s functionality is essentially the
@@ -60031,6 +65209,10 @@ feature you’re isolating, to correct any problems you see in the generated mas
 Fusion Page Effects | Chapter 49 Matte Nodes **1296**
 
 
+
+
+--- end of page=1295 ---
+
 ###### **Making Points in the Viewer**
 
 The Magic Mask tool works by placing points directly into the viewer. Once a point is drawn, the
@@ -60054,6 +65236,10 @@ frame to draw on where the object is completely in view and unobstructed.
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1297**
 
+
+
+
+--- end of page=1296 ---
 
 ###### **Inputs**
 
@@ -60093,6 +65279,10 @@ The Magic Mask Tracking tab
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1298**
 
+
+
+
+--- end of page=1297 ---
 
 Tracking Tab
 
@@ -60166,6 +65356,10 @@ frames in preparation for tracking forwards if there are untracked frames at the
 Fusion Page Effects | Chapter 49 Matte Nodes **1299**
 
 
+
+
+--- end of page=1298 ---
+
  - **Disk Cache:** These buttons allow you to control what’s stored in the disk cache:
 
 **Regenerate All:** Rebuilds the disk cache.
@@ -60232,6 +65426,10 @@ more transparent. Completely black or white regions of the matte remain unaffect
 Fusion Page Effects | Chapter 49 Matte Nodes **1300**
 
 
+
+
+--- end of page=1299 ---
+
  - **Threshold:** Any value below the lower threshold becomes black or transparent in the matte. Any
 value above the upper threshold becomes white or opaque in the matte. All values within the
 range maintain their relative transparency values.
@@ -60293,6 +65491,10 @@ background input, or to combine alpha channels from the two images.
 Fusion Page Effects | Chapter 49 Matte Nodes **1301**
 
 
+
+
+--- end of page=1300 ---
+
 ###### **Inputs**
 
 The Matte Control node includes four inputs in the Node Editor.
@@ -60333,6 +65535,10 @@ The Matte Control Matte tab
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1302**
 
+
+
+
+--- end of page=1301 ---
 
 Matte Tab
 
@@ -60414,6 +65620,10 @@ results in a sharp, cutout-like hard edge. The higher the value, the more blur i
 Fusion Page Effects | Chapter 49 Matte Nodes **1303**
 
 
+
+
+--- end of page=1302 ---
+
 **Clipping Mode**
 
 This option determines how edges are handled when performing domain of definition rendering.
@@ -60488,6 +65698,10 @@ They are also used to fill in areas that contain the color being keyed but that 
 Fusion Page Effects | Chapter 49 Matte Nodes **1304**
 
 
+
+
+--- end of page=1303 ---
+
 Garbage mattes of different modes cannot be mixed within a single tool. A Matte Control node is
 often used after a Keyer node to add a garbage matte with the opposite effect of the matte applied
 to the keyer.
@@ -60535,6 +65749,10 @@ the strength of the spill method.
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1305**
 
+
+
+
+--- end of page=1304 ---
 
 **Spill Method**
 
@@ -60600,6 +65818,10 @@ the four specific zones.
 Fusion Page Effects | Chapter 49 Matte Nodes **1306**
 
 
+
+
+--- end of page=1305 ---
+
 **Zone 1:** Complete background image.
 
 **Zone 2:** Foreground image with spill suppression and transparency.
@@ -60655,6 +65877,10 @@ uses the background image as the replacement image surf spill suppression.
 Fusion Page Effects | Chapter 49 Matte Nodes **1307**
 
 
+
+
+--- end of page=1306 ---
+
 ###### **Basic Node Setup**
 
 A single Primatte keyer can rarely get perfect results because most green- or blue-screen shots have
@@ -60700,6 +65926,10 @@ mode creates.
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1308**
 
+
+
+
+--- end of page=1307 ---
 
 The Primatte tab Inspector
 
@@ -60753,6 +65983,10 @@ mouse pointer over areas in the viewer to sample white-ish noise regions.
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1309**
 
+
+
+
+--- end of page=1308 ---
 
 **Clean Foreground Noise**
 
@@ -60829,6 +66063,10 @@ used to thin out smoke or make a shadow thinner to match shadows in the backgrou
 Fusion Page Effects | Chapter 49 Matte Nodes **1310**
 
 
+
+
+--- end of page=1309 ---
+
 **Detail(+)**
 
 When this button is selected, the foreground detail becomes less visible for the sampled pixel color
@@ -60895,6 +66133,10 @@ around the foreground subject with a solid foreground subject.
 Fusion Page Effects | Chapter 49 Matte Nodes **1311**
 
 
+
+
+--- end of page=1310 ---
+
 **Hybrid Blur**
 
 Blurs the Body matte that has been automatically generated when Hybrid Rendering is activated.
@@ -60951,6 +66193,10 @@ Detail(+)(-) buttons in the Primatte tab.
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1312**
 
+
+
+
+--- end of page=1311 ---
 
 Selected Color
 
@@ -61009,6 +66255,10 @@ when removing the spill. These options are selected from the Replace mode menu.
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1313**
 
+
+
+
+--- end of page=1312 ---
 
 **Replace Mode**
 
@@ -61073,6 +66323,10 @@ edge of the foreground object.
 Fusion Page Effects | Chapter 49 Matte Nodes **1314**
 
 
+
+
+--- end of page=1313 ---
+
 The Primatte Matte tab
 
 
@@ -61120,6 +66374,10 @@ Background Noise mode. It can sometimes result in softer, cleaner edges on the f
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1315**
 
+
+
+
+--- end of page=1314 ---
 
 **Contract/Expand**
 
@@ -61198,6 +66456,10 @@ channel it creates for the image. This option is usually enabled and is on by de
 Fusion Page Effects | Chapter 49 Matte Nodes **1316**
 
 
+
+
+--- end of page=1315 ---
+
 Deselect this checkbox and the image can no longer be considered premultiplied for purposes
 of merging it with other images. Use the Subtractive option of the Merge node instead of the
 Additive option.
@@ -61262,6 +66524,10 @@ foreground image.
 Fusion Page Effects | Chapter 49 Matte Nodes **1317**
 
 
+
+
+--- end of page=1316 ---
+
 Clean Background Noise
 
 If there are any white or light gray regions in the dark screen area, this is referred to as “noise.”
@@ -61322,6 +66588,10 @@ Primatte processes the selection and eliminates the noise.
 Fusion Page Effects | Chapter 49 Matte Nodes **1318**
 
 
+
+
+--- end of page=1317 ---
+
 Removing Spill
 
 The first three sections created a clean matte. At this point, the foreground can be composited onto
@@ -61376,6 +66646,10 @@ an existing light to match another shot, or want to increase the realism of day-
 Fusion Page Effects | Chapter 49 Matte Nodes **1319**
 
 
+
+
+--- end of page=1318 ---
+
 **NOTE:** The Relight effect creates the illusion of depth with its analysis of the surfaces in
 a scene, but it does not calculate 3D relationships between objects in the scene. Shapes
 cannot be made to cast shadows, and depth information cannot be produced.
@@ -61425,6 +66699,10 @@ that the ColorCorrector can be replaced by any other preferred effect.
 Fusion Page Effects | Chapter 49 Matte Nodes **1320**
 
 
+
+
+--- end of page=1319 ---
+
 ###### **Inspector**
 
 The Relight controls
@@ -61433,6 +66711,10 @@ The Relight controls
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1321**
 
+
+
+
+--- end of page=1320 ---
 
 Controls
 
@@ -61486,6 +66768,10 @@ brightness changes on its own but amplifies the changes you make in the grading 
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1322**
 
+
+
+
+--- end of page=1321 ---
 
 **Surface Properties**
 
@@ -61547,6 +66833,10 @@ Primatte if you are using Fusion Studio. A good third choice is to try the Ultra
 Fusion Page Effects | Chapter 49 Matte Nodes **1323**
 
 
+
+
+--- end of page=1322 ---
+
 ###### **Inputs**
 
 The Ultra Keyer node includes four inputs in the Node Editor.
@@ -61582,6 +66872,10 @@ matte and connected to the foreground of a Merge
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1324**
 
+
+
+
+--- end of page=1323 ---
 
 ###### **Inspector**
 
@@ -61633,6 +66927,10 @@ can be used to tweak the selection slightly, although selecting colors in the vi
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1325**
 
+
+
+
+--- end of page=1324 ---
 
 **Lock Color Picking**
 
@@ -61692,6 +66990,10 @@ This selects the strength of the algorithm used to apply spill suppression to th
 Fusion Page Effects | Chapter 49 Matte Nodes **1326**
 
 
+
+
+--- end of page=1325 ---
+
 **Fringe Gamma**
 
 This control can be used to adjust the brightness of the fringe or halo that surrounds the keyed image.
@@ -61738,6 +67040,10 @@ and quality.
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1327**
 
+
+
+
+--- end of page=1326 ---
 
  - **Multi-Box:** When selecting this filter, the Num Passes slider appears and lets you control the
 quality. At 1 and 2 passes, results are identical to Box and Bartlett, respectively. At 4 passes and
@@ -61809,6 +67115,10 @@ This control is often used to reject salt and pepper noise in the matte.
 Fusion Page Effects | Chapter 49 Matte Nodes **1328**
 
 
+
+
+--- end of page=1327 ---
+
 **Restore Fringe**
 
 This restores the edge of the matte around the keyed subject. Often when keying, the edge of the
@@ -61878,6 +67188,10 @@ are described in detail in the following “The Common Controls” section.
 Fusion Page Effects | Chapter 49 Matte Nodes **1329**
 
 
+
+
+--- end of page=1328 ---
+
 #### **The Common Controls**
 
 Nodes that handle matte operations share a number of identical controls in the Inspector. This section
@@ -61910,6 +67224,10 @@ trigger another task, but the value is set to 0.0.
 
 Fusion Page Effects | Chapter 49 Matte Nodes **1330**
 
+
+
+
+--- end of page=1329 ---
 
 **Red/Green/Blue/Alpha Channel Selector**
 
@@ -61970,6 +67288,10 @@ with those channels included.
 Fusion Page Effects | Chapter 49 Matte Nodes **1331**
 
 
+
+
+--- end of page=1330 ---
+
 **Clipping Mode**
 
 This option determines how edges are handled when performing domain of definition rendering.
@@ -62023,6 +67345,10 @@ nodes, please consult the Fusion scripting documentation.
 Fusion Page Effects | Chapter 49 Matte Nodes **1332**
 
 
+
+
+--- end of page=1331 ---
+
 #### **Chapter 50**
 ### Metadata Nodes
 
@@ -62049,6 +67375,10 @@ interchangeable with Loader nodes in Fusion Studio, unless otherwise noted.
 
 Fusion Page Effects | Chapter 50 Metadata Nodes **1333**
 
+
+
+
+--- end of page=1332 ---
 
 #### Copy Metadata [Meta]
 
@@ -62086,6 +67416,10 @@ The Copy Metadata Controls tab
 
 Fusion Page Effects | Chapter 50 Metadata Nodes **1334**
 
+
+
+
+--- end of page=1333 ---
 
 Controls Tab
 
@@ -62138,6 +67472,10 @@ the node with the new metadata.
 Fusion Page Effects | Chapter 50 Metadata Nodes **1335**
 
 
+
+
+--- end of page=1334 ---
+
 ###### **Basic Node Setup**
 
 The Set Metadata node embeds new metadata into the background input (orange). The output is the
@@ -62181,6 +67519,10 @@ are described in detail at the end of this chapter in “The Common Controls” 
 Fusion Page Effects | Chapter 50 Metadata Nodes **1336**
 
 
+
+
+--- end of page=1335 ---
+
 #### Set Timecode [TCMeta]
 
 The Set Timecode node
@@ -62218,6 +67560,10 @@ and frames.
 
 Fusion Page Effects | Chapter 50 Metadata Nodes **1337**
 
+
+
+
+--- end of page=1336 ---
 
 **FPS**
 
@@ -62281,6 +67627,10 @@ are described in detail in the following “The Common Controls” section.
 Fusion Page Effects | Chapter 50 Metadata Nodes **1338**
 
 
+
+
+--- end of page=1337 ---
+
 #### **The Common Controls**
 
 Nodes that handle metadata operations share several identical controls in the Inspector. This section
@@ -62323,6 +67673,10 @@ _[Reference Manual](https://www.blackmagicdesign.com/support/family/davinci-reso
 Fusion Page Effects | Chapter 50 Metadata Nodes **1339**
 
 
+
+
+--- end of page=1338 ---
+
 **Object ID/Material ID (Sliders)**
 
 Use these sliders to select which ID is used to create a mask from the object or material channels of
@@ -62348,6 +67702,10 @@ nodes, please consult the Fusion scripting documentation.
 
 Fusion Page Effects | Chapter 50 Metadata Nodes **1340**
 
+
+
+
+--- end of page=1339 ---
 
 #### **Chapter 51**
 ### Miscellaneous Nodes
@@ -62393,6 +67751,10 @@ interchangeable with Loader nodes in Fusion Studio, unless otherwise noted.
 
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1341**
 
+
+
+
+--- end of page=1340 ---
 
 #### Auto Domain [ADoD]
 
@@ -62440,6 +67802,10 @@ within the mask.
 
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1342**
 
+
+
+
+--- end of page=1341 ---
 
 ###### **Basic Node Setup**
 
@@ -62496,6 +67862,10 @@ to 1 (right border).
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1343**
 
 
+
+
+--- end of page=1342 ---
+
 **Top**
 
 Defines the top border of the search area of the ADoD. Higher values on this slider move the top
@@ -62547,6 +67917,10 @@ A Change Depth node placed after color correction is done on a floating-point im
 
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1344**
 
+
+
+
+--- end of page=1343 ---
 
 ###### **Inspector**
 
@@ -62603,6 +67977,10 @@ structure and terminology used by the Custom Tool node.
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1345**
 
 
+
+
+--- end of page=1344 ---
+
 ###### **Inputs**
 
 The Custom Tool node has three image inputs, a matte input, and an effect mask input.
@@ -62635,6 +68013,10 @@ The Custom Tool Controls tab
 
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1346**
 
+
+
+
+--- end of page=1345 ---
 
 Controls Tab
 
@@ -62686,6 +68068,10 @@ sin() or getr1d().
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1347**
 
 
+
+
+--- end of page=1346 ---
+
 Custom Tool Intermediate Tab
 
 
@@ -62715,6 +68101,10 @@ The Custom Tool Config tab
 
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1348**
 
+
+
+
+--- end of page=1347 ---
 
 **Number Controls**
 
@@ -62763,6 +68153,10 @@ Custom Tool Node Syntax
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1349**
 
 
+
+
+--- end of page=1348 ---
+
 |Value Variables|Col2|
 |---|---|
 |i1..i4|Inter Expression Results|
@@ -62801,6 +68195,10 @@ aspect of the primary image.
 
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1350**
 
+
+
+
+--- end of page=1349 ---
 
 |Channel (Pixel) Variables|Col2|
 |---|---|
@@ -62855,6 +68253,10 @@ image inputs.
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1351**
 
 
+
+
+--- end of page=1350 ---
+
 |Mathematical Expressions|Col2|
 |---|---|
 |pi|The value of pi|
@@ -62893,6 +68295,10 @@ Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1351**
 
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1352**
 
+
+
+
+--- end of page=1351 ---
 
 |Mathematical Operators|Col2|
 |---|---|
@@ -62939,6 +68345,10 @@ This calculates the current pixel’s (x,y) position rotated around the origin a
 
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1353**
 
+
+
+
+--- end of page=1352 ---
 
 For centered rotation, we need to subtract 0.5 from our x and y coordinates before we rotate
 them, and add 0.5 back to them afterward:
@@ -63009,6 +68419,10 @@ along each axis.
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1354**
 
 
+
+
+--- end of page=1353 ---
+
 Now enter the following expression into the first text control of the Channel tab (r).
 
 (getr1w(x-s1, y-s2) + getr1w(x, y-s2) + getr1w(x+s1, y-s2) +
@@ -63070,6 +68484,10 @@ controls are described in detail at the end of this chapter in “The Common Con
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1355**
 
 
+
+
+--- end of page=1354 ---
+
 #### Fields [FLDs]
 
 ###### **Fields Node Introduction**
@@ -63116,6 +68534,10 @@ The Fields Controls tab
 
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1356**
 
+
+
+
+--- end of page=1355 ---
 
 Controls Tab
 
@@ -63164,6 +68586,10 @@ Process Mode
 
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1357**
 
+
+
+
+--- end of page=1356 ---
 
 **Process Mode Menu**
 
@@ -63218,6 +68644,10 @@ A Frame Average node blends the input image’s frames.
 
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1358**
 
+
+
+
+--- end of page=1357 ---
 
 ###### **Inspector**
 
@@ -63274,6 +68704,10 @@ Resolve’s Edit or Cut page.
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1359**
 
 
+
+
+--- end of page=1358 ---
+
 **TIP:** The Keyframe Stretcher can be used on a single parameter by applying the
 Keystretcher modifier.
 
@@ -63301,6 +68735,10 @@ A Keyframe Stretcher changing the animation of two text nodes.
 
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1360**
 
+
+
+
+--- end of page=1359 ---
 
 ###### **Inspector**
 
@@ -63341,6 +68779,10 @@ stretches the edges of the animation.
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1361**
 
 
+
+
+--- end of page=1360 ---
+
 #### Run Command [Run]
 
 The Run Command node
@@ -63378,6 +68820,10 @@ The Run Command Frame tab
 
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1362**
 
+
+
+
+--- end of page=1361 ---
 
 Frame Tab
 
@@ -63445,6 +68891,10 @@ with which you would like to pad the value.
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1363**
 
 
+
+
+--- end of page=1362 ---
+
 The Run Command Start tab The Run Command End tab
 
 
@@ -63498,6 +68948,10 @@ controls are described in detail at the end of this chapter in “The Common Con
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1364**
 
 
+
+
+--- end of page=1363 ---
+
 #### Set Domain [DOD]
 
 The Set Domain node
@@ -63535,6 +68989,10 @@ A Set Domain node manually sets the area to limit image processing.
 
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1365**
 
+
+
+
+--- end of page=1364 ---
 
 ###### **Inspector**
 
@@ -63596,6 +69054,10 @@ defaults to 1 (top border).
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1366**
 
 
+
+
+--- end of page=1365 ---
+
 Common Controls
 
 
@@ -63636,6 +69098,10 @@ The Switch tool receiving three media inputs, allowing you to choose one to go t
 
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1367**
 
+
+
+
+--- end of page=1366 ---
 
 ###### **Inspector**
 
@@ -63683,6 +69149,10 @@ retimed footage.
 
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1368**
 
+
+
+
+--- end of page=1367 ---
 
 ###### **Inputs**
 
@@ -63739,6 +69209,10 @@ movement can cause unwanted artifacts.
 
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1369**
 
+
+
+
+--- end of page=1368 ---
 
 **Sample Spread**
 
@@ -63811,6 +69285,10 @@ currently selected frame.
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1370**
 
 
+
+
+--- end of page=1369 ---
+
 Common Controls
 
 
@@ -63859,6 +69337,10 @@ speeds in the Time Stretcher node.
 
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1371**
 
+
+
+
+--- end of page=1370 ---
 
 ###### **Inspector**
 
@@ -63922,6 +69404,10 @@ The Depth Ordering in this case is Fastest on Top, since the car draws over the 
 
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1372**
 
+
+
+
+--- end of page=1371 ---
 
 In a shot where the camera pans to follow the car, the background has faster vectors, and the car has
 slower vectors, so the Depth ordering method would be Slowest on Top.
@@ -63996,6 +69482,10 @@ To shrink a 100-frame sequence to 25 frames, follow these steps:
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1373**
 
 
+
+
+--- end of page=1372 ---
+
 **7.** Hold the last frame for 30 frames, and then play the clip backward at regular speed.
 Continue the example from above and follow the steps below.
 
@@ -64046,6 +69536,10 @@ The Wireless Link Controls tab
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1374**
 
 
+
+
+--- end of page=1373 ---
+
 Controls Tab
 
 The Controls tab in the Wireless Link node contains a single Input field for the linked node.
@@ -64078,6 +69572,10 @@ The Common Miscellaneous Settings tab
 
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1375**
 
+
+
+
+--- end of page=1374 ---
 
 Settings Tab
 
@@ -64150,6 +69648,10 @@ _[Reference Manual](https://www.blackmagicdesign.com/support/family/davinci-reso
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1376**
 
 
+
+
+--- end of page=1375 ---
+
 **Object ID/Material ID (Sliders)**
 
 Use these sliders to select which ID will be used to create a mask from the object or material channels
@@ -64213,6 +69715,10 @@ nodes, please consult the Fusion scripting documentation.
 Fusion Page Effects | Chapter 51 Miscellaneous Nodes **1377**
 
 
+
+
+--- end of page=1376 ---
+
 #### **Chapter 52**
 ### Optical Flow
 
@@ -64249,6 +69755,10 @@ interchangeable with Loader nodes in Fusion Studio, unless otherwise noted.
 
 Fusion Page Effects | Chapter 52 Optical Flow **1378**
 
+
+
+
+--- end of page=1377 ---
 
 #### Optical Flow [OF]
 
@@ -64296,6 +69806,10 @@ with smoothing for forward/ backward vectors enabled.
 Fusion Page Effects | Chapter 52 Optical Flow **1379**
 
 
+
+
+--- end of page=1378 ---
+
 An Optical Flow node generating motion vectors on-the-fly.
 
 
@@ -64326,6 +69840,10 @@ is good to watch what the optical flow is doing at the same time.
 
 Fusion Page Effects | Chapter 52 Optical Flow **1380**
 
+
+
+
+--- end of page=1379 ---
 
 **Iteration Count**
 
@@ -64389,6 +69907,10 @@ using the disparity to perform interpolation, you might want it to be higher in 
 Fusion Page Effects | Chapter 52 Optical Flow **1381**
 
 
+
+
+--- end of page=1380 ---
+
 **Match Weight**
 
 This control sets a threshold for how neighboring groups of foreground/background pixels are
@@ -64449,6 +69971,10 @@ controls are described in detail at the end of this chapter in “The Common Con
 Fusion Page Effects | Chapter 52 Optical Flow **1382**
 
 
+
+
+--- end of page=1381 ---
+
 #### Repair Frame [REP]
 
 The Repair Frame node
@@ -64493,6 +70019,10 @@ node using internal optical flow analysis.
 
 Fusion Page Effects | Chapter 52 Optical Flow **1383**
 
+
+
+
+--- end of page=1382 ---
 
 ###### **Inspector**
 
@@ -64545,6 +70075,10 @@ softness at around 0.03.
 
 Fusion Page Effects | Chapter 52 Optical Flow **1384**
 
+
+
+
+--- end of page=1383 ---
 
 **Source Frame and Warp Direction**
 
@@ -64603,6 +70137,10 @@ around erratically, jitter, or bounce rapidly.
 Fusion Page Effects | Chapter 52 Optical Flow **1385**
 
 
+
+
+--- end of page=1384 ---
+
 **TIP:** You can use two or more Smooth Motion nodes in sequence to get additional
 smoothing. With one Smooth Motion node, the previous, current, and next frames are
 examined for a total of 3; with two Smooth Motion nodes, 5 frames are examined; and with
@@ -64640,6 +70178,10 @@ The Smooth Motion Controls tab
 
 Fusion Page Effects | Chapter 52 Optical Flow **1386**
 
+
+
+
+--- end of page=1385 ---
 
 Controls Tab
 
@@ -64697,6 +70239,10 @@ strokes, or bitmaps from other tools. Connecting a mask to this input limits the
 Fusion Page Effects | Chapter 52 Optical Flow **1387**
 
 
+
+
+--- end of page=1386 ---
+
 ###### **Basic Node Setup**
 
 The Tween node receives two inputs for the two neighboring frames to the one you are generating.
@@ -64727,6 +70273,10 @@ and a parameter of 0.5 will yield a result halfway between A and B.
 
 Fusion Page Effects | Chapter 52 Optical Flow **1388**
 
+
+
+
+--- end of page=1387 ---
 
 **Depth Ordering**
 
@@ -64799,6 +70349,10 @@ controls are described in detail in the following “The Common Controls” sect
 Fusion Page Effects | Chapter 52 Optical Flow **1389**
 
 
+
+
+--- end of page=1388 ---
+
 #### **Vector Warping Toolset** (Studio Version Only)
 
 You can use the Vector Warping 2D imaging toolset below to map and warp a reference frame
@@ -64841,6 +70395,10 @@ A Vector Denoise node using Vector and Back Vector channels from the Optical Flo
 
 Fusion Page Effects | Chapter 52 Optical Flow **1390**
 
+
+
+
+--- end of page=1389 ---
 
 ###### **Inspector**
 
@@ -64890,6 +70448,10 @@ The Vector Transform node includes an orange image input, and an attenuate mask 
 
 Fusion Page Effects | Chapter 52 Optical Flow **1391**
 
+
+
+
+--- end of page=1390 ---
 
 ###### **Basic Node Setup**
 
@@ -64945,6 +70507,10 @@ controls are described in detail at the end of this chapter in “The Common Con
 Fusion Page Effects | Chapter 52 Optical Flow **1392**
 
 
+
+
+--- end of page=1391 ---
+
 #### Vector Warp [VWp]
 
 The Vector Warp node
@@ -64988,6 +70554,10 @@ A Vector Warp node
 
 Fusion Page Effects | Chapter 52 Optical Flow **1393**
 
+
+
+
+--- end of page=1392 ---
 
 ###### **Inspector**
 
@@ -65040,6 +70610,10 @@ controls are described in detail at the end of this chapter in “The Common Con
 Fusion Page Effects | Chapter 52 Optical Flow **1394**
 
 
+
+
+--- end of page=1393 ---
+
 #### **The Common Controls**
 
 Nodes that handle optical flow operations share a number of identical controls in the Inspector.
@@ -65072,6 +70646,10 @@ scripted to trigger another task, but the value of the node is set to 0.0.
 
 Fusion Page Effects | Chapter 52 Optical Flow **1395**
 
+
+
+
+--- end of page=1394 ---
 
 **Red/Green/Blue/Alpha Channel Selector**
 
@@ -65141,6 +70719,10 @@ node tree, the line reappears.
 Fusion Page Effects | Chapter 52 Optical Flow **1396**
 
 
+
+
+--- end of page=1395 ---
+
 **Comments**
 
 The Comments field is used to add notes to a tool. Click in the empty field and type the text. When a
@@ -65160,6 +70742,10 @@ For more details on scripting nodes, see the Fusion scripting documentation.
 
 Fusion Page Effects | Chapter 52 Optical Flow **1397**
 
+
+
+
+--- end of page=1396 ---
 
 #### **Chapter 53**
 ### Paint Node
@@ -65189,6 +70775,10 @@ Editing Options Toolbar�������������������
 
 Fusion Page Effects | Chapter 53 Paint Node **1398**
 
+
+
+
+--- end of page=1397 ---
 
 #### **Paint**
 
@@ -65238,6 +70828,10 @@ A MediaIn node connected directly to the Paint input
 Fusion Page Effects | Chapter 53 Paint Node **1399**
 
 
+
+
+--- end of page=1398 ---
+
 A more flexible setup is to use a Background node to set the size that matches the image you are
 painting on. In the Inspector, the background would be set to be fully transparent. Then, the Paint tool
 can be merged as the foreground over the actual image you want to paint on.
@@ -65277,6 +70871,10 @@ Keyframes Editor.
 
 Fusion Page Effects | Chapter 53 Paint Node **1400**
 
+
+
+
+--- end of page=1399 ---
 
  - **Stroke:** In most cases, the Stroke tool is what people think of when they think of paint and is
 the tool of choice for most operations. It is a fully animatable and editable vector-based paint
@@ -65330,6 +70928,10 @@ clicked in the Inspector.
 
 Fusion Page Effects | Chapter 53 Paint Node **1401**
 
+
+
+
+--- end of page=1400 ---
 
 - **Click Append:** This is the default option when creating a polyline stroke. It works more like a
 Bézier pen drawing tool than a paintbrush tool. Clicking sets a control point and appends the next
@@ -65395,6 +70997,10 @@ become unavailable for tracking.
 Fusion Page Effects | Chapter 53 Paint Node **1402**
 
 
+
+
+--- end of page=1401 ---
+
 ###### **Inspector**
 
 The Paint Controls tab
@@ -65429,6 +71035,10 @@ precisely one pixel in size. No anti-aliasing is applied to the single pixel bru
 
 Fusion Page Effects | Chapter 53 Paint Node **1403**
 
+
+
+
+--- end of page=1402 ---
 
  - **Vary Size:** Vary size settings change the stroke size based on speed or a pressure-sensitive pen
 and tablet.
@@ -65504,6 +71114,10 @@ frame by sampling adjacent pixels and draw them in toward the stroke.
 Fusion Page Effects | Chapter 53 Paint Node **1404**
 
 
+
+
+--- end of page=1403 ---
+
 Stroke Controls
 
 The stroke controls contain parameters that adjust the entire stroke of paint as well as
@@ -65568,6 +71182,10 @@ current stroke into a polyline spline so that the shape can be adjusted or anima
 
 Fusion Page Effects | Chapter 53 Paint Node **1405**
 
+
+
+
+--- end of page=1404 ---
 
 #### **Paint Node Modifiers**
 
@@ -65636,6 +71254,10 @@ position of the group.
 
 Fusion Page Effects | Chapter 53 Paint Node **1406**
 
+
+
+
+--- end of page=1405 ---
 
 #### **Chapter 54**
 ### Particle Nodes
@@ -65709,6 +71331,10 @@ Conditions�����������������������
 Fusion Page Effects | Chapter 54 Particle Nodes **1407**
 
 
+
+
+--- end of page=1406 ---
+
 #### **Particle Nodes**
 
 The Particle nodes are used to generate a large number of duplicated objects that automatically
@@ -65751,6 +71377,10 @@ to avoid the region does not overcome its momentum and the particle crosses that
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1408**
 
+
+
+
+--- end of page=1407 ---
 
 ###### **Inputs**
 
@@ -65801,6 +71431,10 @@ move toward the region instead.
 Fusion Page Effects | Chapter 54 Particle Nodes **1409**
 
 
+
+
+--- end of page=1408 ---
+
 Common Controls
 
 
@@ -65842,6 +71476,10 @@ A pBounce node using a Shape 3D node as the region on which particles bounce off
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1410**
 
+
+
+
+--- end of page=1409 ---
 
 ###### **Inspector**
 
@@ -65906,6 +71544,10 @@ This thumbwheel control sets the angle relative to the bounce surface.
 Fusion Page Effects | Chapter 54 Particle Nodes **1411**
 
 
+
+
+--- end of page=1410 ---
+
 Common Controls
 
 
@@ -65957,6 +71599,10 @@ never changes.
 Fusion Page Effects | Chapter 54 Particle Nodes **1412**
 
 
+
+
+--- end of page=1411 ---
+
 A pChange Style node placed before the pBounce node
 
 ###### **Inspector**
@@ -65987,6 +71633,10 @@ This option allows the user to change the particle’s Style and thus the look. 
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1413**
 
+
+
+
+--- end of page=1412 ---
 
 Common Controls
 
@@ -66034,6 +71684,10 @@ A pCustom node using a Shape 3D node as the region where the custom event occurs
 Fusion Page Effects | Chapter 54 Particle Nodes **1414**
 
 
+
+
+--- end of page=1413 ---
+
 ###### **Inspector**
 
 All the same operators, functions, and conditional statements described for the Custom node apply
@@ -66057,6 +71711,10 @@ pCustom Position tab
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1415**
 
+
+
+
+--- end of page=1414 ---
 
 **Position 1-8**
 
@@ -66082,6 +71740,10 @@ pCustom Intermediate tab
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1416**
 
+
+
+
+--- end of page=1415 ---
 
 **Inter 1-8**
 
@@ -66136,6 +71798,10 @@ descriptions can be found in “The Common Controls” section at the end of thi
 Fusion Page Effects | Chapter 54 Particle Nodes **1417**
 
 
+
+
+--- end of page=1416 ---
+
 #### pCustomForce [pCF]
 
 The pCustom Force node
@@ -66183,6 +71849,10 @@ A pCustom Force is applied to the particles generated by the pEmitter.
 Fusion Page Effects | Chapter 54 Particle Nodes **1418**
 
 
+
+
+--- end of page=1417 ---
+
 ###### **Inspector**
 
 The pCustom Force controls
@@ -66222,6 +71892,10 @@ the node when you set the Region menu in the Region tab to either Bitmap or Mesh
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1419**
 
+
+
+
+--- end of page=1418 ---
 
 **Input:** The orange input takes the output of other particle nodes.
 
@@ -66269,6 +71943,10 @@ Determines the direction in Z space.
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1420**
 
+
+
+
+--- end of page=1419 ---
 
 Common Controls
 
@@ -66320,6 +71998,10 @@ A pEmitter node connected to a pRender node is a typical setup for more particle
 Fusion Page Effects | Chapter 54 Particle Nodes **1421**
 
 
+
+
+--- end of page=1420 ---
+
 ###### **Inspector**
 
 The pEmitter inspector is divided into four main tabs and a common settings tab. The controls tab
@@ -66362,6 +72044,10 @@ the value of Number, it is possible that no particles will be generated for a gi
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1422**
 
+
+
+
+--- end of page=1421 ---
 
 **Lifespan**
 
@@ -66435,6 +72121,10 @@ cause the particle to cross the width of the image over 10 frames.
 Fusion Page Effects | Chapter 54 Particle Nodes **1423**
 
 
+
+
+--- end of page=1422 ---
+
 Velocity Variance modifies the velocity of each particle at birth, in the same manner
 described in Lifespan Variance and Number Variance above.
 
@@ -66502,6 +72192,10 @@ described by Number Variance and Lifespan Variance documented above.
 Fusion Page Effects | Chapter 54 Particle Nodes **1424**
 
 
+
+
+--- end of page=1423 ---
+
 ###### **Sets Tab**
 
 This tab contains settings that affect the physics of the particles emitted by the node. These settings
@@ -66530,6 +72224,10 @@ The pEmitter Style tab
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1425**
 
+
+
+
+--- end of page=1424 ---
 
 ###### **Region Tab**
 
@@ -66585,6 +72283,10 @@ change direction.
 Fusion Page Effects | Chapter 54 Particle Nodes **1426**
 
 
+
+
+--- end of page=1425 ---
+
 A pFlock node applying more herd-type mentality to particles
 
 ###### **Inspector**
@@ -66625,6 +72327,10 @@ conflicts in spacing more rapidly.
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1427**
 
+
+
+
+--- end of page=1426 ---
 
 **Repel Strength**
 
@@ -66681,6 +72387,10 @@ change direction.
 Fusion Page Effects | Chapter 54 Particle Nodes **1428**
 
 
+
+
+--- end of page=1427 ---
+
 A pFollow node introduces a follow object that influences the particles’ motion.
 
 ###### **Inspector**
@@ -66730,6 +72440,10 @@ descriptions can be found in “The Common Controls” section at the end of thi
 Fusion Page Effects | Chapter 54 Particle Nodes **1429**
 
 
+
+
+--- end of page=1428 ---
+
 #### pFriction [pFr]
 
 The pFriction node
@@ -66764,6 +72478,10 @@ A pFriction node using a Shape 3D node as the region where friction is introduce
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1430**
 
+
+
+
+--- end of page=1429 ---
 
 ###### **Inspector**
 
@@ -66817,6 +72535,10 @@ a provided shape.
 Fusion Page Effects | Chapter 54 Particle Nodes **1431**
 
 
+
+
+--- end of page=1430 ---
+
 ###### **Inputs**
 
 The pGradient Force node accepts two inputs: the default orange input from a particle node and one
@@ -66864,6 +72586,10 @@ from black to white (low values to high values).
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1432**
 
+
+
+
+--- end of page=1431 ---
 
 Common Controls
 
@@ -66916,6 +72642,10 @@ A pImage Emitter node emits particles based on an image connected to the orange 
 Fusion Page Effects | Chapter 54 Particle Nodes **1433**
 
 
+
+
+--- end of page=1432 ---
+
 ###### **Inspector**
 
 The pImage Emitter controls
@@ -66959,6 +72689,10 @@ particles are given some initial velocity or if emitting from an animated source
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1434**
 
+
+
+
+--- end of page=1433 ---
 
 Angle Z of -90, and a seething Fast Noise as a source to get smoothly varying clouds of particles that
 you could fly through. Note that if this checkbox is left off, only one set of particles is ever created, and
@@ -67012,6 +72746,10 @@ descriptions can be found in “The Common Controls” section at the end of thi
 Fusion Page Effects | Chapter 54 Particle Nodes **1435**
 
 
+
+
+--- end of page=1434 ---
+
 #### pKill [pKI]
 
 ###### **pKill Node Introduction**
@@ -67057,6 +72795,10 @@ Regions controls are used to define the location, age, and set of particles that
 Fusion Page Effects | Chapter 54 Particle Nodes **1436**
 
 
+
+
+--- end of page=1435 ---
+
 Common Controls
 
 
@@ -67096,6 +72838,10 @@ A pMerge node combining two pEmitter nodes.
 Fusion Page Effects | Chapter 54 Particle Nodes **1437**
 
 
+
+
+--- end of page=1436 ---
+
 #### pPoint Force [pPF]
 
 The pPoint Force node
@@ -67134,6 +72880,10 @@ The pPoint Force controls
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1438**
 
+
+
+
+--- end of page=1437 ---
 
 **Randomize**
 
@@ -67192,6 +72942,10 @@ particles to be integrated with other elements in a 3D scene before they are ren
 Fusion Page Effects | Chapter 54 Particle Nodes **1439**
 
 
+
+
+--- end of page=1438 ---
+
 ###### **Inputs**
 
 The pRender node has one orange input, a green camera input, and a blue effects mask input. Like
@@ -67231,6 +72985,10 @@ or 2D-only node, you can also switch it by selecting View > 2D Viewer from the v
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1440**
 
+
+
+
+--- end of page=1439 ---
 
 In 3D mode, the only controls in the pRender node that have any effect at all are Restart, Pre-Roll
 and Automatic Pre-Roll, Sub-Frame Calculation Accuracy, and Pre-Generate frames. The remaining
@@ -67305,6 +73063,10 @@ To demonstrate:
 Fusion Page Effects | Chapter 54 Particle Nodes **1441**
 
 
+
+
+--- end of page=1440 ---
+
 **6** Set a Render Range from 0–100 and press the Play button.
 
 **7** Observe how the particle system behaves.
@@ -67373,6 +73135,10 @@ valid frame. This is used to give a particle system an initial state from which 
 Fusion Page Effects | Chapter 54 Particle Nodes **1442**
 
 
+
+
+--- end of page=1441 ---
+
 A good example of when this might be useful is in a shot where particles are used to create the smoke
 rising from a chimney. Set Pre-Generate Frames to a number high enough to ensure that the smoke
 is already present in the scene before the render begins, rather than having it just starting to emerge
@@ -67413,6 +73179,10 @@ The pRender Scene tab
 Fusion Page Effects | Chapter 54 Particle Nodes **1443**
 
 
+
+
+--- end of page=1442 ---
+
 ###### **Grid Tab**
 
 These controls do not apply to 3D particles.
@@ -67437,6 +73207,10 @@ The pRender Image tab
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1444**
 
+
+
+
+--- end of page=1443 ---
 
 **Process Mode**
 
@@ -67510,6 +73284,10 @@ gamma curve of the image.
 Fusion Page Effects | Chapter 54 Particle Nodes **1445**
 
 
+
+
+--- end of page=1444 ---
+
 For more information, _see Chapter 39, “Film Nodes,”_ in the DaVinci Resolve Reference Manual,
 or Chapter 99 in the _[DaVinci Resolve 20.3 Reference Manual](https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion)_ .
 
@@ -67565,6 +73343,10 @@ square—for instance, 256 x 256 pixels.
 Fusion Page Effects | Chapter 54 Particle Nodes **1446**
 
 
+
+
+--- end of page=1445 ---
+
 **Region:** The region inputs take a 2D image or a 3D mesh depending on whether you set the
 Region menu to Bitmap or Mesh. The color of the input is determined by whichever is selected
 first in the menu. The 3D mesh or a selectable channel from the bitmap defines the area where the
@@ -67597,6 +73379,10 @@ driving render times up to an unreasonable degree. Use this checkbox cautiously.
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1447**
 
+
+
+
+--- end of page=1446 ---
 
 **Velocity Transfer**
 
@@ -67647,6 +73433,10 @@ The pTangent Force node positions a tangent force that particles maneuver around
 Fusion Page Effects | Chapter 54 Particle Nodes **1448**
 
 
+
+
+--- end of page=1447 ---
+
 ###### **Inspector**
 
 The pTangent Force controls
@@ -67687,6 +73477,10 @@ descriptions can be found in “The Common Controls” section at the end of thi
 Fusion Page Effects | Chapter 54 Particle Nodes **1449**
 
 
+
+
+--- end of page=1448 ---
+
 #### pTurbulence [pTr]
 
 The pTurbulence node
@@ -67725,6 +73519,10 @@ The pTurbulence controls
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1450**
 
+
+
+
+--- end of page=1449 ---
 
 **Randomize**
 
@@ -67789,6 +73587,10 @@ first in the menu. The 3D mesh or a selectable channel from the bitmap defines t
 Fusion Page Effects | Chapter 54 Particle Nodes **1451**
 
 
+
+
+--- end of page=1450 ---
+
 ###### **Basic Node Setup**
 
 The pVortex node is placed in between the pEmitter and pRender nodes.
@@ -67837,6 +73639,10 @@ These sliders control the amount of rotational force applied by the Vortex along
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1452**
 
+
+
+
+--- end of page=1451 ---
 
 Common Controls
 
@@ -67889,6 +73695,10 @@ merges when the particle cells overlap.
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1453**
 
+
+
+
+--- end of page=1452 ---
 
 **Animate Over Time:** This menu includes three options for determining how movie files play when
 they are used as particle cell bitmaps. The Over Time setting plays the movie file sequentially.
@@ -67955,6 +73765,10 @@ adjusts the amount of falloff over the length of the line.
 Fusion Page Effects | Chapter 54 Particle Nodes **1454**
 
 
+
+
+--- end of page=1453 ---
+
  - **Point Cluster:** This style produces small clusters of single-pixel particles. Point Clusters are similar
 to the Point style; however, they are more efficient when a large quantity of particles is required.
 This style shares parameters with the Point style. Additional controls specific to Point Cluster style
@@ -68008,6 +73822,10 @@ throughout its life.
 Fusion Page Effects | Chapter 54 Particle Nodes **1455**
 
 
+
+
+--- end of page=1454 ---
+
 This type of control can be useful for fire-type effects (for example, the flame may start blue, turn
 orange, and end a darker red). The gradient itself can be animated over time by right-clicking on the
 control and selecting Animate from the contextual menu. All points on the gradient will be controlled
@@ -68056,6 +73874,10 @@ which provides a relatively realistic perspective effect.
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1456**
 
+
+
+
+--- end of page=1455 ---
 
 Objects on the focal plane (Z = 0.0) will be actual-sized. Objects farther along Z will become smaller.
 Objects closer along Z will get larger.
@@ -68108,6 +73930,10 @@ None of the Blur controls will have any effect on a 3D particle system.
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1457**
 
+
+
+
+--- end of page=1456 ---
 
 **Blur (2D) and Blur Variance (2D)**
 
@@ -68162,6 +73988,10 @@ a force on one frame has the same chance of being affected on the next frame.
 Fusion Page Effects | Chapter 54 Particle Nodes **1458**
 
 
+
+
+--- end of page=1457 ---
+
 **Start/End Age**
 
 This range control can be used to restrict the effect of the node to a specified percentage of the
@@ -68215,6 +74045,10 @@ and can produce particles inside a user-defined, three-dimensional region.
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1459**
 
+
+
+
+--- end of page=1458 ---
 
 **Region Mode Menu**
 
@@ -68284,6 +74118,10 @@ closed properly.
 Fusion Page Effects | Chapter 54 Particle Nodes **1460**
 
 
+
+
+--- end of page=1459 ---
+
 **Limit By ObjectID**
 
 Selecting this checkbox allows the Object ID slider to select the ObjectID used as part of the region.
@@ -68291,6 +74129,10 @@ Selecting this checkbox allows the Object ID slider to select the ObjectID used 
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1461**
 
+
+
+
+--- end of page=1460 ---
 
 Style Tab
 
@@ -68363,6 +74205,10 @@ image from their source at all times.
 
 Fusion Page Effects | Chapter 54 Particle Nodes **1462**
 
+
+
+
+--- end of page=1461 ---
 
  - **Particle Age:** Each particle animates through the sequence of images provided by the Style
 Bitmap node, independently of other particles. In other words, an individual particle’s appearance
@@ -68438,6 +74284,10 @@ using the Show Color As option provided in the General tab within the Preference
 Fusion Page Effects | Chapter 54 Particle Nodes **1463**
 
 
+
+
+--- end of page=1462 ---
+
 **Lock Color Variance**
 
 This checkbox locks the color variance of the particles. Unlocking this allows the color variance to be
@@ -68469,6 +74319,10 @@ along a line between two points.
 Fusion Page Effects | Chapter 54 Particle Nodes **1464**
 
 
+
+
+--- end of page=1463 ---
+
 #### **Chapter 55**
 ### Position Nodes
 
@@ -68497,6 +74351,10 @@ WPP Concept�����������������������
 
 Fusion Page Effects | Chapter 55 Position Nodes **1465**
 
+
+
+
+--- end of page=1464 ---
 
 #### Volume Fog [VLF]
 
@@ -68540,6 +74398,10 @@ strokes, or bitmaps from other tools. Connecting a mask to this input limits the
 
 Fusion Page Effects | Chapter 55 Position Nodes **1466**
 
+
+
+
+--- end of page=1465 ---
 
 ###### **Inspector**
 
@@ -68591,6 +74453,10 @@ Use these controls to rotate the fog volume around its center.
 Fusion Page Effects | Chapter 55 Position Nodes **1467**
 
 
+
+
+--- end of page=1466 ---
+
 **X, Y, Z Scale**
 
 Scale the fog volume in any direction from its center to refine further the overall Size value
@@ -68633,6 +74499,10 @@ render times.
 
 Fusion Page Effects | Chapter 55 Position Nodes **1468**
 
+
+
+
+--- end of page=1467 ---
 
 **Z Slices**
 
@@ -68689,6 +74559,10 @@ The Noise tab controls the shape and pattern of the noise added to the fog.
 
 Fusion Page Effects | Chapter 55 Position Nodes **1469**
 
+
+
+
+--- end of page=1468 ---
 
 **Detail**
 
@@ -68750,6 +74624,10 @@ of the node.
 Fusion Page Effects | Chapter 55 Position Nodes **1470**
 
 
+
+
+--- end of page=1469 ---
+
 **Camera**
 
 If multiple cameras are available in the connected Scene input, this menu allows the selection of the
@@ -68799,6 +74677,10 @@ the expense of longer render times.
 
 Fusion Page Effects | Chapter 55 Position Nodes **1471**
 
+
+
+
+--- end of page=1470 ---
 
 **Density**
 
@@ -68863,6 +74745,10 @@ are described in detail at the end of this chapter in “The Common Controls” 
 Fusion Page Effects | Chapter 55 Position Nodes **1472**
 
 
+
+
+--- end of page=1471 ---
+
 #### Volume Mask [VLM]
 
 The Volume Mask node
@@ -68879,6 +74765,10 @@ how this technology works and to learn about the required imagery.
 
 Fusion Page Effects | Chapter 55 Position Nodes **1473**
 
+
+
+
+--- end of page=1472 ---
 
 ###### **Inputs**
 
@@ -68913,6 +74803,10 @@ The Volume Mask Shape tab
 
 Fusion Page Effects | Chapter 55 Position Nodes **1474**
 
+
+
+
+--- end of page=1473 ---
 
 Shape Tab
 
@@ -68979,6 +74873,10 @@ The Color tab controls the color and blending of the mask image.
 Fusion Page Effects | Chapter 55 Position Nodes **1475**
 
 
+
+
+--- end of page=1474 ---
+
 **Color**
 
 Allows you to modify the color of the generated Volume Mask. This will add to any color provided by
@@ -69041,6 +74939,10 @@ are described in detail at the end of this chapter in “The Common Controls” 
 Fusion Page Effects | Chapter 55 Position Nodes **1476**
 
 
+
+
+--- end of page=1475 ---
+
 #### Z to World Pos [Z2W]
 
 The Z to World Position node
@@ -69086,6 +74988,10 @@ Z to World Position node, which can remap the X, Y, and Z positions for use in o
 Fusion Page Effects | Chapter 55 Position Nodes **1477**
 
 
+
+
+--- end of page=1476 ---
+
 A Z to World Position node creates a World Position Pass from a Z-depth pass
 
 ###### **Inspector**
@@ -69129,6 +75035,10 @@ a Z channel and 3D Camera information. For this overview, we refer to the World 
 
 Fusion Page Effects | Chapter 55 Position Nodes **1478**
 
+
+
+
+--- end of page=1477 ---
 
 What Is a WPP?
 
@@ -69175,6 +75085,10 @@ the resulting value is 0/0/0, and the fog fills that area as well.
 Fusion Page Effects | Chapter 55 Position Nodes **1479**
 
 
+
+
+--- end of page=1478 ---
+
 To get around that, you can add an invisible bounding sphere to your scene to create “dummy”
 WPP values to help the Fog node to create the correct volume as shown in the “with Sphere”
 example below.
@@ -69198,6 +75112,10 @@ consistent and work the same way for each tool.
 
 Fusion Page Effects | Chapter 55 Position Nodes **1480**
 
+
+
+
+--- end of page=1479 ---
 
 **Blend**
 
@@ -69272,6 +75190,10 @@ package with those channels included.
 Fusion Page Effects | Chapter 55 Position Nodes **1481**
 
 
+
+
+--- end of page=1480 ---
+
 **Motion Blur**
 
  - **Motion Blur:** This toggles the rendering of Motion Blur on the tool. When this control is toggled
@@ -69327,6 +75249,10 @@ nodes, please consult the Fusion scripting documentation.
 Fusion Page Effects | Chapter 55 Position Nodes **1482**
 
 
+
+
+--- end of page=1481 ---
+
 #### **Chapter 56**
 ### Resolve Connect
 
@@ -69356,6 +75282,10 @@ Inspector������������������������
 
 Fusion Page Effects | Chapter 56 Resolve Connect **1483**
 
+
+
+
+--- end of page=1482 ---
 
 #### External Matte Saver [EMS]
 
@@ -69394,6 +75324,10 @@ branch in a node tree to render the mattes
 
 Fusion Page Effects | Chapter 56 Resolve Connect **1484**
 
+
+
+
+--- end of page=1483 ---
 
 ###### **Inspector**
 
@@ -69457,6 +75391,10 @@ name the new matte channel.
 Fusion Page Effects | Chapter 56 Resolve Connect **1485**
 
 
+
+
+--- end of page=1484 ---
+
 The External Matte Saver Settings tab
 
 
@@ -69507,6 +75445,10 @@ black/transparent.
 
 Fusion Page Effects | Chapter 56 Resolve Connect **1486**
 
+
+
+
+--- end of page=1485 ---
 
 **Use Object/Use Material (Checkboxes)**
 
@@ -69572,6 +75514,10 @@ node tree, the line will reappear.
 Fusion Page Effects | Chapter 56 Resolve Connect **1487**
 
 
+
+
+--- end of page=1486 ---
+
 **Comments**
 
 The Comments field is used to add notes to a tool. Click in the empty field and type the text. When a
@@ -69589,6 +75535,10 @@ nodes, please consult the Fusion scripting documentation.
 
 Fusion Page Effects | Chapter 56 Resolve Connect **1488**
 
+
+
+
+--- end of page=1487 ---
 
 #### **Chapter 57**
 ### Shape Nodes
@@ -69640,6 +75590,10 @@ Adding Points����������������������
 Fusion Page Effects | Chapter 57 Shape Nodes **1489**
 
 
+
+
+--- end of page=1488 ---
+
 #### **sBoolean**
 
 The sBoolean node
@@ -69679,6 +75633,10 @@ The sBoolean Controls tab
 Fusion Page Effects | Chapter 57 Shape Nodes **1490**
 
 
+
+
+--- end of page=1489 ---
+
 Controls
 
 The Controls tab is primarily used to select the boolean operation that determines how the two shapes
@@ -69705,6 +75663,10 @@ The operation menu includes four boolean operations:
 
 Fusion Page Effects | Chapter 57 Shape Nodes **1491**
 
+
+
+
+--- end of page=1490 ---
 
 **Style Mode**
 
@@ -69733,6 +75695,10 @@ enter each color channel’s value or the strength of the Alpha channel.
 
 Fusion Page Effects | Chapter 57 Shape Nodes **1492**
 
+
+
+
+--- end of page=1491 ---
 
 **Allow Combining**
 
@@ -69773,6 +75739,10 @@ shape requires far fewer control points to create a nicely smoothed shape.
 Fusion Page Effects | Chapter 57 Shape Nodes **1493**
 
 
+
+
+--- end of page=1492 ---
+
 ###### **Usage**
 
 The sBSpline controls
@@ -69807,6 +75777,10 @@ the style of.
 
 Fusion Page Effects | Chapter 57 Shape Nodes **1494**
 
+
+
+
+--- end of page=1493 ---
 
 ###### **Basic Node Setup**
 
@@ -69849,6 +75823,10 @@ Disabling the checkbox causes the Alpha channel values to be compounded at each 
 Fusion Page Effects | Chapter 57 Shape Nodes **1495**
 
 
+
+
+--- end of page=1494 ---
+
 Allow Combining enabled (left), Allow Combining disabled (right)
 
 #### **sDuplicate**
@@ -69882,6 +75860,10 @@ sRender for viewing and combining with other elements
 
 Fusion Page Effects | Chapter 57 Shape Nodes **1496**
 
+
+
+
+--- end of page=1495 ---
 
 ###### **Inspector**
 
@@ -69927,6 +75909,10 @@ copy to the left by the width of the frame.
 
 Fusion Page Effects | Chapter 57 Shape Nodes **1497**
 
+
+
+
+--- end of page=1496 ---
 
 **X and Y Size**
 
@@ -69980,6 +75966,10 @@ copies created in the Controls tab.
 
 Fusion Page Effects | Chapter 57 Shape Nodes **1498**
 
+
+
+
+--- end of page=1497 ---
 
 **Random Seed**
 
@@ -70047,6 +76037,10 @@ This node generates shapes and does not have any inputs.
 Fusion Page Effects | Chapter 57 Shape Nodes **1499**
 
 
+
+
+--- end of page=1498 ---
+
 ###### **Basic Node Setup**
 
 The sEllipse node is a shape generator, meaning it generates a shape and therefore has no input.
@@ -70094,6 +76088,10 @@ The caps are not visible unless the length is below 1.0.
 
 Fusion Page Effects | Chapter 57 Shape Nodes **1500**
 
+
+
+
+--- end of page=1499 ---
 
 **Position**
 
@@ -70148,6 +76146,10 @@ color disclosure arrow, use the color swatch, or drag the eyedropper into the vi
 Fusion Page Effects | Chapter 57 Shape Nodes **1501**
 
 
+
+
+--- end of page=1500 ---
+
 from an image. The RGBA sliders or number fields can be used to enter each color channel’s value or
 the strength of the Alpha channel.
 
@@ -70194,6 +76196,10 @@ compound shape connected to this input is either eroded or dilated.
 
 Fusion Page Effects | Chapter 57 Shape Nodes **1502**
 
+
+
+
+--- end of page=1501 ---
 
 ###### **Basic Node Setup**
 
@@ -70245,6 +76251,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 57 Shape Nodes **1503**
 
 
+
+
+--- end of page=1502 ---
+
 #### **sGrid**
 
 The sGrid node
@@ -70285,6 +76295,10 @@ The Controls tab is used to determine the number of grid cells and their offset 
 
 Fusion Page Effects | Chapter 57 Shape Nodes **1504**
 
+
+
+
+--- end of page=1503 ---
 
 **Grid Cells X and Y**
 
@@ -70338,6 +76352,10 @@ An array of shapes created by the sGrid node input into an sJitter node to rando
 Fusion Page Effects | Chapter 57 Shape Nodes **1505**
 
 
+
+
+--- end of page=1504 ---
+
 ###### **Inspector**
 
 Controls
@@ -70389,6 +76407,10 @@ used to give a distressed appearance to ellipses or wobbly animation to other sh
 Fusion Page Effects | Chapter 57 Shape Nodes **1506**
 
 
+
+
+--- end of page=1505 ---
+
 Common Controls
 
 
@@ -70430,6 +76452,10 @@ an sRender for viewing and further processing.
 
 Fusion Page Effects | Chapter 57 Shape Nodes **1507**
 
+
+
+
+--- end of page=1506 ---
 
 ###### **Inspector**
 
@@ -70476,6 +76502,10 @@ An sNGon node connecting to an sDuplicate node, and then viewed using an sRender
 
 Fusion Page Effects | Chapter 57 Shape Nodes **1508**
 
+
+
+
+--- end of page=1507 ---
 
 ###### **Inspector**
 
@@ -70539,6 +76569,10 @@ Length parameters allows you to create write-on style animations.
 Fusion Page Effects | Chapter 57 Shape Nodes **1509**
 
 
+
+
+--- end of page=1508 ---
+
 **X and Y Offset**
 
 These parameters are used to position the shape left, right, up, and down in the frame. The shape
@@ -70590,6 +76624,10 @@ Disabling the checkbox causes the Alpha channel values to be compounded at each 
 Fusion Page Effects | Chapter 57 Shape Nodes **1510**
 
 
+
+
+--- end of page=1509 ---
+
 Allow Combining Enabled (left), Allow Combining Disabled (right)
 
 
@@ -70631,6 +76669,10 @@ node tree.
 
 Fusion Page Effects | Chapter 57 Shape Nodes **1511**
 
+
+
+
+--- end of page=1510 ---
 
 A compound shape from an sBoolean node is connected
 to an sOutline for creating a complex outlined shape
@@ -70677,6 +76719,10 @@ conjunction with the Length parameter, it positions the gap in the outline.
 Fusion Page Effects | Chapter 57 Shape Nodes **1512**
 
 
+
+
+--- end of page=1511 ---
+
 **Length**
 
 The Length parameter controls the end position of the outline. A length of 1.0 is a closed shape.
@@ -70718,6 +76764,10 @@ An sPolygon node connecting to an sDuplicate node, and then viewed using an sRen
 
 Fusion Page Effects | Chapter 57 Shape Nodes **1513**
 
+
+
+
+--- end of page=1512 ---
 
 ###### **Inspector**
 
@@ -70772,6 +76822,10 @@ gap in the outline.
 Fusion Page Effects | Chapter 57 Shape Nodes **1514**
 
 
+
+
+--- end of page=1513 ---
+
 **Length**
 
 The Length parameter is only displayed when the Solid checkbox is disabled. A length of 1.0 is a
@@ -70823,6 +76877,10 @@ The Style tab is used to assign color to the shape and control its transparency.
 
 Fusion Page Effects | Chapter 57 Shape Nodes **1515**
 
+
+
+
+--- end of page=1514 ---
 
 **Color**
 
@@ -70892,6 +76950,10 @@ be added. You can, however, move and rotate the entire spline.
 Fusion Page Effects | Chapter 57 Shape Nodes **1516**
 
 
+
+
+--- end of page=1515 ---
+
  - **Smooth:** Changes the selected control point from a linear to a smooth curve.
 
  - **Linear:** Changes the selected control point from a smooth curve to linear.
@@ -70941,6 +77003,10 @@ An sRectangle node connecting to an sDuplicate node, and then viewed using an sR
 
 Fusion Page Effects | Chapter 57 Shape Nodes **1517**
 
+
+
+
+--- end of page=1516 ---
 
 ###### **Inspector**
 
@@ -71002,6 +77068,10 @@ Length parameters allows you to create write-on style animations.
 Fusion Page Effects | Chapter 57 Shape Nodes **1518**
 
 
+
+
+--- end of page=1517 ---
+
 **X and Y Offset**
 
 These parameters are used to position the shape left, right, up, and down in the frame. The shape
@@ -71055,6 +77125,10 @@ other nodes downstream that may cause the shape to overlap with copies of itself
 Fusion Page Effects | Chapter 57 Shape Nodes **1519**
 
 
+
+
+--- end of page=1518 ---
+
 the Alpha channel value may increase when the shape overlaps itself. For instance, if a rectangle
 Alpha channel is set to .5, enabling the Allow Combining checkbox maintains that value even if the
 shape passes through a duplicate or grid node that causes the shape and Alpha channel to overlap.
@@ -71100,6 +77174,10 @@ other 2D nodes like a Soft Glow node.
 Fusion Page Effects | Chapter 57 Shape Nodes **1520**
 
 
+
+
+--- end of page=1519 ---
+
 Multiple Shape nodes connected to the sRender node
 and then processed and composited with a title
 
@@ -71136,6 +77214,10 @@ an aspect of 0.9:1 would create a slightly rectangular pixel (like an NTSC monit
 
 Fusion Page Effects | Chapter 57 Shape Nodes **1521**
 
+
+
+
+--- end of page=1520 ---
 
 **NOTE:** Right-click on the Width, Height, or Pixel Aspect controls to display a menu listing the
 file formats defined in the preferences Frame Format tab. Selecting any of the listed options
@@ -71201,6 +77283,10 @@ to a linear output space.
 Fusion Page Effects | Chapter 57 Shape Nodes **1522**
 
 
+
+
+--- end of page=1521 ---
+
 Common Controls
 
 
@@ -71238,6 +77324,10 @@ The sStar Controls tab
 
 Fusion Page Effects | Chapter 57 Shape Nodes **1523**
 
+
+
+
+--- end of page=1522 ---
 
 Controls
 
@@ -71320,6 +77410,10 @@ The Angle parameter rotates the shape based on the center axis.
 Fusion Page Effects | Chapter 57 Shape Nodes **1524**
 
 
+
+
+--- end of page=1523 ---
+
 ###### **Style Tab**
 
 Style
@@ -71357,6 +77451,10 @@ Allow Combining Enabled (left), Allow Combining Disabled (right)
 Fusion Page Effects | Chapter 57 Shape Nodes **1525**
 
 
+
+
+--- end of page=1524 ---
+
 Common Controls
 
 
@@ -71382,6 +77480,10 @@ The sText controls
 
 Fusion Page Effects | Chapter 57 Shape Nodes **1526**
 
+
+
+
+--- end of page=1525 ---
 
 #### **sTransform**
 
@@ -71420,6 +77522,10 @@ The sTransform Controls tab
 
 Fusion Page Effects | Chapter 57 Shape Nodes **1527**
 
+
+
+
+--- end of page=1526 ---
 
 Controls
 
@@ -71491,6 +77597,10 @@ is scripted to trigger another task but the value of the node is set to 0.0.
 Fusion Page Effects | Chapter 57 Shape Nodes **1528**
 
 
+
+
+--- end of page=1527 ---
+
 **Red/Green/Blue/Alpha Channel Selector (sRender only)**
 
 These four buttons are used to limit the effect of the tool to specified color channels. This filter is often
@@ -71559,6 +77669,10 @@ selected in the node tree the line will reappear.
 Fusion Page Effects | Chapter 57 Shape Nodes **1529**
 
 
+
+
+--- end of page=1528 ---
+
 **Comments**
 
 The Comments field is used to add notes to a tool. Click in the empty field and type the text. When a
@@ -71576,6 +77690,10 @@ scripting nodes, see the Fusion scripting documentation.
 
 Fusion Page Effects | Chapter 57 Shape Nodes **1530**
 
+
+
+
+--- end of page=1529 ---
 
 #### **Chapter 58**
 ### Stereo Nodes
@@ -71616,6 +77734,10 @@ interchangeable with Loader nodes in Fusion Studio, unless otherwise noted.
 
 Fusion Page Effects | Chapter 58 Stereo Nodes **1531**
 
+
+
+
+--- end of page=1530 ---
 
 #### Anaglyph [ANA]
 
@@ -71660,6 +77782,10 @@ An Anaglyph node using separate left and right eye inputs
 Fusion Page Effects | Chapter 58 Stereo Nodes **1532**
 
 
+
+
+--- end of page=1531 ---
+
 ###### **Inspector**
 
 Controls Tab
@@ -71697,6 +77823,10 @@ The Anaglyph Method menu
 Fusion Page Effects | Chapter 58 Stereo Nodes **1533**
 
 
+
+
+--- end of page=1532 ---
+
 - **Monochrome:** Assuming you are using a Red/Cyan Color Type, the left eye contains the
 luminance of the left image and is placed in the output of the red channel. The right eye contains
 the luminance of the right image and is placed in the output green and blue channels.
@@ -71732,6 +77862,10 @@ Color Optimized
 
 Fusion Page Effects | Chapter 58 Stereo Nodes **1534**
 
+
+
+
+--- end of page=1533 ---
 
  - **Dubois:** Images with fairly saturated colors can produce retinal rivalry with the Half-color, Color,
 and Optimized methods because the color is visible in only one eye. For example, with red/
@@ -71782,6 +77916,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 58 Stereo Nodes **1535**
 
 
+
+
+--- end of page=1534 ---
+
 #### Combiner [Com]
 
 The Combiner node
@@ -71823,6 +77961,10 @@ The Combiner Controls tab
 
 Fusion Page Effects | Chapter 58 Stereo Nodes **1536**
 
+
+
+
+--- end of page=1535 ---
 
 Controls Tab
 
@@ -71886,6 +78028,10 @@ Green color image.
 Fusion Page Effects | Chapter 58 Stereo Nodes **1537**
 
 
+
+
+--- end of page=1536 ---
+
 The generated disparity is stored in the output image’s Disparity aux channel, where the left image
 contains the left > right disparity, and the right image contains the right > left disparity. Because
 disparity works based on matching regions in the left eye to regions in the right eye by comparing
@@ -71942,6 +78088,10 @@ to generate and render out a stereo image
 Fusion Page Effects | Chapter 58 Stereo Nodes **1538**
 
 
+
+
+--- end of page=1537 ---
+
 ###### **Inspector**
 
 **Proxy (for Tracking)**
@@ -71994,6 +78144,10 @@ the disparity is used for interpolation.
 
 Fusion Page Effects | Chapter 58 Stereo Nodes **1539**
 
+
+
+
+--- end of page=1538 ---
 
 **Match Weight**
 
@@ -72068,6 +78222,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 58 Stereo Nodes **1540**
 
 
+
+
+--- end of page=1539 ---
+
 #### Disparity To Z [D2Z]
 
 The DisparityToZ node
@@ -72118,6 +78276,10 @@ Mode is set to Separate.
 Fusion Page Effects | Chapter 58 Stereo Nodes **1541**
 
 
+
+
+--- end of page=1540 ---
+
 ###### **Basic Node Setup**
 
 Disparity To Z takes a 3D camera and stereo images containing a disparity channel as inputs. The
@@ -72161,6 +78323,10 @@ using this option to soften out harsh edges for Z-channel post effects like dept
 
 Fusion Page Effects | Chapter 58 Stereo Nodes **1542**
 
+
+
+
+--- end of page=1541 ---
 
 **HiQ Only**
 
@@ -72224,6 +78390,10 @@ Camera 3D’s controls.
 Fusion Page Effects | Chapter 58 Stereo Nodes **1543**
 
 
+
+
+--- end of page=1542 ---
+
 **Foreground Disparity (Pick from Left Eye)**
 
 When the camera Mode is set to Artistic, a Foreground Disparity slider is available. This is the
@@ -72278,6 +78448,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 58 Stereo Nodes **1544**
 
 
+
+
+--- end of page=1543 ---
+
 #### Global Align [GA]
 
 The GlobalAlign node
@@ -72324,6 +78498,10 @@ A Global Align node used to manually correct left and right eye discrepancies
 
 Fusion Page Effects | Chapter 58 Stereo Nodes **1545**
 
+
+
+
+--- end of page=1544 ---
 
 ###### **Inspector**
 
@@ -72385,6 +78563,10 @@ of your footage.
 
 Fusion Page Effects | Chapter 58 Stereo Nodes **1546**
 
+
+
+
+--- end of page=1545 ---
 
 **Visualization**
 
@@ -72449,6 +78631,10 @@ the Stack Mode menu is set to Separate.
 Fusion Page Effects | Chapter 58 Stereo Nodes **1547**
 
 
+
+
+--- end of page=1546 ---
+
 ###### **Outputs**
 
 Unlike most nodes in Fusion, New Eye has two outputs for the left and right eye.
@@ -72488,6 +78674,10 @@ are recreating the right eye, you would disable the left eye and enable the righ
 
 Fusion Page Effects | Chapter 58 Stereo Nodes **1548**
 
+
+
+
+--- end of page=1547 ---
 
 **Lock XY**
 
@@ -72561,6 +78751,10 @@ new frame.
 Fusion Page Effects | Chapter 58 Stereo Nodes **1549**
 
 
+
+
+--- end of page=1548 ---
+
 Common Controls
 
 
@@ -72606,6 +78800,10 @@ A Splitter node creates a left and right image from a stacked stereo image
 
 Fusion Page Effects | Chapter 58 Stereo Nodes **1550**
 
+
+
+
+--- end of page=1549 ---
 
 ###### **Inspector**
 
@@ -72658,6 +78856,10 @@ The StereoAlign node
 
 Fusion Page Effects | Chapter 58 Stereo Nodes **1551**
 
+
+
+
+--- end of page=1550 ---
 
 ###### **Stereo Align Node Introduction**
 
@@ -72714,6 +78916,10 @@ made, another Disparity node is added after it to generate disparity for the rea
 Fusion Page Effects | Chapter 58 Stereo Nodes **1552**
 
 
+
+
+--- end of page=1551 ---
+
 A Stereo Align node destroys the disparity channel, so another Disparity node is placed after it
 
 ###### **Inspector**
@@ -72743,6 +78949,10 @@ eye, and it will look wrong later when you try to distort it again.
 
 Fusion Page Effects | Chapter 58 Stereo Nodes **1553**
 
+
+
+
+--- end of page=1552 ---
 
 **Apply to**
 
@@ -72815,6 +79025,10 @@ This has the same effect as the Eye Separation option in the Camera 3D node.
 
 Fusion Page Effects | Chapter 58 Stereo Nodes **1554**
 
+
+
+
+--- end of page=1553 ---
 
 **Separation**
 
@@ -72894,6 +79108,10 @@ Disparity can give a doubling-up effect in places where the disparities disagree
 Fusion Page Effects | Chapter 58 Stereo Nodes **1555**
 
 
+
+
+--- end of page=1554 ---
+
 **Stack Mode**
 
 In Stack Mode, L and R outputs will output the same image.
@@ -72926,6 +79144,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 
 Fusion Page Effects | Chapter 58 Stereo Nodes **1556**
 
+
+
+
+--- end of page=1555 ---
 
 #### Z To Disparity [Z2D]
 
@@ -72971,6 +79193,10 @@ The same image is output with disparity channels.
 
 Fusion Page Effects | Chapter 58 Stereo Nodes **1557**
 
+
+
+
+--- end of page=1556 ---
 
 A Z To Disparity node takes an image with a Z channel and creates a disparity channel
 
@@ -73019,6 +79245,10 @@ In Stack Mode, L and R outputs will output the same image.
 
 Fusion Page Effects | Chapter 58 Stereo Nodes **1558**
 
+
+
+
+--- end of page=1557 ---
 
 If HiQ is off, the interpolations are done using nearest-neighbor sampling, leading to a more
 “noisy” result.
@@ -73074,6 +79304,10 @@ the screen.
 Fusion Page Effects | Chapter 58 Stereo Nodes **1559**
 
 
+
+
+--- end of page=1558 ---
+
 **Background Disparity (Sample from Left Eye)**
 
 This is the disparity of objects in the distant background. You can think of this as the upper limit to
@@ -73101,6 +79335,10 @@ The Common Settings Stereo 3D Settings tab
 
 Fusion Page Effects | Chapter 58 Stereo Nodes **1560**
 
+
+
+
+--- end of page=1559 ---
 
 **Blend**
 
@@ -73167,6 +79405,10 @@ _[Reference Manual](https://www.blackmagicdesign.com/support/family/davinci-reso
 Fusion Page Effects | Chapter 58 Stereo Nodes **1561**
 
 
+
+
+--- end of page=1560 ---
+
 **Object ID/Material ID (Sliders)**
 
 Use these sliders to select which ID will be used to create a mask from the object or material channels
@@ -73201,6 +79443,10 @@ nodes, please consult the Fusion scripting documentation.
 
 Fusion Page Effects | Chapter 58 Stereo Nodes **1562**
 
+
+
+
+--- end of page=1561 ---
 
 #### **Chapter 59**
 ### Tracking Nodes
@@ -73257,6 +79503,10 @@ Legacy Point Tracker Onscreen Controls��������������
 Fusion Page Effects | Chapter 59 Tracking Nodes **1563**
 
 
+
+
+--- end of page=1562 ---
+
 #### Camera Tracker [CTra]
 
 The Camera Tracker node
@@ -73290,6 +79540,10 @@ The Camera Tracker has two inputs:
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1564**
 
+
+
+
+--- end of page=1563 ---
 
 **Background:** The orange image input accepts a 2D image you want tracked.
 
@@ -73326,6 +79580,10 @@ to control the number and distribution of auto tracks.
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1565**
 
+
+
+
+--- end of page=1564 ---
 
 **Reset**
 
@@ -73394,6 +79652,10 @@ so a 0.04 pattern means a 0.04 gutter.
 Fusion Page Effects | Chapter 59 Tracking Nodes **1566**
 
 
+
+
+--- end of page=1565 ---
+
 New Track Defaults
 
 There are three methods in which the Camera Tracker node can analyze the scene, and each has its
@@ -73447,6 +79709,10 @@ The Camera tab includes controls relating to the lens and gate aspects of the ca
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1567**
 
+
+
+
+--- end of page=1566 ---
 
 **Focal Length**
 
@@ -73508,6 +79774,10 @@ behavior (or delete the offending tracks).
 Fusion Page Effects | Chapter 59 Tracking Nodes **1568**
 
 
+
+
+--- end of page=1567 ---
+
 ###### **Solve Tab**
 
 The Camera Tracker Solve tab
@@ -73552,6 +79822,10 @@ considered excellent.
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1569**
 
+
+
+
+--- end of page=1568 ---
 
 **Clean Tracks by Filter**
 
@@ -73619,6 +79893,10 @@ Camera tab.
 Fusion Page Effects | Chapter 59 Tracking Nodes **1570**
 
 
+
+
+--- end of page=1569 ---
+
 **Enable Lens Parameter**
 
 When enabled, lens distortion parameters are exposed to help in correcting lens distortion
@@ -73677,6 +79955,10 @@ causes the low and high order distortion values to be solved for.
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1571**
 
+
+
+
+--- end of page=1570 ---
 
  - **Division Quartic:** Provides a more accurate simulation of Quartic radial lens curvature. This causes
 the low and high order distortion values to be solved for.
@@ -73747,6 +80029,10 @@ Maximum Solve Error) will cause the corresponding tracks to be interactively sel
 Fusion Page Effects | Chapter 59 Tracking Nodes **1572**
 
 
+
+
+--- end of page=1571 ---
+
 ###### **Operations on Selected Tracks**
 
 Tracks selected directly in the viewer with the mouse or selected via track filtering can have the
@@ -73791,6 +80077,10 @@ selecting their corresponding locators in the point cloud.
 Fusion Page Effects | Chapter 59 Tracking Nodes **1573**
 
 
+
+
+--- end of page=1572 ---
+
 ###### **Export**
 
 The Export tab lets you turn the tracked and solved data this node has generated into a form that can
@@ -73833,6 +80123,10 @@ section. Here’s an example of how this is handy:
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1574**
 
+
+
+
+--- end of page=1573 ---
 
 **3** The camera is not as accurate as preferred or perhaps the solver is rerun to add additional tracks
 to generate a denser point cloud. Rather than re-exporting the Camera 3D and Point Cloud 3D
@@ -73903,6 +80197,10 @@ belonging to the ground and having a wide separation.
 Fusion Page Effects | Chapter 59 Tracking Nodes **1575**
 
 
+
+
+--- end of page=1574 ---
+
 **TIP:** When selecting points for the ground plane, it is helpful to have the Camera Tracker
 node viewed in side-by-side 2D and 3D views. It may be easier to select tracks belonging to
 the ground by selecting tracks from multiple frames in the 2D viewer rather than trying to box
@@ -73951,6 +80249,10 @@ and the renderer).
 Fusion Page Effects | Chapter 59 Tracking Nodes **1576**
 
 
+
+
+--- end of page=1575 ---
+
 ###### **Options**
 
 The Options tab lets you customize the Camera Tracker’s onscreen controls so you can work most
@@ -73994,6 +80296,10 @@ Trails, Tooltips in the 2D viewer, Tooltips in the 3D viewer, Reprojected Locato
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1577**
 
+
+
+
+--- end of page=1576 ---
 
 **Colors**
 
@@ -74060,6 +80366,10 @@ and accurate the solve.
 Fusion Page Effects | Chapter 59 Tracking Nodes **1578**
 
 
+
+
+--- end of page=1577 ---
+
 **Seed Frames**
 
 Two seed frames are used in the solve process. The algorithm chooses two frames that are as far
@@ -74113,6 +80423,10 @@ are described in detail in the following “The Common Controls” section.
 Fusion Page Effects | Chapter 59 Tracking Nodes **1579**
 
 
+
+
+--- end of page=1578 ---
+
 #### Planar Tracker Node [PTRA]
 
 The Planar Tracker node
@@ -74159,6 +80473,10 @@ hundreds of megabytes of temporary tracking data).
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1580**
 
+
+
+
+--- end of page=1579 ---
 
 ###### **Inputs**
 
@@ -74216,6 +80534,10 @@ frames where the planar surface is visible.
 Fusion Page Effects | Chapter 59 Tracking Nodes **1581**
 
 
+
+
+--- end of page=1580 ---
+
 **6** **Adjust track options:** Frequently changed options include Tracker, Motion Type, and
 Track Channel.
 
@@ -74264,6 +80586,10 @@ clip to restore the motion.
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1582**
 
+
+
+
+--- end of page=1581 ---
 
  - **Corner Pin:** After analyzing a planar surface, this mode computes and applies a matching
 perspective distortion to a foreground image you connect to the foreground input of the Planar
@@ -74329,6 +80655,10 @@ polygon, if necessary.
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1583**
 
+
+
+
+--- end of page=1582 ---
 
 Track Mode
 
@@ -74396,6 +80726,10 @@ region where there are not many trackable pixels.
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1584**
 
+
+
+
+--- end of page=1583 ---
 
 **Output**
 
@@ -74471,6 +80805,10 @@ use it to apply motion to the foreground.
 Fusion Page Effects | Chapter 59 Tracking Nodes **1585**
 
 
+
+
+--- end of page=1584 ---
+
 Steady Mode
 
 In Steady mode, the Planar Tracker transforms the background plate to keep the pattern as motionless
@@ -74542,6 +80880,10 @@ it helps to position it more accurately, scrub to other times and make adjustmen
 Fusion Page Effects | Chapter 59 Tracking Nodes **1586**
 
 
+
+
+--- end of page=1585 ---
+
 Merge Mode
 
 Controls how the foreground (the corner pinned texture) is merged over the background (the tracked
@@ -74607,6 +80949,10 @@ anticipated, it can sometimes be useful to film at a higher resolution (or lower
 Fusion Page Effects | Chapter 59 Tracking Nodes **1587**
 
 
+
+
+--- end of page=1586 ---
+
 The Planar Tracker Stabilization Workflow
 
 **1** **Track:** Select a roughly planar region that represents the motion that you want to stabilize.
@@ -74671,6 +81017,10 @@ editable in the Spline Editor.
 Fusion Page Effects | Chapter 59 Tracking Nodes **1588**
 
 
+
+
+--- end of page=1587 ---
+
 **Clipping Mode**
 
 Determines what happens to the parts of the background image that get moved off frame by the
@@ -74729,6 +81079,10 @@ The Shift+D keyboard shortcut toggles this.
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1589**
 
+
+
+
+--- end of page=1588 ---
 
 **Show Track Markers**
 
@@ -74790,6 +81144,10 @@ surface within the bounds.
 Fusion Page Effects | Chapter 59 Tracking Nodes **1590**
 
 
+
+
+--- end of page=1589 ---
+
 **3** Click on the Track button to analyze the motion of the surface over time, using the mesh
 you just set.
 
@@ -74810,6 +81168,10 @@ in the _[DaVinci Resolve 20.3 Reference Manual](https://www.blackmagicdesign.com
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1591**
 
+
+
+
+--- end of page=1590 ---
 
 ###### **Inputs**
 
@@ -74848,6 +81210,10 @@ The Bounds tab in the Surface Tracker controls
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1592**
 
+
+
+
+--- end of page=1591 ---
 
 Bounds
 
@@ -74899,6 +81265,10 @@ A simple boundary drawn on his shirt in the viewer
 Fusion Page Effects | Chapter 59 Tracking Nodes **1593**
 
 
+
+
+--- end of page=1592 ---
+
 Mesh
 
 With the boundaries now defined, you can establish the mesh over the surface to be tracked. The
@@ -74949,6 +81319,10 @@ each other.
 Fusion Page Effects | Chapter 59 Tracking Nodes **1594**
 
 
+
+
+--- end of page=1593 ---
+
  - **Uniform:** Creates a regular grid of points in the boundary and relies on internal shape models to
 deform the grid during tracking. This may give better results than Automatic mode, if your surface
 is highly detailed.
@@ -74976,6 +81350,10 @@ The Track tab in the Surface Tracker controls
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1595**
 
+
+
+
+--- end of page=1594 ---
 
 Fixing a broken track will require some manual adjustments to both the mesh and the tracking data.
 At any time while tracking, mesh points can be adjusted either one by one, or with the lasso selection
@@ -75043,6 +81421,10 @@ slider to get a “stiffer” tracked surface with less internal warping.
 Fusion Page Effects | Chapter 59 Tracking Nodes **1596**
 
 
+
+
+--- end of page=1595 ---
+
  - **Quality:** The tracker can be very computationally intensive; it is recommended to use the Faster
 setting while making adjustments to the mesh, then use Better for the final track once all the
 parameters have been set correctly.
@@ -75090,6 +81472,10 @@ outline of the mesh. All inputs and alphas are ignored.
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1597**
 
+
+
+
+--- end of page=1596 ---
 
  - **Stabilize-Warp Input 1:** Performs an inverse warp to the Reference Frame (again, this should be
 a frame that ideally is as close to and flat-on to the camera as possible). The result is a stationary
@@ -75157,6 +81543,10 @@ any one of the pins. You can add up to four pins for unique corner pinning disto
 Fusion Page Effects | Chapter 59 Tracking Nodes **1598**
 
 
+
+
+--- end of page=1597 ---
+
 **Interaction Overlays:** These buttons control the visibility of the mesh overlays on the Viewer.
 
  - **Show:** Shows the mesh at all times.
@@ -75196,6 +81586,10 @@ or to apply destabilization to one image based on the motion of another.
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1599**
 
+
+
+
+--- end of page=1598 ---
 
 For more information, _see Chapter 22, “Using the Tracker Node,”_ in the DaVinci Resolve
 Reference Manual or Chapter 82 in the _[DaVinci Resolve 20.3 Reference Manual.](https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion)_
@@ -75242,6 +81636,10 @@ capabilities are available in the Tracker node.
 Fusion Page Effects | Chapter 59 Tracking Nodes **1600**
 
 
+
+
+--- end of page=1599 ---
+
 A Tracker node set up to apply a match move to the foreground input
 
 ###### **IntelliTrack AI Point Tracker**
@@ -75274,6 +81672,10 @@ whenever you select a tracker in the node tree.
 Fusion Page Effects | Chapter 59 Tracking Nodes **1601**
 
 
+
+
+--- end of page=1600 ---
+
 Tracker onscreen controls
 
 
@@ -75305,6 +81707,10 @@ from frame to frame to locate the pattern.
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1602**
 
+
+
+
+--- end of page=1601 ---
 
 **Repositioning the Tracker**
 
@@ -75340,6 +81746,10 @@ The Tracker node Trackers tab
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1603**
 
+
+
+
+--- end of page=1602 ---
 
 Trackers Tab
 
@@ -75414,6 +81824,10 @@ frame. This helps to avoid Tracker drift caused by transient artifacts that cros
 Fusion Page Effects | Chapter 59 Tracking Nodes **1604**
 
 
+
+
+--- end of page=1603 ---
+
 **Path Center**
 
 This menu determines how the Tracker behaves when repositioning a pattern. This menu is particularly
@@ -75471,6 +81885,10 @@ enabled, suspended, and disabled
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1605**
 
+
+
+
+--- end of page=1604 ---
 
 **Add/Delete Tracker**
 
@@ -75533,6 +81951,10 @@ back in the pattern window after tracking by using the transport controls at the
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1606**
 
+
+
+
+--- end of page=1605 ---
 
 While the track is progressing, the vertical bar immediately to the right of the pattern shows how
 confident Fusion is that the current pattern matches the initially selected pattern. A green bar indicates
@@ -75597,6 +82019,10 @@ the options and buttons in the Operation tab to select the function performed by
 Fusion Page Effects | Chapter 59 Tracking Nodes **1607**
 
 
+
+
+--- end of page=1606 ---
+
 The Tracker Operation tab
 
 
@@ -75641,6 +82067,10 @@ than None.
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1608**
 
+
+
+
+--- end of page=1607 ---
 
  - **BG Only:** The foreground input is ignored; only the background is affected. This is used primarily
 when stabilizing the background image.
@@ -75711,6 +82141,10 @@ merged colors are replaced, and pixels darker than the merged color do not chang
 Fusion Page Effects | Chapter 59 Tracking Nodes **1609**
 
 
+
+
+--- end of page=1608 ---
+
 **Lighten:** Lighten looks at the color information in each channel and selects the background or
 foreground image’s color values, whichever is lighter, as the result color value. Pixels darker than
 the merged color are replaced, and pixels lighter than the merged color do not change.
@@ -75776,6 +82210,10 @@ x = [background Alpha], y = 0
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1610**
 
+
+
+
+--- end of page=1609 ---
 
    - **Held Out:** Held Out is essentially the opposite of the In operation. The pixels in the foreground
 image are multiplied against the inverted alpha channel of the background image. You can
@@ -75850,6 +82288,10 @@ It produces sharp results with finely detailed images.
 Fusion Page Effects | Chapter 59 Tracking Nodes **1611**
 
 
+
+
+--- end of page=1610 ---
+
  - **Mitchell:** This is similar to Catmull-Rom but produces better results with finely detailed images.
 It is slower than Catmull-Rom.
 
@@ -75923,6 +82365,10 @@ the background.
 Fusion Page Effects | Chapter 59 Tracking Nodes **1612**
 
 
+
+
+--- end of page=1611 ---
+
 **Stabilize Settings**
 
 The Tracker node automatically outputs several steady and unsteady position outputs to which
@@ -75981,6 +82427,10 @@ Preferences > Globals > Splines.
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1613**
 
+
+
+
+--- end of page=1612 ---
 
 Display Options Tab
 
@@ -76045,6 +82495,10 @@ They are:
 Fusion Page Effects | Chapter 59 Tracking Nodes **1614**
 
 
+
+
+--- end of page=1613 ---
+
 Common Controls
 
 
@@ -76071,6 +82525,10 @@ consistent and work the same way for each tool.
 
 Fusion Page Effects | Chapter 59 Tracking Nodes **1615**
 
+
+
+
+--- end of page=1614 ---
 
 **Blend**
 
@@ -76137,6 +82595,10 @@ _[Reference Manual](https://www.blackmagicdesign.com/support/family/davinci-reso
 Fusion Page Effects | Chapter 59 Tracking Nodes **1616**
 
 
+
+
+--- end of page=1615 ---
+
 **Object ID/Material ID (Sliders)**
 
 Use these sliders to select which ID will be used to create a mask from the object or material channels
@@ -76200,6 +82662,10 @@ nodes, please consult the Fusion scripting documentation.
 Fusion Page Effects | Chapter 59 Tracking Nodes **1617**
 
 
+
+
+--- end of page=1616 ---
+
 #### **Chapter 60**
 ### Transform Nodes
 
@@ -76236,6 +82702,10 @@ interchangeable with Loader nodes in Fusion Studio, unless otherwise noted.
 
 Fusion Page Effects | Chapter 60 Transform Nodes **1618**
 
+
+
+
+--- end of page=1617 ---
 
 #### Camera Shake [CSh]
 
@@ -76278,6 +82748,10 @@ a MediaIn node or any node providing a 2D output.
 
 Fusion Page Effects | Chapter 60 Transform Nodes **1619**
 
+
+
+
+--- end of page=1618 ---
 
 ###### **Inspector**
 
@@ -76331,6 +82805,10 @@ Wave. A Square Wave generates a much more mechanical-looking motion than a Sine.
 
 Fusion Page Effects | Chapter 60 Transform Nodes **1620**
 
+
+
+
+--- end of page=1619 ---
 
 **Filter Method**
 
@@ -76389,6 +82867,10 @@ down to zero.
 Fusion Page Effects | Chapter 60 Transform Nodes **1621**
 
 
+
+
+--- end of page=1620 ---
+
 **Edges**
 
 This menu determines how the Edges of the image are treated.
@@ -76446,6 +82928,10 @@ parameters is not advised.
 Fusion Page Effects | Chapter 60 Transform Nodes **1622**
 
 
+
+
+--- end of page=1621 ---
+
 ###### **Inputs**
 
 The single input on the Crop node is used to connect a 2D image for cropping.
@@ -76486,6 +82972,10 @@ The values of these controls are measured in pixels.
 
 Fusion Page Effects | Chapter 60 Transform Nodes **1623**
 
+
+
+
+--- end of page=1622 ---
 
 **Keep Aspect**
 
@@ -76557,6 +83047,10 @@ the image to the first pixel that is not that color.
 Fusion Page Effects | Chapter 60 Transform Nodes **1624**
 
 
+
+
+--- end of page=1623 ---
+
 Common Controls
 
 
@@ -76600,6 +83094,10 @@ The DVE node modifying the foreground input of a Merge node
 
 Fusion Page Effects | Chapter 60 Transform Nodes **1625**
 
+
+
+
+--- end of page=1624 ---
 
 ###### **Inspector**
 
@@ -76650,6 +83148,10 @@ Field of View and zoom of a camera.
 
 Fusion Page Effects | Chapter 60 Transform Nodes **1626**
 
+
+
+
+--- end of page=1625 ---
 
 Masking Tab
 
@@ -76710,6 +83212,10 @@ are described in detail at the end of this chapter in “The Common Controls” 
 Fusion Page Effects | Chapter 60 Transform Nodes **1627**
 
 
+
+
+--- end of page=1626 ---
+
 #### Letterbox [LBX]
 
 The Letterbox node
@@ -76744,6 +83250,10 @@ The Letterbox node converting the Merge output resolution and adding letterbox m
 
 Fusion Page Effects | Chapter 60 Transform Nodes **1628**
 
+
+
+
+--- end of page=1627 ---
 
 ###### **Inspector**
 
@@ -76802,6 +83312,10 @@ to animate the visible portion of the resized input.
 
 Fusion Page Effects | Chapter 60 Transform Nodes **1629**
 
+
+
+
+--- end of page=1628 ---
 
 **Filter Method**
 
@@ -76867,6 +83381,10 @@ are described in detail at the end of this chapter in “The Common Controls” 
 Fusion Page Effects | Chapter 60 Transform Nodes **1630**
 
 
+
+
+--- end of page=1629 ---
+
 #### Planar Transform [PXF]
 
 The Planar Transform node
@@ -76921,6 +83439,10 @@ Tracker is no longer needed in the node tree.
 Fusion Page Effects | Chapter 60 Transform Nodes **1631**
 
 
+
+
+--- end of page=1630 ---
+
 A Planar Transform creating a match move
 
 ###### **Inspector**
@@ -76963,6 +83485,10 @@ are described in detail at the end of this chapter in “The Common Controls” 
 Fusion Page Effects | Chapter 60 Transform Nodes **1632**
 
 
+
+
+--- end of page=1631 ---
+
 #### Resize [Rsz]
 
 The Resize node
@@ -76996,6 +83522,10 @@ The Resize node can be used to scale an image and change its resolution.
 
 Fusion Page Effects | Chapter 60 Transform Nodes **1633**
 
+
+
+
+--- end of page=1632 ---
 
 ###### **Inspector**
 
@@ -77059,6 +83589,10 @@ Enable this checkbox to reveal a Pixel Aspect control that can be used to change
 
 Fusion Page Effects | Chapter 60 Transform Nodes **1634**
 
+
+
+
+--- end of page=1633 ---
 
 **Filter Method**
 
@@ -77124,6 +83658,10 @@ are described in detail at the end of this chapter in “The Common Controls” 
 Fusion Page Effects | Chapter 60 Transform Nodes **1635**
 
 
+
+
+--- end of page=1634 ---
+
 #### Scale [SCL]
 
 ###### **Scale Node Introduction**
@@ -77161,6 +83699,10 @@ The Scale node can be used to scale an image and change its resolution.
 
 Fusion Page Effects | Chapter 60 Transform Nodes **1636**
 
+
+
+
+--- end of page=1635 ---
 
 ###### **Inspector**
 
@@ -77224,6 +83766,10 @@ them, the results may be blurrier than desired.
 Fusion Page Effects | Chapter 60 Transform Nodes **1637**
 
 
+
+
+--- end of page=1636 ---
+
  - **Catmull-Rom:** This produces good results with continuous-tone images that are resized down.
 This produces sharp results with finely detailed images.
 
@@ -77266,6 +83812,10 @@ controls is not advised.
 Fusion Page Effects | Chapter 60 Transform Nodes **1638**
 
 
+
+
+--- end of page=1637 ---
+
 #### Transform [XF]
 
 The Transform node
@@ -77301,6 +83851,10 @@ The Transform node can be used to scale an image without changing its resolution
 
 Fusion Page Effects | Chapter 60 Transform Nodes **1639**
 
+
+
+
+--- end of page=1638 ---
 
 ###### **Inspector**
 
@@ -77352,6 +83906,10 @@ available only when the Use Size and Aspect checkbox is enabled.
 
 Fusion Page Effects | Chapter 60 Transform Nodes **1640**
 
+
+
+
+--- end of page=1639 ---
 
 **Angle**
 
@@ -77433,6 +83991,10 @@ down to zero.
 Fusion Page Effects | Chapter 60 Transform Nodes **1641**
 
 
+
+
+--- end of page=1640 ---
+
 **Invert Transform**
 
 Select this control to invert any position, rotation, or scaling transformation. This option is useful when
@@ -77488,6 +84050,10 @@ resolution in DaVinci Resolve to set the Reference Width and Reference Height va
 Fusion Page Effects | Chapter 60 Transform Nodes **1642**
 
 
+
+
+--- end of page=1641 ---
+
 #### **The Common Controls**
 
 Nodes that handle Transform operations share several identical controls in the Inspector. This section
@@ -77515,6 +84081,10 @@ Normally, this will cause the tool to skip processing entirely, copying the inpu
 
 Fusion Page Effects | Chapter 60 Transform Nodes **1643**
 
+
+
+
+--- end of page=1642 ---
 
 **Process When Blend Is 0.0**
 
@@ -77582,6 +84152,10 @@ package with those channels included.
 Fusion Page Effects | Chapter 60 Transform Nodes **1644**
 
 
+
+
+--- end of page=1643 ---
+
 **Motion Blur**
 
  - **Motion Blur:** This toggles the rendering of Motion Blur on the tool. When this control is toggled
@@ -77636,6 +84210,10 @@ nodes, please consult the Fusion scripting documentation.
 
 Fusion Page Effects | Chapter 60 Transform Nodes **1645**
 
+
+
+
+--- end of page=1644 ---
 
 #### **Chapter 61**
 ### USD Nodes
@@ -77720,6 +84298,10 @@ are interchangeable with Loader nodes in Fusion Studio, unless otherwise noted.
 Fusion Page Effects | Chapter 61 USD Nodes **1646**
 
 
+
+
+--- end of page=1645 ---
+
 #### Universal Scene Descriptor (USD) Files
 
 The Universal Scene Descriptor USD framework is a set of open standards for describing, composing,
@@ -77760,6 +84342,10 @@ A very simple USD import node tree
 Fusion Page Effects | Chapter 61 USD Nodes **1647**
 
 
+
+
+--- end of page=1646 ---
+
 #### **USD Scene Tree Dialog for** **Object Selection in USD Files**
 
 The Scene Tree window is an intuitive visual hierarchy to represent USD scenes. It lets you choose
@@ -77785,6 +84371,10 @@ The USD Scene Tree dialog
 
 Fusion Page Effects | Chapter 61 USD Nodes **1648**
 
+
+
+
+--- end of page=1647 ---
 
 #### uCamera [uCa]
 
@@ -77828,6 +84418,10 @@ Ctrl-G (Windows) keyboard shortcut when the viewer is active.
 
 Fusion Page Effects | Chapter 61 USD Nodes **1649**
 
+
+
+
+--- end of page=1648 ---
 
 ###### **Inspector**
 
@@ -77878,6 +84472,10 @@ increasing the distance for the Near Clip plane.
 
 Fusion Page Effects | Chapter 61 USD Nodes **1650**
 
+
+
+
+--- end of page=1649 ---
 
 **Exposure**
 
@@ -77942,6 +84540,10 @@ If the camera is stereo, this defines the center of role for the two cameras, le
 Fusion Page Effects | Chapter 61 USD Nodes **1651**
 
 
+
+
+--- end of page=1650 ---
+
 ###### **Control Visibility**
 
 This section allows you to selectively activate the onscreen controls that are displayed along with
@@ -78000,6 +84602,10 @@ The mesh can be any 3D model, either generated in Fusion or imported.
 Fusion Page Effects | Chapter 61 USD Nodes **1652**
 
 
+
+
+--- end of page=1651 ---
+
 ###### **Basic Node Setup**
 
 The output of a uDuplicate node typically connects to a uMerge node, integrating it into a larger
@@ -78041,6 +84647,10 @@ the copies.
 
 Fusion Page Effects | Chapter 61 USD Nodes **1653**
 
+
+
+
+--- end of page=1652 ---
 
 **Time Offset**
 
@@ -78089,6 +84699,10 @@ The pivot controls determine the position of the pivot point used when rotating 
 
 Fusion Page Effects | Chapter 61 USD Nodes **1654**
 
+
+
+
+--- end of page=1653 ---
 
 **Scale**
 
@@ -78143,6 +84757,10 @@ duplicated objects.
 
 Fusion Page Effects | Chapter 61 USD Nodes **1655**
 
+
+
+
+--- end of page=1654 ---
 
 **Rotation Jitter**
 
@@ -78203,6 +84821,10 @@ the mesh object you want to use for the Region.
 Fusion Page Effects | Chapter 61 USD Nodes **1656**
 
 
+
+
+--- end of page=1655 ---
+
 #### uExport [uEx]
 
 The uExport node
@@ -78257,6 +84879,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 61 USD Nodes **1657**
 
 
+
+
+--- end of page=1656 ---
+
 #### uImage Plane [uIm]
 
 The USD Image Plane node
@@ -78292,6 +84918,10 @@ of the Inspector allow minor adjustments.
 
 Fusion Page Effects | Chapter 61 USD Nodes **1658**
 
+
+
+
+--- end of page=1657 ---
 
 **Filename**
 
@@ -78341,6 +84971,10 @@ merges it with a USD Camera for view control.
 
 Fusion Page Effects | Chapter 61 USD Nodes **1659**
 
+
+
+
+--- end of page=1658 ---
 
 ###### **Inspector**
 
@@ -78403,6 +85037,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 61 USD Nodes **1660**
 
 
+
+
+--- end of page=1659 ---
+
 #### uMaterialX [uMX]
 
 The uMaterialX node
@@ -78433,6 +85071,10 @@ The uMaterialX controls
 
 Fusion Page Effects | Chapter 61 USD Nodes **1661**
 
+
+
+
+--- end of page=1660 ---
 
 Controls
 
@@ -78478,6 +85120,10 @@ available for connection.
 Fusion Page Effects | Chapter 61 USD Nodes **1662**
 
 
+
+
+--- end of page=1661 ---
+
 ###### **Basic Node Setup**
 
 The uMerge node combines the 3D USD scene from the uLoader, two light sources, and the
@@ -78517,6 +85163,10 @@ convert to 2D.
 Fusion Page Effects | Chapter 61 USD Nodes **1663**
 
 
+
+
+--- end of page=1662 ---
+
 ###### **Basic Node Setup**
 
 All USD scenes must end with a uRenderer node. The uRenderer node is used to convert a 3D scene
@@ -78544,6 +85194,10 @@ is used instead.
 
 Fusion Page Effects | Chapter 61 USD Nodes **1664**
 
+
+
+
+--- end of page=1663 ---
 
 **Renderer Type**
 
@@ -78615,6 +85269,10 @@ This defines the amount of iterations of the rendering algorithm that will be pr
 Fusion Page Effects | Chapter 61 USD Nodes **1665**
 
 
+
+
+--- end of page=1664 ---
+
 USD Renderer Image controls
 
 
@@ -78655,6 +85313,10 @@ Allows you to render the output to Linear or sRGB color spaces.
 
 Fusion Page Effects | Chapter 61 USD Nodes **1666**
 
+
+
+
+--- end of page=1665 ---
 
 **Source Color Space**
 
@@ -78715,6 +85377,10 @@ scene, or limited to specific objects by using the Prim Selection controls.
 Fusion Page Effects | Chapter 61 USD Nodes **1667**
 
 
+
+
+--- end of page=1666 ---
+
 ###### **Inputs**
 
 There are two inputs to the uReplaceMaterial node.
@@ -78755,6 +85421,10 @@ The uReplaceMaterial controls
 
 Fusion Page Effects | Chapter 61 USD Nodes **1668**
 
+
+
+
+--- end of page=1667 ---
 
 Controls
 
@@ -78828,6 +85498,10 @@ the shape.
 Fusion Page Effects | Chapter 61 USD Nodes **1669**
 
 
+
+
+--- end of page=1668 ---
+
 Common Controls
 
 
@@ -78869,6 +85543,10 @@ merged with a uCamera node to adjust the view.
 
 Fusion Page Effects | Chapter 61 USD Nodes **1670**
 
+
+
+
+--- end of page=1669 ---
 
 ###### **Inspector**
 
@@ -78933,6 +85611,10 @@ the subdivision, the more vertices and polygons in each shape.
 Fusion Page Effects | Chapter 61 USD Nodes **1671**
 
 
+
+
+--- end of page=1670 ---
+
 **Subdivision Scheme**
 
 The Subdivision Scheme defines which algorithm is used to tessellate the polygons in the shapes.
@@ -78989,6 +85671,10 @@ It can be adjusted to different levels of intensity and can be used to simulate 
 
 Fusion Page Effects | Chapter 61 USD Nodes **1672**
 
+
+
+
+--- end of page=1671 ---
 
 **Workflow Mode**
 
@@ -79052,6 +85738,10 @@ Config tab allow users to add or remove inputs and change their names.
 Fusion Page Effects | Chapter 61 USD Nodes **1673**
 
 
+
+
+--- end of page=1672 ---
+
 ###### **Inputs**
 
 You can add up to nine inputs to a uSwitch node, using the slider in the Config tools. If you need more
@@ -79080,6 +85770,10 @@ the switch.
 
 Fusion Page Effects | Chapter 61 USD Nodes **1674**
 
+
+
+
+--- end of page=1673 ---
 
 The uSwitch configuration
 
@@ -79123,6 +85817,10 @@ set of transformation controls.
 Fusion Page Effects | Chapter 61 USD Nodes **1675**
 
 
+
+
+--- end of page=1674 ---
+
 ###### **Basic Node Setup**
 
 The uTransform node adds 3D position, rotation, and pivot control onto any existing transforms in
@@ -79155,6 +85853,10 @@ Transform controls are used to position the USD shape in 3D space.
 
 Fusion Page Effects | Chapter 61 USD Nodes **1676**
 
+
+
+
+--- end of page=1675 ---
 
 **Rotation Order**
 
@@ -79214,6 +85916,10 @@ The uVariant node has a single required input for a USD scene or USD object.
 Fusion Page Effects | Chapter 61 USD Nodes **1677**
 
 
+
+
+--- end of page=1676 ---
+
 ###### **Basic Node Setup**
 
 The uVariant node lets you choose between any of the set variants created inside a USD scene. It
@@ -79254,6 +85960,10 @@ using keyframes.
 Fusion Page Effects | Chapter 61 USD Nodes **1678**
 
 
+
+
+--- end of page=1677 ---
+
 **Variant Set**
 
 This drop-down menu will show which of the scene elements have variants to choose from. If no
@@ -79293,6 +86003,10 @@ The uVisibility node
 Fusion Page Effects | Chapter 61 USD Nodes **1679**
 
 
+
+
+--- end of page=1678 ---
+
 Using the uVisibility tool, you can show or hide individual 3D assets. In the above, the cityscape
 model (left) has been marked visible, and below it is hidden with the visible box unchecked.
 
@@ -79319,6 +86033,10 @@ Shows a list of the prims that have been picked.
 
 Fusion Page Effects | Chapter 61 USD Nodes **1680**
 
+
+
+
+--- end of page=1679 ---
 
 **Invert Prim Selection**
 
@@ -79358,6 +86076,10 @@ The uVolume controls for manipulating VDB files
 Fusion Page Effects | Chapter 61 USD Nodes **1681**
 
 
+
+
+--- end of page=1680 ---
+
 You can adjust the density with the Scale control, allowing for precise and fine-tuned adjustments.
 
 The Emission section provides color controls for the VDB. Using the Mode selection pulldown will give
@@ -79381,6 +86103,10 @@ USD suite.
 
 Fusion Page Effects | Chapter 61 USD Nodes **1682**
 
+
+
+
+--- end of page=1681 ---
 
 #### **USD Lights**
 
@@ -79416,6 +86142,10 @@ and scale of the light source is controlled in the Transform tab.
 
 Fusion Page Effects | Chapter 61 USD Nodes **1683**
 
+
+
+
+--- end of page=1682 ---
 
 **Override Selection**
 
@@ -79486,6 +86216,10 @@ controlled in the Transform tab.
 Fusion Page Effects | Chapter 61 USD Nodes **1684**
 
 
+
+
+--- end of page=1683 ---
+
 ###### **Inputs**
 
 There is one Scene Input in yellow to attach a USD scene; this allows you to adjust any existing lights
@@ -79542,6 +86276,10 @@ Controls the amount the light will contribute to the Specular color of a materia
 Fusion Page Effects | Chapter 61 USD Nodes **1685**
 
 
+
+
+--- end of page=1684 ---
+
 **Normalize**
 
 This will normalize the light’s contribution in the scene.
@@ -79584,6 +86322,10 @@ The USD Distant Light controls
 
 Fusion Page Effects | Chapter 61 USD Nodes **1686**
 
+
+
+
+--- end of page=1685 ---
 
 Controls Tab
 
@@ -79650,6 +86392,10 @@ control is used to determine from where in the scene the light direction is poin
 Fusion Page Effects | Chapter 61 USD Nodes **1687**
 
 
+
+
+--- end of page=1686 ---
+
 ###### **Inputs**
 
 **Scene Input:** attaches a USD scene; this allows you to adjust any existing lights within the scene.
@@ -79692,6 +86438,10 @@ Use this standard Color control to set the color of the light.
 
 Fusion Page Effects | Chapter 61 USD Nodes **1688**
 
+
+
+
+--- end of page=1687 ---
 
 **Intensity**
 
@@ -79758,6 +86508,10 @@ within the scene.
 Fusion Page Effects | Chapter 61 USD Nodes **1689**
 
 
+
+
+--- end of page=1688 ---
+
 ###### **Inspector**
 
 Controls Tab
@@ -79816,6 +86570,10 @@ This will normalize the light’s contribution in the scene.
 Fusion Page Effects | Chapter 61 USD Nodes **1690**
 
 
+
+
+--- end of page=1689 ---
+
 **Shaping Focus**
 
 This defines focus point of the lens effect in this light.
@@ -79858,6 +86616,10 @@ The USD Sphere Light controls
 
 Fusion Page Effects | Chapter 61 USD Nodes **1691**
 
+
+
+
+--- end of page=1690 ---
 
 Controls Tab
 
@@ -79919,6 +86681,10 @@ This sets the size of the sphere light.
 Fusion Page Effects | Chapter 61 USD Nodes **1692**
 
 
+
+
+--- end of page=1691 ---
+
 #### **USD Material**
 
 The uTexture, uTextureTransform, uNormalMap, and uShader nodes give you the ability to import and
@@ -79950,6 +86716,10 @@ passed on to the uShader.
 
 Fusion Page Effects | Chapter 61 USD Nodes **1693**
 
+
+
+
+--- end of page=1692 ---
 
 ###### **Usage**
 
@@ -79984,6 +86754,10 @@ drop list, showing all possible inputs to connect to.
 
 Fusion Page Effects | Chapter 61 USD Nodes **1694**
 
+
+
+
+--- end of page=1693 ---
 
 ###### **Basic Node Setup**
 
@@ -80021,6 +86795,10 @@ can be adjusted to different levels of intensity and can be used to simulate the
 
 Fusion Page Effects | Chapter 61 USD Nodes **1695**
 
+
+
+
+--- end of page=1694 ---
 
 **Workflow Mode**
 
@@ -80074,6 +86852,10 @@ material and look development content that is platform independent. MaterialX is
 Fusion Page Effects | Chapter 61 USD Nodes **1696**
 
 
+
+
+--- end of page=1695 ---
+
 #### uTexture [uTx]
 
 ###### **Introduction**
@@ -80115,6 +86897,10 @@ control in the Inspector to load an image which has already been imported into D
 Fusion Page Effects | Chapter 61 USD Nodes **1697**
 
 
+
+
+--- end of page=1696 ---
+
 Use the “Source Color Space” control to choose how the image will be read by the uTexture tool. It’s
 important select Linear when loading a Normals image to get the best results.
 
@@ -80149,6 +86935,10 @@ rotate the texture file to any angle you desire.
 
 Fusion Page Effects | Chapter 61 USD Nodes **1698**
 
+
+
+
+--- end of page=1697 ---
 
 #### **The Common Controls**
 
@@ -80226,6 +87016,10 @@ nodes, please consult the Fusion scripting documentation.
 Fusion Page Effects | Chapter 61 USD Nodes **1699**
 
 
+
+
+--- end of page=1698 ---
+
 #### **Chapter 62**
 ### VR Nodes
 
@@ -80263,6 +87057,10 @@ interchangeable with Loader nodes in Fusion Studio, unless otherwise noted.
 Fusion Page Effects | Chapter 62 VR Nodes **1700**
 
 
+
+
+--- end of page=1699 ---
+
 #### **VR Nodes**
 
 You can create and fix spherical (360°) video, often described as Virtual Reality, or VR, using Fusion’s
@@ -80282,6 +87080,10 @@ A VR Sphere displayed in the Node Editor and Fusion’s 3D viewer
 
 Fusion Page Effects | Chapter 62 VR Nodes **1701**
 
+
+
+
+--- end of page=1700 ---
 
 Fusion supports several common spherical image formats and can easily convert
 between them.
@@ -80325,6 +87127,10 @@ into the scene.
 Fusion Page Effects | Chapter 62 VR Nodes **1702**
 
 
+
+
+--- end of page=1701 ---
+
 ###### **Inputs**
 
 The Immersive Patcher node includes two inputs in the Node Editor.
@@ -80366,6 +87172,10 @@ The Immersive Patcher Controls
 
 Fusion Page Effects | Chapter 62 VR Nodes **1703**
 
+
+
+
+--- end of page=1702 ---
 
  - **Mode:** Two options let you choose to either Distort (convert the image from 2D to Immersive
 Video) or Undistort (convert Immersive Video into a 2D image) the input.
@@ -80415,6 +87225,10 @@ it over the top of the original source.
 Fusion Page Effects | Chapter 62 VR Nodes **1704**
 
 
+
+
+--- end of page=1703 ---
+
 Two Lat Long Patchers used to repair a section
 
 ###### **Inspector**
@@ -80457,6 +87271,10 @@ control over pitch/tilt, pan/yaw, and roll, respectively.
 
 Fusion Page Effects | Chapter 62 VR Nodes **1705**
 
+
+
+
+--- end of page=1704 ---
 
 Common Controls
 
@@ -80503,6 +87321,10 @@ A PanoMap used to convert from one VR format to another
 
 Fusion Page Effects | Chapter 62 VR Nodes **1706**
 
+
+
+
+--- end of page=1705 ---
 
 ###### **Inspector**
 
@@ -80560,6 +87382,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 62 VR Nodes **1707**
 
 
+
+
+--- end of page=1706 ---
+
 #### Spherical Camera [3SC]
 
 The Spherical Camera node
@@ -80597,6 +87423,10 @@ smooth out or stabilize the rotation of the footage.
 Fusion Page Effects | Chapter 62 VR Nodes **1708**
 
 
+
+
+--- end of page=1707 ---
+
 ###### **Inputs**
 
 The Spherical Stabilizer node has a single orange input.
@@ -80633,6 +87463,10 @@ consistent markers from the surrounding environment.
 
 Fusion Page Effects | Chapter 62 VR Nodes **1709**
 
+
+
+
+--- end of page=1708 ---
 
 **Track Controls**
 
@@ -80691,6 +87525,10 @@ described in detail in the following “The Common Controls” section.
 Fusion Page Effects | Chapter 62 VR Nodes **1710**
 
 
+
+
+--- end of page=1709 ---
+
 #### **The Common Controls**
 
 Nodes that handle VR operations share a number of identical controls in the Inspector. This section
@@ -80724,6 +87562,10 @@ falls back to software rendering when a capable GPU is not available.
 Fusion Page Effects | Chapter 62 VR Nodes **1711**
 
 
+
+
+--- end of page=1710 ---
+
 **Hide Incoming Connections**
 
 Enabling this checkbox can hide connection lines from incoming nodes, making a node tree appear
@@ -80750,6 +87592,10 @@ nodes, please consult the Fusion scripting documentation.
 
 Fusion Page Effects | Chapter 62 VR Nodes **1712**
 
+
+
+
+--- end of page=1711 ---
 
 #### **Chapter 63**
 ### Warp Nodes
@@ -80792,6 +87638,10 @@ interchangeable with Loader nodes in Fusion Studio, unless otherwise noted.
 Fusion Page Effects | Chapter 63 Warp Nodes **1713**
 
 
+
+
+--- end of page=1712 ---
+
 #### Coordinate Space [CdS]
 
 The Coordinate Space node
@@ -80824,6 +87674,10 @@ The Coordinate Space node can help create motion graphics backgrounds
 
 Fusion Page Effects | Chapter 63 Warp Nodes **1714**
 
+
+
+
+--- end of page=1713 ---
 
 Example
 
@@ -80868,6 +87722,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 63 Warp Nodes **1715**
 
 
+
+
+--- end of page=1714 ---
+
 #### Corner Positioner [CPn]
 
 The Corner Positioner node
@@ -80904,6 +87762,10 @@ Planar Transform to match move it to the background.
 
 Fusion Page Effects | Chapter 63 Warp Nodes **1716**
 
+
+
+
+--- end of page=1715 ---
 
 ###### **Inspector**
 
@@ -80948,6 +87810,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 
 Fusion Page Effects | Chapter 63 Warp Nodes **1717**
 
+
+
+
+--- end of page=1716 ---
 
 #### Dent [Dnt]
 
@@ -80994,6 +87860,10 @@ The adjustments in the Controls tab are used to change the Dent style, position,
 
 Fusion Page Effects | Chapter 63 Warp Nodes **1718**
 
+
+
+
+--- end of page=1717 ---
 
 **Type**
 
@@ -81058,6 +87928,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 63 Warp Nodes **1719**
 
 
+
+
+--- end of page=1718 ---
+
 #### Displace [Dsp]
 
 The Displace node
@@ -81094,6 +87968,10 @@ The Displace node using a Fast Noise node for the Displace map
 
 Fusion Page Effects | Chapter 63 Warp Nodes **1720**
 
+
+
+
+--- end of page=1719 ---
 
 ###### **Inspector**
 
@@ -81153,6 +88031,10 @@ more pronounced.
 Fusion Page Effects | Chapter 63 Warp Nodes **1721**
 
 
+
+
+--- end of page=1720 ---
+
 **Light Angle**
 
 This sets the angle of the simulated light source.
@@ -81210,6 +88092,10 @@ pixels within the mask. An effects mask is applied to the tool after the tool is
 Fusion Page Effects | Chapter 63 Warp Nodes **1722**
 
 
+
+
+--- end of page=1721 ---
+
 ###### **Basic Node Setup**
 
 Below, the Drip node is used to make rippling water-style effects using a MediaIn node.
@@ -81262,6 +88148,10 @@ This creates vertical waves that move in one direction.
 
 Fusion Page Effects | Chapter 63 Warp Nodes **1723**
 
+
+
+
+--- end of page=1722 ---
 
 **Exponential**
 
@@ -81332,6 +88222,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 63 Warp Nodes **1724**
 
 
+
+
+--- end of page=1723 ---
+
 #### Grid Warp [Grd]
 
 The Grid Warp node
@@ -81365,6 +88259,10 @@ for reframing or adding animation to a still.
 
 Fusion Page Effects | Chapter 63 Warp Nodes **1725**
 
+
+
+
+--- end of page=1724 ---
 
 ###### **Inspector**
 
@@ -81417,6 +88315,10 @@ exposes Magnet Distance and Magnet Strength controls to determine the size and f
 
 Fusion Page Effects | Chapter 63 Warp Nodes **1726**
 
+
+
+
+--- end of page=1725 ---
 
 **Magnet Distance**
 
@@ -81496,6 +88398,10 @@ and the control vertices of the grid can be manipulated directly.
 Fusion Page Effects | Chapter 63 Warp Nodes **1727**
 
 
+
+
+--- end of page=1726 ---
+
 **Edit Rectangle**
 
 When the grid is in Edit Rectangle mode, the onscreen controls display a rectangle that determines the
@@ -81569,6 +88475,10 @@ other polylines.
 Fusion Page Effects | Chapter 63 Warp Nodes **1728**
 
 
+
+
+--- end of page=1727 ---
+
 The Grid Warp Render tab
 
 
@@ -81623,6 +88533,10 @@ are set to black or if they are preserved.
 Fusion Page Effects | Chapter 63 Warp Nodes **1729**
 
 
+
+
+--- end of page=1728 ---
+
 **Object ID and Material ID**
 
 Enable the Object ID or Material ID checkboxes to have the grid output the proper ID channel in the
@@ -81663,6 +88577,10 @@ Use Smooth and Linear options to apply or remove smoothing from selected vertice
 
 Fusion Page Effects | Chapter 63 Warp Nodes **1730**
 
+
+
+
+--- end of page=1729 ---
 
 **Auto Smooth Points**
 
@@ -81725,6 +88643,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 63 Warp Nodes **1731**
 
 
+
+
+--- end of page=1730 ---
+
 #### Lens Distort [Lens]
 
 The Lens Distort node
@@ -81762,6 +88684,10 @@ Lens Distort applied on the live-action media at the beginning of the node tree,
 
 Fusion Page Effects | Chapter 63 Warp Nodes **1732**
 
+
+
+
+--- end of page=1731 ---
 
 ###### **Inspector**
 
@@ -81812,6 +88738,10 @@ connected to an already existing Camera 3D.
 
 Fusion Page Effects | Chapter 63 Warp Nodes **1733**
 
+
+
+
+--- end of page=1732 ---
 
 **Lens Distortion Model**
 
@@ -81865,6 +88795,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 63 Warp Nodes **1734**
 
 
+
+
+--- end of page=1733 ---
+
 #### Perspective Positioner [PPn]
 
 The Perspective Positioner node
@@ -81900,6 +88834,10 @@ The Perspective Positioner unpins an image to paint on a texture map.
 
 Fusion Page Effects | Chapter 63 Warp Nodes **1735**
 
+
+
+
+--- end of page=1734 ---
 
 ###### **Inspector**
 
@@ -81950,6 +88888,10 @@ on the vector channel data in the source image or vector channels from a second 
 Fusion Page Effects | Chapter 63 Warp Nodes **1736**
 
 
+
+
+--- end of page=1735 ---
+
 ###### **Inputs**
 
 There are three inputs on the Vector Distort node for the primary 2D image, the distort image with
@@ -81984,6 +88926,10 @@ The Vector Distortion Controls tab
 
 Fusion Page Effects | Chapter 63 Warp Nodes **1737**
 
+
+
+
+--- end of page=1736 ---
 
 Controls Tab
 
@@ -82050,6 +88996,10 @@ described in detail at the end of this chapter in “The Common Controls” sect
 Fusion Page Effects | Chapter 63 Warp Nodes **1738**
 
 
+
+
+--- end of page=1737 ---
+
 #### Vortex [Vtx]
 
 The Vortex node
@@ -82082,6 +89032,10 @@ The Vortex is used to create swirling whirlpool effects.
 
 Fusion Page Effects | Chapter 63 Warp Nodes **1739**
 
+
+
+
+--- end of page=1738 ---
 
 ###### **Inspector**
 
@@ -82132,6 +89086,10 @@ described in detail in the following “The Common Controls” section.
 Fusion Page Effects | Chapter 63 Warp Nodes **1740**
 
 
+
+
+--- end of page=1739 ---
+
 #### **The Common Controls**
 
 Nodes that handle Warp operations share a number of identical controls in the Inspector. This section
@@ -82159,6 +89117,10 @@ Normally, this will cause the tool to skip processing entirely, copying the inpu
 
 Fusion Page Effects | Chapter 63 Warp Nodes **1741**
 
+
+
+
+--- end of page=1740 ---
 
 **Process When Blend Is 0.0**
 
@@ -82217,6 +89179,10 @@ _[Reference Manual](https://www.blackmagicdesign.com/support/family/davinci-reso
 
 Fusion Page Effects | Chapter 63 Warp Nodes **1742**
 
+
+
+
+--- end of page=1741 ---
 
 **Object ID/Material ID (Sliders)**
 
@@ -82281,6 +89247,10 @@ nodes, please consult the Fusion scripting documentation.
 Fusion Page Effects | Chapter 63 Warp Nodes **1743**
 
 
+
+
+--- end of page=1742 ---
+
 #### **Chapter 64**
 ### Modifiers
 
@@ -82344,6 +89314,10 @@ This chapter details the modifiers available in Fusion.
 Fusion Page Effects | Chapter 64 Modifiers **1744**
 
 
+
+
+--- end of page=1743 ---
+
 #### **Modifiers**
 
 Modifiers are extensions to a node’s standard set of parameters found in the Inspector; in fact,
@@ -82364,6 +89338,10 @@ Modifiers right-click menu
 
 Fusion Page Effects | Chapter 64 Modifiers **1745**
 
+
+
+
+--- end of page=1744 ---
 
 #### **Anim Curves**
 
@@ -82416,6 +89394,10 @@ to the end.
 
 Fusion Page Effects | Chapter 64 Modifiers **1746**
 
+
+
+
+--- end of page=1745 ---
 
  - **Mirror:** Plays the animation forward, and after reaching the end, it returns to the starting value.
 This causes the initial animation to be twice as fast, since the second half of the comp is used for
@@ -82493,6 +89475,10 @@ update appropriately.
 Fusion Page Effects | Chapter 64 Modifiers **1747**
 
 
+
+
+--- end of page=1746 ---
+
 Using the Anim Curves Modifier with Paths
 
 To understand how to use the Anim Curves modifier’s with a Path modifier, let’s use the premise that
@@ -82545,6 +89531,10 @@ current location and displays a Bézier Spline in the Spline Editor.
 Fusion Page Effects | Chapter 64 Modifiers **1748**
 
 
+
+
+--- end of page=1747 ---
+
 Bézier Spline Editor
 
 
@@ -82576,6 +89566,10 @@ Spline Ease In/Out modifier
 
 Fusion Page Effects | Chapter 64 Modifiers **1749**
 
+
+
+
+--- end of page=1748 ---
 
 #### **B-Spline**
 
@@ -82618,6 +89612,10 @@ provided in the Calculation modifier than it is to do so with an Expression.
 
 Fusion Page Effects | Chapter 64 Modifiers **1750**
 
+
+
+
+--- end of page=1749 ---
 
 ###### **Inspector**
 
@@ -82698,6 +89696,10 @@ half for the purposes of the calculation).
 Fusion Page Effects | Chapter 64 Modifiers **1751**
 
 
+
+
+--- end of page=1750 ---
+
 **First Operand and Second Operand Time Offset**
 
 These sliders return the value of the operand at the Time Offset specified. A value of 10 would return
@@ -82772,6 +89774,10 @@ the value of the Blur Size relates to the value of the Text Size.
 Fusion Page Effects | Chapter 64 Modifiers **1752**
 
 
+
+
+--- end of page=1751 ---
+
 #### **CoordTransform Position**
 
 Because of the hierarchical nature of 3D in Fusion, the original position of an object in a 3D scene
@@ -82820,6 +89826,10 @@ control, or right-click the control and select an object from the Connect To pop
 Fusion Page Effects | Chapter 64 Modifiers **1753**
 
 
+
+
+--- end of page=1752 ---
+
 #### **Cubic Spline**
 
 The Cubic Spline is another animation modifier in Fusion that is normally applied to numerical values
@@ -82848,6 +89858,10 @@ Selecting the Custom Poly modifier
 
 Fusion Page Effects | Chapter 64 Modifiers **1754**
 
+
+
+
+--- end of page=1753 ---
 
 ###### **Inspector**
 
@@ -82891,6 +89905,10 @@ A value of zero uses the number of original source points.
 
 Fusion Page Effects | Chapter 64 Modifiers **1755**
 
+
+
+
+--- end of page=1754 ---
 
 **Poly Expression X/Y**
 
@@ -82944,6 +89962,10 @@ The Inspector’s Modifiers tab contains the controls for the Expression modifie
 Fusion Page Effects | Chapter 64 Modifiers **1756**
 
 
+
+
+--- end of page=1755 ---
+
 ###### **Inspector**
 
 Expressions modifier controls
@@ -82980,6 +90002,10 @@ used to calculate the Y-axis control. See below for the syntax to use in this fi
 Fusion Page Effects | Chapter 64 Modifiers **1757**
 
 
+
+
+--- end of page=1756 ---
+
 The Point Out tab
 
 
@@ -83010,6 +90036,10 @@ inputs. Enable this checkbox to display the control for Number x or Point x in t
 
 Fusion Page Effects | Chapter 64 Modifiers **1758**
 
+
+
+
+--- end of page=1757 ---
 
 **Name for Number or Point X**
 
@@ -83055,6 +90085,10 @@ made up of the following functions:
 Fusion Page Effects | Chapter 64 Modifiers **1759**
 
 
+
+
+--- end of page=1758 ---
+
 |noise(x)|A smoothly varying Perlin noise value based on x|
 |---|---|
 |**noise2(x, y)**|A smoothly varying Perlin noise value based on x and y|
@@ -83094,6 +90128,10 @@ mathematical calculations in the Number Out and Point Out tabs.
 
 Fusion Page Effects | Chapter 64 Modifiers **1760**
 
+
+
+
+--- end of page=1759 ---
 
 **Example 1**
 
@@ -83150,6 +90188,10 @@ From Image modifier
 
 Fusion Page Effects | Chapter 64 Modifiers **1761**
 
+
+
+
+--- end of page=1760 ---
 
 Controls Tab
 
@@ -83216,6 +90258,10 @@ image bounds.
 Fusion Page Effects | Chapter 64 Modifiers **1762**
 
 
+
+
+--- end of page=1761 ---
+
 #### **Gradient Color**
 
 The Gradient Color modifier allows you to create a customized gradient and map it into a specific time
@@ -83259,6 +90305,10 @@ Defines how the left and right borders of the gradient are treated.
 Fusion Page Effects | Chapter 64 Modifiers **1763**
 
 
+
+
+--- end of page=1762 ---
+
 **Gradient Offset**
 
 Allows you to pan through the gradient.
@@ -83284,6 +90334,10 @@ _[Reference Manual](https://www.blackmagicdesign.com/support/family/davinci-reso
 
 Fusion Page Effects | Chapter 64 Modifiers **1764**
 
+
+
+
+--- end of page=1763 ---
 
 #### **MIDI Extractor**
 
@@ -83331,6 +90385,10 @@ control can be used to offset the MIDI data as required.
 
 Fusion Page Effects | Chapter 64 Modifiers **1765**
 
+
+
+
+--- end of page=1764 ---
 
 **Result Offset, Result Scale**
 
@@ -83409,6 +90467,10 @@ event stops. This stage is for Notes only. Beats have an instantaneous duration,
 Fusion Page Effects | Chapter 64 Modifiers **1766**
 
 
+
+
+--- end of page=1765 ---
+
 Release. Release is the ramp-down time after the event finishes. When trying to do a Beat, set Release
 to some value, or there likely will not be much of a beat.
 
@@ -83460,6 +90522,10 @@ breath controllers.
 Fusion Page Effects | Chapter 64 Modifiers **1767**
 
 
+
+
+--- end of page=1766 ---
+
 MIDI Events
 
 **Channel Aftertouch:** This event defines that pressure is being applied to the keys (or strings
@@ -83498,6 +90564,10 @@ Natural Cubic Spline Editor
 
 Fusion Page Effects | Chapter 64 Modifiers **1768**
 
+
+
+
+--- end of page=1767 ---
 
 #### Offset (Angle, Distance, Position)
 
@@ -83543,6 +90613,10 @@ The Offset Position modifier controls
 
 Fusion Page Effects | Chapter 64 Modifiers **1769**
 
+
+
+
+--- end of page=1768 ---
 
 Offset Tab
 
@@ -83611,6 +90685,10 @@ also be used to create the illusion of aspect.
 Fusion Page Effects | Chapter 64 Modifiers **1770**
 
 
+
+
+--- end of page=1769 ---
+
 Time Tab
 
 
@@ -83678,6 +90756,10 @@ other controls.
 Fusion Page Effects | Chapter 64 Modifiers **1771**
 
 
+
+
+--- end of page=1770 ---
+
   - In the Inspector, select the Modifiers tab.
 
   - In the Offset on Text size section, right-click over Position and choose Connect To >
@@ -83725,6 +90807,10 @@ The size of the path. Again, this allows for later modification of the animation
 
 Fusion Page Effects | Chapter 64 Modifiers **1772**
 
+
+
+
+--- end of page=1771 ---
 
 **X Y Z Rotation**
 
@@ -83793,6 +90879,10 @@ and forth without actually leaving the path.
 Fusion Page Effects | Chapter 64 Modifiers **1773**
 
 
+
+
+--- end of page=1772 ---
+
 **NOTE:** Perturb can only add jitter; it cannot smooth out existing animation curves.
 
 ###### **Inspector**
@@ -83820,6 +90910,10 @@ The Perturb modifier Gradient controls
 
 Fusion Page Effects | Chapter 64 Modifiers **1774**
 
+
+
+
+--- end of page=1773 ---
 
 **Jaggedness**
 
@@ -83875,6 +90969,10 @@ The Probe modifier Controls tab
 
 Fusion Page Effects | Chapter 64 Modifiers **1775**
 
+
+
+
+--- end of page=1774 ---
 
 Controls Tab
 
@@ -83948,6 +91046,10 @@ Options include:
 Fusion Page Effects | Chapter 64 Modifiers **1776**
 
 
+
+
+--- end of page=1775 ---
+
 The Probe modifier Value tab
 
 
@@ -83983,6 +91085,10 @@ outside the frame boundaries of the image to be probed.
 
 Fusion Page Effects | Chapter 64 Modifiers **1777**
 
+
+
+
+--- end of page=1776 ---
 
 #### **Publish**
 
@@ -84033,6 +91139,10 @@ the Output, Background and Foreground check boxes.
 
 Fusion Page Effects | Chapter 64 Modifiers **1778**
 
+
+
+
+--- end of page=1777 ---
 
 **7** Save the macro in the following folder so it appears the Edit page or Cut page Effects Library:
 
@@ -84086,6 +91196,10 @@ This checkbox is used to unlock the X- and Y-axis, revealing independent slider 
 
 Fusion Page Effects | Chapter 64 Modifiers **1779**
 
+
+
+
+--- end of page=1778 ---
 
 **Minimum and Maximum**
 
@@ -84147,6 +91261,10 @@ Tracker node itself.
 Fusion Page Effects | Chapter 64 Modifiers **1780**
 
 
+
+
+--- end of page=1779 ---
+
 ###### **Inspector**
 
 The Tracker modifier
@@ -84198,6 +91316,10 @@ will be the Loader that feeds the glow.
 
 Fusion Page Effects | Chapter 64 Modifiers **1781**
 
+
+
+
+--- end of page=1780 ---
 
 #### **Vector Result**
 
@@ -84260,6 +91382,10 @@ control represents the Distance and Angle controls displayed in the Modifiers ta
 Fusion Page Effects | Chapter 64 Modifiers **1782**
 
 
+
+
+--- end of page=1781 ---
+
   - In the Modifiers tab of the Inspector, drag the Distance control to distance the text from the
 Vector origin.
 
@@ -84310,6 +91436,10 @@ work with motion along an individual axis.
 
 Fusion Page Effects | Chapter 64 Modifiers **1783**
 
+
+
+
+--- end of page=1782 ---
 
 ###### **Inspector**
 
@@ -84362,6 +91492,10 @@ contextual menu, an XY path is used instead of a Displacement path.
 Fusion Page Effects | Chapter 64 Modifiers **1784**
 
 
+
+
+--- end of page=1783 ---
+
 ## Menu Description
 
 CONTENTS
@@ -84369,6 +91503,10 @@ CONTENTS
 
 Fusion��������������������������������������������������� 1786
 
+
+
+
+--- end of page=1784 ---
 
 #### **Fusion 20.3**
 ### Menu Description
@@ -84413,9 +91551,21 @@ Renders OpenEXR files.
 Fusion 20.3 Menu Description **1786**
 
 
+
+
+--- end of page=1785 ---
+
 This page is intentionally left blank **1787**
 
 
+
+
+--- end of page=1786 ---
+
 ##### **blackmagicdesign.com**
 
+
+
+
+--- end of page=1787 ---
 
