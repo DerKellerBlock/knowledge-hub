@@ -1,0 +1,99 @@
+domain: godot
+version: 1
+description: "Golden Dataset for Godot domain quality evaluation"
+last_updated: 2026-06-29
+questions:
+  - id: godot-001
+    question: "How do I rotate a Node3D around the Y axis in GDScript?"
+    expected_source_files:
+      - "godot-docs-reference-packed.md"
+    expected_page_ranges: []
+    real_world_source_url: null
+    real_world_source_date: null
+    difficulty: easy
+    tags: [rotation, node3d, 3d, gdscript]
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+    notes: "From E2E regression test test_godot_node3d_search_finds_relevant_results."
+    min_top_k: 10
+  - id: godot-002
+    question: "How do I move a CharacterBody3D with gravity in Godot 4?"
+    expected_source_files:
+      - "godot-docs-reference-packed.md"
+    expected_page_ranges: []
+    real_world_source_url: null
+    real_world_source_date: null
+    difficulty: medium
+    tags: [characterbody3d, physics, movement, gravity]
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+    notes: "From Answer-Synthesis Spec Testfall 2."
+    min_top_k: 10
+  - id: godot-003
+    question: "What are the gotchas with CharacterBody3D and Jolt Physics in Godot 4.6?"
+    expected_source_files:
+      - "gotchas.md"
+      - "godot-docs-reference-packed.md"
+    expected_page_ranges: []
+    real_world_source_url: null
+    real_world_source_date: null
+    difficulty: medium
+    tags: [characterbody3d, jolt, physics, gotcha]
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+    notes: "From Answer-Synthesis Spec Testfall 6 (personal notes priority)."
+    min_top_k: 10
+  - id: godot-004
+    question: "How do I set up a 3D camera that follows a player in Godot?"
+    expected_source_files:
+      - "godot-docs-reference-packed.md"
+      - "godot-docs-3d-packed.md"
+    expected_page_ranges: []
+    real_world_source_url: null
+    real_world_source_date: null
+    difficulty: medium
+    tags: [camera, 3d, player, follow]
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+    notes: "Tests retrieval across reference and 3D tutorial docs."
+    min_top_k: 10
+  - id: godot-005
+    question: "How do I fix GLB model import scale issues from Meshy in Godot?"
+    expected_source_files:
+      - "gotchas.md"
+    expected_page_ranges: []
+    real_world_source_url: null
+    real_world_source_date: null
+    difficulty: medium
+    tags: [glb, import, scale, meshy, gotcha]
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+    notes: "From personal/gotchas.md (GLB-Import Scale mit Meshy entry). Tests personal knowledge retrieval."
+    min_top_k: 10
+  - id: godot-006
+    question: "How do I use signals to communicate between nodes in GDScript?"
+    expected_source_files:
+      - "godot-docs-reference-packed.md"
+    expected_page_ranges: []
+    real_world_source_url: null
+    real_world_source_date: null
+    difficulty: easy
+    tags: [signals, gdscript, communication, nodes]
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+    notes: "Common Godot beginner question. godot-docs-reference-packed.md covers signals."
+    min_top_k: 10
+  - id: godot-007
+    question: "How do I create a 3D character controller with movement, jumping, and gravity?"
+    expected_source_files:
+      - "godot-docs-reference-packed.md"
+      - "godot-demos-packed.md"
+    expected_page_ranges: []
+    real_world_source_url: null
+    real_world_source_date: null
+    difficulty: hard
+    tags: [character, controller, 3d, movement, jumping]
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+    notes: "Hard question: requires both API reference and demo project knowledge."
+    min_top_k: 10

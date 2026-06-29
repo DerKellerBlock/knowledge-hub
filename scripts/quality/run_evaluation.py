@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from datetime import date
 from pathlib import Path
@@ -46,13 +47,34 @@ GOLDEN_DIR = _REPO_ROOT / "quality" / "golden"
 # their chunks. Extend this set when a new PDF-based domain is added.
 PDF_DOMAINS = {"davinci_resolve"}
 
+# Path-traversal / injection protection: domain names must be simple
+# lowercase identifiers (letters, digits, underscore).
+DOMAIN_PATTERN = re.compile(r"^[a-z0-9_]+$")
+
+
+def _validate_domain(domain: str) -> None:
+    """Validate the domain name before any file/index operations.
+
+    Raises:
+        ValueError: if ``domain`` does not match ``^[a-z0-9_]+$``.
+    """
+    if not DOMAIN_PATTERN.match(domain):
+        raise ValueError(
+            f"Invalid domain name: '{domain}'. "
+            f"Must match: {DOMAIN_PATTERN.pattern}"
+        )
+
 
 def run_evaluation(domain: str) -> dict:
     """Run all Golden Dataset questions against the live index.
 
     Returns a dict with ``domain``, ``date``, ``evaluations`` (per-question
     metric dicts) and ``summary`` (aggregated counts/averages).
+
+    Raises:
+        ValueError: if ``domain`` does not match the safety pattern.
     """
+    _validate_domain(domain)
     path = GOLDEN_DIR / f"{domain}.yaml"
     dataset = load_golden_dataset(path)
     is_pdf = domain in PDF_DOMAINS
@@ -140,6 +162,14 @@ def main() -> None:
         "--baseline", type=str, help="Compare against baseline JSON file"
     )
     args = parser.parse_args()
+
+    # Domain name validation (path-traversal / injection protection).
+    # Run BEFORE any file or index access so we fail fast.
+    try:
+        _validate_domain(args.domain)
+    except ValueError as exc:
+        print(f"[ERROR] {exc}", file=sys.stderr)
+        sys.exit(1)
 
     print(f"[INFO]  Running evaluation for domain: {args.domain}")
     result = run_evaluation(args.domain)

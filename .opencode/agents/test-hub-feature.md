@@ -55,3 +55,13 @@ Human follow-up: <concrete recommendation>
 For PDF-derived domains, if an otherwise relevant result lacks page metadata, report `[fail: missing page metadata]` for that result.
 
 Do not write new tests, new source files, new personal notes, generated questions or golden datasets. If durable quality fixtures are needed, recommend a separate plan for the Knowledge Hub Quality Evaluation Platform.
+
+## Quality Evaluation Platform
+
+When the diff touches domain sources or the Quality Evaluation Platform, you may also run:
+
+- `python scripts/quality/validate_dataset.py --domain <domain>` — validate Golden Dataset structure
+- `python scripts/quality/run_evaluation.py --domain <domain>` — run evaluation against live index (read-only)
+- `python scripts/quality/generate_report.py --input <results.json>` — generate markdown/json report
+
+These are read-only. Do not write new Golden Dataset questions via `add_question.py` (that is a manual curation step). Report findings using the standard Knowledge-QA shape above.

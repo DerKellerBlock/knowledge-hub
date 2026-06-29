@@ -9,7 +9,7 @@
 
 ## Technische Schulden
 
-- **TD-002:** Dauerhaftes Golden Dataset für Knowledge-QA fehlt noch — geplant als separates Folgefeature nach der OpenCode-Standard-Migration.
+- **TD-002 (resolved 2026-06-29):** Quality Evaluation Platform Phase 1+2 implementiert — Golden Dataset für `godot` und `davinci_resolve`, Bewertungsrubrik, CLI-Skripte (`run_evaluation.py`, `add_question.py`, `validate_dataset.py`, `generate_report.py`), E2E Quality Tests. Siehe `docs/superpowers/specs/2026-06-29-knowledge-hub-quality-evaluation-platform-design.md`.
 
 ## Einschränkungen
 

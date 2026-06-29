@@ -1,0 +1,98 @@
+domain: davinci_resolve
+version: 1
+description: "Golden Dataset for DaVinci Resolve domain quality evaluation"
+last_updated: 2026-06-29
+questions:
+  - id: davinci_resolve-001
+    question: "How do I set up a Planar Tracker in DaVinci Resolve?"
+    expected_source_files:
+      - "davinci-resolve-20.3-reference-manual.md"
+      - "fusion-20.3-manual.md"
+    expected_page_ranges: []
+    real_world_source_url: null
+    real_world_source_date: null
+    difficulty: medium
+    tags: [planar-tracker, tracking, fusion]
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+    notes: "From Answer-Synthesis Spec Testfall 1."
+    min_top_k: 10
+  - id: davinci_resolve-002
+    question: "How do I trim a clip on the Edit page in DaVinci Resolve?"
+    expected_source_files:
+      - "davinci-resolve-20-editors-guide.md"
+    expected_page_ranges: []
+    real_world_source_url: null
+    real_world_source_date: null
+    difficulty: easy
+    tags: [trim, edit, clip, timeline]
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+    notes: "From E2E regression test test_davinci_trim_clip_search_finds_relevant_results."
+    min_top_k: 10
+  - id: davinci_resolve-003
+    question: "How do I use Primary Color Correction in DaVinci Resolve?"
+    expected_source_files:
+      - "davinci-resolve-20-colorist-guide.md"
+    expected_page_ranges: []
+    real_world_source_url: null
+    real_world_source_date: null
+    difficulty: medium
+    tags: [color, primary-correction, grading]
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+    notes: "From Answer-Synthesis Spec Testfall 5 (Quellenpriorisierung)."
+    min_top_k: 10
+  - id: davinci_resolve-004
+    question: "What is the difference between Point Tracker and Planar Tracker in DaVinci Resolve?"
+    expected_source_files:
+      - "davinci-resolve-20.3-reference-manual.md"
+      - "fusion-20.3-manual.md"
+    expected_page_ranges: []
+    real_world_source_url: null
+    real_world_source_date: null
+    difficulty: hard
+    tags: [point-tracker, planar-tracker, tracking, comparison]
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+    notes: "From Answer-Synthesis Spec Testfall 4 (Tracker-Verwechslung vermeiden)."
+    min_top_k: 10
+  - id: davinci_resolve-005
+    question: "How do I render and deliver a finished project in DaVinci Resolve?"
+    expected_source_files:
+      - "davinci-resolve-20.3-reference-manual.md"
+    expected_page_ranges: []
+    real_world_source_url: null
+    real_world_source_date: null
+    difficulty: easy
+    tags: [render, deliver, export]
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+    notes: "From E2E regression test test_davinci_render_deliver_search."
+    min_top_k: 10
+  - id: davinci_resolve-006
+    question: "How do I work with audio tracks and effects in Fairlight in DaVinci Resolve?"
+    expected_source_files:
+      - "davinci-resolve-20-fairlight-audio-post.md"
+    expected_page_ranges: []
+    real_world_source_url: null
+    real_world_source_date: null
+    difficulty: medium
+    tags: [fairlight, audio, tracks, effects]
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+    notes: "Tests fairlight audio post guide retrieval."
+    min_top_k: 10
+  - id: davinci_resolve-007
+    question: "What are the new features in DaVinci Resolve 21?"
+    expected_source_files:
+      - "davinci-resolve-21-new-features-guide.md"
+    expected_page_ranges: []
+    real_world_source_url: null
+    real_world_source_date: null
+    difficulty: easy
+    tags: [resolve-21, new-features]
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+    notes: "Tests that the new-features PDF is indexed and retrievable."
+    min_top_k: 10
