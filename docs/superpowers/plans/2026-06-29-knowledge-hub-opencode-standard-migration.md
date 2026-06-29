@@ -33,6 +33,18 @@
   - untracked `.coverage`
   - untracked `.coverage.MacBookProM1MaxNoah_fritz_box.pid70554.X9DAkEjx.HNQIp837rWOh`
 
+## Blindspot Review Updates
+
+- 2026-06-29 blindspot review returned `PLAN UPDATE REQUIRED`.
+- `.opencode/agents/` (plural) is intentionally used because OpenCode supports both `agent/` and `agents/` and Noah's current standard uses the plural form.
+- Generated YAML frontmatter must quote all keys and string values so entries like `*`, `/Users/noahk/**`, bash globs, and values containing colons remain valid YAML.
+- Add a prompt roundtrip check after extracting agents (see Task 3 Step 4) to confirm prompts are preserved verbatim.
+- OpenCode permission order is intentional: last-match-wins, broad `"*": "ask"` first, specific allows after, dangerous denies last. Do not move the `"*"` entry to the end of a permission block.
+- `workspace_check.sh` must inspect only the YAML frontmatter of agent files, not the prompt body prose, when checking task permission entries.
+- For domain/source changes, `test-hub-feature` must run at least one websearch-derived real-world problem question or report `[skip: websearch unavailable]`.
+- Preserve existing validation checks in `docs/ai/validation.md` and append the new validation sections; do not replace existing content.
+- Do not restart OpenCode before Task 7 completes, because Task 5 references `docs/ai/security.md` which is created later in Task 7 Step 2.
+
 ## Files
 
 - Create: `AGENTS.md`
@@ -220,6 +232,10 @@ Expected: exit code 0.
 - Create agent files listed in the Files section
 - Modify later: `.opencode/opencode.json`
 
+- [ ] **Step 0: Confirm `.opencode/agents/` (plural) directory naming**
+
+OpenCode supports both `.opencode/agent/` and `.opencode/agents/` directory names. Noah's current standard uses the plural form `.opencode/agents/`. Use `.opencode/agents/` for all generated agent files in this migration. Document this decision later in `docs/ai/changelog.md` (Task 7 Step 8).
+
 - [ ] **Step 1: Create `.opencode/agents` directory**
 
 Run:
@@ -242,8 +258,14 @@ from pathlib import Path
 cfg_path = Path('.opencode/opencode.json')
 agent_dir = Path('.opencode/agents')
 agent_dir.mkdir(parents=True, exist_ok=True)
-cfg = json.loads(cfg_path.read_text())
+cfg = json.loads(cfg_path.read_text(encoding='utf-8'))
 agents = cfg.get('agent', {})
+
+# Quote YAML keys and string values using json.dumps(..., ensure_ascii=False) so
+# entries like "*", "/Users/noahk/**", bash globs and values containing colons
+# remain valid YAML. Avoids emitting bare YAML keys such as `*` or `/Users/noahk/**`.
+def yaml_key(k):
+    return json.dumps(str(k), ensure_ascii=False)
 
 def yaml_scalar(value):
     if isinstance(value, bool):
@@ -251,9 +273,8 @@ def yaml_scalar(value):
     if isinstance(value, int):
         return str(value)
     if isinstance(value, str):
-        escaped = value.replace('"', '\"')
-        return f'"{escaped}"'
-    raise TypeError(type(value))
+        return json.dumps(value, ensure_ascii=False)
+    raise TypeError(f'unsupported scalar type: {type(value)}')
 
 def dump_yaml(obj, indent=0):
     lines = []
@@ -261,30 +282,31 @@ def dump_yaml(obj, indent=0):
     if isinstance(obj, dict):
         for key, value in obj.items():
             if isinstance(value, dict):
-                lines.append(f'{pad}{key}:')
+                lines.append(f'{pad}{yaml_key(key)}:')
                 lines.extend(dump_yaml(value, indent + 1))
             else:
-                lines.append(f'{pad}{key}: {yaml_scalar(value)}')
+                lines.append(f'{pad}{yaml_key(key)}: {yaml_scalar(value)}')
+    elif isinstance(obj, list):
+        for item in obj:
+            lines.append(f'{pad}- {yaml_scalar(item)}')
     else:
-        raise TypeError(type(obj))
+        raise TypeError(f'unsupported root type: {type(obj)}')
     return lines
 
 for name, data in agents.items():
-    prompt = data.get('prompt', '').rstrip() + '
-'
+    prompt = data.get('prompt', '').rstrip() + '\n'
     frontmatter = {k: v for k, v in data.items() if k != 'prompt'}
     content = ['---']
     content.extend(dump_yaml(frontmatter))
     content.append('---')
     content.append('')
     content.append(prompt)
-    (agent_dir / f'{name}.md').write_text('
-'.join(content), encoding='utf-8')
+    (agent_dir / f'{name}.md').write_text('\n'.join(content), encoding='utf-8')
     print(f'wrote .opencode/agents/{name}.md')
 PY
 ```
 
-Expected: one file per existing inline agent. This preserves current prompts before manual standardization.
+Expected: one file per existing inline agent. This preserves current prompts before manual standardization. All YAML keys and string values are quoted, so no bare keys like `*` or `/Users/noahk/**` are emitted.
 
 - [ ] **Step 3: Confirm generated files**
 
@@ -309,6 +331,47 @@ review-hub-diff.md
 review-hub-security.md
 update-hub-docs.md
 ```
+
+- [ ] **Step 4: Verify prompt roundtrip**
+
+Run this Python command from repo root. It compares each original inline JSON prompt to the body below the second `---` delimiter in the generated `.opencode/agents/<name>.md`:
+
+```bash
+python3 - <<'PY'
+import json
+from pathlib import Path
+
+cfg = json.loads(Path('.opencode/opencode.json').read_text(encoding='utf-8'))
+agents = cfg.get('agent', {})
+ok = True
+for name, data in agents.items():
+    original = data.get('prompt', '').rstrip() + '\n'
+    path = Path('.opencode/agents') / f'{name}.md'
+    text = path.read_text(encoding='utf-8')
+    parts = text.split('---')
+    if len(parts) < 3:
+        print(f'roundtrip FAIL {name}: missing frontmatter delimiters')
+        ok = False
+        continue
+    body = '---'.join(parts[2:])
+    # strip the single leading blank line added after frontmatter
+    if body.startswith('\n'):
+        body = body[1:]
+    if body != original:
+        print(f'roundtrip FAIL {name}: prompt body differs from original')
+        ok = False
+if ok:
+    print('prompt roundtrip ok')
+PY
+```
+
+Expected output:
+
+```text
+prompt roundtrip ok
+```
+
+If any `roundtrip FAIL` line is printed, stop and fix the conversion before proceeding to Task 4.
 
 ## Task 4: Add New Standard Agents
 
@@ -358,7 +421,7 @@ Knowledge-QA order for domain/source changes:
 
 1. Identify affected domains and changed sources.
 2. Generate source-grounded questions from the affected sources. For PDF-derived sources, prefer questions whose answer can be tied to `source_file` and `page_start`/`page_end` metadata.
-3. Use websearch to collect realistic user problems only when the change affects domain knowledge, retrieval quality, new sources or source parsing. Websearch is used to generate realistic questions and plausibility checks, not as an uncited replacement for the Hub sources.
+3. Websearch-derived real-world problem questions are mandatory for domain/source changes. Use websearch to collect realistic user problems whenever the change affects domain knowledge, retrieval quality, new sources or source parsing. Websearch is used to generate realistic questions and plausibility checks, not as an uncited replacement for the Hub sources. If websearch is unavailable, report `[skip: websearch unavailable]` and continue with the remaining checks.
 4. Query the Knowledge Hub through the available MCP tools or local search scripts.
 5. Evaluate whether top results are relevant, cite a source file, include PDF page metadata when available, and contain evidence text that a human can inspect.
 
@@ -368,12 +431,14 @@ Report Knowledge-QA findings in this exact shape:
 [pass|weak|fail] <short title>
 Domain: <domain>
 Question: <question>
-Real-world source: <URL or [not used]>
+Real-world source: <URL or [not used - structural diff]>
 Hub source: <source_file or [missing]>
 Pages: <page_start-page_end or [missing]>
 Evidence: <short excerpt or precise result description>
 Human follow-up: <concrete recommendation>
 ```
+
+`Real-world source: [not used - structural diff]` should only be used for purely structural or non-domain diffs. For domain/source changes, a real-world source URL (or `[skip: websearch unavailable]`) is expected.
 
 For PDF-derived domains, if an otherwise relevant result lacks page metadata, report `[fail: missing page metadata]` for that result.
 
@@ -533,6 +598,10 @@ Rewrite `.opencode/opencode.json` so it keeps project config and MCP config but 
 
 Note: if OpenCode schema validation shows that the existing MCP environment key shape must be preserved or changed, follow the schema and document the decision in `docs/ai/changelog.md`.
 
+**Permission order note:** The `permission.bash` block ordering is intentional. OpenCode uses last-match-wins semantics for permission rules: the broad `"*": "ask"` entry is listed first, specific allow entries (such as `git status*`, `python3 -m json.tool *`, `./scripts/workspace_check.sh*`) come after it, and dangerous deny entries (`rm *`, `rm -rf *`, `git push*`, `git reset --hard*`) are placed last so they always win. Do not move the `"*"` entry to the end of the block, or the specific allows would be shadowed and the dangerous denies would stop being the final match.
+
+**Restart warning:** Do not restart OpenCode after this task. Task 5's `instructions` list references `docs/ai/security.md`, which is not created until Task 7 Step 2. Restarting OpenCode now would load a config that points at a missing file. Wait until Task 7 completes before restarting OpenCode.
+
 - [ ] **Step 2: Validate JSON syntax**
 
 Run:
@@ -600,7 +669,7 @@ bash -n scripts/workspace_status.sh
 
 It must check that `.opencode/opencode.json` has no top-level `agent` key.
 
-It must check that every `permission.task` allow in `orchestrator-knowledge.md` references an existing `.opencode/agents/<name>.md` file or is a deliberate wildcard. If parsing cannot be done robustly, fail closed with a clear message.
+It must check that every `permission.task` allow in `orchestrator-knowledge.md` references an existing `.opencode/agents/<name>.md` file or is a deliberate wildcard. The parser must inspect only the YAML frontmatter (between the first two `---` delimiters) of `orchestrator-knowledge.md`, not the prompt body prose, to avoid false matches in prose. If parsing cannot be done robustly, fail closed with a clear message.
 
 - [ ] **Step 3: Make scripts executable**
 
@@ -656,6 +725,8 @@ Write `docs/ai/fixes.md` using the exact content in **Appendix D: docs/ai/fixes.
 
 Update `docs/ai/README.md` so its file list includes these exact entries: `fixes.md` — completed fixes for future agents; `security.md` — security review baseline; `changelog.md` — AI-visible project changes; `handoffs/` — handoff notes for future sessions.
 
+Preserve existing `docs/ai/README.md` entries and append the new entries; do not remove or rewrite existing file-list rows.
+
 - [ ] **Step 5: Update `docs/ai/project-context.md`**
 
 Add the exact project-context section from **Appendix E: Project Context Update**.
@@ -663,6 +734,8 @@ Add the exact project-context section from **Appendix E: Project Context Update*
 - [ ] **Step 6: Update `docs/ai/validation.md`**
 
 Add the exact validation sections from **Appendix F: Validation Update**.
+
+Preserve existing `docs/ai/validation.md` content, including any existing MCP quick-test, domain status, and GitHub Action checks. Append the new validation sections rather than replacing existing ones.
 
 - [ ] **Step 7: Update `docs/ai/known-issues.md`**
 
@@ -1030,7 +1103,18 @@ import re
 
 agent_dir = Path('.opencode/agents')
 orch = agent_dir / 'orchestrator-knowledge.md'
-text = orch.read_text(encoding='utf-8') if orch.exists() else ''
+raw = orch.read_text(encoding='utf-8') if orch.exists() else ''
+
+# Parse only the YAML frontmatter (between the first two '---' delimiters).
+# Do not search the prompt body prose for task permission entries.
+frontmatter = ''
+if raw.startswith('---'):
+    parts = raw.split('---', 2)
+    if len(parts) >= 3:
+        frontmatter = parts[1]
+    else:
+        raise SystemExit('orchestrator-knowledge.md: frontmatter delimiters missing')
+
 required = [
     'read-hub-docs',
     'inspect-hub-project',
@@ -1047,8 +1131,11 @@ required = [
     'explain-location',
 ]
 missing = [name for name in required if not (agent_dir / f'{name}.md').exists()]
-not_allowed = [name for name in required if not re.search(rf'(^|\n)\s*{re.escape(name)}:\s*allow\b', text)]
-abbreviated = [name for name in ['plan', 'review', 'docs', 'inspect', 'implement', 'validate', 'explain'] if re.search(rf'(^|\n)\s*{name}:\s*allow\b', text)]
+# Check required allow entries only within the frontmatter.
+not_allowed = [name for name in required if not re.search(rf'(^|\n)\s*"?{re.escape(name)}"?:\s*allow\b', frontmatter)]
+# Check abbreviated allow entries only within the frontmatter.
+abbreviated_names = ['plan', 'review', 'docs', 'inspect', 'implement', 'validate', 'explain']
+abbreviated = [name for name in abbreviated_names if re.search(rf'(^|\n)\s*"?{re.escape(name)}"?:\s*allow\b', frontmatter)]
 if missing:
     raise SystemExit(f'missing agent files: {missing}')
 if not_allowed:
