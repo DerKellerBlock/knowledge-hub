@@ -22,8 +22,17 @@ questions:
       - {start: 3254, end: 3261}
       - {start: 586, end: 595}
       - {start: 2784, end: 2793}
-    real_world_source_url: null
-    real_world_source_date: null
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/fusion"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/training"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
     difficulty: medium
     tags: [planar-tracker, tracking, fusion]
     created_date: 2026-06-29
@@ -39,8 +48,17 @@ questions:
       - {start: 953, end: 961}
       - {start: 461, end: 469}
       - {start: 936, end: 944}
-    real_world_source_url: null
-    real_world_source_date: null
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/training"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
     difficulty: easy
     tags: [trim, edit, clip, timeline]
     created_date: 2026-06-29
@@ -56,8 +74,17 @@ questions:
       - {start: 161, end: 173}
       - {start: 33, end: 43}
       - {start: 265, end: 275}
-    real_world_source_url: null
-    real_world_source_date: null
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/color"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/training"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
     difficulty: medium
     tags: [color, primary-correction, grading]
     created_date: 2026-06-29
@@ -74,8 +101,17 @@ questions:
       - {start: 2764, end: 2772}
       - {start: 1560, end: 1567}
       - {start: 3271, end: 3280}
-    real_world_source_url: null
-    real_world_source_date: null
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/fusion"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/color"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
     difficulty: hard
     tags: [point-tracker, planar-tracker, tracking, comparison]
     created_date: 2026-06-29
@@ -91,8 +127,17 @@ questions:
       - {start: 1141, end: 1149}
       - {start: 1194, end: 1202}
       - {start: 1145, end: 1152}
-    real_world_source_url: null
-    real_world_source_date: null
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/training"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
     difficulty: easy
     tags: [render, deliver, export]
     created_date: 2026-06-29
@@ -108,8 +153,17 @@ questions:
       - {start: 71, end: 81}
       - {start: 221, end: 232}
       - {start: 9, end: 19}
-    real_world_source_url: null
-    real_world_source_date: null
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/fairlight"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/training"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
     difficulty: medium
     tags: [fairlight, audio, tracks, effects]
     created_date: 2026-06-29
@@ -125,8 +179,17 @@ questions:
       - {start: 4, end: 14}
       - {start: 90, end: 101}
       - {start: 56, end: 68}
-    real_world_source_url: null
-    real_world_source_date: null
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/whatsnew"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/support"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
     difficulty: easy
     tags: [resolve-21, new-features]
     created_date: 2026-06-29

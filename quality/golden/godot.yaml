@@ -17,8 +17,17 @@ questions:
     expected_source_files:
       - "godot-docs-reference-packed.md"
     expected_page_ranges: []
-    real_world_source_url: null
-    real_world_source_date: null
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/classes/class_node3d.html"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
+      - url: "https://docs.godotengine.org/en/stable/tutorials/3d/using_transforms.html"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
     difficulty: easy
     tags: [rotation, node3d, 3d, gdscript]
     created_date: 2026-06-29
@@ -30,8 +39,17 @@ questions:
     expected_source_files:
       - "godot-docs-reference-packed.md"
     expected_page_ranges: []
-    real_world_source_url: null
-    real_world_source_date: null
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/tutorials/physics/using_character_body_2d.html"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
+      - url: "https://github.com/godotengine/godot/issues/112656"
+        date: "2025-11-12"
+        type: "github-issue"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: false
     difficulty: medium
     tags: [characterbody3d, physics, movement, gravity]
     created_date: 2026-06-29
@@ -44,8 +62,22 @@ questions:
       - "gotchas.md"
       - "godot-docs-reference-packed.md"
     expected_page_ranges: []
-    real_world_source_url: null
-    real_world_source_date: null
+    real_world_sources:
+      - url: "https://github.com/godotengine/godot/issues/117857"
+        date: "2026-03-26"
+        type: "github-issue"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
+      - url: "https://github.com/godotengine/godot/issues/112315"
+        date: "2025-11-02"
+        type: "github-issue"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
+      - url: "https://github.com/godotengine/godot/issues/113058"
+        date: "2025-11-22"
+        type: "github-issue"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: false
     difficulty: medium
     tags: [characterbody3d, jolt, physics, gotcha]
     created_date: 2026-06-29
@@ -58,8 +90,17 @@ questions:
       - "godot-docs-reference-packed.md"
       - "godot-docs-3d-packed.md"
     expected_page_ranges: []
-    real_world_source_url: null
-    real_world_source_date: null
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/classes/class_camera3d.html"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
+      - url: "https://docs.godotengine.org/en/stable/tutorials/3d/using_transforms.html"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
     difficulty: medium
     tags: [camera, 3d, player, follow]
     created_date: 2026-06-29
@@ -71,8 +112,22 @@ questions:
     expected_source_files:
       - "gotchas.md"
     expected_page_ranges: []
-    real_world_source_url: null
-    real_world_source_date: null
+    real_world_sources:
+      - url: "https://github.com/godotengine/godot/issues/111653"
+        date: "2025-10-14"
+        type: "github-issue"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: false
+      - url: "https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/model_export_considerations.html"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
+      - url: "https://github.com/godotengine/godot/issues/97022"
+        date: "2024-09-14"
+        type: "github-issue"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
     difficulty: medium
     tags: [glb, import, scale, meshy, gotcha]
     created_date: 2026-06-29
@@ -84,8 +139,12 @@ questions:
     expected_source_files:
       - "godot-docs-reference-packed.md"
     expected_page_ranges: []
-    real_world_source_url: null
-    real_world_source_date: null
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/getting_started/step_by_step/signals.html"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
     difficulty: easy
     tags: [signals, gdscript, communication, nodes]
     created_date: 2026-06-29
@@ -98,8 +157,17 @@ questions:
       - "godot-docs-reference-packed.md"
       - "godot-demos-packed.md"
     expected_page_ranges: []
-    real_world_source_url: null
-    real_world_source_date: null
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/tutorials/physics/using_character_body_2d.html"
+        date: null
+        type: "official-docs"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
+      - url: "https://github.com/godotengine/godot/pull/114447"
+        date: "2025-12-30"
+        type: "github-pr"
+        solution_summary: null  # TODO: Noah kuratiert
+        has_solution: true
     difficulty: hard
     tags: [character, controller, 3d, movement, jumping]
     created_date: 2026-06-29

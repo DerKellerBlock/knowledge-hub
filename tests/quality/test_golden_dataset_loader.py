@@ -125,6 +125,117 @@ questions:
     assert q["real_world_source_date"] is None
     assert q["tags"] == []
     assert q["notes"] is None
+    # Blind-Spot-Fix: default real_world_sources list is empty, not None
+    assert q["real_world_sources"] == []
+
+
+# ── real_world_sources normalization ───────────────────────────────────────
+
+
+def test_load_normalizes_old_real_world_source_url(tmp_yaml_path):
+    """Legacy ``real_world_source_url`` (string) is converted to a single
+    ``real_world_sources`` entry with ``type='other'`` and
+    ``has_solution=False``.
+    """
+    import datetime
+
+    yaml_text = """\
+domain: godot
+version: 1
+questions:
+  - id: godot-100
+    question: "Legacy URL test"
+    expected_source_files: []
+    difficulty: easy
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+    real_world_source_url: "https://forum.godotengine.org/t/legacy"
+    real_world_source_date: 2025-03-15
+"""
+    tmp_yaml_path.write_text(yaml_text, encoding="utf-8")
+    data = load_golden_dataset(tmp_yaml_path)
+    q = data["questions"][0]
+    assert isinstance(q["real_world_sources"], list)
+    assert len(q["real_world_sources"]) == 1
+    entry = q["real_world_sources"][0]
+    assert entry["url"] == "https://forum.godotengine.org/t/legacy"
+    # YAML auto-parses ISO dates to datetime.date — keep both as acceptable.
+    assert entry["date"] == datetime.date(2025, 3, 15)
+    assert entry["type"] == "other"
+    assert entry["solution_summary"] is None
+    assert entry["has_solution"] is False
+
+
+def test_load_does_not_overwrite_empty_real_world_sources(tmp_yaml_path):
+    """Blind-Spot-Fix: an explicit empty ``real_world_sources`` list stays
+    empty even if the deprecated ``real_world_source_url`` is missing.
+    The ``is None`` check (not ``not q.get(...)``) prevents overwriting
+    a deliberate empty list.
+    """
+    yaml_text = """\
+domain: godot
+version: 1
+questions:
+  - id: godot-101
+    question: "Empty list test"
+    expected_source_files: []
+    difficulty: easy
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+    real_world_sources: []
+"""
+    tmp_yaml_path.write_text(yaml_text, encoding="utf-8")
+    data = load_golden_dataset(tmp_yaml_path)
+    q = data["questions"][0]
+    assert q["real_world_sources"] == []
+
+
+def test_load_real_world_sources_defaults_to_empty(tmp_yaml_path):
+    """When neither field is present, ``real_world_sources`` defaults to []."""
+    yaml_text = """\
+domain: godot
+version: 1
+questions:
+  - id: godot-102
+    question: "Default empty test"
+    expected_source_files: []
+    difficulty: easy
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+"""
+    tmp_yaml_path.write_text(yaml_text, encoding="utf-8")
+    data = load_golden_dataset(tmp_yaml_path)
+    q = data["questions"][0]
+    assert q["real_world_sources"] == []
+
+
+def test_load_preserves_explicit_real_world_sources(tmp_yaml_path):
+    """When ``real_world_sources`` is present (non-empty), the loader
+    must not touch it — the legacy field is ignored entirely.
+    """
+    yaml_text = """\
+domain: godot
+version: 1
+questions:
+  - id: godot-103
+    question: "Explicit list test"
+    expected_source_files: []
+    difficulty: easy
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+    real_world_sources:
+      - url: "https://example.com/article"
+        date: null
+        type: "official-docs"
+        solution_summary: null
+        has_solution: true
+"""
+    tmp_yaml_path.write_text(yaml_text, encoding="utf-8")
+    data = load_golden_dataset(tmp_yaml_path)
+    q = data["questions"][0]
+    assert len(q["real_world_sources"]) == 1
+    assert q["real_world_sources"][0]["type"] == "official-docs"
+    assert q["real_world_sources"][0]["has_solution"] is True
 
 
 # ── validate_question ─────────────────────────────────────────────────────

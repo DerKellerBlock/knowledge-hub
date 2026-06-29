@@ -26,6 +26,26 @@ from quality.config import DEFAULT_WEIGHTS, DEFAULT_THRESHOLDS, load_config
 VALID_DIFFICULTIES = {"easy", "medium", "hard"}
 DEFAULT_TOP_K = 10
 
+# Valid ``type`` values for entries inside ``real_world_sources``.
+# Kept as a module-level constant so both ``scorer.py`` and
+# ``validate_dataset.py`` import the same source of truth.
+VALID_RWS_TYPES = frozenset({
+    "official-docs",
+    "github-issue",
+    "github-pr",
+    "forum",
+    "reddit",
+    "youtube",
+    "blog",
+    "stack-exchange",
+    "other",
+})
+
+# Length of the top-snippet preview included in the Markdown report and the
+# evaluation result. Keeps the report compact while showing enough context
+# to manually judge solution alignment with online sources.
+TOP_SNIPPET_CHARS = 200
+
 
 # ── Scoring constants ────────────────────────────────────────────────────
 
@@ -90,6 +110,26 @@ def load_golden_dataset(path: Path) -> dict[str, Any]:
         q.setdefault("real_world_source_date", None)
         q.setdefault("tags", [])
         q.setdefault("notes", None)
+
+        # Real-world sources backward-compat normalization.
+        # ``real_world_source_url`` (string) is the deprecated legacy field.
+        # ``real_world_sources`` (list of dicts) is the new structured field.
+        # We only migrate the old field when the new field is *absent*
+        # (``is None``), so a deliberate empty list stays empty — see
+        # blind-spot #2.
+        if q.get("real_world_sources") is None:
+            old_url = q.get("real_world_source_url")
+            if old_url:
+                q["real_world_sources"] = [{
+                    "url": old_url,
+                    "date": q.get("real_world_source_date"),
+                    "type": "other",
+                    "solution_summary": None,
+                    "has_solution": False,
+                }]
+            else:
+                q["real_world_sources"] = []
+        q.setdefault("real_world_sources", [])
 
     return data
 
@@ -311,8 +351,10 @@ def evaluate_question(
             to :func:`quality.config.load_config` defaults.
 
     Returns a dict with the 4 metric scores, the composite, the label,
-    truncation warning count, the found source files and the total result
-    count.
+    truncation warning count, the found source files, the total result
+    count, the question's ``real_world_sources`` list, and a preview of
+    the top-3 snippets (``top_snippets``, each up to ``TOP_SNIPPET_CHARS``
+    characters).
     """
     cfg = config if config is not None else load_config()
     weights = cfg.get("weights")
@@ -332,13 +374,29 @@ def evaluate_question(
 
     # Truncation heuristic (LIM-003) — False positives possible.
     # Score is not reduced; the warning is shown in the report.
+    # ``text`` may be ``None`` (not just missing) so we coerce via ``or``.
     truncation_warnings = sum(
-        1 for r in results if len(r.get("text", "")) >= TRUNCATION_HEURISTIC_CHARS
+        1
+        for r in results
+        if len(r.get("text") or "") >= TRUNCATION_HEURISTIC_CHARS
     )
 
     found_sources = list(
         {r.get("source_file", "") for r in results if r.get("source_file")}
     )
+
+    # Real-world sources — pass through verbatim for the report's
+    # "Real-World Source Comparison" section. Defaults to ``[]`` if the
+    # loader did not run yet (defensive — pure unit tests on
+    # ``evaluate_question`` may construct questions without the loader).
+    real_world_sources = question.get("real_world_sources") or []
+
+    # Top-3 snippets — first ``TOP_SNIPPET_CHARS`` chars of each top
+    # result's ``text``. Used for manual "solution alignment" review
+    # against the online sources. Empty/None text becomes ``""``.
+    top_snippets = [
+        (r.get("text") or "")[:TOP_SNIPPET_CHARS] for r in results[:3]
+    ]
 
     return {
         "id": question["id"],
@@ -352,6 +410,8 @@ def evaluate_question(
         "truncation_warnings": truncation_warnings,
         "found_source_files": found_sources,
         "total_results": len(results),
+        "real_world_sources": real_world_sources,
+        "top_snippets": top_snippets,
     }
 
 
@@ -467,6 +527,62 @@ def generate_markdown_report(
                 f"text >= {TRUNCATION_HEURISTIC_CHARS} chars (heuristic, see LIM-003)."
             )
         lines.append("")
+
+    # Real-world source comparison — only show the section if at least one
+    # evaluation has a non-empty ``real_world_sources`` list. Otherwise
+    # we skip the section entirely so domains without curated online
+    # sources stay clean.
+    rws_evals = [e for e in evaluations if e.get("real_world_sources")]
+    if rws_evals:
+        lines.append("## Real-World Source Comparison")
+        lines.append("")
+        lines.append(
+            "Online source coverage and Hub top-3 snippets for manual "
+            "solution-alignment review."
+        )
+        lines.append("")
+        for e in rws_evals:
+            lines.append(f"### {e['id']}: {e['question']}")
+            lines.append("")
+            lines.append("**Online Sources:**")
+            lines.append("")
+            lines.append("| URL | Type | Has Solution | Date |")
+            lines.append("|-----|------|--------------|------|")
+            for rws in e["real_world_sources"]:
+                url = rws.get("url", "")
+                rws_type = rws.get("type", "other")
+                has_sol = "yes" if rws.get("has_solution") else "no"
+                date_val = rws.get("date") or "—"
+                # Truncate long URLs in the table cell to keep it readable
+                url_display = url if len(url) <= 80 else url[:77] + "…"
+                lines.append(
+                    f"| {url_display} | {rws_type} | {has_sol} | {date_val} |"
+                )
+            lines.append("")
+            lines.append("**Hub Top Snippets:**")
+            lines.append("")
+            top_snippets = e.get("top_snippets") or []
+            if top_snippets:
+                for i, snippet in enumerate(top_snippets, 1):
+                    # Replace newlines with spaces so the table-style
+                    # bullets render as one logical line each.
+                    flat = snippet.replace("\n", " ").strip()
+                    if not flat:
+                        flat = "[empty]"
+                    lines.append(f"{i}. {flat}")
+            else:
+                lines.append("- [no results returned]")
+            lines.append("")
+            lines.append("**Manual Evaluation:**")
+            lines.append("")
+            # GFM checkboxes (blind-spot #9) — render in Markdown issue
+            # trackers such as GitHub. Plain `- [ ]` (with space) is the
+            # canonical GFM form, not the bullet-with-tick we had before.
+            lines.append("- [ ] Source Coverage: Hub findet thematisch passende Quellen?")
+            lines.append("- [ ] Solution Alignment: Hub kommt zur gleichen Lösung?")
+            lines.append("- [ ] Gap Detection: Lücken die Online-Quellen aufdecken?")
+            lines.append("")
+
     lines.append("## Gaps & Recommendations")
     if weak_fail:
         lines.append(

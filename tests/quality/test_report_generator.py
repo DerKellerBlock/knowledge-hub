@@ -15,7 +15,8 @@ from quality.scorer import (
 )
 
 
-def _e(id, label, score, sr=None, pma=None, tkr=0.0, eq=None, trunc=0, found=None):
+def _e(id, label, score, sr=None, pma=None, tkr=0.0, eq=None, trunc=0, found=None,
+        real_world_sources=None, top_snippets=None):
     return {
         "id": id,
         "question": f"Question {id}",
@@ -28,6 +29,8 @@ def _e(id, label, score, sr=None, pma=None, tkr=0.0, eq=None, trunc=0, found=Non
         "truncation_warnings": trunc,
         "found_source_files": found or [],
         "total_results": 5,
+        "real_world_sources": real_world_sources or [],
+        "top_snippets": top_snippets or [],
     }
 
 
@@ -155,6 +158,116 @@ def test_markdown_report_gaps_section_health_message():
     md = generate_markdown_report("godot", "2026-06-29", summary, evals)
     assert "## Gaps & Recommendations" in md
     assert "No weak/fail questions" in md
+
+
+# ── Real-World Source Comparison section ──────────────────────────────────
+
+
+def test_markdown_report_has_real_world_section():
+    """When at least one evaluation has ``real_world_sources``, the
+    Markdown report must include the dedicated section."""
+    rws = [
+        {
+            "url": "https://example.com/a",
+            "date": None,
+            "type": "official-docs",
+            "solution_summary": None,
+            "has_solution": True,
+        },
+        {
+            "url": "https://example.com/b",
+            "date": "2025-01-01",
+            "type": "github-issue",
+            "solution_summary": None,
+            "has_solution": False,
+        },
+    ]
+    evals = [
+        _e("godot-001", "pass", 0.85, real_world_sources=rws, top_snippets=["first", "second"]),
+    ]
+    summary = aggregate_domain_scores("godot", evals)
+    md = generate_markdown_report("godot", "2026-06-29", summary, evals)
+    assert "## Real-World Source Comparison" in md
+
+
+def test_markdown_report_real_world_section_skipped_when_empty():
+    """When no evaluation has ``real_world_sources``, the section is
+    omitted entirely (so domains without curated sources stay clean)."""
+    evals = [_e("godot-001", "pass", 0.85)]
+    summary = aggregate_domain_scores("godot", evals)
+    md = generate_markdown_report("godot", "2026-06-29", summary, evals)
+    assert "Real-World Source Comparison" not in md
+
+
+def test_markdown_report_has_gfm_checkboxes():
+    """Manual-evaluation lines must use GFM checkboxes (``- [ ]``), not
+    plain bullet text — so GitHub renders them as interactive tasks."""
+    rws = [
+        {
+            "url": "https://example.com/a",
+            "date": None,
+            "type": "official-docs",
+            "solution_summary": None,
+            "has_solution": True,
+        }
+    ]
+    evals = [
+        _e("godot-001", "pass", 0.85, real_world_sources=rws, top_snippets=["first"]),
+    ]
+    summary = aggregate_domain_scores("godot", evals)
+    md = generate_markdown_report("godot", "2026-06-29", summary, evals)
+    assert "- [ ] Source Coverage" in md
+    assert "- [ ] Solution Alignment" in md
+    assert "- [ ] Gap Detection" in md
+
+
+def test_markdown_report_shows_top_snippets():
+    """Top snippets are rendered as a numbered list."""
+    rws = [
+        {
+            "url": "https://example.com/a",
+            "date": None,
+            "type": "official-docs",
+            "solution_summary": None,
+            "has_solution": True,
+        }
+    ]
+    evals = [
+        _e(
+            "godot-001",
+            "pass",
+            0.85,
+            real_world_sources=rws,
+            top_snippets=["alpha snippet", "beta snippet", "gamma snippet"],
+        ),
+    ]
+    summary = aggregate_domain_scores("godot", evals)
+    md = generate_markdown_report("godot", "2026-06-29", summary, evals)
+    assert "1. alpha snippet" in md
+    assert "2. beta snippet" in md
+    assert "3. gamma snippet" in md
+
+
+def test_markdown_report_shows_url_type_and_date():
+    """The online-source table includes URL, type, has_solution and date."""
+    rws = [
+        {
+            "url": "https://docs.example.com/page",
+            "date": "2025-06-01",
+            "type": "official-docs",
+            "solution_summary": None,
+            "has_solution": True,
+        }
+    ]
+    evals = [
+        _e("godot-001", "pass", 0.85, real_world_sources=rws, top_snippets=["x"]),
+    ]
+    summary = aggregate_domain_scores("godot", evals)
+    md = generate_markdown_report("godot", "2026-06-29", summary, evals)
+    assert "https://docs.example.com/page" in md
+    assert "official-docs" in md
+    assert "yes" in md
+    assert "2025-06-01" in md
 
 
 # ── generate_json_report ──────────────────────────────────────────────────

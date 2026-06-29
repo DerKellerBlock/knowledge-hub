@@ -48,7 +48,11 @@ _SCRIPTS_DIR = Path(__file__).resolve().parent.parent
 if str(_SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS_DIR))
 
-from quality.scorer import load_golden_dataset, validate_question  # noqa: E402
+from quality.scorer import (  # noqa: E402
+    VALID_RWS_TYPES,
+    load_golden_dataset,
+    validate_question,
+)
 
 
 GOLDEN_DIR = _REPO_ROOT / "quality" / "golden"
@@ -229,7 +233,18 @@ def validate_dataset(
         for e in struct_errors:
             errors.append(f"[{qid}] {e}")
 
-        # 2. URL validation (errors only with --strict-urls)
+        # 2a. Deprecation warning for legacy real_world_source_url field.
+        # The new structured field is ``real_world_sources`` (a list of
+        # dicts); the old single-string field is kept for backward
+        # compatibility but should be migrated. See scorer's
+        # load_golden_dataset for the actual normalization at load time.
+        if q.get("real_world_source_url"):
+            warnings.append(
+                f"[{qid}] 'real_world_source_url' is deprecated, "
+                "use 'real_world_sources' list instead"
+            )
+
+        # 2b. URL validation for the legacy single-URL field.
         url = q.get("real_world_source_url")
         if url:
             url_errors = validate_url(url)
@@ -239,6 +254,31 @@ def validate_dataset(
                     errors.append(msg)
                 else:
                     warnings.append(msg + " (use --strict-urls to fail)")
+
+        # 2c. URL validation for the structured real_world_sources list.
+        # Each URL is validated with the same scheme/host/IP rules.
+        # Type-Enum-Validierung ist hier eine WARNING (nicht Error), damit
+        # Tippfehler in einem einzelnen Eintrag die Pipeline nicht
+        # blockieren — siehe Blind-Spot #3 (validate_question bleibt
+        # unverändert, die Enum-Prüfung passiert ausschließlich in
+        # validate_dataset).
+        for rws in q.get("real_world_sources", []) or []:
+            rws_url = rws.get("url") if isinstance(rws, dict) else None
+            if rws_url:
+                rws_url_errors = validate_url(rws_url)
+                for e in rws_url_errors:
+                    msg = f"[{qid}] real_world_sources URL: {e}"
+                    if strict_urls:
+                        errors.append(msg)
+                    else:
+                        warnings.append(msg + " (use --strict-urls to fail)")
+            if isinstance(rws, dict):
+                rws_type = rws.get("type", "other")
+                if rws_type not in VALID_RWS_TYPES:
+                    warnings.append(
+                        f"[{qid}] Unknown real_world_source type: '{rws_type}' "
+                        f"(valid: {', '.join(sorted(VALID_RWS_TYPES))})"
+                    )
 
         # 3. Secret pattern check (always WARNING, never error)
         # Check both the question text and the notes field.

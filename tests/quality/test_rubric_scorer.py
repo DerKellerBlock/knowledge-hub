@@ -301,8 +301,82 @@ def test_evaluate_question_returns_all_required_keys():
         "truncation_warnings",
         "found_source_files",
         "total_results",
+        "real_world_sources",
+        "top_snippets",
     ):
         assert k in out, f"Missing key: {k}"
+
+
+# ── Real-World Sources + Top Snippets ──────────────────────────────────────
+
+
+def test_evaluate_question_includes_real_world_sources():
+    """``real_world_sources`` is passed through from the question to the
+    evaluation dict so the Markdown report can render the comparison."""
+    q = _q(
+        real_world_sources=[
+            {
+                "url": "https://example.com/article",
+                "date": None,
+                "type": "official-docs",
+                "solution_summary": None,
+                "has_solution": True,
+            }
+        ]
+    )
+    out = evaluate_question(q, [_r("godot-docs.md", text="x")], is_pdf_domain=False)
+    assert out["real_world_sources"] == q["real_world_sources"]
+
+
+def test_evaluate_question_includes_top_snippets():
+    """``top_snippets`` contains the first ``TOP_SNIPPET_CHARS`` chars
+    of each top result's ``text``."""
+    from quality.scorer import TOP_SNIPPET_CHARS
+    q = _q()
+    long_text = "A" * (TOP_SNIPPET_CHARS + 100)
+    out = evaluate_question(
+        q, [_r("godot-docs.md", text=long_text)], is_pdf_domain=False
+    )
+    assert out["top_snippets"] == [long_text[:TOP_SNIPPET_CHARS]]
+
+
+def test_evaluate_question_top_snippets_from_top_3():
+    """Only the top 3 results are included in ``top_snippets``."""
+    q = _q()
+    results = [
+        _r("a.md", text="first"),
+        _r("b.md", text="second"),
+        _r("c.md", text="third"),
+        _r("d.md", text="fourth"),
+        _r("e.md", text="fifth"),
+    ]
+    out = evaluate_question(q, results, is_pdf_domain=False)
+    assert len(out["top_snippets"]) == 3
+    assert out["top_snippets"] == ["first", "second", "third"]
+
+
+def test_evaluate_question_top_snippets_empty_results():
+    q = _q()
+    out = evaluate_question(q, [], is_pdf_domain=False)
+    assert out["top_snippets"] == []
+
+
+def test_evaluate_question_top_snippets_handles_none_text():
+    """``None`` text becomes ``""`` in the snippet preview."""
+    q = _q()
+    out = evaluate_question(
+        q, [_r("godot-docs.md", text=None)], is_pdf_domain=False
+    )
+    assert out["top_snippets"] == [""]
+
+
+def test_evaluate_question_real_world_sources_defaults_to_empty():
+    """When the question has no ``real_world_sources`` key at all, the
+    evaluation dict still contains the key with an empty list — keeps
+    the Markdown-report section well-defined for the renderer."""
+    q = _q()  # no real_world_sources
+    out = evaluate_question(q, [_r("godot-docs.md", text="x")], is_pdf_domain=False)
+    assert out["real_world_sources"] == []
 
 
 # ── Configurable weights / thresholds ─────────────────────────────────────

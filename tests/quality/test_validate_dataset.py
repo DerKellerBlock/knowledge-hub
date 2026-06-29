@@ -344,3 +344,117 @@ questions:
         finally:
             if target.exists():
                 target.unlink()
+
+
+# ── Real-World Sources validation ──────────────────────────────────────────
+
+
+class TestRealWorldSourcesValidation:
+    def test_validate_dataset_warns_unknown_rws_type(
+        self, write_godot_golden, monkeypatch
+    ):
+        """Blind-Spot-Fix #3: unknown ``type`` is a warning, not an error —
+        validate_question's signature stays unchanged."""
+        from quality import validate_dataset as vd
+
+        bad_yaml = """\
+domain: godot
+version: 1
+questions:
+  - id: godot-001
+    question: "Q"
+    expected_source_files: []
+    difficulty: easy
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+    real_world_sources:
+      - url: "https://example.com/a"
+        date: null
+        type: "invalid-type"
+        solution_summary: null
+        has_solution: true
+"""
+        target = write_godot_golden.parent / "godot.yaml"
+        target.write_text(bad_yaml, encoding="utf-8")
+        monkeypatch.setattr(vd, "GOLDEN_DIR", write_godot_golden.parent)
+        try:
+            errors, warnings = vd.validate_dataset("godot")
+            assert errors == [], f"Unexpected errors: {errors}"
+            assert any("invalid-type" in w and "type" in w.lower() for w in warnings)
+        finally:
+            if target.exists():
+                target.unlink()
+
+    def test_validate_dataset_deprecated_real_world_source_url_warning(
+        self, write_godot_golden, monkeypatch
+    ):
+        """Blind-Spot-Fix #11: using the legacy ``real_world_source_url``
+        field produces a deprecation warning."""
+        from quality import validate_dataset as vd
+
+        yaml_text = """\
+domain: godot
+version: 1
+questions:
+  - id: godot-001
+    question: "Q"
+    expected_source_files: []
+    difficulty: easy
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+    real_world_source_url: "https://example.com/legacy"
+    real_world_source_date: null
+"""
+        target = write_godot_golden.parent / "godot.yaml"
+        target.write_text(yaml_text, encoding="utf-8")
+        monkeypatch.setattr(vd, "GOLDEN_DIR", write_godot_golden.parent)
+        try:
+            errors, warnings = vd.validate_dataset("godot")
+            assert errors == [], f"Unexpected errors: {errors}"
+            assert any("deprecated" in w and "real_world_sources" in w for w in warnings)
+        finally:
+            if target.exists():
+                target.unlink()
+
+    def test_validate_dataset_validates_rws_urls_with_strict(
+        self, write_godot_golden, monkeypatch
+    ):
+        """Blind-Spot-Fix #4: each URL inside ``real_world_sources`` is
+        validated through the existing ``--strict-urls`` path. A
+        ``file://`` URL in the list is fatal under ``--strict-urls``."""
+        from quality import validate_dataset as vd
+
+        bad_yaml = """\
+domain: godot
+version: 1
+questions:
+  - id: godot-001
+    question: "Q"
+    expected_source_files: []
+    difficulty: easy
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+    real_world_sources:
+      - url: "file:///etc/passwd"
+        date: null
+        type: "other"
+        solution_summary: null
+        has_solution: false
+"""
+        target = write_godot_golden.parent / "godot.yaml"
+        target.write_text(bad_yaml, encoding="utf-8")
+        monkeypatch.setattr(vd, "GOLDEN_DIR", write_godot_golden.parent)
+        try:
+            # Non-strict: warning
+            errors_loose, warnings_loose = vd.validate_dataset(
+                "godot", strict_urls=False
+            )
+            assert errors_loose == []
+            assert any("real_world_sources URL" in w and "scheme" in w for w in warnings_loose)
+
+            # Strict: error
+            errors_strict, _ = vd.validate_dataset("godot", strict_urls=True)
+            assert any("real_world_sources URL" in e and "scheme" in e for e in errors_strict)
+        finally:
+            if target.exists():
+                target.unlink()
