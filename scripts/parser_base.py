@@ -8,6 +8,7 @@ subclasses DomainParser. If no parser exists, fallback_chunk() is used.
 """
 
 import json
+import re
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 
@@ -41,6 +42,8 @@ class Chunk:
     source_file: str = ""
     line_start: int = 0
     line_end: int = 0
+    page_start: int | None = None      # PDF page number (1-based), set by fallback_chunk if page separators present
+    page_end: int | None = None        # PDF page number (1-based), set by fallback_chunk if page separators present
 
     # Intern (wird von embed_index.py gesetzt)
     chunk_id_in_file: int = 0
@@ -70,6 +73,10 @@ class Chunk:
             meta["inherits_from"] = json.dumps(self.inherits_from)
         if self.docstring:
             meta["docstring"] = self.docstring[:500]
+        if self.page_start is not None:
+            meta["page_start"] = self.page_start
+        if self.page_end is not None:
+            meta["page_end"] = self.page_end
         return meta
 
     @staticmethod
@@ -123,6 +130,52 @@ FALLBACK_CHUNK_CHARS = FALLBACK_CHUNK_SIZE * CHARS_PER_TOKEN       # 2000
 FALLBACK_OVERLAP_CHARS = FALLBACK_CHUNK_OVERLAP * CHARS_PER_TOKEN  # 400
 
 
+# Regex to detect PDF page separators inserted by parse_pdf_to_markdown.py
+# Format: "--- end of page=N ---" where N is 0-based.
+# parse_pdf_to_markdown.py uses page_separators=True in pymupdf4llm.to_markdown().
+_PAGE_SEPARATOR_RE = re.compile(r'--- end of page=(\d+) ---')
+
+
+def _extract_page_numbers(text_slice: str, full_text: str, slice_start: int) -> tuple[int | None, int | None]:
+    """Extract page_start and page_end from page separators in a text slice.
+
+    Page separators ("--- end of page=N ---") are inserted by
+    parse_pdf_to_markdown.py. A chunk may span multiple pages, so we find
+    the first page number before or within the slice, and the last page
+    number within or just after the slice.
+
+    Returns (page_start, page_end) — both are 1-based (matching PDF
+    convention), or (None, None) if no separators are present.
+    """
+    # Find all page separators in the FULL text (not just the slice) so we
+    # can determine which page the chunk starts on.
+    all_seps = list(_PAGE_SEPARATOR_RE.finditer(full_text))
+    if not all_seps:
+        return None, None
+
+    # Find page separators WITHIN the slice
+    seps_in_slice = list(_PAGE_SEPARATOR_RE.finditer(text_slice))
+
+    # page_start: the page number of the last separator BEFORE the slice
+    # starts, or 0 (first page) if no separator precedes the slice.
+    page_start_num = 0  # default: first page (0-based from separator)
+    for sep in all_seps:
+        if sep.start() < slice_start:
+            page_start_num = int(sep.group(1))
+        else:
+            break
+
+    # page_end: the page number of the last separator WITHIN the slice
+    if seps_in_slice:
+        page_end_num = int(seps_in_slice[-1].group(1))
+    else:
+        # No separator in slice → chunk is entirely within page_start_num
+        page_end_num = page_start_num
+
+    # Convert to 1-based page numbers (PDF convention)
+    return page_start_num + 1, page_end_num + 1
+
+
 def fallback_chunk(
     text: str,
     domain: str,
@@ -131,7 +184,13 @@ def fallback_chunk(
     chunk_size: int = FALLBACK_CHUNK_CHARS,
     overlap: int = FALLBACK_OVERLAP_CHARS,
 ) -> list[Chunk]:
-    """Sliding-window chunking (fallback when no parser exists)."""
+    """Sliding-window chunking (fallback when no parser exists).
+
+    If the text contains "--- end of page=N ---" separators (inserted by
+    parse_pdf_to_markdown.py), each Chunk's page_start/page_end is set
+    to the PDF page number(s) it spans. Otherwise page_start/page_end
+    remain None.
+    """
     chunks = []
     start = 0
     chunk_idx = 0
@@ -142,6 +201,9 @@ def fallback_chunk(
         line_offset = text[:start].count("\n") + 1
         line_end = text[:end].count("\n") + 1
 
+        # Extract PDF page numbers if page separators are present
+        page_start, page_end = _extract_page_numbers(chunk_text_slice, text, start)
+
         chunks.append(Chunk(
             chunk_id=f"{domain}::fallback::{chunk_idx}",
             domain=domain,
@@ -151,6 +213,8 @@ def fallback_chunk(
             line_start=line_offset,
             line_end=line_end,
             chunk_id_in_file=chunk_idx,
+            page_start=page_start,
+            page_end=page_end,
         ))
 
         chunk_idx += 1

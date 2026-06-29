@@ -39,8 +39,11 @@ def convert_pdf(pdf_path: Path, out_path: Path) -> dict:
         raise FileNotFoundError(f"PDF not found: {pdf_path}")
 
     # Phase 1a: Markdown extraction via PyMuPDF4LLM
+    # page_separators=True inserts "--- end of page=N ---" markers between
+    # pages. These are parsed later by fallback_chunk() to populate
+    # page_start/page_end metadata in Chunk objects.
     print(f"[INFO]  Converting: {pdf_path.name}")
-    md_text = pymupdf4llm.to_markdown(str(pdf_path))
+    md_text = pymupdf4llm.to_markdown(str(pdf_path), page_separators=True)
 
     if not md_text or not md_text.strip():
         raise RuntimeError(f"PDF produced empty Markdown: {pdf_path}")
