@@ -19,6 +19,14 @@ Zentrale Anlaufstelle für Menschen und AI-Agenten (OpenCode), die am persönlic
 | `.agents/skills/` | OpenCode-Skills (Single Source of Truth) |
 | `docs/ai/` | Projektkontext, Architektur und Regeln für AI-Agenten |
 | `docs/superpowers/` | Design-Specs und Implementierungspläne |
+| `AGENTS.md` | Root onboarding and workflow rules for AI agents |
+| `.opencode/agents/` | File-based OpenCode agent prompts |
+| `scripts/workspace_check.sh` | Structural validation for OpenCode/docs/test layout |
+| `scripts/workspace_status.sh` | Human-readable workspace status summary |
+| `docs/ai/security.md` | Security baseline and review commands |
+| `docs/ai/fixes.md` | Completed fixes and future-agent notes |
+| `docs/superpowers/explanations/` | Beginner-friendly location guides after changes |
+| `docs/superpowers/retrospectives/` | Retrospectives after workflow iterations |
 
 ## Wichtige Startdateien
 

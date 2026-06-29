@@ -22,3 +22,8 @@ venv/
 
 # Original PDFs (too large for Git, converted to .md via build tool)
 domains/*/sources/raw/
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/

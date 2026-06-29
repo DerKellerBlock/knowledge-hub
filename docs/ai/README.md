@@ -11,6 +11,10 @@ Strukturierte Dokumentation für AI-Agenten (OpenCode), die am Knowledge Hub arb
 - `decisions.md` — Wichtige Architektur- und Design-Entscheidungen
 - `known-issues.md` — Bekannte Bugs und technische Schulden
 - `validation.md` — Verfügbare Checks, Testbefehle
+- `fixes.md` — completed fixes for future agents
+- `security.md` — security review baseline
+- `changelog.md` — AI-visible project changes
+- `handoffs/` — handoff notes for future sessions
 
 Zusätzlich im übergeordneten `docs/`-Ordner:
 

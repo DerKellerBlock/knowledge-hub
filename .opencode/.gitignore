@@ -1,3 +1,6 @@
+# Ignore everything by default, but allow specific subdirectories/files
 *
 !.gitignore
 !opencode.json
+!agents/
+!agents/**

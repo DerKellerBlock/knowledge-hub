@@ -9,7 +9,7 @@
 
 ## Technische Schulden
 
-- **TD-002:** Keine Test-Suite (pytest/bats) — optional, geringe Prio
+- **TD-002:** Dauerhaftes Golden Dataset für Knowledge-QA fehlt noch — geplant als separates Folgefeature nach der OpenCode-Standard-Migration.
 
 ## Einschränkungen
 

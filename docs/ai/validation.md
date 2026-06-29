@@ -40,3 +40,34 @@ print(list_domains())
 ```bash
 git status --short
 ```
+
+## Structure Validation
+
+```bash
+./scripts/workspace_check.sh
+./scripts/workspace_status.sh
+python3 -m json.tool .opencode/opencode.json
+bash -n scripts/workspace_check.sh scripts/workspace_status.sh
+```
+
+## Test Suite
+
+```bash
+pytest -m unit
+pytest -m integration
+pytest -m e2e
+pytest -m mcp
+pytest --cov=scripts --cov=mcp_servers/knowledge_hub --cov-report=term-missing
+```
+
+## Knowledge-QA Checklist
+
+For domain/source changes, `test-hub-feature` checks:
+
+- realistic questions from changed sources
+- real-world problem prompts from websearch for domain/source changes
+- relevant top search results
+- `source_file` present
+- PDF `page_start`/`page_end` present when available
+- evidence snippets human can inspect
+- weak or missing coverage documented as findings

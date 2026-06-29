@@ -35,4 +35,6 @@ pip install -r requirements.txt
 
 ## Für AI-Agenten
 
-Starte mit `docs/ai/README.md` für die Lese-Reihenfolge. Die vollständige Architektur-Spec liegt unter `docs/superpowers/specs/2026-06-09-knowledge-hub-design.md`.
+Starte mit `AGENTS.md`. Danach liest du `docs/ai/README.md`, `docs/ai/project-context.md`, `docs/ai/architecture.md`, `docs/ai/domain-model.md`, `docs/ai/validation.md` und `docs/ai/security.md`.
+
+OpenCode-Projektkonfiguration liegt in `.opencode/opencode.json`; Agentenprompts liegen in `.opencode/agents/*.md`.

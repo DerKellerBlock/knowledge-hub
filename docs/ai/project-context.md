@@ -60,3 +60,10 @@ python -m mcp_servers.knowledge_hub.server --help
 - AGPL Process Boundary für PyMuPDF4LLM (Build-Tool only).
 - Migration des Godot-Index in neues Layout erfolgt automatisch.
 - `nak-hopper-game` nutzt `--domains godot`, `video-blog` nutzt `--domains davinci_resolve`.
+
+## Update 2026-06-29: OpenCode Standard Migration Planned
+
+- Knowledge Hub remains a Single-Repo project.
+- OpenCode agent prompts are being migrated from inline `.opencode/opencode.json` definitions to `.opencode/agents/*.md` files.
+- `test-hub-feature` is planned as a combined pytest + Knowledge-QA report-only agent.
+- Ansatz C, a durable Knowledge Quality Evaluation Platform with Golden Dataset and quality reports, is intentionally deferred to a separate future feature.
