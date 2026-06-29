@@ -58,6 +58,18 @@ Knowledge Hub changes should improve practical retrieval quality, not only compi
 
 For PDF-derived domains, missing page metadata must be reported as `[fail: missing page metadata]` for the affected result.
 
+## Real-World Source Evaluation
+
+For new domains or substantial source changes, the Real-World-Test-Workflow is mandatory:
+
+1. `research-knowledge-domain` performs websearch for real online sources (official docs, GitHub issues, forums) matching the domain topics.
+2. Found URLs are reported in Knowledge-QA findings (not written to Golden Dataset by the agent).
+3. Noah curates them as `real_world_sources` into `quality/golden/<domain>.yaml`.
+4. `test-hub-feature` runs `run_evaluation.py` and `generate_report.py` to produce reports with "Real-World Source Comparison" section.
+5. Reports include GFM checkboxes for manual evaluation (Source Coverage, Solution Alignment, Gap Detection).
+
+See `docs/superpowers/specs/2026-06-29-real-world-source-evaluation-design.md` for the full methodology.
+
 ## Safety Rules
 
 - Do not modify `chromadb_data/` unless a plan explicitly requires an index migration.

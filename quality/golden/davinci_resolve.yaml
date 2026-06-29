@@ -26,12 +26,12 @@ questions:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/fusion"
         date: null
         type: "official-docs"
-        solution_summary: null  # TODO: Noah kuratiert
+        solution_summary: "Official Fusion page. Connect a clip to the planar tracker, draw a shape around the area to track, click track forward. A tracking cloud creates a precise motion path with position, rotation, scaling, and perspective changes."
         has_solution: true
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/training"
         date: null
         type: "official-docs"
-        solution_summary: null  # TODO: Noah kuratiert
+        solution_summary: "Official 'Introduction to Fusion' training video (58m) covering compositing, tracking, keying. Includes project files."
         has_solution: true
     difficulty: medium
     tags: [planar-tracker, tracking, fusion]
@@ -52,12 +52,12 @@ questions:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/edit"
         date: null
         type: "official-docs"
-        solution_summary: null  # TODO: Noah kuratiert
+        solution_summary: "Official Edit page documentation. Smart trim tool switches between ripple, roll, slip and slide based on mouse position. Covers Roll, Ripple, Slip, Slide, asymmetrical trimming, JKL-trimming, multi-track trimming."
         has_solution: true
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/training"
         date: null
         type: "official-docs"
-        solution_summary: null  # TODO: Noah kuratiert
+        solution_summary: "Official 'Introduction to Editing Part 2' training video (44m) covering trim edit, match frame, replace shots, audio mixing, effects, transitions, titles."
         has_solution: true
     difficulty: easy
     tags: [trim, edit, clip, timeline]
@@ -78,12 +78,12 @@ questions:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/color"
         date: null
         type: "official-docs"
-        solution_summary: null  # TODO: Noah kuratiert
+        solution_summary: "Official Color page. Primary correction tools affect the entire image: Primary Wheels (Lift/Gamma/Gain/Offset), Primary Bars, Log grading. Adjust brightness and color levels to remove unwanted tints and create a neutral starting point."
         has_solution: true
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/training"
         date: null
         type: "official-docs"
-        solution_summary: null  # TODO: Noah kuratiert
+        solution_summary: "Official 'Introduction to Color' training video (1h33m) covering primary and secondary grading tools, reading scopes, balancing shots."
         has_solution: true
     difficulty: medium
     tags: [color, primary-correction, grading]
@@ -105,12 +105,12 @@ questions:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/fusion"
         date: null
         type: "official-docs"
-        solution_summary: null  # TODO: Noah kuratiert
+        solution_summary: "Official Fusion page distinguishes tracker types: 2D tracker follows most moving objects; Planar tracker tracks image planes/flat objects, ideal for replacing signs or screens; 3D camera tracking for camera motion."
         has_solution: true
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/color"
         date: null
         type: "official-docs"
-        solution_summary: null  # TODO: Noah kuratiert
+        solution_summary: "Official Color page tracker (Point Tracker) animates Power Windows to follow moving objects. Choose options matching camera movement, move playhead to beginning, click track forward."
         has_solution: true
     difficulty: hard
     tags: [point-tracker, planar-tracker, tracking, comparison]
@@ -131,12 +131,12 @@ questions:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/edit"
         date: null
         type: "official-docs"
-        solution_summary: null  # TODO: Noah kuratiert
+        solution_summary: "Official Edit page. Quick Export is the fastest delivery method: File menu → Quick Export for popular formats. Renders and uploads to YouTube, Vimeo, Dropbox in one step. Custom presets can be created."
         has_solution: true
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/training"
         date: null
         type: "official-docs"
-        solution_summary: null  # TODO: Noah kuratiert
+        solution_summary: "Official 'Delivering Content' training video (19m) covering deliver page presets, render queue, online delivery workflows."
         has_solution: true
     difficulty: easy
     tags: [render, deliver, export]
@@ -157,12 +157,12 @@ questions:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/fairlight"
         date: null
         type: "official-docs"
-        solution_summary: null  # TODO: Noah kuratiert
+        solution_summary: "Official Fairlight page. Smart Edit Tools, clip adjustments (volume, pan, pitch, 6-band EQ), full automation, waveform editing, professional mixer, EQ and dynamics processing, Fairlight FX plugins (De-esser, De-hummer, noise reduction), automatic ducking, track layers, ADR, multi-track recording."
         has_solution: true
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/training"
         date: null
         type: "official-docs"
-        solution_summary: null  # TODO: Noah kuratiert
+        solution_summary: "Multiple official Fairlight training videos: Introduction to Audio (1h28m), Sound Design (58m), Mixing (1h16m), VO and ADR (47m), Audio Track Layers (30m), Channel Mapping (23m), Dolby Atmos (48m)."
         has_solution: true
     difficulty: medium
     tags: [fairlight, audio, tracks, effects]
@@ -183,12 +183,12 @@ questions:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/whatsnew"
         date: null
         type: "official-docs"
-        solution_summary: null  # TODO: Noah kuratiert
+        solution_summary: "Official What's New page for Resolve 21. AI tools (IntelliSearch, AI Speech Generator, AI CineFocus, AI Face Age Transformer, AI Blemish Removal, AI UltraSharpen, AI Motion Deblur). Photo Page with Hollywood grading for stills. Cut/Edit: keyframes/curves updates, HTML/Lottie support. Color: MultiMaster Trim Manager. Fusion: Krokodove VFX library (70+ tools). Fairlight: Audio Track Folders, 6 Band Clip EQ. Engineering: Apple Immersive, VR180/VR360."
         has_solution: true
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/support"
         date: null
         type: "official-docs"
-        solution_summary: null  # TODO: Noah kuratiert
+        solution_summary: "Official support portal with latest downloads, support notes, reference manual PDF, community forum link, email/phone support."
         has_solution: true
     difficulty: easy
     tags: [resolve-21, new-features]

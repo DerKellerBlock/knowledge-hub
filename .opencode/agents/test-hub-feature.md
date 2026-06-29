@@ -65,3 +65,20 @@ When the diff touches domain sources or the Quality Evaluation Platform, you may
 - `python scripts/quality/generate_report.py --input <results.json>` — generate markdown/json report
 
 These are read-only. Do not write new Golden Dataset questions via `add_question.py` (that is a manual curation step). Report findings using the standard Knowledge-QA shape above.
+
+### Real-World Source Curation
+
+When the diff adds a new domain or substantially changes existing domain sources, the Golden Dataset should eventually include `real_world_sources` for the affected questions. The websearch you perform for real-world problem questions (step 3 above) is the primary source for these URLs.
+
+You do NOT write `real_world_sources` entries yourself (that's a manual curation step via `add_question.py` or direct YAML editing). Instead, report the websearch-found URLs in your Knowledge-QA findings so Noah can curate them into the Golden Dataset later.
+
+Report format for real-world sources found during websearch:
+
+```text
+[real-world-source] <domain>
+Question: <question>
+URL: <url>
+Type: <official-docs|github-issue|github-pr|forum|reddit|youtube|blog|stack-exchange|other>
+Has solution: <yes|no>
+Recommendation: <add to Golden Dataset as real_world_source for <question-id>>
+```
