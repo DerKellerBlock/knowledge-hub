@@ -32,7 +32,7 @@ Golden Dataset YAML (erweitert)
   │     ├── solution_summary
   │     └── has_solution
   │
-  ├── validate_dataset.py          ← ERWEITERT: --check-urls validiert Listen
+  ├── validate_dataset.py          ← ERWEITERT: --strict-urls validiert Listen
   ├── run_evaluation.py            ← ERWEITERT: gibt real_world_sources im Output aus
   ├── scorer.py                    ← ERWEITERT: load_golden_dataset parst neue Felder
   └── generate_report.py           ← ERWEITERT: Reports zeigen Real-World-Daten
@@ -75,6 +75,8 @@ questions:
         solution_summary: "Transforms tutorial covers rotation, basis vectors, and transform composition with practical examples."
         has_solution: true
 ```
+
+> **Hinweis:** In der aktuellen Implementierung sind alle `solution_summary`-Werte `null` (TODO-Platzhalter, manuelle Kuratierung durch Noah ausstehend, siehe LIM-005). Die Beispiele oben zeigen die angestrebte Ziel-Struktur. Die Evaluationsmethodik (Source Coverage, Solution Alignment, Gap Detection) funktioniert bereits mit null-Summaries (URLs + has_solution reichen für Ebene 1 und 3), aber Solution Alignment (Ebene 2) benötigt die Summaries für den vollständigen Vergleich.
 
 ### Feld-Definitionen (neue Felder)
 
@@ -211,7 +213,7 @@ Die Evaluation ist **semi-automatisiert**: Die Platform liefert die Daten (Real-
 
 ## CLI-Erweiterung
 
-### `validate_dataset.py --check-urls` (erweitert)
+### `validate_dataset.py --strict-urls` (erweitert)
 
 Das bestehende `--strict-urls`-Flag wird erweitert, um die neuen `real_world_sources`-Listen zu validieren:
 
@@ -223,7 +225,7 @@ Das bestehende `--strict-urls`-Flag wird erweitert, um die neuen `real_world_sou
 
 ```bash
 # Validiert alle URLs in real_world_sources (Warnings)
-python scripts/quality/validate_dataset.py --domain godot --check-urls
+python scripts/quality/validate_dataset.py --domain godot
 
 # Validiert alle URLs in real_world_sources (Errors)
 python scripts/quality/validate_dataset.py --domain godot --strict-urls
@@ -260,6 +262,8 @@ Der Output von `run_evaluation.py` enthält jetzt pro Frage die `real_world_sour
 }
 ```
 
+> **Hinweis:** In der aktuellen Implementierung sind alle `solution_summary`-Werte `null` (TODO-Platzhalter, siehe LIM-005). Das Beispiel oben zeigt die angestrebte Ziel-Struktur.
+
 **Neues Feld `top_snippets`:** Die ersten 200 Zeichen des `text`-Felds der Top-3 Ergebnisse, damit der Mensch im Report schnell vergleichen kann, ohne die Rohdaten zu öffnen.
 
 ### `generate_report.py` (erweitert)
@@ -285,10 +289,13 @@ Der Markdown-Report enthält eine neue Sektion **"Real-World Source Comparison"*
 **Found Sources:** godot-docs-reference-packed.md
 
 ---
-*Manual evaluation: [ ] Source Coverage  [ ] Solution Alignment  [ ] Gap Detection*
+*Manual evaluation:*
+- [ ] Source Coverage: Hub findet thematisch passende Quellen?
+- [ ] Solution Alignment: Hub kommt zur gleichen Lösung?
+- [ ] Gap Detection: Lücken die Online-Quellen aufdecken?
 ```
 
-Die Checkboxen `[ ]` sind Platzhalter für die manuelle Bewertung. Der Mensch kann sie im Markdown-Report ankreuzen und das Ergebnis committen.
+Die GFM-Checkboxen `- [ ]` sind Platzhalter für die manuelle Bewertung. Der Mensch kann sie im Markdown-Report ankreuzen und das Ergebnis committen.
 
 ## Report-Struktur (vollständig, erweitert)
 
@@ -332,7 +339,7 @@ Die Checkboxen `[ ]` sind Platzhalter für die manuelle Bewertung. Der Mensch ka
 2. `godot.yaml` und `davinci_resolve.yaml` enthalten `real_world_sources` für alle 14 Fragen mit den recherchierten URLs.
 3. `load_golden_dataset()` normalisiert alte `real_world_source_url`-Felder in `real_world_sources` (backward compat).
 4. `validate_question()` prüft neue Felder (`type`-Enum, `has_solution`-Boolean, `url`-Pflicht).
-5. `validate_dataset.py --check-urls` validiert alle URLs in `real_world_sources`-Listen.
+5. `validate_dataset.py --strict-urls` validiert alle URLs in `real_world_sources`-Listen.
 6. `run_evaluation.py` gibt `real_world_sources` und `top_snippets` im Output aus.
 7. `generate_report.py` zeigt die "Real-World Source Comparison"-Sektion im Markdown-Report.
 8. Bestehende Tests (`pytest -m quality`) bleiben grün.
@@ -385,18 +392,18 @@ Die Checkboxen `[ ]` sind Platzhalter für die manuelle Bewertung. Der Mensch ka
   - Betroffene Datei: `quality/golden/godot.yaml`
 
 - [ ] **Task 2.2:** `davinci_resolve.yaml` — `real_world_sources` für alle 7 Fragen eintragen
-  - davinci_resolve-001: 2 URLs (fusion page, fusion training) — `official-docs` + `youtube`
-  - davinci_resolve-002: 2 URLs (edit page, editing training) — `official-docs` + `youtube`
-  - davinci_resolve-003: 2 URLs (color page, color training) — `official-docs` + `youtube`
+  - davinci_resolve-001: 2 URLs (fusion page, fusion training) — beide `official-docs`
+  - davinci_resolve-002: 2 URLs (edit page, editing training) — beide `official-docs`
+  - davinci_resolve-003: 2 URLs (color page, color training) — beide `official-docs`
   - davinci_resolve-004: 2 URLs (fusion page, color page) — beide `official-docs`
-  - davinci_resolve-005: 2 URLs (edit page, delivering training) — `official-docs` + `youtube`
-  - davinci_resolve-006: 2 URLs (fairlight page, fairlight training) — `official-docs` + `youtube`
+  - davinci_resolve-005: 2 URLs (edit page, delivering training) — beide `official-docs`
+  - davinci_resolve-006: 2 URLs (fairlight page, fairlight training) — beide `official-docs`
   - davinci_resolve-007: 2 URLs (whatsnew page, support page) — beide `official-docs`
   - Betroffene Datei: `quality/golden/davinci_resolve.yaml`
 
 ### Phase 3: CLI-Erweiterung
 
-- [ ] **Task 3.1:** `validate_dataset.py` — `--check-urls` für Listen erweitern
+- [ ] **Task 3.1:** `validate_dataset.py` — `--strict-urls` für Listen erweitern
   - `validate_url()` für jede URL in `real_world_sources` aufrufen
   - `type`-Enum-Prüfung (Warning bei unbekanntem Typ)
   - `has_solution`-Boolean-Prüfung (Error wenn kein Boolean)
@@ -428,8 +435,8 @@ Die Checkboxen `[ ]` sind Platzhalter für die manuelle Bewertung. Der Mensch ka
   - Betroffene Datei: `tests/quality/test_golden_dataset_loader.py`
 
 - [ ] **Task 4.3:** `test_validate_dataset.py` — URL-Listen-Validierung testen
-  - Test: `--check-urls` validiert alle URLs in `real_world_sources`
-  - Test: `--strict-urls` macht URL-Fehler zu Errors
+  - Test: `--strict-urls` validiert alle URLs in `real_world_sources`
+  - Test: Ohne `--strict-urls` sind URL-Fehler nur Warnings
   - Betroffene Datei: `tests/quality/test_validate_dataset.py`
 
 - [ ] **Task 4.4:** `test_report_generator.py` — Real-World-Sektion testen
@@ -451,7 +458,7 @@ Die Checkboxen `[ ]` sind Platzhalter für die manuelle Bewertung. Der Mensch ka
   - Hinweis auf Deprecation von `real_world_source_url`
 
 - [ ] **Task 5.2:** `docs/ai/validation.md` — Neue CLI-Optionen dokumentieren
-  - `--check-urls` für `validate_dataset.py`
+  - `--strict-urls` für `validate_dataset.py` (jetzt auch für `real_world_sources`-Listen)
 
 - [ ] **Task 5.3:** `docs/ai/changelog.md` — Änderung eintragen
 
@@ -459,6 +466,6 @@ Die Checkboxen `[ ]` sind Platzhalter für die manuelle Bewertung. Der Mensch ka
 
 - [ ] **Task 5.5:** `pytest -m quality` — Alle Tests müssen grün sein
 
-- [ ] **Task 5.6:** `python scripts/quality/validate_dataset.py --domain godot --check-urls` — Muss erfolgreich durchlaufen
+- [ ] **Task 5.6:** `python scripts/quality/validate_dataset.py --domain godot --strict-urls` — Muss erfolgreich durchlaufen
 
-- [ ] **Task 5.7:** `python scripts/quality/validate_dataset.py --domain davinci_resolve --check-urls` — Muss erfolgreich durchlaufen
+- [ ] **Task 5.7:** `python scripts/quality/validate_dataset.py --domain davinci_resolve --strict-urls` — Muss erfolgreich durchlaufen
