@@ -18,6 +18,8 @@ from typing import Any
 
 import yaml
 
+from quality.config import DEFAULT_WEIGHTS, DEFAULT_THRESHOLDS, load_config
+
 
 # ── Dataset Loader constants ──────────────────────────────────────────────
 
@@ -32,15 +34,19 @@ DEFAULT_TOP_K = 10
 # a warning in the report, not to penalize the score.
 TRUNCATION_HEURISTIC_CHARS = 5000
 
-# Default metric weights (sum = 1.00)
-W_SR = 0.35
-W_PMA = 0.20
-W_TKR = 0.25
-W_EQ = 0.20
+# Default metric weights (sum = 1.00). Kept as module-level constants for
+# backwards compatibility — the canonical source of truth is now
+# ``quality.config.DEFAULT_WEIGHTS``. Scoring functions prefer an explicit
+# ``weights=`` argument, falling back to these constants (which mirror
+# ``DEFAULT_WEIGHTS``).
+W_SR = DEFAULT_WEIGHTS["source_recall"]
+W_PMA = DEFAULT_WEIGHTS["page_metadata_accuracy"]
+W_TKR = DEFAULT_WEIGHTS["top_k_relevance"]
+W_EQ = DEFAULT_WEIGHTS["evidence_quality"]
 
-# Thresholds for classify_score
-PASS_THRESHOLD = 0.7
-WEAK_THRESHOLD = 0.4
+# Thresholds for classify_score (fallbacks when no override given).
+PASS_THRESHOLD = DEFAULT_THRESHOLDS["pass"]
+WEAK_THRESHOLD = DEFAULT_THRESHOLDS["weak"]
 
 
 # ── Dataset Loader ────────────────────────────────────────────────────────
@@ -228,37 +234,57 @@ def compute_composite_score(
     page_metadata_accuracy: float | None,
     top_k_relevance: float | None,
     evidence_quality: float | None,
+    weights: dict[str, float] | None = None,
 ) -> float:
     """Weighted composite score with N/A redistribution.
 
     When a metric is None (N/A), its weight is redistributed proportionally
     across the remaining metrics. This prevents domains without page
     metadata (e.g. Godot) from being artificially lowered.
+
+    Args:
+        weights: Optional override mapping (e.g.
+            ``{"source_recall": 0.35, "page_metadata_accuracy": 0.20, ...}``).
+            ``None`` falls back to :data:`quality.config.DEFAULT_WEIGHTS`.
+            Unknown keys are ignored; missing keys fall back to defaults.
     """
+    w = {**DEFAULT_WEIGHTS, **(weights or {})}
     parts = [
-        (source_recall, W_SR),
-        (page_metadata_accuracy, W_PMA),
-        (top_k_relevance, W_TKR),
-        (evidence_quality, W_EQ),
+        (source_recall, w["source_recall"]),
+        (page_metadata_accuracy, w["page_metadata_accuracy"]),
+        (top_k_relevance, w["top_k_relevance"]),
+        (evidence_quality, w["evidence_quality"]),
     ]
-    active = [(v, w) for v, w in parts if v is not None]
+    active = [(v, wt) for v, wt in parts if v is not None]
 
     if not active:
         return 0.0
 
-    total_weight = sum(w for _, w in active)
+    total_weight = sum(wt for _, wt in active)
     if total_weight == 0:
         return 0.0
 
-    weighted_sum = sum(v * w for v, w in active)
+    weighted_sum = sum(v * wt for v, wt in active)
     return round(weighted_sum / total_weight, 4)
 
 
-def classify_score(composite: float) -> str:
-    """Classify composite as ``pass`` (>=0.7), ``weak`` (0.4-0.7), ``fail`` (<0.4)."""
-    if composite >= PASS_THRESHOLD:
+def classify_score(
+    composite: float, thresholds: dict[str, float] | None = None
+) -> str:
+    """Classify composite as ``pass``, ``weak`` or ``fail``.
+
+    Args:
+        composite: The composite score in [0, 1].
+        thresholds: Optional override mapping with ``"pass"`` and ``"weak"``
+            keys. ``None`` falls back to
+            :data:`quality.config.DEFAULT_THRESHOLDS`. ``composite >= pass``
+            is ``pass``; ``composite >= weak`` is ``weak``; otherwise
+            ``fail``.
+    """
+    t = {**DEFAULT_THRESHOLDS, **(thresholds or {})}
+    if composite >= t["pass"]:
         return "pass"
-    elif composite >= WEAK_THRESHOLD:
+    elif composite >= t["weak"]:
         return "weak"
     else:
         return "fail"
@@ -268,16 +294,30 @@ def evaluate_question(
     question: dict,
     results: list[dict],
     is_pdf_domain: bool = False,
+    config: dict[str, Any] | None = None,
 ) -> dict:
     """Evaluate a single Golden Dataset question against search results.
 
     Pure function — does not call ``hybrid_search``. Takes results as
     argument so it is fully testable with mock data.
 
+    Args:
+        question: The Golden Dataset question entry.
+        results: List of search-result dicts.
+        is_pdf_domain: Whether the domain uses PDF sources (enables page
+            metadata scoring).
+        config: Optional override for ``weights`` and ``thresholds``
+            (see :func:`quality.config.load_config`). ``None`` falls back
+            to :func:`quality.config.load_config` defaults.
+
     Returns a dict with the 4 metric scores, the composite, the label,
     truncation warning count, the found source files and the total result
     count.
     """
+    cfg = config if config is not None else load_config()
+    weights = cfg.get("weights")
+    thresholds = cfg.get("thresholds")
+
     expected_sources = question.get("expected_source_files", []) or []
     expected_ranges = question.get("expected_page_ranges") or None
 
@@ -287,8 +327,8 @@ def evaluate_question(
     )
     tkr = score_top_k_relevance(results)
     eq_ = score_evidence_quality(results)
-    composite = compute_composite_score(sr, pma, tkr, eq_)
-    label = classify_score(composite)
+    composite = compute_composite_score(sr, pma, tkr, eq_, weights=weights)
+    label = classify_score(composite, thresholds=thresholds)
 
     # Truncation heuristic (LIM-003) — False positives possible.
     # Score is not reduced; the warning is shown in the report.

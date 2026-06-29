@@ -41,8 +41,16 @@ domains/<name>/
 ## Metadaten
 - Embedding-Model: all-mpnet-base-v2 (768 dims)
 - Collection: <name>_knowledge
+- Source-Types: pdf|repo     (kommagetrennt, z.B. "pdf" oder "repo" oder "pdf, repo"; Default "repo")
 - Letztes Update: YYYY-MM-DD
 ```
+
+`source_types` wird vom `model_manager.get_domain_config()` aus dem
+`## Metadaten`-Block geparst (Regex `r"- Source-Types:\s*(.+?)\s*$"` mit
+`re.MULTILINE`). Wird das Feld weggelassen, fällt der Wert auf
+`["repo"]` zurück. Die Quality Evaluation Platform leitet daraus ab, ob
+eine Domain PDF-Metadaten (`page_start`/`page_end`) in den Suchergebnissen
+erwarten lässt (siehe `scripts/quality/run_evaluation.py`).
 
 ## Wissenstypen (ChromaDB-Metadaten)
 

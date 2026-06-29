@@ -36,6 +36,7 @@ Deckt: Cut, Edit, Color, Fairlight, Fusion, Deliver, Photo (ab Resolve 21).
 - Collection: davinci_resolve_knowledge
 - ChromaDB-Path: chromadb_data/davinci_resolve/chroma/
 - BM25-Path: chromadb_data/davinci_resolve/davinci_resolve_bm25.pkl
+- Source-Types: pdf
 - Letztes Update: 2026-06-28
 
 ## Lizenz-Hinweis

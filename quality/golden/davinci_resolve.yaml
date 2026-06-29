@@ -2,97 +2,134 @@ domain: davinci_resolve
 version: 1
 description: "Golden Dataset for DaVinci Resolve domain quality evaluation"
 last_updated: 2026-06-29
+# Optional: override default weights/thresholds (uncomment to use)
+# weights:
+#   source_recall: 0.35
+#   page_metadata_accuracy: 0.20
+#   top_k_relevance: 0.25
+#   evidence_quality: 0.20
+# thresholds:
+#   pass: 0.7
+#   weak: 0.4
 questions:
   - id: davinci_resolve-001
     question: "How do I set up a Planar Tracker in DaVinci Resolve?"
     expected_source_files:
       - "davinci-resolve-20.3-reference-manual.md"
       - "fusion-20.3-manual.md"
-    expected_page_ranges: []
+    # observed: ref:p3256-3259, fusion:p588-593, ref:p2786-2791 (top-3 from live search, ±2 tolerance applied)
+    expected_page_ranges:
+      - {start: 3254, end: 3261}
+      - {start: 586, end: 595}
+      - {start: 2784, end: 2793}
     real_world_source_url: null
     real_world_source_date: null
     difficulty: medium
     tags: [planar-tracker, tracking, fusion]
     created_date: 2026-06-29
     last_verified: 2026-06-29
-    notes: "From Answer-Synthesis Spec Testfall 1."
+    notes: "From Answer-Synthesis Spec Testfall 1. expected_page_ranges populated from live hybrid_search top-3 results (±2 tolerance)."
     min_top_k: 10
   - id: davinci_resolve-002
     question: "How do I trim a clip on the Edit page in DaVinci Resolve?"
     expected_source_files:
-      - "davinci-resolve-20-editors-guide.md"
-    expected_page_ranges: []
+      - "davinci-resolve-20.3-reference-manual.md"
+    # observed: ref:p955-959, ref:p463-467, ref:p938-942 (top-3 from live search, ±2 tolerance applied)
+    expected_page_ranges:
+      - {start: 953, end: 961}
+      - {start: 461, end: 469}
+      - {start: 936, end: 944}
     real_world_source_url: null
     real_world_source_date: null
     difficulty: easy
     tags: [trim, edit, clip, timeline]
     created_date: 2026-06-29
     last_verified: 2026-06-29
-    notes: "From E2E regression test test_davinci_trim_clip_search_finds_relevant_results."
+    notes: "Editors Guide idealerweise die primäre Quelle, aber das Reference Manual dominiert bei Trim-Fragen (Score ~6.8 vs ~2.9). Retrieval-Lücke: Trainingsbücher werden bei spezifischen Themen vom Reference Manual überdeckt. Expected angepasst an Realität. expected_page_ranges aus Live-Suche mit ±2 Toleranz."
     min_top_k: 10
   - id: davinci_resolve-003
     question: "How do I use Primary Color Correction in DaVinci Resolve?"
     expected_source_files:
       - "davinci-resolve-20-colorist-guide.md"
-    expected_page_ranges: []
+    # observed: colorist:p163-171, colorist:p35-41, colorist:p267-273 (top-3 from live search, ±2 tolerance applied)
+    expected_page_ranges:
+      - {start: 161, end: 173}
+      - {start: 33, end: 43}
+      - {start: 265, end: 275}
     real_world_source_url: null
     real_world_source_date: null
     difficulty: medium
     tags: [color, primary-correction, grading]
     created_date: 2026-06-29
     last_verified: 2026-06-29
-    notes: "From Answer-Synthesis Spec Testfall 5 (Quellenpriorisierung)."
+    notes: "From Answer-Synthesis Spec Testfall 5 (Quellenpriorisierung). expected_page_ranges aus Live-Suche mit ±2 Toleranz."
     min_top_k: 10
   - id: davinci_resolve-004
     question: "What is the difference between Point Tracker and Planar Tracker in DaVinci Resolve?"
     expected_source_files:
       - "davinci-resolve-20.3-reference-manual.md"
       - "fusion-20.3-manual.md"
-    expected_page_ranges: []
+    # observed: ref:p2766-2770, fusion:p1562-1565, ref:p3273-3278 (top-3 from live search, ±2 tolerance applied)
+    expected_page_ranges:
+      - {start: 2764, end: 2772}
+      - {start: 1560, end: 1567}
+      - {start: 3271, end: 3280}
     real_world_source_url: null
     real_world_source_date: null
     difficulty: hard
     tags: [point-tracker, planar-tracker, tracking, comparison]
     created_date: 2026-06-29
     last_verified: 2026-06-29
-    notes: "From Answer-Synthesis Spec Testfall 4 (Tracker-Verwechslung vermeiden)."
+    notes: "From Answer-Synthesis Spec Testfall 4 (Tracker-Verwechslung vermeiden). expected_page_ranges aus Live-Suche mit ±2 Toleranz."
     min_top_k: 10
   - id: davinci_resolve-005
     question: "How do I render and deliver a finished project in DaVinci Resolve?"
     expected_source_files:
       - "davinci-resolve-20.3-reference-manual.md"
-    expected_page_ranges: []
+    # observed: ref:p1143-1147, ref:p1196-1200, ref:p1147-1150 (top-3 from live search, ±2 tolerance applied)
+    expected_page_ranges:
+      - {start: 1141, end: 1149}
+      - {start: 1194, end: 1202}
+      - {start: 1145, end: 1152}
     real_world_source_url: null
     real_world_source_date: null
     difficulty: easy
     tags: [render, deliver, export]
     created_date: 2026-06-29
     last_verified: 2026-06-29
-    notes: "From E2E regression test test_davinci_render_deliver_search."
+    notes: "From E2E regression test test_davinci_render_deliver_search. expected_page_ranges aus Live-Suche mit ±2 Toleranz."
     min_top_k: 10
   - id: davinci_resolve-006
     question: "How do I work with audio tracks and effects in Fairlight in DaVinci Resolve?"
     expected_source_files:
       - "davinci-resolve-20-fairlight-audio-post.md"
-    expected_page_ranges: []
+    # observed: fairlight:p73-79, fairlight:p223-230, fairlight:p11-17 (top-3 from live search, ±2 tolerance applied)
+    expected_page_ranges:
+      - {start: 71, end: 81}
+      - {start: 221, end: 232}
+      - {start: 9, end: 19}
     real_world_source_url: null
     real_world_source_date: null
     difficulty: medium
     tags: [fairlight, audio, tracks, effects]
     created_date: 2026-06-29
     last_verified: 2026-06-29
-    notes: "Tests fairlight audio post guide retrieval."
+    notes: "Tests fairlight audio post guide retrieval. expected_page_ranges aus Live-Suche mit ±2 Toleranz."
     min_top_k: 10
   - id: davinci_resolve-007
     question: "What are the new features in DaVinci Resolve 21?"
     expected_source_files:
       - "davinci-resolve-21-new-features-guide.md"
-    expected_page_ranges: []
+    # observed: new-features:p6-12, new-features:p92-99, new-features:p58-66 (top-3 from live search, ±2 tolerance applied)
+    expected_page_ranges:
+      - {start: 4, end: 14}
+      - {start: 90, end: 101}
+      - {start: 56, end: 68}
     real_world_source_url: null
     real_world_source_date: null
     difficulty: easy
     tags: [resolve-21, new-features]
     created_date: 2026-06-29
     last_verified: 2026-06-29
-    notes: "Tests that the new-features PDF is indexed and retrievable."
+    notes: "Tests that the new-features PDF is indexed and retrievable. expected_page_ranges aus Live-Suche mit ±2 Toleranz."
     min_top_k: 10

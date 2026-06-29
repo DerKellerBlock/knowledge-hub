@@ -2,6 +2,15 @@ domain: godot
 version: 1
 description: "Golden Dataset for Godot domain quality evaluation"
 last_updated: 2026-06-29
+# Optional: override default weights/thresholds (uncomment to use)
+# weights:
+#   source_recall: 0.35
+#   page_metadata_accuracy: 0.20
+#   top_k_relevance: 0.25
+#   evidence_quality: 0.20
+# thresholds:
+#   pass: 0.7
+#   weak: 0.4
 questions:
   - id: godot-001
     question: "How do I rotate a Node3D around the Y axis in GDScript?"

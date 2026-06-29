@@ -155,6 +155,66 @@ class TestGetDomainConfig:
         cfg = get_domain_config("davinci_resolve")
         assert cfg["collection"] == "davinci_resolve_knowledge"
         assert cfg["bm25_path"].name == "davinci_resolve_bm25.pkl"
+        # PDF source type declared in davinci_resolve/domain.md
+        assert "pdf" in cfg["source_types"]
+
+
+# ── source_types parsing ───────────────────────────────────────────────────
+
+
+class TestSourceTypes:
+    def test_davinci_resolve_has_pdf_source_type(self):
+        davinci_md = (
+            Path(__file__).resolve().parent.parent.parent
+            / "domains"
+            / "davinci_resolve"
+            / "domain.md"
+        )
+        if not davinci_md.exists():
+            pytest.skip("davinci_resolve domain.md not found")
+        cfg = get_domain_config("davinci_resolve")
+        assert cfg["source_types"] == ["pdf"]
+
+    def test_godot_has_repo_source_type(self):
+        godot_md = (
+            Path(__file__).resolve().parent.parent.parent
+            / "domains"
+            / "godot"
+            / "domain.md"
+        )
+        if not godot_md.exists():
+            pytest.skip("godot domain.md not found")
+        cfg = get_domain_config("godot")
+        assert "repo" in cfg["source_types"]
+        assert "pdf" not in cfg["source_types"]
+
+    def test_nonexistent_domain_defaults_to_repo(self):
+        cfg = get_domain_config("nonexistent_domain_xyz_123")
+        assert cfg["source_types"] == ["repo"]
+
+    def test_source_types_regex_single_value(self):
+        from model_manager import _SOURCE_TYPES_RE
+
+        block = "- Source-Types: pdf\n"
+        m = _SOURCE_TYPES_RE.search(block)
+        assert m is not None
+        assert m.group(1).strip() == "pdf"
+
+    def test_source_types_regex_comma_separated(self):
+        from model_manager import _SOURCE_TYPES_RE
+
+        block = "- Source-Types: pdf, repo\n"
+        m = _SOURCE_TYPES_RE.search(block)
+        assert m is not None
+        raw = m.group(1).strip()
+        parsed = [t.strip() for t in raw.split(",") if t.strip()]
+        assert parsed == ["pdf", "repo"]
+
+    def test_source_types_regex_no_match(self):
+        from model_manager import _SOURCE_TYPES_RE
+
+        block = "- Other: foo\n"
+        assert _SOURCE_TYPES_RE.search(block) is None
 
 
 # ── BM25 LRU Cache ──────────────────────────────────────────────────────────

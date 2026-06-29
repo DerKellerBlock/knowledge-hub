@@ -8,6 +8,11 @@ full ``evaluate_question`` entry point.
 
 from __future__ import annotations
 
+from quality.config import (
+    DEFAULT_THRESHOLDS,
+    DEFAULT_WEIGHTS,
+    load_config,
+)
 from quality.scorer import (
     classify_score,
     compute_composite_score,
@@ -298,3 +303,167 @@ def test_evaluate_question_returns_all_required_keys():
         "total_results",
     ):
         assert k in out, f"Missing key: {k}"
+
+
+# ── Configurable weights / thresholds ─────────────────────────────────────
+
+
+def test_compute_composite_with_custom_weights():
+    """Custom weights must override defaults. We verify three properties:
+
+    1. All-1.0 stays 1.0 regardless of weights (active-set normalization).
+    2. A down-weighted metric + good score still beats the same metric
+       down-weighted with a bad score — i.e. weights actually influence
+       the result.
+    3. An N/A metric (None) is excluded from the active set even if its
+       weight is non-zero, so the redistribution logic still applies.
+    """
+    custom = {
+        "source_recall": 0.10,
+        "page_metadata_accuracy": 0.50,
+        "top_k_relevance": 0.20,
+        "evidence_quality": 0.20,
+    }
+    # 1. All 1.0 still 1.0 — total_weight = 1.0, weighted_sum = 1.0.
+    assert compute_composite_score(1.0, 1.0, 1.0, 1.0, weights=custom) == 1.0
+
+    # 2. With PMA down-weighted to 0.0 and everything else 1.0, the
+    # composite stays 1.0 because the remaining three share the full
+    # 1.00 weight (active normalization drops the zero-weight metric
+    # only because it is not N/A — the N/A drop is what we test below).
+    no_pma = {
+        "source_recall": 0.35,
+        "page_metadata_accuracy": 0.0,
+        "top_k_relevance": 0.45,
+        "evidence_quality": 0.20,
+    }
+    assert (
+        compute_composite_score(1.0, 0.5, 1.0, 1.0, weights=no_pma) == 1.0
+    )
+
+    # 3. N/A redistribution still works with custom weights: PMA=None
+    # drops out of the active set, the remaining three are normalized
+    # to their relative weights. SR=1.0, TKR=1.0, EQ=1.0 → 1.0.
+    assert (
+        compute_composite_score(1.0, None, 1.0, 1.0, weights=custom) == 1.0
+    )
+
+    # 4. PMA=0.0 (not N/A) keeps its weight — composite drops because
+    # 0.50 of the active weight is on PMA=0.0.
+    assert (
+        compute_composite_score(1.0, 0.0, 1.0, 1.0, weights=custom) == 0.5
+    )
+
+
+def test_compute_composite_with_none_weights_uses_defaults():
+    """Explicit ``weights=None`` must produce the same result as the
+    default constants — guarantees backwards compatibility."""
+    a = compute_composite_score(1.0, 1.0, 1.0, 1.0)
+    b = compute_composite_score(1.0, 1.0, 1.0, 1.0, weights=None)
+    assert a == b == 1.0
+
+
+def test_classify_score_with_custom_thresholds():
+    """Raising the ``pass`` threshold from 0.7 to 0.9 should turn a
+    score of 0.8 from ``pass`` to ``weak``."""
+    assert classify_score(0.8) == "pass"
+    assert classify_score(0.8, thresholds={"pass": 0.9, "weak": 0.4}) == "weak"
+    assert classify_score(0.95, thresholds={"pass": 0.9, "weak": 0.4}) == "pass"
+    # Lowered pass threshold → 0.65 should now be ``pass``
+    assert classify_score(0.65, thresholds={"pass": 0.6, "weak": 0.4}) == "pass"
+
+
+def test_classify_score_with_none_thresholds_uses_defaults():
+    """``thresholds=None`` must equal default behaviour."""
+    assert classify_score(0.7) == classify_score(0.7, thresholds=None) == "pass"
+    assert classify_score(0.5) == classify_score(0.5, thresholds=None) == "weak"
+    assert classify_score(0.3) == classify_score(0.3, thresholds=None) == "fail"
+
+
+def test_evaluate_question_with_config():
+    """Custom config must influence composite and label."""
+    q = _q()
+    results = [
+        _r("godot-docs.md", text="x", page_start=5),
+        _r("other.md", text="y", page_start=10),
+    ]
+    # Default config: composite ~0.875 → pass (PMA valid because is_pdf=True)
+    out_default = evaluate_question(q, results, is_pdf_domain=True)
+    assert out_default["label"] == "pass"
+
+    # Stricter pass threshold (0.95) — composite ~0.875 → weak
+    strict_cfg = {"weights": dict(DEFAULT_WEIGHTS), "thresholds": {"pass": 0.95, "weak": 0.4}}
+    out_strict = evaluate_question(q, results, is_pdf_domain=True, config=strict_cfg)
+    assert out_strict["label"] == "weak"
+
+
+def test_evaluate_question_with_none_config_uses_defaults():
+    """``config=None`` must equal ``config=load_config()``."""
+    q = _q()
+    results = [_r("godot-docs.md", text="x")]
+    a = evaluate_question(q, results, is_pdf_domain=False)
+    b = evaluate_question(q, results, is_pdf_domain=False, config=None)
+    assert a == b
+
+
+# ── load_config (quality.config) ──────────────────────────────────────────
+
+
+def test_load_config_defaults_no_dataset():
+    cfg = load_config(None)
+    assert cfg["weights"] == DEFAULT_WEIGHTS
+    assert cfg["thresholds"] == DEFAULT_THRESHOLDS
+
+
+def test_load_config_defaults_empty_dataset():
+    cfg = load_config({})
+    assert cfg["weights"] == DEFAULT_WEIGHTS
+    assert cfg["thresholds"] == DEFAULT_THRESHOLDS
+
+
+def test_load_config_with_overrides():
+    dataset = {
+        "weights": {"source_recall": 0.50},
+        "thresholds": {"pass": 0.9},
+    }
+    cfg = load_config(dataset)
+    # Overridden keys
+    assert cfg["weights"]["source_recall"] == 0.50
+    assert cfg["thresholds"]["pass"] == 0.9
+    # Unmentioned keys keep defaults
+    assert cfg["weights"]["page_metadata_accuracy"] == DEFAULT_WEIGHTS["page_metadata_accuracy"]
+    assert cfg["thresholds"]["weak"] == DEFAULT_THRESHOLDS["weak"]
+
+
+def test_load_config_ignores_non_dict_weights():
+    """If ``weights`` is a string or list, the defaults survive."""
+    cfg = load_config({"weights": "not-a-dict"})
+    assert cfg["weights"] == DEFAULT_WEIGHTS
+    cfg2 = load_config({"thresholds": ["not", "a", "dict"]})
+    assert cfg2["thresholds"] == DEFAULT_THRESHOLDS
+
+
+def test_load_config_ignores_non_numeric_values():
+    """Non-numeric values inside a dict are silently dropped."""
+    dataset = {
+        "weights": {"source_recall": "high", "page_metadata_accuracy": 0.99},
+        "thresholds": {"pass": "yes", "weak": 0.3},
+    }
+    cfg = load_config(dataset)
+    # ``source_recall`` not overridden (string dropped)
+    assert cfg["weights"]["source_recall"] == DEFAULT_WEIGHTS["source_recall"]
+    # ``page_metadata_accuracy`` overridden with valid number
+    assert cfg["weights"]["page_metadata_accuracy"] == 0.99
+    # ``pass`` not overridden (string dropped)
+    assert cfg["thresholds"]["pass"] == DEFAULT_THRESHOLDS["pass"]
+    # ``weak`` overridden with valid number
+    assert cfg["thresholds"]["weak"] == 0.3
+
+
+def test_load_config_ignores_boolean_values():
+    """Booleans are not numbers — must be rejected to avoid silent
+    mistakes (e.g. ``pass: True`` would otherwise become ``pass: 1.0``)."""
+    dataset = {"thresholds": {"pass": True, "weak": 0.4}}
+    cfg = load_config(dataset)
+    assert cfg["thresholds"]["pass"] == DEFAULT_THRESHOLDS["pass"]
+    assert cfg["thresholds"]["weak"] == 0.4

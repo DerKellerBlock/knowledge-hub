@@ -33,19 +33,17 @@ _SCRIPTS_DIR = Path(__file__).resolve().parent.parent
 if str(_SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS_DIR))
 
+from quality.config import load_config  # noqa: E402  (path-adjusted import)
 from quality.scorer import (
     aggregate_domain_scores,
     evaluate_question,
     load_golden_dataset,
 )
+from model_manager import get_domain_config  # noqa: E402  (path-adjusted import)
 from hybrid_search import search  # noqa: E402  (path-adjusted import)
 
 
 GOLDEN_DIR = _REPO_ROOT / "quality" / "golden"
-
-# Domains that ingest PDF sources and therefore have page metadata in
-# their chunks. Extend this set when a new PDF-based domain is added.
-PDF_DOMAINS = {"davinci_resolve"}
 
 # Path-traversal / injection protection: domain names must be simple
 # lowercase identifiers (letters, digits, underscore).
@@ -77,7 +75,15 @@ def run_evaluation(domain: str) -> dict:
     _validate_domain(domain)
     path = GOLDEN_DIR / f"{domain}.yaml"
     dataset = load_golden_dataset(path)
-    is_pdf = domain in PDF_DOMAINS
+    # is_pdf is derived from the domain's domain.md "Source-Types" metadata
+    # (e.g. davinci_resolve sets "Source-Types: pdf"). Falls back to False
+    # (N/A) if the field is missing — equivalent to default ["repo"].
+    cfg = get_domain_config(domain)
+    is_pdf = "pdf" in cfg.get("source_types", ["repo"])
+    # Per-domain override of weights/thresholds (see quality.config).
+    # Backwards compatible: if the Golden Dataset has no overrides, this
+    # returns the defaults unchanged.
+    qcfg = load_config(dataset)
 
     evaluations = []
     for q in dataset["questions"]:
@@ -92,7 +98,7 @@ def run_evaluation(domain: str) -> dict:
             )
             results = []
 
-        eval_result = evaluate_question(q, results, is_pdf_domain=is_pdf)
+        eval_result = evaluate_question(q, results, is_pdf_domain=is_pdf, config=qcfg)
         evaluations.append(eval_result)
 
     summary = aggregate_domain_scores(domain, evaluations)

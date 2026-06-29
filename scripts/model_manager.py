@@ -69,6 +69,12 @@ _EMBEDDING_MODEL_RE = re.compile(
     r"- Embedding-Model:\s*(.+?)(?:\s*\(.*\))?\s*$",
     re.MULTILINE,
 )
+_SOURCE_TYPES_RE = re.compile(
+    r"- Source-Types:\s*(.+?)\s*$",
+    re.MULTILINE,
+)
+
+DEFAULT_SOURCE_TYPES = ["repo"]
 
 
 def get_domain_config(domain: str) -> dict:
@@ -80,6 +86,8 @@ def get_domain_config(domain: str) -> dict:
             "collection": "<domain>_knowledge",
             "chroma_path": Path,
             "bm25_path": Path,
+            "source_types": list[str]   (e.g. ["pdf"], ["repo"], or
+                ["pdf", "repo"]; default ["repo"] when field missing),
         }
     """
     domain_md = Path(__file__).resolve().parent.parent / "domains" / domain / "domain.md"
@@ -90,21 +98,32 @@ def get_domain_config(domain: str) -> dict:
             "collection": f"{domain}_knowledge",
             "chroma_path": domain_chroma_path(domain),
             "bm25_path": domain_bm25_path(domain),
+            "source_types": list(DEFAULT_SOURCE_TYPES),
         }
 
     text = domain_md.read_text(encoding="utf-8")
     meta_block = _DOMAIN_META_RE.search(text)
     model_name = DEFAULT_MODEL_NAME
+    source_types: list[str] = list(DEFAULT_SOURCE_TYPES)
     if meta_block:
-        m = _EMBEDDING_MODEL_RE.search(meta_block.group(1))
+        block = meta_block.group(1)
+        m = _EMBEDDING_MODEL_RE.search(block)
         if m:
             model_name = m.group(1).strip()
+
+        sm = _SOURCE_TYPES_RE.search(block)
+        if sm:
+            raw = sm.group(1).strip()
+            parsed = [t.strip() for t in raw.split(",") if t.strip()]
+            if parsed:
+                source_types = parsed
 
     return {
         "embedding_model": model_name,
         "collection": f"{domain}_knowledge",
         "chroma_path": domain_chroma_path(domain),
         "bm25_path": domain_bm25_path(domain),
+        "source_types": source_types,
     }
 
 
