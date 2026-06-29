@@ -27,3 +27,10 @@ domains/*/sources/raw/
 .coverage
 .coverage.*
 htmlcov/
+
+# Quality Evaluation Platform — generated reports (2026-06-29)
+# Golden dataset (quality/golden/*.yaml) IS tracked, only generated
+# report artifacts in quality/reports/ are ignored.
+quality/reports/*.md
+quality/reports/*.json
+!quality/reports/.gitkeep

@@ -13,6 +13,19 @@ These packages are imported by the MIT-licensed Knowledge Hub runtime code.
 | mcp | MIT | Model Context Protocol server |
 | rank-bm25 | Apache-2.0 | BM25 sparse retrieval |
 
+## MIT-Licensed Dependencies (Dev / Quality Evaluation Platform)
+
+These packages are imported ONLY by the development-time Quality
+Evaluation Platform (`scripts/quality/`, `tests/quality/`) and the
+test suite. The MIT-licensed runtime code NEVER imports them.
+
+| Package | License | Purpose |
+|---------|---------|---------|
+| pyyaml | MIT | YAML parser for Golden Dataset files (`quality/golden/*.yaml`) and pytest configuration |
+| pytest | MIT | Test runner |
+| pytest-asyncio | Apache-2.0 | Async test support for MCP contract tests |
+| pytest-cov | MIT | Coverage reporting |
+
 ## AGPL-Licensed Dependencies (Build Tool Only)
 
 These packages are imported ONLY by `scripts/parse_pdf_to_markdown.py`,

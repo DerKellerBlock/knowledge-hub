@@ -10,3 +10,7 @@
 pytest>=8.0.0,<9.0.0
 pytest-asyncio>=0.23.0,<1.0.0
 pytest-cov>=4.0.0,<6.0.0
+
+# Quality Evaluation Platform (Phase 1, 2026-06-29)
+# See docs/superpowers/specs/2026-06-29-knowledge-hub-quality-evaluation-platform-design.md
+pyyaml>=6.0.0,<7.0.0

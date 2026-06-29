@@ -5,6 +5,7 @@ markers = [
     "integration: tests with a temporary ChromaDB and dummy data (~60s)",
     "e2e: regression tests against the prebuilt real index (~30s)",
     "mcp: MCP contract tests calling actual tool functions (~30s)",
+    "quality: Golden Dataset evaluation tests with mock results (~5s)",
 ]
 addopts = "--strict-markers"
 pythonpath = [".", "scripts"]

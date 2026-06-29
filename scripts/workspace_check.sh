@@ -62,10 +62,14 @@ required_dirs=(
   "docs/superpowers/plans"
   "docs/superpowers/explanations"
   "docs/superpowers/retrospectives"
+  "docs/superpowers/quality-reports"
   "tests/unit"
   "tests/integration"
   "tests/e2e"
   "tests/mcp"
+  "tests/quality"
+  "quality/golden"
+  "scripts/quality"
 )
 
 for file in "${required_files[@]}"; do

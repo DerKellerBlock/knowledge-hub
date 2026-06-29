@@ -57,6 +57,7 @@ pytest -m unit
 pytest -m integration
 pytest -m e2e
 pytest -m mcp
+pytest -m quality
 pytest --cov=scripts --cov=mcp_servers/knowledge_hub --cov-report=term-missing
 ```
 

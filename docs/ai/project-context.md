@@ -66,4 +66,4 @@ python -m mcp_servers.knowledge_hub.server --help
 - Knowledge Hub remains a Single-Repo project.
 - OpenCode agent prompts are being migrated from inline `.opencode/opencode.json` definitions to `.opencode/agents/*.md` files.
 - `test-hub-feature` is planned as a combined pytest + Knowledge-QA report-only agent.
-- Ansatz C, a durable Knowledge Quality Evaluation Platform with Golden Dataset and quality reports, is intentionally deferred to a separate future feature.
+- Quality Evaluation Platform Phase 1 implemented (2026-06-29): Golden Dataset structure, `pytest -m quality` marker, mock-result evaluation tests. Full evaluation pipeline (Ansatz C) deferred to future phases.
