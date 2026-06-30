@@ -187,7 +187,36 @@ Keine. Alle 5 Maßnahmen sind unabhängig voneinander implementierbar. Empfohlen
 - [ ] `THIRD_PARTY_LICENSES.md` aktualisiert (jina-reranker CC-BY-NC-4.0)
 - [ ] `docs/ai/changelog.md` aktualisiert
 
+## Entscheidungen (Noah, 2026-06-30)
+
+### Entscheidung 1.1: CI Python-Version und Runner
+**Frage:** Soll eine Python-Versions-Matrix (3.11, 3.12, 3.13) laufen? Soll macOS getestet werden?
+**Entscheidung:** Python 3.11 only auf ubuntu-latest. Keine Versions-Matrix, kein macOS-Runner.
+**Begründung:** 3.11 ist die requirements.txt-Vorgabe. Multi-Version-Matrix bringt false positives bei Versionsdrift (ChromaDB-Verhalten) und 50% mehr CI-Laufzeit für eine Solo-Entwicklung. macOS-Runner sind 10x teurer und lokal läuft macOS bereits. Wartungsarm: ein Job, eine Version, ein Setup. Falls später multiple contributors: Matrix auf 3.11+3.12 erweitern.
+
+### Entscheidung 1.2: Reranker-Wechsel-Strategie
+**Frage:** Soll ein Benchmark jina vs. ms-marco vor dem Wechsel laufen? Soll der Reranker per-domain oder global konfigurierbar sein?
+**Entscheidung:** Direkter Wechsel zu jina-reranker-v2-base-multilingual OHNE Vorab-Benchmark. Reranker global konfigurierbar via Umgebungsvariable `KH_RERANKER_MODEL` mit ms-marco als dokumentierten Fallback. Kein per-domain-Reranker.
+**Begründung:** Ein Vorab-Benchmark über 14 Golden-Dataset-Fragen ist statistisch nicht aussagekräftig (n=14). Stattdessen nach dem Wechsel Re-Evaluation aller 14 Fragen; bei Regression Rollback via Env-Var in 30 Sekunden (Reranker ist Query-Time, kein Rebuild nötig). Konfigurierbarkeit via Env-Var ist der nachhaltige Hebel: danach kann ANY Reranker getestet werden ohne Code-Änderung (z.B. bge-reranker-v2-m3 in Phase 3).
+
+### Entscheidung 1.3: BM25-Tokenisierung
+**Frage:** Soll Stemming (Porter) zusätzlich aktiviert werden? Soll eine Stopwort-Liste verwendet werden (welche: Englisch, Deutsch, beide)? Soll CamelCase-Splitting per-domain konfigurierbar sein?
+**Entscheidung:** Nur CamelCase-Splitting implementieren. Kein Porter-Stemmer, keine Stopwort-Liste. Global für alle Domains, nicht per-domain.
+**Begründung:** CamelCase-Splitting ist universell für Code/API-Dokumentation (Godot, DaVinci, Blender, FreeCAD nutzen alle CamelCase) — einmal gebaut, trägt es für jede zukünftige Domain. Porter-Stemmer ist sprachspezifisch (EN vs. DE) und würde Sprach-Erkennung pro Chunk erfordern — Komplexität ohne Gewinn bei CamelCase-API-Namen. Stopwörter: BM25-Okapi hat IDF-basierte Stopwort-Abschwächung bereits eingebaut. Minimalismus ist nachhaltiger als ein Stemming-Framework, das in 2 Jahren debugged werden muss.
+
+### Entscheidung 1.4: Chunk-Overlap
+**Frage:** Soll Overlap per-domain konfigurierbar sein (in domain.md)? Soll markdown_section_chunk auch Overlap bekommen (aktuell kein Overlap zwischen Sektionen — bewusst)?
+**Entscheidung:** Erhöhung global auf 400 Tokens (FALLBACK_OVERLAP_CHARS 800 → 1600), nicht per-domain. markdown_section_chunk bleibt ohne Overlap (bewusst — Sektionen sind semantisch unabhängig).
+**Begründung:** Per-domain-Konfiguration pro Parameter führt zu Konfigurations-Explosion. Globale Werte sind wartungsärmer und konsistent über alle Domains. markdown_section_chunk ohne Overlap ist bewusst: Sektionen sind semantisch unabhängige Einheiten (z.B. ein Gotcha pro Sektion), Overlap würde Code-Snippets überschneiden lassen.
+
+### Entscheidung 1.5: Godot faq.md
+**Frage:** Soll faq.md deutsche Übersetzungen der Fragen enthalten (für BM25-Cross-Lingual)? Soll eine neue Golden-Dataset-Frage hinzugefügt werden, die faq.md erwartet? Weitere Themen über die 3 TODOs hinaus?
+**Entscheidung:** faq.md in deutscher Prosa mit englischen Code-Snippets (wie gotchas.md/tips.md), KEINE separaten deutschen Frage-Übersetzungen. EINE neue Golden-Dataset-Frage (godot-008) hinzufügen, die faq.md als expected_source_file erwartet. Nur die 3 bestehenden TODO-Themen (Lifecycle, Data Saving, 3D Visibility) füllen — keine zusätzlichen Themen.
+**Begründung:** Code-Snippets liefern englische BM25-Tokens (velocity, save, visible) — das reicht für Cross-Lingual-Matching, ohne manuelle Übersetzungen pflegen zu müssen. Eine neue Golden-Dataset-Frage (godot-008) sichert, dass faq.md nach dem Füllen in der Evaluation geprüft wird. Drei Themen sind fokussiert und decken häufige Anfängerfragen ab; weitere Themen folgen organisch.
+
 ## Offene Fragen für Noah (zusammengefasst)
+
+> Siehe Entscheidungen (Noah, 2026-06-30) oben für die Antworten.
 
 1. CI: Python-Versions-Matrix? macOS-Runner?
 2. Reranker: Per-domain oder global? Benchmark vor Wechsel? Fallback erhalten?

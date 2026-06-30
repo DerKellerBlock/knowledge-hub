@@ -169,7 +169,36 @@ Empfohlene Reihenfolge:
 - [ ] `THIRD_PARTY_LICENSES.md` aktualisiert (BGE-M3 MIT)
 - [ ] `docs/ai/changelog.md` aktualisiert
 
+## Entscheidungen (Noah, 2026-06-30)
+
+### Entscheidung 2.1: BGE-M3 Dimensionalität
+**Frage:** Soll BGE-M3 mit vollen 1024d oder mit Matryoshka auf 768d/512d verwendet werden?
+**Entscheidung:** Volle 1024 Dimensionen. Keine Matryoshka-Reduktion.
+**Begründung:** ~25k Chunks → ChromaDB 700 MB ist unkritisch lokal, selbst bei 100k Chunks wären 2-3 GB ok. Volle 1024d = volle Qualität; Matryoshka verliert 2-5% Retrieval-Qualität. Architektur-Entscheidung: einmal auf 1024d festgelegt, ChromaDB so dimensioniert. Später reduzieren würde weiteren Rebuild erfordern. Lieber einmal richtig bauen.
+
+### Entscheidung 2.2: BGE-M3 Sparse-Retrieval Aktivierung
+**Frage:** Soll das Sparse-Retrieval-Feature von BGE-M3 direkt aktiviert werden (Phase 3) oder erst später? Wie wird der Modellaustausch in model_manager.py atomic (rollback-safe)?
+**Entscheidung:** Sparse-Retrieval erst in Phase 3 (wie ursprünglich geplant), nicht vorzeitig. Modellaustausch atomic via `KH_EMBEDDING_MODEL`-Env-Var mit all-mpnet-base-v2 als Fallback. Vor dem Rebuild Backup ALLER Indizes; bei Re-Evaluations-Regression Rollback auf Backup.
+**Begründung:** Sparse-Retrieval erfordert ChromaDB nativen Sparse-Vector-Support (stabil ab ~1.6), der in Phase 2 noch nicht garantiert ist. Phasen-Trennung hält Phase 2 fokussiert auf Dense-Embedding-Wechsel. Atomic-Rollback via Env-Var + Backup entspricht dem etablierten Muster aus Entscheidung 1.2.
+
+### Entscheidung 2.3: Quality Gate Scope (DaVinci in CI)
+**Frage:** Soll der Quality Gate auch DaVinci prüfen (DaVinci-PDFs sind via LFS — CI muss LFS pullen)?
+**Entscheidung:** Ja, Quality Gate prüft BEIDE Domains (godot + davinci_resolve). LFS-Cache via actions/cache für die packed-files/PDFs.
+**Begründung:** DaVinci ohne Quality Gate = blinde Hälfte des Hubs; Regressionen würden erst in realer Nutzung auffallen. LFS in CI ist gelöst (actions/cache mit ~/.git-lfs als Cache-Key; erster Run ~50 MB Download, danach cache-hit, keine Runtime-Strafe). Symmetrie: godot und davinci identisch behandelt; bei zukünftigen Domains (Blender/FreeCAD) wird der Workflow erweitert, kein DaVinci-Sonderkonstrukt.
+
+### Entscheidung 2.4: Baseline-Update-Strategie für Quality Gate
+**Frage:** Wie wird die Baseline aktualisiert (manuell nach jeder erfolgreichen Iteration, oder automatisch wenn Score besser als Baseline)?
+**Entscheidung:** Manuell nach jeder erfolgreichen Iteration. Baseline-Datei (`quality/baselines/<domain>-latest.json`) wird von Noah committed, wenn eine Iteration die Scores verbessert oder stabilisiert hat. CI vergleicht nur gegen diese committed Baseline und blockt bei Regression (avg_composite < baseline − 0.1 ODER eine Frage von pass → weak/fail). Kein automatisches Baseline-Update (verhindert Score-Creep durch zufällige Verbesserungen).
+**Begründung:** Automatisches Baseline-Update würde schleichende Verschlechterungen verdecken (einmal weak → neue Baseline → nächstes weak → neue Baseline). Manuelle Updates zwingen Noah, Score-Veränderungen bewusst zu reviewen. Schwellen 0.1 für avg_composite und pass→weak/fail für einzelne Fragen sind streng genug für Regression-Detection, locker genug für nicht-deterministische Reranker-Schwankungen.
+
+### Entscheidung 2.5: Golden Dataset Erweiterung
+**Frage:** Soll es ein Template/CLI für Bulk-Import geben? Soll die Difficulty-Verteilung festgelegt sein (z.B. 30% easy, 50% medium, 20% hard)?
+**Entscheidung:** Kein Bulk-Import-CLI (add_question.py reicht). Difficulty-Verteilung: ~30% easy, 50% medium, 20% hard (orientiert an realer Nutzung). Pro Domain auf 20-30 Fragen ausbauen.
+**Begründung:** Bulk-Import-CLI wäre Overengineering für ~25 manuell kuratierte Fragen pro Domain. Difficulty-Verteilung 30/50/20 spiegelt reale Query-Verteilung (mehr medium als hard). 20-30 Fragen geben statistische Power für Regression-Detection (bei n=14 ist eine Frage 7% — bei n=25 nur 4%).
+
 ## Offene Fragen für Noah (zusammengefasst)
+
+> Siehe Entscheidungen (Noah, 2026-06-30) oben für die Antworten.
 
 1. BGE-M3: Volle 1024d oder Matryoshka? Sparse-Retrieval jetzt oder Phase 3? Atomic-Rollback-Strategie? Benchmark vor Wechsel?
 2. Late Chunking: Kapitelweise oder dokumentenweit? Chunk-Granularität? Auch für Godot?

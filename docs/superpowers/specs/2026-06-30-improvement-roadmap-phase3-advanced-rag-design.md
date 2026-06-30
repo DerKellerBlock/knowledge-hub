@@ -203,7 +203,41 @@ Empfohlene Reihenfolge:
 - [ ] Re-Evaluation bestätigt keine signifikanten Regressionen
 - [ ] `docs/ai/changelog.md` aktualisiert
 
+## Entscheidungen (Noah, 2026-06-30)
+
+### Entscheidung 3.1: Lokales LLM für Contextual Retrieval
+**Frage:** Welches lokale LLM (Qwen 2.5 7B, Llama 3 8B, Mistral 7B)? Soll Kontext generiert werden für alle Chunks oder nur für Fallback/PDF-Chunks? Soll Kontext in ChromaDB-Metadaten oder im text-Feld gespeichert werden?
+**Entscheidung:** Qwen3-14B als primäres LLM, Qwen3-8B als Fallback (über KH_LLM_MODEL-Env-Var). Contextual Retrieval für ALLE Chunks (Godot-RST, DaVinci-PDF, Personal Notes), nicht nur Fallback/PDF. Kontext im text-Feld gespeichert (als Prefix vor dem Original-Chunk-Text), nicht in separaten Metadaten. MLX-Backend (mlx-lm) primär für Apple Silicon, llama-cpp-python als Cross-Platform-Fallback.
+**Begründung:** Qwen3-Serie ist 2026 der Open-Source-Standard für multilingual (DE+EN+ZH+50 weitere), Apache 2.0, konstante Weiterentwicklung (Qwen3.5/3.6/3.7 in den letzten Monaten). 14B ist der Sweet-Spot auf Apple Silicon (M2/M3/M4, 16-32 GB RAM, ~8 GB quantisiert, 15-25 tokens/s). Einheitlichkeit: alle Chunks bekommen Kontext = einheitliche Architektur, keine Zwei-Klassen-Chunks (strukturiert vs. unstrukturiert). LLM kann Verbindungen sehen, die section_path allein nicht zeigt. Kontext im text-Feld bewahrt Semantik und wird von Embedding/Cross-Encoder mit verarbeitet. MLX nativ für Apple Silicon (2-3x schneller als llama.cpp auf M-Chips). NICHT Llama 3/4 (EN-fokussiert), NICHT Mistral (kleinere Modellfamilie), NICHT GLM (weniger Community-Ecosystem für lokale Deployment).
+
+### Entscheidung 3.2: RAGAS Judge-LLM
+**Frage:** Welches LLM als Judge (selbes wie 3.1 oder kleiner)? Soll RAGAS optional sein (Flag) oder default? Wie wird expected_answer kuratiert?
+**Entscheidung:** Qwen3-14B als RAGAS-Judge (selbes Modell wie Contextual Retrieval, via KH_LLM_MODEL). KEIN separates Judge-LLM. RAGAS default-off via Flag `--with-answer-quality` in run_evaluation.py (optional, da langsam). expected_answer: Noah kuratiert Ground-Truth-Antworten für die Golden-Dataset-Fragen manuell (kein LLM-Generierung der Ground-Truth).
+**Begründung:** Ein Modell für Contextual Retrieval + RAGAS = eine KH_LLM_MODEL-Env-Var, ein Model-Download (~8 GB quantisiert), eine Deployment-Pipeline. Qwen3-14B ist stark genug als Judge (RAGAS benötigt Reasoning, 14B reicht für Faithfulness). RAGAS default-off verhindert langsame CI-Läufe und erlaubt Noah, Answer-Quality bei Bedarf zu evaluieren. expected_answer manuell kuratiert (keine zirkuläre LLM-Evaluierung von LLM-Generiertem).
+
+### Entscheidung 3.3: DaVinci-Themen-Priorität
+**Frage:** Soll DaVinci-Update GitHub-Action geben (wie Godot)? Welche DaVinci-Themen sind Noah wichtig (Color Page, Fusion, Edit, Audio)?
+**Entscheidung:** DaVinci-Personal-Notes in dieser Reihenfolge: (1) ui-map.md für alle 4 Pages parallel (UI-Locations, 30-60 Min), (2) Color Page (gotchas.md + workflow-notes.md) — höchste Nutzung, komplexeste UI, (3) Edit Page (workflow-notes.md) — häufigster Workflow, (4) Fusion (gotchas.md) — Nischen-Feature, (5) Audio/Fairlight (gotchas.md) — letzte Priorität. KEINE GitHub-Action für DaVinci (PDFs manuell von Blackmagic-Website).
+**Begründung:** Color und Edit decken ~80% der realen DaVinci-Nutzung ab. ui-map.md zuerst weil mechanisch erfassbar (Screenshot + Page-Tab + Panel-Name). Reihenfolge nach Hub-Wert, nicht nach Lernkurve. Golden-Dataset-Fragen parallel zu Notes: pro Page 3-5 Fragen. DaVinci-PDFs sind statisch (Blackmagic-Website), kein automatisches Upstream-Update nötig im Gegensatz zu Godot (Open-Source-Repo).
+
+### Entscheidung 3.4: BGE-M3 Sparse Retrieval (BM25-Ersatz) Fallback
+**Frage:** Soll BM25 als Fallback erhalten bleiben (falls ChromaDB Sparse unstabil)? Wie wird RRF zwischen Dense und Sparse von BGE-M3 kalibriert?
+**Entscheidung:** BM25 als Fallback erhalten (via KH_SPARSE_MODE: "bm25" | "bge-m3-sparse", default "bm25" bis ChromaDB Sparse stable). RRF-Kalibrierung: separater k-Wert für BGE-M3-Sparse vs. BM25 (weil Score-Skalen differieren), empirisch via Re-Evaluation bestimmt.
+**Begründung:** BM25-Fallback sichert gegen instabile ChromaDB-Sparse-Vector-Implementierung. Modus-Umschaltung via Env-Var entspricht etabliertem Muster (KH_RERANKER_MODEL, KH_EMBEDDING_MODEL). RRF-k-Parameter pro Sparse-Quelle separiert, da BGE-M3-Sparse-Scores (normalisiert) andere Skala als BM25-Okapi-Scores (unbounded) haben.
+
+### Entscheidung 3.5: Multi-Modal Retrieval (experimentell)
+**Frage:** Welches Vision-Modell (CLIP, SigLIP, jina-clip-v2)? Soll Bild-Retrieval in den hybriden Search integriert oder separat sein? Aufwand gerechtfertigt?
+**Entscheidung:** Multi-Modal Retrieval DEFERRED (nicht in Phase 3 implementiert). Bleibt als experimenteller Plan in der Spec dokumentiert, aber kein Implementierungsziel. Falls DaVinci-Bild-Retrieval später relevant wird, separate Spec schreiben.
+**Begründung:** Aufwand (1-2 Wochen) steht nicht im Verhältnis zum Nutzen für einen persönlichen Hub mit primär Text-Queries. DaVinci-PDFs haben Screenshots, aber Text-Chunking deckt die meisten Such-Queries ab. Multi-Modal fügt komplexe Dependencies (CLIP-Modell, PIL, Base64-Handling, Cross-Modal-Scoring) hinzu. Lieber Contextual Retrieval (Phase 3.1) zuerst, das alle Domains verbessert, statt DaVinci-spezifisches Bild-Retrieval.
+
+### Entscheidung 3.6: Konfigurierbarkeit via Env-Vars (Querschnitt)
+**Frage:** Wie werden Modelle, Reranker und LLMs konfiguriert, um Modellwechsel ohne Code-Änderung zu erlauben?
+**Entscheidung:** Drei zentrale Env-Vars einführen: `KH_EMBEDDING_MODEL` (default all-mpnet-base-v2, BGE-M3 in Phase 2), `KH_RERANKER_MODEL` (default ms-marco-MiniLM-L-12-v2, jina-reranker-v2 in Phase 1), `KH_LLM_MODEL` (default Qwen3-14B, Fallback Qwen3-8B in Phase 3). Optional `KH_JUDGE_MODEL` (default = KH_LLM_MODEL) und `KH_SPARSE_MODE` (default "bm25"). Alle in config.py zentral verwaltet, in docs/ai/best-practices.md dokumentiert.
+**Begründung:** Konfigurierbarkeit via Env-Vars ist der höchste Nachhaltigkeits-Hebel: danach kann jedes Modell getestet/gewechselt werden ohne Code-Änderung. Einmal gebaut (Phase 1), trägt es für Phase 2 (Embedding-Wechsel), Phase 3 (LLM, Sparse-Mode) und alle zukünftigen Modellwechsel. Defaults sichern Rückwärtskompatibilität (ohne Env-Var = aktuelles Verhalten). Dokumentation in best-practices.md macht es für zukünftige Agenten sichtbar.
+
 ## Offene Fragen für Noah (zusammengefasst)
+
+> Siehe Entscheidungen (Noah, 2026-06-30) oben für die Antworten.
 
 1. Contextual Retrieval: Welches LLM? Alle Chunks oder nur Fallback/PDF? Kontext in Metadaten oder Text? Optional?
 2. RAGAS: Welches Judge-LLM? Optional oder default? `expected_answer`-Kuratierung? Auch in CI?
