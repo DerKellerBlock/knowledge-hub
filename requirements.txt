@@ -11,3 +11,8 @@ chromadb>=0.5.0,<1.0.0
 sentence-transformers>=3.0.0,<4.0.0
 mcp>=1.0.0
 rank-bm25>=0.2.2,<1.0.0
+# einops is required by jina-reranker-v2-base-multilingual's custom code
+# (auto_map in config.json). The default ms-marco MiniLM reranker does
+# not import einops, so installing it is a no-op for legacy installs.
+# See THIRD_PARTY_LICENSES.md ("CC-BY-NC-4.0 Licensed Dependencies").
+einops>=0.7.0,<1.0.0

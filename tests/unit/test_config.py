@@ -1,5 +1,6 @@
 """Unit tests for config.py path helpers."""
 
+import importlib
 from pathlib import Path
 
 from mcp_servers.knowledge_hub.config import (
@@ -86,3 +87,33 @@ def test_bm25_cache_max_is_positive_int():
 def test_chroma_memory_limit_is_bytes():
     assert isinstance(CHROMA_MEMORY_LIMIT_BYTES, int)
     assert CHROMA_MEMORY_LIMIT_BYTES > 0
+
+
+# ── CROSS_ENCODER_MODEL / KH_RERANKER_MODEL env override (Phase 1, 1.2) ──
+
+
+def test_reranker_model_default(monkeypatch):
+    """Without KH_RERANKER_MODEL set, default is the legacy ms-marco MiniLM."""
+    monkeypatch.delenv("KH_RERANKER_MODEL", raising=False)
+    from mcp_servers.knowledge_hub import config as cfg
+
+    importlib.reload(cfg)
+    try:
+        assert cfg.CROSS_ENCODER_MODEL == "cross-encoder/ms-marco-MiniLM-L-12-v2"
+    finally:
+        # Reload once more so the module-level constant is the import-time
+        # value (the real env, not a test artifact) for subsequent tests.
+        importlib.reload(cfg)
+
+
+def test_reranker_model_env_var_override(monkeypatch):
+    """KH_RERANKER_MODEL env var overrides the default reranker at import time."""
+    monkeypatch.setenv("KH_RERANKER_MODEL", "jinaai/jina-reranker-v2-base-multilingual")
+    from mcp_servers.knowledge_hub import config as cfg
+
+    importlib.reload(cfg)
+    try:
+        assert cfg.CROSS_ENCODER_MODEL == "jinaai/jina-reranker-v2-base-multilingual"
+    finally:
+        monkeypatch.delenv("KH_RERANKER_MODEL", raising=False)
+        importlib.reload(cfg)

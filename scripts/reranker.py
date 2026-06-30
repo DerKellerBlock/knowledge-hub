@@ -2,8 +2,19 @@
 """
 Cross-Encoder reranking for Knowledge Hub (Stage 2 retrieval).
 
-Model: cross-encoder/ms-marco-MiniLM-L-12-v2 (~130 MB).
+Model: configurable via CROSS_ENCODER_MODEL (see config.py). Default
+``cross-encoder/ms-marco-MiniLM-L-12-v2`` (~130 MB). Set
+``KH_RERANKER_MODEL=jinaai/jina-reranker-v2-base-multilingual`` to use the
+multilingual reranker (~1.1 GB, CC-BY-NC-4.0).
+
 Loaded lazily via model_manager.get_reranker().
+
+Note on score scale: ``ms-marco-MiniLM-L-12-v2`` returns raw logits
+(typically in the range −10 to +10). ``jina-reranker-v2-base-multilingual``
+returns sigmoid scores in the range 0 to 1. We sort descending in both
+cases (higher = more relevant). Downstream consumers (RRF fusion, hybrid
+search) only use the score as a sort key — there is no threshold on the
+absolute score, so the two score scales are drop-in compatible.
 """
 
 import logging

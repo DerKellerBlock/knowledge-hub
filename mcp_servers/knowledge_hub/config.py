@@ -1,5 +1,6 @@
 """Configuration for Knowledge Hub MCP Server."""
 
+import os
 from pathlib import Path
 
 # Repository root (knowledge-hub/)
@@ -9,8 +10,16 @@ SCRIPTS_DIR = HUB_ROOT / "scripts"
 CHROMA_DIR = HUB_ROOT / "chromadb_data"
 PERSONAL_DIR = HUB_ROOT / "personal"
 
-# Cross-encoder model (Stage 2 reranking)
-CROSS_ENCODER_MODEL = "cross-encoder/ms-marco-MiniLM-L-12-v2"
+# Cross-encoder model (Stage 2 reranking).
+# Configurable via KH_RERANKER_MODEL environment variable.
+# Default keeps the legacy ms-marco MiniLM so existing installs work
+# without a ~1.1 GB model download. Recommended override:
+#   jinaai/jina-reranker-v2-base-multilingual (multilingual, 1024 tokens,
+#   CC-BY-NC-4.0 — see THIRD_PARTY_LICENSES.md).
+CROSS_ENCODER_MODEL = os.environ.get(
+    "KH_RERANKER_MODEL",
+    "cross-encoder/ms-marco-MiniLM-L-12-v2",
+)
 
 # Default embedding model (can be overridden per-domain in domain.md)
 DEFAULT_MODEL_NAME = "all-mpnet-base-v2"

@@ -138,9 +138,19 @@ def get_embedder(domain: str) -> SentenceTransformer:
 
 
 def get_reranker() -> CrossEncoder:
-    """Lazy-load cross-encoder. Only loads on first hybrid search."""
+    """Lazy-load cross-encoder. Only loads on first hybrid search.
+
+    ``trust_remote_code=True`` is required for jina-reranker-v2-base-multilingual
+    because that model ships custom code (``auto_map`` in config.json) which
+    HuggingFace refuses to load without explicit trust. The legacy
+    ms-marco MiniLM has no ``auto_map`` and ignores this flag, so the same
+    call works for both models.
+    """
     if "reranker" not in _model_cache:
-        _model_cache["reranker"] = CrossEncoder(CROSS_ENCODER_MODEL)
+        _model_cache["reranker"] = CrossEncoder(
+            CROSS_ENCODER_MODEL,
+            trust_remote_code=True,  # required for jina-reranker-v2 custom code
+        )
     return _model_cache["reranker"]
 
 

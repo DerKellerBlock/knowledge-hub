@@ -12,6 +12,7 @@ These packages are imported by the MIT-licensed Knowledge Hub runtime code.
 | sentence-transformers | Apache-2.0 | Embedding models for semantic search |
 | mcp | MIT | Model Context Protocol server |
 | rank-bm25 | Apache-2.0 | BM25 sparse retrieval |
+| einops | Apache-2.0 | Tensor reshaping utilities — imported by the jina-reranker-v2 custom code (see CC-BY-NC-4.0 section below). No-op for the default ms-marco MiniLM reranker. |
 
 ## MIT-Licensed Dependencies (Dev / Quality Evaluation Platform)
 
@@ -25,6 +26,33 @@ test suite. The MIT-licensed runtime code NEVER imports them.
 | pytest | MIT | Test runner |
 | pytest-asyncio | Apache-2.0 | Async test support for MCP contract tests |
 | pytest-cov | MIT | Coverage reporting |
+
+## CC-BY-NC-4.0 Licensed Dependencies (Runtime, Configurable)
+
+These model weights are downloaded on demand at query time and are
+**optional** — the Knowledge Hub defaults to the MIT-context ms-marco
+MiniLM reranker (see above) and only switches to these weights if the
+operator sets `KH_RERANKER_MODEL=<id>`. They are loaded by the
+MIT-licensed `sentence-transformers` library, but the model artifacts
+themselves carry a non-commercial license.
+
+Acceptable for Noah's personal local Hub (no commercial distribution).
+A shared or commercial deployment would need a different reranker or a
+commercial Jina AI license.
+
+### jinaai/jina-reranker-v2-base-multilingual
+
+- **Repository:** https://huggingface.co/jinaai/jina-reranker-v2-base-multilingual
+- **License:** CC-BY-NC-4.0 (Creative Commons Attribution-NonCommercial 4.0)
+- **Copyright:** Jina AI GmbH
+- **Usage:** Optional Stage-2 reranker. Multilingual (cross-lingual DE↔EN),
+  1024 token context, 278M parameters, ~1.1 GB download on first use.
+  Selectable via `KH_RERANKER_MODEL=jinaai/jina-reranker-v2-base-multilingual`.
+- **License file:** https://huggingface.co/jinaai/jina-reranker-v2-base-multilingual/blob/main/LICENSE
+- **Custom code:** The model ships an `auto_map` in `config.json`; we
+  pass `trust_remote_code=True` to `CrossEncoder(...)` in
+  `scripts/model_manager.py::get_reranker()`. The default ms-marco
+  MiniLM has no `auto_map` and ignores this flag.
 
 ## AGPL-Licensed Dependencies (Build Tool Only)
 
