@@ -6,7 +6,13 @@ import pytest
 
 pytestmark = pytest.mark.unit
 
-from parser_base import Chunk, fallback_chunk, FALLBACK_CHUNK_CHARS, FALLBACK_OVERLAP_CHARS
+from parser_base import (
+    Chunk,
+    fallback_chunk,
+    markdown_section_chunk,
+    FALLBACK_CHUNK_CHARS,
+    FALLBACK_OVERLAP_CHARS,
+)
 
 
 class TestChunkToMetadata:
@@ -167,3 +173,269 @@ class TestFallbackChunk:
     def test_default_chunk_and_overlap_constants(self):
         assert FALLBACK_CHUNK_CHARS == 8000
         assert FALLBACK_OVERLAP_CHARS == 800
+
+
+class TestMarkdownSectionChunk:
+    """Tests for markdown_section_chunk() — per-section chunking for personal notes."""
+
+    # ── Test 1: Basic section splitting ─────────────────────────────────
+    def test_file_with_headers_produces_section_chunks(self):
+        text = (
+            "# Title\n"
+            "\n"
+            "Preamble paragraph that is long enough to be indexed.\n"
+            "\n"
+            "## First section\n"
+            "Content of first section goes here and is long enough.\n"
+            "\n"
+            "## Second section\n"
+            "Content of second section goes here and is also long enough.\n"
+        )
+        chunks = markdown_section_chunk(
+            text, domain="test", source_type="personal",
+            source_file="notes.md", category="notes",
+        )
+        # 1 preamble + 2 sections
+        assert len(chunks) == 3
+        assert chunks[0].chunk_type is None  # preamble
+        assert chunks[1].chunk_type == "personal_section"
+        assert chunks[2].chunk_type == "personal_section"
+
+    # ── Test 2: Fallback if no `## ` header (Pflicht-Test Blind-Spot) ───
+    def test_file_without_headers_falls_back(self):
+        text = "Just a plain paragraph without any markdown headers at all.\n" * 20
+        chunks = markdown_section_chunk(
+            text, domain="test", source_type="personal",
+            source_file="plain.md", category="plain",
+        )
+        # fallback_chunk is called → returns sliding-window chunks with
+        # chunk_id prefix "test::fallback::..."
+        assert len(chunks) >= 1
+        assert all(c.chunk_id.startswith("test::fallback::") for c in chunks)
+        # No personal_section chunk_type should be present
+        assert all(c.chunk_type != "personal_section" for c in chunks)
+
+    # ── Test 3: Empty preamble is skipped (Pflicht-Test Blind-Spot) ─────
+    def test_preamble_empty_is_skipped(self):
+        # File starts directly with `## ` → no preamble
+        text = (
+            "## Section One\n"
+            "Content of section one that is definitely long enough.\n"
+        )
+        chunks = markdown_section_chunk(
+            text, domain="test", source_type="personal",
+            source_file="notes.md", category="notes",
+        )
+        assert len(chunks) == 1
+        assert chunks[0].chunk_type == "personal_section"
+        assert chunks[0].name == "Section One"
+
+    # ── Test 4: Short preamble is skipped (defensive Skip) ──────────────
+    def test_preamble_short_is_skipped(self):
+        text = (
+            "# Title\n"
+            "short\n"  # < 50 chars after strip
+            "## First section\n"
+            "Content of first section that is definitely long enough.\n"
+        )
+        chunks = markdown_section_chunk(
+            text, domain="test", source_type="personal",
+            source_file="notes.md", category="notes",
+        )
+        # preamble skipped (too short), only 1 section
+        assert len(chunks) == 1
+        assert chunks[0].chunk_type == "personal_section"
+        assert chunks[0].name == "First section"
+
+    # ── Test 5: Short section is skipped (defensive Skip) ──────────────
+    def test_section_short_is_skipped(self):
+        text = (
+            "## Good section\n"
+            "This section has enough content to be indexed properly.\n"
+            "\n"
+            "## TODO\n"  # very short, only contains a placeholder
+            "TODO\n"
+            "\n"
+            "## Another good section\n"
+            "Another section with enough content for the index.\n"
+        )
+        chunks = markdown_section_chunk(
+            text, domain="test", source_type="personal",
+            source_file="notes.md", category="notes",
+        )
+        # Middle "## TODO" section skipped (< 50 chars after strip)
+        names = [c.name for c in chunks]
+        assert "Good section" in names
+        assert "Another good section" in names
+        assert "TODO" not in names
+        assert len(chunks) == 2
+
+    # ── Test 6: Section name extracted (without `## ` prefix) ──────────
+    def test_section_name_extracted(self):
+        text = (
+            "## Jolt Physics + CharacterBody3D\n"
+            "Body text that is long enough to be indexed properly.\n"
+        )
+        chunks = markdown_section_chunk(
+            text, domain="test", source_type="personal",
+            source_file="gotchas.md", category="gotchas",
+        )
+        assert len(chunks) == 1
+        assert chunks[0].name == "Jolt Physics + CharacterBody3D"
+
+    # ── Test 7: chunk_type is "personal_section" ────────────────────────
+    def test_chunk_type_is_personal_section(self):
+        text = (
+            "## Heading\n"
+            "Body content that is long enough to be indexed properly.\n"
+        )
+        chunks = markdown_section_chunk(
+            text, domain="test", source_type="personal",
+            source_file="notes.md", category="notes",
+        )
+        assert chunks[0].chunk_type == "personal_section"
+
+    # ── Test 8: line_start / line_end correct ───────────────────────────
+    def test_line_numbers_correct(self):
+        # Note: section bodies must be >= 50 chars after .strip() or the
+        # defensive skip kicks in. Build sections deliberately long.
+        text = (
+            "# Title\n"                            # line 1
+            "\n"                                   # line 2
+            "Preamble paragraph that is long enough to be kept by the indexer.\n"  # line 3
+            "\n"                                   # line 4
+            "## Section A\n"                       # line 5
+            "Body A content that is long enough to be indexed properly.\n"  # line 6
+            "More body A content spread over multiple lines.\n"  # line 7
+            "\n"                                   # line 8
+            "## Section B\n"                       # line 9
+            "Body B content that is long enough to be indexed properly.\n"  # line 10
+            "More body B content spread over multiple lines.\n"  # line 11
+        )
+        chunks = markdown_section_chunk(
+            text, domain="test", source_type="personal",
+            source_file="notes.md", category="notes",
+        )
+        assert len(chunks) == 3
+        # Preamble: lines 1-4
+        assert chunks[0].line_start == 1
+        # Section A starts at line 5
+        assert chunks[1].line_start == 5
+        assert chunks[1].line_end >= chunks[1].line_start
+        # Section B starts at line 9
+        assert chunks[2].line_start == 9
+        assert chunks[2].line_end >= chunks[2].line_start
+
+    # ── Test 9: Large section falls back to fallback_chunk ─────────────
+    def test_large_section_falls_back_to_sliding_window(self):
+        # Build a single `## ` section that exceeds max_section_chars
+        big_body = "x" * 200
+        text = (
+            "## Huge section\n"
+            + big_body + "\n"
+            + "## Small section\n"
+            + "Small section content that is long enough.\n"
+        )
+        chunks = markdown_section_chunk(
+            text, domain="test", source_type="personal",
+            source_file="notes.md", category="notes",
+            max_section_chars=100,  # tiny threshold to force sub-chunking
+        )
+        # The huge section is split into multiple sub-chunks by
+        # fallback_chunk; the small section remains one chunk.
+        assert len(chunks) >= 2
+        # All chunks must preserve the chunk_id_in_file sequence
+        for i, c in enumerate(chunks):
+            assert c.chunk_id_in_file == i
+            assert c.source_type == "personal"
+        # At least one chunk must come from the huge section
+        assert any(c.text.startswith("## Huge section") for c in chunks)
+
+    # ── Test 10: source_type preserved as "personal" ────────────────────
+    def test_source_type_preserved(self):
+        text = (
+            "## A\n"
+            "Content of A that is long enough.\n"
+            "\n"
+            "## B\n"
+            "Content of B that is also long enough.\n"
+        )
+        chunks = markdown_section_chunk(
+            text, domain="test", source_type="personal",
+            source_file="notes.md", category="notes",
+        )
+        assert all(c.source_type == "personal" for c in chunks)
+
+    # ── Test 11: chunk_id_in_file increments from 0 ────────────────────
+    def test_chunk_id_in_file_increments(self):
+        # Note: section bodies must be >= 50 chars after .strip() or the
+        # defensive skip kicks in.
+        text = (
+            "Preamble line one that is long enough to be kept by the indexer.\n"
+            "\n"
+            "## A\n"
+            "Content of A that is long enough for the indexer to keep it.\n"
+            "\n"
+            "## B\n"
+            "Content of B that is long enough for the indexer to keep it.\n"
+            "\n"
+            "## C\n"
+            "Content of C that is long enough for the indexer to keep it.\n"
+        )
+        chunks = markdown_section_chunk(
+            text, domain="test", source_type="personal",
+            source_file="notes.md", category="notes",
+        )
+        # preamble + 3 sections = 4 chunks
+        assert len(chunks) == 4
+        for i, c in enumerate(chunks):
+            assert c.chunk_id_in_file == i
+            assert c.chunk_id == f"test::personal::notes::{i}"
+
+    # ── Test 12: gotchas.md real content splits into sections ──────────
+    def test_gotchas_md_real_content(self):
+        from pathlib import Path
+        gotchas_path = Path(__file__).resolve().parents[2] / "domains" / "godot" / "personal" / "gotchas.md"
+        if not gotchas_path.exists():
+            pytest.skip("gotchas.md not present in repo")
+        text = gotchas_path.read_text(encoding="utf-8")
+        chunks = markdown_section_chunk(
+            text, domain="godot", source_type="personal",
+            source_file="gotchas.md", category="gotchas",
+        )
+        # 1 preamble + 7 `## ` sections = 8 chunks
+        assert len(chunks) == 8
+        # The 7 sections should have their headings as `name`
+        section_names = [c.name for c in chunks if c.chunk_type == "personal_section"]
+        assert "GLB-Import Scale mit Meshy" in section_names
+        assert "Jolt Physics + CharacterBody3D" in section_names
+        # The preamble has chunk_type None and name None
+        preamble = chunks[0]
+        assert preamble.chunk_type is None
+        assert preamble.name is None
+
+    # ── Test 13: `### ` (level-3) is NOT treated as a split point ──────
+    def test_h3_headers_not_split(self):
+        text = (
+            "## Top section\n"
+            "Intro paragraph for the top section, long enough.\n"
+            "\n"
+            "### Sub heading\n"
+            "Content under sub heading.\n"
+            "\n"
+            "More body content under sub heading, definitely long enough.\n"
+            "\n"
+            "## Next section\n"
+            "Content of next section, definitely long enough.\n"
+        )
+        chunks = markdown_section_chunk(
+            text, domain="test", source_type="personal",
+            source_file="notes.md", category="notes",
+        )
+        # Only 2 chunks: `## Top section` (containing `### Sub heading`)
+        # and `## Next section`. The `### Sub heading` does NOT split.
+        assert len(chunks) == 2
+        assert chunks[0].name == "Top section"
+        assert chunks[1].name == "Next section"
+        # The level-3 header text must still appear in the first chunk's text
+        assert "### Sub heading" in chunks[0].text

@@ -221,3 +221,141 @@ def fallback_chunk(
         start += (chunk_size - overlap)
 
     return chunks
+
+
+# ── Markdown section chunking (personal notes) ────────────────────────────
+
+# Split Markdown at level-2 headers. The look-ahead (?=^## ) splits before
+# each `## ` at line start without consuming the delimiter. The trailing
+# space after the hashes is required, so `### ` (level-3) is NOT treated
+# as a split point and stays inside its parent `## ` section.
+_SECTION_SPLIT_RE = re.compile(r"(?=^## )", re.MULTILINE)
+_HEADER_PREFIX_RE = re.compile(r"^##\s+")
+
+
+def markdown_section_chunk(
+    text: str,
+    domain: str,
+    source_type: str,
+    source_file: str,
+    category: str,
+    max_section_chars: int = FALLBACK_CHUNK_CHARS,
+    min_section_chars: int = 50,
+) -> list[Chunk]:
+    """Split Markdown at `## ` headers into per-section chunks.
+
+    Intended for personal notes where each `## ` section is a
+    semantically independent entry (e.g. one gotcha, one tip). Without
+    splitting, a long file like ``gotchas.md`` would be indexed as a
+    single chunk and dilute cross-encoder semantics.
+
+    Behavior:
+        * Files without any `## ` header fall back to ``fallback_chunk``.
+        * Text before the first `## ` becomes a preamble chunk (only if
+          its stripped length is >= ``min_section_chars``).
+        * Each `## ` section becomes its own Chunk with
+          ``chunk_type="personal_section"`` and ``name`` set to the
+          section heading (without the ``## `` prefix).
+        * Sections whose stripped length is < ``min_section_chars`` are
+          skipped (defensive: avoids indexing TODO placeholders).
+        * Sections larger than ``max_section_chars`` are sub-chunked
+          via ``fallback_chunk`` (defensive: doesn't happen for personal
+          notes, but keeps the function robust).
+        * No overlap between sections (semantically independent).
+
+    Args:
+        text: Markdown source content.
+        domain: Domain name (used for chunk_id prefix).
+        source_type: Source type (``"personal"`` or ``"repo"``).
+        source_file: Filename (for metadata traceability).
+        category: File stem (e.g. ``"gotchas"``); used in chunk_id.
+        max_section_chars: Threshold above which a single section is
+            sub-chunked via ``fallback_chunk``.
+        min_section_chars: Minimum stripped length to keep a chunk.
+            Shorter sections are skipped.
+    """
+    if not text:
+        return []
+
+    # Fallback if no `## ` header is present.
+    if not _SECTION_SPLIT_RE.search(text):
+        return fallback_chunk(
+            text,
+            domain=domain,
+            source_type=source_type,
+            source_file=source_file,
+        )
+
+    # Split with look-ahead: each part begins with `## ` except the first
+    # (the preamble, which may be empty).
+    parts = _SECTION_SPLIT_RE.split(text)
+    chunks: list[Chunk] = []
+    section_idx = 0  # counts only sections + preamble, mirrors chunk_id_in_file
+
+    for part in parts:
+        if not part:
+            continue
+
+        # Detect whether this part is a section (starts with `## `) or
+        # the preamble (everything before the first `## `).
+        header_match = _HEADER_PREFIX_RE.match(part)
+        is_section = header_match is not None
+
+        # Defensive skip: skip sections/preambles whose stripped content
+        # is below the minimum threshold (e.g. TODO placeholders).
+        if len(part.strip()) < min_section_chars:
+            continue
+
+        # Large section → sub-chunk via fallback_chunk. This keeps the
+        # function robust for future content growth.
+        if len(part) > max_section_chars:
+            sub_chunks = fallback_chunk(
+                part,
+                domain=domain,
+                source_type=source_type,
+                source_file=source_file,
+            )
+            for sub in sub_chunks:
+                # Override the chunk_id / chunk_id_in_file to embed the
+                # section index from the parent file.
+                sub.chunk_id = f"{domain}::personal::{category}::{section_idx}"
+                sub.chunk_id_in_file = section_idx
+                if is_section:
+                    heading = part[header_match.end():].split("\n", 1)[0].strip()
+                    sub.name = heading
+                    sub.chunk_type = "personal_section"
+                else:
+                    sub.name = None
+                chunks.append(sub)
+                section_idx += 1
+            continue
+
+        # Normal-sized section or preamble.
+        line_start = text[: text.find(part)].count("\n") + 1
+        line_end = line_start + part.count("\n")
+
+        if is_section:
+            heading = part[header_match.end():].split("\n", 1)[0].strip()
+            name = heading
+            chunk_type = "personal_section"
+        else:
+            name = None
+            chunk_type = None
+
+        chunks.append(
+            Chunk(
+                chunk_id=f"{domain}::personal::{category}::{section_idx}",
+                domain=domain,
+                text=part,
+                source_type=source_type,
+                source_file=source_file,
+                line_start=line_start,
+                line_end=line_end,
+                chunk_id_in_file=section_idx,
+                chunk_type=chunk_type,
+                name=name,
+            )
+        )
+        section_idx += 1
+
+    return chunks

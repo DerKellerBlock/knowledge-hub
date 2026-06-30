@@ -54,10 +54,13 @@ erwarten lässt (siehe `scripts/quality/run_evaluation.py`).
 
 ## Wissenstypen (ChromaDB-Metadaten)
 
-| Typ | source_type | Quelle | Update-Strategie |
-|-----|-------------|--------|-----------------|
-| Repo-Wissen | `"repo"` | `sources/*.md` | Komplett neu bei jedem Update |
-| Persönliches Wissen | `"personal"` | `personal/*.md` | Kumulativ (wächst) |
+| Typ | source_type | chunk_type | Quelle | Update-Strategie |
+|-----|-------------|------------|--------|-----------------|
+| Repo-Wissen | `"repo"` | (domain-spezifisch) | `sources/*.md` | Komplett neu bei jedem Update |
+| Persönliches Wissen (Sektion) | `"personal"` | `"personal_section"` | `personal/*.md` | Kumulativ (wächst) |
+| Persönliches Wissen (Preamble) | `"personal"` | `None` | `personal/*.md` | Kumulativ (wächst) |
+
+Personal Notes mit `##`-Headern werden via `markdown_section_chunk()` in semantisch unabhängige Sektions-Chunks zerlegt (`chunk_type="personal_section"`, `name=Sektionsüberschrift`, `source_file`, `line_start`/`line_end`, `page_start`/`page_end=None`). Preamble-Chunks (Inhalt vor dem ersten `##`-Header) haben `chunk_type=None`, `name=None`. Dateien ohne `##`-Header oder mit ausschließlich <50-Zeichen-Sektionen fallen auf `fallback_chunk()` zurück (1 Chunk pro Datei).
 
 ## Indizes pro Domain
 

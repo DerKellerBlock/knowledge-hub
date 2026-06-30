@@ -26,7 +26,7 @@ from mcp_servers.knowledge_hub.config import (
     domain_chroma_path,
     domain_bm25_path,
 )
-from parser_base import Chunk, DomainParser, fallback_chunk
+from parser_base import Chunk, DomainParser, fallback_chunk, markdown_section_chunk
 from bm25_search import build_bm25_index as build_bm25, get_bm25_index_size_mb
 from migration import migrate_legacy_layout
 
@@ -96,14 +96,20 @@ def load_domain_sources(domain: str) -> list[Chunk]:
         for file in sorted(personal_dir.glob("*.md")):
             content = file.read_text(encoding="utf-8")
             category = file.stem
-            fallback = fallback_chunk(
-                content, domain=domain, source_type="personal", source_file=file.name
+            # Markdown section chunking: each `## ` section becomes its own
+            # chunk (with `name` set to the section heading) so cross-encoder
+            # semantics aren't diluted by long single-chunk files like
+            # gotchas.md. Falls back to fallback_chunk for files without
+            # `## ` headers.
+            chunks.extend(
+                markdown_section_chunk(
+                    content,
+                    domain=domain,
+                    source_type="personal",
+                    source_file=file.name,
+                    category=category,
+                )
             )
-            for i, c in enumerate(fallback):
-                c.chunk_id = f"{domain}::personal::{category}::{i}"
-                c.chunk_id_in_file = i
-                c.name = category
-            chunks.extend(fallback)
 
     return chunks
 

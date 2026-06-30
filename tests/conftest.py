@@ -179,7 +179,7 @@ def indexed_dummy(dummy_domain):
 
     # We need to build the index using the real embed_index logic
     # but with patched paths. The easiest way is to call the functions directly.
-    from parser_base import fallback_chunk, Chunk
+    from parser_base import fallback_chunk, markdown_section_chunk, Chunk
     from bm25_search import build_bm25_index
     from model_manager import get_embedder, get_chroma_client
 
@@ -187,7 +187,7 @@ def indexed_dummy(dummy_domain):
     domain_dir = cfg.DOMAINS_DIR / domain
     chunks = []
 
-    # Parse sources
+    # Parse sources (repo fallback chunking — unchanged)
     sources_dir = domain_dir / "sources"
     if sources_dir.is_dir():
         for f in sorted(sources_dir.glob("*.md")):
@@ -198,18 +198,21 @@ def indexed_dummy(dummy_domain):
                 c.chunk_id_in_file = i
             chunks.extend(fallback)
 
-    # Parse personal
+    # Parse personal (markdown section chunking — mirrors embed_index.py)
     personal_dir = domain_dir / "personal"
     if personal_dir.is_dir():
         for f in sorted(personal_dir.glob("*.md")):
             content = f.read_text(encoding="utf-8")
             category = f.stem
-            fallback = fallback_chunk(content, domain=domain, source_type="personal", source_file=f.name)
-            for i, c in enumerate(fallback):
-                c.chunk_id = f"{domain}::personal::{category}::{i}"
-                c.chunk_id_in_file = i
-                c.name = category
-            chunks.extend(fallback)
+            chunks.extend(
+                markdown_section_chunk(
+                    content,
+                    domain=domain,
+                    source_type="personal",
+                    source_file=f.name,
+                    category=category,
+                )
+            )
 
     assert len(chunks) > 0, "No chunks were created from dummy domain"
 

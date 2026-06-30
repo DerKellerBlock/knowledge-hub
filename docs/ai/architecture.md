@@ -32,7 +32,8 @@
 
 2. **Indexierung:**
    - `scripts/embed_index.py --domain godot`
-   - Chunking (500 Tokens, 100 Overlap) → Embedding (MPNet, 768 dims) → ChromaDB Collection `<name>_knowledge`
+   - **Repo-Quellen:** `fallback_chunk()` (500 Tokens, 100 Overlap) → Embedding (MPNet, 768 dims) → ChromaDB Collection `<name>_knowledge`
+   - **Personal Notes:** `markdown_section_chunk()` (Splittet an `##`-Headern in per-section Chunks, defensive Skip bei <50 Zeichen, Fallback auf `fallback_chunk()` bei Dateien ohne `##`-Header) → Embedding → ChromaDB
    - Collection wird komplett neu gebaut (kein inkrementelles Update)
 
 3. **Suche (zweistufig):**
