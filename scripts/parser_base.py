@@ -124,10 +124,10 @@ class DomainParser(ABC):
 # ── Fallback chunking ─────────────────────────────────────────────────────
 
 FALLBACK_CHUNK_SIZE = 2000  # approximate tokens
-FALLBACK_CHUNK_OVERLAP = 200
+FALLBACK_CHUNK_OVERLAP = 400
 CHARS_PER_TOKEN = 4
 FALLBACK_CHUNK_CHARS = FALLBACK_CHUNK_SIZE * CHARS_PER_TOKEN       # 2000
-FALLBACK_OVERLAP_CHARS = FALLBACK_CHUNK_OVERLAP * CHARS_PER_TOKEN  # 400
+FALLBACK_OVERLAP_CHARS = FALLBACK_CHUNK_OVERLAP * CHARS_PER_TOKEN  # 1600
 
 
 # Regex to detect PDF page separators inserted by parse_pdf_to_markdown.py

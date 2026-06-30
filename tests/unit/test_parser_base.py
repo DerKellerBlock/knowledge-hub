@@ -172,7 +172,7 @@ class TestFallbackChunk:
 
     def test_default_chunk_and_overlap_constants(self):
         assert FALLBACK_CHUNK_CHARS == 8000
-        assert FALLBACK_OVERLAP_CHARS == 800
+        assert FALLBACK_OVERLAP_CHARS == 1600
 
 
 class TestMarkdownSectionChunk:
