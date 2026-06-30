@@ -32,14 +32,15 @@
 
 2. **Indexierung:**
    - `scripts/embed_index.py --domain godot`
-   - **Repo-Quellen:** `fallback_chunk()` (500 Tokens, 100 Overlap) → Embedding (MPNet, 768 dims) → ChromaDB Collection `<name>_knowledge`
+   - **Repo-Quellen:** `fallback_chunk()` (500 Tokens, 400 Overlap / 1600 Zeichen, erhöht von 200/800 in Phase 1) → Embedding (MPNet, 768 dims) → ChromaDB Collection `<name>_knowledge`
    - **Personal Notes:** `markdown_section_chunk()` (Splittet an `##`-Headern in per-section Chunks, defensive Skip bei <50 Zeichen, Fallback auf `fallback_chunk()` bei Dateien ohne `##`-Header) → Embedding → ChromaDB
    - Collection wird komplett neu gebaut (kein inkrementelles Update)
 
 3. **Suche (zweistufig):**
    - `scripts/hybrid_search.py --domain godot --query "..." --mode hybrid`
    - **Stage 1:** BM25 (exakt) + ChromaDB (semantisch) → RRF-Fusion (k=60) → Candidate-Pool
-   - **Stage 2:** Cross-Encoder (ms-marco-MiniLM-L-12-v2) → Reranking → Top-10 Ranking
+     - BM25-Tokenisierung: Unicode-aware mit CamelCase-Splitting (`CharacterBody3D` → `["character", "body", "3", "d"]`, `GPU` bleibt `["gpu"]`, deutsche Umlaute erhalten). Symmetrisch für Index und Query.
+   - **Stage 2:** Cross-Encoder (ms-marco-MiniLM-L-12-v2, konfigurierbar via `KH_RERANKER_MODEL`) → Reranking → Top-10 Ranking
 
 4. **MCP-Server:**
    - `mcp_servers/knowledge_hub/server.py` — stdio MCP-Server

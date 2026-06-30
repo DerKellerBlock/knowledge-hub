@@ -49,3 +49,11 @@
 - **fix(godot):** godot-007 Retrieval-Lücke geschlossen durch Erweiterung der `tips.md`/CharacterBody3D Stair Stepping-Sektion um GDScript-Code-Snippet (Godot-4-Stable-APIs + PR-#114447-APIs klar gekennzeichnet). Composite 0.7136 → 0.8594, SR 0.6667 → 1.0. Alle 7 godot-Fragen jetzt pass mit Avg Composite 0.8594. Archivierter Quality-Report aktualisiert.
 - **feat(quality):** Alle 29 `solution_summary`-Felder in `real_world_sources` kuratiert (15 godot + 14 davinci_resolve, Commit 5a07b4b). LIM-005 resolved. Solution Alignment (Ebene 2) der Real-World-Evaluation jetzt vollständig evaluierbar.
 - **docs:** LIM-005 in `known-issues.md` als resolved markiert, veraltete null-Hinweise in `real-world-source-evaluation-design.md` aktualisiert.
+- **feat(ci):** GitHub Actions Test-Workflow für unit/integration/mcp hinzugefügt (`.github/workflows/test.yml`, Python 3.11, ubuntu-latest, HuggingFace-Cache).
+- **feat(search):** `KH_RERANKER_MODEL`-Umgebungsvariable für konfigurierbaren Cross-Encoder-Reranker (Default ms-marco, Optional jina-reranker-v2-base-multilingual). `trust_remote_code=True` für jina-Custom-Code. `einops`-Dependency. CC-BY-NC-4.0 in `THIRD_PARTY_LICENSES.md`.
+- **feat(search):** Unicode-aware BM25-Tokenisierung mit CamelCase-Splitting (`CharacterBody3D` → `character`/`body`/`3`/`d`, `GPU` bleibt `GPU`, Umlaute erhalten). 15 Tests.
+- **fix(search):** Fallback-Chunk-Overlap 200→400 Tokens (`FALLBACK_OVERLAP_CHARS` 800→1600). `markdown_section_chunk` bleibt ohne Overlap.
+- **feat(godot):** `faq.md` mit 3 Sektionen gefüllt (Lifecycle, Data Saving, 3D Visibility). `godot-008` zum Golden Dataset hinzugefügt (3D Visibility, 2 expected_sources).
+- **chore(index):** Godot + DaVinci Indizes neu gebaut (godot 24564→24588, davinci 2228→2511). Backups erstellt (`godot.bak.phase1`, `davinci_resolve.bak.phase1`).
+- **quality:** 302 Tests grün (107 unit + 35 integration + 136 quality + 12 e2e + 12 mcp). godot 7 pass + 1 weak (godot-008 SR 0.5), avg_composite 0.8321. davinci 7 pass, avg_composite 0.7218.
+

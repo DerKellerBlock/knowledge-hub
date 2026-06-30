@@ -24,5 +24,5 @@
 
 ## Bekannte Retrieval-Lücken
 
-_Keine offenen Retrieval-Lücken. Alle 7 godot-Fragen pass (avg composite 0.8594, avg SR 1.0)._
+- **godot-008 (3D model visibility, weak):** Composite 0.6406, SR 0.5 (`godot-docs-reference-packed.md` gefunden, `faq.md` fehlt Top-10). Phase-1-Iteration: `faq.md` 3D-Visibility-Sektion frisch indexiert, aber semantisch nahe an `godot-docs-3d-packed.md`. Frage ist breit („warum sehe ich mein 3D-Modell nicht"), `faq.md` rankt nicht in Top-10. Mögliche Folge-Lösungen: (a) FAQ-Visibility-Abschnitt mit englischen Suchankern verstärken, (b) BGE-M3 multilingual in Phase 2 (besseres semantisches Matching), (c) Frage spezifischer formulieren.
 

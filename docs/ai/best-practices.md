@@ -37,6 +37,15 @@
 - `requirements.txt` mit version-pinned Dependencies
 - Semver-ähnliche Tags für Releases (später)
 
+## Umgebungsvariablen
+
+- `KH_RERANKER_MODEL` — Überschreibt das Cross-Encoder-Modell für Stage-2-Reranking.
+  Default: `cross-encoder/ms-marco-MiniLM-L-12-v2`.
+  Alternative: `jinaai/jina-reranker-v2-base-multilingual` (multilingual, 1024 Token Kontext, CC-BY-NC-4.0).
+  Wird in `mcp_servers/knowledge_hub/config.py` ausgewertet. `trust_remote_code=True` in `model_manager.py` aktiviert Custom-Code-Ladung für jina-Modelle.
+- `KNOWLEDGE_HUB_DOMAINS` — Komma-separierte Domain-Liste für MCP-Server-Scoping.
+  Wird in `mcp_servers/knowledge_hub/server.py` ausgewertet.
+
 ## Sicherheit
 
 - Keine Secrets in Config-Dateien
