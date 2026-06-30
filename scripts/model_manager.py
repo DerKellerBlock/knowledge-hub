@@ -12,6 +12,7 @@ License: MIT (no PyMuPDF imports here).
 import gc
 import json
 import logging
+import os
 import re
 from collections import OrderedDict
 from pathlib import Path
@@ -50,10 +51,14 @@ from config import (
     domain_chroma_path,
     domain_bm25_path,
     DEFAULT_MODEL_NAME,
-    CROSS_ENCODER_MODEL,
     CHROMA_MEMORY_LIMIT_BYTES,
     BM25_CACHE_MAX,
 )
+
+# Default cross-encoder model name. Read LIVE from KH_RERANKER_MODEL in
+# get_reranker() so runtime env-var overrides take effect after import.
+# Kept here as a fallback constant for documentation/other modules.
+DEFAULT_RERANKER_MODEL = "cross-encoder/ms-marco-MiniLM-L-12-v2"
 
 # ── Model cache ────────────────────────────────────────────────────────────
 _model_cache: dict[str, object] = {}
@@ -140,6 +145,10 @@ def get_embedder(domain: str) -> SentenceTransformer:
 def get_reranker() -> CrossEncoder:
     """Lazy-load cross-encoder. Only loads on first hybrid search.
 
+    The model name is read LIVE from the ``KH_RERANKER_MODEL`` environment
+    variable on every cache-miss (not bound at import time), so runtime
+    overrides take effect without reloading the module.
+
     ``trust_remote_code=True`` is required for jina-reranker-v2-base-multilingual
     because that model ships custom code (``auto_map`` in config.json) which
     HuggingFace refuses to load without explicit trust. The legacy
@@ -147,8 +156,12 @@ def get_reranker() -> CrossEncoder:
     call works for both models.
     """
     if "reranker" not in _model_cache:
+        model_name = os.environ.get(
+            "KH_RERANKER_MODEL",
+            DEFAULT_RERANKER_MODEL,
+        )
         _model_cache["reranker"] = CrossEncoder(
-            CROSS_ENCODER_MODEL,
+            model_name,
             trust_remote_code=True,  # required for jina-reranker-v2 custom code
         )
     return _model_cache["reranker"]

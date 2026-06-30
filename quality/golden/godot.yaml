@@ -199,3 +199,25 @@ questions:
     last_verified: 2026-06-30
     notes: "Phase 1 faq.md fill. Tests that the new 3D Visibility FAQ section is retrievable."
     min_top_k: 10
+  - id: godot-008-de
+    question: "Warum sehe ich mein 3D-Modell nicht in Godot? Ich habe ein MeshInstance3D hinzugefügt, aber im Viewport erscheint nichts."
+    expected_source_files:
+      - "faq.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/classes/class_geometryinstance3d.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official GeometryInstance3D class reference. Documents visibility properties: visible (inherited from Node3D), cast_shadow, gi_mode, visibility_range_begin/end, and transparency. Also covers material_override and visibility layers via VisualInstance3D."
+        has_solution: true
+      - url: "https://docs.godotengine.org/en/stable/classes/class_camera3d.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Camera3D class reference. Documents current property (only one active camera per viewport), cull_mask for layer-based culling, and projection modes."
+        has_solution: true
+    difficulty: easy
+    tags: [visibility, 3d, debugging, beginner, meshinstance3d, camera3d, german]
+    created_date: 2026-06-30
+    last_verified: 2026-06-30
+    notes: "Phase 1 faq.md fill. German variant of godot-008 — tests that the German FAQ section is retrievable for a German query (no language barrier)."
+    min_top_k: 10

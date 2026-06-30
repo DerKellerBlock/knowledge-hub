@@ -47,7 +47,7 @@ if err == OK:
 - **`cull_mask` / `layers`**: `Camera3D.cull_mask` (Layer-Bitmask) und `GeometryInstance3D.layers` (Layer-Bitmask) müssen überlappen. Wenn dein Mesh auf Layer 1 ist und die Kamera nur Layer 2 rendert, ist es weg.
 - **`process_mode`**: Wenn der Node in einem pausierten Subtree hängt (`process_mode = PROCESS_MODE_DISABLED` oder `PROCESS_MODE_PAUSABLE` in einem pausierten Tree), werden weder `_process()` noch Visual-Updates ausgeführt.
 - **Scale / Position plausibel?** Modell könnte (1) extrem klein, (2) hinter der Kamera oder (3) unter der Welt positioniert sein. Im Editor auf den Node klicken und Transform prüfen.
-- **Material-Transparenz**: `BaseMaterial3D.transparency = TRANSPARENCY_ALPHA` mit `alpha = 0` macht das Mesh unsichtbar. Auch `BaseMaterial3D.shading_mode = SHADING_MODE_UNSHADED` mit `albedo_color.a = 0`.
+- **Material-Transparenz**: `BaseMaterial3D.transparency = TRANSPARENCY_ALPHA` mit `albedo_color.a = 0` macht das Mesh unsichtbar (`alpha` ist keine direkte Property — der Alpha-Kanal steckt in `albedo_color.a`). Auch `BaseMaterial3D.shading_mode = SHADING_MODE_UNSHADED` mit `albedo_color.a = 0`.
 
 ```gdscript
 # Schnellcheck für Camera + MeshInstance3D-Sichtbarkeit
