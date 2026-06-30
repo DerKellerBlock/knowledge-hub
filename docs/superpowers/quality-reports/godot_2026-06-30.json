@@ -3,12 +3,12 @@
   "date": "2026-06-30",
   "summary": {
     "domain": "godot",
-    "total_questions": 8,
-    "pass_count": 7,
+    "total_questions": 9,
+    "pass_count": 8,
     "weak_count": 1,
     "fail_count": 0,
-    "avg_composite": 0.8321,
-    "avg_source_recall": 0.9375,
+    "avg_composite": 0.8351,
+    "avg_source_recall": 0.9444,
     "avg_page_metadata_accuracy": 0.0,
     "avg_top_k_relevance": 0.55,
     "avg_evidence_quality": 1.0
@@ -61,9 +61,9 @@
       "label": "pass",
       "truncation_warnings": 0,
       "found_source_files": [
-        "godot-docs-reference-packed.md",
         "gotchas.md",
-        "tips.md"
+        "tips.md",
+        "godot-docs-reference-packed.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -100,8 +100,8 @@
       "truncation_warnings": 0,
       "found_source_files": [
         "godot-docs-reference-packed.md",
-        "gotchas.md",
-        "tips.md"
+        "tips.md",
+        "gotchas.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -144,9 +144,9 @@
       "label": "pass",
       "truncation_warnings": 5,
       "found_source_files": [
+        "godot-demos-packed.md",
         "godot-docs-reference-packed.md",
-        "godot-docs-3d-packed.md",
-        "godot-demos-packed.md"
+        "godot-docs-3d-packed.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -183,8 +183,8 @@
       "truncation_warnings": 0,
       "found_source_files": [
         "godot-docs-reference-packed.md",
-        "gotchas.md",
-        "best-practices.md"
+        "best-practices.md",
+        "gotchas.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -227,8 +227,8 @@
       "label": "pass",
       "truncation_warnings": 2,
       "found_source_files": [
-        "godot-docs-reference-packed.md",
-        "tips.md"
+        "tips.md",
+        "godot-docs-reference-packed.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -258,8 +258,8 @@
       "truncation_warnings": 3,
       "found_source_files": [
         "godot-demos-packed.md",
-        "godot-docs-reference-packed.md",
-        "tips.md"
+        "tips.md",
+        "godot-docs-reference-packed.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -319,6 +319,47 @@
         "Godot 3.x workflow\n   (used to reference a non existing doc_importing_3d_meshes importer).\n\nIt is possible to import 3D models in Godot created in external tools.\nDepending on the format, you can impo",
         "Property: GLTFNode.visible\nSignature: bool visible = true\nInherits: Resource → RefCounted → Object\n\nbool visible = true\n- set_visible ( value\\: bool )\n- bool get_visible ( )\nIf true, the GLTF node is ",
         "ad of\n  **Pixel Alpha**. This will make the material opaque, which also speeds up rendering.\n\n.. figure:: img/3d_rendering_limitations_transparency_sorting.webp\n   :align: center\n   :alt: Transparency"
+      ]
+    },
+    {
+      "id": "godot-008-de",
+      "question": "Warum sehe ich mein 3D-Modell nicht in Godot? Ich habe ein MeshInstance3D hinzugefügt, aber im Viewport erscheint nichts.",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 3,
+      "found_source_files": [
+        "best-practices.md",
+        "godot-docs-reference-packed.md",
+        "gotchas.md",
+        "faq.md",
+        "godot-docs-3d-packed.md",
+        "tips.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/classes/class_geometryinstance3d.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official GeometryInstance3D class reference. Documents visibility properties: visible (inherited from Node3D), cast_shadow, gi_mode, visibility_range_begin/end, and transparency. Also covers material_override and visibility layers via VisualInstance3D.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/classes/class_camera3d.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Camera3D class reference. Documents current property (only one active camera per viewport), cull_mask for layer-based culling, and projection modes.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "## Warum sehe ich mein 3D-Modell nicht?\n- **`visible` Flag**: `MeshInstance3D.visible` (geerbt von `Node3D`) prüfen — und die aller Parents (`get_parent().visible` etc.). Eine unsichtbare Parent-Kette",
+        "Godot 3.x workflow\n   (used to reference a non existing doc_importing_3d_meshes importer).\n\nIt is possible to import 3D models in Godot created in external tools.\nDepending on the format, you can impo",
+        "## 3D\n\n### ChurchData.scale Drei-Modus-Semantik\n- **Pattern:** Drei Modi je nach GLB-Typ: (a) native bottom-origin, (b) v2-Platzhalter-Kompensation, (c) real-world units\n- **Warum:** Meshy-Modelle kom"
       ]
     }
   ]
