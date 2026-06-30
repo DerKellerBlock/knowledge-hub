@@ -61,8 +61,8 @@
       "label": "pass",
       "truncation_warnings": 1,
       "found_source_files": [
-        "gotchas.md",
         "tips.md",
+        "gotchas.md",
         "godot-docs-3d-packed.md",
         "godot-docs-reference-packed.md"
       ],
@@ -100,8 +100,8 @@
       "label": "pass",
       "truncation_warnings": 0,
       "found_source_files": [
-        "gotchas.md",
         "tips.md",
+        "gotchas.md",
         "godot-docs-reference-packed.md"
       ],
       "total_results": 10,
@@ -143,11 +143,11 @@
       "evidence_quality": 1.0,
       "composite_score": 0.8594,
       "label": "pass",
-      "truncation_warnings": 3,
+      "truncation_warnings": 4,
       "found_source_files": [
-        "godot-demos-packed.md",
+        "godot-docs-reference-packed.md",
         "godot-docs-3d-packed.md",
-        "godot-docs-reference-packed.md"
+        "godot-demos-packed.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -168,8 +168,8 @@
       ],
       "top_snippets": [
         "Class: CameraFeed\nextends RefCounted → Object\n\n:github_url: hide\nCameraFeed\n==========\nA camera feed gives you access to a single physical camera attached to your device.\nDescription\n-----------\nA cam",
-        " tests_menu.gd\n    tests.gd\n  platformer/\n    coin/\n      coin.gd\n    enemy/\n      enemy.gd\n    player/\n      bullet/\n        bullet.gd\n      follow_camera.gd\n      player.gd\n    stage/\n      stage.gd",
-        "Method: XRInterface.initialize\nInherits: RefCounted → Object\n\nbool initialize ( )\nCall this to initialize this interface. The first interface that is initialized is identified as the primary interface"
+        "Method: XRInterface.initialize\nInherits: RefCounted → Object\n\nbool initialize ( )\nCall this to initialize this interface. The first interface that is initialized is identified as the primary interface",
+        "Method: GLTFCamera.to_node\nInherits: Resource → RefCounted → Object\n\nCamera3D to_node ( )\nConverts this GLTFCamera instance into a Godot Camera3D node."
       ]
     },
     {
@@ -183,9 +183,9 @@
       "label": "pass",
       "truncation_warnings": 0,
       "found_source_files": [
+        "godot-docs-reference-packed.md",
         "gotchas.md",
-        "best-practices.md",
-        "godot-docs-reference-packed.md"
+        "best-practices.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -229,8 +229,8 @@
       "truncation_warnings": 3,
       "found_source_files": [
         "tips.md",
-        "godot-docs-3d-packed.md",
-        "godot-docs-reference-packed.md"
+        "godot-docs-reference-packed.md",
+        "godot-docs-3d-packed.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -260,9 +260,9 @@
       "truncation_warnings": 7,
       "found_source_files": [
         "tips.md",
-        "godot-demos-packed.md",
+        "godot-docs-reference-packed.md",
         "godot-docs-3d-packed.md",
-        "godot-docs-reference-packed.md"
+        "godot-demos-packed.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -282,9 +282,9 @@
         }
       ],
       "top_snippets": [
-        "te the vector based on the mob's Y rotation to move in the direction it's looking.\n\tvelocity = velocity.rotated(Vector3.UP, rotation.y)\n\n\t$AnimationPlayer.speed_scale = random_speed / min_speed\n\n\nfunc",
-        "## CharacterBody3D Stair Stepping\n- CharacterBody3D hat native stair stepping (PR #114447, 2025-12-30, open): Properties `step_enabled`, `step_height` (default 0.3m), `step_smooth_enabled`, `step_smoo",
-        "_basis.x, -cam_basis.get_euler().x)\n\tdir = cam_basis * dir\n\n\t# Limit the input to a length of 1. `length_squared()` is faster to check\n\t# than `length()`.\n\tif dir.length_squared() > 1:\n\t\tdir /= dir.le"
+        "e player only.\n\t\treturn\n\n\tplayer_in_secret = true\n\tset_process(true)\n\n\nfunc _on_secret_detector_body_exited(body: Node2D) -> void:\n\tif body is not CharacterBody2D:\n\t\treturn\n\n\tplayer_in_secret = false\n",
+        "0\nconst DEACCEL: float = 14.0\nconst AIR_ACCEL_FACTOR: float = 0.5\nconst SHARP_TURN_THRESHOLD: float = deg_to_rad(140.0)\n\nvar movement_dir := Vector3()\nvar jumping: bool = false\nvar prev_shoot: bool = ",
+        "## CharacterBody3D Stair Stepping\n- CharacterBody3D hat native stair stepping (PR #114447, 2025-12-30, open): Properties `step_enabled`, `step_height` (default 0.3m), `step_smooth_enabled`, `step_smoo"
       ]
     }
   ]
