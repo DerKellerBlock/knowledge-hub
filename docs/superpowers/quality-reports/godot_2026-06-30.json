@@ -3,12 +3,12 @@
   "date": "2026-06-30",
   "summary": {
     "domain": "godot",
-    "total_questions": 7,
+    "total_questions": 8,
     "pass_count": 7,
-    "weak_count": 0,
+    "weak_count": 1,
     "fail_count": 0,
-    "avg_composite": 0.8594,
-    "avg_source_recall": 1.0,
+    "avg_composite": 0.8321,
+    "avg_source_recall": 0.9375,
     "avg_page_metadata_accuracy": 0.0,
     "avg_top_k_relevance": 0.55,
     "avg_evidence_quality": 1.0
@@ -59,12 +59,11 @@
       "evidence_quality": 1.0,
       "composite_score": 0.8594,
       "label": "pass",
-      "truncation_warnings": 1,
+      "truncation_warnings": 0,
       "found_source_files": [
-        "tips.md",
+        "godot-docs-reference-packed.md",
         "gotchas.md",
-        "godot-docs-3d-packed.md",
-        "godot-docs-reference-packed.md"
+        "tips.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -85,8 +84,8 @@
       ],
       "top_snippets": [
         "## CharacterBody3D Stair Stepping\n- CharacterBody3D hat native stair stepping (PR #114447, 2025-12-30, open): Properties `step_enabled`, `step_height` (default 0.3m), `step_smooth_enabled`, `step_smoo",
-        "## Jolt Physics + CharacterBody3D\n- **Problem:** CharacterBody3D fällt durch den Boden bei Jolt Physics in Godot 4.6\n- **Ursache:** `move_and_slide()` ruft `PhysicsServer3D.body_test_motion()` auf, Jo",
-        "Class: CharacterBody3D\nextends PhysicsBody3D → CollisionObject3D → Node3D → Node → Object\n\n:github_url: hide\nCharacterBody3D\n===============\nA 3D physics body specialized for characters moved by scrip"
+        "Method: CharacterBody3D.move_and_slide\nInherits: PhysicsBody3D → CollisionObject3D → Node3D → Node → Object\n\nbool move_and_slide ( )\nMoves the body based on velocity. If the body collides with another",
+        "## Jolt Physics + CharacterBody3D\n- **Problem:** CharacterBody3D fällt durch den Boden bei Jolt Physics in Godot 4.6\n- **Ursache:** `move_and_slide()` ruft `PhysicsServer3D.body_test_motion()` auf, Jo"
       ]
     },
     {
@@ -100,9 +99,9 @@
       "label": "pass",
       "truncation_warnings": 0,
       "found_source_files": [
-        "tips.md",
+        "godot-docs-reference-packed.md",
         "gotchas.md",
-        "godot-docs-reference-packed.md"
+        "tips.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -143,7 +142,7 @@
       "evidence_quality": 1.0,
       "composite_score": 0.8594,
       "label": "pass",
-      "truncation_warnings": 4,
+      "truncation_warnings": 5,
       "found_source_files": [
         "godot-docs-reference-packed.md",
         "godot-docs-3d-packed.md",
@@ -167,9 +166,9 @@
         }
       ],
       "top_snippets": [
-        "Class: CameraFeed\nextends RefCounted → Object\n\n:github_url: hide\nCameraFeed\n==========\nA camera feed gives you access to a single physical camera attached to your device.\nDescription\n-----------\nA cam",
-        "Method: XRInterface.initialize\nInherits: RefCounted → Object\n\nbool initialize ( )\nCall this to initialize this interface. The first interface that is initialized is identified as the primary interface",
-        "Method: GLTFCamera.to_node\nInherits: Resource → RefCounted → Object\n\nCamera3D to_node ( )\nConverts this GLTFCamera instance into a Godot Camera3D node."
+        "e placed at or near the collision point:\n\n.. image:: img/spring_arm_camera_collision.webp\n\nSetting up the spring arm and camera\n------------------------------------\n\nLet's add a spring arm camera setu",
+        "using Grow.\n\nNote that in Godot 4.5 onwards, stencil buffer-based outlines are available\nusing the **Outline** :ref:`stencil mode <doc_standard_material_3d_stencil>`.\nThis can be used as an alternativ",
+        "Class: CameraFeed\nextends RefCounted → Object\n\n:github_url: hide\nCameraFeed\n==========\nA camera feed gives you access to a single physical camera attached to your device.\nDescription\n-----------\nA cam"
       ]
     },
     {
@@ -226,11 +225,10 @@
       "evidence_quality": 1.0,
       "composite_score": 0.8594,
       "label": "pass",
-      "truncation_warnings": 3,
+      "truncation_warnings": 2,
       "found_source_files": [
-        "tips.md",
         "godot-docs-reference-packed.md",
-        "godot-docs-3d-packed.md"
+        "tips.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -257,12 +255,11 @@
       "evidence_quality": 1.0,
       "composite_score": 0.8594,
       "label": "pass",
-      "truncation_warnings": 7,
+      "truncation_warnings": 3,
       "found_source_files": [
-        "tips.md",
+        "godot-demos-packed.md",
         "godot-docs-reference-packed.md",
-        "godot-docs-3d-packed.md",
-        "godot-demos-packed.md"
+        "tips.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -282,9 +279,46 @@
         }
       ],
       "top_snippets": [
-        "e player only.\n\t\treturn\n\n\tplayer_in_secret = true\n\tset_process(true)\n\n\nfunc _on_secret_detector_body_exited(body: Node2D) -> void:\n\tif body is not CharacterBody2D:\n\t\treturn\n\n\tplayer_in_secret = false\n",
-        "0\nconst DEACCEL: float = 14.0\nconst AIR_ACCEL_FACTOR: float = 0.5\nconst SHARP_TURN_THRESHOLD: float = deg_to_rad(140.0)\n\nvar movement_dir := Vector3()\nvar jumping: bool = false\nvar prev_shoot: bool = ",
-        "## CharacterBody3D Stair Stepping\n- CharacterBody3D hat native stair stepping (PR #114447, 2025-12-30, open): Properties `step_enabled`, `step_height` (default 0.3m), `step_smooth_enabled`, `step_smoo"
+        "## CharacterBody3D Stair Stepping\n- CharacterBody3D hat native stair stepping (PR #114447, 2025-12-30, open): Properties `step_enabled`, `step_height` (default 0.3m), `step_smooth_enabled`, `step_smoo",
+        "hen reassigned.\n\t\tvelocity.x = move_toward(velocity.x, 0, STOP_FORCE * delta)\n\telse:\n\t\tvelocity.x += walk * delta\n\t# Clamp to the maximum horizontal movement speed.\n\tvelocity.x = clamp(velocity.x, -WA",
+        "Method: CharacterBody3D.get_last_motion\nInherits: PhysicsBody3D → CollisionObject3D → Node3D → Node → Object\n\nVector3 get_last_motion ( )\nReturns the last motion applied to the CharacterBody3D during "
+      ]
+    },
+    {
+      "id": "godot-008",
+      "question": "Why is my 3D model not visible in Godot? I've added a MeshInstance3D but nothing shows up in the viewport.",
+      "source_recall": 0.5,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.6406,
+      "label": "weak",
+      "truncation_warnings": 5,
+      "found_source_files": [
+        "godot-docs-reference-packed.md",
+        "godot-docs-3d-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/classes/class_geometryinstance3d.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official GeometryInstance3D class reference. Documents visibility properties: visible (inherited from Node3D), cast_shadow, gi_mode, visibility_range_begin/end, and transparency. Also covers material_override and visibility layers via VisualInstance3D.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/classes/class_camera3d.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Camera3D class reference. Documents current property (only one active camera per viewport), cull_mask for layer-based culling, and projection modes.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "Godot 3.x workflow\n   (used to reference a non existing doc_importing_3d_meshes importer).\n\nIt is possible to import 3D models in Godot created in external tools.\nDepending on the format, you can impo",
+        "Property: GLTFNode.visible\nSignature: bool visible = true\nInherits: Resource → RefCounted → Object\n\nbool visible = true\n- set_visible ( value\\: bool )\n- bool get_visible ( )\nIf true, the GLTF node is ",
+        "ad of\n  **Pixel Alpha**. This will make the material opaque, which also speeds up rendering.\n\n.. figure:: img/3d_rendering_limitations_transparency_sorting.webp\n   :align: center\n   :alt: Transparency"
       ]
     }
   ]
