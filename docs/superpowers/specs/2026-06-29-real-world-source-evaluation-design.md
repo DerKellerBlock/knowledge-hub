@@ -76,7 +76,7 @@ questions:
         has_solution: true
 ```
 
-> **Hinweis:** In der aktuellen Implementierung sind alle `solution_summary`-Werte `null` (TODO-Platzhalter, manuelle Kuratierung durch Noah ausstehend, siehe LIM-005). Die Beispiele oben zeigen die angestrebte Ziel-Struktur. Die Evaluationsmethodik (Source Coverage, Solution Alignment, Gap Detection) funktioniert bereits mit null-Summaries (URLs + has_solution reichen für Ebene 1 und 3), aber Solution Alignment (Ebene 2) benötigt die Summaries für den vollständigen Vergleich.
+> **Hinweis:** Alle `solution_summary`-Werte wurden in Commit 5a07b4b (2026-06-30) kuratiert — 29 von 29 ausgefüllt (15 godot + 14 davinci_resolve). Die Beispiele oben zeigen die tatsächliche Ziel-Struktur. Solution Alignment (Ebene 2) ist jetzt vollständig evaluierbar.
 
 ### Feld-Definitionen (neue Felder)
 
@@ -262,7 +262,7 @@ Der Output von `run_evaluation.py` enthält jetzt pro Frage die `real_world_sour
 }
 ```
 
-> **Hinweis:** In der aktuellen Implementierung sind alle `solution_summary`-Werte `null` (TODO-Platzhalter, siehe LIM-005). Das Beispiel oben zeigt die angestrebte Ziel-Struktur.
+> **Hinweis:** Alle `solution_summary`-Werte wurden in Commit 5a07b4b (2026-06-30) kuratiert — 29 von 29 ausgefüllt. Das Beispiel oben zeigt die tatsächliche Struktur.
 
 **Neues Feld `top_snippets`:** Die ersten 200 Zeichen des `text`-Felds der Top-3 Ergebnisse, damit der Mensch im Report schnell vergleichen kann, ohne die Rohdaten zu öffnen.
 
