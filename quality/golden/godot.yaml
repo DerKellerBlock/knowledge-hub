@@ -38,6 +38,7 @@ questions:
     question: "How do I move a CharacterBody3D with gravity in Godot 4?"
     expected_source_files:
       - "godot-docs-reference-packed.md"
+      - "gotchas.md"
     expected_page_ranges: []
     real_world_sources:
       - url: "https://docs.godotengine.org/en/stable/tutorials/physics/using_character_body_2d.html"
@@ -156,6 +157,7 @@ questions:
     expected_source_files:
       - "godot-docs-reference-packed.md"
       - "godot-demos-packed.md"
+      - "tips.md"
     expected_page_ranges: []
     real_world_sources:
       - url: "https://docs.godotengine.org/en/stable/tutorials/physics/using_character_body_2d.html"
