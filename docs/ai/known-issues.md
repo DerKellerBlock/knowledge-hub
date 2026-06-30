@@ -6,6 +6,7 @@
 - **KI-002:** Godot-Skills ins Hub migriert — Skills sind Single Source of Truth
 - **TD-001:** ChromaDB-Integration getestet — 265 MB Index, 18.222 Chunks, Cosine-Metrik
 - **KI-003:** Retrieval 2.0 implementiert (2026-06-10) — BM25 ersetzt ripgrep, Cross-Encoder-Reranking, Plugin-basiertes strukturiertes Parsing
+- **KI-004:** godot-007 (3D character controller) Retrieval-Lücke geschlossen (2026-06-30) — `tips.md`/CharacterBody3D Stair Stepping-Sektion um GDScript-Code-Snippet erweitert (Godot-4-Stable-APIs + PR-#114447-APIs klar gekennzeichnet). Composite 0.7136 → 0.8594, SR 0.6667 → 1.0, `tips.md` Top-2 statt Rank 32. Cross-Encoder-Score -8.53 → +0.71. Behebt BM25-Token-Overlap (Query-Keywords velocity/gravity/jump/move_and_slide jetzt als Tokens vorhanden) und Cross-Encoder-Kontext (Sektion liest sich jetzt als vollständiger Character-Controller).
 
 ## Technische Schulden
 
@@ -22,5 +23,5 @@
 
 ## Bekannte Retrieval-Lücken
 
-- **godot-007 (3D character controller):** Composite 0.7136 (pass, aber niedrigste SR=0.6667). `tips.md`/CharacterBody3D Stair Stepping rankt nicht in Top-10 der breiten godot-007-Frage. Lücke stammt aus Commit f5be7e0 (Gap-Closing-Iteration), nicht aus der Fix-Iteration. Mögliche Folge-Lösungen: (a) `tips.md`-Stair-Stepping-Sektion mit konkreten Code-Snippets erweitern, (b) Golden Dataset `expected_source_files` anpassen, (c) Hybrid-Search Stage-1 top-K erhöhen.
+_Keine offenen Retrieval-Lücken. Alle 7 godot-Fragen pass (avg composite 0.8594, avg SR 1.0)._
 

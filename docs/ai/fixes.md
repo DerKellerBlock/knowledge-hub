@@ -45,3 +45,10 @@ This file records completed fixes that are useful for future AI agents.
   Quality Re-Evaluation: godot-005 0.4219 (weak) → 0.8594 (pass), SR 1.0 (gotchas.md Top-1 "GLB-Import — Mesh Origin Bug"). Alle 7 godot-Fragen pass (avg composite 0.8386). godot-007 bleibt bei 0.7136 (bestehende Lücke aus Gap-Closing-Iteration f5be7e0, nicht durch diese Iteration verursacht).
   Security-Verdict: SAFE MIT HINWEISEN (keine neuen Dependencies, keine Secrets, Regex sicher, Pickle-BM25-Rebuild aus lokalen Dateien). Diff-Verdict: APPROVE MIT HINWEISEN (Code-Qualität, Richtigkeit, Test-Qualität, Architektur-Konsistenz alle ✅).
 - Status: Fixed. godot-005 pass 0.86. godot-007 bleibt als bekannte Lücke dokumentiert (LIM-006, godot-007 in known-issues.md).
+
+## 2026-06-30 — godot-007 Retrieval-Lücke geschlossen via tips.md Code-Snippet
+
+- Problem: godot-007 (3D character controller, difficulty: hard) hatte die niedrigste Source Recall (0.6667) und den niedrigsten Composite Score (0.7136) aller 7 godot-Fragen. Zwei Bottlenecks: (1) BM25-Token-Overlap = 0 (deutsche Sektion, englische Query, keine Query-Keywords als Tokens), (2) Cross-Encoder (ms-marco-MiniLM-L-12-v2) bewertete -8.53 (kein Character-Controller-Kontext, nur Stair-Stepping-Bullet-Liste).
+- Fix: `tips.md`/CharacterBody3D Stair Stepping-Sektion um Untertitel "### Integration in einen vollständigen CharacterBody3D-Controller", Einleitungstext, GDScript-Code-Snippet (Godot-4-Stable-APIs plus PR-#114447-APIs klar gekennzeichnet) und Tokens-Liste erweitert. Sektion wuchs von ~460 auf ~3061 Zeichen. Re-Indexierung und Re-Evaluation durchgeführt.
+- Validation: Quality Re-Evaluation: godot-007 Composite 0.8594 (pass), SR 1.0, tips.md Top-2 (Score +0.71, vorher Rank 32 Score -8.53). Keine Regressionen bei godot-001..006. 292 Tests grün (97 unit + 136 quality + 35 integration + 12 e2e + 12 mcp). Security: SAFE. Diff: APPROVE.
+- Status: Fixed. godot-007 pass 0.86, SR 1.0.
