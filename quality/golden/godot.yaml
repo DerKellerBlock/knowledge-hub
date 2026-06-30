@@ -176,3 +176,26 @@ questions:
     last_verified: 2026-06-29
     notes: "Hard question: requires both API reference and demo project knowledge."
     min_top_k: 10
+  - id: godot-008
+    question: "Why is my 3D model not visible in Godot? I've added a MeshInstance3D but nothing shows up in the viewport."
+    expected_source_files:
+      - "faq.md"
+      - "godot-docs-reference-packed.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/classes/class_geometryinstance3d.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official GeometryInstance3D class reference. Documents visibility properties: visible (inherited from Node3D), cast_shadow, gi_mode, visibility_range_begin/end, and transparency. Also covers material_override and visibility layers via VisualInstance3D."
+        has_solution: true
+      - url: "https://docs.godotengine.org/en/stable/classes/class_camera3d.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Camera3D class reference. Documents current property (only one active camera per viewport), cull_mask for layer-based culling, and projection modes."
+        has_solution: true
+    difficulty: easy
+    tags: [visibility, 3d, debugging, beginner, meshinstance3d, camera3d]
+    created_date: 2026-06-30
+    last_verified: 2026-06-30
+    notes: "Phase 1 faq.md fill. Tests that the new 3D Visibility FAQ section is retrievable."
+    min_top_k: 10
