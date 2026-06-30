@@ -24,9 +24,35 @@ from mcp_servers.knowledge_hub.config import domain_bm25_path
 from model_manager import bm25_cache_get, bm25_cache_set, bm25_cache_invalidate
 
 
+# CamelCase boundary insertion:
+#   * (?<=[a-z])(?=[A-Z])   splits at lowercase→UPPER (e.g. "cAse" → "c Ase")
+#   * (?<=[A-Z])(?=[A-Z][a-z])  splits at UPPER→Capitalized (e.g. "AAa" → "A Aa")
+#   * Acronyms like "GPU" stay intact (no boundary at AA→AA).
+# After boundary insertion, we extract Unicode word-runs AND digit-runs
+# (so "3D" becomes ["3", "d"]). \W matches non-word characters, including
+# underscores, hyphens, and punctuation — but NOT Unicode letters.
+# All output is lowercased. This preserves German umlauts and other
+# diacritics that would be lost in an ASCII-only tokenizer.
+_CAMEL_BOUNDARY = re.compile(r"(?<=[a-z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])")
+
+
 def tokenize(text: str) -> list[str]:
-    """Simple tokenizer: lowercase, split on non-alphanumeric."""
-    return re.findall(r"\w+", text.lower())
+    """Tokenize with CamelCase splitting, Unicode-aware (preserves umlauts).
+
+    Inserts boundaries at CamelCase transitions, then extracts Unicode
+    word-runs and digit-runs. All output is lowercased. Acronyms
+    (e.g. "GPU") stay intact.
+
+    Examples:
+        "CharacterBody3D" -> ["character", "body", "3", "d"]
+        "GPU"              -> ["gpu"]
+        "move_and_slide"   -> ["move", "and", "slide"]
+        "Größe"            -> ["größe"]
+        "übermäßige Größe" -> ["übermäßige", "größe"]
+        "HTMLRenderer"     -> ["html", "renderer"]
+    """
+    spaced = _CAMEL_BOUNDARY.sub(" ", text)
+    return [t.lower() for t in re.findall(r"[^\W\d_]+|\d+", spaced, flags=re.UNICODE)]
 
 
 def build_bm25_index(domain: str, chunks: list) -> bool:
