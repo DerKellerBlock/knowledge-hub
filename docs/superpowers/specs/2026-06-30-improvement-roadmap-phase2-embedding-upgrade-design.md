@@ -196,9 +196,51 @@ Empfohlene Reihenfolge:
 **Entscheidung:** Kein Bulk-Import-CLI (add_question.py reicht). Difficulty-Verteilung: ~30% easy, 50% medium, 20% hard (orientiert an realer Nutzung). Pro Domain auf 20-30 Fragen ausbauen.
 **Begründung:** Bulk-Import-CLI wäre Overengineering für ~25 manuell kuratierte Fragen pro Domain. Difficulty-Verteilung 30/50/20 spiegelt reale Query-Verteilung (mehr medium als hard). 20-30 Fragen geben statistische Power für Regression-Detection (bei n=14 ist eine Frage 7% — bei n=25 nur 4%).
 
+### Entscheidungen zu offenen Fragen (Noah, 2026-06-30)
+
+### Entscheidung 2.6: Phase-2a/2b-Split
+**Frage:** Soll Phase 2 in einer Iteration (2.1+2.2+2.3+2.4) oder in zwei Iterationen (2a: 2.1+2.3, 2b: 2.2+2.4) umgesetzt werden?
+**Entscheidung:** Zwei Iterationen. Phase 2a = BGE-M3 Embedding-Wechsel (2.1) + CI Quality Gate (2.3). Phase 2b = Late Chunking für DaVinci (2.2) + Golden Dataset Erweiterung 20-30 (2.4).
+**Begründung:** BGE-M3 allein ist ein großer Schritt (Index-Rebuild aller Domains, 2.2 GB Download, Dimensionswechsel 768→1024). Late Chunking baut darauf auf und ist komplex genug (Token-Level-Logik, 2-3 Tage) für eine eigene Iteration. Golden Dataset ist primär Noahs Kuratierungsaufgabe (24-44 neue Fragen). Reviewbare Schritte, Risiko-Isolation, Abhängigkeiten stimmen (2.3 braucht BGE-M3-Baseline aus 2.1).
+
+### Entscheidung 2.7: KH_EMBEDDING_MODEL-Precedence
+**Frage:** Env-Var überschreibt domain.md überschreibt DEFAULT?
+**Entscheidung:** Ja. Precedence: Env-Var > domain.md > DEFAULT_MODEL_NAME.
+**Begründung:** Atomic-Rollback ohne Dateiänderung (KH_EMBEDDING_MODEL=all-mpnet-base-v2 setzen, Index aus Backup restore). Spiegelt das get_reranker()-Muster aus Phase 1 wider. Nach erfolgreicher Re-Evaluation wird domain.md dauerhaft auf BAAI/bge-m3 (1024 dims) aktualisiert; danach ist KH_EMBEDDING_MODEL ein optionaler Override für Experiments/Rollback.
+
+### Entscheidung 2.8: Benchmark vor BGE-M3-Wechsel
+**Frage:** Soll ein Benchmark (BGE-M3 vs all-mpnet) vor dem Wechsel laufen?
+**Entscheidung:** Nein, direkt wechseln. Re-Evaluation nach Rebuild ist der Benchmark. Rollback via KH_EMBEDDING_MODEL + Backup.
+**Begründung:** Ein Vorab-Benchmark über 9 godot-Fragen ist statistisch nicht aussagekräftig (n=9). Stattdessen nach dem Wechsel Re-Evaluation aller Fragen; bei Regression (>0.1) Rollback via Env-Var in Sekunden (wie bei Reranker in Phase 1). Konsistent mit Entscheidung 1.2 (Reranker: kein Vorab-Benchmark).
+
+### Entscheidung 2.9: Phase-1-Baseline-Wert
+**Frage:** godot 0.8386 (changelog/Report) vs 0.8351 (letzte Re-Evaluation mit godot-008-de) — welcher ist verbindlich für die Exit-Schwelle?
+**Entscheidung:** 0.8351 (letzter Re-Evaluations-Wert aus der Phase-1-Cleanup-Iteration, inklusive godot-008-de). Exit-Schwelle für Phase 2a: avg_composite ≥ 0.8351 − 0.1 = 0.7351.
+**Begründung:** 0.8351 ist der aktuellste Wert (9 godot-Fragen inkl. godot-008-de, gemessen nach C2-Fix und faq.md-alpha-Korrektur). 0.8386 war der Wert vor godot-008-de-Hinzufügung. Da der aktuelle Index 9 Fragen hat, ist 0.8351 die richtige Baseline.
+
+### Entscheidung 2.10: Quality Gate Trigger
+**Frage:** Scheduled weekly + workflow_dispatch, oder auch push auf quality/baselines/**?
+**Entscheidung:** Scheduled weekly (Montag 05:00 UTC) + workflow_dispatch (manual). Kein Push-Trigger.
+**Begründung:** Index-Rebuild dauert 15-30 Min pro Domain — zu langsam für Push-Trigger. Scheduled weekly läuft vor dem update-knowledge-Workflow (06:00 UTC), so dass Quality Gate auf dem aktuellen Stand prüft. workflow_dispatch für manuelle Tests nach Iterationen.
+
+### Entscheidung 2.11: Regression-Block-Verhalten
+**Frage:** CI-fail + Report-Artifact, oder zusätzlich gh issue create?
+**Entscheidung:** CI-fail (exit 1) + Report-Upload als GitHub Artifact. Kein automatisches GitHub Issue in Phase 2a.
+**Begründung:** CI-fail ist ausreichend sichtbar (PR-Status, Email-Notification). Report-Artifact ermöglicht Diagnose. Automatisches Issue-Erstellung ist Overhead für einen Solo-Developer-Hub — Noah sieht den CI-Fail direkt. Falls in Phase 2b Issues gewünscht, kann ein gh issue create Step ergänzt werden.
+
+### Entscheidung 2.12: godot-008-de in Golden-Dataset-Zählung
+**Frage:** Zählt godot-008-de als separate Frage bei der 20-30-Zielvorgabe?
+**Entscheidung:** Ja. godot-008-de ist eine eigenständige Frage, die die deutsche FAQ-Sektion ohne Sprachbarriere testet. Bei 20-30 Fragen: godot hat aktuell 9 (inkl. 008-de) → +11-21 neue Fragen in Phase 2b.
+**Begründung:** godot-008 (englisch) und godot-008-de (deutsch) testen unterschiedliche Aspekte (Sprachbarriere vs. direktes FAQ-Retrieval). Beide sind legitime Evaluationsfragen.
+
+### Hinweis: jina-Reranker-Test-Zeitpunkt
+**Status:** Empfehlung, keine verbindliche Entscheidung.
+**Empfehlung:** Der jina-Reranker-Test (LIM-007: Download 1.1 GB freigeben, KH_RERANKER_MODEL=jinaai/jina-reranker-v2-base-multilingual, Re-Evaluation) sollte **nach Phase 2a** durchgeführt werden.
+**Begründung:** BGE-M3 (Phase 2a) wechselt das Embedding-Modell, jina wechselt den Reranker. Beides gleichzeitig zu wechseln macht Diagnose schwierig (welcher Wechsel hat eine Regression verursacht?). Nach Phase 2a ist BGE-M3 als Embedding etabliert und der jina-Test isoliert den Reranker-Effekt. LIM-007 in known-issues.md dokumentiert den ungetesteten Status.
+
 ## Offene Fragen für Noah (zusammengefasst)
 
-> Siehe Entscheidungen (Noah, 2026-06-30) oben für die Antworten.
+> Siehe Entscheidungen (Noah, 2026-06-30) und Entscheidungen zu offenen Fragen (Noah, 2026-06-30) oben für die Antworten.
 
 1. BGE-M3: Volle 1024d oder Matryoshka? Sparse-Retrieval jetzt oder Phase 3? Atomic-Rollback-Strategie? Benchmark vor Wechsel?
 2. Late Chunking: Kapitelweise oder dokumentenweit? Chunk-Granularität? Auch für Godot?
