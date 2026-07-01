@@ -43,6 +43,12 @@
   Default: `cross-encoder/ms-marco-MiniLM-L-12-v2`.
   Alternative: `jinaai/jina-reranker-v2-base-multilingual` (multilingual, 1024 Token Kontext, CC-BY-NC-4.0).
   Wird in `mcp_servers/knowledge_hub/config.py` ausgewertet. `trust_remote_code=True` in `model_manager.py` aktiviert Custom-Code-Ladung für jina-Modelle.
+- `KH_EMBEDDING_MODEL` — Überschreibt das Embedding-Modell (Phase 2a, Decision 2.2).
+  Default: `all-mpnet-base-v2` (768 dims, English-only, ~420 MB).
+  Alternative: `BAAI/bge-m3` (1024 dims, multilingual, 8192 Token Kontext, MIT, ~2.2 GB Download).
+  Wird LIVE in `model_manager.get_embedder()` auf jedem Cache-Miss gelesen.
+  Precedence (Decision 2.7): Env-Var > `domain.md` (`## Metadaten → Embedding-Model`) > `config.DEFAULT_MODEL_NAME`.
+  Hinweis: Gleichzeitiges Laden beider Modelle kostet ~2.6 GB RAM (`_model_cache` ist aktuell plain dict ohne LRU — LRU-Migration in Phase 2b, B4).
 - `KNOWLEDGE_HUB_DOMAINS` — Komma-separierte Domain-Liste für MCP-Server-Scoping.
   Wird in `mcp_servers/knowledge_hub/server.py` ausgewertet.
 

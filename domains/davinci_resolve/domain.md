@@ -32,12 +32,12 @@ Deckt: Cut, Edit, Color, Fairlight, Fusion, Deliver, Photo (ab Resolve 21).
 | personal/workflow-notes.md | Eigene Reel-Produktions-Workflows |
 
 ## Metadaten
-- Embedding-Model: all-mpnet-base-v2 (768 dims)
+- Embedding-Model: BAAI/bge-m3 (1024 dims)
 - Collection: davinci_resolve_knowledge
 - ChromaDB-Path: chromadb_data/davinci_resolve/chroma/
 - BM25-Path: chromadb_data/davinci_resolve/davinci_resolve_bm25.pkl
 - Source-Types: pdf
-- Letztes Update: 2026-06-28
+- Letztes Update: 2026-06-30
 
 ## Lizenz-Hinweis
 Quelldokumente © Blackmagic Design. Ursprüngliche PDFs in sources/raw/ (gitignored).

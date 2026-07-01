@@ -14,6 +14,33 @@ These packages are imported by the MIT-licensed Knowledge Hub runtime code.
 | rank-bm25 | Apache-2.0 | BM25 sparse retrieval |
 | einops | Apache-2.0 | Tensor reshaping utilities — imported by the jina-reranker-v2 custom code (see CC-BY-NC-4.0 section below). No-op for the default ms-marco MiniLM reranker. |
 
+## MIT-Licensed Model Weights (Runtime, Configurable Embedding)
+
+These embedding model weights are downloaded on demand at index-build
+and query time. The default is `all-mpnet-base-v2` (English-only); the
+Phase-2a override is `BAAI/bge-m3` (multilingual), selectable via the
+`KH_EMBEDDING_MODEL` environment variable. Both are MIT-licensed.
+
+### BAAI/bge-m3
+
+- **Repository:** https://huggingface.co/BAAI/bge-m3
+- **License:** MIT
+- **Copyright:** Beijing Academy of Artificial Intelligence (BAAI)
+- **Usage:** Phase-2a default embedding model. Multilingual (100+
+  languages incl. German), 1024 dims, 8192 token context, ~2.2 GB
+  download on first use. Selectable via
+  `KH_EMBEDDING_MODEL=BAAI/bge-m3` (Decision 2.2).
+- **License file:** https://huggingface.co/BAAI/bge-m3/blob/main/LICENSE
+
+### sentence-transformers/all-mpnet-base-v2
+
+- **Repository:** https://huggingface.co/sentence-transformers/all-mpnet-base-v2
+- **License:** Apache-2.0
+- **Copyright:** sentence-transformers (UKPLab)
+- **Usage:** Default embedding model (fallback). English-only, 768
+  dims, 384 token context, ~420 MB download. Used when
+  `KH_EMBEDDING_MODEL` is unset and `domain.md` does not override.
+
 ## MIT-Licensed Dependencies (Dev / Quality Evaluation Platform)
 
 These packages are imported ONLY by the development-time Quality

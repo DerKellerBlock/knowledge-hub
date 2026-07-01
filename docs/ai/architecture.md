@@ -83,7 +83,17 @@ chromadb_data/
 
 Model Manager (`scripts/model_manager.py`) ist die einzige Stelle, die
 Embedding- und Reranker-Modelle lädt. Lazy-Loading, Per-Domain-Caching,
-LRU-Eviction.
+LRU-Eviction (BM25-Cache hat LRU; `_model_cache` ist aktuell plain dict —
+LRU-Migration für Embedder in Phase 2b, siehe B4).
+
+Embedding-Modell-Auswahl (Phase 2a, Decision 2.7):
+- Precedence: `KH_EMBEDDING_MODEL` Env-Var > `domain.md` Metadaten >
+  `config.DEFAULT_MODEL_NAME` (`all-mpnet-base-v2`).
+- Live-Lesung der Env-Var auf jedem Cache-Miss in `get_embedder()`
+  (analog `get_reranker()`).
+- Aktive Modelle: `all-mpnet-base-v2` (768 dims, 384 Token, English-only)
+  als Fallback; `BAAI/bge-m3` (1024 dims, 8192 Token, multilingual, MIT)
+  als Phase-2a-Default über Env-Var + domain.md.
 
 Domain-Scoping: `--domains` CLI-Flag auf dem MCP-Server begrenzt sichtbare
 Domains. Default (ohne Flag): alle sichtbar (rückwärtskompatibel).

@@ -21,7 +21,7 @@ Godot Engine 4.x — Noah's primary game engine. Covers API reference, 3D workfl
 
 ## Metadaten
 
-- Embedding-Model: all-mpnet-base-v2 (768 dims)
+- Embedding-Model: BAAI/bge-m3 (1024 dims)
 - Parser: rst-godot (structured parsing of RST class docs)
 - ChromaDB-Collection: `godot_knowledge`
 - Source-Types: repo
