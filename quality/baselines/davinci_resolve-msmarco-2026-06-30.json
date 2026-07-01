@@ -1,6 +1,6 @@
 {
   "domain": "davinci_resolve",
-  "date": "2026-07-01",
+  "date": "2026-06-30",
   "evaluations": [
     {
       "id": "davinci_resolve-001",
@@ -13,8 +13,9 @@
       "label": "pass",
       "truncation_warnings": 10,
       "found_source_files": [
-        "fusion-20.3-manual.md",
-        "davinci-resolve-20.3-reference-manual.md"
+        "davinci-resolve-20.3-reference-manual.md",
+        "davinci-resolve-20-fusion-visual-effects.md",
+        "fusion-20.3-manual.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -34,9 +35,9 @@
         }
       ],
       "top_snippets": [
-        " give up and fall back to using\nFusion’s Tracker node or to manual keyframing. Some shots are simply not trackable, or the\nresulting track suffers from too much jitter or drift. The Planar Tracker is ",
+        "rview | Chapter 168 Resolve FX Transform **3642**\n\n\n\n\n--- end of page=3641 ---\n\n**4** Select the FX node, make sure the OpenFX onscreen controls are enabled, choose whether\nyou want to start at the fi",
         "eady:** After analyzing a planar surface, this mode removes all motion and distortions\nfrom the planar surface, usually in preparation for some kind of paint or roto task, prior to\n“unsteadying” the c",
-        " Planar Tracker node, the Track spline produced\nby the Planar Tracker is shared by connecting it with the Planar Transform node. A consequence of\nthis sharing of the Track spline is that if the track "
+        "bar.\n\nTo open any project, double-click it. To create a new project, double-click the Untitled Project icon,\nor click the New Project button.\n\n\nThe Project Manager shows all projects belonging to the "
       ]
     },
     {
@@ -52,8 +53,7 @@
       "found_source_files": [
         "davinci-resolve-20.3-reference-manual.md",
         "davinci-resolve-20-beginners-guide.md",
-        "davinci-resolve-20-editors-guide.md",
-        "davinci-resolve-21-new-features-guide.md"
+        "davinci-resolve-20-editors-guide.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -73,9 +73,9 @@
         }
       ],
       "top_snippets": [
-        "ving you a more detailed look at your edit point. Once trimming is complete, it will\nautomatically revert back to the previous state.\n\nThe Precision Trim Editor will automatically appear when performi",
+        " skill an editor possesses. Trimming\n\nallows you to adjust the start of a clip, the end of a clip, the start and end of a clip,\n\nor, in certain circumstances, the start and end of other timeline clips",
         "ting a clip’s In and Out points in the timeline\n\nand is arguably the most important skill an editor possesses. Trimming allows you\n\nto adjust the start of a clip, the end of a clip, the start and end ",
-        " skill an editor possesses. Trimming\n\nallows you to adjust the start of a clip, the end of a clip, the start and end of a clip,\n\nor, in certain circumstances, the start and end of other timeline clips"
+        "ving you a more detailed look at your edit point. Once trimming is complete, it will\nautomatically revert back to the previous state.\n\nThe Precision Trim Editor will automatically appear when performi"
       ]
     },
     {
@@ -111,25 +111,25 @@
         }
       ],
       "top_snippets": [
-        "re in the timeline, the\n\nclip you’re looking at will always be the one selected.\n\n**9** Press the Spacebar again to stop playback.\n\n\nTIP If a track is disabled in the edit page, it will be dimmed in t",
-        "if needed.\n\n\n**Lesson 4 Performing Primary Color Corrections** **243**\n\n\n\n\n--- end of page=267 ---\n\n**11** Click the leftmost wheel icon until the controls show Black, Dark, and Shadow. These\n\nwheels ",
-        "from the middle toolbar window.\n\n\n**Lesson 4 Performing Primary Color Corrections** **208**\n\n\n\n\n--- end of page=232 ---\n\n**12** Click and drag the Radius Blur control down to around 0.40 so the foregr"
+        "off the grading\n\nmonitor. Instead of being limited to color grading one click or drag at a time,\n\nyou can use the panels to adjust multiple controls simultaneously. This intuitive\n\napproach can be the",
+        "olor Corrections**\n\nAt the time of this writing, only Final Cut Pro X XML projects are capable of exporting color correction\ndata that can be imported as primary grades in DaVinci Resolve. For obvious",
+        " grading workflows will not always be linear, and you might start by\n\napplying looks at the end of the pipeline (closer to the Output node) before moving\n\nupstream (toward the Input node) to make prim"
       ]
     },
     {
       "id": "davinci_resolve-004",
       "question": "What is the difference between Point Tracker and Planar Tracker in DaVinci Resolve?",
       "source_recall": 1.0,
-      "page_metadata_accuracy": 0.3,
+      "page_metadata_accuracy": 0.1,
       "top_k_relevance": 0.55,
       "evidence_quality": 1.0,
-      "composite_score": 0.7475,
+      "composite_score": 0.7075,
       "label": "pass",
       "truncation_warnings": 10,
       "found_source_files": [
+        "davinci-resolve-20.3-reference-manual.md",
         "davinci-resolve-20-fusion-visual-effects.md",
-        "fusion-20.3-manual.md",
-        "davinci-resolve-20.3-reference-manual.md"
+        "fusion-20.3-manual.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -149,26 +149,25 @@
         }
       ],
       "top_snippets": [
-        " give up and fall back to using\nFusion’s Tracker node or to manual keyframing. Some shots are simply not trackable, or the\nresulting track suffers from too much jitter or drift. The Planar Tracker is ",
+        "ls. Although the\n\nprocess of tracking is the same as the Tracker node, the Tracker modifier is a single\npoint tracker that tracks up and down and side to side movement, so it is more limited\n\nthan the",
         "st-production. As an example, live-action footage can often contain a planar surface such as\na license plate or a road sign that needs new numbers in the license plate or a new city’s name on the\nroad",
-        "he brightness in an image.\n\n\n**Lesson 3 Replacing a Sky** **85**\n\n\n\n\n--- end of page=105 ---\n\n##### **Answers**\n\n**1** False. Adding a clip from the media pool to the Node Editor uses the clip’s nativ"
+        "eady:** After analyzing a planar surface, this mode removes all motion and distortions\nfrom the planar surface, usually in preparation for some kind of paint or roto task, prior to\n“unsteadying” the c"
       ]
     },
     {
       "id": "davinci_resolve-005",
       "question": "How do I render and deliver a finished project in DaVinci Resolve?",
       "source_recall": 1.0,
-      "page_metadata_accuracy": 0.1,
+      "page_metadata_accuracy": 0.2,
       "top_k_relevance": 0.55,
       "evidence_quality": 1.0,
-      "composite_score": 0.7075,
+      "composite_score": 0.7275,
       "label": "pass",
       "truncation_warnings": 10,
       "found_source_files": [
-        "fusion-20.3-manual.md",
         "davinci-resolve-20.3-reference-manual.md",
-        "davinci-resolve-20-beginners-guide.md",
-        "davinci-resolve-20-editors-guide.md"
+        "fusion-20.3-manual.md",
+        "davinci-resolve-20-beginners-guide.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -189,8 +188,8 @@
       ],
       "top_snippets": [
         "s, with each reel being a different project.\n\n\n**To render output from multiple projects at once:**\n\n**1** Open each project, set up whatever jobs you want to render in the Render Queue, and save that",
-        "es and Render Cache,\nDaVinci Resolve will make an Archive using only the proxy media. This allows you to create a compact\nand easily transported version of your project to either move to another compu",
-        "s added to the job.\n\n**2** Once all the jobs have been completed, right-click Job 1b and choose Reveal in Finder\n\n(macOS) or Open File Location (Windows).\n\n\nThe rendered file is revealed in the Output"
+        "inishing**\n\nOnce you’re finished with your final grade, you’ll again use the controls of the Deliver page to render\nthe program’s final media, either as individual clips for a round-trip workflow, or ",
+        "lutions if your room is only set up with an HD monitor, and then render the\nfinished project at 4K resolution for final delivery. Alternately, you can downsize an HD project to\nan SD resolution to cre"
       ]
     },
     {
@@ -205,7 +204,8 @@
       "truncation_warnings": 10,
       "found_source_files": [
         "davinci-resolve-20.3-reference-manual.md",
-        "davinci-resolve-20-fairlight-audio-post.md"
+        "davinci-resolve-20-fairlight-audio-post.md",
+        "davinci-resolve-20-beginners-guide.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -226,22 +226,23 @@
       ],
       "top_snippets": [
         "### Audio Assistant (Studio Version Only)\n\nWith the Audio Assistant, DaVinci Resolve can automatically organize and color-code your tracks, even\nout your dialogue levels, and adjust the mixer faders t",
-        "dition button in the Sound Library. That clip now appears, temporarily, in the Timeline,\nand you can play through that section of the Timeline to see how you like the sound effect in\ncontext with the ",
-        " - **To rearrange the order of multiple audio effects applied to a clip:** Click the move up or move\ndown buttons in any effect’s title bar, to the left of each effect’s Trash Can button.\n\n - **To dis"
+        "Fairlight_\n\n_Audio Guide to DaVinci Resolve 20_ .\n\n\nOnce you are happy with the mix, you can return to the edit page, where you will see all the\n\naudio changes you’ve made in Fairlight, once again hig",
+        " page=649 ---\n\n## **Bouncing Mixes in** **the Fairlight Page**\n\nAssuming your soundtrack is mixed and clients are happy with the soundtrack levels and\n\noverall sound, it’s time to _bounce_ or _render_"
       ]
     },
     {
       "id": "davinci_resolve-007",
       "question": "What are the new features in DaVinci Resolve 21?",
       "source_recall": 1.0,
-      "page_metadata_accuracy": 0.4,
+      "page_metadata_accuracy": 0.3,
       "top_k_relevance": 0.55,
       "evidence_quality": 1.0,
-      "composite_score": 0.7675,
+      "composite_score": 0.7475,
       "label": "pass",
       "truncation_warnings": 10,
       "found_source_files": [
-        "davinci-resolve-21-new-features-guide.md"
+        "davinci-resolve-21-new-features-guide.md",
+        "davinci-resolve-20-editors-guide.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -261,9 +262,9 @@
         }
       ],
       "top_snippets": [
-        "ts**\n\nHDR Vivid support has received multiple improvements in DaVinci Resolve 21 including:\n\n - The HDR Vivid toolset is now available on the DaVinci Resolve Mini Panel.\n\n - A Color timeline filter to",
         "��������������������������������������������������� 142\n\nMotion Vector Layers Generated from Optical Flow\b��������������������������������������������������������������������������������������� 142\n\nI",
-        "New Features Guide DaVinci Resolve 21 | Cut and Edit **75**\n\n\n\n\n--- end of page=74 ---\n\n### **DRT Timeline Import Supports** **Link and Conform Options**\n\nWhen importing a DaVinci Resolve Timeline (.d"
+        "telliSearch, and Motion Deblur can be used on images in\nthe Photo page.\n\n\nNew Features Guide DaVinci Resolve 21 | Photo **36**\n\n\n\n\n--- end of page=35 ---\n\n### **GPU Accelerated Batch** **Exports and C",
+        "eract with the rest of the pages in DaVinci Resolve.\n\n\nThe Photo Album Interface\n\n\n\n\n\n\n\n\n\n\n\nNew Features Guide DaVinci Resolve 21 | Photo **13**\n\n\n\n\n--- end of page=12 ---\n\n**To add an image or images"
       ]
     }
   ],
@@ -273,9 +274,9 @@
     "pass_count": 7,
     "weak_count": 0,
     "fail_count": 0,
-    "avg_composite": 0.7304,
+    "avg_composite": 0.7246,
     "avg_source_recall": 1.0,
-    "avg_page_metadata_accuracy": 0.2143,
+    "avg_page_metadata_accuracy": 0.1857,
     "avg_top_k_relevance": 0.55,
     "avg_evidence_quality": 1.0
   }

@@ -41,8 +41,18 @@
 
 - `KH_RERANKER_MODEL` — Überschreibt das Cross-Encoder-Modell für Stage-2-Reranking.
   Default: `cross-encoder/ms-marco-MiniLM-L-12-v2`.
-  Alternative: `jinaai/jina-reranker-v2-base-multilingual` (multilingual, 1024 Token Kontext, CC-BY-NC-4.0).
-  Wird in `mcp_servers/knowledge_hub/config.py` ausgewertet. `trust_remote_code=True` in `model_manager.py` aktiviert Custom-Code-Ladung für jina-Modelle.
+  Empfohlene Alternative (multilinguale Domains, BGE-M3-Embeddings):
+  `jinaai/jina-reranker-v2-base-multilingual` (multilingual, 1024 Token Kontext,
+  CC-BY-NC-4.0). BGE-M3 (multilingual Embeddings) + jina (multilingual Reranker)
+  bilden eine konsistente Multilingual-Pipeline und lösen LIM-008 (Sprachbarriere).
+  Setup für lokalen Default: `export KH_RERANKER_MODEL=jinaai/jina-reranker-v2-base-multilingual`
+  in `~/.zshrc` oder `.env` setzen. Der CI quality-gate nutzt jina als Default seit
+  2026-07-01. Score-Skala-Hinweis: jina nutzt sigmoid (0–1), ms-marco nutzt logits
+  (−10..+10) — beide sind sort-kompatibel (rank-basiert, kein Threshold), sodass
+  `hybrid_search.py` und `scorer.py` ohne Anpassung funktionieren.
+  Wird in `mcp_servers/knowledge_hub/config.py` ausgewertet. `trust_remote_code=True`
+  in `model_manager.py` aktiviert HuggingFace-Custom-Code-Ladung für jina-Modelle
+  (siehe `docs/ai/security.md` für das akzeptierte Risiko).
 - `KH_EMBEDDING_MODEL` — Überschreibt das Embedding-Modell (Phase 2a, Decision 2.2).
   Default: `all-mpnet-base-v2` (768 dims, English-only, ~420 MB).
   Alternative: `BAAI/bge-m3` (1024 dims, multilingual, 8192 Token Kontext, MIT, ~2.2 GB Download).

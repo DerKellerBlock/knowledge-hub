@@ -1,6 +1,6 @@
 {
   "domain": "godot",
-  "date": "2026-07-01",
+  "date": "2026-06-30",
   "evaluations": [
     {
       "id": "godot-001",
@@ -34,8 +34,8 @@
       ],
       "top_snippets": [
         "Method: Node3D.rotate_y\nSignature: rotate_y(angle\\: float)\nInherits: Node → Object\n\nrotate_y ( angle\\: float )\nRotates this node's basis around the Y axis by the given angle, in radians. This operatio",
-        "Constant: PathFollow3D.ROTATION_Y\nSignature: ROTATION_Y = 1\nInherits: Node3D → Node → Object\n\nRotationMode ROTATION_Y = 1\nAllows the PathFollow3D to rotate in the Y axis only.",
-        "Property: CPUParticles3D.particle_flag_rotate_y\nSignature: bool particle_flag_rotate_y = false\nInherits: GeometryInstance3D → VisualInstance3D → Node3D → Node → Object\n\nbool particle_flag_rotate_y = f"
+        "Method: Node3D.rotate_x\nSignature: rotate_x(angle\\: float)\nInherits: Node → Object\n\nrotate_x ( angle\\: float )\nRotates this node's basis around the X axis by the given angle, in radians. This operatio",
+        "Method: Node3D.rotate\nSignature: rotate(axis\\: Vector3, angle\\: float)\nInherits: Node → Object\n\nrotate ( axis\\: Vector3, angle\\: float )\nRotates this node's basis around the axis by the given angle, i"
       ]
     },
     {
@@ -47,12 +47,12 @@
       "evidence_quality": 1.0,
       "composite_score": 0.8594,
       "label": "pass",
-      "truncation_warnings": 2,
+      "truncation_warnings": 1,
       "found_source_files": [
         "gotchas.md",
-        "godot-docs-reference-packed.md",
         "godot-demos-packed.md",
-        "tips.md"
+        "tips.md",
+        "godot-docs-reference-packed.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -73,7 +73,7 @@
       ],
       "top_snippets": [
         "## CharacterBody3D Stair Stepping\n- CharacterBody3D hat native stair stepping (PR #114447, 2025-12-30, open): Properties `step_enabled`, `step_height` (default 0.3m), `step_smooth_enabled`, `step_smoo",
-        "lue)\n\t# ----------------------------------\n\n\nfunc process_movement(delta):\n\tvar grav = norm_grav\n\n\tdir.y = 0\n\tdir = dir.normalized()\n\n\tvel.y += delta * grav\n\n\tvar hvel = vel\n\thvel.y = 0\n\n\tvar target =",
+        "Method: CharacterBody3D.move_and_slide\nInherits: PhysicsBody3D → CollisionObject3D → Node3D → Node → Object\n\nbool move_and_slide ( )\nMoves the body based on velocity. If the body collides with another",
         "## Jolt Physics + CharacterBody3D\n- **Problem:** CharacterBody3D fällt durch den Boden bei Jolt Physics in Godot 4.6\n- **Ursache:** `move_and_slide()` ruft `PhysicsServer3D.body_test_motion()` auf, Jo"
       ]
     },
@@ -88,9 +88,9 @@
       "label": "pass",
       "truncation_warnings": 0,
       "found_source_files": [
+        "gotchas.md",
         "godot-docs-reference-packed.md",
-        "tips.md",
-        "gotchas.md"
+        "tips.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -131,11 +131,11 @@
       "evidence_quality": 1.0,
       "composite_score": 0.8594,
       "label": "pass",
-      "truncation_warnings": 6,
+      "truncation_warnings": 7,
       "found_source_files": [
-        "godot-docs-reference-packed.md",
+        "godot-docs-3d-packed.md",
         "godot-demos-packed.md",
-        "godot-docs-3d-packed.md"
+        "godot-docs-reference-packed.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -156,8 +156,8 @@
       ],
       "top_snippets": [
         "e placed at or near the collision point:\n\n.. image:: img/spring_arm_camera_collision.webp\n\nSetting up the spring arm and camera\n------------------------------------\n\nLet's add a spring arm camera setu",
-        "Method: GLTFCamera.from_node\nSignature: from_node(camera_node\\: Camera3D)\nInherits: Resource → RefCounted → Object\n\nGLTFCamera from_node ( camera_node\\: Camera3D )\nCreate a new GLTFCamera instance fro",
-        "ck_angular_y = false\n\t\t\t\taxis_lock_angular_z = false\n\t\t\t\tcollision_layer = 0\n\t\t\t\tstate.set_angular_velocity(-contact_normal.cross(up).normalized() * 33.0)\n\t\t\t\t_animation_player.play(&\"impact\")\n\t\t\t\t_an"
+        "ches or artifacts) in\ndelicate areas such as rendering or physics. Make sure your artists always work\nin the right scale!\n\nThe Y coordinate is used for \"up\". As for the horizontal X/Z axes, Godot uses",
+        "ocity.y > 0 else 0\n\n\nfunc start(pos):\n\tposition = pos\n\trotation = 0\n\tshow()\n\t$CollisionShape2D.disabled = false\n\n\nfunc _on_body_entered(_body):\n\thide() # Player disappears after being hit.\n\thit.emit()"
       ]
     },
     {
@@ -169,11 +169,12 @@
       "evidence_quality": 1.0,
       "composite_score": 0.8594,
       "label": "pass",
-      "truncation_warnings": 0,
+      "truncation_warnings": 5,
       "found_source_files": [
+        "godot-docs-3d-packed.md",
         "best-practices.md",
-        "godot-docs-reference-packed.md",
-        "gotchas.md"
+        "gotchas.md",
+        "godot-docs-reference-packed.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -200,9 +201,9 @@
         }
       ],
       "top_snippets": [
-        "## GLB-Import Scale mit Meshy\n- **Problem:** GLB-Modell unsichtbar weil scale zu klein\n- **Ursache:** Meshy liefert Modelle mit unterschiedlichen nativen Größen\n- **Workaround:** `auto_size: true` + `",
         "## GLB-Import — Mesh Origin Bug\n- **Problem:** Mesh origin point verschiebt sich vom World Origin weg beim Skalieren importierter GLB/OBJ-Geometrie (nicht bei Godot-nativen QuadMesh)\n- **Ursache:** Bu",
-        "## 3D\n\n### ChurchData.scale Drei-Modus-Semantik\n- **Pattern:** Drei Modi je nach GLB-Typ: (a) native bottom-origin, (b) v2-Platzhalter-Kompensation, (c) real-world units\n- **Warum:** Meshy-Modelle kom"
+        "## GLB-Import Scale mit Meshy\n- **Problem:** GLB-Modell unsichtbar weil scale zu klein\n- **Ursache:** Meshy liefert Modelle mit unterschiedlichen nativen Größen\n- **Workaround:** `auto_size: true` + `",
+        "t to **Material Override** (or **Material** for\nindividual CSG nodes). Choose **New StandardMaterial3D**. Click the newly created\nmaterial's icon to edit it. Unfold the **Albedo** section and load a t"
       ]
     },
     {
@@ -216,8 +217,8 @@
       "label": "pass",
       "truncation_warnings": 2,
       "found_source_files": [
-        "godot-docs-reference-packed.md",
-        "tips.md"
+        "tips.md",
+        "godot-docs-reference-packed.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -230,9 +231,9 @@
         }
       ],
       "top_snippets": [
-        "## GDScript\n- `@export var foo := 42` setzt Typinferenz auf int (nicht Variant)\n- `$Node` ist Kurzform für `get_node(\"Node\")` — nutzen!\n- `call_deferred(\"method\")` wenn du Signale in `_ready()` emites",
-        "Method: GDScriptWorkspace.apply_new_signal\nSignature: apply_new_signal(obj\\: Object, function\\: String, args\\: PackedStringArray)\nInherits: RefCounted → Object\n\napply_new_signal ( obj\\: Object, functi",
-        "Method: Object.connect\nSignature: connect(signal\\: StringName, callable\\: Callable, flags\\: int = 0)\n\nError connect ( signal\\: StringName, callable\\: Callable, flags\\: int = 0 )\nConnects a signal by n"
+        "Method: Object.connect\nSignature: connect(signal\\: StringName, callable\\: Callable, flags\\: int = 0)\n\nError connect ( signal\\: StringName, callable\\: Callable, flags\\: int = 0 )\nConnects a signal by n",
+        "Class: Signal\n\n:github_url: hide\nSignal\n======\nA built-in type representing a signal of an Object.\nDescription\n-----------\nSignal is a built-in Variant type that represents a signal of an Object insta",
+        "Method: Node.rpc\nSignature: rpc(method\\: StringName, ...)\nInherits: Object\n\nError rpc ( method\\: StringName, ... )\nSends a remote procedure call request for the given method to peers on the network (a"
       ]
     },
     {
@@ -244,11 +245,12 @@
       "evidence_quality": 1.0,
       "composite_score": 0.8594,
       "label": "pass",
-      "truncation_warnings": 8,
+      "truncation_warnings": 4,
       "found_source_files": [
-        "godot-docs-reference-packed.md",
+        "godot-docs-3d-packed.md",
         "godot-demos-packed.md",
-        "tips.md"
+        "tips.md",
+        "godot-docs-reference-packed.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -268,9 +270,9 @@
         }
       ],
       "top_snippets": [
+        "uashed)\n\n\nfunc _on_player_hit():\n\t$MobTimer.stop()\n\t$UserInterface/Retry.show()\n```\n\n## File: 3d/squash_the_creeps/Mob.gd\n```\nextends CharacterBody3D\n\n# Emitted when the player jumped on the mob.\nsign",
         "## CharacterBody3D Stair Stepping\n- CharacterBody3D hat native stair stepping (PR #114447, 2025-12-30, open): Properties `step_enabled`, `step_height` (default 0.3m), `step_smooth_enabled`, `step_smoo",
-        "\t[\"front_idle\", false],\n\t\t[\"45front_left_idle\", false],\n\t\t[\"side_left_idle\", false],\n\t\t[\"45back_left_idle\", false],\n\t\t[\"back_idle\", false],\n\t\t[\"45back_right_idle\", false],\n\t],\n\n\t\"walk\": [\n\t\t[\"side_rig",
-        "lue)\n\t# ----------------------------------\n\n\nfunc process_movement(delta):\n\tvar grav = norm_grav\n\n\tdir.y = 0\n\tdir = dir.normalized()\n\n\tvel.y += delta * grav\n\n\tvar hvel = vel\n\thvel.y = 0\n\n\tvar target ="
+        "hen reassigned.\n\t\tvelocity.x = move_toward(velocity.x, 0, STOP_FORCE * delta)\n\telse:\n\t\tvelocity.x += walk * delta\n\t# Clamp to the maximum horizontal movement speed.\n\tvelocity.x = clamp(velocity.x, -WA"
       ]
     },
     {
@@ -282,11 +284,11 @@
       "evidence_quality": 1.0,
       "composite_score": 0.8594,
       "label": "pass",
-      "truncation_warnings": 4,
+      "truncation_warnings": 6,
       "found_source_files": [
+        "godot-docs-3d-packed.md",
         "faq.md",
-        "godot-docs-reference-packed.md",
-        "godot-docs-3d-packed.md"
+        "godot-docs-reference-packed.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -306,9 +308,9 @@
         }
       ],
       "top_snippets": [
-        "## Warum sehe ich mein 3D-Modell nicht?\n- **`visible` Flag**: `MeshInstance3D.visible` (geerbt von `Node3D`) prüfen — und die aller Parents (`get_parent().visible` etc.). Eine unsichtbare Parent-Kette",
-        "Class: MeshInstance3D\nextends GeometryInstance3D → VisualInstance3D → Node3D → Node → Object\n\n:github_url: hide\nMeshInstance3D\n==============\nInherited By: SoftBody3D\nNode that instances meshes into a",
-        "Class: Viewport\nextends Node → Object\n\n:github_url: hide\nViewport\n========\nInherited By: SubViewport, Window\nAbstract base class for viewports. Encapsulates drawing and interaction with a game world.\n"
+        "nsparency_sorting>`\n  during LOD transitions.\n\nThe downside of dithering is that a \"noisy\" pattern is visible during LOD fade\ntransitions. This may not be as noticeable at higher viewport resolutions ",
+        "Godot 3.x workflow\n   (used to reference a non existing doc_importing_3d_meshes importer).\n\nIt is possible to import 3D models in Godot created in external tools.\nDepending on the format, you can impo",
+        "of a specific texture that may be too large to render, you can\nset the **Process > Size Limit** import option to a value greater than ``0``.\nThis will reduce the texture's dimensions on import (preser"
       ]
     },
     {
@@ -320,11 +322,13 @@
       "evidence_quality": 1.0,
       "composite_score": 0.8594,
       "label": "pass",
-      "truncation_warnings": 4,
+      "truncation_warnings": 2,
       "found_source_files": [
-        "faq.md",
+        "godot-docs-3d-packed.md",
+        "tips.md",
         "godot-docs-reference-packed.md",
-        "godot-docs-3d-packed.md"
+        "faq.md",
+        "gotchas.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -345,8 +349,8 @@
       ],
       "top_snippets": [
         "## Warum sehe ich mein 3D-Modell nicht?\n- **`visible` Flag**: `MeshInstance3D.visible` (geerbt von `Node3D`) prüfen — und die aller Parents (`get_parent().visible` etc.). Eine unsichtbare Parent-Kette",
-        "Class: MeshInstance3D\nextends GeometryInstance3D → VisualInstance3D → Node3D → Node → Object\n\n:github_url: hide\nMeshInstance3D\n==============\nInherited By: SoftBody3D\nNode that instances meshes into a",
-        "Godot 3.x workflow\n   (used to reference a non existing doc_importing_3d_meshes importer).\n\nIt is possible to import 3D models in Godot created in external tools.\nDepending on the format, you can impo"
+        "Godot 3.x workflow\n   (used to reference a non existing doc_importing_3d_meshes importer).\n\nIt is possible to import 3D models in Godot created in external tools.\nDepending on the format, you can impo",
+        "ches or artifacts) in\ndelicate areas such as rendering or physics. Make sure your artists always work\nin the right scale!\n\nThe Y coordinate is used for \"up\". As for the horizontal X/Z axes, Godot uses"
       ]
     }
   ],

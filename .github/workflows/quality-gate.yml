@@ -45,6 +45,12 @@ jobs:
       - name: Set embedding model (BGE-M3)
         run: echo "KH_EMBEDDING_MODEL=BAAI/bge-m3" >> $GITHUB_ENV
 
+      # jina multilingual reranker = CI default since 2026-07-01 (LIM-007/LIM-008).
+      # Note: the HF cache key hashes config.py, not this env value, so the first
+      # jina CI run downloads ~560 MB; subsequent runs reuse the HF cache.
+      - name: Set reranker model (jina multilingual)
+        run: echo "KH_RERANKER_MODEL=jinaai/jina-reranker-v2-base-multilingual" >> $GITHUB_ENV
+
       - name: Build Godot index
         run: python scripts/embed_index.py --domain godot
 

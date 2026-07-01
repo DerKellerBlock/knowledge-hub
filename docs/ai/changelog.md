@@ -56,4 +56,16 @@
 - **feat(godot):** `faq.md` mit 3 Sektionen gefüllt (Lifecycle, Data Saving, 3D Visibility). `godot-008` zum Golden Dataset hinzugefügt (3D Visibility, 2 expected_sources).
 - **chore(index):** Godot + DaVinci Indizes neu gebaut (godot 24564→24588, davinci 2228→2511). Backups erstellt (`godot.bak.phase1`, `davinci_resolve.bak.phase1`).
 - **quality:** 302 Tests grün (107 unit + 35 integration + 136 quality + 12 e2e + 12 mcp). godot 7 pass + 1 weak (godot-008 SR 0.5), avg_composite 0.8321. davinci 7 pass, avg_composite 0.7218.
+- **feat(search):** BGE-M3 multilingual embedding (1024d, 8192 token) replaces all-mpnet-base-v2. `KH_EMBEDDING_MODEL` env var with precedence: Env-Var > domain.md > DEFAULT_MODEL_NAME. `_encode_robust()` for long chunks on Apple Silicon (MPS/SDPA OOM fix via length-sorting + bs=32/bs=1 bucketing). godot-008 language barrier closed (weak 0.6404 → pass 0.8594).
+- **feat(quality):** Spec-compliant regression thresholds: avg_composite < baseline − 0.1 OR pass→weak/fail OR weak→fail. `check_regression_exit.py` for CI exit-code (0=pass, 1=regression). 10 tests.
+- **ci:** Weekly quality regression gate (`.github/workflows/quality-gate.yml`, Monday 05:00 UTC + `workflow_dispatch`). LFS checkout, HuggingFace cache with config.py key, index rebuild, `run_evaluation --baseline`, `check_regression_exit`. Manual baselines in `quality/baselines/` (godot-latest.json, davinci_resolve-latest.json, README.md). test.yml cache key updated (B5 fix).
+- **docs:** `docs/ai/architecture.md` (BGE-M3 1024d/8192 token), `docs/ai/best-practices.md` (KH_EMBEDDING_MODEL), `docs/ai/known-issues.md` (LIM-008 transitional, LIM-009 long-context confounder). `THIRD_PARTY_LICENSES.md` (BGE-M3 MIT).
+- **quality:** 319 Tests grün (109 unit + 41 integration + 145 quality + 12 e2e + 12 mcp). godot 9/9 pass avg 0.8594 (+0.0243 vs Phase 1), davinci 7/7 pass avg 0.7246 (+0.0028). godot-008 weak→pass (language barrier solved). Index: godot 24588 chunks / 1326 MB, davinci 2511 chunks / 471 MB, dimension 1024. Backups removed after success.
+
+## 2026-07-01
+
+- **feat(search):** jina-reranker-v2-base-multilingual adopted as multilingual Stage-2 reranker (KH_RERANKER_MODEL). godot-008 language barrier resolved: German faq.md ranks #1 despite English query. Resolves LIM-007, LIM-008.
+- **feat(quality):** jina baselines promoted for godot (0.8594) and davinci_resolve (0.7304, +0.0058). ms-marco baselines archived as `*-msmarco-2026-06-30.json`.
+- **ci:** quality-gate.yml uses `KH_RERANKER_MODEL=jinaai/jina-reranker-v2-base-multilingual` default.
+- **docs(security):** `trust_remote_code=True` risk documented (analog pickle safety).
 

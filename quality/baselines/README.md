@@ -48,7 +48,18 @@ Same structure as `run_evaluation.py --output` output:
 
 ## Current Baselines
 
-| File | Domain | Date | Avg Composite | Questions |
-|------|--------|------|---------------|----------|
-| `godot-latest.json` | godot | 2026-06-30 | 0.8594 | 9 |
-| `davinci_resolve-latest.json` | davinci_resolve | 2026-06-30 | 0.7246 | 7 |
+The current `*-latest.json` baselines are **BGE-M3 + jina-reranker-v2-base-multilingual**
+(KH_RERANKER_MODEL env var, 2026-07-01). The previous ms-marco-MiniLM baselines
+are archived as `*-msmarco-2026-06-30.json`.
+
+To reactivate the ms-marco reranker locally, leave `KH_RERANKER_MODEL` unset
+(the code default is `cross-encoder/ms-marco-MiniLM-L-12-v2`). The CI
+quality-gate workflow sets `KH_RERANKER_MODEL=jinaai/jina-reranker-v2-base-multilingual`
+explicitly, so CI always compares against the jina baselines.
+
+| File | Domain | Date | Reranker | Avg Composite | Questions |
+|------|--------|------|----------|---------------|----------|
+| `godot-latest.json` | godot | 2026-07-01 | jina | 0.8594 | 9 |
+| `davinci_resolve-latest.json` | davinci_resolve | 2026-07-01 | jina | 0.7304 | 7 |
+| `godot-msmarco-2026-06-30.json` | godot | 2026-06-30 | ms-marco | 0.8594 | 9 |
+| `davinci_resolve-msmarco-2026-06-30.json` | davinci_resolve | 2026-06-30 | ms-marco | 0.7246 | 7 |
