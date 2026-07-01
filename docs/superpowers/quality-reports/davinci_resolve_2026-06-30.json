@@ -7,9 +7,9 @@
     "pass_count": 7,
     "weak_count": 0,
     "fail_count": 0,
-    "avg_composite": 0.7218,
+    "avg_composite": 0.7246,
     "avg_source_recall": 1.0,
-    "avg_page_metadata_accuracy": 0.1714,
+    "avg_page_metadata_accuracy": 0.1857,
     "avg_top_k_relevance": 0.55,
     "avg_evidence_quality": 1.0
   },
@@ -25,9 +25,9 @@
       "label": "pass",
       "truncation_warnings": 10,
       "found_source_files": [
-        "fusion-20.3-manual.md",
+        "davinci-resolve-20.3-reference-manual.md",
         "davinci-resolve-20-fusion-visual-effects.md",
-        "davinci-resolve-20.3-reference-manual.md"
+        "fusion-20.3-manual.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -49,23 +49,23 @@
       "top_snippets": [
         "rview | Chapter 168 Resolve FX Transform **3642**\n\n\n\n\n--- end of page=3641 ---\n\n**4** Select the FX node, make sure the OpenFX onscreen controls are enabled, choose whether\nyou want to start at the fi",
         "eady:** After analyzing a planar surface, this mode removes all motion and distortions\nfrom the planar surface, usually in preparation for some kind of paint or roto task, prior to\n“unsteadying” the c",
-        "lization analysis.\n\n - **Track One Frame Reverse:** Initiates tracking from the current frame backward by a\nduration of one frame.\n\n - **Track Reverse:** Initiates tracking from the current frame back"
+        "bar.\n\nTo open any project, double-click it. To create a new project, double-click the Untitled Project icon,\nor click the New Project button.\n\n\nThe Project Manager shows all projects belonging to the "
       ]
     },
     {
       "id": "davinci_resolve-002",
       "question": "How do I trim a clip on the Edit page in DaVinci Resolve?",
       "source_recall": 1.0,
-      "page_metadata_accuracy": 0.1,
+      "page_metadata_accuracy": 0.2,
       "top_k_relevance": 0.55,
       "evidence_quality": 1.0,
-      "composite_score": 0.7075,
+      "composite_score": 0.7275,
       "label": "pass",
       "truncation_warnings": 10,
       "found_source_files": [
-        "davinci-resolve-20-editors-guide.md",
+        "davinci-resolve-20.3-reference-manual.md",
         "davinci-resolve-20-beginners-guide.md",
-        "davinci-resolve-20.3-reference-manual.md"
+        "davinci-resolve-20-editors-guide.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -102,8 +102,8 @@
       "truncation_warnings": 10,
       "found_source_files": [
         "davinci-resolve-20-colorist-guide.md",
-        "davinci-resolve-20-beginners-guide.md",
-        "davinci-resolve-20.3-reference-manual.md"
+        "davinci-resolve-20.3-reference-manual.md",
+        "davinci-resolve-20-beginners-guide.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -139,9 +139,9 @@
       "label": "pass",
       "truncation_warnings": 10,
       "found_source_files": [
-        "fusion-20.3-manual.md",
+        "davinci-resolve-20.3-reference-manual.md",
         "davinci-resolve-20-fusion-visual-effects.md",
-        "davinci-resolve-20.3-reference-manual.md"
+        "fusion-20.3-manual.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -177,10 +177,9 @@
       "label": "pass",
       "truncation_warnings": 10,
       "found_source_files": [
-        "davinci-resolve-20-editors-guide.md",
-        "davinci-resolve-20-beginners-guide.md",
         "davinci-resolve-20.3-reference-manual.md",
-        "fusion-20.3-manual.md"
+        "fusion-20.3-manual.md",
+        "davinci-resolve-20-beginners-guide.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -202,7 +201,7 @@
       "top_snippets": [
         "s, with each reel being a different project.\n\n\n**To render output from multiple projects at once:**\n\n**1** Open each project, set up whatever jobs you want to render in the Render Queue, and save that",
         "inishing**\n\nOnce you’re finished with your final grade, you’ll again use the controls of the Deliver page to render\nthe program’s final media, either as individual clips for a round-trip workflow, or ",
-        "esson 9 Delivering Projects** **605**\n\n\n\n\n--- end of page=627 ---\n\nThe **OMO PROMO VERTICAL** timeline reopens, and the settings for the selected job\n\nbecome available in the Render Settings panel, wh"
+        "lutions if your room is only set up with an HD monitor, and then render the\nfinished project at 4K resolution for final delivery. Alternately, you can downsize an HD project to\nan SD resolution to cre"
       ]
     },
     {
@@ -216,9 +215,9 @@
       "label": "pass",
       "truncation_warnings": 10,
       "found_source_files": [
-        "davinci-resolve-20-beginners-guide.md",
+        "davinci-resolve-20.3-reference-manual.md",
         "davinci-resolve-20-fairlight-audio-post.md",
-        "davinci-resolve-20.3-reference-manual.md"
+        "davinci-resolve-20-beginners-guide.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -239,8 +238,8 @@
       ],
       "top_snippets": [
         "### Audio Assistant (Studio Version Only)\n\nWith the Audio Assistant, DaVinci Resolve can automatically organize and color-code your tracks, even\nout your dialogue levels, and adjust the mixer faders t",
-        "ho panels.\n\n\nNow that you have completed the futz track settings, you can save the entire effects chain\n\nas a preset.\n## **Saving and Applying Track** **Presets in the Presets Library**\n\n\nThe Fairligh",
-        "Fairlight_\n\n_Audio Guide to DaVinci Resolve 20_ .\n\n\nOnce you are happy with the mix, you can return to the edit page, where you will see all the\n\naudio changes you’ve made in Fairlight, once again hig"
+        "Fairlight_\n\n_Audio Guide to DaVinci Resolve 20_ .\n\n\nOnce you are happy with the mix, you can return to the edit page, where you will see all the\n\naudio changes you’ve made in Fairlight, once again hig",
+        " page=649 ---\n\n## **Bouncing Mixes in** **the Fairlight Page**\n\nAssuming your soundtrack is mixed and clients are happy with the soundtrack levels and\n\noverall sound, it’s time to _bounce_ or _render_"
       ]
     },
     {
@@ -254,8 +253,8 @@
       "label": "pass",
       "truncation_warnings": 10,
       "found_source_files": [
-        "davinci-resolve-20-editors-guide.md",
-        "davinci-resolve-21-new-features-guide.md"
+        "davinci-resolve-21-new-features-guide.md",
+        "davinci-resolve-20-editors-guide.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -277,7 +276,7 @@
       "top_snippets": [
         "��������������������������������������������������� 142\n\nMotion Vector Layers Generated from Optical Flow\b��������������������������������������������������������������������������������������� 142\n\nI",
         "telliSearch, and Motion Deblur can be used on images in\nthe Photo page.\n\n\nNew Features Guide DaVinci Resolve 21 | Photo **36**\n\n\n\n\n--- end of page=35 ---\n\n### **GPU Accelerated Batch** **Exports and C",
-        "ack open, showing the enclosed tracks\n\n\nNew Features Guide DaVinci Resolve 21 | Fairlight **106**\n\n\n\n\n--- end of page=105 ---\n\nThe folder track closed using the disclosure triangle to the left of the "
+        "eract with the rest of the pages in DaVinci Resolve.\n\n\nThe Photo Album Interface\n\n\n\n\n\n\n\n\n\n\n\nNew Features Guide DaVinci Resolve 21 | Photo **13**\n\n\n\n\n--- end of page=12 ---\n\n**To add an image or images"
       ]
     }
   ]

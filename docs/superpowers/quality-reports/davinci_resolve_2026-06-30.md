@@ -4,14 +4,14 @@
 - **Domain:** davinci_resolve
 - **Date:** 2026-06-30
 - **Questions evaluated:** 7
-- **Composite Score:** 0.7218
+- **Composite Score:** 0.7246
 - **Pass:** 7 (100.0%) | **Weak:** 0 (0.0%) | **Fail:** 0 (0.0%)
 
 ## Metric Averages
 | Metric | Average |
 |--------|---------|
 | Source Recall | 1.0 |
-| Page Metadata Accuracy | 0.1714 |
+| Page Metadata Accuracy | 0.1857 |
 | Top-K Relevance | 0.55 |
 | Evidence Quality | 1.0 |
 
@@ -19,7 +19,7 @@
 | ID | Question | Score | Label | SR | PMA | TKR | EQ |
 |----|----------|-------|-------|----|----|----|----|
 | davinci_resolve-001 | How do I set up a Planar Tracker in DaVi... | 0.7275 | pass | 1.0 | 0.2 | 0.55 | 1.0 |
-| davinci_resolve-002 | How do I trim a clip on the Edit page in... | 0.7075 | pass | 1.0 | 0.1 | 0.55 | 1.0 |
+| davinci_resolve-002 | How do I trim a clip on the Edit page in... | 0.7275 | pass | 1.0 | 0.2 | 0.55 | 1.0 |
 | davinci_resolve-003 | How do I use Primary Color Correction in... | 0.7275 | pass | 1.0 | 0.2 | 0.55 | 1.0 |
 | davinci_resolve-004 | What is the difference between Point Tra... | 0.7075 | pass | 1.0 | 0.1 | 0.55 | 1.0 |
 | davinci_resolve-005 | How do I render and deliver a finished p... | 0.7275 | pass | 1.0 | 0.2 | 0.55 | 1.0 |
@@ -55,7 +55,7 @@ Online source coverage and Hub top-3 snippets for manual solution-alignment revi
 
 1. rview | Chapter 168 Resolve FX Transform **3642**     --- end of page=3641 ---  **4** Select the FX node, make sure the OpenFX onscreen controls are enabled, choose whether you want to start at the fi
 2. eady:** After analyzing a planar surface, this mode removes all motion and distortions from the planar surface, usually in preparation for some kind of paint or roto task, prior to “unsteadying” the c
-3. lization analysis.   - **Track One Frame Reverse:** Initiates tracking from the current frame backward by a duration of one frame.   - **Track Reverse:** Initiates tracking from the current frame back
+3. bar.  To open any project, double-click it. To create a new project, double-click the Untitled Project icon, or click the New Project button.   The Project Manager shows all projects belonging to the
 
 **Manual Evaluation:**
 
@@ -139,7 +139,7 @@ Online source coverage and Hub top-3 snippets for manual solution-alignment revi
 
 1. s, with each reel being a different project.   **To render output from multiple projects at once:**  **1** Open each project, set up whatever jobs you want to render in the Render Queue, and save that
 2. inishing**  Once you’re finished with your final grade, you’ll again use the controls of the Deliver page to render the program’s final media, either as individual clips for a round-trip workflow, or
-3. esson 9 Delivering Projects** **605**     --- end of page=627 ---  The **OMO PROMO VERTICAL** timeline reopens, and the settings for the selected job  become available in the Render Settings panel, wh
+3. lutions if your room is only set up with an HD monitor, and then render the finished project at 4K resolution for final delivery. Alternately, you can downsize an HD project to an SD resolution to cre
 
 **Manual Evaluation:**
 
@@ -159,8 +159,8 @@ Online source coverage and Hub top-3 snippets for manual solution-alignment revi
 **Hub Top Snippets:**
 
 1. ### Audio Assistant (Studio Version Only)  With the Audio Assistant, DaVinci Resolve can automatically organize and color-code your tracks, even out your dialogue levels, and adjust the mixer faders t
-2. ho panels.   Now that you have completed the futz track settings, you can save the entire effects chain  as a preset. ## **Saving and Applying Track** **Presets in the Presets Library**   The Fairligh
-3. Fairlight_  _Audio Guide to DaVinci Resolve 20_ .   Once you are happy with the mix, you can return to the edit page, where you will see all the  audio changes you’ve made in Fairlight, once again hig
+2. Fairlight_  _Audio Guide to DaVinci Resolve 20_ .   Once you are happy with the mix, you can return to the edit page, where you will see all the  audio changes you’ve made in Fairlight, once again hig
+3. page=649 ---  ## **Bouncing Mixes in** **the Fairlight Page**  Assuming your soundtrack is mixed and clients are happy with the soundtrack levels and  overall sound, it’s time to _bounce_ or _render_
 
 **Manual Evaluation:**
 
@@ -181,7 +181,7 @@ Online source coverage and Hub top-3 snippets for manual solution-alignment revi
 
 1. ��������������������������������������������������� 142  Motion Vector Layers Generated from Optical Flow��������������������������������������������������������������������������������������� 142  I
 2. telliSearch, and Motion Deblur can be used on images in the Photo page.   New Features Guide DaVinci Resolve 21 | Photo **36**     --- end of page=35 ---  ### **GPU Accelerated Batch** **Exports and C
-3. ack open, showing the enclosed tracks   New Features Guide DaVinci Resolve 21 | Fairlight **106**     --- end of page=105 ---  The folder track closed using the disclosure triangle to the left of the
+3. eract with the rest of the pages in DaVinci Resolve.   The Photo Album Interface            New Features Guide DaVinci Resolve 21 | Photo **13**     --- end of page=12 ---  **To add an image or images
 
 **Manual Evaluation:**
 
