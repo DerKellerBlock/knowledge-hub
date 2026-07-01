@@ -21,8 +21,16 @@ CROSS_ENCODER_MODEL = os.environ.get(
     "cross-encoder/ms-marco-MiniLM-L-12-v2",
 )
 
-# Default embedding model (can be overridden per-domain in domain.md)
+# Default embedding model. Used as a fallback constant only — the live
+# model name is resolved in ``model_manager.get_embedder()`` from
+# (1) the ``KH_EMBEDDING_MODEL`` env var, (2) the domain.md ``Metadaten``
+# block, (3) this constant, in that order (Decision 2.7).
 DEFAULT_MODEL_NAME = "all-mpnet-base-v2"
+
+# Name of the environment variable that overrides the embedding model at
+# runtime (Phase 2a, Decision 2.2). Kept as a constant so callers don't
+# hard-code the string in multiple places.
+EMBEDDING_MODEL_ENV_VAR = "KH_EMBEDDING_MODEL"
 
 # LRU cache limit for BM25 (max domains held in RAM simultaneously)
 BM25_CACHE_MAX = 3

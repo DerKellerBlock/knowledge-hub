@@ -54,6 +54,77 @@ def get_parser(domain: str) -> DomainParser | None:
         return None
 
 
+def _encode_robust(model, texts: list[str]) -> "list":
+    """Embed texts with memory-robust batching.
+
+    Long-context embedding models (e.g. BGE-M3, 8192 token context) can
+    exhaust accelerator memory when a batch mixes very long and short
+    texts: the attention buffer is sized to the longest sequence in the
+    batch, so a single 58k-char chunk next to 31 short chunks tries to
+    allocate a multi-GiB attention matrix and aborts with
+    ``RuntimeError: Invalid buffer size``.
+
+    Strategy (Phase 2a, addresses MPS/SDPA OOM with BGE-M3):
+
+    1. Sort chunks by length so each batch contains similarly-sized texts
+       (avoids one outlier inflating the whole batch's attention buffer).
+    2. Use a large batch (32) for short texts and ``batch_size=1`` for the
+       long tail (>= 4000 chars), which keeps throughput high for the bulk
+       of short Godot/RST chunks while preventing OOM on the few very long
+       ones.
+    3. Concatenate the partial embeddings back into the original chunk
+       order so ChromaDB metadata alignment is preserved.
+
+    This is a build-time helper only; ``hybrid_search`` still calls
+    ``model.encode`` directly on a single query (no batching issue there).
+    """
+    import numpy as np
+
+    if not texts:
+        return []
+
+    # Indices sorted by text length ascending; we encode in three buckets
+    # so the long tail gets batch_size=1 and the bulk gets batch_size=32.
+    order = sorted(range(len(texts)), key=lambda i: len(texts[i]))
+
+    LONG_THRESHOLD = 4000  # chars; ~1000 tokens, safe for bs=1 long-context
+    short_idx = [i for i in order if len(texts[i]) < LONG_THRESHOLD]
+    long_idx = [i for i in order if len(texts[i]) >= LONG_THRESHOLD]
+    print(
+        f"[INFO]  Embedding batches: {len(short_idx)} short (<{LONG_THRESHOLD}c, bs=32) "
+        f"+ {len(long_idx)} long (bs=1)"
+    )
+
+    out = [None] * len(texts)
+
+    # Short bucket — high throughput.
+    if short_idx:
+        short_texts = [texts[i] for i in short_idx]
+        short_emb = model.encode(
+            short_texts, batch_size=32, show_progress_bar=True,
+            convert_to_numpy=True,
+        )
+        for j, idx in enumerate(short_idx):
+            out[idx] = short_emb[j]
+
+    # Long bucket — bs=1 to keep the attention buffer bounded.
+    if long_idx:
+        print(f"[INFO]  Encoding {len(long_idx)} long chunks (bs=1)...")
+        for k, idx in enumerate(long_idx):
+            if k % 50 == 0:
+                print(f"[INFO]   long chunk {k}/{len(long_idx)} "
+                      f"({len(texts[idx])} chars)")
+            emb = model.encode(
+                [texts[idx]], batch_size=1, show_progress_bar=False,
+                convert_to_numpy=True,
+            )
+            out[idx] = emb[0]
+
+    result = np.stack(out)
+    print(f"[INFO]  Stacked embeddings: {result.shape}")
+    return result
+
+
 def load_domain_sources(domain: str) -> list[Chunk]:
     """Load all source files for a domain. Returns list[Chunk]."""
     domain_dir = DOMAINS_DIR / domain
@@ -133,7 +204,15 @@ def build_index(domain: str) -> None:
     model = get_embedder(domain)
     print(f"[INFO]  Embedding with {model.__class__.__name__}...")
     texts = [c.text for c in chunks]
-    embeddings = model.encode(texts, show_progress_bar=True)
+    embeddings = _encode_robust(model, texts)
+
+    # B7: log the embedding dimension after the first encode so a
+    # silent model swap (e.g. 768d → 1024d) is visible in the build log.
+    # We don't assert against an expected value because it is
+    # model-dependent; the log line is a diagnostic, not a gate.
+    if embeddings is not None and len(embeddings) > 0:
+        dim = len(embeddings[0])
+        print(f"[INFO]  Embedding dimension: {dim}")
 
     client = get_chroma_client(domain)
 

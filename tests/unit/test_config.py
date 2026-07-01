@@ -14,6 +14,7 @@ from mcp_servers.knowledge_hub.config import (
     legacy_bm25_path,
     legacy_collection_path,
     DEFAULT_MODEL_NAME,
+    EMBEDDING_MODEL_ENV_VAR,
     CROSS_ENCODER_MODEL,
     BM25_CACHE_MAX,
     CHROMA_MEMORY_LIMIT_BYTES,
@@ -73,6 +74,23 @@ def test_legacy_collection_path():
 def test_default_model_name_is_string():
     assert isinstance(DEFAULT_MODEL_NAME, str)
     assert len(DEFAULT_MODEL_NAME) > 0
+
+
+def test_embedding_model_env_var_name_is_string():
+    """KH_EMBEDDING_MODEL env-var name is exposed as a constant (Phase 2a)."""
+    assert isinstance(EMBEDDING_MODEL_ENV_VAR, str)
+    assert EMBEDDING_MODEL_ENV_VAR == "KH_EMBEDDING_MODEL"
+    assert len(EMBEDDING_MODEL_ENV_VAR) > 0
+
+
+def test_default_model_name_is_all_mpnet_fallback():
+    """DEFAULT_MODEL_NAME stays the all-mpnet fallback (Decision 2.2).
+
+    The live model is resolved in model_manager.get_embedder() via the
+    KH_EMBEDDING_MODEL env var / domain.md; this constant is the final
+    fallback only.
+    """
+    assert DEFAULT_MODEL_NAME == "all-mpnet-base-v2"
 
 
 def test_cross_encoder_model_is_string():

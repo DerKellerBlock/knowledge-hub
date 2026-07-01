@@ -133,9 +133,25 @@ def get_domain_config(domain: str) -> dict:
 
 
 def get_embedder(domain: str) -> SentenceTransformer:
-    """Lazy-load embedding model for a domain. Cached per model_name."""
+    """Lazy-load embedding model for a domain. Cached per model_name.
+
+    Resolution order (Decision 2.7):
+
+    1. ``KH_EMBEDDING_MODEL`` environment variable (read LIVE on every
+       cache-miss, analog to :func:`get_reranker`).
+    2. ``domain.md`` ``Metadaten → Embedding-Model`` entry.
+    3. :data:`config.DEFAULT_MODEL_NAME` (``all-mpnet-base-v2``) fallback.
+
+    The cache key is ``embedder:<model_name>``. Switching the env var at
+    runtime therefore loads a new model into the cache on the next
+    cache-miss; the previously loaded model stays resident until the
+    process exits (Phase 2a limitation, see LIM-008). Loading both
+    BGE-M3 (~2.2 GB) and all-mpnet-base-v2 (~420 MB) simultaneously
+    costs ~2.6 GB of RAM. An LRU-bounded ``_model_cache`` is deferred to
+    Phase 2b (B4).
+    """
     cfg = get_domain_config(domain)
-    model_name = cfg["embedding_model"]
+    model_name = os.environ.get("KH_EMBEDDING_MODEL", cfg["embedding_model"])
     key = f"embedder:{model_name}"
     if key not in _model_cache:
         _model_cache[key] = SentenceTransformer(model_name)
