@@ -49,9 +49,9 @@
       "label": "pass",
       "truncation_warnings": 2,
       "found_source_files": [
+        "godot-demos-packed.md",
         "gotchas.md",
         "godot-docs-reference-packed.md",
-        "godot-demos-packed.md",
         "tips.md"
       ],
       "total_results": 10,
@@ -88,9 +88,9 @@
       "label": "pass",
       "truncation_warnings": 0,
       "found_source_files": [
+        "gotchas.md",
         "godot-docs-reference-packed.md",
-        "tips.md",
-        "gotchas.md"
+        "tips.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -133,9 +133,9 @@
       "label": "pass",
       "truncation_warnings": 6,
       "found_source_files": [
-        "godot-docs-reference-packed.md",
+        "godot-docs-3d-packed.md",
         "godot-demos-packed.md",
-        "godot-docs-3d-packed.md"
+        "godot-docs-reference-packed.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -172,8 +172,8 @@
       "truncation_warnings": 0,
       "found_source_files": [
         "best-practices.md",
-        "godot-docs-reference-packed.md",
-        "gotchas.md"
+        "gotchas.md",
+        "godot-docs-reference-packed.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -246,8 +246,8 @@
       "label": "pass",
       "truncation_warnings": 8,
       "found_source_files": [
-        "godot-docs-reference-packed.md",
         "godot-demos-packed.md",
+        "godot-docs-reference-packed.md",
         "tips.md"
       ],
       "total_results": 10,
@@ -284,9 +284,9 @@
       "label": "pass",
       "truncation_warnings": 4,
       "found_source_files": [
-        "faq.md",
+        "godot-docs-3d-packed.md",
         "godot-docs-reference-packed.md",
-        "godot-docs-3d-packed.md"
+        "faq.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -322,9 +322,9 @@
       "label": "pass",
       "truncation_warnings": 4,
       "found_source_files": [
-        "faq.md",
+        "godot-docs-3d-packed.md",
         "godot-docs-reference-packed.md",
-        "godot-docs-3d-packed.md"
+        "faq.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -348,16 +348,456 @@
         "Class: MeshInstance3D\nextends GeometryInstance3D → VisualInstance3D → Node3D → Node → Object\n\n:github_url: hide\nMeshInstance3D\n==============\nInherited By: SoftBody3D\nNode that instances meshes into a",
         "Godot 3.x workflow\n   (used to reference a non existing doc_importing_3d_meshes importer).\n\nIt is possible to import 3D models in Godot created in external tools.\nDepending on the format, you can impo"
       ]
+    },
+    {
+      "id": "godot-009",
+      "question": "How do I set up an AnimationTree with a BlendSpace2D for character locomotion in Godot 4? I want to blend between idle, walk, and run animations based on a Vector2 input direction.",
+      "source_recall": 0.5,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.6406,
+      "label": "weak",
+      "truncation_warnings": 1,
+      "found_source_files": [
+        "godot-demos-packed.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/animation/animation_tree.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Vollständige AnimationTree-Anleitung: BlendTree-Root, BlendSpace1D/2D für richtungsabhängige Animationen, StateMachine für Zustandsübergänge, OneShot-Nodes für einmalige Animationen, Root-Motion-Integration und Code-Steuerung via AnimationNodeStateMachinePlayback.travel().",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/animation/index.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Übersichtsseite des Godot-Animationssystems: AnimationPlayer, AnimationTree, Skeleton3D, BoneMap für Retargeting.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "Class: AnimationNodeBlendSpace2D\nextends AnimationRootNode → AnimationNode → Resource → RefCounted → Object\n\n:github_url: hide\nAnimationNodeBlendSpace2D\n=========================\nA set of AnimationRoo",
+        "Method: AnimationNodeBlendSpace2D.set_blend_point_position\nSignature: set_blend_point_position(point\\: int, pos\\: Vector2)\nInherits: AnimationRootNode → AnimationNode → Resource → RefCounted → Object\n",
+        "Property: AnimationNodeBlendSpace2D.blend_mode\nSignature: BlendMode blend_mode = 0\nInherits: AnimationRootNode → AnimationNode → Resource → RefCounted → Object\n\nBlendMode blend_mode = 0\n- set_blend_mo"
+      ]
+    },
+    {
+      "id": "godot-010",
+      "question": "How do I create a spatial shader in Godot 4 that adds a glowing outline effect around a 3D object using the Fresnel node?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 3,
+      "found_source_files": [
+        "godot-docs-3d-packed.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/shaders/your_first_shader/index.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Step-by-Step Shader-Tutorial: spatial shader type, vertex() und fragment() processor functions, uniforms, varying, built-ins wie FRESNEL, NORMAL, VIEW, ALBEDO, EMISSION. Zeigt wie man Emission für Glow-Effekte nutzt.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/index.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Shading-Referenz: alle shader types (spatial, canvas_item, particles, sky, fog), built-in variables, shading language syntax, precision qualifiers.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "Method: GLTFLight.from_node\nSignature: from_node(light_node\\: Light3D)\nInherits: Resource → RefCounted → Object\n\nGLTFLight from_node ( light_node\\: Light3D )\nCreate a new GLTFLight instance from the g",
+        "using Grow.\n\nNote that in Godot 4.5 onwards, stencil buffer-based outlines are available\nusing the **Outline** :ref:`stencil mode <doc_standard_material_3d_stencil>`.\nThis can be used as an alternativ",
+        "Class: VisualShaderNodeFresnel\nextends VisualShaderNode → Resource → RefCounted → Object\n\n:github_url: hide\nVisualShaderNodeFresnel\n=======================\nA Fresnel effect to be used within the visua"
+      ]
+    },
+    {
+      "id": "godot-011",
+      "question": "How do I create a responsive UI in Godot 4 that automatically scales and repositions elements for different screen sizes and aspect ratios using containers and anchors?",
+      "source_recall": 0.5,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.6406,
+      "label": "weak",
+      "truncation_warnings": 6,
+      "found_source_files": [
+        "godot-docs-3d-packed.md",
+        "godot-demos-packed.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/ui/gui_containers.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Container-Referenz: MarginContainer, VBoxContainer, HBoxContainer, GridContainer, CenterContainer, AspectRatioContainer, PanelContainer, ScrollContainer. Erklärt size flags (expand, fill), Container-Sizing und wie Container automatisch Children anordnen.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/ui/gui_skinning.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Theme-System: Theme-Ressourcen, Theme-Typ-Variationen, StyleBoxes (StyleBoxFlat, StyleBoxTexture), theme override in Control-Nodes, Theme-Editor, default theme und Projekt-Theme.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "Class: Control\nextends CanvasItem → Node → Object\n\n:github_url: hide\nControl\n=======\nInherited By: BaseButton, ColorRect, Container, GraphEdit, ItemList, Label, LineEdit, MenuBar, NinePatchRect, Panel",
+        "node\n\t# is resized whenever the window size changes. This is because the root Control node\n\t# uses a Full Rect anchor, so its size will always be equal to the window size.\n\tresized.connect(_on_resized",
+        "Class: AspectRatioContainer\nextends Container → Control → CanvasItem → Node → Object\n\n:github_url: hide\nAspectRatioContainer\n====================\nA container that preserves the proportions of its chil"
+      ]
+    },
+    {
+      "id": "godot-012",
+      "question": "How do I make an enemy AI chase the player using NavigationAgent3D in Godot 4? I need the enemy to pathfind around obstacles and update its target position each frame.",
+      "source_recall": 0.5,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.6406,
+      "label": "weak",
+      "truncation_warnings": 0,
+      "found_source_files": [
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/navigation/navigation_using_navigationagents.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "NavigationAgent-Doku: NavigationAgent3D-Setup, target_position setzen, get_next_path_position() für Wegpunkt-Verfolgung, is_navigation_finished(), velocity_computed-Signal, avoidance_enabled für lokale Kollisionsvermeidung, path_desired_distance, path_max_distance.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/navigation/navigation_using_navigationmeshes.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "NavigationMesh-Baking: NavigationRegion3D, NavigationMesh-Ressource, Bake-Button im Editor, agent_radius/agent_height/agent_max_climb/agent_max_slope für Agent-Parameter, source_geometry_mode für Mesh-Auswahl.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "Class: NavigationAgent3D\nextends Node → Object\n\n:github_url: hide\nNavigationAgent3D\n=================\nExperimental: This class may be changed or removed in future versions.\nA 3D agent used to pathfind",
+        "Property: NavigationAgent3D.target_position\nSignature: Vector3 target_position = Vector3(0, 0, 0)\nInherits: Node → Object\n\nVector3 target_position = Vector3(0, 0, 0)\n- set_target_position ( value\\: Ve",
+        "Method: NavigationAgent3D.get_current_navigation_path\nInherits: Node → Object\n\nPackedVector3Array get_current_navigation_path ( )\nReturns this agent's current path from start to finish in global coord"
+      ]
+    },
+    {
+      "id": "godot-013",
+      "question": "How do I set up a basic authoritative multiplayer game in Godot 4 using ENet? I need to handle peer connections, spawn players, and synchronize positions with RPC calls where the server has authority.",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 0,
+      "found_source_files": [
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/networking/high_level_multiplayer.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "High-Level Multiplayer: ENetMultiplayerPeer-Setup, create_server()/create_client(), multiplayer_peer property, @rpc annotation modes (authority, any_peer, call_local, call_remote), MultiplayerSpawner/MultiplayerSynchronizer für automatische Node-Synchronisation, multiplayer authority.",
+          "has_solution": true
+        },
+        {
+          "url": "https://github.com/godotengine/godot/issues/57869",
+          "date": null,
+          "type": "github-issue",
+          "solution_summary": "RPC-Fehler: 'RPC 'function_name' is not allowed from: ...' wenn die aufgerufene Funktion nicht auf beiden Peers mit @rpc deklariert ist. Lösung: Funktion auf Client UND Server deklarieren, auch wenn sie nur auf einer Seite aufgerufen wird.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "Method: Node.set_multiplayer_authority\nSignature: set_multiplayer_authority(id\\: int, recursive\\: bool = true)\nInherits: Object\n\nset_multiplayer_authority ( id\\: int, recursive\\: bool = true )\nSets th",
+        "Constant: MultiplayerAPI.RPC_MODE_AUTHORITY\nSignature: RPC_MODE_AUTHORITY = 2\nInherits: RefCounted → Object\n\nRPCMode RPC_MODE_AUTHORITY = 2\nUsed with Node.rpc_config() to set a method to be callable r",
+        "Property: MultiplayerAPI.multiplayer_peer\nSignature: MultiplayerPeer multiplayer_peer\nInherits: RefCounted → Object\n\nMultiplayerPeer multiplayer_peer\n- set_multiplayer_peer ( value\\: MultiplayerPeer )"
+      ]
+    },
+    {
+      "id": "godot-014",
+      "question": "How do I detect when the player presses the spacebar in GDScript using the Input system? I want to trigger a jump action.",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 6,
+      "found_source_files": [
+        "tips.md",
+        "godot-docs-reference-packed.md",
+        "godot-demos-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/inputs/inputevent.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "InputEvent-Doku: InputEventKey (keycode, physical_keycode, pressed, echo), InputEventMouseButton, InputEventMouseMotion, InputEventJoypadButton/Motion, InputEventAction. Erklärt den Unterschied zwischen keycode (layout-abhängig) und physical_keycode (physische Taste).",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/inputs/input_examples.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Input-Beispiele: Input.is_action_pressed(), Input.is_action_just_pressed(), Input.get_axis(), Input.get_vector(), InputMap-Setup im Editor, _input(event)-Callback, _unhandled_input(event) für GUI-Propagation.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "irection := horizontal_velocity.normalized()\n\tvar horizontal_speed := horizontal_velocity.length()\n\n\t# Player input.\n\tvar cam_basis := _camera.get_global_transform().basis\n\tvar movement_vec2 := Input.",
+        "\t[\"front_idle\", false],\n\t\t[\"45front_left_idle\", false],\n\t\t[\"side_left_idle\", false],\n\t\t[\"45back_left_idle\", false],\n\t\t[\"back_idle\", false],\n\t\t[\"45back_right_idle\", false],\n\t],\n\n\t\"walk\": [\n\t\t[\"side_rig",
+        "t_direction()\n\tif input_direction.is_zero_approx():\n\t\tfinished.emit(PLAYER_STATE.idle)\n\tupdate_look_direction(input_direction)\n\n\tif Input.is_action_pressed(&\"run\"):\n\t\tspeed = max_run_speed\n\telse:\n\t\tsp"
+      ]
+    },
+    {
+      "id": "godot-015",
+      "question": "How do I play a looping background music track and a one-shot sound effect in Godot 4 using AudioStreamPlayer?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 0,
+      "found_source_files": [
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/audio/audio_buses.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Audio-Bus-System: Master-Bus, benutzerdefinierte Busse, Bus-Layout, Audio-Effekte pro Bus (Reverb, EQ, Compressor, Delay), Bus-Send/Receive, ducking (side-chain), dB-Volume-Skala, AudioServer.get_bus_index().",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/audio/audio_streams.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Audio-Stream-Typen: AudioStreamWAV (unkomprimiert), AudioStreamMP3, AudioStreamOggVorbis, AudioStreamGenerator (prozedural), AudioStreamMicrophone, AudioStreamRandomizer (zufällige Auswahl), AudioStreamPlaylist. Erklärt loop-Modi und stream-Eigenschaften.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "Class: AudioStreamPlayer\nextends Node → Object\n\n:github_url: hide\n:keywords: sound, music, song\nAudioStreamPlayer\n=================\nA node for audio playback.\nDescription\n-----------\nThe AudioStreamPl",
+        "Property: AudioStreamOggVorbis.loop\nSignature: bool loop = false\nInherits: AudioStream → Resource → RefCounted → Object\n\nbool loop = false\n- set_loop ( value\\: bool )\n- bool has_loop ( )\nIf true, the ",
+        "Class: AudioStreamPlayback\nextends RefCounted → Object\n\n:github_url: hide\nAudioStreamPlayback\n===================\nInherited By: AudioStreamPlaybackInteractive, AudioStreamPlaybackPlaylist, AudioStream"
+      ]
+    },
+    {
+      "id": "godot-016",
+      "question": "How do I save and load player progress like level, score, and settings using ConfigFile in Godot 4? Where should I store the save file?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 1,
+      "found_source_files": [
+        "godot-docs-reference-packed.md",
+        "faq.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/io/saving_games.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Save-Game-Tutorial: ConfigFile für INI-ähnliche Speicherung (set_value, get_value, save, load), FileAccess für rohen I/O, JSON.stringify/parse_string für strukturierte Daten, ResourceSaver.save für .tres/.res-Dateien. user://-Pfad für plattformspezifisches User-Datenverzeichnis.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "## Wie speichert man Daten?\n- **`ConfigFile`** für INI-ähnliche `.cfg`-Dateien (Sections, Keys, Werte). Gut für Settings, einfache Save-Games.\n- **`FileAccess`** für rohen I/O (`store_string`, `store_",
+        "Class: ConfigFile\nextends RefCounted → Object\n\n:github_url: hide\nConfigFile\n==========\nHelper class to handle INI-style files.\nDescription\n-----------\nThis helper class can be used to store Variant va",
+        "Class: FileAccess\nextends RefCounted → Object\n\n:github_url: hide\nFileAccess\n==========\nProvides methods for file reading and writing operations.\nDescription\n-----------\nThis class can be used to perma"
+      ]
+    },
+    {
+      "id": "godot-017",
+      "question": "How do I optimize a large 3D open-world scene in Godot 4 for mobile performance? I need to reduce draw calls and manage which objects are rendered based on distance.",
+      "source_recall": 0.5,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.6406,
+      "label": "weak",
+      "truncation_warnings": 10,
+      "found_source_files": [
+        "godot-docs-3d-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/3d/mesh_lod.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Mesh-LOD: automatische LOD-Generierung im Import-Dialog, LOD-Thresholds (Pixel-Schwellwerte), manuelle LOD-Konfiguration, MeshOptimization-Klasse, LOD-Bias in ProjectSettings. Reduziert Vertex-Count bei entfernten Objekten.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/3d/occlusion_culling.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Occlusion Culling: OccluderInstance3D-Nodes, automatisches Baking von Occludern aus Geometrie, Szenen-basierte Occlusion, Performance-Überlegungen. Verhindert Rendering von Objekten hinter Wänden.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/3d/visibility_ranges.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Visibility Ranges (HLOD): GeometryInstance3D.visibility_range_begin/end, VisibilityNotifier3D, VisibilityEnabler3D für automatisches Ein-/Ausschalten von Nodes basierend auf Kamera-Distanz. Nützlich für Open-World-Szenen.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "of a specific texture that may be too large to render, you can\nset the **Process > Size Limit** import option to a value greater than ``0``.\nThis will reduce the texture's dimensions on import (preser",
+        "using Grow.\n\nNote that in Godot 4.5 onwards, stencil buffer-based outlines are available\nusing the **Outline** :ref:`stencil mode <doc_standard_material_3d_stencil>`.\nThis can be used as an alternativ",
+        "ll\ninstances will be drawn with the same LOD level at a given time.\n\nIf you are noticing incorrect LOD selection with GPUParticles3D, make sure\nthe node's visibility AABB is configured by selecting th"
+      ]
+    },
+    {
+      "id": "godot-018",
+      "question": "How do I create a 2D platformer level with tile-based collision in Godot 4 using TileMapLayer and TileSet? I want different tiles for ground, walls, and platforms.",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 2,
+      "found_source_files": [
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/2d/using_tilesets.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "TileSet-Tutorial: TileSet-Ressource erstellen, Textur-Atlas importieren, Tiles definieren (Physics-Layer für Kollision, Navigation-Layer, Terrain-Sets, alternative Tiles), Tile-Größe, Tile-Offset, Kollisions-Shapes pro Tile.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/2d/using_tilemaps.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "TileMapLayer-Doku: TileMapLayer-Nodes (Godot 4 ersetzt das alte TileMap-Node), mehrere Layer für verschiedene Tile-Typen, Tile-Painting im Editor, Tile-Patterns, TileMapLayer-Rendering (y-sort, z-index), TileMapLayer-Kollision.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "Class: TileSet\nextends Resource → RefCounted → Object\n\n:github_url: hide\nTileSet\n=======\nTile library for tilemaps.\nDescription\n-----------\nA TileSet is a library of tiles for a TileMapLayer. A TileSe",
+        "Class: TileMap\nextends Node2D → CanvasItem → Node → Object\n\n:github_url: hide\n:keywords: gridmap\nTileMap\n=======\nDeprecated: Use multiple TileMapLayer nodes instead. To convert a TileMap to a set of T",
+        "Class: TileMapLayer\nextends Node2D → CanvasItem → Node → Object\n\n:github_url: hide\nTileMapLayer\n============\nNode for 2D tile-based maps.\nDescription\n-----------\nNode for 2D tile-based maps. A TileMap"
+      ]
+    },
+    {
+      "id": "godot-019",
+      "question": "How do I create a custom Resource type in GDScript to store item data like name, icon texture, and stats? I want to create individual item instances in the editor.",
+      "source_recall": 0.5,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.6406,
+      "label": "weak",
+      "truncation_warnings": 0,
+      "found_source_files": [
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/resources.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Resources: Resource-Klasse, Custom Resources via class_name extends Resource, @export-Variablen für Editor-Editierbarkeit, ResourceLoader.load(), ResourceSaver.save(), .tres (textuell) vs .res (binär), Resource-Preloading, Resource-Instanzen als Daten-Container.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html#doc-gdscript-basics-class-name",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "class_name: registriert ein GDScript als globalen Typ im Editor, ermöglicht @export var item: ItemData, erscheint in 'Create New Resource'-Dialog. class_name muss mit dem Dateinamen übereinstimmen.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "Method: EditorPlugin.add_custom_type\nSignature: add_custom_type(type\\: String, base\\: String, script\\: Script, icon\\: Texture2D)\nInherits: Node → Object\n\nadd_custom_type ( type\\: String, base\\: String",
+        "Method: EditorNode3DGizmoPlugin.create_icon_material\nSignature: create_icon_material(name\\: String, texture\\: Texture2D, on_top\\: bool = false, color\\: Color = Color(1, 1, 1, 1)\nInherits: Resource → R",
+        "Method: EditorNode3DGizmoPlugin.create_handle_material\nSignature: create_handle_material(name\\: String, billboard\\: bool = false, texture\\: Texture2D = null)\nInherits: Resource → RefCounted → Object\n\n"
+      ]
+    },
+    {
+      "id": "godot-020",
+      "question": "How do I use the Godot Profiler to identify which scripts or functions are causing frame rate drops in my game? I want to find performance bottlenecks.",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 2,
+      "found_source_files": [
+        "godot-demos-packed.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/debug/the_profiler.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Profiler: Debugger → Profiler-Tab, Frame-Time-Graph, Funktions-Call-Liste mit self_time/total_time, Script-Funktionen, Physics-Frame vs Process-Frame, Engine-internal functions, Profiler-Start/Stop, CSV-Export für externe Analyse.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/debug/debugger_panel.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Debugger-Panel: Errors-Tab, Stack-Trace, Breakpoints, Step-Over/Into/Out, Variable-Inspector, Remote-Scene-Tree (live Node-Hierarchie während des Spiels), Monitors-Tab (FPS, Memory, Node-Count, Draw-Calls).",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "Class: MovieWriter\nextends Object\n\n:github_url: hide\nMovieWriter\n===========\nAbstract class for non-real-time video recording encoders.\nDescription\n-----------\nGodot can record videos with non-real-ti",
+        "Class: Engine\nextends Object\n\n:github_url: hide\nEngine\n======\nProvides access to engine properties.\nDescription\n-----------\nThe Engine singleton allows you to query and modify the project's run-time p",
+        "Constant: RenderingDevice.UI_PASS\nSignature: UI_PASS = 720896\nInherits: Object\n\nBreadcrumbMarker UI_PASS = 720896\nDuring a GPU crash in dev or debug mode, Godot's error message will include \"UI_PASS\" "
+      ]
     }
   ],
   "summary": {
     "domain": "godot",
-    "total_questions": 9,
-    "pass_count": 9,
-    "weak_count": 0,
+    "total_questions": 21,
+    "pass_count": 16,
+    "weak_count": 5,
     "fail_count": 0,
-    "avg_composite": 0.8594,
-    "avg_source_recall": 1.0,
+    "avg_composite": 0.8073,
+    "avg_source_recall": 0.881,
     "avg_page_metadata_accuracy": 0.0,
     "avg_top_k_relevance": 0.55,
     "avg_evidence_quality": 1.0

@@ -68,4 +68,6 @@
 - **feat(quality):** jina baselines promoted for godot (0.8594) and davinci_resolve (0.7304, +0.0058). ms-marco baselines archived as `*-msmarco-2026-06-30.json`.
 - **ci:** quality-gate.yml uses `KH_RERANKER_MODEL=jinaai/jina-reranker-v2-base-multilingual` default.
 - **docs(security):** `trust_remote_code=True` risk documented (analog pickle safety).
+- **feat(quality):** Golden Datasets expanded to 20-30 questions per domain (godot: 9→21, davinci: 7→20). 12 new godot questions (Animation, Shaders, UI, Navigation, Multiplayer, Input, Audio, File I/O, Performance, TileMap, GDScript Patterns, Debugging). 13 new davinci questions (Fusion Compositing, Color Advanced, Cut Page, Edit Advanced, Fairlight Advanced, Media Management, Effects, Collaboration, Troubleshooting, Workflow). All questions include curated real_world_sources with solution_summary.
+- **feat(quality):** New baselines established with expanded datasets (BGE-M3+jina): godot avg 0.8073 (16 pass / 5 weak), davinci avg 0.8063 (20 pass). Old baselines archived as *-pre-phase2b-2026-07-01.json.
 

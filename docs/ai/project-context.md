@@ -67,3 +67,10 @@ python -m mcp_servers.knowledge_hub.server --help
 - OpenCode agent prompts are being migrated from inline `.opencode/opencode.json` definitions to `.opencode/agents/*.md` files.
 - `test-hub-feature` is planned as a combined pytest + Knowledge-QA report-only agent.
 - Quality Evaluation Platform Phase 1 implemented (2026-06-29): Golden Dataset structure, `pytest -m quality` marker, mock-result evaluation tests. Full evaluation pipeline (Ansatz C) deferred to future phases.
+
+## Update 2026-07-01: Phase 2.4 — Golden Dataset Expansion
+
+- Golden Datasets erweitert: godot 9→21 Fragen (12 neue: Animation, Shaders, UI, Navigation, Multiplayer, Input, Audio, File I/O, Performance, TileMap, GDScript Patterns, Debugging), davinci 7→20 Fragen (13 neue: Fusion Compositing, Color Advanced, Cut Page, Edit Advanced, Fairlight Advanced, Media Management, Effects, Collaboration, Troubleshooting, Workflow).
+- Neue Baselines (BGE-M3+jina): godot avg 0.8073 (16 pass / 5 weak), davinci avg 0.8063 (20 pass).
+- Alte Baselines archiviert: `quality/baselines/*-pre-phase2b-2026-07-01.json`.
+- Phase 2.2 (Late Chunking) folgt als nächste Iteration.

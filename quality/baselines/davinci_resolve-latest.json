@@ -50,10 +50,10 @@
       "label": "pass",
       "truncation_warnings": 10,
       "found_source_files": [
-        "davinci-resolve-20.3-reference-manual.md",
         "davinci-resolve-20-beginners-guide.md",
+        "davinci-resolve-21-new-features-guide.md",
         "davinci-resolve-20-editors-guide.md",
-        "davinci-resolve-21-new-features-guide.md"
+        "davinci-resolve-20.3-reference-manual.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -89,9 +89,9 @@
       "label": "pass",
       "truncation_warnings": 10,
       "found_source_files": [
+        "davinci-resolve-20-beginners-guide.md",
         "davinci-resolve-20-colorist-guide.md",
-        "davinci-resolve-20.3-reference-manual.md",
-        "davinci-resolve-20-beginners-guide.md"
+        "davinci-resolve-20.3-reference-manual.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -127,8 +127,8 @@
       "label": "pass",
       "truncation_warnings": 10,
       "found_source_files": [
-        "davinci-resolve-20-fusion-visual-effects.md",
         "fusion-20.3-manual.md",
+        "davinci-resolve-20-fusion-visual-effects.md",
         "davinci-resolve-20.3-reference-manual.md"
       ],
       "total_results": 10,
@@ -166,9 +166,9 @@
       "truncation_warnings": 10,
       "found_source_files": [
         "fusion-20.3-manual.md",
-        "davinci-resolve-20.3-reference-manual.md",
         "davinci-resolve-20-beginners-guide.md",
-        "davinci-resolve-20-editors-guide.md"
+        "davinci-resolve-20-editors-guide.md",
+        "davinci-resolve-20.3-reference-manual.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -204,8 +204,8 @@
       "label": "pass",
       "truncation_warnings": 10,
       "found_source_files": [
-        "davinci-resolve-20.3-reference-manual.md",
-        "davinci-resolve-20-fairlight-audio-post.md"
+        "davinci-resolve-20-fairlight-audio-post.md",
+        "davinci-resolve-20.3-reference-manual.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -265,17 +265,509 @@
         "��������������������������������������������������� 142\n\nMotion Vector Layers Generated from Optical Flow\b��������������������������������������������������������������������������������������� 142\n\nI",
         "New Features Guide DaVinci Resolve 21 | Cut and Edit **75**\n\n\n\n\n--- end of page=74 ---\n\n### **DRT Timeline Import Supports** **Link and Conform Options**\n\nWhen importing a DaVinci Resolve Timeline (.d"
       ]
+    },
+    {
+      "id": "davinci_resolve-008",
+      "question": "How do I use the Delta Keyer in DaVinci Resolve Fusion to remove a green screen background?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": 1.0,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8875,
+      "label": "pass",
+      "truncation_warnings": 10,
+      "found_source_files": [
+        "fusion-20.3-manual.md",
+        "davinci-resolve-20-fusion-visual-effects.md",
+        "davinci-resolve-20-advanced-visual-effects.md",
+        "davinci-resolve-20.3-reference-manual.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve/fusion",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Fusion page. Delta Keyer is the primary keying tool for green/blue screen removal. Supports clean and detail mattes, spill suppression, edge refinement, and garbage mattes for isolating the subject from the background.",
+          "has_solution": true
+        },
+        {
+          "url": "https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-20-Fusion-Visual-Effects.pdf",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Fusion VFX training book with 5 lessons covering node-based compositing, keying, tracking, rotoscoping, and 3D compositing with practical exercises.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "sing the free version of DaVinci Resolve, skip the noise reduction\n\nsteps and continue with the next exercise, “Pulling a Key.”\n\n\n**4** Press Shift-Spacebar and type **Noise** to add a Noise Reduction",
+        "m the Fusion page\n\nto the color page.\n\n\n**Lesson 5 Compositing Green‑Screen Content** **137**\n\n\n\n\n--- end of page=157 ---\n\n##### **Answers**\n\n**1** The Delta Keyer is the primary tool for green-screen",
+        "en-screen color that has\n\nspilled onto your foreground. You inevitably must balance the quality of the spill\n\nsuppression with the generation of the matte. A way around this dilemma is to set the\n\nRep"
+      ]
+    },
+    {
+      "id": "davinci_resolve-009",
+      "question": "How do I create a 3D composite with a tracked camera and 3D text in DaVinci Resolve Fusion?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": 1.0,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8875,
+      "label": "pass",
+      "truncation_warnings": 9,
+      "found_source_files": [
+        "fusion-20.3-manual.md",
+        "davinci-resolve-20-advanced-visual-effects.md",
+        "davinci-resolve-20.3-reference-manual.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve/fusion",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Fusion page. 3D compositing combines live-action footage with 3D elements using a 3D Camera Tracker, 3D merge, 3D text, lights, and materials. Supports deep pixel compositing and particle effects for realistic integration.",
+          "has_solution": true
+        },
+        {
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve/training#fusion",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official training videos: Intro to Fusion, Basic Compositing, Motion Graphics, 3D Compositing. Covers 3D camera tracking, 3D text, lighting, and rendering 3D scenes.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "\nfriendly training lesson for students\n\nnew to Universal Scene Description\n\n(USD) and with limited knowledge\n\nof 3D workflows. If you’ve never\n\nworked with 3D before this guide or\n\ndon’t know what USD",
+        "th the stand-alone Fusion Studio software begins with opening Fusion,\ncreating a new composition, importing some clips via Loader nodes, and building out your composite\nwith effects. Just like the Fus",
+        " tracking in Fusion, _see Chapter 82, “Using the_\n_Tracker Node,”_ in the DaVinci Resolve Reference Manual or Chapter 22 in the Fusion\nReference Manual.\n\n#### **Contents**\n\n\n\n\n\n**Introduction to Track"
+      ]
+    },
+    {
+      "id": "davinci_resolve-010",
+      "question": "How do I use Power Windows to isolate and grade a specific area of an image in DaVinci Resolve?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": 1.0,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8875,
+      "label": "pass",
+      "truncation_warnings": 10,
+      "found_source_files": [
+        "davinci-resolve-20-beginners-guide.md",
+        "davinci-resolve-20-colorist-guide.md",
+        "davinci-resolve-20.3-reference-manual.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve/color",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Color page. Power Windows draw circular, linear, polygonal, or custom curve shapes to isolate areas for secondary grading. Combine with the qualifier for precise selections. Windows can be tracked using the built-in Point Tracker.",
+          "has_solution": true
+        },
+        {
+          "url": "https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-20-Colorist-Guide.pdf",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Colorist training book with practical exercises covering primary and secondary grading, Power Windows, qualifiers, tracking, and color management workflows.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "be encompassed within a clearly defined geometrical area. For example, the oval of a person’s\nface, the front of a car, or a wide expanse of sky are all good candidates for windowed adjustments.\nA dra",
+        "hannel.\n\n - **Invert:** Checking this box reverses the Depth Map, switching its transparent and opaque regions.\n###### **Resulting Map Adjustment**\n\nThese controls let you determine how the Depth Map’",
+        "ted\n\nhue range.\n\n**5** Drag the central point up slightly to increase the saturation of the skin, taking care to\n\nkeep the colors natural.\n\n\nIn the vectorscope, ensure that the section of the trace yo"
+      ]
+    },
+    {
+      "id": "davinci_resolve-011",
+      "question": "How do I set up ACES color management for an HDR grading workflow in DaVinci Resolve?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": 1.0,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8875,
+      "label": "pass",
+      "truncation_warnings": 10,
+      "found_source_files": [
+        "davinci-resolve-21-new-features-guide.md",
+        "davinci-resolve-20-colorist-guide.md",
+        "davinci-resolve-20.3-reference-manual.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve/color",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Color page. Color management supports ACES (Academy Color Encoding System) and DaVinci YRGB. ACES provides a standardized color science pipeline for HDR workflows including scene-referred grading, IDTs (Input Device Transforms), and ODTs (Output Device Transforms).",
+          "has_solution": true
+        },
+        {
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve/training#color",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official training videos: Intro to Color, Advanced Color, Color Management. Covers ACES setup, HDR grading, Dolby Vision, and color space transforms.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "ess algorithm is specified\nin a look transform within the AMF, it will set the “Apply ACES reference gamut compress”\ncheckbox to checked. The user can see what input, gamut compress, look and output\nt",
+        "ts**\n\nHDR Vivid support has received multiple improvements in DaVinci Resolve 21 including:\n\n - The HDR Vivid toolset is now available on the DaVinci Resolve Mini Panel.\n\n - A Color timeline filter to",
+        "agement tab.\n\n**2** Set the Color Science to ACEScc.\n\n\n**3** Leave ACES version set to the latest, ACES 2.0.\n\n**4** DaVinci Resolve supports ACES AMF 2.0 sidecar files that define a clip’s input and\n\n"
+      ]
+    },
+    {
+      "id": "davinci_resolve-012",
+      "question": "How do I use the Cut page for fast rough-cut editing in DaVinci Resolve?",
+      "source_recall": 0.5,
+      "page_metadata_accuracy": 1.0,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.7125,
+      "label": "pass",
+      "truncation_warnings": 10,
+      "found_source_files": [
+        "davinci-resolve-20-editors-guide.md",
+        "davinci-resolve-20.3-reference-manual.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve/cut",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Cut page. Dual timeline (upper timeline shows full source tape, lower shows edit), smart insert/append/place-on-top/close-up/ripple-overwrite edit types, source tape for fast clip browsing, sync bin for multi-camera sync, Speed Editor hardware integration.",
+          "has_solution": true
+        },
+        {
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve/training#edit",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official training videos: Intro to Editing (Cut+Edit), Multicam, VFX in Edit Page. Covers Cut page workflow, source tape, smart edit tools, and Speed Editor.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "controls lets you move through a long clip more\nslowly. The full width of the jog bar represents the full duration of the clip in the Viewer. The current\nposition of the playhead is shown in the timec",
+        "red as a single media file, with no\naccompanying EDL with which to split it up, you can use DaVinci Resolve’s Scene\nDetect window to automatically find the cut points and split it into individual clip",
+        "\nrecording space attached to each camera to record the show in its entirety. Refer to your ATEM’s\nspecific documentation for how to set up ISO recording and camera control, but one important setting\ni"
+      ]
+    },
+    {
+      "id": "davinci_resolve-013",
+      "question": "How do I set up and switch between multiple camera angles in a multicam edit in DaVinci Resolve?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": 1.0,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8875,
+      "label": "pass",
+      "truncation_warnings": 10,
+      "found_source_files": [
+        "davinci-resolve-20-editors-guide.md",
+        "davinci-resolve-20.3-reference-manual.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve/edit",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Edit page. Multicam supports 4 to 25+ camera angles synced by timecode, audio waveform, or in/out points. Switch angles live during playback or in the multicam viewer. Supports stacked timelines and adjustment clips for complex edits.",
+          "has_solution": true
+        },
+        {
+          "url": "https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-20-Editors-Guide.pdf",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Editor's training book covering interviews, dramatic scenes, documentaries, and music videos. Includes multicam editing workflows with practical exercises.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        " editing, simply stop playback. If you want to start trimming the\nTimeline to fine-tune what you’ve done, choose Source from the Source Viewer mode drop-down,\nand you can re-edit and trim the multicam",
+        "ip option.\n\n**2** In the bin list, right-click the ANGLES bin and choose Create New Multicam Clip Using\n\nSelected Bin.\n\n\nThe New Multicam Clip window opens, which you will use to tell Resolve how you ",
+        " new AI-powered multicam tool called Multicam SmartSwitch, which will\nanalyze all multicam camera angles and automatically cut to the most appropriate angle, based on\nwho is the active speaker. Multic"
+      ]
+    },
+    {
+      "id": "davinci_resolve-014",
+      "question": "How do I set up a Dolby Atmos mix with 3D spatial panning in DaVinci Resolve Fairlight?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": 1.0,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8875,
+      "label": "pass",
+      "truncation_warnings": 10,
+      "found_source_files": [
+        "davinci-resolve-20-fairlight-audio-post.md",
+        "davinci-resolve-20.3-reference-manual.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve/fairlight",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Fairlight page. 3D spatial panning supports Dolby Atmos up to 7.1.4 with object-based audio, bed tracks, and the 3D panner interface. FlexBus routing allows flexible channel mapping. Includes 25+ Fairlight FX plugins for professional post-production.",
+          "has_solution": true
+        },
+        {
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve/training#fairlight",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Fairlight training videos: Dolby Atmos (48m) covering 3D panning, object-based audio, bed tracks, and Atmos mastering workflows.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "nels (the “.4” in 7.1.4) are not\n\npart of the bed; instead, they come from audio objects, which can be placed anywhere in\n\n3D space using object-based panning.\n\n\nThe first step to converting a standar",
+        "age **3896**\n\n\n\n\n--- end of page=3895 ---\n\nSpherical View\n\nClicking the Spherical button at the top of the 2D Panner changes the interface to Spherical view,\nwhich has the controls listed below includ",
+        "e B-Chain Control dialog.\n\n**2** Click the Option menu in this window and choose Setup I/O Names. The I/O setup window\nappears, showing every single audio input and output on every audio interface tha"
+      ]
+    },
+    {
+      "id": "davinci_resolve-015",
+      "question": "How do I organize and find clips using bins, smart bins, and metadata in DaVinci Resolve?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": 1.0,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8875,
+      "label": "pass",
+      "truncation_warnings": 10,
+      "found_source_files": [
+        "davinci-resolve-20-beginners-guide.md",
+        "davinci-resolve-21-new-features-guide.md",
+        "davinci-resolve-20-editors-guide.md",
+        "davinci-resolve-20.3-reference-manual.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve/media",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Media page. Media pool with bins for manual organization, smart bins with rule-based filtering (metadata, clip properties), facial recognition for automatic person-based sorting, and extensive metadata entry including custom fields.",
+          "has_solution": true
+        },
+        {
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve/edit",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Edit page. Media pool, bins, smart bins, facial recognition, and proxy workflows (Blackmagic Proxy Generator) for efficient media management across projects.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "����������������������������������������������������������������������������������������������� 391\n\n\n\n\n\nIngest and Organize Media | Chapter 18 Adding and Organizing Media with the Media Pool **375**\n",
+        " any clip from the Scene 3 smart bin and, in the Metadata\n\npanel, click the Sort menu and choose All Groups. Then click the Options menu (…) and\n\nchoose the My Favorite Metadata preset.\n\n\nTIP Your pre",
+        " A to Z.\n\n - **Descending:** Orders the Media Pool from highest numerical value to lowest,\nand alphabetically from Z to A.\n\n\nIngest and Organize Media | Chapter 18 Adding and Organizing Media with the"
+      ]
+    },
+    {
+      "id": "davinci_resolve-016",
+      "question": "How do I add and customize video transitions between clips in DaVinci Resolve?",
+      "source_recall": 0.5,
+      "page_metadata_accuracy": 1.0,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.7125,
+      "label": "pass",
+      "truncation_warnings": 10,
+      "found_source_files": [
+        "davinci-resolve-20-beginners-guide.md",
+        "davinci-resolve-20.3-reference-manual.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve/edit",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Edit page. 100+ built-in transitions including cross dissolve, dip to color, smooth cut, and 3D transitions. Drag-and-drop from Effects Library, adjustable duration and alignment in the inspector. Supports custom transition curves and OpenFX transitions.",
+          "has_solution": true
+        },
+        {
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve/fusion",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Fusion page. 200+ filters and effects including custom transition templates built with Fusion's node-based compositing. Fusion title templates can be used as animated transitions.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "in the Fusion page to customize your transition.\n\n\nThe node tree you start with after converting a transition to a Fusion cross dissolve\n\n\n\n\n\nEditing Effects and Transitions | Chapter 48 Using Transit",
+        "48**\n### Using Transitions\n\nTransitions are the connective tissue binding together moments requiring a more\nsignificant way of changing from one image to the next than a simple cut.\n\n\nThis chapter sho",
+        "ntextual menu:** Select one or more edit\npoints (one per track), then right-click a video transition in the Effects Library and choose Add to\nSelected Edit Points and Clips. That transition will be ad"
+      ]
+    },
+    {
+      "id": "davinci_resolve-017",
+      "question": "How do I create animated 3D titles using the Text+ node in DaVinci Resolve Fusion?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": 1.0,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8875,
+      "label": "pass",
+      "truncation_warnings": 10,
+      "found_source_files": [
+        "fusion-20.3-manual.md",
+        "davinci-resolve-20-beginners-guide.md",
+        "davinci-resolve-20-fusion-visual-effects.md",
+        "davinci-resolve-20.3-reference-manual.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve/fusion",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Fusion page. Text+ and Text 3D nodes for creating 2D and 3D titles with per-character animation, extrusion, bevels, materials, and lighting. 100+ Fusion title templates available. Supports keyframe animation, modifiers, and expressions for complex motion graphics.",
+          "has_solution": true
+        },
+        {
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve/training#fusion",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official training videos: Motion Graphics covering Text+, Text 3D, keyframe animation, modifiers, and Fusion title templates with project files.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "hics artists looking\nto create titles and graphics from Fusion. It’s a powerful node filled with enough controls to create\nnearly any text effect you might need, all in three dimensions. This section ",
+        "m the Fusion page\n\nto the color page.\n\n\n**Lesson 5 Compositing Green‑Screen Content** **137**\n\n\n\n\n--- end of page=157 ---\n\n##### **Answers**\n\n**1** The Delta Keyer is the primary tool for green-screen",
+        "ng (Node Editor and viewers):\n\n\nHold the left and middle mouse buttons and drag left/right or use Command\nscroll wheel (Ctrl-scroll wheel on Windows).\n\n\n**3** Fit image to viewer:\n\n\nClick a viewer and"
+      ]
+    },
+    {
+      "id": "davinci_resolve-018",
+      "question": "How does Blackmagic Cloud collaboration work for multi-user projects in DaVinci Resolve?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": 1.0,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8875,
+      "label": "pass",
+      "truncation_warnings": 10,
+      "found_source_files": [
+        "davinci-resolve-20-editors-guide.md",
+        "davinci-resolve-20-colorist-guide.md",
+        "davinci-resolve-20-fusion-visual-effects.md",
+        "davinci-resolve-20.3-reference-manual.md",
+        "davinci-resolve-20-advanced-visual-effects.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve/collaboration",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Collaboration page. Blackmagic Cloud (free Cloud ID) enables multi-user collaboration with Project Server, bin and timeline locking, built-in chat, timeline comparison, shared markers, and live save. Supports simultaneous editing, color grading, audio mixing, and VFX work without conforming.",
+          "has_solution": true
+        },
+        {
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve/training",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official training resources: 5 training books, Advanced VFX Guide, free PDFs with lesson files. Collaboration workflows are covered in the reference manual and editor's guide.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        " to the cloud.\n\n\nEnabling Multiple User Collaboration for your project means that everyone can work on\n\nthe same project at the same time—edit assistants, editors, colorists, dialogue editors,\n\nand vi",
+        "folder.\nThey immediately become available to Users B and C without relinking.\n\n - Audio Engineer C imports their music tracks to the Media Pool from the Episode 12/Audio folder.\nThey immediately becom",
+        " then drag the .resolvedbkey file and drop it anywhere within the Project Manager.\nThe shared project library should now appear in the Project Libraries sidebar, and if you select it,\nyou’ll see all o"
+      ]
+    },
+    {
+      "id": "davinci_resolve-019",
+      "question": "Why is my DaVinci Resolve playback stuttering and how can I improve performance?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": 1.0,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8875,
+      "label": "pass",
+      "truncation_warnings": 10,
+      "found_source_files": [
+        "davinci-resolve-20-editors-guide.md",
+        "davinci-resolve-20.3-reference-manual.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://forum.blackmagicdesign.com/viewforum.php?f=21",
+          "date": null,
+          "type": "forum",
+          "solution_summary": "Official Blackmagic Forum — DaVinci Resolve section. Primary community resource for troubleshooting performance issues, GPU configuration, render problems, and playback optimization. Common solutions include proxy workflows, optimized media, render cache, and GPU driver updates.",
+          "has_solution": true
+        },
+        {
+          "url": "https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Support Center with software updates, support notes, configuration guides, and hardware recommendations for optimal Resolve performance.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "��������������������������������������������������������������������������������������������������������������������� 216\n\nManaging Proxy Media\b��������������������������������������������������������",
+        "### **Using Optimized Media,** **Proxy Media, and Caching Together**\n\nHow you use DaVinci Resolve’s various performance-enhancing features together is entirely up to you,\nbut you should know that they",
+        "ition of the playhead.\n\n - **Loop Jog Width:** A field lets you choose how many milliseconds of audio to loop when Loop Jog\nis enabled. How many milliseconds of audio corresponds to one frame depends "
+      ]
+    },
+    {
+      "id": "davinci_resolve-020",
+      "question": "How do I import an XML or AAF timeline from Premiere Pro or another NLE into DaVinci Resolve?",
+      "source_recall": 0.5,
+      "page_metadata_accuracy": 1.0,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.7125,
+      "label": "pass",
+      "truncation_warnings": 10,
+      "found_source_files": [
+        "davinci-resolve-20.3-reference-manual.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve/edit",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Edit page. Universal timeline supports XML and AAF import from Premiere Pro, Final Cut Pro, Avid Media Composer, and other NLEs. Conform options handle clip relinking, timeline comparison, and format conversion. Quick Export and Deliver page support DCP, broadcast, and streaming output.",
+          "has_solution": true
+        },
+        {
+          "url": "https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-20-Editors-Guide.pdf",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Editor's training book covering complete editing workflows including project import, conform, editing, and delivery for online, broadcast, and streaming.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "inishing**\n\nOnce you’re finished with your final grade, you’ll again use the controls of the Deliver page to render\nthe program’s final media, either as individual clips for a round-trip workflow, or ",
+        "eel name ‘XXXX’ and filename ‘XXXX.’\n\n - File not found in search directories.\n\n\nAs of the time of this writing, this feature is only available when importing AAF files.\n#### **Simple AAF Import**\n\nTh",
+        "he media, with path names that reflect the rendered clips.\n\n###### **Premiere XML**\n\nSelects the appropriate settings for projects that were sent from Premiere Pro to DaVinci Resolve\nusing XML. This i"
+      ]
     }
   ],
   "summary": {
     "domain": "davinci_resolve",
-    "total_questions": 7,
-    "pass_count": 7,
+    "total_questions": 20,
+    "pass_count": 20,
     "weak_count": 0,
     "fail_count": 0,
-    "avg_composite": 0.7304,
-    "avg_source_recall": 1.0,
-    "avg_page_metadata_accuracy": 0.2143,
+    "avg_composite": 0.8063,
+    "avg_source_recall": 0.925,
+    "avg_page_metadata_accuracy": 0.725,
     "avg_top_k_relevance": 0.55,
     "avg_evidence_quality": 1.0
   }

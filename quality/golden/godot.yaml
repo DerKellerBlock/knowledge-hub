@@ -1,7 +1,7 @@
 domain: godot
 version: 1
 description: "Golden Dataset for Godot domain quality evaluation"
-last_updated: 2026-06-29
+last_updated: 2026-07-01
 # Optional: override default weights/thresholds (uncomment to use)
 # weights:
 #   source_recall: 0.35
@@ -220,4 +220,275 @@ questions:
     created_date: 2026-06-30
     last_verified: 2026-06-30
     notes: "Phase 1 faq.md fill. German variant of godot-008 — tests that the German FAQ section is retrievable for a German query (no language barrier)."
+    min_top_k: 10
+  # --- Phase 2.4: Golden Dataset Erweiterung (2026-07-01) ---
+  - id: godot-009
+    question: "How do I set up an AnimationTree with a BlendSpace2D for character locomotion in Godot 4? I want to blend between idle, walk, and run animations based on a Vector2 input direction."
+    expected_source_files:
+      - "godot-docs-reference-packed.md"
+      - "godot-docs-3d-packed.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/tutorials/animation/animation_tree.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Vollständige AnimationTree-Anleitung: BlendTree-Root, BlendSpace1D/2D für richtungsabhängige Animationen, StateMachine für Zustandsübergänge, OneShot-Nodes für einmalige Animationen, Root-Motion-Integration und Code-Steuerung via AnimationNodeStateMachinePlayback.travel()."
+        has_solution: true
+      - url: "https://docs.godotengine.org/en/stable/tutorials/animation/index.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Übersichtsseite des Godot-Animationssystems: AnimationPlayer, AnimationTree, Skeleton3D, BoneMap für Retargeting."
+        has_solution: true
+    difficulty: medium
+    tags: [animation_tree, blendspace2d, locomotion, character, animation, skeleton3d]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Tests retrieval of AnimationTree/BlendSpace2D API docs. BlendSpace2D ist das Standard-Pattern für richtungsabhängige Locomotion-Blends. Keine bestehende Frage deckt Animation ab."
+    min_top_k: 10
+  - id: godot-010
+    question: "How do I create a spatial shader in Godot 4 that adds a glowing outline effect around a 3D object using the Fresnel node?"
+    expected_source_files:
+      - "godot-docs-reference-packed.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/tutorials/shaders/your_first_shader/index.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Step-by-Step Shader-Tutorial: spatial shader type, vertex() und fragment() processor functions, uniforms, varying, built-ins wie FRESNEL, NORMAL, VIEW, ALBEDO, EMISSION. Zeigt wie man Emission für Glow-Effekte nutzt."
+        has_solution: true
+      - url: "https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/index.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Shading-Referenz: alle shader types (spatial, canvas_item, particles, sky, fog), built-in variables, shading language syntax, precision qualifiers."
+        has_solution: true
+    difficulty: medium
+    tags: [shader, spatial_shader, fresnel, glow, outline, material, visual_effect]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Tests retrieval von Spatial-Shader-Dokumentation. Fresnel-basierte Outline ist ein häufiges Anfänger-Tutorial-Thema. Keine bestehende Frage deckt Shader ab."
+    min_top_k: 10
+  - id: godot-011
+    question: "How do I create a responsive UI in Godot 4 that automatically scales and repositions elements for different screen sizes and aspect ratios using containers and anchors?"
+    expected_source_files:
+      - "godot-docs-reference-packed.md"
+      - "best-practices.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/tutorials/ui/gui_containers.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Container-Referenz: MarginContainer, VBoxContainer, HBoxContainer, GridContainer, CenterContainer, AspectRatioContainer, PanelContainer, ScrollContainer. Erklärt size flags (expand, fill), Container-Sizing und wie Container automatisch Children anordnen."
+        has_solution: true
+      - url: "https://docs.godotengine.org/en/stable/tutorials/ui/gui_skinning.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Theme-System: Theme-Ressourcen, Theme-Typ-Variationen, StyleBoxes (StyleBoxFlat, StyleBoxTexture), theme override in Control-Nodes, Theme-Editor, default theme und Projekt-Theme."
+        has_solution: true
+    difficulty: medium
+    tags: [ui, responsive, container, anchor, scale, theme, control_nodes, aspect_ratio]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Tests retrieval von UI-Container- und Anchor-Dokumentation. Responsive UI ist ein reales Problem für Multi-Platform-Godot-Projekte. best-practices.md enthält CanvasLayer-Layer-Strategie. Keine bestehende Frage deckt UI ab."
+    min_top_k: 10
+  - id: godot-012
+    question: "How do I make an enemy AI chase the player using NavigationAgent3D in Godot 4? I need the enemy to pathfind around obstacles and update its target position each frame."
+    expected_source_files:
+      - "godot-docs-reference-packed.md"
+      - "godot-docs-3d-packed.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/tutorials/navigation/navigation_using_navigationagents.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "NavigationAgent-Doku: NavigationAgent3D-Setup, target_position setzen, get_next_path_position() für Wegpunkt-Verfolgung, is_navigation_finished(), velocity_computed-Signal, avoidance_enabled für lokale Kollisionsvermeidung, path_desired_distance, path_max_distance."
+        has_solution: true
+      - url: "https://docs.godotengine.org/en/stable/tutorials/navigation/navigation_using_navigationmeshes.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "NavigationMesh-Baking: NavigationRegion3D, NavigationMesh-Ressource, Bake-Button im Editor, agent_radius/agent_height/agent_max_climb/agent_max_slope für Agent-Parameter, source_geometry_mode für Mesh-Auswahl."
+        has_solution: true
+    difficulty: medium
+    tags: [navigation, navigationagent3d, ai, enemy, pathfinding, navigationmesh, avoidance]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Tests retrieval von NavigationAgent3D- und NavigationMesh-Dokumentation. Enemy-AI-Chase ist ein klassisches Godot-Tutorial-Thema. Keine bestehende Frage deckt Navigation ab."
+    min_top_k: 10
+  - id: godot-013
+    question: "How do I set up a basic authoritative multiplayer game in Godot 4 using ENet? I need to handle peer connections, spawn players, and synchronize positions with RPC calls where the server has authority."
+    expected_source_files:
+      - "godot-docs-reference-packed.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/tutorials/networking/high_level_multiplayer.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "High-Level Multiplayer: ENetMultiplayerPeer-Setup, create_server()/create_client(), multiplayer_peer property, @rpc annotation modes (authority, any_peer, call_local, call_remote), MultiplayerSpawner/MultiplayerSynchronizer für automatische Node-Synchronisation, multiplayer authority."
+        has_solution: true
+      - url: "https://github.com/godotengine/godot/issues/57869"
+        date: null
+        type: "github-issue"
+        solution_summary: "RPC-Fehler: 'RPC 'function_name' is not allowed from: ...' wenn die aufgerufene Funktion nicht auf beiden Peers mit @rpc deklariert ist. Lösung: Funktion auf Client UND Server deklarieren, auch wenn sie nur auf einer Seite aufgerufen wird."
+        has_solution: true
+    difficulty: hard
+    tags: [multiplayer, rpc, enet, networking, peer, synchronization, authority, server]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Hard: Multiplayer erfordert Verständnis von Peer-to-Peer-Architektur, RPC-Modes, Authority-Konzept und Synchronisation. Tests retrieval der High-Level-Multiplayer-API und des RPC-Gotchas. Keine bestehende Frage deckt Multiplayer ab."
+    min_top_k: 10
+  - id: godot-014
+    question: "How do I detect when the player presses the spacebar in GDScript using the Input system? I want to trigger a jump action."
+    expected_source_files:
+      - "godot-docs-reference-packed.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/tutorials/inputs/inputevent.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "InputEvent-Doku: InputEventKey (keycode, physical_keycode, pressed, echo), InputEventMouseButton, InputEventMouseMotion, InputEventJoypadButton/Motion, InputEventAction. Erklärt den Unterschied zwischen keycode (layout-abhängig) und physical_keycode (physische Taste)."
+        has_solution: true
+      - url: "https://docs.godotengine.org/en/stable/tutorials/inputs/input_examples.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Input-Beispiele: Input.is_action_pressed(), Input.is_action_just_pressed(), Input.get_axis(), Input.get_vector(), InputMap-Setup im Editor, _input(event)-Callback, _unhandled_input(event) für GUI-Propagation."
+        has_solution: true
+    difficulty: easy
+    tags: [input, keyboard, is_action_pressed, input_map, gdscript, spacebar, jump]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Easy: grundlegende Input-API-Frage. Tests retrieval von Input.is_action_just_pressed() und InputMap-Dokumentation. Bestehende Fragen nutzen Input nur indirekt (godot-002/007), keine dedizierte Input-Frage."
+    min_top_k: 10
+  - id: godot-015
+    question: "How do I play a looping background music track and a one-shot sound effect in Godot 4 using AudioStreamPlayer?"
+    expected_source_files:
+      - "godot-docs-reference-packed.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/tutorials/audio/audio_buses.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Audio-Bus-System: Master-Bus, benutzerdefinierte Busse, Bus-Layout, Audio-Effekte pro Bus (Reverb, EQ, Compressor, Delay), Bus-Send/Receive, ducking (side-chain), dB-Volume-Skala, AudioServer.get_bus_index()."
+        has_solution: true
+      - url: "https://docs.godotengine.org/en/stable/tutorials/audio/audio_streams.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Audio-Stream-Typen: AudioStreamWAV (unkomprimiert), AudioStreamMP3, AudioStreamOggVorbis, AudioStreamGenerator (prozedural), AudioStreamMicrophone, AudioStreamRandomizer (zufällige Auswahl), AudioStreamPlaylist. Erklärt loop-Modi und stream-Eigenschaften."
+        has_solution: true
+    difficulty: easy
+    tags: [audio, audiostreamplayer, music, sfx, loop, bus, sound_effect]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Easy: grundlegende Audio-API-Frage. Tests retrieval von AudioStreamPlayer.play(), stream.loop, und Audio-Bus-Routing. Keine bestehende Frage deckt Audio ab."
+    min_top_k: 10
+  - id: godot-016
+    question: "How do I save and load player progress like level, score, and settings using ConfigFile in Godot 4? Where should I store the save file?"
+    expected_source_files:
+      - "godot-docs-reference-packed.md"
+      - "faq.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/tutorials/io/saving_games.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Save-Game-Tutorial: ConfigFile für INI-ähnliche Speicherung (set_value, get_value, save, load), FileAccess für rohen I/O, JSON.stringify/parse_string für strukturierte Daten, ResourceSaver.save für .tres/.res-Dateien. user://-Pfad für plattformspezifisches User-Datenverzeichnis."
+        has_solution: true
+    difficulty: easy
+    tags: [save, load, configfile, file_io, user_path, persistence, progress]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Easy: grundlegende File-I/O-Frage. Tests retrieval von ConfigFile-API und user://-Pfad. faq.md enthält eine 'Wie speichert man Daten?'-Sektion mit ConfigFile-Codebeispiel. Keine dedizierte File-I/O-Frage in bestehenden Fragen."
+    min_top_k: 10
+  - id: godot-017
+    question: "How do I optimize a large 3D open-world scene in Godot 4 for mobile performance? I need to reduce draw calls and manage which objects are rendered based on distance."
+    expected_source_files:
+      - "godot-docs-reference-packed.md"
+      - "godot-docs-3d-packed.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/tutorials/3d/mesh_lod.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Mesh-LOD: automatische LOD-Generierung im Import-Dialog, LOD-Thresholds (Pixel-Schwellwerte), manuelle LOD-Konfiguration, MeshOptimization-Klasse, LOD-Bias in ProjectSettings. Reduziert Vertex-Count bei entfernten Objekten."
+        has_solution: true
+      - url: "https://docs.godotengine.org/en/stable/tutorials/3d/occlusion_culling.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Occlusion Culling: OccluderInstance3D-Nodes, automatisches Baking von Occludern aus Geometrie, Szenen-basierte Occlusion, Performance-Überlegungen. Verhindert Rendering von Objekten hinter Wänden."
+        has_solution: true
+      - url: "https://docs.godotengine.org/en/stable/tutorials/3d/visibility_ranges.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Visibility Ranges (HLOD): GeometryInstance3D.visibility_range_begin/end, VisibilityNotifier3D, VisibilityEnabler3D für automatisches Ein-/Ausschalten von Nodes basierend auf Kamera-Distanz. Nützlich für Open-World-Szenen."
+        has_solution: true
+    difficulty: hard
+    tags: [performance, lod, occlusion_culling, visibility_range, optimization, 3d, mobile, draw_calls]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Hard: erfordert Synthese von drei separaten Performance-Techniken (LOD, Occlusion Culling, Visibility Ranges) und Verständnis von Draw-Call-Optimierung. Tests retrieval über mehrere 3D-Dokumentationsseiten. Keine bestehende Frage deckt Performance ab."
+    min_top_k: 10
+  - id: godot-018
+    question: "How do I create a 2D platformer level with tile-based collision in Godot 4 using TileMapLayer and TileSet? I want different tiles for ground, walls, and platforms."
+    expected_source_files:
+      - "godot-docs-reference-packed.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/tutorials/2d/using_tilesets.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "TileSet-Tutorial: TileSet-Ressource erstellen, Textur-Atlas importieren, Tiles definieren (Physics-Layer für Kollision, Navigation-Layer, Terrain-Sets, alternative Tiles), Tile-Größe, Tile-Offset, Kollisions-Shapes pro Tile."
+        has_solution: true
+      - url: "https://docs.godotengine.org/en/stable/tutorials/2d/using_tilemaps.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "TileMapLayer-Doku: TileMapLayer-Nodes (Godot 4 ersetzt das alte TileMap-Node), mehrere Layer für verschiedene Tile-Typen, Tile-Painting im Editor, Tile-Patterns, TileMapLayer-Rendering (y-sort, z-index), TileMapLayer-Kollision."
+        has_solution: true
+    difficulty: medium
+    tags: [tilemap, tileset, tilemaplayer, 2d, platformer, collision, level_design]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Tests retrieval von TileMapLayer- und TileSet-Dokumentation. Godot 4 hat TileMapLayer als Ersatz für das alte TileMap-Node — wichtig, dass die Doku die neue API abdeckt. Keine bestehende Frage deckt 2D/TileMap ab."
+    min_top_k: 10
+  - id: godot-019
+    question: "How do I create a custom Resource type in GDScript to store item data like name, icon texture, and stats? I want to create individual item instances in the editor."
+    expected_source_files:
+      - "godot-docs-reference-packed.md"
+      - "best-practices.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/tutorials/scripting/resources.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Resources: Resource-Klasse, Custom Resources via class_name extends Resource, @export-Variablen für Editor-Editierbarkeit, ResourceLoader.load(), ResourceSaver.save(), .tres (textuell) vs .res (binär), Resource-Preloading, Resource-Instanzen als Daten-Container."
+        has_solution: true
+      - url: "https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html#doc-gdscript-basics-class-name"
+        date: null
+        type: "official-docs"
+        solution_summary: "class_name: registriert ein GDScript als globalen Typ im Editor, ermöglicht @export var item: ItemData, erscheint in 'Create New Resource'-Dialog. class_name muss mit dem Dateinamen übereinstimmen."
+        has_solution: true
+    difficulty: easy
+    tags: [resource, custom_resource, gdscript, data, item, class_name, export, editor]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Easy: grundlegende Resource-API-Frage. Tests retrieval von Custom-Resource-Dokumentation. best-practices.md enthält class_name + preload-Pattern. Bestehende godot-006 deckt signals ab, aber nicht Resources/class_name."
+    min_top_k: 10
+  - id: godot-020
+    question: "How do I use the Godot Profiler to identify which scripts or functions are causing frame rate drops in my game? I want to find performance bottlenecks."
+    expected_source_files:
+      - "godot-docs-reference-packed.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/tutorials/scripting/debug/the_profiler.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Profiler: Debugger → Profiler-Tab, Frame-Time-Graph, Funktions-Call-Liste mit self_time/total_time, Script-Funktionen, Physics-Frame vs Process-Frame, Engine-internal functions, Profiler-Start/Stop, CSV-Export für externe Analyse."
+        has_solution: true
+      - url: "https://docs.godotengine.org/en/stable/tutorials/scripting/debug/debugger_panel.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Debugger-Panel: Errors-Tab, Stack-Trace, Breakpoints, Step-Over/Into/Out, Variable-Inspector, Remote-Scene-Tree (live Node-Hierarchie während des Spiels), Monitors-Tab (FPS, Memory, Node-Count, Draw-Calls)."
+        has_solution: true
+    difficulty: medium
+    tags: [debugging, profiler, performance, frame_time, bottleneck, debugger, monitors]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Tests retrieval von Profiler- und Debugger-Dokumentation. Profiler-Nutzung ist eine praktische Fähigkeit für Performance-Optimierung. Bestehende godot-008 deckt nur Visibility-Debugging ab, nicht den Profiler."
     min_top_k: 10

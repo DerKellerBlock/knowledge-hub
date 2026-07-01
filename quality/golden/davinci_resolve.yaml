@@ -1,7 +1,7 @@
 domain: davinci_resolve
 version: 1
 description: "Golden Dataset for DaVinci Resolve domain quality evaluation"
-last_updated: 2026-06-29
+last_updated: 2026-07-01
 # Optional: override default weights/thresholds (uncomment to use)
 # weights:
 #   source_recall: 0.35
@@ -195,4 +195,300 @@ questions:
     created_date: 2026-06-29
     last_verified: 2026-06-29
     notes: "Tests that the new-features PDF is indexed and retrievable. expected_page_ranges aus Live-Suche mit ±2 Toleranz."
+    min_top_k: 10
+  # --- Phase 2.4: Golden Dataset Erweiterung (2026-07-01) ---
+  - id: davinci_resolve-008
+    question: "How do I use the Delta Keyer in DaVinci Resolve Fusion to remove a green screen background?"
+    expected_source_files:
+      - "fusion-20.3-manual.md"
+      - "davinci-resolve-20-fusion-visual-effects.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/fusion"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Fusion page. Delta Keyer is the primary keying tool for green/blue screen removal. Supports clean and detail mattes, spill suppression, edge refinement, and garbage mattes for isolating the subject from the background."
+        has_solution: true
+      - url: "https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-20-Fusion-Visual-Effects.pdf"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Fusion VFX training book with 5 lessons covering node-based compositing, keying, tracking, rotoscoping, and 3D compositing with practical exercises."
+        has_solution: true
+    difficulty: medium
+    tags: [fusion, delta-keyer, green-screen, keying, chroma-key, compositing]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Testet Fusion-Keying-Wissen jenseits von Tracking (001/004). Delta Keyer ist das zentrale Keying-Tool. Erwartet Treffer in fusion-20.3-manual.md (Referenz) und fusion-visual-effects.md (Training). Kein Duplikat mit 001 (Planar Tracker) oder 004 (Tracker-Vergleich)."
+    min_top_k: 10
+  - id: davinci_resolve-009
+    question: "How do I create a 3D composite with a tracked camera and 3D text in DaVinci Resolve Fusion?"
+    expected_source_files:
+      - "fusion-20.3-manual.md"
+      - "davinci-resolve-20-advanced-visual-effects.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/fusion"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Fusion page. 3D compositing combines live-action footage with 3D elements using a 3D Camera Tracker, 3D merge, 3D text, lights, and materials. Supports deep pixel compositing and particle effects for realistic integration."
+        has_solution: true
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/training#fusion"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official training videos: Intro to Fusion, Basic Compositing, Motion Graphics, 3D Compositing. Covers 3D camera tracking, 3D text, lighting, and rendering 3D scenes."
+        has_solution: true
+    difficulty: hard
+    tags: [fusion, 3d-compositing, camera-tracking, 3d-text, deep-pixel, particles]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Hard: Multi-Step-Workflow (Camera Tracking → 3D Setup → Text → Lighting → Render). Testet ob das System mehrere Konzepte in einer Query korrekt verknüpft. Erwartet Treffer in fusion-20.3-manual.md und advanced-visual-effects.md."
+    min_top_k: 10
+  - id: davinci_resolve-010
+    question: "How do I use Power Windows to isolate and grade a specific area of an image in DaVinci Resolve?"
+    expected_source_files:
+      - "davinci-resolve-20-colorist-guide.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/color"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Color page. Power Windows draw circular, linear, polygonal, or custom curve shapes to isolate areas for secondary grading. Combine with the qualifier for precise selections. Windows can be tracked using the built-in Point Tracker."
+        has_solution: true
+      - url: "https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-20-Colorist-Guide.pdf"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Colorist training book with practical exercises covering primary and secondary grading, Power Windows, qualifiers, tracking, and color management workflows."
+        has_solution: true
+    difficulty: medium
+    tags: [color, power-windows, secondary-grading, isolation, qualifier, tracking]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Testet Secondary Color Grading (Power Windows), nicht Primary (003). Power Windows sind ein Kern-Feature der Color Page. Erwartet primär colorist-guide.md als Trainingsquelle."
+    min_top_k: 10
+  - id: davinci_resolve-011
+    question: "How do I set up ACES color management for an HDR grading workflow in DaVinci Resolve?"
+    expected_source_files:
+      - "davinci-resolve-20-colorist-guide.md"
+      - "davinci-resolve-20.3-reference-manual.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/color"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Color page. Color management supports ACES (Academy Color Encoding System) and DaVinci YRGB. ACES provides a standardized color science pipeline for HDR workflows including scene-referred grading, IDTs (Input Device Transforms), and ODTs (Output Device Transforms)."
+        has_solution: true
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/training#color"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official training videos: Intro to Color, Advanced Color, Color Management. Covers ACES setup, HDR grading, Dolby Vision, and color space transforms."
+        has_solution: true
+    difficulty: hard
+    tags: [color, aces, hdr, color-management, idt, odt, dolby-vision, scene-referred]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Hard: ACES ist ein komplexes, konfigurationsintensives Thema mit vielen Fachbegriffen (IDT, ODT, RRT, scene-referred). Testet ob das System technische Color-Management-Konzepte korrekt abruft. Erwartet colorist-guide.md (Training) und reference-manual.md (Konfigurationsdetails)."
+    min_top_k: 10
+  - id: davinci_resolve-012
+    question: "How do I use the Cut page for fast rough-cut editing in DaVinci Resolve?"
+    expected_source_files:
+      - "davinci-resolve-20-beginners-guide.md"
+      - "davinci-resolve-20.3-reference-manual.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/cut"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Cut page. Dual timeline (upper timeline shows full source tape, lower shows edit), smart insert/append/place-on-top/close-up/ripple-overwrite edit types, source tape for fast clip browsing, sync bin for multi-camera sync, Speed Editor hardware integration."
+        has_solution: true
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/training#edit"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official training videos: Intro to Editing (Cut+Edit), Multicam, VFX in Edit Page. Covers Cut page workflow, source tape, smart edit tools, and Speed Editor."
+        has_solution: true
+    difficulty: easy
+    tags: [cut-page, rough-cut, source-tape, dual-timeline, smart-insert, speed-editor]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Easy: Grundlegende Cut-Page-Frage. Die Cut Page ist bisher komplett ungetestet (keine der 001–007 Fragen). Erwartet beginners-guide.md (Einstieg) und reference-manual.md (Details)."
+    min_top_k: 10
+  - id: davinci_resolve-013
+    question: "How do I set up and switch between multiple camera angles in a multicam edit in DaVinci Resolve?"
+    expected_source_files:
+      - "davinci-resolve-20-editors-guide.md"
+      - "davinci-resolve-20.3-reference-manual.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Edit page. Multicam supports 4 to 25+ camera angles synced by timecode, audio waveform, or in/out points. Switch angles live during playback or in the multicam viewer. Supports stacked timelines and adjustment clips for complex edits."
+        has_solution: true
+      - url: "https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-20-Editors-Guide.pdf"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Editor's training book covering interviews, dramatic scenes, documentaries, and music videos. Includes multicam editing workflows with practical exercises."
+        has_solution: true
+    difficulty: medium
+    tags: [edit, multicam, camera-angles, sync, timecode, audio-waveform, multicam-viewer]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Testet Multicam-Workflow (nicht von 002 Trim abgedeckt). Multicam ist ein zentrales Edit-Page-Feature. Erwartet editors-guide.md (Training) und reference-manual.md (technische Details)."
+    min_top_k: 10
+  - id: davinci_resolve-014
+    question: "How do I set up a Dolby Atmos mix with 3D spatial panning in DaVinci Resolve Fairlight?"
+    expected_source_files:
+      - "davinci-resolve-20-fairlight-audio-post.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/fairlight"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Fairlight page. 3D spatial panning supports Dolby Atmos up to 7.1.4 with object-based audio, bed tracks, and the 3D panner interface. FlexBus routing allows flexible channel mapping. Includes 25+ Fairlight FX plugins for professional post-production."
+        has_solution: true
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/training#fairlight"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Fairlight training videos: Dolby Atmos (48m) covering 3D panning, object-based audio, bed tracks, and Atmos mastering workflows."
+        has_solution: true
+    difficulty: medium
+    tags: [fairlight, dolby-atmos, 3d-panning, spatial-audio, flexbus, object-based-audio, 7.1.4]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Testet fortgeschrittenes Fairlight-Wissen (Dolby Atmos), nicht das allgemeine Audio-Tracks-Thema von 006. Atmos ist ein spezifisches, technisch anspruchsvolles Feature. Erwartet fairlight-audio-post.md als primäre Trainingsquelle."
+    min_top_k: 10
+  - id: davinci_resolve-015
+    question: "How do I organize and find clips using bins, smart bins, and metadata in DaVinci Resolve?"
+    expected_source_files:
+      - "davinci-resolve-20.3-reference-manual.md"
+      - "davinci-resolve-20-editors-guide.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/media"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Media page. Media pool with bins for manual organization, smart bins with rule-based filtering (metadata, clip properties), facial recognition for automatic person-based sorting, and extensive metadata entry including custom fields."
+        has_solution: true
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Edit page. Media pool, bins, smart bins, facial recognition, and proxy workflows (Blackmagic Proxy Generator) for efficient media management across projects."
+        has_solution: true
+    difficulty: easy
+    tags: [media-pool, bins, smart-bins, metadata, facial-recognition, organization, proxy-generator]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Easy: Grundlegende Media-Management-Frage. Bisher ungetestet (001–007 decken kein Media Management ab). Erwartet reference-manual.md (vollständige Doku) und editors-guide.md (praktische Organisation)."
+    min_top_k: 10
+  - id: davinci_resolve-016
+    question: "How do I add and customize video transitions between clips in DaVinci Resolve?"
+    expected_source_files:
+      - "davinci-resolve-20-editors-guide.md"
+      - "davinci-resolve-20.3-reference-manual.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Edit page. 100+ built-in transitions including cross dissolve, dip to color, smooth cut, and 3D transitions. Drag-and-drop from Effects Library, adjustable duration and alignment in the inspector. Supports custom transition curves and OpenFX transitions."
+        has_solution: true
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/fusion"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Fusion page. 200+ filters and effects including custom transition templates built with Fusion's node-based compositing. Fusion title templates can be used as animated transitions."
+        has_solution: true
+    difficulty: easy
+    tags: [transitions, effects-library, cross-dissolve, inspector, openfx, edit-page]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Easy: Grundlegende Transitions-Frage. Bisher ungetestet. Erwartet editors-guide.md (praktische Anwendung) und reference-manual.md (vollständige Referenz). Kein Duplikat mit 002 (Trim)."
+    min_top_k: 10
+  - id: davinci_resolve-017
+    question: "How do I create animated 3D titles using the Text+ node in DaVinci Resolve Fusion?"
+    expected_source_files:
+      - "fusion-20.3-manual.md"
+      - "davinci-resolve-20-fusion-visual-effects.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/fusion"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Fusion page. Text+ and Text 3D nodes for creating 2D and 3D titles with per-character animation, extrusion, bevels, materials, and lighting. 100+ Fusion title templates available. Supports keyframe animation, modifiers, and expressions for complex motion graphics."
+        has_solution: true
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/training#fusion"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official training videos: Motion Graphics covering Text+, Text 3D, keyframe animation, modifiers, and Fusion title templates with project files."
+        has_solution: true
+    difficulty: medium
+    tags: [fusion, text+, text-3d, titles, motion-graphics, keyframe-animation, modifiers, templates]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Testet Fusion Motion-Graphics/Text-Wissen (nicht Keying wie 008, nicht 3D-Compositing wie 009). Text+ ist das zentrale Titel-Tool in Fusion. Erwartet fusion-20.3-manual.md und fusion-visual-effects.md."
+    min_top_k: 10
+  - id: davinci_resolve-018
+    question: "How does Blackmagic Cloud collaboration work for multi-user projects in DaVinci Resolve?"
+    expected_source_files:
+      - "davinci-resolve-20.3-reference-manual.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/collaboration"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Collaboration page. Blackmagic Cloud (free Cloud ID) enables multi-user collaboration with Project Server, bin and timeline locking, built-in chat, timeline comparison, shared markers, and live save. Supports simultaneous editing, color grading, audio mixing, and VFX work without conforming."
+        has_solution: true
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/training"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official training resources: 5 training books, Advanced VFX Guide, free PDFs with lesson files. Collaboration workflows are covered in the reference manual and editor's guide."
+        has_solution: true
+    difficulty: medium
+    tags: [collaboration, blackmagic-cloud, project-server, bin-locking, timeline-locking, multi-user, cloud-id]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Testet Collaboration-Wissen — bisher komplett ungetestet. Blackmagic Cloud ist das zentrale Kollaborations-Feature. Erwartet reference-manual.md (die umfassendste Quelle für Collaboration-Konfiguration)."
+    min_top_k: 10
+  - id: davinci_resolve-019
+    question: "Why is my DaVinci Resolve playback stuttering and how can I improve performance?"
+    expected_source_files:
+      - "davinci-resolve-20.3-reference-manual.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://forum.blackmagicdesign.com/viewforum.php?f=21"
+        date: null
+        type: "forum"
+        solution_summary: "Official Blackmagic Forum — DaVinci Resolve section. Primary community resource for troubleshooting performance issues, GPU configuration, render problems, and playback optimization. Common solutions include proxy workflows, optimized media, render cache, and GPU driver updates."
+        has_solution: true
+      - url: "https://www.blackmagicdesign.com/support/family/davinci-resolve-and-fusion"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Support Center with software updates, support notes, configuration guides, and hardware recommendations for optimal Resolve performance."
+        has_solution: true
+    difficulty: medium
+    tags: [troubleshooting, playback, performance, stuttering, proxy, render-cache, optimized-media, gpu]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Testet Troubleshooting/Performance-Wissen — bisher ungetestet. Praxisnahe Frage, die reale Anwenderprobleme abbildet. Erwartet reference-manual.md (Performance-Konfiguration, Proxy-Workflows, Render Cache). Forum-Quelle dokumentiert als real_world_source (nicht als expected_source_file, da nicht im Index)."
+    min_top_k: 10
+  - id: davinci_resolve-020
+    question: "How do I import an XML or AAF timeline from Premiere Pro or another NLE into DaVinci Resolve?"
+    expected_source_files:
+      - "davinci-resolve-20.3-reference-manual.md"
+      - "davinci-resolve-20-editors-guide.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Edit page. Universal timeline supports XML and AAF import from Premiere Pro, Final Cut Pro, Avid Media Composer, and other NLEs. Conform options handle clip relinking, timeline comparison, and format conversion. Quick Export and Deliver page support DCP, broadcast, and streaming output."
+        has_solution: true
+      - url: "https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-20-Editors-Guide.pdf"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Editor's training book covering complete editing workflows including project import, conform, editing, and delivery for online, broadcast, and streaming."
+        has_solution: true
+    difficulty: easy
+    tags: [workflow, xml, aaf, import, conform, premiere-pro, nle, timeline, universal-timeline]
+    created_date: 2026-07-01
+    last_verified: 2026-07-01
+    notes: "Easy: Grundlegende Workflow-Frage zum Projektimport. Bisher ungetestet (005 deckt nur Export/Rendering ab, nicht Import). Erwartet reference-manual.md (technische Details) und editors-guide.md (praktischer Workflow)."
     min_top_k: 10
