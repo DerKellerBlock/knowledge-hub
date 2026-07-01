@@ -1,0 +1,369 @@
+{
+  "domain": "godot",
+  "date": "2026-06-30",
+  "evaluations": [
+    {
+      "id": "godot-001",
+      "question": "How do I rotate a Node3D around the Y axis in GDScript?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 0,
+      "found_source_files": [
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/classes/class_node3d.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official API reference. Documents rotate_y(angle), rotate(axis, angle), rotate_object_local(), rotation property (Euler Vector3), rotation_degrees, quaternion, and global_rotation. Angles in radians unless _degrees variant used.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/3d/using_transforms.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Tutorial explains why Euler angles are problematic (Gimbal Lock, interpolation, axis order) and recommends transform.basis instead. Shows rotate_x(), rotate_y(), rotate_object_local(), and FPS mouse-look with accumulated rotation angles.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "Method: Node3D.rotate_y\nSignature: rotate_y(angle\\: float)\nInherits: Node → Object\n\nrotate_y ( angle\\: float )\nRotates this node's basis around the Y axis by the given angle, in radians. This operatio",
+        "Method: Node3D.rotate_x\nSignature: rotate_x(angle\\: float)\nInherits: Node → Object\n\nrotate_x ( angle\\: float )\nRotates this node's basis around the X axis by the given angle, in radians. This operatio",
+        "Method: Node3D.rotate\nSignature: rotate(axis\\: Vector3, angle\\: float)\nInherits: Node → Object\n\nrotate ( axis\\: Vector3, angle\\: float )\nRotates this node's basis around the axis by the given angle, i"
+      ]
+    },
+    {
+      "id": "godot-002",
+      "question": "How do I move a CharacterBody3D with gravity in Godot 4?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 1,
+      "found_source_files": [
+        "gotchas.md",
+        "godot-demos-packed.md",
+        "tips.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/physics/using_character_body_2d.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official CharacterBody2D/3D tutorial. Full platformer example with get_gravity(), move_and_slide(), is_on_floor(), jump. Explains move_and_collide() vs move_and_slide(), velocity manipulation, floor_max_angle, up_direction.",
+          "has_solution": true
+        },
+        {
+          "url": "https://github.com/godotengine/godot/issues/112656",
+          "date": "2025-11-12",
+          "type": "github-issue",
+          "solution_summary": "Bug report: CharacterBody*D.get_gravity() ignores Area3D gravity overrides while RigidBody3D respects them. Confirmed, still open. No workaround documented.",
+          "has_solution": false
+        }
+      ],
+      "top_snippets": [
+        "## CharacterBody3D Stair Stepping\n- CharacterBody3D hat native stair stepping (PR #114447, 2025-12-30, open): Properties `step_enabled`, `step_height` (default 0.3m), `step_smooth_enabled`, `step_smoo",
+        "Method: CharacterBody3D.move_and_slide\nInherits: PhysicsBody3D → CollisionObject3D → Node3D → Node → Object\n\nbool move_and_slide ( )\nMoves the body based on velocity. If the body collides with another",
+        "## Jolt Physics + CharacterBody3D\n- **Problem:** CharacterBody3D fällt durch den Boden bei Jolt Physics in Godot 4.6\n- **Ursache:** `move_and_slide()` ruft `PhysicsServer3D.body_test_motion()` auf, Jo"
+      ]
+    },
+    {
+      "id": "godot-003",
+      "question": "What are the gotchas with CharacterBody3D and Jolt Physics in Godot 4.6?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 0,
+      "found_source_files": [
+        "gotchas.md",
+        "godot-docs-reference-packed.md",
+        "tips.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://github.com/godotengine/godot/issues/117857",
+          "date": "2026-03-26",
+          "type": "github-issue",
+          "solution_summary": "Bug: Using CharacterBody3D move_and_collide() from _process() (not _physics_process()) with Jolt physics sometimes fails to generate collision responses. Fixed in 4.7. Workaround: use _physics_process() or adjust collision logic.",
+          "has_solution": true
+        },
+        {
+          "url": "https://github.com/godotengine/godot/issues/112315",
+          "date": "2025-11-02",
+          "type": "github-issue",
+          "solution_summary": "Bug: CharacterBody3D apply_floor_snap() onto an AnimatableBody3D can cause catapulting when velocity.y has a small positive value. Workaround: explicitly set velocity.y = 0 when on floor.",
+          "has_solution": true
+        },
+        {
+          "url": "https://github.com/godotengine/godot/issues/113058",
+          "date": "2025-11-22",
+          "type": "github-issue",
+          "solution_summary": "Bug: Reparenting a CharacterBody3D with KeepGlobalTransform=true falsely triggers distant Area3D nodes at world origin. Confirmed, assigned, open. Only occurs with Jolt physics, not Godot Physics.",
+          "has_solution": false
+        }
+      ],
+      "top_snippets": [
+        "## Jolt Physics + CharacterBody3D\n- **Problem:** CharacterBody3D fällt durch den Boden bei Jolt Physics in Godot 4.6\n- **Ursache:** `move_and_slide()` ruft `PhysicsServer3D.body_test_motion()` auf, Jo",
+        "## Jolt: Reparenting CharacterBody3D triggert ferne Area3D\n- **Problem:** Reparenting CharacterBody3D mit `KeepGlobalTransform=true` triggert ferne Area3D-Nodes am World Origin\n- **Ursache:** Jolt Phy",
+        "## CharacterBody3D Stair Stepping\n- CharacterBody3D hat native stair stepping (PR #114447, 2025-12-30, open): Properties `step_enabled`, `step_height` (default 0.3m), `step_smooth_enabled`, `step_smoo"
+      ]
+    },
+    {
+      "id": "godot-004",
+      "question": "How do I set up a 3D camera that follows a player in Godot?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 7,
+      "found_source_files": [
+        "godot-docs-3d-packed.md",
+        "godot-demos-packed.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/classes/class_camera3d.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Camera3D class reference. Documents current property (only one active camera per viewport), projection (Perspective/Orthogonal/Frustum), fov, near/far, cull_mask, environment, h_offset/v_offset, make_current(), clear_current().",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/3d/using_transforms.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Tutorial contains FPS camera example (mouse look, first-person controller) using accumulated rot_x/rot_y outside the transform, with reset rotation then rotate_object_local() for X and Y axes.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "e placed at or near the collision point:\n\n.. image:: img/spring_arm_camera_collision.webp\n\nSetting up the spring arm and camera\n------------------------------------\n\nLet's add a spring arm camera setu",
+        "ches or artifacts) in\ndelicate areas such as rendering or physics. Make sure your artists always work\nin the right scale!\n\nThe Y coordinate is used for \"up\". As for the horizontal X/Z axes, Godot uses",
+        "ocity.y > 0 else 0\n\n\nfunc start(pos):\n\tposition = pos\n\trotation = 0\n\tshow()\n\t$CollisionShape2D.disabled = false\n\n\nfunc _on_body_entered(_body):\n\thide() # Player disappears after being hit.\n\thit.emit()"
+      ]
+    },
+    {
+      "id": "godot-005",
+      "question": "How do I fix GLB model import scale issues from Meshy in Godot?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 5,
+      "found_source_files": [
+        "godot-docs-3d-packed.md",
+        "best-practices.md",
+        "gotchas.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://github.com/godotengine/godot/issues/111653",
+          "date": "2025-10-14",
+          "type": "github-issue",
+          "solution_summary": "Bug: Mesh origin point shifts away from world origin when scaling imported GLB/OBJ geometry (not Godot-native QuadMesh). Affects GLB and OBJ. Open, no fix. Disabling 'Generate LODs' is part of reproduction.",
+          "has_solution": false
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/model_export_considerations.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official 3D model export conventions. Godot uses right-handed Y-up coordinates, -Z camera forward, +Z asset front. Recommends triangulation before export, Apply Transforms in Blender, 1 unit = 1 meter. Post-import scaling can cause floating-point precision issues.",
+          "has_solution": true
+        },
+        {
+          "url": "https://github.com/godotengine/godot/issues/97022",
+          "date": "2024-09-14",
+          "type": "github-issue",
+          "solution_summary": "Bug: GLTF nodes using 'matrix' instead of TRS (translation/rotation/scale) had incorrect bone rest transforms (Identity). Fixed in 4.4. Relevant for GLB import issues with scaling/rotation.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "## GLB-Import — Mesh Origin Bug\n- **Problem:** Mesh origin point verschiebt sich vom World Origin weg beim Skalieren importierter GLB/OBJ-Geometrie (nicht bei Godot-nativen QuadMesh)\n- **Ursache:** Bu",
+        "## GLB-Import Scale mit Meshy\n- **Problem:** GLB-Modell unsichtbar weil scale zu klein\n- **Ursache:** Meshy liefert Modelle mit unterschiedlichen nativen Größen\n- **Workaround:** `auto_size: true` + `",
+        "t to **Material Override** (or **Material** for\nindividual CSG nodes). Choose **New StandardMaterial3D**. Click the newly created\nmaterial's icon to edit it. Unfold the **Albedo** section and load a t"
+      ]
+    },
+    {
+      "id": "godot-006",
+      "question": "How do I use signals to communicate between nodes in GDScript?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 2,
+      "found_source_files": [
+        "tips.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/getting_started/step_by_step/signals.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official signals tutorial. Covers editor-based signal connection (Signals dock, double-click), code-based connection (timer.timeout.connect(_on_timer_timeout)), custom signals (signal health_depleted, emit() with arguments), _ready() for connections, get_node() for references, callback naming (_on_node_name_signal_name).",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "Method: Object.connect\nSignature: connect(signal\\: StringName, callable\\: Callable, flags\\: int = 0)\n\nError connect ( signal\\: StringName, callable\\: Callable, flags\\: int = 0 )\nConnects a signal by n",
+        "Class: Signal\n\n:github_url: hide\nSignal\n======\nA built-in type representing a signal of an Object.\nDescription\n-----------\nSignal is a built-in Variant type that represents a signal of an Object insta",
+        "Method: Node.rpc\nSignature: rpc(method\\: StringName, ...)\nInherits: Object\n\nError rpc ( method\\: StringName, ... )\nSends a remote procedure call request for the given method to peers on the network (a"
+      ]
+    },
+    {
+      "id": "godot-007",
+      "question": "How do I create a 3D character controller with movement, jumping, and gravity?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 4,
+      "found_source_files": [
+        "godot-docs-3d-packed.md",
+        "godot-demos-packed.md",
+        "tips.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/physics/using_character_body_2d.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official CharacterBody tutorial with full platformer code: velocity += get_gravity() * delta, jump with is_on_floor(), Input.get_axis for movement, move_and_slide(). Explains motion_mode (GROUNDED vs FLOATING), floor_max_angle, up_direction.",
+          "has_solution": true
+        },
+        {
+          "url": "https://github.com/godotengine/godot/pull/114447",
+          "date": "2025-12-30",
+          "type": "github-pr",
+          "solution_summary": "PR adds native stair stepping to CharacterBody3D (similar to Unreal Engine). New properties: step_enabled, step_height (default 0.3m), step_smooth_enabled, step_smooth_speed. Algorithm: UP-FORWARD-DOWN trace at wall collision. Works with all physics backends. Only in MOTION_MODE_GROUNDED.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "uashed)\n\n\nfunc _on_player_hit():\n\t$MobTimer.stop()\n\t$UserInterface/Retry.show()\n```\n\n## File: 3d/squash_the_creeps/Mob.gd\n```\nextends CharacterBody3D\n\n# Emitted when the player jumped on the mob.\nsign",
+        "## CharacterBody3D Stair Stepping\n- CharacterBody3D hat native stair stepping (PR #114447, 2025-12-30, open): Properties `step_enabled`, `step_height` (default 0.3m), `step_smooth_enabled`, `step_smoo",
+        "hen reassigned.\n\t\tvelocity.x = move_toward(velocity.x, 0, STOP_FORCE * delta)\n\telse:\n\t\tvelocity.x += walk * delta\n\t# Clamp to the maximum horizontal movement speed.\n\tvelocity.x = clamp(velocity.x, -WA"
+      ]
+    },
+    {
+      "id": "godot-008",
+      "question": "Why is my 3D model not visible in Godot? I've added a MeshInstance3D but nothing shows up in the viewport.",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 6,
+      "found_source_files": [
+        "godot-docs-3d-packed.md",
+        "faq.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/classes/class_geometryinstance3d.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official GeometryInstance3D class reference. Documents visibility properties: visible (inherited from Node3D), cast_shadow, gi_mode, visibility_range_begin/end, and transparency. Also covers material_override and visibility layers via VisualInstance3D.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/classes/class_camera3d.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Camera3D class reference. Documents current property (only one active camera per viewport), cull_mask for layer-based culling, and projection modes.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "nsparency_sorting>`\n  during LOD transitions.\n\nThe downside of dithering is that a \"noisy\" pattern is visible during LOD fade\ntransitions. This may not be as noticeable at higher viewport resolutions ",
+        "Godot 3.x workflow\n   (used to reference a non existing doc_importing_3d_meshes importer).\n\nIt is possible to import 3D models in Godot created in external tools.\nDepending on the format, you can impo",
+        "of a specific texture that may be too large to render, you can\nset the **Process > Size Limit** import option to a value greater than ``0``.\nThis will reduce the texture's dimensions on import (preser"
+      ]
+    },
+    {
+      "id": "godot-008-de",
+      "question": "Warum sehe ich mein 3D-Modell nicht in Godot? Ich habe ein MeshInstance3D hinzugefügt, aber im Viewport erscheint nichts.",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 2,
+      "found_source_files": [
+        "godot-docs-3d-packed.md",
+        "tips.md",
+        "godot-docs-reference-packed.md",
+        "faq.md",
+        "gotchas.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/classes/class_geometryinstance3d.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official GeometryInstance3D class reference. Documents visibility properties: visible (inherited from Node3D), cast_shadow, gi_mode, visibility_range_begin/end, and transparency. Also covers material_override and visibility layers via VisualInstance3D.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/classes/class_camera3d.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Camera3D class reference. Documents current property (only one active camera per viewport), cull_mask for layer-based culling, and projection modes.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "## Warum sehe ich mein 3D-Modell nicht?\n- **`visible` Flag**: `MeshInstance3D.visible` (geerbt von `Node3D`) prüfen — und die aller Parents (`get_parent().visible` etc.). Eine unsichtbare Parent-Kette",
+        "Godot 3.x workflow\n   (used to reference a non existing doc_importing_3d_meshes importer).\n\nIt is possible to import 3D models in Godot created in external tools.\nDepending on the format, you can impo",
+        "ches or artifacts) in\ndelicate areas such as rendering or physics. Make sure your artists always work\nin the right scale!\n\nThe Y coordinate is used for \"up\". As for the horizontal X/Z axes, Godot uses"
+      ]
+    }
+  ],
+  "summary": {
+    "domain": "godot",
+    "total_questions": 9,
+    "pass_count": 9,
+    "weak_count": 0,
+    "fail_count": 0,
+    "avg_composite": 0.8594,
+    "avg_source_recall": 1.0,
+    "avg_page_metadata_accuracy": 0.0,
+    "avg_top_k_relevance": 0.55,
+    "avg_evidence_quality": 1.0
+  }
+}

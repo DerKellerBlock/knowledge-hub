@@ -41,7 +41,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cache/huggingface/hub/
-          key: huggingface-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
+          key: huggingface-${{ runner.os }}-${{ hashFiles('requirements.txt', 'mcp_servers/knowledge_hub/config.py') }}
           restore-keys: |
             huggingface-${{ runner.os }}-
 
