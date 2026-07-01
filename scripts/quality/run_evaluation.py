@@ -114,45 +114,61 @@ def run_evaluation(domain: str) -> dict:
 def check_regression(current: dict, baseline: dict) -> list[str]:
     """Compare current evaluation against a baseline.
 
-    Returns a list of regression warnings. Thresholds are intentionally
-    loose (>= 0.2 absolute drop for SR, >= 0.3 for composite, hard-zero
-    for PMA loss) — these are heuristics, not hard rules.
+    Returns a list of regression warning strings (empty list = no
+    regression). The thresholds follow the Phase-2a spec (Decision 2.4):
+
+    1. **Domain average**: ``current.avg_composite <
+       baseline.avg_composite - 0.1`` → regression warning.
+    2. **Per-question label regression**: baseline label ``pass`` and
+       current label ``weak`` or ``fail`` → regression warning.
+    3. **Per-question label regression**: baseline label ``weak`` and
+       current label ``fail`` → regression warning (the spec is silent
+       on weak→fail; we warn for safety, B9).
+    4. weak→weak, fail→fail, fail→weak (improvement), pass→pass → OK, no
+       warning.
+
+    The per-question composite drop is intentionally NOT a separate
+    trigger; the label transitions above are stricter and clearer than
+    a raw numeric threshold (avoids false positives from tiny float
+    drift). ``avg_composite`` is the single numeric gate.
     """
     warnings: list[str] = []
     current_evals = {e["id"]: e for e in current["evaluations"]}
     baseline_evals = {e["id"]: e for e in baseline["evaluations"]}
 
+    # 1. Domain-average gate (Decision 2.4).
+    bl_avg = baseline.get("summary", {}).get("avg_composite")
+    cur_avg = current.get("summary", {}).get("avg_composite")
+    if (
+        bl_avg is not None
+        and cur_avg is not None
+        and isinstance(bl_avg, (int, float))
+        and isinstance(cur_avg, (int, float))
+        and cur_avg < bl_avg - 0.1
+    ):
+        warnings.append(
+            f"Domain average composite regression: "
+            f"{bl_avg} -> {cur_avg} (drop > 0.1)"
+        )
+
+    # 2. Per-question label regressions.
     for qid, bl in baseline_evals.items():
         cur = current_evals.get(qid)
         if cur is None:
             warnings.append(f"Question {qid} in baseline but missing in current run")
             continue
 
-        if (
-            cur["source_recall"] is not None
-            and bl["source_recall"] is not None
-            and cur["source_recall"] < bl["source_recall"] - 0.2
-        ):
+        bl_label = bl.get("label")
+        cur_label = cur.get("label")
+        if bl_label == "pass" and cur_label in ("weak", "fail"):
             warnings.append(
-                f"Source recall regression for {qid}: "
-                f"{bl['source_recall']} -> {cur['source_recall']}"
+                f"Label regression for {qid}: pass -> {cur_label} "
+                f"(composite {bl['composite_score']} -> {cur['composite_score']})"
             )
-
-        if (
-            bl.get("page_metadata_accuracy") is not None
-            and bl["page_metadata_accuracy"] > 0
-            and cur.get("page_metadata_accuracy") is not None
-            and cur["page_metadata_accuracy"] == 0
-        ):
+        elif bl_label == "weak" and cur_label == "fail":
             warnings.append(
-                f"Page metadata lost for {qid}: "
-                f"{bl['page_metadata_accuracy']} -> {cur['page_metadata_accuracy']}"
-            )
-
-        if cur["composite_score"] < bl["composite_score"] - 0.3:
-            warnings.append(
-                f"Composite score regression for {qid}: "
-                f"{bl['composite_score']} -> {cur['composite_score']}"
+                f"Label regression for {qid}: weak -> fail "
+                f"(composite {bl['composite_score']} -> {cur['composite_score']})"
             )
 
     return warnings
