@@ -52,6 +52,8 @@ The current `*-latest.json` baselines are **BGE-M3 + jina-reranker-v2-base-multi
 (KH_RERANKER_MODEL env var, 2026-07-01). The previous ms-marco-MiniLM baselines
 are archived as `*-msmarco-2026-06-30.json`. The pre-Phase-2b baselines (BGE-M3+jina,
 7-9 questions, before Golden Dataset expansion) are archived as `*-pre-phase2b-2026-07-01.json`.
+The DaVinci baseline is now Phase-2.2 Late-Chunking (2026-07-02, see Phase 2.2
+section below).
 
 To reactivate the ms-marco reranker locally, leave `KH_RERANKER_MODEL` unset
 (the code default is `cross-encoder/ms-marco-MiniLM-L-12-v2`). The CI
@@ -61,11 +63,30 @@ explicitly, so CI always compares against the jina baselines.
 | File | Domain | Date | Reranker | Avg Composite | Questions |
 |------|--------|------|----------|---------------|----------|
 | `godot-latest.json` | godot | 2026-07-01 | jina | 0.8073 | 21 |
-| `davinci_resolve-latest.json` | davinci_resolve | 2026-07-01 | jina | 0.8063 | 20 |
+| `davinci_resolve-latest.json` | davinci_resolve | 2026-07-02 | jina | 0.8183 | 20 |
+| `davinci_resolve-latechunk-pre-pageranges-2026-07-02.json` | davinci_resolve | 2026-07-02 | jina | 0.8133 | 20 |
 | `godot-pre-phase2b-2026-07-01.json` | godot | 2026-07-01 | jina | 0.8594 | 9 |
 | `davinci_resolve-pre-phase2b-2026-07-01.json` | davinci_resolve | 2026-07-01 | jina | 0.7304 | 7 |
 | `godot-msmarco-2026-06-30.json` | godot | 2026-06-30 | ms-marco | 0.8594 | 9 |
 | `davinci_resolve-msmarco-2026-06-30.json` | davinci_resolve | 2026-06-30 | ms-marco | 0.7246 | 7 |
+
+## Phase 2.2 — Late Chunking (2026-07-02)
+
+The current `davinci_resolve-latest.json` baseline is **Late-Chunking** (Phase 2.2,
+BGE-M3 1024d / jina reranker, chapter-wise mean pooling 512-token windows with
+128-token overlap). DaVinci index grew from 2.511 → 12.367 chunks. The previous
+Fallback-Chunking baseline is archived as `davinci_resolve-pre-phase2b-2026-07-01.json`
+(7 questions, 0.7304 avg composite). The intermediate Late-Chunking baseline
+(before `expected_page_ranges` update) is preserved as
+`davinci_resolve-latechunk-pre-pageranges-2026-07-02.json` (20 questions, 0.8133
+avg composite) for the Phase 2.2 page-ranges-update delta measurement.
+
+**Page ranges update (2026-07-02):** the 7 old DaVinci questions
+(davinci_resolve-001..007) had `expected_page_ranges` from the Fallback-Chunking
+era that no longer matched Late-Chunking chapter boundaries. After updating
+ranges from the new top-5 search results (Late-Chunking index), PMA improved
+from 0.760 → 0.785 (+2.5%) and avg_composite from 0.8133 → 0.8183 (+0.5%).
+All 20 questions pass, no regressions.
 
 ## Phase 2.4 — Golden Dataset Expansion (2026-07-01)
 

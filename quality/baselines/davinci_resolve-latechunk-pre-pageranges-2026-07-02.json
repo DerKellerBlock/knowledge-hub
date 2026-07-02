@@ -1,19 +1,18 @@
 {
   "domain": "davinci_resolve",
-  "date": "2026-07-02",
+  "date": "2026-07-01",
   "evaluations": [
     {
       "id": "davinci_resolve-001",
       "question": "How do I set up a Planar Tracker in DaVinci Resolve?",
       "source_recall": 1.0,
-      "page_metadata_accuracy": 0.6,
+      "page_metadata_accuracy": 0.2,
       "top_k_relevance": 0.55,
       "evidence_quality": 1.0,
-      "composite_score": 0.8075,
+      "composite_score": 0.7275,
       "label": "pass",
-      "truncation_warnings": 0,
+      "truncation_warnings": 10,
       "found_source_files": [
-        "davinci-resolve-20-fairlight-audio-post.md",
         "fusion-20.3-manual.md",
         "davinci-resolve-20.3-reference-manual.md"
       ],
@@ -35,9 +34,9 @@
         }
       ],
       "top_snippets": [
-        "#### **Chapter 23**\n### Planar Tracking\n\nThis chapter provides an overview of how to use the Planar Tracker node, and how\nto use it to make match moves simple.\n\nFor more information about the Planar T",
-        "#### **Chapter 83**\n### Planar Tracking\n\nThis chapter provides an overview of how to use the Planar Tracker node, and how\nto use it to make match moves simple.\n\nFor more information about the Planar T",
-        "#### **Setting Up to Use the Planar Tracker**\n\nSimilar to the Tracker node, to do a planar track, you need to connect the output of the image you\nwant to track to the background input of a Planar Trac"
+        " give up and fall back to using\nFusion’s Tracker node or to manual keyframing. Some shots are simply not trackable, or the\nresulting track suffers from too much jitter or drift. The Planar Tracker is ",
+        "eady:** After analyzing a planar surface, this mode removes all motion and distortions\nfrom the planar surface, usually in preparation for some kind of paint or roto task, prior to\n“unsteadying” the c",
+        " Planar Tracker node, the Track spline produced\nby the Planar Tracker is shared by connecting it with the Planar Transform node. A consequence of\nthis sharing of the Track spline is that if the track "
       ]
     },
     {
@@ -49,11 +48,11 @@
       "evidence_quality": 1.0,
       "composite_score": 0.7275,
       "label": "pass",
-      "truncation_warnings": 0,
+      "truncation_warnings": 10,
       "found_source_files": [
-        "davinci-resolve-20-fairlight-audio-post.md",
+        "davinci-resolve-20-beginners-guide.md",
+        "davinci-resolve-21-new-features-guide.md",
         "davinci-resolve-20-editors-guide.md",
-        "davinci-resolve-20-colorist-guide.md",
         "davinci-resolve-20.3-reference-manual.md"
       ],
       "total_results": 10,
@@ -74,21 +73,21 @@
         }
       ],
       "top_snippets": [
-        "#### **Scene Cut Detection on the Timeline** (Studio Version Only)\n\nIf you need to break down a previously edited video into its component clips for re-editing or color\ncorrection, you can now do so d",
-        "#### **Trimming Multiple Edits or Clips at Once**\n\nDaVinci Resolve lets you select multiple edit points or clips for certain trimming operations, making it\npossible to trim multiple edits and clips at",
-        "**The Editor’s Art**\n\n_Trimming_ is the term given to adjusting a clip’s In and Out points in the timeline\n\nand is arguably the most important skill an editor possesses. Trimming allows you\n\nto adjust"
+        "ving you a more detailed look at your edit point. Once trimming is complete, it will\nautomatically revert back to the previous state.\n\nThe Precision Trim Editor will automatically appear when performi",
+        "ting a clip’s In and Out points in the timeline\n\nand is arguably the most important skill an editor possesses. Trimming allows you\n\nto adjust the start of a clip, the end of a clip, the start and end ",
+        " skill an editor possesses. Trimming\n\nallows you to adjust the start of a clip, the end of a clip, the start and end of a clip,\n\nor, in certain circumstances, the start and end of other timeline clips"
       ]
     },
     {
       "id": "davinci_resolve-003",
       "question": "How do I use Primary Color Correction in DaVinci Resolve?",
       "source_recall": 1.0,
-      "page_metadata_accuracy": 0.4,
+      "page_metadata_accuracy": 0.2,
       "top_k_relevance": 0.55,
       "evidence_quality": 1.0,
-      "composite_score": 0.7675,
+      "composite_score": 0.7275,
       "label": "pass",
-      "truncation_warnings": 0,
+      "truncation_warnings": 10,
       "found_source_files": [
         "davinci-resolve-20-beginners-guide.md",
         "davinci-resolve-20-colorist-guide.md",
@@ -112,21 +111,21 @@
         }
       ],
       "top_snippets": [
-        "## **Using the Primary Corrector**\n\nThe most popular controls for creating different looks and balancing your shots are found\n\nin the primary corrector. Because DaVinci Resolve includes many controls ",
-        "# Making Secondary Adjustments\n\nPrimary adjustments work on the\n\nentire image, whereas secondary\n\nadjustments let you isolate and work\n\non specific parts of an image.\n\nFor example, you might want to\n\n",
-        "## **Exploring the Color Page Interface**\n\nThe exercises in this lesson will teach you how to make color adjustments on clips to\n\ncorrect common issues such as overexposure, low contrast, and incorrec"
+        "re in the timeline, the\n\nclip you’re looking at will always be the one selected.\n\n**9** Press the Spacebar again to stop playback.\n\n\nTIP If a track is disabled in the edit page, it will be dimmed in t",
+        "if needed.\n\n\n**Lesson 4 Performing Primary Color Corrections** **243**\n\n\n\n\n--- end of page=267 ---\n\n**11** Click the leftmost wheel icon until the controls show Black, Dark, and Shadow. These\n\nwheels ",
+        "from the middle toolbar window.\n\n\n**Lesson 4 Performing Primary Color Corrections** **208**\n\n\n\n\n--- end of page=232 ---\n\n**12** Click and drag the Radius Blur control down to around 0.40 so the foregr"
       ]
     },
     {
       "id": "davinci_resolve-004",
       "question": "What is the difference between Point Tracker and Planar Tracker in DaVinci Resolve?",
       "source_recall": 1.0,
-      "page_metadata_accuracy": 0.4,
+      "page_metadata_accuracy": 0.3,
       "top_k_relevance": 0.55,
       "evidence_quality": 1.0,
-      "composite_score": 0.7675,
+      "composite_score": 0.7475,
       "label": "pass",
-      "truncation_warnings": 0,
+      "truncation_warnings": 10,
       "found_source_files": [
         "fusion-20.3-manual.md",
         "davinci-resolve-20-fusion-visual-effects.md",
@@ -150,25 +149,25 @@
         }
       ],
       "top_snippets": [
-        "Track Mode\n\nTrack mode is unlike the other three options in the Operation menu in that is the only option that\ninitiates the planar tracking. The other modes use the tracking data generated by the Tra",
-        "Track Mode\n\nTrack mode is unlike the other three options in the Operation menu in that is the only option that\ninitiates the planar tracking. The other modes use the tracking data generated by the Tra",
-        "## **Tracking Planar Surfaces**\n\nAs you have experienced so far, the single-point tracker is the simplest tracker in the\n\nFusion page. Although it works well on many shots, it’s not the most optimal t"
+        " give up and fall back to using\nFusion’s Tracker node or to manual keyframing. Some shots are simply not trackable, or the\nresulting track suffers from too much jitter or drift. The Planar Tracker is ",
+        "st-production. As an example, live-action footage can often contain a planar surface such as\na license plate or a road sign that needs new numbers in the license plate or a new city’s name on the\nroad",
+        "he brightness in an image.\n\n\n**Lesson 3 Replacing a Sky** **85**\n\n\n\n\n--- end of page=105 ---\n\n##### **Answers**\n\n**1** False. Adding a clip from the media pool to the Node Editor uses the clip’s nativ"
       ]
     },
     {
       "id": "davinci_resolve-005",
       "question": "How do I render and deliver a finished project in DaVinci Resolve?",
       "source_recall": 1.0,
-      "page_metadata_accuracy": 0.3,
+      "page_metadata_accuracy": 0.1,
       "top_k_relevance": 0.55,
       "evidence_quality": 1.0,
-      "composite_score": 0.7475,
+      "composite_score": 0.7075,
       "label": "pass",
-      "truncation_warnings": 0,
+      "truncation_warnings": 10,
       "found_source_files": [
+        "fusion-20.3-manual.md",
         "davinci-resolve-20-beginners-guide.md",
-        "davinci-resolve-20-fairlight-audio-post.md",
-        "davinci-resolve-20-colorist-guide.md",
+        "davinci-resolve-20-editors-guide.md",
         "davinci-resolve-20.3-reference-manual.md"
       ],
       "total_results": 10,
@@ -189,23 +188,22 @@
         }
       ],
       "top_snippets": [
-        "# Delivering Projects\n\nWhen you’re ready to export a\n\nproject—whether at the end of a\n\nworkflow, at an intermediate point, or\n\nwhen generating dailies—its render\n\nsettings are configured in the delive",
-        "## **Reviewing Projects with Clients**\n\nBefore rendering a finished project, you will usually also go through a review process with\n\nyour clients or collaborators to ensure everyone is satisfied with ",
-        "## **Understanding the Render** **Workflow and Presets**\n\nThe deliver page is designed to help you quickly set up one or more render jobs. Before\n\nyou dive into the intricacies of individual render pa"
+        "s, with each reel being a different project.\n\n\n**To render output from multiple projects at once:**\n\n**1** Open each project, set up whatever jobs you want to render in the Render Queue, and save that",
+        "es and Render Cache,\nDaVinci Resolve will make an Archive using only the proxy media. This allows you to create a compact\nand easily transported version of your project to either move to another compu",
+        "s added to the job.\n\n**2** Once all the jobs have been completed, right-click Job 1b and choose Reveal in Finder\n\n(macOS) or Open File Location (Windows).\n\n\nThe rendered file is revealed in the Output"
       ]
     },
     {
       "id": "davinci_resolve-006",
       "question": "How do I work with audio tracks and effects in Fairlight in DaVinci Resolve?",
       "source_recall": 1.0,
-      "page_metadata_accuracy": 0.2,
+      "page_metadata_accuracy": 0.1,
       "top_k_relevance": 0.55,
       "evidence_quality": 1.0,
-      "composite_score": 0.7275,
+      "composite_score": 0.7075,
       "label": "pass",
-      "truncation_warnings": 0,
+      "truncation_warnings": 10,
       "found_source_files": [
-        "davinci-resolve-20-beginners-guide.md",
         "davinci-resolve-20-fairlight-audio-post.md",
         "davinci-resolve-20.3-reference-manual.md"
       ],
@@ -227,21 +225,21 @@
         }
       ],
       "top_snippets": [
-        "## **Getting Started**\n\nWelcome to _The Fairlight Audio Guide to DaVinci Resolve 20_, an official Blackmagic Design\ncertified training book that teaches professionals and students the art of sound des",
-        "#### **Chapter 180**\n### Audio Effects\n\nDaVinci Resolve includes Fairlight FX audio plugins and support for compatible\nthird-party VST and Audio Unit plugins for use in the Edit and Fairlight pages, w",
-        "If you’d like to work with some additional options, the Media Pool in the Fairlight page also has the\nability to filter out audio-only clips, or video clips with audio, in the currently selected bin. "
+        "### Audio Assistant (Studio Version Only)\n\nWith the Audio Assistant, DaVinci Resolve can automatically organize and color-code your tracks, even\nout your dialogue levels, and adjust the mixer faders t",
+        "dition button in the Sound Library. That clip now appears, temporarily, in the Timeline,\nand you can play through that section of the Timeline to see how you like the sound effect in\ncontext with the ",
+        " - **To rearrange the order of multiple audio effects applied to a clip:** Click the move up or move\ndown buttons in any effect’s title bar, to the left of each effect’s Trash Can button.\n\n - **To dis"
       ]
     },
     {
       "id": "davinci_resolve-007",
       "question": "What are the new features in DaVinci Resolve 21?",
       "source_recall": 1.0,
-      "page_metadata_accuracy": 0.6,
+      "page_metadata_accuracy": 0.4,
       "top_k_relevance": 0.55,
       "evidence_quality": 1.0,
-      "composite_score": 0.8075,
+      "composite_score": 0.7675,
       "label": "pass",
-      "truncation_warnings": 0,
+      "truncation_warnings": 10,
       "found_source_files": [
         "davinci-resolve-21-new-features-guide.md"
       ],
@@ -263,9 +261,9 @@
         }
       ],
       "top_snippets": [
-        "### **HDR Vivid Improvements**\n\nHDR Vivid support has received multiple improvements in DaVinci Resolve 21 including:\n\n - The HDR Vivid toolset is now available on the DaVinci Resolve Mini Panel.\n\n - ",
-        "### **Introduction**\n\nDaVinci Resolve 21 introduces a new Photo page, which enables colorists and\nphotographers to use Hollywood’s most advanced color tools for still photos.\n\nThe new Photo page lets ",
-        "### **Node Stacks Support up to Eight Layers**\n\nThe maximum number of node stack layers in DaVinci Resolve 21 has been increased from\nfour to eight.\n### **Film Look Creator adds Aurora** **Preset and "
+        "ts**\n\nHDR Vivid support has received multiple improvements in DaVinci Resolve 21 including:\n\n - The HDR Vivid toolset is now available on the DaVinci Resolve Mini Panel.\n\n - A Color timeline filter to",
+        "��������������������������������������������������� 142\n\nMotion Vector Layers Generated from Optical Flow\b��������������������������������������������������������������������������������������� 142\n\nI",
+        "New Features Guide DaVinci Resolve 21 | Cut and Edit **75**\n\n\n\n\n--- end of page=74 ---\n\n### **DRT Timeline Import Supports** **Link and Conform Options**\n\nWhen importing a DaVinci Resolve Timeline (.d"
       ]
     },
     {
@@ -277,11 +275,11 @@
       "evidence_quality": 1.0,
       "composite_score": 0.8875,
       "label": "pass",
-      "truncation_warnings": 0,
+      "truncation_warnings": 10,
       "found_source_files": [
-        "davinci-resolve-20-advanced-visual-effects.md",
         "fusion-20.3-manual.md",
         "davinci-resolve-20-fusion-visual-effects.md",
+        "davinci-resolve-20-advanced-visual-effects.md",
         "davinci-resolve-20.3-reference-manual.md"
       ],
       "total_results": 10,
@@ -302,9 +300,9 @@
         }
       ],
       "top_snippets": [
-        "## **Sending a Matte to the Color Page**\n\nAs you have experienced, the Delta Keyer is an amazing tool for green-screen shots.\n\nAnd although the Fusion page also includes extremely adept Color Correcti",
-        "**3** Select the **Fusion20DeltaKeyer.dra** file and click Open to add the archived project to\n\nthe Project Manager.\n\n**4** Open the Delta Keyer project from the Project Manager and select the edit pa",
-        "**3** Drag the 3D Keyer from the Effects Library onto the foreground video. The 3D Keyer is a fast and\nhigh-quality keyer that’s easy to use, drawing strokes to identify the background and foreground\n"
+        "sing the free version of DaVinci Resolve, skip the noise reduction\n\nsteps and continue with the next exercise, “Pulling a Key.”\n\n\n**4** Press Shift-Spacebar and type **Noise** to add a Noise Reduction",
+        "m the Fusion page\n\nto the color page.\n\n\n**Lesson 5 Compositing Green‑Screen Content** **137**\n\n\n\n\n--- end of page=157 ---\n\n##### **Answers**\n\n**1** The Delta Keyer is the primary tool for green-screen",
+        "en-screen color that has\n\nspilled onto your foreground. You inevitably must balance the quality of the spill\n\nsuppression with the generation of the matte. A way around this dilemma is to set the\n\nRep"
       ]
     },
     {
@@ -316,10 +314,10 @@
       "evidence_quality": 1.0,
       "composite_score": 0.8875,
       "label": "pass",
-      "truncation_warnings": 0,
+      "truncation_warnings": 9,
       "found_source_files": [
-        "davinci-resolve-20-advanced-visual-effects.md",
         "fusion-20.3-manual.md",
+        "davinci-resolve-20-advanced-visual-effects.md",
         "davinci-resolve-20.3-reference-manual.md"
       ],
       "total_results": 10,
@@ -340,9 +338,9 @@
         }
       ],
       "top_snippets": [
-        "###### **Export**\n\nThe Export tab lets you turn the tracked and solved data this node has generated into a form that can\nbe used for compositing.\n\nThe Camera Tracker Export tab\n\nExport\n\nThe Export but",
-        "###### **Export**\n\nThe Export tab lets you turn the tracked and solved data this node has generated into a form that can\nbe used for compositing.\n\nThe Camera Tracker Export tab\n\nExport\n\nThe Export but",
-        "## **Importing USD into Fusion**\n\nIn this exercise, we will create flying dragons around a helicopter shot of the Griffith\n\nObservatory in Los Angeles, California. We’ll start by restoring an archive "
+        "\nfriendly training lesson for students\n\nnew to Universal Scene Description\n\n(USD) and with limited knowledge\n\nof 3D workflows. If you’ve never\n\nworked with 3D before this guide or\n\ndon’t know what USD",
+        "th the stand-alone Fusion Studio software begins with opening Fusion,\ncreating a new composition, importing some clips via Loader nodes, and building out your composite\nwith effects. Just like the Fus",
+        " tracking in Fusion, _see Chapter 82, “Using the_\n_Tracker Node,”_ in the DaVinci Resolve Reference Manual or Chapter 22 in the Fusion\nReference Manual.\n\n#### **Contents**\n\n\n\n\n\n**Introduction to Track"
       ]
     },
     {
@@ -354,7 +352,7 @@
       "evidence_quality": 1.0,
       "composite_score": 0.8875,
       "label": "pass",
-      "truncation_warnings": 0,
+      "truncation_warnings": 10,
       "found_source_files": [
         "davinci-resolve-20-beginners-guide.md",
         "davinci-resolve-20-colorist-guide.md",
@@ -378,9 +376,9 @@
         }
       ],
       "top_snippets": [
-        "# Making Secondary Adjustments\n\nPrimary adjustments work on the\n\nentire image, whereas secondary\n\nadjustments let you isolate and work\n\non specific parts of an image.\n\nFor example, you might want to\n\n",
-        "#### **Chapter 138**\n### Secondary Windows\n\nSecondary correction describes isolating a specific part of the image, or a specific\nsubject, using a key.\n\nKeys in DaVinci Resolve are grayscale images tha",
-        "**5** Create a second node and label it **Sunlight** .\n\n**6** In the central palettes toolbar, click the Window palette button. You’ll use a Power\n\nWindow to specify the region of the image you will g"
+        "be encompassed within a clearly defined geometrical area. For example, the oval of a person’s\nface, the front of a car, or a wide expanse of sky are all good candidates for windowed adjustments.\nA dra",
+        "hannel.\n\n - **Invert:** Checking this box reverses the Depth Map, switching its transparent and opaque regions.\n###### **Resulting Map Adjustment**\n\nThese controls let you determine how the Depth Map’",
+        "ted\n\nhue range.\n\n**5** Drag the central point up slightly to increase the saturation of the skin, taking care to\n\nkeep the colors natural.\n\n\nIn the vectorscope, ensure that the section of the trace yo"
       ]
     },
     {
@@ -392,8 +390,9 @@
       "evidence_quality": 1.0,
       "composite_score": 0.8875,
       "label": "pass",
-      "truncation_warnings": 0,
+      "truncation_warnings": 10,
       "found_source_files": [
+        "davinci-resolve-21-new-features-guide.md",
         "davinci-resolve-20-colorist-guide.md",
         "davinci-resolve-20.3-reference-manual.md"
       ],
@@ -415,9 +414,9 @@
         }
       ],
       "top_snippets": [
-        "###### **Color Space Aware Grading Tools**\n\nIn DaVinci Resolve version 17, both Resolve Color Management and ACES enables “color space aware”\npalettes, such as the new HDR palette, to have controls th",
-        "#### **Color Management**\n\nThe various options found in the Color Management panel let you configure DaVinci Color\nManagement (RCM) or ACES if you have either enabled, and they also allow you to pre- ",
-        "###### **Setting Up ACES in the Project Settings Window**\n\nThere are four parameters available in the Color Science drop-down of the Color Management panel\nof the Project Settings that let you set up "
+        "ess algorithm is specified\nin a look transform within the AMF, it will set the “Apply ACES reference gamut compress”\ncheckbox to checked. The user can see what input, gamut compress, look and output\nt",
+        "ts**\n\nHDR Vivid support has received multiple improvements in DaVinci Resolve 21 including:\n\n - The HDR Vivid toolset is now available on the DaVinci Resolve Mini Panel.\n\n - A Color timeline filter to",
+        "agement tab.\n\n**2** Set the Color Science to ACEScc.\n\n\n**3** Leave ACES version set to the latest, ACES 2.0.\n\n**4** DaVinci Resolve supports ACES AMF 2.0 sidecar files that define a clip’s input and\n\n"
       ]
     },
     {
@@ -429,10 +428,9 @@
       "evidence_quality": 1.0,
       "composite_score": 0.7125,
       "label": "pass",
-      "truncation_warnings": 1,
+      "truncation_warnings": 10,
       "found_source_files": [
         "davinci-resolve-20-editors-guide.md",
-        "davinci-resolve-20-colorist-guide.md",
         "davinci-resolve-20.3-reference-manual.md"
       ],
       "total_results": 10,
@@ -453,9 +451,9 @@
         }
       ],
       "top_snippets": [
-        "#### **The Cut Page**\n\nThe Cut page is a focused environment for fast editing. It’s useful in situations where you need\nto quickly cut a news segment, build an episode of web content, edit a straightf",
-        "#### **Chapter 26**\n### Using the Cut Page\n\nThe Cut page is a focused environment for fast editing. It’s useful in situations where you need\nto quickly cut a news segment, build an episode of web cont",
-        "#### **Overview of the Cut Page**\n\nWith the addition of the Cut page, DaVinci Resolve now has two editing environments, intended for\ntwo different audiences. While the Cut and Edit pages share many of"
+        "controls lets you move through a long clip more\nslowly. The full width of the jog bar represents the full duration of the clip in the Viewer. The current\nposition of the playhead is shown in the timec",
+        "red as a single media file, with no\naccompanying EDL with which to split it up, you can use DaVinci Resolve’s Scene\nDetect window to automatically find the cut points and split it into individual clip",
+        "\nrecording space attached to each camera to record the show in its entirety. Refer to your ATEM’s\nspecific documentation for how to set up ISO recording and camera control, but one important setting\ni"
       ]
     },
     {
@@ -467,7 +465,7 @@
       "evidence_quality": 1.0,
       "composite_score": 0.8875,
       "label": "pass",
-      "truncation_warnings": 0,
+      "truncation_warnings": 10,
       "found_source_files": [
         "davinci-resolve-20-editors-guide.md",
         "davinci-resolve-20.3-reference-manual.md"
@@ -490,9 +488,9 @@
         }
       ],
       "top_snippets": [
-        "#### **Chapter 42**\n### Multicam Editing\n\nIf you’re working with media that was shot simultaneously using multiple cameras,\nthen you can use the Multicam Editing tools in DaVinci Resolve to create mul",
-        "#### Multicam SmartSwitch (Studio Version Only)\n\nDaVinci Resolve 20 has a new AI-powered multicam tool called Multicam SmartSwitch, which will\nanalyze all multicam camera angles and automatically cut ",
-        "#### **Introduction to Multicam Editing**\n\nIf you’re working on a program where a performance, interview, or event was recorded using multiple\nsimultaneous cameras, DaVinci Resolve has multi-camera ed"
+        " editing, simply stop playback. If you want to start trimming the\nTimeline to fine-tune what you’ve done, choose Source from the Source Viewer mode drop-down,\nand you can re-edit and trim the multicam",
+        "ip option.\n\n**2** In the bin list, right-click the ANGLES bin and choose Create New Multicam Clip Using\n\nSelected Bin.\n\n\nThe New Multicam Clip window opens, which you will use to tell Resolve how you ",
+        " new AI-powered multicam tool called Multicam SmartSwitch, which will\nanalyze all multicam camera angles and automatically cut to the most appropriate angle, based on\nwho is the active speaker. Multic"
       ]
     },
     {
@@ -504,7 +502,7 @@
       "evidence_quality": 1.0,
       "composite_score": 0.8875,
       "label": "pass",
-      "truncation_warnings": 0,
+      "truncation_warnings": 10,
       "found_source_files": [
         "davinci-resolve-20-fairlight-audio-post.md",
         "davinci-resolve-20.3-reference-manual.md"
@@ -527,9 +525,9 @@
         }
       ],
       "top_snippets": [
-        "**6** Continue playback. At the bottom of the Space View window, check the Show\n\nBeds option.\n\nYou can see colored spheres for all the tracks and where the corresponding sound has\n\nbeen panned within ",
-        "importing, remember to open the bin in the media pool where you want the imported\n\ntimeline and rendered files to be located. You can use the Imported Master File bin.\n\n**2** Play the timeline and loo",
-        "DaVinci Resolve Studio offers fully integrated support for ground-up creation of immersive\n\naudio projects in a variety of formats, including MPEG-H, Auro 3D, Sony 360 RA,\n\nAmbisonics, and Dolby Atmos"
+        "nels (the “.4” in 7.1.4) are not\n\npart of the bed; instead, they come from audio objects, which can be placed anywhere in\n\n3D space using object-based panning.\n\n\nThe first step to converting a standar",
+        "age **3896**\n\n\n\n\n--- end of page=3895 ---\n\nSpherical View\n\nClicking the Spherical button at the top of the 2D Panner changes the interface to Spherical view,\nwhich has the controls listed below includ",
+        "e B-Chain Control dialog.\n\n**2** Click the Option menu in this window and choose Setup I/O Names. The I/O setup window\nappears, showing every single audio input and output on every audio interface tha"
       ]
     },
     {
@@ -541,7 +539,7 @@
       "evidence_quality": 1.0,
       "composite_score": 0.8875,
       "label": "pass",
-      "truncation_warnings": 1,
+      "truncation_warnings": 10,
       "found_source_files": [
         "davinci-resolve-20-beginners-guide.md",
         "davinci-resolve-21-new-features-guide.md",
@@ -566,9 +564,9 @@
         }
       ],
       "top_snippets": [
-        "**Adding Offline Reference Movies** \b������������������������������������������������������������������������������������������������������������������������������������������������ 391\n\n**Extracting ",
-        "### **Automatic Smart Bin and** **Clip Filter for Offline Clips**\n\nYou can now set up a Smart Bin or Clip Filter (for the Color Page) to automatically gather all offline\nclips. This gives you a one bi",
-        "and Fairlight Pages (p.387)\n    - Removing Media From the Media Pool (p.387)\n    - Removing Unused Media from a Project (p.388)\n    - Adding and Removing External Mattes (p.389)\n      - What Are Matte"
+        "����������������������������������������������������������������������������������������������� 391\n\n\n\n\n\nIngest and Organize Media | Chapter 18 Adding and Organizing Media with the Media Pool **375**\n",
+        " any clip from the Scene 3 smart bin and, in the Metadata\n\npanel, click the Sort menu and choose All Groups. Then click the Options menu (…) and\n\nchoose the My Favorite Metadata preset.\n\n\nTIP Your pre",
+        " A to Z.\n\n - **Descending:** Orders the Media Pool from highest numerical value to lowest,\nand alphabetically from Z to A.\n\n\nIngest and Organize Media | Chapter 18 Adding and Organizing Media with the"
       ]
     },
     {
@@ -580,9 +578,9 @@
       "evidence_quality": 1.0,
       "composite_score": 0.7125,
       "label": "pass",
-      "truncation_warnings": 0,
+      "truncation_warnings": 10,
       "found_source_files": [
-        "fusion-20.3-manual.md",
+        "davinci-resolve-20-beginners-guide.md",
         "davinci-resolve-20.3-reference-manual.md"
       ],
       "total_results": 10,
@@ -603,9 +601,9 @@
         }
       ],
       "top_snippets": [
-        "#### **Audio Compound Clips**\n\nDaVinci Resolve supports audio compound clips, which are created just like any other compound\nclip, by selecting multiple audio clips, right-clicking one of them, and ch",
-        "###### **The Toolbox**\n\nAll of the video and audio transitions, titles, and generators that ship along with DaVinci Resolve\nappear in the Toolbox category of the Effects Library.\n\n**Toolbox:** Exposes",
-        "#### **Working With Transitions**\n\nTransitions provide another way of bridging the change from one clip to another, and are often used\nto indicate a change in time or location when changing scenes. Da"
+        "in the Fusion page to customize your transition.\n\n\nThe node tree you start with after converting a transition to a Fusion cross dissolve\n\n\n\n\n\nEditing Effects and Transitions | Chapter 48 Using Transit",
+        "48**\n### Using Transitions\n\nTransitions are the connective tissue binding together moments requiring a more\nsignificant way of changing from one image to the next than a simple cut.\n\n\nThis chapter sho",
+        "ntextual menu:** Select one or more edit\npoints (one per track), then right-click a video transition in the Effects Library and choose Add to\nSelected Edit Points and Clips. That transition will be ad"
       ]
     },
     {
@@ -617,13 +615,12 @@
       "evidence_quality": 1.0,
       "composite_score": 0.8875,
       "label": "pass",
-      "truncation_warnings": 0,
+      "truncation_warnings": 10,
       "found_source_files": [
-        "davinci-resolve-20-advanced-visual-effects.md",
-        "davinci-resolve-20-fusion-visual-effects.md",
-        "davinci-resolve-20.3-reference-manual.md",
+        "fusion-20.3-manual.md",
         "davinci-resolve-20-beginners-guide.md",
-        "fusion-20.3-manual.md"
+        "davinci-resolve-20-fusion-visual-effects.md",
+        "davinci-resolve-20.3-reference-manual.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -643,9 +640,9 @@
         }
       ],
       "top_snippets": [
-        "# Addendum: Creating Title Animations\n\nThe next two lessons are not part\n\nof the End User certification exam.\n\nHowever, they do provide valuable\n\ninsight into the motion graphics\n\ncapabilities of Fusi",
-        "**2** Navigate to the R20 Fusion Training Media folder you downloaded at the start of this\n\nbook and restore the **DR20 Fusion Animation.dra** project. Open the project and,\n\nfrom the Timelines bin, l",
-        "FBX Exporter\n\nYou can export a 3D scene from Fusion to other 3D packages using the FBX Exporter node. On\nrender, it saves geometry, cameras lights, and animation into different file formats such as .d"
+        "hics artists looking\nto create titles and graphics from Fusion. It’s a powerful node filled with enough controls to create\nnearly any text effect you might need, all in three dimensions. This section ",
+        "m the Fusion page\n\nto the color page.\n\n\n**Lesson 5 Compositing Green‑Screen Content** **137**\n\n\n\n\n--- end of page=157 ---\n\n##### **Answers**\n\n**1** The Delta Keyer is the primary tool for green-screen",
+        "ng (Node Editor and viewers):\n\n\nHold the left and middle mouse buttons and drag left/right or use Command\nscroll wheel (Ctrl-scroll wheel on Windows).\n\n\n**3** Fit image to viewer:\n\n\nClick a viewer and"
       ]
     },
     {
@@ -657,16 +654,13 @@
       "evidence_quality": 1.0,
       "composite_score": 0.8875,
       "label": "pass",
-      "truncation_warnings": 0,
+      "truncation_warnings": 10,
       "found_source_files": [
-        "davinci-resolve-20-advanced-visual-effects.md",
-        "davinci-resolve-20-fairlight-audio-post.md",
         "davinci-resolve-20-editors-guide.md",
-        "davinci-resolve-20-fusion-visual-effects.md",
-        "davinci-resolve-21-new-features-guide.md",
         "davinci-resolve-20-colorist-guide.md",
+        "davinci-resolve-20-fusion-visual-effects.md",
         "davinci-resolve-20.3-reference-manual.md",
-        "davinci-resolve-20-beginners-guide.md"
+        "davinci-resolve-20-advanced-visual-effects.md"
       ],
       "total_results": 10,
       "real_world_sources": [
@@ -686,9 +680,9 @@
         }
       ],
       "top_snippets": [
-        "## **Introducing Blackmagic Cloud**\n\nDaVinci Resolve is the world’s only complete post-production solution that lets everyone\n\nwork together on the same project at the same time. Traditionally, post-p",
-        "## **Introducing Blackmagic Cloud**\n\nDaVinci Resolve is the world’s only complete post-production solution that lets everyone\n\nwork together on the same project at the same time. Traditionally, post-p",
-        "## **Introducing Blackmagic Cloud**\n\nDaVinci Resolve is the world’s only complete post-production solution that lets everyone\n\nwork together on the same project at the same time. Traditionally, post-p"
+        " to the cloud.\n\n\nEnabling Multiple User Collaboration for your project means that everyone can work on\n\nthe same project at the same time—edit assistants, editors, colorists, dialogue editors,\n\nand vi",
+        "folder.\nThey immediately become available to Users B and C without relinking.\n\n - Audio Engineer C imports their music tracks to the Media Pool from the Episode 12/Audio folder.\nThey immediately becom",
+        " then drag the .resolvedbkey file and drop it anywhere within the Project Manager.\nThe shared project library should now appear in the Project Libraries sidebar, and if you select it,\nyou’ll see all o"
       ]
     },
     {
@@ -700,10 +694,9 @@
       "evidence_quality": 1.0,
       "composite_score": 0.8875,
       "label": "pass",
-      "truncation_warnings": 0,
+      "truncation_warnings": 10,
       "found_source_files": [
         "davinci-resolve-20-editors-guide.md",
-        "davinci-resolve-20-colorist-guide.md",
         "davinci-resolve-20.3-reference-manual.md"
       ],
       "total_results": 10,
@@ -724,9 +717,9 @@
         }
       ],
       "top_snippets": [
-        "## **Optimizing Performance** **with Render Cache**\n\nAlmost anyone who has worked with raw footage or done graphic-intensive work on a\n\ncomputer will be familiar with the frustration of experiencing l",
-        "**About Real-Time Performance and the Render Cache**\n\nDaVinci Resolve is high-performance software that is optimized to deliver real-time\n\neffects at high resolutions on a variety of workstations. To ",
-        "#### **Performance Mode Improves** **Overall Performance**\n\nPerformance Mode, which is found in the Playback Settings of the User Preferences, analyzes your\ncomputer’s configuration, the CPU, GPU, con"
+        "��������������������������������������������������������������������������������������������������������������������� 216\n\nManaging Proxy Media\b��������������������������������������������������������",
+        "### **Using Optimized Media,** **Proxy Media, and Caching Together**\n\nHow you use DaVinci Resolve’s various performance-enhancing features together is entirely up to you,\nbut you should know that they",
+        "ition of the playhead.\n\n - **Loop Jog Width:** A field lets you choose how many milliseconds of audio to loop when Loop Jog\nis enabled. How many milliseconds of audio corresponds to one frame depends "
       ]
     },
     {
@@ -738,9 +731,8 @@
       "evidence_quality": 1.0,
       "composite_score": 0.7125,
       "label": "pass",
-      "truncation_warnings": 0,
+      "truncation_warnings": 10,
       "found_source_files": [
-        "davinci-resolve-20-colorist-guide.md",
         "davinci-resolve-20.3-reference-manual.md"
       ],
       "total_results": 10,
@@ -761,9 +753,9 @@
         }
       ],
       "top_snippets": [
-        "#### **More About Conforming XML Files**\n\nDaVinci Resolve can import projects that were exported to the Final Cut Pro 7 or Final Cut Pro X XML\nformats. Adobe’s Premiere Pro and Autodesk Smoke and Flam",
-        "**To export an AAF or XML file after you’ve rendered the graded clips:**\n\nDo one of the following:\n\n**1** To export the current Timeline, choose File > Export AAF, XML, or press Shift-Command-O.\n\n   -",
-        "###### **About Imported Text Effects**\n\nDaVinci Resolve supports the import of text generators when importing XML project files from both\nFinal Cut Pro X and Final Cut Pro 7. All imported text effects"
+        "inishing**\n\nOnce you’re finished with your final grade, you’ll again use the controls of the Deliver page to render\nthe program’s final media, either as individual clips for a round-trip workflow, or ",
+        "eel name ‘XXXX’ and filename ‘XXXX.’\n\n - File not found in search directories.\n\n\nAs of the time of this writing, this feature is only available when importing AAF files.\n#### **Simple AAF Import**\n\nTh",
+        "he media, with path names that reflect the rendered clips.\n\n###### **Premiere XML**\n\nSelects the appropriate settings for projects that were sent from Premiere Pro to DaVinci Resolve\nusing XML. This i"
       ]
     }
   ],
@@ -773,9 +765,9 @@
     "pass_count": 20,
     "weak_count": 0,
     "fail_count": 0,
-    "avg_composite": 0.8183,
+    "avg_composite": 0.8063,
     "avg_source_recall": 0.925,
-    "avg_page_metadata_accuracy": 0.785,
+    "avg_page_metadata_accuracy": 0.725,
     "avg_top_k_relevance": 0.55,
     "avg_evidence_quality": 1.0
   }

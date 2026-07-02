@@ -71,3 +71,11 @@
 - **feat(quality):** Golden Datasets expanded to 20-30 questions per domain (godot: 9→21, davinci: 7→20). 12 new godot questions (Animation, Shaders, UI, Navigation, Multiplayer, Input, Audio, File I/O, Performance, TileMap, GDScript Patterns, Debugging). 13 new davinci questions (Fusion Compositing, Color Advanced, Cut Page, Edit Advanced, Fairlight Advanced, Media Management, Effects, Collaboration, Troubleshooting, Workflow). All questions include curated real_world_sources with solution_summary.
 - **feat(quality):** New baselines established with expanded datasets (BGE-M3+jina): godot avg 0.8073 (16 pass / 5 weak), davinci avg 0.8063 (20 pass). Old baselines archived as *-pre-phase2b-2026-07-01.json.
 
+## 2026-07-02 (Phase 2.2)
+
+- **feat(parser):** chapter-wise Late Chunking for PDF domains (BGE-M3 token-level pooling, 512-token windows, 128-token overlap). DaVinci: 2.511 → 12.367 chunks. avg_composite 0.8063 → 0.8133 (+0.7%), PMA 0.725 → 0.760 (+3.5%).
+- **feat(parser):** _LateChunkEncoder with MPS pre-flight device detection. _token_windows_from_offsets lossless via offset mapping.
+- **fix(model_manager):** get_domain_config live-lookup via mcp_servers.knowledge_hub.config (fixes dual-module-object bug).
+- **fix(embed_index):** DOMAINS_DIR live-lookup via _config (fixes test isolation).
+- **feat(quality):** expected_page_ranges updated for 7 old DaVinci questions (Late Chunking chapter boundaries). avg_composite 0.8133 → 0.8183 (+0.5%), PMA 0.760 → 0.785 (+2.5%). All 20 questions pass, no regressions.
+

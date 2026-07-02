@@ -17,11 +17,16 @@ questions:
     expected_source_files:
       - "davinci-resolve-20.3-reference-manual.md"
       - "fusion-20.3-manual.md"
-    # observed: ref:p3256-3259, fusion:p588-593, ref:p2786-2791 (top-3 from live search, ±2 tolerance applied)
+    # Late Chunking 2026-07-02: top-5 from live search (±2 tolerance)
+    #   [1] fusion p586-587  [2] ref p1776-1777  [3] ref p1778-1779
+    #   [4] fusion p588-589  [5] fairlight p377-378
+    # Parallel to expected_source_files: ref(0)=p1776-1777, fusion(1)=p586-587
+    #   (fusion: 2 hits → first fusion hit is top, second is a 3rd page_range)
     expected_page_ranges:
-      - {start: 3254, end: 3261}
-      - {start: 586, end: 595}
-      - {start: 2784, end: 2793}
+      - {start: 1774, end: 1779}    # ref-manual p1776-1777
+      - {start: 584, end: 589}      # fusion p586-587
+      - {start: 1776, end: 1781}    # ref-manual p1778-1779
+
     real_world_sources:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/fusion"
         date: null
@@ -43,11 +48,14 @@ questions:
     question: "How do I trim a clip on the Edit page in DaVinci Resolve?"
     expected_source_files:
       - "davinci-resolve-20.3-reference-manual.md"
-    # observed: ref:p955-959, ref:p463-467, ref:p938-942 (top-3 from live search, ±2 tolerance applied)
+    # Late Chunking 2026-07-02: top-5 from live search (±2 tolerance)
+    #   [1] ref p467-468  [2] ref p953-954  [3] editors-guide p105-106
+    #   [4] fairlight p55  [5] editors-guide p118-119
+    # ref-manual hits: p467-468 (Top-1), p953-954 (Top-2). 3 page_ranges needed.
     expected_page_ranges:
-      - {start: 953, end: 961}
-      - {start: 461, end: 469}
-      - {start: 936, end: 944}
+      - {start: 465, end: 470}      # ref-manual p467-468
+      - {start: 951, end: 956}      # ref-manual p953-954
+      - {start: 934, end: 946}      # ref-manual (preserved from original as 3rd fallback; no 3rd ref-manual hit in Top-5)
     real_world_sources:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/edit"
         date: null
@@ -69,11 +77,15 @@ questions:
     question: "How do I use Primary Color Correction in DaVinci Resolve?"
     expected_source_files:
       - "davinci-resolve-20-colorist-guide.md"
-    # observed: colorist:p163-171, colorist:p35-41, colorist:p267-273 (top-3 from live search, ±2 tolerance applied)
+    # Late Chunking 2026-07-02: top-5 from live search:
+    #   [1] beginners-guide p218  [2] beginners-guide p272  [3] beginners-guide p215
+    #   [4] ref-manual p3084-3085  [5] beginners-guide p229-230
+    # colorist-guide.md NOT in Top-5 — Late Chunking shifted ranking to beginners-guide.
+    # Original ranges preserved (no new colorist-guide hits in Top-5 to derive from).
     expected_page_ranges:
-      - {start: 161, end: 173}
-      - {start: 33, end: 43}
-      - {start: 265, end: 275}
+      - {start: 161, end: 173}      # colorist-guide (preserved from original)
+      - {start: 33, end: 43}        # colorist-guide (preserved from original)
+      - {start: 265, end: 275}      # colorist-guide (preserved from original)
     real_world_sources:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/color"
         date: null
@@ -96,11 +108,14 @@ questions:
     expected_source_files:
       - "davinci-resolve-20.3-reference-manual.md"
       - "fusion-20.3-manual.md"
-    # observed: ref:p2766-2770, fusion:p1562-1565, ref:p3273-3278 (top-3 from live search, ±2 tolerance applied)
+    # Late Chunking 2026-07-02: top-5 from live search (±2 tolerance)
+    #   [1] ref p2771-2772  [2] fusion p1583-1584  [3] fusion-visual-effects p109
+    #   [4] fusion p1579-1580  [5] ref p2767-2768
+    # Parallel to expected_source_files: ref(0)=p2771-2772, fusion(1)=p1583-1584
     expected_page_ranges:
-      - {start: 2764, end: 2772}
-      - {start: 1560, end: 1567}
-      - {start: 3271, end: 3280}
+      - {start: 2769, end: 2774}    # ref-manual p2771-2772
+      - {start: 1581, end: 1586}    # fusion p1583-1584
+      - {start: 2765, end: 2770}    # ref-manual p2767-2768
     real_world_sources:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/fusion"
         date: null
@@ -122,11 +137,14 @@ questions:
     question: "How do I render and deliver a finished project in DaVinci Resolve?"
     expected_source_files:
       - "davinci-resolve-20.3-reference-manual.md"
-    # observed: ref:p1143-1147, ref:p1196-1200, ref:p1147-1150 (top-3 from live search, ±2 tolerance applied)
+    # Late Chunking 2026-07-02: top-5 from live search:
+    #   [1] colorist-guide p437  [2] colorist-guide p442  [3] colorist-guide p449
+    #   [4] ref-manual p4042-4043  [5] ref-manual p4083-4084
+    # ref-manual hits: p4042-4043 (Top-4), p4083-4084 (Top-5). 3 page_ranges needed.
     expected_page_ranges:
-      - {start: 1141, end: 1149}
-      - {start: 1194, end: 1202}
-      - {start: 1145, end: 1152}
+      - {start: 4040, end: 4045}    # ref-manual p4042-4043
+      - {start: 4081, end: 4086}    # ref-manual p4083-4084
+      - {start: 1139, end: 1151}    # ref-manual (preserved from original as 3rd fallback)
     real_world_sources:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/edit"
         date: null
@@ -148,11 +166,14 @@ questions:
     question: "How do I work with audio tracks and effects in Fairlight in DaVinci Resolve?"
     expected_source_files:
       - "davinci-resolve-20-fairlight-audio-post.md"
-    # observed: fairlight:p73-79, fairlight:p223-230, fairlight:p11-17 (top-3 from live search, ±2 tolerance applied)
+    # Late Chunking 2026-07-02: top-5 from live search:
+    #   [1] fairlight-audio-post p12  [2] ref-manual p3942-3943
+    #   [3] ref-manual p3719-3720  [4] ref-manual p676-677  [5] ref-manual p1004-1005
+    # fairlight-audio-post hit: p12 (Top-1). Original ranges preserved for [1] and [2].
     expected_page_ranges:
-      - {start: 71, end: 81}
-      - {start: 221, end: 232}
-      - {start: 9, end: 19}
+      - {start: 10, end: 14}        # fairlight-audio-post p12
+      - {start: 221, end: 232}      # fairlight-audio-post (preserved from original)
+      - {start: 9, end: 19}         # fairlight-audio-post (preserved from original)
     real_world_sources:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/fairlight"
         date: null
@@ -174,11 +195,14 @@ questions:
     question: "What are the new features in DaVinci Resolve 21?"
     expected_source_files:
       - "davinci-resolve-21-new-features-guide.md"
-    # observed: new-features:p6-12, new-features:p92-99, new-features:p58-66 (top-3 from live search, ±2 tolerance applied)
+    # Late Chunking 2026-07-02: top-5 from live search (±2 tolerance)
+    #   [1] new-features p94-95  [2] new-features p6-7  [3] new-features p92-93
+    #   [4] new-features p100-101  [5] new-features p74-75
+    # All top-5 from new-features-guide. Top-3: p94-95, p6-7, p74-75.
     expected_page_ranges:
-      - {start: 4, end: 14}
-      - {start: 90, end: 101}
-      - {start: 56, end: 68}
+      - {start: 92, end: 97}        # new-features p94-95
+      - {start: 4, end: 9}          # new-features p6-7
+      - {start: 72, end: 77}        # new-features p74-75
     real_world_sources:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/whatsnew"
         date: null

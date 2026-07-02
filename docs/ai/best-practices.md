@@ -22,6 +22,32 @@
 - Fehler via Exceptions, nicht via Print+Exit
 - `if __name__ == "__main__":` Guard
 
+## Late Chunking (Phase 2.2, PDF-Domains)
+
+Für PDF-basierte Domains (z.B. DaVinci Resolve) wird seit Phase 2.2 chapter-weises
+Late Chunking verwendet. Statt jeden Chunk einzeln zu embedden, wird der gesamte
+Chapter als ein langer Token-Stream an das BGE-M3-Modell gefüttert (long-context
+8192 Token) und das Modell erzeugt kontext-sensitive Token-Embeddings. Anschließend
+werden 512-Token-Fenster mit 128-Token-Overlap über die Token-Embeddings gelegt
+und pro Fenster gemittelt (mean pooling).
+
+Konventionen:
+
+- **`_LateChunkEncoder` MPS-Pre-Flight-Pattern:** Vor dem Encoding-Loop ein
+  Warmup-Token-Batch laufen lassen, um die tatsächliche Compute-Device (CPU,
+  CUDA, MPS) zu erkennen. Bei MPS-OOM einmal pro Session auf CPU zurückfallen
+  (nicht pro Chunk). Verhindert wiederholte Crashes auf Apple Silicon.
+- **`precomputed_embeddings` als separates Dict:** Die BGE-M3-Token-Embeddings
+  werden in einem separaten Dict `{chunk_id: np.ndarray}` durch die Pipeline
+  gereicht, nicht als Chunk-Attribut gespeichert. Das hält die Chunk-Daten klein
+  (Token-Embeddings sind 1024-dim Vektoren pro Token) und ermöglicht das
+  Window-Mean-Pooling außerhalb der Embedding-Funktion.
+- **`_token_windows_from_offsets` lossless via offset mapping:** Die
+  Original-zu-Token-Offsets werden mitgeführt, damit Window-Mean-Pooling
+  verlustfrei auf den exakten Token-Regionen operieren kann. Niemals auf
+  String-Substring-Operationen zurückfallen (würde mit BGE-M3-Tokenizer
+  divergieren).
+
 ## Markdown-Dokumentation
 
 - `##`-Header für Sektionen, `###` für Sub-Sektionen

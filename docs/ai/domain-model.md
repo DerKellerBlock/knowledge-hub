@@ -59,8 +59,11 @@ erwarten lässt (siehe `scripts/quality/run_evaluation.py`).
 | Repo-Wissen | `"repo"` | (domain-spezifisch) | `sources/*.md` | Komplett neu bei jedem Update |
 | Persönliches Wissen (Sektion) | `"personal"` | `"personal_section"` | `personal/*.md` | Kumulativ (wächst) |
 | Persönliches Wissen (Preamble) | `"personal"` | `None` | `personal/*.md` | Kumulativ (wächst) |
+| Late Chunk (PDF) | `"repo"` | `"late_chunk"` | `sources/*.md` (PDF) | Komplett neu |
 
 Personal Notes mit `##`-Headern werden via `markdown_section_chunk()` in semantisch unabhängige Sektions-Chunks zerlegt (`chunk_type="personal_section"`, `name=Sektionsüberschrift`, `source_file`, `line_start`/`line_end`, `page_start`/`page_end=None`). Preamble-Chunks (Inhalt vor dem ersten `##`-Header) haben `chunk_type=None`, `name=None`. Dateien ohne `##`-Header oder mit ausschließlich <50-Zeichen-Sektionen fallen auf `fallback_chunk()` zurück (1 Chunk pro Datei).
+
+Late Chunks (Phase 2.2) stammen aus PDF-Quellen (DaVinci) und werden via `_LateChunkEncoder` chapter-weise erzeugt. Jeder Chunk trägt `chunk_type="late_chunk"`, `name=<Chapter-Titel>`, `source_file`, `page_start`/`page_end` (Chapter-Grenzen ±2 Toleranz), `line_start=0`/`line_end=0` (PDF-Chapter haben keine Zeilennummern — siehe LIM-010).
 
 ## Indizes pro Domain
 

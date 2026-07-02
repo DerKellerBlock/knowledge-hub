@@ -32,8 +32,9 @@
 
 2. **Indexierung:**
    - `scripts/embed_index.py --domain godot`
-    - **Repo-Quellen:** `fallback_chunk()` (2000 Tokens / 8000 Zeichen, 400 Tokens Overlap / 1600 Zeichen, erhöht von 200 Tokens/800 Zeichen in Phase 1) → Embedding (MPNet, 768 dims) → ChromaDB Collection `<name>_knowledge`
+    - **Repo-Quellen (Godot/Repo-Domains):** `fallback_chunk()` (2000 Tokens / 8000 Zeichen, 400 Tokens Overlap / 1600 Zeichen, erhöht von 200 Tokens/800 Zeichen in Phase 1) → Embedding (MPNet, 768 dims) → ChromaDB Collection `<name>_knowledge`
    - **Personal Notes:** `markdown_section_chunk()` (Splittet an `##`-Headern in per-section Chunks, defensive Skip bei <50 Zeichen, Fallback auf `fallback_chunk()` bei Dateien ohne `##`-Header) → Embedding → ChromaDB
+   - **PDF-Repo-Quellen (Phase 2.2, DaVinci):** Chapter-wise **Late Chunking** via `_LateChunkEncoder`: pro PDF-Chapter ein langer BGE-M3-Token-Stream → 512-Token-Fenster mit 128-Token-Overlap → Mean-Pooling pro Fenster. Chunks tragen `chunk_type="late_chunk"`, `page_start`/`page_end` aus Chapter-Grenzen. `precomputed_embeddings` werden als separates Dict (nicht Chunk-Attribut) durch die Pipeline gereicht, um BGE-M3-Long-Context (8192 Token) voll auszunutzen. DaVinci: 2.511 → 12.367 Chunks.
    - Collection wird komplett neu gebaut (kein inkrementelles Update)
 
 3. **Suche (zweistufig):**
