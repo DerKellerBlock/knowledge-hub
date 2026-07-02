@@ -1,6 +1,6 @@
 {
   "domain": "godot",
-  "date": "2026-07-02",
+  "date": "2026-07-01",
   "evaluations": [
     {
       "id": "godot-001",
@@ -426,15 +426,14 @@
     {
       "id": "godot-011",
       "question": "How do I create a responsive UI in Godot 4 that automatically scales and repositions elements for different screen sizes and aspect ratios using containers and anchors?",
-      "source_recall": 1.0,
+      "source_recall": 0.5,
       "page_metadata_accuracy": null,
       "top_k_relevance": 0.55,
       "evidence_quality": 1.0,
-      "composite_score": 0.8594,
-      "label": "pass",
+      "composite_score": 0.6406,
+      "label": "weak",
       "truncation_warnings": 6,
       "found_source_files": [
-        "best-practices.md",
         "godot-docs-3d-packed.md",
         "godot-demos-packed.md",
         "godot-docs-reference-packed.md"
@@ -720,15 +719,14 @@
     {
       "id": "godot-019",
       "question": "How do I create a custom Resource type in GDScript to store item data like name, icon texture, and stats? I want to create individual item instances in the editor.",
-      "source_recall": 1.0,
+      "source_recall": 0.5,
       "page_metadata_accuracy": null,
       "top_k_relevance": 0.55,
       "evidence_quality": 1.0,
-      "composite_score": 0.8594,
-      "label": "pass",
+      "composite_score": 0.6406,
+      "label": "weak",
       "truncation_warnings": 0,
       "found_source_files": [
-        "best-practices.md",
         "godot-docs-reference-packed.md"
       ],
       "total_results": 10,
@@ -795,11 +793,11 @@
   "summary": {
     "domain": "godot",
     "total_questions": 21,
-    "pass_count": 18,
-    "weak_count": 3,
+    "pass_count": 16,
+    "weak_count": 5,
     "fail_count": 0,
-    "avg_composite": 0.8281,
-    "avg_source_recall": 0.9286,
+    "avg_composite": 0.8073,
+    "avg_source_recall": 0.881,
     "avg_page_metadata_accuracy": 0.0,
     "avg_top_k_relevance": 0.55,
     "avg_evidence_quality": 1.0

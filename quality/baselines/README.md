@@ -62,7 +62,8 @@ explicitly, so CI always compares against the jina baselines.
 
 | File | Domain | Date | Reranker | Avg Composite | Questions |
 |------|--------|------|----------|---------------|----------|
-| `godot-latest.json` | godot | 2026-07-01 | jina | 0.8073 | 21 |
+| `godot-latest.json` | godot | 2026-07-02 | jina | 0.8281 | 21 |
+| `godot-pre-contentfix-2026-07-02.json` | godot | 2026-07-01 | jina | 0.8073 | 21 |
 | `davinci_resolve-latest.json` | davinci_resolve | 2026-07-02 | jina | 0.8183 | 20 |
 | `davinci_resolve-latechunk-pre-pageranges-2026-07-02.json` | davinci_resolve | 2026-07-02 | jina | 0.8133 | 20 |
 | `godot-pre-phase2b-2026-07-01.json` | godot | 2026-07-01 | jina | 0.8594 | 9 |
@@ -113,3 +114,22 @@ The DaVinci avg_composite increased (0.7304 → 0.8063) because the new
 questions land cleanly on top of the existing BM25/Embedding signals
 (typical 0.8875 for Fusion/Color/Edit/Collaboration topics, 0.7125 for
 workflow-oriented queries).
+
+## Phase 2b Follow-up — Content Fixes (2026-07-02)
+
+After Phase 2.4, 5 godot questions were weak (godot-009, -011, -012, -017, -019).
+Content measures were added to `tips.md` and `best-practices.md`:
+
+- **godot-011 (Responsive UI):** weak→pass (0.6406 → 0.8594) — `best-practices.md`
+  section on Responsive UI Containers/Anchors.
+- **godot-019 (Custom Resource):** weak→pass (0.6406 → 0.8594) — `best-practices.md`
+  section on Custom Resource with `class_name extends Resource`.
+- **godot-009 (AnimationTree):** remains weak (0.6406) — `tips.md` section on
+  AnimationTree+BlendSpace2D Locomotion not sufficient.
+- **godot-012 (NavigationAgent3D):** remains weak (0.6406) — `tips.md` section on
+  NavigationAgent3D Enemy Chase not sufficient.
+- **godot-017 (Performance):** remains weak (0.6406) — `best-practices.md` section
+  on 3D Performance LOD/Occlusion/Visibility not sufficient.
+
+Overall: avg_composite 0.8073 → 0.8281 (+0.0208), 16 pass / 5 weak → 18 pass / 3 weak.
+The old baseline is archived as `godot-pre-contentfix-2026-07-02.json`.

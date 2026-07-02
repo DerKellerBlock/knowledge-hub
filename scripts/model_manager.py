@@ -174,12 +174,19 @@ def get_embedder(domain: str) -> SentenceTransformer:
     BGE-M3 (~2.2 GB) and all-mpnet-base-v2 (~420 MB) simultaneously
     costs ~2.6 GB of RAM. An LRU-bounded ``_model_cache`` is deferred to
     Phase 2b (B4).
+
+    Device selection: ``device='cpu'`` is forced. ``BAAI/bge-m3`` ships
+    custom code via ``trust_remote_code`` which deadlocks on Apple
+    Silicon MPS with ``transformers`` 4.57.6 — ``encode()`` never returns,
+    no error, no progress. CPU is sufficient for batch embedding
+    (bs=32 short / bs=1 long via ``_encode_robust``). Fixed 2026-07-02.
     """
     cfg = get_domain_config(domain)
     model_name = os.environ.get("KH_EMBEDDING_MODEL", cfg["embedding_model"])
     key = f"embedder:{model_name}"
     if key not in _model_cache:
-        _model_cache[key] = SentenceTransformer(model_name)
+        # Force CPU: BGE-M3 + transformers 4.57.6 deadlocks on MPS.
+        _model_cache[key] = SentenceTransformer(model_name, device="cpu")
     return _model_cache[key]
 
 

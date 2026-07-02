@@ -79,3 +79,9 @@
 - **fix(embed_index):** DOMAINS_DIR live-lookup via _config (fixes test isolation).
 - **feat(quality):** expected_page_ranges updated for 7 old DaVinci questions (Late Chunking chapter boundaries). avg_composite 0.8133 → 0.8183 (+0.5%), PMA 0.760 → 0.785 (+2.5%). All 20 questions pass, no regressions.
 
+## 2026-07-02 (Phase 2b Follow-up)
+
+- **fix(model_manager):** BGE-M3 `device='cpu'` (MPS hang with transformers 4.57.6). Rebuild deterministic on CPU, ~50 Min.
+- **fix(parser):** MEDIUM-1 `_encode_chapter_with_hidden_states` wrapper (dead code cleanup) + MEDIUM-2 fixed-size fallback for >8192 token chapters without paragraph boundaries.
+- **feat(content):** 5 personal note sections added (AnimationTree+BlendSpace2D Locomotion, NavigationAgent3D Enemy Chase, 3D Performance LOD/Occlusion/Visibility, Responsive UI Containers/Anchors, Custom Resource). godot-011 + godot-019 weak→pass. avg_composite 0.8073 → 0.8281, 18 pass / 3 weak.
+

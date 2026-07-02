@@ -521,8 +521,11 @@ def _split_into_chapters(
             continue
 
         # Defensive: chapters larger than max_tokens characters get
-        # sub-split at paragraph boundaries. We do not warn at the
-        # warning level for every chapter — instead we just log the
+        # sub-split at paragraph boundaries. If a single paragraph
+        # itself exceeds max_tokens AND has no internal \n\n boundaries
+        # (e.g. a very long line of unbroken text), we fall back to
+        # fixed-size character splits with overlap. We do not warn at
+        # the warning level for every chapter — instead we just log the
         # count once at the late_chunk() entry point.
         if len(chapter_text) > max_tokens:
             sub_chunks: list[tuple[str, int, int]] = []
@@ -538,6 +541,36 @@ def _split_into_chapters(
             if sub_text.strip():
                 sub_chunks.append((sub_text, chapter_page_start, chapter_page_end))
             for sub in sub_chunks:
+                # MEDIUM-2 fix: if a single sub-chunk still exceeds
+                # max_tokens (e.g. a paragraph with no \n\n boundaries
+                # that is longer than max_tokens), split it into
+                # fixed-size character chunks with a small overlap.
+                # This is a defensive last-resort path; the resulting
+                # chunks will be re-encoded with BGE-M3's max_length
+                # truncation, but at least the indexer doesn't blow up
+                # with a 100k-character chunk.
+                if len(sub[0]) > max_tokens:
+                    chunk_size_chars = 8000
+                    overlap_chars = 200
+                    text_part = sub[0]
+                    pos = 0
+                    while pos < len(text_part):
+                        end_pos = min(pos + chunk_size_chars, len(text_part))
+                        sub_chunks.append((
+                            text_part[pos:end_pos],
+                            sub[1],
+                            sub[2],
+                        ))
+                        if end_pos >= len(text_part):
+                            break
+                        pos += chunk_size_chars - overlap_chars
+                    warnings.warn(
+                        f"Chapter exceeds {max_tokens} chars with no "
+                        f"\\n\\n boundaries; fixed-size splitting at "
+                        f"{chunk_size_chars} chars.",
+                        RuntimeWarning,
+                        stacklevel=2,
+                    )
                 if sub[0].strip():
                     chapters.append(sub)
         else:
@@ -657,10 +690,12 @@ def _encode_chapter_with_hidden_states(
 ) -> tuple["object", list[tuple[int, int]]]:
     """Encode a chapter and return token-level hidden states + offsets.
 
-    Uses ``model[0].auto_model`` (the HuggingFace transformer inside
-    SentenceTransformer's Transformer wrapper) with
-    ``output_hidden_states=True`` so the caller can pool window-level
-    embeddings from the full-chapter token states.
+    Backward-compatible wrapper around
+    ``_encode_chapter_with_hidden_states_on_device``. The device is
+    resolved from the model parameters at call time (one-shot per
+    call). Production callers should use
+    ``_LateChunkEncoder.encode_chapter`` for pre-detected-device
+    performance; this wrapper exists for legacy/test code paths.
 
     Returns:
         (token_states, offset_mapping) where:
@@ -671,59 +706,18 @@ def _encode_chapter_with_hidden_states(
             - ``offset_mapping`` is a list of ``(char_start, char_end)``
               tuples aligned with the token_states rows. Special-token
               offsets are ``(0, 0)``.
-
-    Raises:
-        RuntimeError: if ``torch.no_grad()`` is not active. This is
-            intentional — calling this function outside a
-            ``no_grad`` context silently leaks an autograd graph in
-            some PyTorch versions. (The caller in ``late_chunk`` wraps
-            the entire encode loop in ``no_grad``.)
     """
     import torch
 
-    if not torch.is_grad_enabled():
-        # This is actually FINE — the caller will have already wrapped
-        # us in no_grad. We just want to ensure we never accidentally
-        # build a graph here.
-        pass
+    # Resolve the model's device (matches the device-routing in
+    # ``_encode_chapter_with_hidden_states_on_device``). We compute it
+    # here so the legacy function signature is preserved.
+    target_device = next(model[0].auto_model.parameters()).device
+    target_device_str = str(target_device)
 
-    # SentenceTransformer's Transformer module: model[0].tokenizer,
-    # model[0].auto_model.
-    transformer = model[0]
-    tokenizer = transformer.tokenizer
-
-    enc = tokenizer(
-        chapter_text,
-        return_tensors="pt",
-        return_offsets_mapping=True,
-        truncation=True,
-        max_length=LATE_CHUNK_MAX_CHAPTER_TOKENS,
+    return _encode_chapter_with_hidden_states_on_device(
+        model, chapter_text, target_device_str
     )
-
-    # Move input tensors to the model's device (critical: BGE-M3's
-    # sparse embedding path fails with "Placeholder storage has not
-    # been allocated on MPS device!" if inputs stay on CPU while
-    # the model lives on MPS).
-    target_device = next(transformer.auto_model.parameters()).device
-    model_in = {
-        k: v.to(target_device)
-        for k, v in enc.items()
-        if k in ("input_ids", "attention_mask")
-    }
-
-    with torch.no_grad():
-        outputs = transformer.auto_model(
-            **model_in,
-            output_hidden_states=True,
-        )
-
-    # outputs.last_hidden_state shape: (1, seq_len, hidden_dim)
-    last_hidden = outputs.last_hidden_state[0]  # (seq_len, hidden_dim)
-
-    # Offset mapping: list of (char_start, char_end) per token.
-    offsets = enc["offset_mapping"][0].tolist()
-
-    return last_hidden, offsets
 
 
 class _LateChunkEncoder:
