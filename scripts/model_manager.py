@@ -37,17 +37,22 @@ logging.getLogger("chromadb.telemetry.product.posthog").addFilter(
     _ChromaTelemetryFilter()
 )
 
-# Import config (add scripts/ + mcp_servers/knowledge_hub/ to path for standalone use)
+# Import config via the fully-qualified module name so that there is
+# exactly ONE config module object in sys.modules. The previous
+# `from config import ...` style created a *second* module object
+# (sys.modules['config']) distinct from the one imported by tests
+# and the rest of the codebase via `mcp_servers.knowledge_hub.config`.
+# That made monkeypatched values (DOMAINS_DIR, CHROMA_DIR) invisible
+# to get_domain_config(), breaking integration tests for synthetic
+# domains (Phase 2.2 late-chunking tests).
 import sys as _sys
 _pkg_root = Path(__file__).resolve().parent.parent
-_mcp_config = _pkg_root / "mcp_servers" / "knowledge_hub"
 if str(_pkg_root) not in _sys.path:
     _sys.path.insert(0, str(_pkg_root))
-if str(_mcp_config) not in _sys.path:
-    _sys.path.insert(0, str(_mcp_config))
 
-from config import (
+from mcp_servers.knowledge_hub.config import (
     CHROMA_DIR,
+    DOMAINS_DIR,
     domain_chroma_path,
     domain_bm25_path,
     DEFAULT_MODEL_NAME,
@@ -85,6 +90,13 @@ DEFAULT_SOURCE_TYPES = ["repo"]
 def get_domain_config(domain: str) -> dict:
     """Read domain.md Metadaten block and return a config dict.
 
+    The ``domain.md`` path is resolved via the live ``config`` module
+    (looked up via ``sys.modules``) so tests can monkeypatch
+    ``config.DOMAINS_DIR`` and have the change take effect. The
+    previous hardcoded ``Path(__file__).resolve().parent.parent /
+    "domains" / ...`` ignored the patchable constant, breaking
+    integration tests for synthetic domains.
+
     Returns:
         {
             "embedding_model": "all-mpnet-base-v2",
@@ -95,7 +107,20 @@ def get_domain_config(domain: str) -> dict:
                 ["pdf", "repo"]; default ["repo"] when field missing),
         }
     """
-    domain_md = Path(__file__).resolve().parent.parent / "domains" / domain / "domain.md"
+    # Live lookup of config.DOMAINS_DIR so monkeypatch in tests works.
+    # Prefer the fully-qualified mcp_servers.knowledge_hub.config module
+    # (the one tests patch via conftest) over the bare 'config' alias that
+    # earlier `from config import ...` statements used to create. Falls
+    # back to the bare alias for backwards-compat with callers that may
+    # have imported the module under either name.
+    import sys as _sys
+    _config_mod = _sys.modules.get("mcp_servers.knowledge_hub.config")
+    if _config_mod is None:
+        _config_mod = _sys.modules.get("config")
+    if _config_mod is None:
+        # Last-resort: import directly (shouldn't normally happen).
+        from mcp_servers.knowledge_hub import config as _config_mod  # noqa
+    domain_md = _config_mod.DOMAINS_DIR / domain / "domain.md"
     if not domain_md.exists():
         # Fallback to defaults
         return {

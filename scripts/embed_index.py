@@ -20,20 +20,25 @@ import sys as _sys
 _pkg_root = Path(__file__).resolve().parent.parent
 if str(_pkg_root) not in _sys.path:
     _sys.path.insert(0, str(_pkg_root))
-from model_manager import get_embedder, get_chroma_client
+from model_manager import get_embedder, get_chroma_client, get_domain_config
+# Live-lookup import for path constants so monkeypatching in tests works.
+# `from X import Y` binds the value at import time; for immutable values
+# like Path, the test fixture's ``monkeypatch.setattr(cfg, "DOMAINS_DIR", ...)``
+# would not be visible here. We look up ``_config.DOMAINS_DIR`` at call time
+# (mirroring the pattern in ``model_manager.get_domain_config``).
+from mcp_servers.knowledge_hub import config as _config
 from mcp_servers.knowledge_hub.config import (
-    DOMAINS_DIR,
     domain_chroma_path,
     domain_bm25_path,
 )
-from parser_base import Chunk, DomainParser, fallback_chunk, markdown_section_chunk
+from parser_base import Chunk, DomainParser, fallback_chunk, markdown_section_chunk, late_chunk
 from bm25_search import build_bm25_index as build_bm25, get_bm25_index_size_mb
 from migration import migrate_legacy_layout
 
 
 def get_parser(domain: str) -> DomainParser | None:
     """Discover and load a domain-specific parser, if one exists."""
-    parser_path = DOMAINS_DIR / domain / "parser.py"
+    parser_path = _config.DOMAINS_DIR / domain / "parser.py"
     if not parser_path.exists():
         return None
 
@@ -125,11 +130,38 @@ def _encode_robust(model, texts: list[str]) -> "list":
     return result
 
 
-def load_domain_sources(domain: str) -> list[Chunk]:
-    """Load all source files for a domain. Returns list[Chunk]."""
-    domain_dir = DOMAINS_DIR / domain
+def load_domain_sources(
+    domain: str,
+) -> tuple[list[Chunk], dict | None]:
+    """Load all source files for a domain.
+
+    Returns:
+        ``(chunks, precomputed_embeddings)`` where ``chunks`` is the
+        full list of Chunks for the domain and ``precomputed_embeddings``
+        is a ``dict[chunk_id, np.ndarray]`` for chunks whose embeddings
+        were computed during chunking (Phase 2.2 late chunking only).
+
+        For non-PDF domains (or PDF domains with a domain-specific
+        parser) ``precomputed_embeddings`` is ``None`` — the caller
+        must embed the chunks via ``_encode_robust`` instead.
+
+    Late chunking (Phase 2.2) is only enabled for PDF domains WITHOUT
+    a domain-specific parser, where ``late_chunk`` produces
+    token-level-aware embeddings at chunking time. The embedder
+    model is loaded on demand (cached by ``model_manager``).
+    """
+    import numpy as np
+
+    domain_dir = _config.DOMAINS_DIR / domain
     parser = get_parser(domain)
     chunks: list[Chunk] = []
+    precomputed: dict[str, "np.ndarray"] = {}
+
+    # PDF domain detection: source_types contains "pdf" in domain.md.
+    is_pdf_domain = "pdf" in get_domain_config(domain).get(
+        "source_types", ["repo"]
+    )
+    use_late_chunk = is_pdf_domain and parser is None
 
     sources_dir = domain_dir / "sources"
     if sources_dir.is_dir():
@@ -154,6 +186,35 @@ def load_domain_sources(domain: str) -> list[Chunk]:
                 except Exception as e:
                     print(f"[WARN]  Parser failed for {file.name}: {e} — falling back")
 
+            # Late chunking path (Phase 2.2): PDF domains without a
+            # domain-specific parser use chapter-wise late chunking,
+            # producing precomputed token-level embeddings that span
+            # chapter boundaries (no arbitrary character splits).
+            if use_late_chunk:
+                try:
+                    model = get_embedder(domain)
+                    late_chunks, late_precomputed = late_chunk(
+                        content,
+                        domain=domain,
+                        source_file=file.name,
+                        model=model,
+                    )
+                    if late_chunks:
+                        print(f"[INFO]  Late chunking: {len(late_chunks)} "
+                              f"chunks from {file.name} "
+                              f"(chapter-wise BGE-M3 token pooling)")
+                        chunks.extend(late_chunks)
+                        precomputed.update(late_precomputed)
+                        continue
+                    else:
+                        print(f"[INFO]  Late chunking: 0 chunks from "
+                              f"{file.name} — falling back to fallback_chunk")
+                except Exception as e:
+                    print(f"[WARN]  Late chunking failed for {file.name}: "
+                          f"{type(e).__name__}: {e} — falling back")
+
+            # Default fallback (Godot RST, non-PDF repos, late_chunk
+            # disabled or failed).
             fallback = fallback_chunk(
                 content, domain=domain, source_type="repo", source_file=file.name
             )
@@ -182,15 +243,25 @@ def load_domain_sources(domain: str) -> list[Chunk]:
                 )
             )
 
-    return chunks
+    precomputed_or_none = precomputed if precomputed else None
+    return chunks, precomputed_or_none
 
 
 def build_index(domain: str) -> None:
-    """Build ChromaDB + BM25 index for a single domain."""
+    """Build ChromaDB + BM25 index for a single domain.
+
+    Phase 2.2: For PDF domains (e.g. DaVinci Resolve), if
+    ``load_domain_sources`` returns precomputed embeddings (from
+    ``late_chunk``), those are used directly for the late_chunk
+    chunks. Other chunks (e.g. personal notes, or fallback_chunks
+    in mixed domains) are still embedded via ``_encode_robust``.
+    """
+    import numpy as np
+
     collection_name = f"{domain}_knowledge"
 
     print(f"[INFO]  Loading domain: {domain}")
-    chunks = load_domain_sources(domain)
+    chunks, precomputed_embeddings = load_domain_sources(domain)
 
     if not chunks:
         print(f"[WARN]  No chunks found for domain '{domain}'")
@@ -198,13 +269,64 @@ def build_index(domain: str) -> None:
 
     repo_count = sum(1 for c in chunks if c.source_type == "repo")
     personal_count = sum(1 for c in chunks if c.source_type == "personal")
+    late_count = sum(1 for c in chunks if c.chunk_type == "late_chunk")
     print(f"[INFO]  Parsed into {len(chunks)} chunks "
-          f"(repo: {repo_count}, personal: {personal_count})")
+          f"(repo: {repo_count}, personal: {personal_count}, "
+          f"late_chunk: {late_count})")
 
-    model = get_embedder(domain)
-    print(f"[INFO]  Embedding with {model.__class__.__name__}...")
-    texts = [c.text for c in chunks]
-    embeddings = _encode_robust(model, texts)
+    # Build the per-chunk embedding array aligned with `chunks`. If
+    # precomputed_embeddings is present (PDF domain with late_chunk),
+    # use those for the late_chunk chunks; embed everything else via
+    # _encode_robust. This keeps Godot's RST parser path and personal
+    # notes' markdown_section_chunk path unchanged.
+    if precomputed_embeddings:
+        # Determine which chunk indices have precomputed embeddings.
+        precomputed_indices = [
+            i for i, c in enumerate(chunks) if c.chunk_id in precomputed_embeddings
+        ]
+        fallback_indices = [
+            i for i, c in enumerate(chunks) if c.chunk_id not in precomputed_embeddings
+        ]
+        print(
+            f"[INFO]  Precomputed embeddings: {len(precomputed_indices)} "
+            f"(from late_chunk); to-embed: {len(fallback_indices)}"
+        )
+
+        # Embed fallback chunks via _encode_robust.
+        if fallback_indices:
+            model = get_embedder(domain)
+            print(f"[INFO]  Embedding {len(fallback_indices)} fallback "
+                  f"chunks with {model.__class__.__name__}...")
+            fallback_texts = [chunks[i].text for i in fallback_indices]
+            fallback_emb = _encode_robust(model, fallback_texts)
+        else:
+            fallback_emb = None
+
+        # Assemble the full aligned embedding array. We need
+        # ``len(chunks)`` rows, in chunk order.
+        n_chunks = len(chunks)
+        dim = None
+        if precomputed_indices:
+            dim = precomputed_embeddings[chunks[precomputed_indices[0]].chunk_id].shape[-1]
+        elif fallback_emb is not None and len(fallback_emb) > 0:
+            dim = len(fallback_emb[0])
+        if dim is None:
+            # Nothing to embed (no chunks have embeddings) — defensive
+            dim = 0
+
+        embeddings = np.zeros((n_chunks, dim), dtype=np.float32)
+        for i in precomputed_indices:
+            cid = chunks[i].chunk_id
+            embeddings[i] = precomputed_embeddings[cid]
+        if fallback_indices and fallback_emb is not None:
+            for j, idx in enumerate(fallback_indices):
+                embeddings[idx] = fallback_emb[j]
+    else:
+        # Default path: encode all chunks via _encode_robust.
+        model = get_embedder(domain)
+        print(f"[INFO]  Embedding with {model.__class__.__name__}...")
+        texts = [c.text for c in chunks]
+        embeddings = _encode_robust(model, texts)
 
     # B7: log the embedding dimension after the first encode so a
     # silent model swap (e.g. 768d → 1024d) is visible in the build log.
@@ -276,7 +398,7 @@ def main():
     if args.all:
         domains = [
             d.name
-            for d in DOMAINS_DIR.iterdir()
+            for d in _config.DOMAINS_DIR.iterdir()
             if d.is_dir() and (d / "domain.md").exists()
         ]
         if not domains:
