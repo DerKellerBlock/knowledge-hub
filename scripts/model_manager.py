@@ -173,26 +173,36 @@ def get_embedder(domain: str) -> SentenceTransformer:
     2. ``domain.md`` ``Metadaten → Embedding-Model`` entry.
     3. :data:`config.DEFAULT_MODEL_NAME` (``all-mpnet-base-v2``) fallback.
 
-    The cache key is ``embedder:<model_name>``. Switching the env var at
-    runtime therefore loads a new model into the cache on the next
-    cache-miss; the previously loaded model stays resident until the
-    process exits (Phase 2a limitation, see LIM-008). Loading both
-    BGE-M3 (~2.2 GB) and all-mpnet-base-v2 (~420 MB) simultaneously
-    costs ~2.6 GB of RAM. An LRU-bounded ``_model_cache`` is deferred to
-    Phase 2b (B4).
+    The cache key is ``embedder:<model_name>:<device>`` (Phase 3.3a:
+    device is part of the key so a runtime ``KH_EMBEDDING_DEVICE``
+    switch loads a fresh instance instead of returning the wrong-device
+    cached model). Switching either env var at runtime therefore loads
+    a new model into the cache on the next cache-miss; the previously
+    loaded model stays resident until the process exits (Phase 2a
+    limitation, see LIM-008). Loading both BGE-M3 (~2.2 GB) and
+    all-mpnet-base-v2 (~420 MB) simultaneously costs ~2.6 GB of RAM. An
+    LRU-bounded ``_model_cache`` is deferred to Phase 2b (B4).
 
-    Device selection: ``device='cpu'`` is forced. ``BAAI/bge-m3`` ships
-    custom code via ``trust_remote_code`` which deadlocks on Apple
-    Silicon MPS with ``transformers`` 4.57.6 — ``encode()`` never returns,
-    no error, no progress. CPU is sufficient for batch embedding
-    (bs=32 short / bs=1 long via ``_encode_robust``). Fixed 2026-07-02.
+    Device selection (Phase 3.3a, LIM-011 RESOLVED 2026-07-04):
+    ``KH_EMBEDDING_DEVICE`` environment variable controls the compute
+    device. Default ``"cpu"`` (backward-compat, safe on every platform).
+    Opt-in MPS GPU acceleration via ``KH_EMBEDDING_DEVICE=mps`` —
+    ``torch`` 2.12.0 fixed the BGE-M3 + ``transformers`` 4.57.6 MPS
+    deadlock that forced ``device='cpu'`` previously (~4.7× speedup on
+    Apple Silicon). A Pre-Flight test (100-chunk MPS encode) is
+    recommended before every large batch build so an MPS hang can fall
+    back to CPU without losing the whole run. Default ``cpu`` preserves
+    the LIM-011 workaround for operators that have not opted in.
     """
     cfg = get_domain_config(domain)
     model_name = os.environ.get("KH_EMBEDDING_MODEL", cfg["embedding_model"])
-    key = f"embedder:{model_name}"
+    key = f"embedder:{model_name}:{os.environ.get('KH_EMBEDDING_DEVICE', 'cpu')}"
     if key not in _model_cache:
-        # Force CPU: BGE-M3 + transformers 4.57.6 deadlocks on MPS.
-        _model_cache[key] = SentenceTransformer(model_name, device="cpu")
+        # MPS now works with torch 2.12.0, opt-in via
+        # KH_EMBEDDING_DEVICE=mps. Pre-Flight test recommended for large
+        # batches (R1.1: detect MPS hang early, fall back to CPU).
+        device = os.environ.get("KH_EMBEDDING_DEVICE", "cpu")
+        _model_cache[key] = SentenceTransformer(model_name, device=device)
     return _model_cache[key]
 
 

@@ -99,5 +99,32 @@ Embedding-Modell-Auswahl (Phase 2a, Decision 2.7):
   als Fallback; `BAAI/bge-m3` (1024 dims, 8192 Token, multilingual, MIT)
   als Phase-2a-Default über Env-Var + domain.md.
 
+Embedding-Device-Auswahl (Phase 3.3a, LIM-011 RESOLVED):
+- `KH_EMBEDDING_DEVICE` Env-Var steuert das Compute-Device (Default
+  `cpu`, opt-in `mps` auf Apple Silicon).
+- `torch` 2.12.0 hat den BGE-M3 + `transformers` 4.57.6 MPS-Deadlock
+  behoben, der zuvor `device='cpu'` erzwungen hat (~4.7× Speedup).
+- Cache-Key ist `embedder:<model>:<device>` (Runtime-Switch lädt eine
+  frische Instanz statt eine falsch-Device Cache-Instanz zurückzugeben).
+- Pre-Flight-Mitigation (R1.1): 100-Chunk MPS-Encode vor jedem großen
+  Build; bei Hang (>30 s) auf CPU zurückfallen. Integration-Test
+  `test_mps_encode_pre_flight` automatisiert den Check.
+
+Parallel LLM-Calls (Phase 3.3a, Contextual Retrieval):
+- `KH_LLM_WORKERS` Env-Var (Default `1` = sequenziell, opt-in `>1`
+  für Ollama-Cloud Pro Concurrency). CLI-Flag `--workers N` an
+  `contextualize_chunks.py` überschreibt die env var.
+- Bei `workers > 1` dispatcht `contextualize_chunks()` Cache-Misses an
+  einen `ThreadPoolExecutor`. Cache-Lookup bleibt sequenziell (vor
+  Pool-Submit); SQLite-Writes werden im Main-Thread über einen
+  `threading.Lock` serialisiert.
+- `context_cache.open_cache()` setzt `check_same_thread=False` und
+  `PRAGMA busy_timeout=5000` für Connection-Sharing über Worker +
+  Resilienz gegen residuale Write-Races.
+- Ein geteiltes `threading.Event` propagiert HTTP 429 Usage-Limit-
+  Abbrüche an alle in-flight Worker (Cache bleibt für Resume intakt).
+- `get_llm()` wird vor ThreadPool-Start pre-warm aufgerufen, um eine
+  Race im `_model_cache`-Dict zu vermeiden.
+
 Domain-Scoping: `--domains` CLI-Flag auf dem MCP-Server begrenzt sichtbare
 Domains. Default (ohne Flag): alle sichtbar (rückwärtskompatibel).

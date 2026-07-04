@@ -104,6 +104,20 @@ def open_cache(domain: str) -> sqlite3.Connection:
     Enables WAL journal mode and ``synchronous=NORMAL`` for good
     bulk-insert throughput while remaining crash-safe (M2 resume).
 
+    Phase 3.3a concurrency hardening:
+
+    * ``check_same_thread=False`` allows the connection to be shared
+      across ``ThreadPoolExecutor`` workers (needed for parallel LLM
+      calls in :func:`contextualize_chunks.contextualize_chunks`).
+      Sharing the connection does NOT make concurrent writes safe —
+      callers MUST serialise writes via a ``threading.Lock`` and rely on
+      ``busy_timeout`` for the remaining races.
+    * ``PRAGMA busy_timeout=5000`` makes SQLite wait up to 5 s on a
+      locked DB instead of raising ``OperationalError: database is
+      locked`` immediately. This absorbs the residual write/write races
+      that the caller-side lock does not cover (e.g. WAL checkpoint
+      contention).
+
     Args:
         domain: Domain name (e.g. ``"godot"``). Maps to
             ``chromadb_data/<domain>/context_cache.db``.
@@ -113,9 +127,10 @@ def open_cache(domain: str) -> sqlite3.Connection:
         Caller is responsible for closing it (``with``/``.close()``).
     """
     db_path = cache_db_path(domain)
-    conn = sqlite3.connect(str(db_path))
+    conn = sqlite3.connect(str(db_path), check_same_thread=False)
     conn.execute("PRAGMA journal_mode=WAL")
     conn.execute("PRAGMA synchronous=NORMAL")
+    conn.execute("PRAGMA busy_timeout=5000")
     init_schema(conn)
     return conn
 

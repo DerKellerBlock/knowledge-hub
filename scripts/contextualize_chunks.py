@@ -24,6 +24,14 @@ Usage::
     python scripts/contextualize_chunks.py --domain godot --limit 50 --dry-run
     python scripts/contextualize_chunks.py --domain godot --source-file foo-packed.md
     python scripts/contextualize_chunks.py --domain godot --batch-size 100
+    python scripts/contextualize_chunks.py --domain godot --workers 3  # Phase 3.3a
+
+Phase 3.3a parallelism: ``--workers N`` (or ``KH_LLM_WORKERS`` env var)
+dispatches cache misses to a ``ThreadPoolExecutor`` so multiple LLM
+calls run concurrently. Default ``1`` preserves the original sequential
+loop (backward-compat). SQLite writes are serialised via a
+``threading.Lock``; a shared ``cancel_event`` propagates HTTP 429
+usage-limit aborts to every in-flight worker.
 
 No real Ollama / GPU / embedding model is loaded by this module on
 import — ``get_llm()`` and ``load_domain_sources()`` are called lazily
@@ -38,7 +46,9 @@ import os
 import re
 import sqlite3
 import sys
+import threading
 import time
+import concurrent.futures
 from pathlib import Path
 
 # Make the repo root importable when run as a script.
@@ -60,6 +70,12 @@ from parser_base import Chunk
 # Exponential backoff schedule (NB-7): 30 s, 60 s, 120 s between retries.
 _RETRY_BACKOFF_SECONDS = (30, 60, 120)
 _MAX_RETRIES = 3
+
+# Phase 3.3a: default number of parallel LLM workers. ``1`` preserves the
+# original sequential behaviour (backward-compat). Override via the
+# ``--workers`` CLI flag or the ``KH_LLM_WORKERS`` env var (e.g. 3 for
+# Ollama-Cloud Pro concurrency).
+_DEFAULT_LLM_WORKERS = 1
 
 # Domain name validation (must match `^[a-z0-9_]+$`).
 _DOMAIN_NAME_RE = re.compile(r"^[a-z0-9_]+$")
@@ -448,6 +464,7 @@ def contextualize_chunks(
     model_name: str,
     batch_size: int = 50,
     dry_run: bool = False,
+    workers: int = 1,
 ) -> list[Chunk]:
     """Contextualize a list of chunks (Path-A filter applied by caller).
 
@@ -455,6 +472,14 @@ def contextualize_chunks(
     ``context_prefix`` from the cache; on miss, call the LLM (with
     retry / backoff), validate the output, persist to the cache and set
     ``context_prefix`` on the chunk.
+
+    Phase 3.3a parallelism: when ``workers > 1`` the LLM calls for
+    cache misses are dispatched to a :class:`ThreadPoolExecutor` so
+    multiple chunks are contextualized concurrently. The cache lookup
+    stays sequential (cheap), only the expensive LLM call is
+    parallelised. SQLite writes are serialised in the main thread via a
+    ``threading.Lock`` and a single ``cancel_event`` propagates a
+    usage-limit (HTTP 429) abort to every in-flight worker.
 
     The function is **dependency-injected** — ``llm_entry`` and ``conn``
     are passed in so unit tests can supply a :class:`FakeOllamaClient`
@@ -469,7 +494,10 @@ def contextualize_chunks(
             be unit-tested in isolation.
         llm_entry: LLM cache entry from :func:`get_llm` (or a fake entry
             for tests).
-        conn: Open SQLite connection from :func:`open_cache`.
+        conn: Open SQLite connection from :func:`open_cache`. Must be
+            opened with ``check_same_thread=False`` when ``workers > 1``
+            (Phase 3.3a — :func:`context_cache.open_cache` does this by
+            default now).
         model_name: LLM model name (must match the cache key used in
             ``get_cached`` / ``put_cached``).
         batch_size: Number of chunks after which a ``conn.commit()`` is
@@ -479,6 +507,9 @@ def contextualize_chunks(
         dry_run: If True, do not call the LLM and do not write to the
             cache. Only log what would happen and leave
             ``context_prefix`` untouched (``None``).
+        workers: Number of parallel LLM workers. ``1`` (default) runs
+            the original sequential loop (backward-compat). ``> 1``
+            dispatches cache misses to a ThreadPoolExecutor.
 
     Returns:
         The same list of chunks (mutated in place) with
@@ -487,6 +518,202 @@ def contextualize_chunks(
         ``context_prefix = None`` (no cache entry is written for them).
     """
     stats = {"hits": 0, "misses": 0, "rejected": 0, "errors": 0}
+    stats_lock = threading.Lock()
+    write_lock = threading.Lock()
+    cancel_event = threading.Event()
+
+    if workers < 1:
+        workers = 1
+
+    if workers == 1:
+        return _contextualize_sequential(
+            domain, chunks, llm_entry, conn, model_name,
+            batch_size, dry_run, stats,
+        )
+
+    # ── Parallel path (workers > 1) ───────────────────────────────────
+    processed = 0
+    pending_since_last_commit = 0
+
+    # Pre-load document_text per source_file (KV-cache reuse). Loaded
+    # lazily on first miss for each file; the lookup itself is
+    # best-effort — concurrent reads of ``doc_text_cache`` are safe
+    # because Python's GIL serialises dict operations on distinct keys
+    # and we only ever insert new keys (no deletion / overwrite).
+    doc_text_cache: dict[str, str] = {}
+
+    # Phase 3.3a B2: pre-warm get_llm() so the _model_cache dict is
+    # populated before any worker starts. Workers reuse the cached
+    # entry (no writes to _model_cache during the pool run → no race).
+    # The caller has already called get_llm() in main(); we touch it
+    # again here defensively so the function is safe when called
+    # directly from tests without the CLI startup path.
+    if not dry_run:
+        try:
+            get_llm()
+        except Exception:
+            # Tests inject a fake llm_entry; ignore pre-warm failures.
+            pass
+
+    # First pass: sequential cache lookup. Collect misses for the pool.
+    misses: list[tuple[int, Chunk, str]] = []  # (index, chunk, text_hash)
+    for idx, chunk in enumerate(chunks):
+        if dry_run:
+            continue
+        text_hash = chunk_text_hash(chunk.text)
+        cached = get_cached(
+            conn, chunk.source_file, chunk.chunk_id_in_file,
+            text_hash, model_name,
+        )
+        if cached is not None:
+            chunk.context_prefix = cached
+            with stats_lock:
+                stats["hits"] += 1
+        else:
+            misses.append((idx, chunk, text_hash))
+
+    if dry_run:
+        print(f"[INFO] Dry-run: would contextualize {len(chunks)} chunks")
+        return chunks
+
+    print(
+        f"[INFO] Parallel contextualize: {len(misses)} LLM misses / "
+        f"{len(chunks)} chunks, {workers} workers"
+    )
+
+    # Dispatch misses to the pool. Results are collected and written
+    # back sequentially after the batch to serialise SQLite writes.
+    pending_writes: list[tuple[Chunk, str, str]] = []
+    with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
+        future_to_chunk: dict = {}
+        for idx, chunk, text_hash in misses:
+            if cancel_event.is_set():
+                break
+            doc_text = doc_text_cache.get(chunk.source_file)
+            if doc_text is None:
+                doc_text = document_text_for_chunk(chunk, domain)
+                doc_text_cache[chunk.source_file] = doc_text
+            fut = pool.submit(
+                _generate_with_retry_cancelable,
+                llm_entry, doc_text, chunk.text, cancel_event,
+            )
+            future_to_chunk[fut] = (chunk, text_hash)
+
+        for fut in concurrent.futures.as_completed(future_to_chunk):
+            if cancel_event.is_set():
+                # Cancel any not-yet-started futures and stop draining.
+                for f in future_to_chunk:
+                    f.cancel()
+                break
+            chunk, text_hash = future_to_chunk[fut]
+            processed += 1
+            try:
+                ctx = fut.result()
+            except RuntimeError as e:
+                if "Usage limit" in str(e):
+                    cancel_event.set()
+                    print(
+                        f"[ERROR] Usage limit reached — cancelling "
+                        f"remaining workers. Cache preserved for resume."
+                    )
+                    # Cancel not-yet-started futures and stop draining.
+                    for f in future_to_chunk:
+                        f.cancel()
+                    break
+                # A worker aborted because the cancel_event was set by a
+                # sibling that hit the usage limit first. Swallow the
+                # cancellation and keep draining (or stop if every
+                # remaining future is already cancelled).
+                if cancel_event.is_set():
+                    continue
+                raise
+            if ctx == "":
+                chunk.context_prefix = None
+                with stats_lock:
+                    stats["rejected"] += 1
+            else:
+                chunk.context_prefix = ctx
+                pending_writes.append((chunk, text_hash, ctx))
+                with stats_lock:
+                    stats["misses"] += 1
+                    pending_since_last_commit += 1
+
+            # Sequential SQLite writes (serialised by write_lock too).
+            if pending_writes:
+                with write_lock:
+                    for c, th, cv in pending_writes:
+                        put_cached(
+                            conn, c.source_file, c.chunk_id_in_file,
+                            th, model_name, cv,
+                        )
+                    pending_writes.clear()
+
+            if pending_since_last_commit >= batch_size:
+                with write_lock:
+                    conn.commit()
+                pending_since_last_commit = 0
+
+            if processed % 100 == 0:
+                with stats_lock:
+                    print(
+                        f"[INFO] Contextualized {processed}/{len(misses)} "
+                        f"misses ({stats['hits']} cache hits, "
+                        f"{stats['misses']} misses, "
+                        f"{stats['rejected']} rejected)"
+                    )
+
+    # Final flush of any remaining writes.
+    if pending_writes:
+        with write_lock:
+            for c, th, cv in pending_writes:
+                put_cached(
+                    conn, c.source_file, c.chunk_id_in_file,
+                    th, model_name, cv,
+                )
+            conn.commit()
+
+    print(
+        f"[INFO] Done: {len(chunks)} chunks ({stats['hits']} hits, "
+        f"{stats['misses']} misses, {stats['rejected']} rejected)"
+    )
+    return chunks
+
+
+def _generate_with_retry_cancelable(
+    llm_entry: dict,
+    document_text: str,
+    chunk_text: str,
+    cancel_event: threading.Event,
+) -> str:
+    """Worker-side wrapper that aborts early when ``cancel_event`` is set.
+
+    Phase 3.3a: a usage-limit (HTTP 429) raised by any worker sets the
+    shared ``cancel_event``. In-flight workers check the event before
+    issuing their LLM call and raise ``RuntimeError`` so the future
+    completes and the main thread can observe the cancellation. This
+    avoids wasting the full ``_RETRY_BACKOFF_SECONDS`` schedule on
+    workers that would also hit the usage limit.
+    """
+    if cancel_event.is_set():
+        raise RuntimeError("Usage limit reached — worker cancelled")
+    return _generate_with_retry(llm_entry, document_text, chunk_text)
+
+
+def _contextualize_sequential(
+    domain: str,
+    chunks: list[Chunk],
+    llm_entry: dict,
+    conn: sqlite3.Connection,
+    model_name: str,
+    batch_size: int,
+    dry_run: bool,
+    stats: dict,
+) -> list[Chunk]:
+    """Sequential contextualize loop (workers == 1, backward-compat).
+
+    Factored out of :func:`contextualize_chunks` so the parallel path
+    can diverge without touching the well-tested sequential behaviour.
+    """
     processed = 0
     commits = 0
     pending_since_last_commit = 0
@@ -603,6 +830,15 @@ def _build_arg_parser() -> argparse.ArgumentParser:
         "--batch-size", type=int, default=50,
         help="Batch commit size for SQLite (default 50).",
     )
+    p.add_argument(
+        "--workers", type=int,
+        default=int(os.environ.get("KH_LLM_WORKERS", _DEFAULT_LLM_WORKERS)),
+        help=(
+            "Number of parallel LLM workers (Phase 3.3a). Default 1 = "
+            "sequential (backward-compat). Override via KH_LLM_WORKERS env "
+            "var. >1 dispatches cache misses to a ThreadPoolExecutor."
+        ),
+    )
     return p
 
 
@@ -622,6 +858,20 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.batch_size < 1:
         print("[ERROR] --batch-size must be >= 1")
+        return 1
+
+    if args.workers < 1:
+        print("[ERROR] --workers must be >= 1")
+        return 1
+
+    # ── 0. Phase 3.3a B-R2-3: ensure context_cache.db has a valid schema.
+    # Opening the cache (even when dry-run) calls init_schema(), so an
+    # empty/stale DB file becomes a valid cache before any promote step.
+    try:
+        _schema_conn = open_cache(args.domain)
+        _schema_conn.close()
+    except sqlite3.Error as e:
+        print(f"[ERROR] Cache schema init failed: {type(e).__name__}: {e}")
         return 1
 
     # ── 1. Startup check: Ollama available? ──────────────────────────────
@@ -684,6 +934,7 @@ def main(argv: list[str] | None = None) -> int:
             model_name=model_name,
             batch_size=args.batch_size,
             dry_run=args.dry_run,
+            workers=args.workers,
         )
     finally:
         conn.close()

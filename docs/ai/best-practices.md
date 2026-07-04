@@ -118,6 +118,27 @@ Konventionen:
   non-loopback Host wird eine WARNING geloggt. Der LLM-Cache-Key ist
   `llm:<backend>:<model_name>` (inkl. Backend, verhindert stale
   cross-backend Reuse).
+- `KH_EMBEDDING_DEVICE` — Überschreibt das Compute-Device des
+  Embedders (Phase 3.3a, LIM-011 RESOLVED). Default: `cpu`
+  (backward-compat, sicher auf jeder Plattform). Opt-in MPS GPU
+  Beschleunigung via `KH_EMBEDDING_DEVICE=mps` — `torch` 2.12.0 hat
+  den BGE-M3 + `transformers` 4.57.6 MPS-Deadlock behoben, der zuvor
+  `device='cpu'` erzwungen hat (~4.7× Speedup auf Apple Silicon).
+  Der Embedder-Cache-Key ist `embedder:<model>:<device>` — ein
+  Runtime-Switch lädt eine frische Instanz statt eine falsch-Device
+  Cache-Instanz zurückzugeben. **Pre-Flight-Mitigation (R1.1):** vor
+  jedem großen Build wird ein 100-Chunk MPS-Encode empfohlen; bei
+  Hang (>30 s) auf CPU zurückfallen. Integration-Test
+  `test_mps_encode_pre_flight` automatisiert den Check.
+- `KH_LLM_WORKERS` — Überschreibt die Anzahl paralleler LLM-Worker
+  für Contextual Retrieval (Phase 3.3a). Default: `1` (sequenziell,
+  backward-compat). `>1` dispatcht Cache-Misses an einen
+  `ThreadPoolExecutor` (z.B. `3` für Ollama-Cloud Pro Concurrency).
+  CLI-Flag `--workers N` an `contextualize_chunks.py` überschreibt die
+  env var. SQLite-Writes werden über einen `threading.Lock` und
+  `PRAGMA busy_timeout=5000` serialisiert; ein geteiltes
+  `threading.Event` propagiert HTTP 429 Usage-Limit-Abbrüche an alle
+  in-flight Worker (Cache bleibt für Resume intakt).
 
 **Contextual Retrieval setzt BGE-M3 voraus (N4):** Das LLM-generierte
 `context_prefix` (50–100 Token) wird vor dem Embedding an den Chunk-Text
@@ -151,10 +172,15 @@ ein Non-Reasoning-Modell evaluiert).
   python scripts/contextualize_chunks.py --domain godot --limit 50 --dry-run
   python scripts/contextualize_chunks.py --domain godot --source-file foo-packed.md
   python scripts/contextualize_chunks.py --domain godot --batch-size 100
+  python scripts/contextualize_chunks.py --domain godot --workers 3  # Phase 3.3a
   ```
   Batch-Loop mit Ollama-Startup-Check, Cache-Lookup, LLM-Call mit Retry/Backoff
   (exponentiell 30s/60s/120s, 3 Versuche), Output-Validation, Resume via SQLite-Cache.
   Pfad-A-Filter: pure `chunk_type != "late_chunk"` (Spec N1, kein Domain-/source_types-Check).
+  Phase 3.3a: `--workers N` (oder `KH_LLM_WORKERS` env var) dispatcht Cache-Misses
+  an einen `ThreadPoolExecutor`. SQLite-Writes werden über einen `threading.Lock`
+  und `PRAGMA busy_timeout=5000` serialisiert; HTTP 429 bricht alle Worker über
+  ein geteiltes `threading.Event` ab (Cache bleibt für Resume intakt).
 
 - **`embed_index.py --contextualize`** — Liest `context_prefix` aus dem SQLite-Cache
   und nutzt `context_prefix + "\n" + text` als Embedding-Input (D1). BM25 bleibt
