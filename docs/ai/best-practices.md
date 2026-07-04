@@ -92,6 +92,96 @@ Konventionen:
   Hinweis: Gleichzeitiges Laden beider Modelle kostet ~2.6 GB RAM (`_model_cache` ist aktuell plain dict ohne LRU — LRU-Migration in Phase 2b, B4).
 - `KNOWLEDGE_HUB_DOMAINS` — Komma-separierte Domain-Liste für MCP-Server-Scoping.
   Wird in `mcp_servers/knowledge_hub/server.py` ausgewertet.
+- `KH_LLM_MODEL` — Überschreibt das LLM-Modell für Contextual Retrieval (Phase 3.1).
+  Default: `gemma4:12b-mlx` (Gemma 4 12B, 7.7 GB MLX-quantisiert, Apache 2.0,
+  256K Token Kontext, 140+ Sprachen). Wird LIVE in `model_manager.get_llm()`
+  auf jedem Cache-Miss gelesen. System-Setup: `brew install ollama &&
+  ollama pull gemma4:12b-mlx`. Ollama nutzt MLX nativ auf Apple Silicon
+  (seit v0.19, optimiert für Gemma 4 in v0.31.1 mit 90 % MTP-Speedup).
+  ACHTUNG: Ollama v0.31.1+ ist für Gemma 4 erforderlich; ältere Versionen
+  lehnen den Pull mit HTTP 412 ab ("requires a newer version of Ollama").
+- `KH_LLM_BACKEND` — Überschreibt das LLM-Backend (Phase 3.1).
+  Default: `ollama` (HTTP-API, MLX-native). Alternative: `llama-cpp`
+  (Cross-Platform-Fallback, benötigt `llama-cpp-python`).
+  Ollama muss als System-Service laufen (`ollama serve` oder
+  `brew services start ollama`). Das `ollama` Python-Package ist nur ein
+  HTTP-Client (~10 MB) und pulled keine transformers/PyTorch — kein
+  Dependency-Konflikt mit dem BGE-M3/jina-Stack (B4 ist bei Ollama kein
+  Blocker).
+- `KH_OLLAMA_HOST` — Überschreibt den Ollama-HTTP-Host (Phase 3.1a
+  Security-Hardening). Default: `http://localhost:11434` (Loopback,
+  keine Datenexfiltration). Ein non-loopback Host (z.B.
+  `http://remote.example:11434`) wird NUR akzeptiert, wenn diese Env-Var
+  explizit gesetzt ist (Opt-in) — die implizite `OLLAMA_HOST`-Default des
+  ollama-Python-Clients wird absichtlich NICHT honoring, um versehentliche
+  Exfiltration lokaler Repo-/Personal-Notes-Inhalte zu verhindern. Bei
+  non-loopback Host wird eine WARNING geloggt. Der LLM-Cache-Key ist
+  `llm:<backend>:<model_name>` (inkl. Backend, verhindert stale
+  cross-backend Reuse).
+
+**Contextual Retrieval setzt BGE-M3 voraus (N4):** Das LLM-generierte
+`context_prefix` (50–100 Token) wird vor dem Embedding an den Chunk-Text
+gehängt (`context_prefix + "\n" + text`). Bei all-mpnet-base-v2 (384 Token
+Kontext) würde dieser Zusatz den Chunk truncieren. BGE-M3 (8192 Token
+Kontext) ist daher die Voraussetzung für Phase 3.1 und über
+`KH_EMBEDDING_MODEL=BAAI/bge-m3` bzw. `domain.md` aktiviert. Der Pfad-A-
+Geltungsbereich (N1) umfasst domänenübergreifend alle Chunks mit
+`chunk_type != "late_chunk"`; Late-Chunking (DaVinci) ist ausgenommen (D2),
+da es bereits Chapter-Kontext besitzt.
+
+**Gemma 4 12B ist ein Reasoning-Modell (Phase 3.1a Erkenntnis):** Gemma 4
+12B MLX generiert vor der finalen Antwort eine interne Thinking-Phase
+(`message.thinking`-Feld in der Ollama-Antwort). Mit dem Anthropic-Default
+von `num_predict=100` reicht das Token-Budget oft nur für die Thinking-
+Phase — `content` bleibt leer (`done_reason='length'`). Empirisch braucht
+der Contextual-Retrieval-Prompt ~256 eval-Tokens (949 Zeichen Thinking +
+~15 Token Antwort). `generate_context()` nutzt daher `num_predict=800`
+als Default (mit headroom für längere Dokumente). Bei ~16.6s pro Chunk
+skaliert das auf ~15.000 Godot-Chunks = ~69 Stunden (reiner LLM-Teil) —
+länger als die ursprüngliche 15–20h Schätzung der Spec, weil das
+Reasoning-Modell mehr Tokens generiert. Die Durchsatz-Planung in Phase
+3.1b/c muss das berücksichtigen (ggf. später `num_predict` tunen oder
+ein Non-Reasoning-Modell evaluiert).
+
+## Contextual Retrieval CLI (Phase 3.1b)
+
+- **`contextualize_chunks.py`** — CLI-Skript für Kontext-Generierung:
+  ```bash
+  python scripts/contextualize_chunks.py --domain godot
+  python scripts/contextualize_chunks.py --domain godot --limit 50 --dry-run
+  python scripts/contextualize_chunks.py --domain godot --source-file foo-packed.md
+  python scripts/contextualize_chunks.py --domain godot --batch-size 100
+  ```
+  Batch-Loop mit Ollama-Startup-Check, Cache-Lookup, LLM-Call mit Retry/Backoff
+  (exponentiell 30s/60s/120s, 3 Versuche), Output-Validation, Resume via SQLite-Cache.
+  Pfad-A-Filter: pure `chunk_type != "late_chunk"` (Spec N1, kein Domain-/source_types-Check).
+
+- **`embed_index.py --contextualize`** — Liest `context_prefix` aus dem SQLite-Cache
+  und nutzt `context_prefix + "\n" + text` als Embedding-Input (D1). BM25 bleibt
+  `text` only. `--contextualize-bm25` Flag akzeptiert aber noch nicht genutzt.
+
+- **`run_evaluation.py --dataset-path`** — Expliziter Golden-Dataset-Pfad für
+  Spot-Check-Gate (z.B. `quality/golden/godot_spotcheck.yaml`). Default `None` →
+  backward-kompatibel.
+
+- **Spot-Check-Gate (Phase 3.1b):** `quality/golden/godot_spotcheck.yaml` (2 Fragen),
+  `scripts/quality/gate.py` mit `decide_gate(composite_delta)` → `"GO"`/`"NO-GO"`
+  (Schwelle ≥ −0,02). Nur No-Go-Gate — echte Quality-Entscheidung in 3.1c.
+
+- **Retry/Backoff:** Exponentielles Backoff (30/60/120s, 3 Versuche) bei transienten
+  Ollama-Connection-Errors. Nach 3 Fehlern → `RuntimeError`, Cache behält alle
+  bereits geschriebenen Einträge für Resume.
+
+**Cloud-Setup (Phase 3.1c, ~3h für 4580 Pfad-A-Chunks):**
+```bash
+ollama signin && ollama pull gemma4:cloud
+export KH_LLM_MODEL=gemma4:cloud
+# KH_OLLAMA_HOST bleibt localhost (lokaler Daemon routet Cloud)
+# Alternative: gpt-oss:20b-cloud (Usage Level 1, günstiger)
+# Usage-Limit: contextualize_chunks.py stoppt bei HTTP 429, Resume via Cache
+# Account-Wechsel: ollama signin, neu starten, Cache bleibt gültig
+# Transienter Cloud-Ausfall (502): 3× Backoff, dann RuntimeError — neu starten für Resume
+```
 
 ## Sicherheit
 

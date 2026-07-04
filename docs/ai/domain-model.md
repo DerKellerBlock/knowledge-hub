@@ -65,6 +65,12 @@ Personal Notes mit `##`-Headern werden via `markdown_section_chunk()` in semanti
 
 Late Chunks (Phase 2.2) stammen aus PDF-Quellen (DaVinci) und werden via `_LateChunkEncoder` chapter-weise erzeugt. Jeder Chunk trägt `chunk_type="late_chunk"`, `name=<Chapter-Titel>`, `source_file`, `page_start`/`page_end` (Chapter-Grenzen ±2 Toleranz), `line_start=0`/`line_end=0` (PDF-Chapter haben keine Zeilennummern — siehe LIM-010).
 
+**Context Prefix (Phase 3.1):** Jeder Chunk hat ein optionales Feld `context_prefix: str | None = None` (Phase 3.1, Contextual Retrieval). Es enthält einen LLM-generierten 50–100 Token Kontext, der den Chunk im Gesamtdokument verortet. Hybrid-Nutzung (D1): Embedding-Input = `context_prefix + "\n" + text`; BM25- und Cross-Encoder-Input bleiben unverändert (`text` only). MCP-Ausgabe liefert `text` clean und `context_prefix` als separates Metadaten-Feld. `from_chromadb_metadata` liest das Feld None-tolerant (N5 — alte Collections vor Phase 3.1 haben das Feld nicht → `None`).
+
+**Pfad-A-Filter (Phase 3.1b, E15):** Der Geltungsbereich für Contextual Retrieval ist pure `chunk_type != "late_chunk"` (Spec N1, kein Domain-/source_types-Check). DaVinci-Fallback-Chunks (`chunk_type=None` bei late_chunk-Fehler) werden kontextualisiert (korrekt — kein Chapter-Kontext). Mixed-Domain: repo-Chunks kontextualisiert, pdf late_chunk nicht. Contextual Retrieval setzt BGE-M3 voraus (N4 — 8192-Token-Kontext für `context_prefix + "\n" + text`; all-mpnet 384 Token würde truncieren).
+
+**SQLite-Cache (Phase 3.1b):** Kontext-Generierung persistiert in `chromadb_data/<domain>/context_cache.db` (WAL-Mode, `INSERT OR REPLACE`). Der Cache-Key ist domain-unabhängig (OQ-3 Option b: `sha256(source_file | chunk_id_in_file | chunk_text_hash | model)`), sodass ein Cache-Eintrag aus `godot_eval_a` beim Promote nach `godot` wiederverwendet werden kann. `bulk_invalidate_by_source_file()` löscht alle Einträge einer Quelldatei (z.B. nach repomix-Update).
+
 ## Indizes pro Domain
 
 | Index | Technologie | Speicherort | Metrik |

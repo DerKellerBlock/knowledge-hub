@@ -32,6 +32,20 @@ DEFAULT_MODEL_NAME = "all-mpnet-base-v2"
 # hard-code the string in multiple places.
 EMBEDDING_MODEL_ENV_VAR = "KH_EMBEDDING_MODEL"
 
+# Phase 3.1 Contextual Retrieval — local LLM defaults.
+# Reference constants (env-aware at import time) for documentation and
+# other modules. The live model is resolved in model_manager.get_llm()
+# from the KH_LLM_MODEL / KH_LLM_BACKEND env vars on every cache-miss,
+# with the STATIC fallbacks in model_manager.py (DEFAULT_LLM_MODEL /
+# DEFAULT_LLM_BACKEND) — same dual-source pattern as CROSS_ENCODER_MODEL
+# (config.py, env-aware) vs DEFAULT_RERANKER_MODEL (model_manager.py,
+# static). Functionally identical because get_llm() reads the env live.
+DEFAULT_LLM_MODEL = os.environ.get(
+    "KH_LLM_MODEL",
+    "gemma4:12b-mlx",
+)
+DEFAULT_LLM_BACKEND = os.environ.get("KH_LLM_BACKEND", "ollama")
+
 # LRU cache limit for BM25 (max domains held in RAM simultaneously)
 BM25_CACHE_MAX = 3
 

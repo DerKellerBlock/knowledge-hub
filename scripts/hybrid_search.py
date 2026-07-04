@@ -77,6 +77,7 @@ def rrf_fusion(
                 "page_start": r.get("page_start"),
                 "page_end": r.get("page_end"),
                 "section_path": r.get("section_path"),
+                "context_prefix": r.get("context_prefix"),
             }
         else:
             meta[cid]["stage1_sources"].append("semantic")
@@ -142,6 +143,7 @@ def _resolve_texts_via_chromadb(domain: str, results: list[dict]) -> None:
                 r["page_start"] = r.get("page_start") or meta.get("page_start")
                 r["page_end"] = r.get("page_end") or meta.get("page_end")
                 r["section_path"] = r.get("section_path") or meta.get("section_path")
+                r["context_prefix"] = r.get("context_prefix") or meta.get("context_prefix")
     except Exception as e:
         logger.warning(f"Failed to resolve texts via ChromaDB: {e}")
 

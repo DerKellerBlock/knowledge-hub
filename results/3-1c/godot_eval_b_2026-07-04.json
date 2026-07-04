@@ -1,0 +1,814 @@
+{
+  "domain": "godot_eval_b",
+  "date": "2026-07-04",
+  "summary": {
+    "domain": "godot_eval_b",
+    "total_questions": 21,
+    "pass_count": 19,
+    "weak_count": 2,
+    "fail_count": 0,
+    "avg_composite": 0.8386,
+    "avg_source_recall": 0.9524,
+    "avg_page_metadata_accuracy": 0.0,
+    "avg_top_k_relevance": 0.55,
+    "avg_evidence_quality": 1.0
+  },
+  "evaluations": [
+    {
+      "id": "godot-001",
+      "question": "How do I rotate a Node3D around the Y axis in GDScript?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 10,
+      "found_source_files": [
+        "godot-docs-3d-packed.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/classes/class_node3d.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official API reference. Documents rotate_y(angle), rotate(axis, angle), rotate_object_local(), rotation property (Euler Vector3), rotation_degrees, quaternion, and global_rotation. Angles in radians unless _degrees variant used.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/3d/using_transforms.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Tutorial explains why Euler angles are problematic (Gimbal Lock, interpolation, axis order) and recommends transform.basis instead. Shows rotate_x(), rotate_y(), rotate_object_local(), and FPS mouse-look with accumulated rotation angles.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "s node's :ref:`basis<class_Node3D_property_basis>` around the ``axis`` by the given ``angle``, in radians. This operation is calculated in parent space (relative to the parent) and preserves the :ref:",
+        "ith the *origin*, a *transform* efficiently represents a unique translation, rotation, and scale in space.\n\n.. image:: img/transforms_camera.png\n\n\nOne way to visualize a transform is to look at an obj",
+        "Location node.\n            var mobSpawnLocation = GetNode<PathFollow3D>(\"SpawnPath/SpawnLocation\");\n            // And give it a random offset.\n            mobSpawnLocation.ProgressRatio = GD.Randf();"
+      ]
+    },
+    {
+      "id": "godot-002",
+      "question": "How do I move a CharacterBody3D with gravity in Godot 4?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 7,
+      "found_source_files": [
+        "godot-demos-packed.md",
+        "gotchas.md",
+        "tips.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/physics/using_character_body_2d.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official CharacterBody2D/3D tutorial. Full platformer example with get_gravity(), move_and_slide(), is_on_floor(), jump. Explains move_and_collide() vs move_and_slide(), velocity manipulation, floor_max_angle, up_direction.",
+          "has_solution": true
+        },
+        {
+          "url": "https://github.com/godotengine/godot/issues/112656",
+          "date": "2025-11-12",
+          "type": "github-issue",
+          "solution_summary": "Bug report: CharacterBody*D.get_gravity() ignores Area3D gravity overrides while RigidBody3D respects them. Confirmed, still open. No workaround documented.",
+          "has_solution": false
+        }
+      ],
+      "top_snippets": [
+        "## CharacterBody3D Stair Stepping\n- CharacterBody3D hat native stair stepping (PR #114447, 2025-12-30, open): Properties `step_enabled`, `step_height` (default 0.3m), `step_smooth_enabled`, `step_smoo",
+        "## Jolt Physics + CharacterBody3D\n- **Problem:** CharacterBody3D fällt durch den Boden bei Jolt Physics in Godot 4.6\n- **Ursache:** `move_and_slide()` ruft `PhysicsServer3D.body_test_motion()` auf, Jo",
+        "s function will be called from the Main scene.\n    func initialize(start_position, player_position):\n        # We position the mob by placing it at start_position\n        # and rotate it towards playe"
+      ]
+    },
+    {
+      "id": "godot-003",
+      "question": "What are the gotchas with CharacterBody3D and Jolt Physics in Godot 4.6?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 5,
+      "found_source_files": [
+        "gotchas.md",
+        "tips.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://github.com/godotengine/godot/issues/117857",
+          "date": "2026-03-26",
+          "type": "github-issue",
+          "solution_summary": "Bug: Using CharacterBody3D move_and_collide() from _process() (not _physics_process()) with Jolt physics sometimes fails to generate collision responses. Fixed in 4.7. Workaround: use _physics_process() or adjust collision logic.",
+          "has_solution": true
+        },
+        {
+          "url": "https://github.com/godotengine/godot/issues/112315",
+          "date": "2025-11-02",
+          "type": "github-issue",
+          "solution_summary": "Bug: CharacterBody3D apply_floor_snap() onto an AnimatableBody3D can cause catapulting when velocity.y has a small positive value. Workaround: explicitly set velocity.y = 0 when on floor.",
+          "has_solution": true
+        },
+        {
+          "url": "https://github.com/godotengine/godot/issues/113058",
+          "date": "2025-11-22",
+          "type": "github-issue",
+          "solution_summary": "Bug: Reparenting a CharacterBody3D with KeepGlobalTransform=true falsely triggers distant Area3D nodes at world origin. Confirmed, assigned, open. Only occurs with Jolt physics, not Godot Physics.",
+          "has_solution": false
+        }
+      ],
+      "top_snippets": [
+        "## Jolt Physics + CharacterBody3D\n- **Problem:** CharacterBody3D fällt durch den Boden bei Jolt Physics in Godot 4.6\n- **Ursache:** `move_and_slide()` ruft `PhysicsServer3D.body_test_motion()` auf, Jo",
+        "## Jolt: Reparenting CharacterBody3D triggert ferne Area3D\n- **Problem:** Reparenting CharacterBody3D mit `KeepGlobalTransform=true` triggert ferne Area3D-Nodes am World Origin\n- **Ursache:** Jolt Phy",
+        "## CharacterBody3D Stair Stepping\n- CharacterBody3D hat native stair stepping (PR #114447, 2025-12-30, open): Properties `step_enabled`, `step_height` (default 0.3m), `step_smooth_enabled`, `step_smoo"
+      ]
+    },
+    {
+      "id": "godot-004",
+      "question": "How do I set up a 3D camera that follows a player in Godot?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 10,
+      "found_source_files": [
+        "godot-docs-3d-packed.md",
+        "godot-demos-packed.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/classes/class_camera3d.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Camera3D class reference. Documents current property (only one active camera per viewport), projection (Perspective/Orthogonal/Frustum), fov, near/far, cull_mask, environment, h_offset/v_offset, make_current(), clear_current().",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/3d/using_transforms.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Tutorial contains FPS camera example (mouse look, first-person controller) using accumulated rot_x/rot_y outside the transform, with reset rotation then rotate_object_local() for X and Y axes.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "e placed at or near the collision point:\n\n.. image:: img/spring_arm_camera_collision.webp\n\nSetting up the spring arm and camera\n------------------------------------\n\nLet's add a spring arm camera setu",
+        "ed some game assets you'll need to download so we can jump straight to\nthe code.\n\nYou can download them by clicking the link below.\n\n`dodge_the_creeps_2d_assets.zip <https://github.com/godotengine/god",
+        "box.\n\nGo to *Project -> Project Settings*.\n\n|image1|\n\nIf you still have *Input Map* open, switch to the *General* tab.\n\nIn the left menu, navigate down to *Display -> Window*. On the right, set the\n*V"
+      ]
+    },
+    {
+      "id": "godot-005",
+      "question": "How do I fix GLB model import scale issues from Meshy in Godot?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 6,
+      "found_source_files": [
+        "godot-docs-3d-packed.md",
+        "gotchas.md",
+        "best-practices.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://github.com/godotengine/godot/issues/111653",
+          "date": "2025-10-14",
+          "type": "github-issue",
+          "solution_summary": "Bug: Mesh origin point shifts away from world origin when scaling imported GLB/OBJ geometry (not Godot-native QuadMesh). Affects GLB and OBJ. Open, no fix. Disabling 'Generate LODs' is part of reproduction.",
+          "has_solution": false
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/model_export_considerations.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official 3D model export conventions. Godot uses right-handed Y-up coordinates, -Z camera forward, +Z asset front. Recommends triangulation before export, Apply Transforms in Blender, 1 unit = 1 meter. Post-import scaling can cause floating-point precision issues.",
+          "has_solution": true
+        },
+        {
+          "url": "https://github.com/godotengine/godot/issues/97022",
+          "date": "2024-09-14",
+          "type": "github-issue",
+          "solution_summary": "Bug: GLTF nodes using 'matrix' instead of TRS (translation/rotation/scale) had incorrect bone rest transforms (Identity). Fixed in 4.4. Relevant for GLB import issues with scaling/rotation.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "## GLB-Import — Mesh Origin Bug\n- **Problem:** Mesh origin point verschiebt sich vom World Origin weg beim Skalieren importierter GLB/OBJ-Geometrie (nicht bei Godot-nativen QuadMesh)\n- **Ursache:** Bu",
+        "## GLB-Import Scale mit Meshy\n- **Problem:** GLB-Modell unsichtbar weil scale zu klein\n- **Ursache:** Meshy liefert Modelle mit unterschiedlichen nativen Größen\n- **Workaround:** `auto_size: true` + `",
+        "ary`) that can be placed on a grid,\nas if you were building a level with an unlimited amount of Lego blocks.\n\nCollisions and navigation can also be added to the meshes, just like you\nwould do with the"
+      ]
+    },
+    {
+      "id": "godot-006",
+      "question": "How do I use signals to communicate between nodes in GDScript?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 9,
+      "found_source_files": [
+        "tips.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/getting_started/step_by_step/signals.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official signals tutorial. Covers editor-based signal connection (Signals dock, double-click), code-based connection (timer.timeout.connect(_on_timer_timeout)), custom signals (signal health_depleted, emit() with arguments), _ready() for connections, get_node() for references, callback naming (_on_node_name_signal_name).",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "als`, we'll build upon the relationship between\nscripts and nodes by having our nodes trigger code in scripts.\n``````\n\n## File: getting_started/step_by_step/signals.rst\n``````rst\n.. Intention: give th",
+        "displays information about the\nconnection. This feature is only available when connecting nodes in the editor.\n\n.. image:: img/signals_14_signals_connection_info.webp\n\nLet's replace the line with the ",
+        "ithout directly referencing one another. This keeps the code flexible and easier to manage. You can check whether an :ref:`Object<class_Object>` has a given signal name using :ref:`Object.has_signal()"
+      ]
+    },
+    {
+      "id": "godot-007",
+      "question": "How do I create a 3D character controller with movement, jumping, and gravity?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 9,
+      "found_source_files": [
+        "godot-demos-packed.md",
+        "tips.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/physics/using_character_body_2d.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official CharacterBody tutorial with full platformer code: velocity += get_gravity() * delta, jump with is_on_floor(), Input.get_axis for movement, move_and_slide(). Explains motion_mode (GROUNDED vs FLOATING), floor_max_angle, up_direction.",
+          "has_solution": true
+        },
+        {
+          "url": "https://github.com/godotengine/godot/pull/114447",
+          "date": "2025-12-30",
+          "type": "github-pr",
+          "solution_summary": "PR adds native stair stepping to CharacterBody3D (similar to Unreal Engine). New properties: step_enabled, step_height (default 0.3m), step_smooth_enabled, step_smooth_speed. Algorithm: UP-FORWARD-DOWN trace at wall collision. Works with all physics backends. Only in MOTION_MODE_GROUNDED.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "uashed)\n\n\nfunc _on_player_hit():\n\t$MobTimer.stop()\n\t$UserInterface/Retry.show()\n```\n\n## File: 3d/squash_the_creeps/Mob.gd\n```\nextends CharacterBody3D\n\n# Emitted when the player jumped on the mob.\nsign",
+        "d :ref:`Physics <toc-learn-features-physics>` sections will teach you more about 3D game creation in the\n   engine.\n3. :ref:`Inputs <toc-learn-features-inputs>` is another important one for any game p",
+        "_back\"))\n            {\n                direction.Z += 1.0f;\n            }\n            if (Input.IsActionPressed(\"move_forward\"))\n            {\n                direction.Z -= 1.0f;\n            }\n\n     "
+      ]
+    },
+    {
+      "id": "godot-008",
+      "question": "Why is my 3D model not visible in Godot? I've added a MeshInstance3D but nothing shows up in the viewport.",
+      "source_recall": 0.5,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.6406,
+      "label": "weak",
+      "truncation_warnings": 9,
+      "found_source_files": [
+        "godot-docs-3d-packed.md",
+        "faq.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/classes/class_geometryinstance3d.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official GeometryInstance3D class reference. Documents visibility properties: visible (inherited from Node3D), cast_shadow, gi_mode, visibility_range_begin/end, and transparency. Also covers material_override and visibility layers via VisualInstance3D.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/classes/class_camera3d.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Camera3D class reference. Documents current property (only one active camera per viewport), cull_mask for layer-based culling, and projection modes.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "Godot 3.x workflow\n   (used to reference a non existing doc_importing_3d_meshes importer).\n\nIt is possible to import 3D models in Godot created in external tools.\nDepending on the format, you can impo",
+        "of a specific texture that may be too large to render, you can\nset the **Process > Size Limit** import option to a value greater than ``0``.\nThis will reduce the texture's dimensions on import (preser",
+        "## Warum sehe ich mein 3D-Modell nicht?\n- **`visible` Flag**: `MeshInstance3D.visible` (geerbt von `Node3D`) prüfen — und die aller Parents (`get_parent().visible` etc.). Eine unsichtbare Parent-Kette"
+      ]
+    },
+    {
+      "id": "godot-008-de",
+      "question": "Warum sehe ich mein 3D-Modell nicht in Godot? Ich habe ein MeshInstance3D hinzugefügt, aber im Viewport erscheint nichts.",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 5,
+      "found_source_files": [
+        "faq.md",
+        "gotchas.md",
+        "tips.md",
+        "best-practices.md",
+        "godot-docs-3d-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/classes/class_geometryinstance3d.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official GeometryInstance3D class reference. Documents visibility properties: visible (inherited from Node3D), cast_shadow, gi_mode, visibility_range_begin/end, and transparency. Also covers material_override and visibility layers via VisualInstance3D.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/classes/class_camera3d.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Official Camera3D class reference. Documents current property (only one active camera per viewport), cull_mask for layer-based culling, and projection modes.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "## Warum sehe ich mein 3D-Modell nicht?\n- **`visible` Flag**: `MeshInstance3D.visible` (geerbt von `Node3D`) prüfen — und die aller Parents (`get_parent().visible` etc.). Eine unsichtbare Parent-Kette",
+        "Godot 3.x workflow\n   (used to reference a non existing doc_importing_3d_meshes importer).\n\nIt is possible to import 3D models in Godot created in external tools.\nDepending on the format, you can impo",
+        "## 3D Open-World Performance: LOD + Occlusion + Visibility Ranges\n- **Pattern:** Drei-Stufen-Strategie für mobile Open-World-Szenen: (a) Mesh-LOD per GLB-Import-Thresholds reduziert Vertex-Count bei D"
+      ]
+    },
+    {
+      "id": "godot-009",
+      "question": "How do I set up an AnimationTree with a BlendSpace2D for character locomotion in Godot 4? I want to blend between idle, walk, and run animations based on a Vector2 input direction.",
+      "source_recall": 0.5,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.6406,
+      "label": "weak",
+      "truncation_warnings": 9,
+      "found_source_files": [
+        "tips.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/animation/animation_tree.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Vollständige AnimationTree-Anleitung: BlendTree-Root, BlendSpace1D/2D für richtungsabhängige Animationen, StateMachine für Zustandsübergänge, OneShot-Nodes für einmalige Animationen, Root-Motion-Integration und Code-Steuerung via AnimationNodeStateMachinePlayback.travel().",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/animation/index.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Übersichtsseite des Godot-Animationssystems: AnimationPlayer, AnimationTree, Skeleton3D, BoneMap für Retargeting.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "## AnimationTree + BlendSpace2D für Character Locomotion\n\n`AnimationTree` mit `AnimationNodeBlendSpace2D` ist das Standard-Pattern für richtungsabhängige Character-Locomotion (idle, walk, run). Der Tr",
+        "BlendSpace1D_method_get_blend_point_count>`\n\nReturns the number of points on the blend axis.\n\n.. rst-class:: classref-item-separator\n\n----\n\n.. _class_AnimationNodeBlendSpace1D_method_get_blend_point_n",
+        " several 3D engines, as you can\nthen inherit from and extend those scenes. You may create a Magician\nthat extends your Character. Modify the Character in the editor and the Magician\nwill update as wel"
+      ]
+    },
+    {
+      "id": "godot-010",
+      "question": "How do I create a spatial shader in Godot 4 that adds a glowing outline effect around a 3D object using the Fresnel node?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 10,
+      "found_source_files": [
+        "godot-docs-3d-packed.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/shaders/your_first_shader/index.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Step-by-Step Shader-Tutorial: spatial shader type, vertex() und fragment() processor functions, uniforms, varying, built-ins wie FRESNEL, NORMAL, VIEW, ALBEDO, EMISSION. Zeigt wie man Emission für Glow-Effekte nutzt.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/index.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Shading-Referenz: alle shader types (spatial, canvas_item, particles, sky, fog), built-in variables, shading language syntax, precision qualifiers.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "using Grow.\n\nNote that in Godot 4.5 onwards, stencil buffer-based outlines are available\nusing the **Outline** :ref:`stencil mode <doc_standard_material_3d_stencil>`.\nThis can be used as an alternativ",
+        "ember to use a transparent albedo texture (or reduce the albedo color's alpha\nchannel) to make refraction visible, as refraction relies on transparency to\nhave a visible effect.\n\nRefraction also takes",
+        " several 3D engines, as you can\nthen inherit from and extend those scenes. You may create a Magician\nthat extends your Character. Modify the Character in the editor and the Magician\nwill update as wel"
+      ]
+    },
+    {
+      "id": "godot-011",
+      "question": "How do I create a responsive UI in Godot 4 that automatically scales and repositions elements for different screen sizes and aspect ratios using containers and anchors?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 9,
+      "found_source_files": [
+        "godot-docs-3d-packed.md",
+        "godot-demos-packed.md",
+        "best-practices.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/ui/gui_containers.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Container-Referenz: MarginContainer, VBoxContainer, HBoxContainer, GridContainer, CenterContainer, AspectRatioContainer, PanelContainer, ScrollContainer. Erklärt size flags (expand, fill), Container-Sizing und wie Container automatisch Children anordnen.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/ui/gui_skinning.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Theme-System: Theme-Ressourcen, Theme-Typ-Variationen, StyleBoxes (StyleBoxFlat, StyleBoxTexture), theme override in Control-Nodes, Theme-Editor, default theme und Projekt-Theme.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "## Responsive UI mit Container + Anchor + Size Flags\n- **Pattern:** Für responsive UI über verschiedene Screen-Größen und Aspect-Ratios: Container-Hierarchie statt festen Positionen, Size-Flags (`SIZE",
+        ".rst\n``````rst\n:github_url: hide\n\n.. DO NOT EDIT THIS FILE!!!\n.. Generated automatically from Godot engine sources.\n.. Generator: https://github.com/godotengine/godot/tree/master/doc/tools/make_rst.py",
+        "rboxing\") or the sides (\"pillarboxing\").\n\n\\ ``\"keep_width\"``: Keep aspect ratio when stretching the screen. If the screen is wider than the base size, black bars are added at the left and right (pilla"
+      ]
+    },
+    {
+      "id": "godot-012",
+      "question": "How do I make an enemy AI chase the player using NavigationAgent3D in Godot 4? I need the enemy to pathfind around obstacles and update its target position each frame.",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 9,
+      "found_source_files": [
+        "godot-docs-3d-packed.md",
+        "tips.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/navigation/navigation_using_navigationagents.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "NavigationAgent-Doku: NavigationAgent3D-Setup, target_position setzen, get_next_path_position() für Wegpunkt-Verfolgung, is_navigation_finished(), velocity_computed-Signal, avoidance_enabled für lokale Kollisionsvermeidung, path_desired_distance, path_max_distance.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/navigation/navigation_using_navigationmeshes.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "NavigationMesh-Baking: NavigationRegion3D, NavigationMesh-Ressource, Bake-Button im Editor, agent_radius/agent_height/agent_max_climb/agent_max_slope für Agent-Parameter, source_geometry_mode für Mesh-Auswahl.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "## NavigationAgent3D für Enemy AI Chase\n\n`NavigationAgent3D` ist die Standard-Wahl für pathfindende 3D-Enemies. Voraussetzung: ein `NavigationRegion3D` mit gebackener `NavigationMesh` im Level. Der Ag",
+        "ed some game assets you'll need to download so we can jump straight to\nthe code.\n\nYou can download them by clicking the link below.\n\n`dodge_the_creeps_2d_assets.zip <https://github.com/godotengine/god",
+        "|\n\nClick and drag on the curve, pulling it towards the left. This will make it\nease-out, that is to say, transition fast initially and slow down as the time\ncursor reaches the next keyframe.\n\n|image17"
+      ]
+    },
+    {
+      "id": "godot-013",
+      "question": "How do I set up a basic authoritative multiplayer game in Godot 4 using ENet? I need to handle peer connections, spawn players, and synchronize positions with RPC calls where the server has authority.",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 10,
+      "found_source_files": [
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/networking/high_level_multiplayer.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "High-Level Multiplayer: ENetMultiplayerPeer-Setup, create_server()/create_client(), multiplayer_peer property, @rpc annotation modes (authority, any_peer, call_local, call_remote), MultiplayerSpawner/MultiplayerSynchronizer für automatische Node-Synchronisation, multiplayer authority.",
+          "has_solution": true
+        },
+        {
+          "url": "https://github.com/godotengine/godot/issues/57869",
+          "date": null,
+          "type": "github-issue",
+          "solution_summary": "RPC-Fehler: 'RPC 'function_name' is not allowed from: ...' wenn die aufgerufene Funktion nicht auf beiden Peers mit @rpc deklariert ist. Lösung: Funktion auf Client UND Server deklarieren, auch wenn sie nur auf einer Seite aufgerufen wird.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "ed some game assets you'll need to download so we can jump straight to\nthe code.\n\nYou can download them by clicking the link below.\n\n`dodge_the_creeps_2d_assets.zip <https://github.com/godotengine/god",
+        "ource: https://github.com/godotengine/godot/tree/master/modules/multiplayer/doc_classes/MultiplayerSpawner.xml.\n\n.. _class_MultiplayerSpawner:\n\nMultiplayerSpawner\n==================\n\n**Inherits:** :re",
+        " method is intended to be used in editor plugins and tools, but it also works in release builds. See also :ref:`is_editable_instance()<class_Node_method_is_editable_instance>`.\n\n.. rst-class:: classre"
+      ]
+    },
+    {
+      "id": "godot-014",
+      "question": "How do I detect when the player presses the spacebar in GDScript using the Input system? I want to trigger a jump action.",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 10,
+      "found_source_files": [
+        "godot-demos-packed.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/inputs/inputevent.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "InputEvent-Doku: InputEventKey (keycode, physical_keycode, pressed, echo), InputEventMouseButton, InputEventMouseMotion, InputEventJoypadButton/Motion, InputEventAction. Erklärt den Unterschied zwischen keycode (layout-abhängig) und physical_keycode (physische Taste).",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/inputs/input_examples.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Input-Beispiele: Input.is_action_pressed(), Input.is_action_just_pressed(), Input.get_axis(), Input.get_vector(), InputMap-Setup im Editor, _input(event)-Callback, _unhandled_input(event) für GUI-Propagation.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "map.webp\n\nBind also the :kbd:`A` key, onto the action ``move_left``.\n\n.. image:: img/02.player_input/keyboard_keys.webp\n\nLet's now add support for a gamepad's left joystick. Click the \"**+**\" button a",
+        "ections.\n\nIn case the player presses, say, both W and D simultaneously, the vector will\nhave a length of about ``1.4``. But if they press a single key, it will have a\nlength of ``1``. We want the vect",
+        "need to assign a key to this action. Click the \"+\" icon on the right, to\nopen the event manager window.\n\n.. image:: img/input-mapping-add-key.webp\n\nThe \"Listening for Input...\" field should automatica"
+      ]
+    },
+    {
+      "id": "godot-015",
+      "question": "How do I play a looping background music track and a one-shot sound effect in Godot 4 using AudioStreamPlayer?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 10,
+      "found_source_files": [
+        "godot-demos-packed.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/audio/audio_buses.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Audio-Bus-System: Master-Bus, benutzerdefinierte Busse, Bus-Layout, Audio-Effekte pro Bus (Reverb, EQ, Compressor, Delay), Bus-Send/Receive, ducking (side-chain), dB-Volume-Skala, AudioServer.get_bus_index().",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/audio/audio_streams.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Audio-Stream-Typen: AudioStreamWAV (unkomprimiert), AudioStreamMP3, AudioStreamOggVorbis, AudioStreamGenerator (prozedural), AudioStreamMicrophone, AudioStreamRandomizer (zufällige Auswahl), AudioStreamPlaylist. Erklärt loop-Modi und stream-Eigenschaften.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "operty: ``Color``. Choose a color you like and\nselect \"Layout\" -> \"Anchors Preset\" -> \"Full Rect\" either in the toolbar at the top of the viewport or in the inspector so that it covers the screen.\n\nYo",
+        "second 0 of the audio track. Compensate\n\t\t\t# with an offset setting.\n\t\t\t+ first_beat_offset_ms / 1000.0\n\t\t\t# Playback does not start immediately, but only when the next audio\n\t\t\t# chunk is processed (",
+        "f:`stream<class_AudioStreamPlayer_property_stream>` needs to be set to a valid :ref:`AudioStream<class_AudioStream>` resource. Playing more than one sound at the same time is also supported, see :ref:"
+      ]
+    },
+    {
+      "id": "godot-016",
+      "question": "How do I save and load player progress like level, score, and settings using ConfigFile in Godot 4? Where should I store the save file?",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 9,
+      "found_source_files": [
+        "faq.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/io/saving_games.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Save-Game-Tutorial: ConfigFile für INI-ähnliche Speicherung (set_value, get_value, save, load), FileAccess für rohen I/O, JSON.stringify/parse_string für strukturierte Daten, ResourceSaver.save für .tres/.res-Dateien. user://-Pfad für plattformspezifisches User-Datenverzeichnis.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "## Wie speichert man Daten?\n- **`ConfigFile`** für INI-ähnliche `.cfg`-Dateien (Sections, Keys, Werte). Gut für Settings, einfache Save-Games.\n- **`FileAccess`** für rohen I/O (`store_string`, `store_",
+        "eparator\n\n----\n\n.. _class_ProjectSettings_method_save_custom:\n\n.. rst-class:: classref-method\n\n:ref:`Error<enum_@GlobalScope_Error>` **save_custom**\\ (\\ file\\: :ref:`String<class_String>`\\ ) :ref:`🔗<c",
+        "|\n\nClick and drag on the curve, pulling it towards the left. This will make it\nease-out, that is to say, transition fast initially and slow down as the time\ncursor reaches the next keyframe.\n\n|image17"
+      ]
+    },
+    {
+      "id": "godot-017",
+      "question": "How do I optimize a large 3D open-world scene in Godot 4 for mobile performance? I need to reduce draw calls and manage which objects are rendered based on distance.",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 9,
+      "found_source_files": [
+        "godot-docs-3d-packed.md",
+        "best-practices.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/3d/mesh_lod.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Mesh-LOD: automatische LOD-Generierung im Import-Dialog, LOD-Thresholds (Pixel-Schwellwerte), manuelle LOD-Konfiguration, MeshOptimization-Klasse, LOD-Bias in ProjectSettings. Reduziert Vertex-Count bei entfernten Objekten.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/3d/occlusion_culling.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Occlusion Culling: OccluderInstance3D-Nodes, automatisches Baking von Occludern aus Geometrie, Szenen-basierte Occlusion, Performance-Überlegungen. Verhindert Rendering von Objekten hinter Wänden.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/3d/visibility_ranges.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Visibility Ranges (HLOD): GeometryInstance3D.visibility_range_begin/end, VisibilityNotifier3D, VisibilityEnabler3D für automatisches Ein-/Ausschalten von Nodes basierend auf Kamera-Distanz. Nützlich für Open-World-Szenen.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "of a specific texture that may be too large to render, you can\nset the **Process > Size Limit** import option to a value greater than ``0``.\nThis will reduce the texture's dimensions on import (preser",
+        "ey render in Blender. This means that\n  materials in Godot will have their cull mode set to **Disabled**. This can\n  decrease performance since backfaces will be rendered, even when they are\n  being c",
+        "## 3D Open-World Performance: LOD + Occlusion + Visibility Ranges\n- **Pattern:** Drei-Stufen-Strategie für mobile Open-World-Szenen: (a) Mesh-LOD per GLB-Import-Thresholds reduziert Vertex-Count bei D"
+      ]
+    },
+    {
+      "id": "godot-018",
+      "question": "How do I create a 2D platformer level with tile-based collision in Godot 4 using TileMapLayer and TileSet? I want different tiles for ground, walls, and platforms.",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 10,
+      "found_source_files": [
+        "godot-docs-3d-packed.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/2d/using_tilesets.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "TileSet-Tutorial: TileSet-Ressource erstellen, Textur-Atlas importieren, Tiles definieren (Physics-Layer für Kollision, Navigation-Layer, Terrain-Sets, alternative Tiles), Tile-Größe, Tile-Offset, Kollisions-Shapes pro Tile.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/2d/using_tilemaps.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "TileMapLayer-Doku: TileMapLayer-Nodes (Godot 4 ersetzt das alte TileMap-Node), mehrere Layer für verschiedene Tile-Typen, Tile-Painting im Editor, Tile-Patterns, TileMapLayer-Rendering (y-sort, z-index), TileMapLayer-Kollision.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "ary`) that can be placed on a grid,\nas if you were building a level with an unlimited amount of Lego blocks.\n\nCollisions and navigation can also be added to the meshes, just like you\nwould do with the",
+        "abbr:`static (This method doesn't need an instance to be called, so it can be called directly using the class name.)`\n.. |operator| replace:: :abbr:`operator (This method describes a valid operator to",
+        "r (This method describes a valid operator to use with this type as left-hand operand.)`\n.. |bitfield| replace:: :abbr:`BitField (This value is an integer composed as a bitmask of the following flags.)"
+      ]
+    },
+    {
+      "id": "godot-019",
+      "question": "How do I create a custom Resource type in GDScript to store item data like name, icon texture, and stats? I want to create individual item instances in the editor.",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 9,
+      "found_source_files": [
+        "best-practices.md",
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/resources.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Resources: Resource-Klasse, Custom Resources via class_name extends Resource, @export-Variablen für Editor-Editierbarkeit, ResourceLoader.load(), ResourceSaver.save(), .tres (textuell) vs .res (binär), Resource-Preloading, Resource-Instanzen als Daten-Container.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html#doc-gdscript-basics-class-name",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "class_name: registriert ein GDScript als globalen Typ im Editor, ermöglicht @export var item: ItemData, erscheint in 'Create New Resource'-Dialog. class_name muss mit dem Dateinamen übereinstimmen.",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "type, which will appear in the list of nodes or resources.\n\nWhen a given node or resource is selected, the base type will be instantiated (e.g. \"Node3D\", \"Control\", \"Resource\"), then the script will b",
+        "## Custom Resource als Item-Daten-Container\n- **Pattern:** Eigene Resource-Subklasse mit `class_name` und `@export`-Properties für Editor-Editierbarkeit. Im FileSystem \"Create New Resource\" → ItemData",
+        "doRedoManager<class_EditorUndoRedoManager>` exist, which may cause some scripts to break. To prevent this, you can use :ref:`Engine.get_singleton()<class_Engine_method_get_singleton>` and omit the sta"
+      ]
+    },
+    {
+      "id": "godot-020",
+      "question": "How do I use the Godot Profiler to identify which scripts or functions are causing frame rate drops in my game? I want to find performance bottlenecks.",
+      "source_recall": 1.0,
+      "page_metadata_accuracy": null,
+      "top_k_relevance": 0.55,
+      "evidence_quality": 1.0,
+      "composite_score": 0.8594,
+      "label": "pass",
+      "truncation_warnings": 10,
+      "found_source_files": [
+        "godot-docs-reference-packed.md"
+      ],
+      "total_results": 10,
+      "real_world_sources": [
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/debug/the_profiler.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Profiler: Debugger → Profiler-Tab, Frame-Time-Graph, Funktions-Call-Liste mit self_time/total_time, Script-Funktionen, Physics-Frame vs Process-Frame, Engine-internal functions, Profiler-Start/Stop, CSV-Export für externe Analyse.",
+          "has_solution": true
+        },
+        {
+          "url": "https://docs.godotengine.org/en/stable/tutorials/scripting/debug/debugger_panel.html",
+          "date": null,
+          "type": "official-docs",
+          "solution_summary": "Debugger-Panel: Errors-Tab, Stack-Trace, Breakpoints, Step-Over/Into/Out, Variable-Inspector, Remote-Scene-Tree (live Node-Hierarchie während des Spiels), Monitors-Tab (FPS, Memory, Node-Count, Draw-Calls).",
+          "has_solution": true
+        }
+      ],
+      "top_snippets": [
+        "leton is a globally accessible object. Godot\n   provides access to several in scripts. It's the right tool to check for input\n   every frame.\n\nWe're going to use the ``Input`` singleton here as we nee",
+        "e measure the rate at which a game produces images in\n    Frames Per Second (FPS). Most games aim for 60 FPS, although you might find\n    figures like 30 FPS on slower mobile devices or 90 to 240 for ",
+        "als`, we'll build upon the relationship between\nscripts and nodes by having our nodes trigger code in scripts.\n``````\n\n## File: getting_started/step_by_step/signals.rst\n``````rst\n.. Intention: give th"
+      ]
+    }
+  ]
+}

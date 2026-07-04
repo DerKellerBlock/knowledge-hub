@@ -81,6 +81,7 @@ def semantic_search(
             "page_start": meta.get("page_start"),
             "page_end": meta.get("page_end"),
             "section_path": meta.get("section_path"),
+            "context_prefix": meta.get("context_prefix"),
         }
         formatted.append(entry)
 

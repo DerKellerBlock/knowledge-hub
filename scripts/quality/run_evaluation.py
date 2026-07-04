@@ -63,17 +63,46 @@ def _validate_domain(domain: str) -> None:
         )
 
 
-def run_evaluation(domain: str) -> dict:
+def _resolve_dataset_path(domain: str, dataset_path: str | None = None) -> Path:
+    """Resolve the Golden Dataset YAML path for a domain.
+
+    Phase 3.1b (C2-Blocker): allows callers (and the ``--dataset-path``
+    CLI flag) to point at an arbitrary dataset YAML — e.g. a custom
+    ``eval``-domain dataset that does not live under
+    ``quality/golden/<domain>.yaml``.
+
+    Args:
+        domain: Validated domain name. Only used to build the default
+            path; ignored when ``dataset_path`` is given.
+        dataset_path: Optional explicit path. ``None`` → default
+            ``GOLDEN_DIR / f"{domain}.yaml"`` (backward-compatible).
+
+    Returns:
+        ``Path`` to the dataset YAML to load.
+    """
+    if dataset_path:
+        return Path(dataset_path)
+    return GOLDEN_DIR / f"{domain}.yaml"
+
+
+def run_evaluation(domain: str, dataset_path: str | None = None) -> dict:
     """Run all Golden Dataset questions against the live index.
 
     Returns a dict with ``domain``, ``date``, ``evaluations`` (per-question
     metric dicts) and ``summary`` (aggregated counts/averages).
 
+    Args:
+        domain: Domain name (validated against ``^[a-z0-9_]+$``).
+        dataset_path: Optional explicit path to a Golden Dataset YAML
+            file. When ``None`` (default) the dataset is loaded from
+            ``quality/golden/<domain>.yaml`` — backward-compatible with
+            the pre-Phase-3.1b CI quality-gate.
+
     Raises:
         ValueError: if ``domain`` does not match the safety pattern.
     """
     _validate_domain(domain)
-    path = GOLDEN_DIR / f"{domain}.yaml"
+    path = _resolve_dataset_path(domain, dataset_path)
     dataset = load_golden_dataset(path)
     # is_pdf is derived from the domain's domain.md "Source-Types" metadata
     # (e.g. davinci_resolve sets "Source-Types: pdf"). Falls back to False
@@ -183,6 +212,11 @@ def main() -> None:
     parser.add_argument(
         "--baseline", type=str, help="Compare against baseline JSON file"
     )
+    parser.add_argument(
+        "--dataset-path", type=str, default=None,
+        help="Path to golden dataset YAML "
+             "(default: quality/golden/<domain>.yaml)",
+    )
     args = parser.parse_args()
 
     # Domain name validation (path-traversal / injection protection).
@@ -194,7 +228,7 @@ def main() -> None:
         sys.exit(1)
 
     print(f"[INFO]  Running evaluation for domain: {args.domain}")
-    result = run_evaluation(args.domain)
+    result = run_evaluation(args.domain, dataset_path=args.dataset_path)
 
     s = result["summary"]
     print("\n[SUMMARY] " + args.domain)

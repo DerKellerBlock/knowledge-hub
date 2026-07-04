@@ -231,7 +231,57 @@ Output: 50–100 Token, gestripped, in `context_prefix` gespeichert.
 - **N5:** `from_chromadb_metadata` None-tolerant für `context_prefix`
 - **N6:** Durchsatz-Schätzung 15–20h (Ollama v0.31.1+ mit MTP-Speedup)
 
-## 14. Referenzen
+## 14. Cloud-Modell-Option (Phase 3.1c)
+
+### Empfohlenes Cloud-Modell: gemma4:cloud
+
+- **Modell:** `gemma4:cloud` (32.7B, 256K Token Kontext, multilingual MMMLU 88.4%)
+- **Reasoning-Modell:** gleiche Gemma-4-Reasoning-Semantik wie `gemma4:12b-mlx` → `num_predict=800` via Auto-Resolve in `generate_context()` (`"gemma4" in model_name.lower()`).
+- **Setup:**
+  ```bash
+  ollama signin                              # interaktiv, einmalig
+  ollama pull gemma4:cloud                   # registriert Cloud-Stub
+  export KH_LLM_MODEL=gemma4:cloud
+  export KH_OLLAMA_HOST=http://localhost:11434  # lokaler Daemon routet Cloud
+  ```
+- **Alternative:** `gpt-oss:20b-cloud` (Usage Level 1, günstiger, Non-Reasoning → `num_predict=200`).
+
+### Durchsatz-Schätzung
+
+- ~3h für 24.593 Pfad-A-Chunks (vs. 69h lokal mit gemma4:12b-mlx).
+- ~0,3–0,5s/Chunk erwartet — **vorab empirisch zu verifizieren** (100-Chunk-Vorab-Test, Task 14a).
+
+### Datenschutz
+
+- Chunk-Texte + Quelldokumente werden an Ollama-Cloud gesendet.
+- Zero-Retention-Policy: "Prompt or response data is never logged or trained on" (ollama.com/privacy).
+- Akzeptabel für trusted Sources (öffentliche Godot-Docs + technische Personal Notes).
+- Nicht akzeptabel für sensitive Personal Notes — für diese wäre lokales Gemma fallback.
+
+### Risiko-Reduktion
+
+- HÖCHSTE-Risiko (69h Batch für null Gewinn) → NIEDRIG (3h, bei Misserfolg wiederholbar).
+- Spot-Check-Gate (3.1b) bleibt sinnvoll als Mechanismus-Validierung, aber der Go/No-Go-Druck sinkt.
+
+### Usage-Limit-Handling (Phase 3.1c neu)
+
+- Ollama-Cloud hat Session-Limits (Reset alle 5 Stunden) und Weekly-Limits (Reset alle 7 Tage).
+- Bei Usage-Limit-Erreichung (HTTP 429 / "rate limit" / "quota exceeded" / "usage limit"): `contextualize_chunks.py` stoppt sofort (kein 3× Backoff — Limit ist persistent, nicht transient). Cache behält alle geschriebenen Einträge.
+- **Resume nach Limit-Reset:** `contextualize_chunks.py --domain godot_eval_b` neu starten → Cache-Hits überspringen fertige Chunks → macht nur die fehlenden weiter.
+- **Account-Wechsel bei Limit:** `ollama signin` mit neuem Account (interaktiv), dann neu starten. Cache-Key enthält Modell (`gemma4:cloud`), nicht Account → Cache bleibt gültig. Beliebig oft abbrechen/neu starten/Account wechseln, Cache wächst monoton.
+
+### Dynamische Modellauswahl
+
+- `KH_LLM_MODEL` wird LIVE in `get_llm()` auf jedem Cache-Miss gelesen → Wechsel zwischen lokal/cloud zur Laufzeit möglich.
+- Cache-Key enthält Modellname → kein stale cross-Modell Reuse.
+
+### Konfounder-Hinweis
+
+- Cloud-Gemma (32.7B) ≠ lokales Gemma 12B — Kontextqualität könnte abweichen.
+- Der 3.1c-Voll-Lauf misst Cloud-Gemma-Kontext, nicht lokal-Gemma.
+- Sollte später auf lokales Gemma gewechselt werden, ist ein Re-Lauf nötig (Cache-Keys differenzieren nach Modellname).
+
+## 15. Referenzen
 
 - Anthropic Contextual Retrieval: https://www.anthropic.com/news/contextual-retrieval
 - Gemma 4: https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/

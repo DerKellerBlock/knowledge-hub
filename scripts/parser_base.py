@@ -50,6 +50,13 @@ class Chunk:
     page_start: int | None = None      # PDF page number (1-based), set by fallback_chunk if page separators present
     page_end: int | None = None        # PDF page number (1-based), set by fallback_chunk if page separators present
 
+    # Contextual Retrieval (Phase 3.1): LLM-generated context prefix that
+    # situates this chunk within its source document. None for chunks built
+    # before Phase 3.1 (backward-compat). Embedding input becomes
+    # ``context_prefix + "\n" + text`` (Phase 3.1b/c); BM25 and the
+    # cross-encoder continue to see only ``text`` (D1 — separate field).
+    context_prefix: str | None = None
+
     # Intern (wird von embed_index.py gesetzt)
     chunk_id_in_file: int = 0
 
@@ -82,6 +89,8 @@ class Chunk:
             meta["page_start"] = self.page_start
         if self.page_end is not None:
             meta["page_end"] = self.page_end
+        if self.context_prefix is not None:
+            meta["context_prefix"] = self.context_prefix
         return meta
 
     @staticmethod
@@ -105,6 +114,7 @@ class Chunk:
             line_start=meta.get("line_start", 0),
             line_end=meta.get("line_end", 0),
             chunk_id_in_file=meta.get("chunk_id_in_file", 0),
+            context_prefix=meta.get("context_prefix"),
         )
 
 

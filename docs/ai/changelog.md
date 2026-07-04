@@ -85,3 +85,50 @@
 - **fix(parser):** MEDIUM-1 `_encode_chapter_with_hidden_states` wrapper (dead code cleanup) + MEDIUM-2 fixed-size fallback for >8192 token chapters without paragraph boundaries.
 - **feat(content):** 5 personal note sections added (AnimationTree+BlendSpace2D Locomotion, NavigationAgent3D Enemy Chase, 3D Performance LOD/Occlusion/Visibility, Responsive UI Containers/Anchors, Custom Resource). godot-011 + godot-019 weak→pass. avg_composite 0.8073 → 0.8281, 18 pass / 3 weak.
 
+## 2026-07-02 (Phase 3.1a — Contextual Retrieval Infrastructure)
+
+- **Phase 3.1a implementiert:** LLM-Infrastruktur für Contextual Retrieval (KEIN Rebuild, KEINE Kontext-Generierung für echte Chunks — das ist 3.1b/c).
+- **Neues Feld `Chunk.context_prefix`** (`scripts/parser_base.py`): optionales `str | None = None`, LLM-generierter 50–100 Token Kontext, der den Chunk im Gesamtdokument verortet. `to_chromadb_metadata()` serialisiert es (wenn nicht None), `from_chromadb_metadata()` liest es None-tolerant (N5 Backward-Compat für alte Collections). BM25 und Cross-Encoder bleiben unverändert (nur `text`, D1 Hybrid-Nutzung).
+- **`get_llm()` + `generate_context()`** (`scripts/model_manager.py`): Lazy-Load LLM, Cache-Key `llm:<model_name>`, liest `KH_LLM_MODEL`/`KH_LLM_BACKEND` LIVE (analog `KH_EMBEDDING_MODEL`). Backend `"ollama"` (Default) nutzt `ollama.Client()`; `"llama-cpp"` Fallback. `generate_context()` nutzt Anthropic-Contextual-Retrieval-Prompt-Template, `keep_alive="24h"`, `temperature=0`, `num_predict=800` (Gemma 4 Reasoning-Overhead).
+- **`config.py`**: `DEFAULT_LLM_MODEL`, `DEFAULT_LLM_BACKEND` Konstanten (analog `CROSS_ENCODER_MODEL`).
+- **MCP-Server**: `context_prefix` als separates Metadaten-Feld in Suchergebnissen (`embed_search.py`, `hybrid_search.py`). `text` bleibt clean (D1).
+- **`requirements.txt`**: `ollama>=0.4.0,<1.0.0` hinzugefügt (HTTP-Client, kein transformers-Konflikt).
+- **Tests**: `tests/unit/test_contextualize_infra.py` (15 Tests, alle grün): `get_llm()` Cache/Env-Var-LIVE-Lesung, `Chunk.context_prefix` Feld + N5 None-Toleranz, `generate_context()` mit FakeOllamaClient (ChatResponse-Style) + Error-Handling.
+- **Doku**: `best-practices.md` (`KH_LLM_MODEL`, `KH_LLM_BACKEND`, N4 BGE-M3-Voraussetzung, Gemma-4-Reasoning-Hinweis), `security.md` (Local LLM Sektion), `domain-model.md` (context_prefix), `THIRD_PARTY_LICENSES.md` (Gemma 4 12B Apache-2.0 + Ollama MIT), `known-issues.md` (LIM-012), `changelog.md` (dieser Eintrag).
+- **E2E verifiziert**: `get_llm()` + `generate_context()` mit echtem Gemma 4 12B MLX via Ollama 0.31.1 liefert validen 98-Zeichen-Kontext ("A rotation method within a Godot Node3D tutorial covering 3D transforms and character controllers.").
+- **Bekannte Einschränkungen**: LIM-012 (Ollama ≥0.31.1, Gemma-Reasoning `num_predict=800`, ~69h Durchsatz).
+- **KEINE Änderung**: `embed_index.py` Embedding-Logik (`context_prefix + "\n" + text` kommt in 3.1b/c), `bm25_search.py`, `reranker.py`, ChromaDB-Index (kein Rebuild).
+
+## 2026-07-02 (Phase 3.1b — Contextual Retrieval: Kontext-Generierung + Small-Scale-Eval)
+
+- **Phase 3.1b implementiert:** Kontext-Generierung + Small-Scale-Eval-Infrastruktur. Iterationssplit: 3.1b = Mechanismus + Spot-Check-Gate (Tasks 1–13), 3.1c = 69h-Voll-Lauf + Voll-Eval (Tasks 14–17, separater Go/No-Go).
+- **Neue Skripte:**
+  - `scripts/contextualize_chunks.py` — CLI: `--domain`, `--limit N`, `--dry-run`, `--source-file`, `--batch-size`. Batch-Loop mit Ollama-Startup-Check, Cache-Lookup, LLM-Call mit Retry/Backoff (exponentiell 30s/60s/120s, 3 Versuche), Output-Validation, Resume via SQLite-Cache. Pfad-A-Filter: pure `chunk_type != "late_chunk"` (Spec N1, kein Domain-/source_types-Check). Dependency-Injection für Tests.
+  - `scripts/context_cache.py` — SQLite-Cache-Modul: `open_cache(domain)`, `cache_key(source_file, chunk_id_in_file, chunk_text_hash, model)` (domain-unabhängig, OQ-3 Option b), `get_cached/put_cached`, WAL-Mode, `INSERT OR REPLACE`, `bulk_invalidate_by_source_file`, `count_entries`. Cache-Pfad: `chromadb_data/<domain>/context_cache.db`.
+  - `scripts/quality/gate.py` — Spot-Check-Gate-Entscheidungslogik: `decide_gate(composite_delta)` → "GO"/"NO-GO" (Schwelle ≥ −0,02), `compute_composite_delta(current, baseline)`.
+- **Geänderte Skripte:**
+  - `scripts/model_manager.py` — `generate_context()` ergänzt: Output-Validation `_validate_context()` (Länge 10–500, mehrzeilige Instruktionssprache-Regex, Injektions-Präfix), Token-Limits `_truncate()` (document 50k, chunk 30k).
+  - `scripts/embed_index.py` — `build_index(domain, contextualize=False, contextualize_bm25=False)`, `--contextualize` Flag. Embedding-Input = `context_prefix + "\n" + text` wenn contextualize. ChromaDB documents bleiben `c.text` (D1). BM25 bleibt `c.text` (D1, contextualize_bm25 Flag akzeptiert aber noch nicht genutzt).
+  - `scripts/quality/run_evaluation.py` — `--dataset-path` Flag, `_resolve_dataset_path()` Hilfsfunktion. Default `None` → backward-kompatibel.
+- **Neue Eval-Infrastruktur:**
+  - `domains/godot_eval_a/` — Baseline-Domain (Symlinks auf godot/sources + personal, eigene domain.md mit BGE-M3)
+  - `domains/godot_eval_b/` — Kontextualisiert-Domain (gleiche Symlinks)
+  - `domains/godot_spotcheck/` — Spot-Check-Domain (nur personal-Symlinks, BGE-M3 domain.md, NB-6)
+  - `quality/golden/godot_spotcheck.yaml` — 2 Fragen (godot_spotcheck-005, godot_spotcheck-008-de), Spot-Check-Gate
+- **Entscheidungen (E6, E11–E15):** E6: `--contextualize` Flag von 3.1c nach 3.1b vorgezogen (Spec-Abweichung). E11: Spot-Check-Gate Option (a) — personal-only, No-Go-Gate. E12: `--dataset-path` Flag (C2-Blocker gelöst). E13: Separate Eval-Domains statt Backup/Restore. E14: gestrichen (BM25-Isolation über Domain-Namen). E15: Pfad-A pure chunk_type-basiert (Spec N1).
+- **Tests:** 202 Unit-Tests (vorher 148 + 54 neu), 90 Integration-Tests (vorher 48 + 42 neu), alle grün.
+- **Doku:** `decisions.md` (E6, E11–E15), `domain-model.md` (Pfad-A + SQLite-Cache), `known-issues.md` (LIM-013 + Spot-Check-Limitation), `best-practices.md` (CLI + Spot-Check-Gate), `architecture.md` (Contextualize-Schritt), `security.md` (M2/M3-Mitigations + Retry), `changelog.md` (dieser Eintrag).
+
+## 2026-07-04 (Phase 3.1c — Cloud-Voll-Lauf + Voll-Eval, NO-GO)
+
+- **Cloud-Voll-Lauf:** gemma4:cloud via Ollama-Cloud, 4580 Pfad-A-Chunks, ~3h (inkl. Resume nach transientem 502-Cloud-Ausfall). Cache vollständig (4580/4580, 0 rejected).
+- **A/B-Voll-Eval gegen godot.yaml (21 Fragen):**
+  - A (Baseline, no-contextualize): avg_composite 0.8281, 18 pass / 3 weak
+  - B (kontextualisiert, gemma4:cloud): avg_composite 0.8386, 19 pass / 2 weak
+  - Delta: +0.0105 (NO-GO, < +0.02 Schwelle)
+- **godot-012 (NavigationAgent3D Enemy Chase): weak → pass** (+0.2188 composite) — Contextual Retrieval hat diese Frage gehoben via verbesserter semantischer Auffindbarkeit der deutschen tips.md-Sektion.
+- **godot-008, 009: bleiben weak** (Sprachbarriere / breite Animation, bekannt — known-issues.md).
+- **Keine Regressionen** bei den anderen 20 Fragen.
+- **KEIN Promote** (Task 16 übersprungen). Eval-Domains (godot_eval_a/b, godot_spotcheck) behalten für spätere Re-Läufe (Contextual BM25, Prompt-Tuning, anderes Modell).
+- **Konfounder:** Cloud-gemma4 (32.7B) ≠ lokales Gemma 12B — Kontextqualität könnte abweichen.
+

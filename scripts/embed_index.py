@@ -247,7 +247,8 @@ def load_domain_sources(
     return chunks, precomputed_or_none
 
 
-def build_index(domain: str) -> None:
+def build_index(domain: str, contextualize: bool = False,
+                contextualize_bm25: bool = False) -> None:
     """Build ChromaDB + BM25 index for a single domain.
 
     Phase 2.2: For PDF domains (e.g. DaVinci Resolve), if
@@ -255,6 +256,13 @@ def build_index(domain: str) -> None:
     ``late_chunk``), those are used directly for the late_chunk
     chunks. Other chunks (e.g. personal notes, or fallback_chunks
     in mixed domains) are still embedded via ``_encode_robust``.
+
+    Phase 3.1: When ``contextualize=True``, an LLM-generated
+    ``context_prefix`` is prepended to the chunk text for embedding
+    input only (``context_prefix + "\\n" + text``). ChromaDB documents
+    and BM25 continue to see clean ``text`` (D1). Contextualization is
+    opt-in via the ``--contextualize`` CLI flag (default off →
+    backward-compatible).
     """
     import numpy as np
 
@@ -273,6 +281,39 @@ def build_index(domain: str) -> None:
     print(f"[INFO]  Parsed into {len(chunks)} chunks "
           f"(repo: {repo_count}, personal: {personal_count}, "
           f"late_chunk: {late_count})")
+
+    # Phase 3.1: Contextualize chunks (opt-in via --contextualize).
+    # Generates an LLM ``context_prefix`` for each Path-A chunk
+    # (chunk_type != "late_chunk") and persists it in the per-domain
+    # SQLite cache. The prefix is prepended to the chunk text for
+    # embedding input only (D1); ChromaDB documents and BM25 keep
+    # clean ``text``.
+    if contextualize and chunks:
+        if contextualize_bm25:
+            print("[INFO]  contextualize_bm25 not yet implemented, "
+                  "using D1 default (BM25 sees clean text)")
+        print(f"[INFO]  Contextualizing chunks (Phase 3.1)...")
+        from contextualize_chunks import (
+            contextualize_chunks as _contextualize,
+            check_ollama_available,
+        )
+        from context_cache import open_cache
+        from model_manager import DEFAULT_LLM_MODEL, get_llm
+        llm_entry = get_llm()
+        check_ollama_available(llm_entry)
+        model_name = os.environ.get("KH_LLM_MODEL", DEFAULT_LLM_MODEL)
+        conn = open_cache(domain)
+        try:
+            # Path-A filter (Spec N1): exclude late_chunk chunks. The
+            # ``contextualize_chunks`` function does not re-filter (its
+            # contract expects a pre-filtered list), so filter here.
+            path_a_chunks = [c for c in chunks if c.chunk_type != "late_chunk"]
+            _contextualize(domain, path_a_chunks, llm_entry, conn, model_name)
+            contextualized_count = sum(1 for c in chunks if c.context_prefix)
+            print(f"[INFO]  Contextualized {contextualized_count}/{len(chunks)} "
+                  f"chunks")
+        finally:
+            conn.close()
 
     # Build the per-chunk embedding array aligned with `chunks`. If
     # precomputed_embeddings is present (PDF domain with late_chunk),
@@ -297,7 +338,14 @@ def build_index(domain: str) -> None:
             model = get_embedder(domain)
             print(f"[INFO]  Embedding {len(fallback_indices)} fallback "
                   f"chunks with {model.__class__.__name__}...")
-            fallback_texts = [chunks[i].text for i in fallback_indices]
+            if contextualize:
+                fallback_texts = [
+                    (chunks[i].context_prefix + "\n" + chunks[i].text)
+                    if chunks[i].context_prefix else chunks[i].text
+                    for i in fallback_indices
+                ]
+            else:
+                fallback_texts = [chunks[i].text for i in fallback_indices]
             fallback_emb = _encode_robust(model, fallback_texts)
         else:
             fallback_emb = None
@@ -325,7 +373,13 @@ def build_index(domain: str) -> None:
         # Default path: encode all chunks via _encode_robust.
         model = get_embedder(domain)
         print(f"[INFO]  Embedding with {model.__class__.__name__}...")
-        texts = [c.text for c in chunks]
+        if contextualize:
+            texts = [
+                (c.context_prefix + "\n" + c.text) if c.context_prefix else c.text
+                for c in chunks
+            ]
+        else:
+            texts = [c.text for c in chunks]
         embeddings = _encode_robust(model, texts)
 
     # B7: log the embedding dimension after the first encode so a
@@ -385,11 +439,26 @@ def main():
     parser = argparse.ArgumentParser(description="Build ChromaDB + BM25 index")
     parser.add_argument("--domain", type=str, help="Single domain to index")
     parser.add_argument("--all", action="store_true", help="Index all domains")
+    parser.add_argument(
+        "--contextualize",
+        action="store_true",
+        help="Generate LLM context prefix for chunks (Phase 3.1). "
+             "Default: off (no context prefix).",
+    )
+    parser.add_argument(
+        "--contextualize-bm25",
+        action="store_true",
+        help="Also use context_prefix in BM25 (Contextual BM25, "
+             "experimental). Implies --contextualize.",
+    )
     args = parser.parse_args()
 
     if not args.domain and not args.all:
         parser.print_help()
         sys.exit(1)
+
+    contextualize = args.contextualize or args.contextualize_bm25
+    contextualize_bm25 = args.contextualize_bm25
 
     # Run migration if needed
     print("[INFO]  Checking for legacy layout migration...")
@@ -417,7 +486,8 @@ def main():
         else:
             print(f"  Parser: none (fallback chunking)")
         print(f"{'=' * 60}")
-        build_index(domain)
+        build_index(domain, contextualize=contextualize,
+                    contextualize_bm25=contextualize_bm25)
 
     print(f"\n[INFO]  Done.")
 

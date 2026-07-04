@@ -1,0 +1,121 @@
+# godot_spotcheck.yaml — Spot-Check-Gate für Phase 3.1b
+# NICHT godot.yaml-basiert. Zweck: 3.1b-Mechanismus-Gate (Pipeline läuft + kein negatives Signal auf personal).
+# Misst NICHT echte Quality gegen godot.yaml (nur 2 pure-personal-Fragen, N=2 ist schwaches Signal).
+# Echte Quality-Entscheidung in 3.1c (Voll-Lauf gegen godot.yaml).
+# Abbruchkriterium 3.1b: composite-Delta ≥ −0,02 (nur No-Go-Gate bei deutlicher Regression).
+# 3.1c-Go ist eine separate Noah-Entscheidung (Spot-Check neutral + Hauptnutzen bei repo-Chunks erwartet reicht).
+#
+# Fallback-Dataset (OQ-1): Noah hat die 3 ursprünglich geplanten neuen Spot-Check-Fragen
+# noch nicht kuratiert. Daher werden 2 pure-personal-Fragen aus godot.yaml übernommen
+# (godot-005: gotchas.md-only, godot-008-de: faq.md-only). Beide haben kein
+# expected_source_files-Overlap mit repo-Quellen — sie isolieren den
+# personal-Chunk-Pfad des Spot-Check-Gates. IDs werden mit `godot_spotcheck-`
+# Präfix versehen, um sie von den godot.yaml-Fragen unterscheidbar zu machen.
+domain: godot_spotcheck
+version: 1
+description: "Spot-Check Gate dataset for Phase 3.1b/3.1c (5 questions: 2 fallback + 3 curated)"
+last_updated: 2026-07-03
+questions:
+  - id: godot_spotcheck-005
+    question: "How do I fix GLB model import scale issues from Meshy in Godot?"
+    expected_source_files:
+      - "gotchas.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://github.com/godotengine/godot/issues/111653"
+        date: "2025-10-14"
+        type: "github-issue"
+        solution_summary: "Bug: Mesh origin point shifts away from world origin when scaling imported GLB/OBJ geometry (not Godot-native QuadMesh). Affects GLB and OBJ. Open, no fix. Disabling 'Generate LODs' is part of reproduction."
+        has_solution: false
+      - url: "https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/model_export_considerations.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official 3D model export conventions. Godot uses right-handed Y-up coordinates, -Z camera forward, +Z asset front. Recommends triangulation before export, Apply Transforms in Blender, 1 unit = 1 meter. Post-import scaling can cause floating-point precision issues."
+        has_solution: true
+      - url: "https://github.com/godotengine/godot/issues/97022"
+        date: "2024-09-14"
+        type: "github-issue"
+        solution_summary: "Bug: GLTF nodes using 'matrix' instead of TRS (translation/rotation/scale) had incorrect bone rest transforms (Identity). Fixed in 4.4. Relevant for GLB import issues with scaling/rotation."
+        has_solution: true
+    difficulty: medium
+    tags: [glb, import, scale, meshy, gotcha]
+    created_date: 2026-06-29
+    last_verified: 2026-06-29
+    notes: "Spot-Check-Fallback (OQ-1). Übernommen aus godot.yaml godot-005 (personal/gotchas.md, GLB-Import Scale mit Meshy entry). ID auf godot_spotcheck-005 geändert. Tests personal knowledge retrieval (pure personal, kein repo-Overlap)."
+    min_top_k: 10
+  - id: godot_spotcheck-008-de
+    question: "Warum sehe ich mein 3D-Modell nicht in Godot? Ich habe ein MeshInstance3D hinzugefügt, aber im Viewport erscheint nichts."
+    expected_source_files:
+      - "faq.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/classes/class_geometryinstance3d.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official GeometryInstance3D class reference. Documents visibility properties: visible (inherited from Node3D), cast_shadow, gi_mode, visibility_range_begin/end, and transparency. Also covers material_override and visibility layers via VisualInstance3D."
+        has_solution: true
+      - url: "https://docs.godotengine.org/en/stable/classes/class_camera3d.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Camera3D class reference. Documents current property (only one active camera per viewport), cull_mask for layer-based culling, and projection modes."
+        has_solution: true
+    difficulty: easy
+    tags: [visibility, 3d, debugging, beginner, meshinstance3d, camera3d, german]
+    created_date: 2026-06-30
+    last_verified: 2026-06-30
+    notes: "Spot-Check-Fallback (OQ-1). Übernommen aus godot.yaml godot-008-de (personal/faq.md, deutsche FAQ-Sektion 3D-Visibility). ID auf godot_spotcheck-008-de geändert. German query — testet dass die deutsche faq.md-Sektion trotz englischer Embedding-Modelle über BGE-M3 multilingual retrieved wird (keine Sprachbarriere)."
+    min_top_k: 10
+  # === sc-gotchas-1: Jolt + apply_floor_snap + AnimatableBody3D ===
+  - id: godot_spotcheck-gotchas-1
+    question: "Why does my CharacterBody3D get launched into the air when I use apply_floor_snap() on a moving platform with Jolt physics?"
+    expected_source_files:
+      - "gotchas.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://github.com/godotengine/godot/issues/112315"
+        date: "2025-11-02"
+        type: "github-issue"
+        solution_summary: "Bug: apply_floor_snap() on AnimatableBody3D with Jolt physics catapults CharacterBody3D when velocity.y is a small positive value. Workaround: zero velocity.y before apply_floor_snap() — if is_zero_approx(velocity.y): velocity.y = 0. Reproducible in 4.4, 4.5.1, 4.6.dev2. Open, confirmed."
+        has_solution: true
+    difficulty: medium
+    tags: [jolt, physics, characterbody3d, floor_snap, animatablebody3d, moving-platform, gotcha]
+    created_date: "2026-07-03"
+    last_verified: "2026-07-03"
+    notes: "Spot-Check-Frage für gotchas.md. Adressiert die Sektion 'Jolt: apply_floor_snap() katapultiert auf AnimatableBody3D'. Pure personal, kein repo-Overlap."
+    min_top_k: 10
+  # === sc-bestpractices-1: Custom Resource + class_name ===
+  - id: godot_spotcheck-bestpractices-1
+    question: "I created a custom Resource script with @export variables for my inventory items, but it doesn't show up in the 'Create New Resource' dialog. How do I make it appear there?"
+    expected_source_files:
+      - "best-practices.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/tutorials/scripting/resources.html#creating-your-own-resources"
+        date: null
+        type: "official-docs"
+        solution_summary: "To make a custom Resource appear in the Create New Resource dialog, the script must use class_name in GDScript. Without class_name, you must manually create an empty Resource and assign the script in the Inspector."
+        has_solution: true
+    difficulty: easy
+    tags: [custom-resource, class_name, inventory, item-data, editor, inspector, best-practice]
+    created_date: "2026-07-03"
+    last_verified: "2026-07-03"
+    notes: "Spot-Check-Frage für best-practices.md. Adressiert die Sektion 'Custom Resource als Item-Daten-Container'. Pure personal, kein repo-Overlap."
+    min_top_k: 10
+  # === sc-tips-1: AnimationTree + BlendSpace2D ===
+  - id: godot_spotcheck-tips-1
+    question: "I set up an AnimationTree with BlendSpace2D for my 3D character but the animations won't play. The AnimationPlayer works fine on its own. What am I missing?"
+    expected_source_files:
+      - "tips.md"
+    expected_page_ranges: []
+    real_world_sources:
+      - url: "https://docs.godotengine.org/en/stable/tutorials/animation/animation_tree.html"
+        date: null
+        type: "official-docs"
+        solution_summary: "AnimationTree requires: (1) anim_player set to a valid AnimationPlayer node, (2) active = true, (3) tree_root set to an animation node. Without all three, no animations will play."
+        has_solution: true
+    difficulty: easy
+    tags: [animationtree, blendspace2d, locomotion, character, animation, active, anim_player, tip]
+    created_date: "2026-07-03"
+    last_verified: "2026-07-03"
+    notes: "Spot-Check-Frage für tips.md. Adressiert die Sektion 'AnimationTree + BlendSpace2D für Character Locomotion'. Pure personal, kein repo-Overlap."
+    min_top_k: 10

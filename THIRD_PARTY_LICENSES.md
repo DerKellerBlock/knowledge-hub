@@ -81,6 +81,47 @@ commercial Jina AI license.
   `scripts/model_manager.py::get_reranker()`. The default ms-marco
   MiniLM has no `auto_map` and ignores this flag.
 
+## Apache-2.0 Licensed Model Weights (Runtime, Configurable LLM)
+
+These model weights are downloaded on demand at index-build time for
+Phase 3.1 Contextual Retrieval. The default is `gemma4:12b-mlx`
+(MLX-quantized, served via Ollama). Selectable via the
+`KH_LLM_MODEL` environment variable.
+
+### gemma4:12b-mlx (Gemma 4 12B)
+
+- **Repository:** https://ollama.com/library/gemma4
+- **License:** Apache-2.0
+- **Copyright:** Google LLC
+- **Usage:** Phase 3.1 default LLM for Contextual Retrieval
+  (LLM-generated context prefix per chunk). 12B unified model,
+  256K token context, 140+ languages (incl. German), ~7.7 GB
+  MLX-quantized download via `ollama pull gemma4:12b-mlx`. Runs
+  on-device via Ollama (localhost:11434, MLX/Metal native on Apple
+  Silicon). Selectable via `KH_LLM_MODEL=gemma4:12b-mlx`.
+  Gemma 4 12B is a reasoning model — see `docs/ai/best-practices.md`
+  for the `num_predict=800` requirement (Thinking-Phase overhead).
+- **License file:** https://www.apache.org/licenses/LICENSE-2.0
+- **Additional terms:** Google's Gemma Terms of Use
+  (https://ai.google.dev/gemma/terms) may apply in addition to
+  Apache-2.0. Review before redistribution.
+- **Custom code:** None. Ollama loads the model without
+  HuggingFace `auto_map` custom code — no `trust_remote_code=True`
+  needed (safer than the jina-reranker-v2 path).
+
+### ollama (Python HTTP client)
+
+- **Repository:** https://github.com/ollama/ollama-python
+- **License:** MIT
+- **Copyright:** Ollama
+- **Usage:** Lightweight HTTP client (~10 MB) for the Ollama
+  system service (localhost:11434). Phase 3.1 Contextual Retrieval.
+  Pulls NO transformers / PyTorch — no dependency conflict with the
+  BGE-M3 / jina stack. Installed via `pip install ollama` (listed in
+  `requirements.txt`). Ollama itself must be installed as a system
+  service (`brew install ollama`).
+- **License file:** https://github.com/ollama/ollama-python/blob/main/LICENSE
+
 ## AGPL-Licensed Dependencies (Build Tool Only)
 
 These packages are imported ONLY by `scripts/parse_pdf_to_markdown.py`,

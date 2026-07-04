@@ -16,6 +16,8 @@ from mcp_servers.knowledge_hub.config import (
     DEFAULT_MODEL_NAME,
     EMBEDDING_MODEL_ENV_VAR,
     CROSS_ENCODER_MODEL,
+    DEFAULT_LLM_MODEL,
+    DEFAULT_LLM_BACKEND,
     BM25_CACHE_MAX,
     CHROMA_MEMORY_LIMIT_BYTES,
 )
@@ -134,4 +136,57 @@ def test_reranker_model_env_var_override(monkeypatch):
         assert cfg.CROSS_ENCODER_MODEL == "jinaai/jina-reranker-v2-base-multilingual"
     finally:
         monkeypatch.delenv("KH_RERANKER_MODEL", raising=False)
+        importlib.reload(cfg)
+
+
+# ── DEFAULT_LLM_MODEL / KH_LLM_MODEL env override (Phase 3.1a) ────────────
+
+
+def test_llm_model_default(monkeypatch):
+    """Without KH_LLM_MODEL set, DEFAULT_LLM_MODEL is the Gemma 4 12B MLX default."""
+    monkeypatch.delenv("KH_LLM_MODEL", raising=False)
+    from mcp_servers.knowledge_hub import config as cfg
+
+    importlib.reload(cfg)
+    try:
+        assert cfg.DEFAULT_LLM_MODEL == "gemma4:12b-mlx"
+    finally:
+        importlib.reload(cfg)
+
+
+def test_llm_model_env_var_override(monkeypatch):
+    """KH_LLM_MODEL env var overrides the default LLM model at import time."""
+    monkeypatch.setenv("KH_LLM_MODEL", "qwen3:14b")
+    from mcp_servers.knowledge_hub import config as cfg
+
+    importlib.reload(cfg)
+    try:
+        assert cfg.DEFAULT_LLM_MODEL == "qwen3:14b"
+    finally:
+        monkeypatch.delenv("KH_LLM_MODEL", raising=False)
+        importlib.reload(cfg)
+
+
+def test_llm_backend_default(monkeypatch):
+    """Without KH_LLM_BACKEND set, DEFAULT_LLM_BACKEND is 'ollama'."""
+    monkeypatch.delenv("KH_LLM_BACKEND", raising=False)
+    from mcp_servers.knowledge_hub import config as cfg
+
+    importlib.reload(cfg)
+    try:
+        assert cfg.DEFAULT_LLM_BACKEND == "ollama"
+    finally:
+        importlib.reload(cfg)
+
+
+def test_llm_backend_env_var_override(monkeypatch):
+    """KH_LLM_BACKEND env var overrides the default backend at import time."""
+    monkeypatch.setenv("KH_LLM_BACKEND", "llama-cpp")
+    from mcp_servers.knowledge_hub import config as cfg
+
+    importlib.reload(cfg)
+    try:
+        assert cfg.DEFAULT_LLM_BACKEND == "llama-cpp"
+    finally:
+        monkeypatch.delenv("KH_LLM_BACKEND", raising=False)
         importlib.reload(cfg)

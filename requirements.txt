@@ -16,3 +16,15 @@ rank-bm25>=0.2.2,<1.0.0
 # not import einops, so installing it is a no-op for legacy installs.
 # See THIRD_PARTY_LICENSES.md ("CC-BY-NC-4.0 Licensed Dependencies").
 einops>=0.7.0,<1.0.0
+# Phase 3.1 Contextual Retrieval — Ollama HTTP client (lightweight, ~10 MB).
+# Only a HTTP client to the ollama system service on localhost:11434; pulls
+# NO transformers / PyTorch, so there is no dependency conflict with the
+# BGE-M3 / jina stack (B4 is not a blocker at Ollama).
+# System requirement (NOT pip-installable): brew install ollama
+# and `ollama pull gemma4:12b-mlx`. Ollama v0.31.1+ recommended for Gemma 4
+# MTP (Multi-Token Prediction) speedup.
+ollama>=0.4.0,<1.0.0
+# llama-cpp-python is an OPTIONAL Cross-Platform fallback backend
+# (KH_LLM_BACKEND=llama-cpp). Not installed by default — only needed when
+# Ollama is unavailable. Install manually if required:
+#   pip install llama-cpp-python
