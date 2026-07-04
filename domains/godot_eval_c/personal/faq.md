@@ -1,0 +1,1 @@
+../../godot/personal/faq.md

@@ -46,6 +46,10 @@ Contextual Retrieval kann via Ollama-Cloud (`gemma4:cloud`) statt lokalem Gemma 
 - **Usage-Limit-Handling:** HTTP 429 → sofortiger Stopp (kein Backoff-Verschwendung), Cache-Resume nach Account-Wechsel oder Limit-Reset.
 - **Transienter Cloud-Ausfall:** HTTP 502 → 3× Backoff (30/60/120s), dann RuntimeError — Resume via Cache (kein Datenverlust, Cache wächst monoton).
 
+## Contextual BM25 (Phase 3.2)
+
+Keine neuen Security-Risiken durch Contextual BM25. BM25-Corpus-Erweiterung ist eine lokale Token-Variation, keine neue Exfiltration. Cache-Reuse nutzt bestehende context_cache.db (lokal, trusted). Default False = D1 gültig (Backward-Compat).
+
 ## Review Commands
 
 ```bash

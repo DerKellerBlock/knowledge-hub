@@ -71,6 +71,8 @@ Late Chunks (Phase 2.2) stammen aus PDF-Quellen (DaVinci) und werden via `_LateC
 
 **SQLite-Cache (Phase 3.1b):** Kontext-Generierung persistiert in `chromadb_data/<domain>/context_cache.db` (WAL-Mode, `INSERT OR REPLACE`). Der Cache-Key ist domain-unabhängig (OQ-3 Option b: `sha256(source_file | chunk_id_in_file | chunk_text_hash | model)`), sodass ein Cache-Eintrag aus `godot_eval_a` beim Promote nach `godot` wiederverwendet werden kann. `bulk_invalidate_by_source_file()` löscht alle Einträge einer Quelldatei (z.B. nach repomix-Update).
 
+**Contextual BM25 (Phase 3.2, E18):** Bei `contextualize_bm25=True` wird der BM25-Corpus auf `context_prefix + " " + text` erweitert (D1-Aufhebung, opt-in). Default `False` = D1 gültig (BM25 = nur text). Query-Tokenisierung bleibt symmetrisch — der Kontext steckt im Index, nicht in der Query.
+
 ## Indizes pro Domain
 
 | Index | Technologie | Speicherort | Metrik |

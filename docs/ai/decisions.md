@@ -104,3 +104,9 @@ Entschieden: Cloud-gemma4 (gemma4:cloud, 32.7B) statt lokalem Gemma 4 12B MLX f�
 
 ### E17 (2026-07-04): OQ-3 Cache-Promote via domain-unabhängigem Key — bestätigt
 Cache-Key = sha256(source_file + chunk_id_in_file + chunk_text_hash + model) — domain-unabhängig (OQ-3 Option b). Beim Promote würde `cp context_cache.db` von eval_b → godot Cache-Reuse ermöglichen (~50 Min statt 3h). Bei NO-GO nicht angewendet, aber Design bestätigt: 2731 Cache-Hits beim Resume nach 502-Crash beweisen, dass der Cache-Key korrekt domain-übergreifend funktioniert.
+
+### E18 (2026-07-04): D1-Aufhebung für Contextual BM25
+Entschieden: Phase 3.2 hebt D1 ("BM25 = nur text") bewusst auf für contextualize_bm25=True (opt-in). BM25-Corpus = context_prefix + " " + text. Begründung: Anthropic 49% vs. 35%, bestätigt durch A/B/C-Eval (C-A=+0.0209 ≥ +0.02). Default False = D1 gültig (Backward-Compat).
+
+### E19 (2026-07-04): Cache-Reuse für godot_eval_c
+C kopiert eval_b-Cache (cp context_cache.db nach WAL-Checkpoint). 4580 Cache-Hits, 0 LLM-Calls. E17 (domain-unabhängiger Key) bestätigt.

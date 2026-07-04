@@ -44,7 +44,7 @@ pytest.importorskip("chromadb")
 HUB_ROOT = Path(__file__).resolve().parent.parent.parent
 
 # Eval domains created by Phase G / Task 12.
-EVAL_DOMAINS = ("godot_eval_a", "godot_eval_b", "godot_spotcheck")
+EVAL_DOMAINS = ("godot_eval_a", "godot_eval_b", "godot_eval_c", "godot_spotcheck")
 
 # Source files symlinked into godot_eval_a / godot_eval_b (must match the
 # real Godot packed files, so a regression in the symlink target name is
@@ -113,6 +113,25 @@ def _make_personal_chunk(domain: str, source_file: str, name: str,
     )
 
 
+# Stubs for the contextualize pipeline (no real Ollama call). Mirrors
+# the helpers in test_contextualize_build.py so the BS-5 hybrid_search
+# test can drive ``build_index(contextualize=True)`` without a network
+# connection.
+def _patched_check_ollama_available(llm_entry):
+    return None
+
+
+def _patched_get_llm():
+    return {"client": None, "model": "fake", "backend": "ollama"}
+
+
+def _patched_open_cache(domain):
+    class _NullConn:
+        def close(self):
+            pass
+    return _NullConn()
+
+
 # ── 1. Eval-Domain setup (read-only structure checks) ─────────────────────
 
 
@@ -133,7 +152,7 @@ class TestEvalDomainStructure:
             f"and context_prefix+text truncates at 384 tokens)."
         )
 
-    @pytest.mark.parametrize("domain", ("godot_eval_a", "godot_eval_b"))
+    @pytest.mark.parametrize("domain", ("godot_eval_a", "godot_eval_b", "godot_eval_c"))
     @pytest.mark.parametrize("fname", GODOT_SOURCE_FILES)
     def test_sources_symlink_resolves(self, domain: str, fname: str):
         """``sources/<fname>`` is a relative symlink that resolves to
@@ -194,6 +213,7 @@ class TestEvalDomainStructure:
         expected = {
             "godot_eval_a": "godot_eval_a_knowledge",
             "godot_eval_b": "godot_eval_b_knowledge",
+            "godot_eval_c": "godot_eval_c_knowledge",
             "godot_spotcheck": "godot_spotcheck_knowledge",
         }
         for domain, coll in expected.items():
@@ -206,6 +226,41 @@ class TestEvalDomainStructure:
 
 
 # ── 2. Symlink-Isolation (tmp_hub + mock embedder) ────────────────────────
+
+
+def test_godot_eval_c_symlinks_resolve():
+    """``godot_eval_c`` (Phase 3.2 Contextual BM25 eval domain) has the
+    same relative-symlink layout as godot_eval_a/b: 3 source symlinks +
+    4 personal symlinks, all pointing at ``../../godot/...`` and
+    resolving to a real file. Catches a broken/missing symlink early."""
+    from pathlib import Path
+    eval_c = HUB_ROOT / "domains" / "godot_eval_c"
+    assert (eval_c / "domain.md").exists(), "godot_eval_c/domain.md missing"
+
+    source_links = sorted((eval_c / "sources").glob("*.md"))
+    personal_links = sorted((eval_c / "personal").glob("*.md"))
+    assert len(source_links) == 3, (
+        f"expected 3 source symlinks in godot_eval_c, got {len(source_links)}"
+    )
+    assert len(personal_links) == 4, (
+        f"expected 4 personal symlinks in godot_eval_c, got {len(personal_links)}"
+    )
+
+    for link in source_links + personal_links:
+        assert link.is_symlink(), f"{link} is not a symlink"
+        target = link.readlink() if hasattr(link, "readlink") else Path(
+            __import__("os").readlink(str(link))
+        )
+        assert not target.is_absolute(), (
+            f"{link} symlink target must be relative, got {target}"
+        )
+        assert str(target).startswith("../../godot/"), (
+            f"{link} symlink target must point at ../../godot/..., "
+            f"got {target}"
+        )
+        assert link.resolve().is_file(), (
+            f"{link} symlink does not resolve to a file"
+        )
 
 
 def test_eval_domain_symlinks_loadable():
@@ -626,3 +681,115 @@ def test_spotcheck_gate_composite_delta(tmp_hub, monkeypatch):
         )
     finally:
         sys.path.pop(0)
+
+# ── 6. BS-5: hybrid_search with Contextual BM25 index ─────────────────────
+
+
+def test_hybrid_search_with_contextual_bm25(tmp_hub, monkeypatch):
+    """BS-5: ``hybrid_search.search(domain, query, mode="hybrid")`` works
+    against a Contextual-BM25 index (Phase 3.2). Builds a tiny
+    ``godot_eval_c``-like domain inside ``tmp_hub`` with 5 chunks, sets
+    ``context_prefix`` on each chunk (mock — no real Ollama call), builds
+    the index with ``contextualize_bm25=True``, then runs a hybrid
+    search and asserts:
+
+    * ``total_found > 0`` — the search returns results,
+    * every result carries a ``source_file`` metadata field,
+    * chunk_ids come from the isolated eval domain (E13 isolation).
+
+    No real Ollama, no real BGE-M3 download (RecordingEmbedder mock).
+    """
+    import embed_index
+    import model_manager as mm
+    import parser_base
+    from hybrid_search import search as hybrid_search
+
+    domain = "godot_eval_c"
+    domain_dir = tmp_hub / "domains" / domain
+    personal_dir = domain_dir / "personal"
+    personal_dir.mkdir(parents=True)
+    (domain_dir / "domain.md").write_text(
+        f"# Domain: {domain}\n\n## Metadaten\n"
+        "- Embedding-Model: BAAI/bge-m3 (1024 dims)\n"
+        f"- Collection: {domain}_knowledge\n"
+        "- Source-Types: repo\n"
+        "- Letztes Update: 2026-07-04\n",
+        encoding="utf-8",
+    )
+
+    # 5 mock chunks with context_prefix (no LLM call — set directly).
+    chunks = []
+    for i, (text, ctx) in enumerate([
+        ("Node3D rotate_y rotates the node around the Y axis in radians.",
+         "CharacterBody3D rotation API reference"),
+        ("Camera3D make_current marks this camera as the active one.",
+         "Camera3D viewport activation"),
+        ("Audio bus set_bus_volume controls the bus output volume.",
+         "AudioServer bus routing"),
+        ("MeshInstance3D needs a mesh resource to be visible.",
+         "MeshInstance3D visibility rendering"),
+        ("NavigationAgent3D path_follow moves along the navigation path.",
+         "NavigationServer pathfinding agent"),
+    ]):
+        c = parser_base.Chunk(
+            chunk_id=f"{domain}::mock::{i}",
+            domain=domain,
+            text=text,
+            source_type="personal",
+            chunk_type="personal_section",
+            source_file="faq.md",
+            name=f"Section {i}",
+            context_prefix=ctx,
+        )
+        chunks.append(c)
+
+    # Stub load_domain_sources so build_index uses our mock chunks.
+    monkeypatch.setattr(
+        embed_index, "load_domain_sources", lambda d: (chunks, None)
+    )
+
+    embedder = RecordingEmbedder()
+    monkeypatch.setattr(mm, "get_embedder", lambda d: embedder)
+    monkeypatch.setattr(embed_index, "get_embedder", lambda d: embedder)
+
+    # Build with Contextual BM25 (Phase 3.2). contextualize=True is
+    # required by the embed_index contract for contextualize_bm25=True,
+    # but our chunks already carry context_prefix — stub the LLM
+    # pipeline so it doesn't overwrite them / doesn't call Ollama.
+    import contextualize_chunks as ctx_mod
+    monkeypatch.setattr(
+        ctx_mod, "contextualize_chunks",
+        lambda domain, ch, llm_entry, conn, model_name, **kw: ch,
+    )
+    monkeypatch.setattr(
+        ctx_mod, "check_ollama_available", _patched_check_ollama_available,
+    )
+    import context_cache as cc_mod
+    monkeypatch.setattr(cc_mod, "open_cache", _patched_open_cache)
+    monkeypatch.setattr(mm, "get_llm", _patched_get_llm)
+
+    embed_index.build_index(
+        domain, contextualize=True, contextualize_bm25=True,
+    )
+
+    # Hybrid search (uses Contextual BM25 + mock-embedding ChromaDB).
+    # Patch hybrid_search's own get_embedder reference (it imports the
+    # name directly, so monkeypatching model_manager is not enough).
+    import hybrid_search as hs_mod
+    monkeypatch.setattr(hs_mod, "get_embedder", lambda d: embedder)
+    # Also patch reranker so no real cross-encoder is loaded.
+    monkeypatch.setattr(hs_mod, "rerank", lambda results, query, top_k: results[:top_k])
+    monkeypatch.setattr(hs_mod, "is_reranker_available", lambda: False)
+
+    result = hybrid_search(domain, "Node3D rotation", mode="hybrid", top_k=5)
+    assert result.get("total_found", 0) > 0, (
+        f"hybrid search returned no results against Contextual-BM25 index: "
+        f"{result}"
+    )
+    for r in result.get("results", []):
+        assert r.get("source_file"), (
+            f"result missing source_file metadata: {r}"
+        )
+        assert r.get("chunk_id", "").startswith(f"{domain}::"), (
+            f"hybrid result from wrong domain: {r.get('chunk_id')}"
+        )

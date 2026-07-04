@@ -132,3 +132,17 @@
 - **KEIN Promote** (Task 16 übersprungen). Eval-Domains (godot_eval_a/b, godot_spotcheck) behalten für spätere Re-Läufe (Contextual BM25, Prompt-Tuning, anderes Modell).
 - **Konfounder:** Cloud-gemma4 (32.7B) ≠ lokales Gemma 12B — Kontextqualität könnte abweichen.
 
+## 2026-07-04 (Phase 3.2 — Contextual BM25, GO)
+
+- **Contextual BM25 implementiert:** BM25-Corpus = context_prefix + " " + text (statt nur text, D1-Aufhebung E18). Opt-in via --contextualize-bm25, Default False (Backward-Compat).
+- **A/B/C-Voll-Eval gegen godot.yaml (21 Fragen):**
+  - A (Baseline): avg_composite 0.8281, 18 pass / 3 weak
+  - B (Embeddings-only, 3.1c): avg_composite 0.8386, 19 pass / 2 weak
+  - C (Embeddings + Contextual BM25): avg_composite 0.8490, 20 pass / 1 weak
+  - Delta C-A = +0.0209 ≥ +0.02 Schwelle → **GO**
+- **godot-008 (3D model visibility, Sprachbarriere): weak → pass** durch Contextual BM25 — der deutsche faq.md-Kontext im BM25-Corpus hilft, die englische Query semantisch zu matchen.
+- **godot-012 (NavigationAgent3D): weak → pass** (schon in B, C bestätigt).
+- **Nur noch 1 weak:** godot-009 (AnimationTree+BlendSpace2D, breite Animation).
+- **Cache-Reuse:** C nutzt eval_b-Cache (4580 Cache-Hits, 0 LLM-Calls, domain-unabhängiger Key E17).
+- **Promote ausstehend:** R4 (Parser-Konfounder) — Eval nutzt fallback_chunk, produktiv nutzt rst-godot → separater 3h Cloud-Lauf nötig.
+

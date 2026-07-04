@@ -290,8 +290,8 @@ def build_index(domain: str, contextualize: bool = False,
     # clean ``text``.
     if contextualize and chunks:
         if contextualize_bm25:
-            print("[INFO]  contextualize_bm25 not yet implemented, "
-                  "using D1 default (BM25 sees clean text)")
+            print("[INFO]  Contextual BM25 enabled — BM25 corpus includes "
+                  "context_prefix")
         print(f"[INFO]  Contextualizing chunks (Phase 3.1)...")
         from contextualize_chunks import (
             contextualize_chunks as _contextualize,
@@ -420,7 +420,7 @@ def build_index(domain: str, contextualize: bool = False,
         print(f"[INFO]  Inserted batch {i // batch_size + 1}: {len(batch)} chunks")
 
     print(f"[INFO]  Building BM25 index...")
-    build_bm25(domain, chunks)
+    build_bm25(domain, chunks, use_context_prefix=contextualize_bm25)
     bm25_mb = get_bm25_index_size_mb(domain)
 
     chroma_path = domain_chroma_path(domain)

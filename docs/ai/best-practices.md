@@ -183,6 +183,14 @@ export KH_LLM_MODEL=gemma4:cloud
 # Transienter Cloud-Ausfall (502): 3× Backoff, dann RuntimeError — neu starten für Resume
 ```
 
+**Contextual BM25 (Phase 3.2, GO):**
+```bash
+# C-Variante: Embeddings + BM25 kontextualisiert
+KH_LLM_MODEL=gemma4:cloud python scripts/embed_index.py --domain <domain> --contextualize --contextualize-bm25
+# Default (ohne --contextualize-bm25): BM25 bleibt clean (D1, Backward-Compat)
+# Cache-Reuse: cp context_cache.db von eval-Domain nach Ziel-Domain (vorher PRAGMA wal_checkpoint)
+```
+
 ## Sicherheit
 
 - Keine Secrets in Config-Dateien

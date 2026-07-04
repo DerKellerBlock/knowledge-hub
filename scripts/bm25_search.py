@@ -55,13 +55,32 @@ def tokenize(text: str) -> list[str]:
     return [t.lower() for t in re.findall(r"[^\W\d_]+|\d+", spaced, flags=re.UNICODE)]
 
 
-def build_bm25_index(domain: str, chunks: list) -> bool:
-    """Build and persist a BM25 index from a list of Chunk objects."""
+def build_bm25_index(domain: str, chunks: list,
+                     use_context_prefix: bool = False) -> bool:
+    """Build and persist a BM25 index from a list of Chunk objects.
+
+    Phase 3.2 Contextual BM25: when ``use_context_prefix=True``, the
+    corpus token stream for each chunk is built from
+    ``context_prefix + " " + text`` (if the chunk carries a
+    ``context_prefix``). This raises the term frequency of overlapping
+    keywords and improves BM25 recall for context-rich chunks. Chunks
+    without a ``context_prefix`` fall back to plain ``tokenize(text)``
+    (defensive). Field boosts (``name * 2``, ``signature * 3``) are
+    appended to the token list in both modes — their token count stays
+    constant and is never contextualized.
+
+    Default ``use_context_prefix=False`` keeps the legacy D1 behaviour
+    (BM25 sees clean ``text`` only) so all existing callers (tests,
+    productive godot/davinci_resolve indexes) see no change.
+    """
     corpus = []
     chunk_ids = []
 
     for chunk in chunks:
-        tokens = tokenize(chunk.text)
+        if use_context_prefix and chunk.context_prefix:
+            tokens = tokenize(chunk.context_prefix + " " + chunk.text)
+        else:
+            tokens = tokenize(chunk.text)
         if chunk.name:
             tokens.extend(tokenize(chunk.name) * 2)
         if chunk.signature:

@@ -290,17 +290,19 @@ def test_contextualize_skips_late_chunk(tmp_hub, monkeypatch):
     )
 
 
-def test_contextualize_bm25_flag_accepted_but_unused(dummy_domain, monkeypatch):
-    """``--contextualize-bm25`` is accepted (implies --contextualize) but
-    does not change BM25 in this task (D1 default, Phase F deferred).
+def test_contextualize_bm25_flag_enables_contextual_bm25(dummy_domain, monkeypatch):
+    """``--contextualize-bm25`` (Phase 3.2) now enables Contextual BM25:
+    the BM25 pickle corpus includes ``context_prefix`` tokens (D1 no
+    longer applies when the flag is set).
 
-    We verify the flag does not raise and that the BM25 index still sees
-    clean chunk text (no context_prefix) by inspecting the BM25 pickle
-    via ``get_bm25_index``.
+    Replaces the former ``test_contextualize_bm25_flag_accepted_but_unused``
+    stub from Phase 3.1b (deferred). The fake contextualize sets a
+    deterministic ``CTX[domain:source]`` prefix on every Path-A chunk;
+    the BM25 corpus must now contain the ``CTX`` token.
     """
     import embed_index
     import model_manager as mm
-    from bm25_search import _load_index, tokenize
+    from bm25_search import _load_index
     from mcp_servers.knowledge_hub.config import domain_bm25_path
 
     embedder = RecordingEmbedder()
@@ -315,19 +317,72 @@ def test_contextualize_bm25_flag_accepted_but_unused(dummy_domain, monkeypatch):
     monkeypatch.setattr(cc_mod, "open_cache", _patched_open_cache)
     monkeypatch.setattr(mm, "get_llm", _patched_get_llm)
 
-    # Should not raise even though contextualize_bm25 is set.
     embed_index.build_index(
         dummy_domain, contextualize=True, contextualize_bm25=True,
     )
 
-    # BM25 pickle exists and the indexed corpus does not contain the
-    # "CTX[" prefix (D1: BM25 sees clean text).
+    # BM25 pickle exists and the corpus now CONTAINS the context_prefix
+    # tokens (CTX) — Phase 3.2 Contextual BM25 is active. Verified via
+    # scores: the "ctx" token (only present in the fake context_prefix)
+    # must score > 0 on at least one chunk. (BM25Okapi does not expose
+    # ``corpus`` directly, so score inspection is the canonical check.)
     assert domain_bm25_path(dummy_domain).exists()
     data = _load_index(dummy_domain)
     bm25 = data["index"]
-    corpus = getattr(bm25, "corpus", [])
-    has_prefix = any("CTX" in " ".join(tokens) for tokens in corpus)
-    assert not has_prefix, (
-        "BM25 corpus contains context_prefix — D1 violated by "
-        "contextualize_bm25 path"
+    chunk_ids = data["chunk_ids"]
+    from bm25_search import tokenize
+    scores = bm25.get_scores(tokenize("ctx"))
+    has_prefix_score = any(float(s) > 0 for s in scores)
+    assert has_prefix_score, (
+        "BM25 corpus does not contain context_prefix tokens — "
+        "Contextual BM25 (Phase 3.2) is not active although "
+        "contextualize_bm25=True"
+    )
+
+
+def test_contextualize_bm25_false_keeps_clean_bm25(dummy_domain, monkeypatch):
+    """BS-7 Backward-Compat: ``contextualize=True`` with
+    ``contextualize_bm25=False`` keeps the BM25 corpus on clean ``text``
+    (D1 default). The embedding is still contextualized (prefix prepended
+    for the embedder), but BM25 stays on plain text — this is the
+    Phase 3.1 default and must not regress in Phase 3.2.
+    """
+    import embed_index
+    import model_manager as mm
+    from bm25_search import _load_index
+    from mcp_servers.knowledge_hub.config import domain_bm25_path
+
+    embedder = RecordingEmbedder()
+    monkeypatch.setattr(mm, "get_embedder", lambda domain: embedder)
+    monkeypatch.setattr(embed_index, "get_embedder", lambda domain: embedder)
+    import contextualize_chunks as ctx_mod
+    monkeypatch.setattr(ctx_mod, "contextualize_chunks", _patched_contextualize)
+    monkeypatch.setattr(
+        ctx_mod, "check_ollama_available", _patched_check_ollama_available,
+    )
+    import context_cache as cc_mod
+    monkeypatch.setattr(cc_mod, "open_cache", _patched_open_cache)
+    monkeypatch.setattr(mm, "get_llm", _patched_get_llm)
+
+    # contextualize=True but contextualize_bm25=False (D1 default).
+    embed_index.build_index(
+        dummy_domain, contextualize=True, contextualize_bm25=False,
+    )
+
+    # Embedding was contextualized (sanity check).
+    assert embedder.encoded_texts, "no texts were encoded"
+    assert any(t.startswith("CTX[dummy:") for t in embedder.encoded_texts), (
+        "contextualize=True did not prepend context_prefix to embeddings"
+    )
+
+    # BM25 corpus stays clean (no CTX tokens) — D1 preserved.
+    assert domain_bm25_path(dummy_domain).exists()
+    data = _load_index(dummy_domain)
+    bm25 = data["index"]
+    from bm25_search import tokenize
+    scores = bm25.get_scores(tokenize("ctx"))
+    has_prefix_score = any(float(s) > 0 for s in scores)
+    assert not has_prefix_score, (
+        "contextualize_bm25=False leaked context_prefix into BM25 corpus "
+        "— D1 backward-compat broken"
     )
