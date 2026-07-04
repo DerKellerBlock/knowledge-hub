@@ -45,6 +45,7 @@ Contextual Retrieval kann via Ollama-Cloud (`gemma4:cloud`) statt lokalem Gemma 
 - **Zero-Retention-Policy:** Ollama-Cloud speichert/trained nicht auf Prompts/Outputs (ollama.com/privacy). Akzeptabel für trusted Sources (öffentliche Godot-Docs + technische Personal Notes). Nicht akzeptabel für sensitive Personal Notes — für diese wäre lokales Gemma fallback.
 - **Usage-Limit-Handling:** HTTP 429 → sofortiger Stopp (kein Backoff-Verschwendung), Cache-Resume nach Account-Wechsel oder Limit-Reset.
 - **Transienter Cloud-Ausfall:** HTTP 502 → 3× Backoff (30/60/120s), dann RuntimeError — Resume via Cache (kein Datenverlust, Cache wächst monoton).
+- **Parallel Workers (Phase 3.3a):** `KH_LLM_WORKERS>1` erhöht parallele Cloud-Calls; Usage-Limit-Propagation via `cancel_event` verhindert Waste nach erstem 429. Pro Worker eigener `_RetryClientProxy`; Cache-Writes serialisiert via `threading.Lock`.
 
 ## Contextual BM25 (Phase 3.2)
 

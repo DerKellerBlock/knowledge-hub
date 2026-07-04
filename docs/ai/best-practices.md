@@ -37,11 +37,12 @@ Konventionen:
   Warmup-Token-Batch laufen lassen, um die tatsächliche Compute-Device (CPU,
   CUDA, MPS) zu erkennen. Bei MPS-OOM einmal pro Session auf CPU zurückfallen
   (nicht pro Chunk). Verhindert wiederholte Crashes auf Apple Silicon.
-- **BGE-M3 MPS Hang (transformers 4.57.6):** BGE-M3 `SentenceTransformer.encode()`
-  hängt auf Apple Silicon MPS (Deadlock, 0% CPU) wegen Custom-Code im Modell.
-  `model_manager.get_embedder()` nutzt daher `device='cpu'`. Rebuild auf CPU:
-  ~50 Min für 24.593 Chunks. Wenn `transformers` einen Fix releast, kann
-  `device='mps'` via `KH_EMBEDDING_DEVICE` env var getestet werden.
+- **BGE-M3 MPS Hang (transformers 4.57.6, RESOLVED 2026-07-04):** `torch`
+  2.12.0 behebt den BGE-M3 + `transformers` 4.57.6 MPS-Deadlock, der zuvor
+  `device='cpu'` erzwungen hat. `model_manager.get_embedder()` nutzt jetzt
+  die `KH_EMBEDDING_DEVICE` env var (Default `cpu`, opt-in `mps`, ~4,7×
+  Speedup auf Apple Silicon). Siehe LIM-011 (resolved) und die
+  `KH_EMBEDDING_DEVICE`-Sektion unten.
 - **`precomputed_embeddings` als separates Dict:** Die BGE-M3-Token-Embeddings
   werden in einem separaten Dict `{chunk_id: np.ndarray}` durch die Pipeline
   gereicht, nicht als Chunk-Attribut gespeichert. Das hält die Chunk-Daten klein

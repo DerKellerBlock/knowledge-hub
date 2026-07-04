@@ -445,11 +445,17 @@ def _generate_with_retry(
     ctx = generate_context(proxy_entry, document_text, chunk_text)
     if proxy.connection_failed:
         if proxy.usage_limit_reached:
-            raise RuntimeError(
+            # F3: tag the RuntimeError with an attribute so the parallel
+            # main-thread can detect a usage-limit abort via
+            # ``getattr(e, "_is_usage_limit", False)`` instead of a
+            # fragile string-match on the (changeable) message.
+            err = RuntimeError(
                 "Usage limit reached — run `ollama signin` with a "
                 "different account, then restart. Cache is preserved "
                 "for resume."
             )
+            err._is_usage_limit = True  # type: ignore[attr-defined]
+            raise err
         raise RuntimeError(
             f"Ollama unreachable after {_MAX_RETRIES} retries"
         )
@@ -610,7 +616,17 @@ def contextualize_chunks(
             try:
                 ctx = fut.result()
             except RuntimeError as e:
-                if "Usage limit" in str(e):
+                # F3: detect a usage-limit abort via the explicit
+                # ``_is_usage_limit`` attribute (set in
+                # ``_generate_with_retry``) instead of a fragile
+                # string-match on the (changeable) message. Falls back
+                # to the legacy keyword check for any RuntimeError that
+                # was raised without the attribute (defensive).
+                is_usage_limit = getattr(e, "_is_usage_limit", False)
+                if not is_usage_limit and "Usage limit" in str(e):
+                    # Backward-compat for callers that wrap the error.
+                    is_usage_limit = True
+                if is_usage_limit:
                     cancel_event.set()
                     print(
                         f"[ERROR] Usage limit reached — cancelling "
@@ -619,6 +635,22 @@ def contextualize_chunks(
                     # Cancel not-yet-started futures and stop draining.
                     for f in future_to_chunk:
                         f.cancel()
+                    # F14: flush in-flight contexts produced by workers
+                    # that finished *before* the usage-limit abort. We
+                    # must write them to the cache so a later resume
+                    # does not re-generate (and re-pay for) them.
+                    # ``stats["misses"]`` was already incremented when
+                    # each item was appended to ``pending_writes`` in
+                    # the success branch below — do NOT double-count.
+                    if pending_writes:
+                        with write_lock:
+                            for c, th, cv in pending_writes:
+                                put_cached(
+                                    conn, c.source_file, c.chunk_id_in_file,
+                                    th, model_name, cv,
+                                )
+                            conn.commit()
+                        pending_writes.clear()
                     break
                 # A worker aborted because the cancel_event was set by a
                 # sibling that hit the usage limit first. Swallow the

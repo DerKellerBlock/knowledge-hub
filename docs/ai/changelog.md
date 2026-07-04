@@ -146,3 +146,11 @@
 - **Cache-Reuse:** C nutzt eval_b-Cache (4580 Cache-Hits, 0 LLM-Calls, domain-unabhängiger Key E17).
 - **Promote ausstehend:** R4 (Parser-Konfounder) — Eval nutzt fallback_chunk, produktiv nutzt rst-godot → separater 3h Cloud-Lauf nötig.
 
+## 2026-07-04 (Phase 3.3a — Acceleration: MPS GPU + Parallel LLM)
+
+- **MPS GPU Encoding:** `KH_EMBEDDING_DEVICE` env var (default cpu, opt-in mps). LIM-011 RESOLVED (torch 2.12.0). 4,7× Speedup (78→17 Min Godot, 210→45 Min DaVinci). Cache-Key `embedder:<model>:<device>`.
+- **Parallel LLM Calls:** `KH_LLM_WORKERS` env var (default 1, Cloud Pro: 3). ThreadPoolExecutor in contextualize_chunks.py. Pre-warm get_llm(), cancel_event bei 429, threading.Lock um Writes. 3× Speedup (3h→1h Godot-Promote).
+- **SQLite Safety:** busy_timeout=5000, check_same_thread=False in context_cache.py. Verhindert "database is locked" bei 3 parallelen Workern.
+- **Spec:** docs/superpowers/specs/2026-07-04-acceleration-mps-parallel-design.md.
+- **Tests:** 10 unit + 2 integration (226 unit total, 108 integration total, all green).
+

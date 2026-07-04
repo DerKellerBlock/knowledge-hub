@@ -29,7 +29,7 @@ wirtschaftlich. Es werden **keine** Evaluations-Ergebnisse erfunden —
   BGE-M3 + `transformers` 4.57.6 MPS-Deadlock. Auf Apple Silicon
   ergibt sich ein ~4.7× Speedup beim Encoding.
 - **Pre-Flight-Mitigation (R1.1):** Vor jedem großen Build wird ein
-  100-Chunk MPS-Encode empfohlen; bei einem Hang (Timeout > 30 s)
+  10-Texte MPS-Encode empfohlen; bei einem Hang (Timeout > 30 s)
   wird auf CPU zurückgefallen. Der Integration-Test
   `test_mps_encode_pre_flight` automatisiert diesen Check (10 Texte,
   < 30 s, kein Hang).
@@ -115,7 +115,7 @@ wirtschaftlich. Es werden **keine** Evaluations-Ergebnisse erfunden —
 
 ## Risiken
 
-- **R1.1 MPS-Hang → Pre-Flight 100 Chunks, CPU-Fallback.**
+- **R1.1 MPS-Hang → Pre-Flight 10 Texte, CPU-Fallback.**
   Integration-Test `test_mps_encode_pre_flight` automatisiert den
   Pre-Flight (10 Texte, < 30 s).
 - **R1.2 MPS float32 → irrelevant** (produktiver Build, kein A/B).
