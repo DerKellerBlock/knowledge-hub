@@ -12,7 +12,7 @@
 | Task-ID | Spec | Plan | Priorität | Status | Kurzbeschreibung |
 |---|---|---|---|---|---|
 
-(keine offenen Tasks — alle migrierten Tasks sind abgeschlossen)
+| vision-retrieval-feature | docs/issues/vision-retrieval-feature/spec.md | docs/issues/vision-retrieval-feature/plan.md | high | open | Echtes Multimodal-Retrieval für PDF-Domains (jina-clip-v2, Bild-Extraktion, Context-Aware Captions, 4-Listen-RRF) |
 
 ## Abgeschlossene Tasks
 
