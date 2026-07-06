@@ -18,15 +18,15 @@ Zentrale Anlaufstelle für Menschen und AI-Agenten (OpenCode), die am persönlic
 | `mcp_servers/` | MCP-Server für OpenCode-Integration (ein Server, alle Domains) |
 | `.agents/skills/` | OpenCode-Skills (Single Source of Truth) |
 | `docs/ai/` | Projektkontext, Architektur und Regeln für AI-Agenten |
-| `docs/superpowers/` | Design-Specs und Implementierungspläne |
+| `docs/issues/` | Issue-zentrierte SDD-Struktur (Spec + Plan + Retrospektive + Explanation pro Task) |
 | `AGENTS.md` | Root onboarding and workflow rules for AI agents |
 | `.opencode/agents/` | File-based OpenCode agent prompts |
 | `scripts/workspace_check.sh` | Structural validation for OpenCode/docs/test layout |
 | `scripts/workspace_status.sh` | Human-readable workspace status summary |
 | `docs/ai/security.md` | Security baseline and review commands |
 | `docs/ai/fixes.md` | Completed fixes and future-agent notes |
-| `docs/superpowers/explanations/` | Beginner-friendly location guides after changes |
-| `docs/superpowers/retrospectives/` | Retrospectives after workflow iterations |
+| `docs/issues/<task-id>/explanation.md` | Beginner-friendly location guides after changes |
+| `docs/issues/<task-id>/retrospective.md` | Retrospectives after workflow iterations |
 
 ## Wichtige Startdateien
 
@@ -34,7 +34,7 @@ Zentrale Anlaufstelle für Menschen und AI-Agenten (OpenCode), die am persönlic
 - `docs/ai/architecture.md` — Architektur, Datenfluss, Komponenten
 - `docs/ai/domain-model.md` — Wie Domains funktionieren und konfiguriert werden
 - `docs/ai/best-practices.md` — Coding-Standards, Konventionen
-- `docs/superpowers/specs/2026-06-09-knowledge-hub-design.md` — Vollständige Design-Spec (Q1-Q5 entschieden)
+- `docs/issues/knowledge-hub/spec.md` — Vollständige Design-Spec (Q1-Q5 entschieden)
 
 ## Dokumentationsprinzipien
 

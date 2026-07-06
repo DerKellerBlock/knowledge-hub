@@ -51,18 +51,14 @@ required_files=(
   "docs/ai/security.md"
   "docs/ai/fixes.md"
   "docs/ai/handoffs/.gitkeep"
-  "docs/superpowers/explanations/.gitkeep"
-  "docs/superpowers/retrospectives/.gitkeep"
+  "docs/ai/open-work.md"
+  "docs/issues/.gitkeep"
 )
 
 required_dirs=(
   ".opencode/agents"
   "docs/ai"
-  "docs/superpowers/specs"
-  "docs/superpowers/plans"
-  "docs/superpowers/explanations"
-  "docs/superpowers/retrospectives"
-  "docs/superpowers/quality-reports"
+  "docs/issues"
   "tests/unit"
   "tests/integration"
   "tests/e2e"

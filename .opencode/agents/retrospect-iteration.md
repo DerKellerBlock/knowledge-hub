@@ -9,7 +9,7 @@
     "*": "allow"
 ---
 
-Write a concise retrospective for the completed Knowledge Hub iteration under `docs/superpowers/retrospectives/YYYY-MM-DD-<topic>-retro.md`.
+Write a concise retrospective for the completed Knowledge Hub iteration under `docs/issues/<task-id>/retrospective.md`.
 
 Include:
 

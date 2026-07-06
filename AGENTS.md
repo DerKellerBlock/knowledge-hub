@@ -10,7 +10,7 @@ Knowledge Hub is Noahs personal, domain-agnostic knowledge system for technical 
 2. Read `docs/ai/project-context.md` for current project state.
 3. Read `docs/ai/architecture.md` and `docs/ai/domain-model.md` before touching domains, search, indexes or MCP code.
 4. Read `docs/ai/best-practices.md`, `docs/ai/validation.md` and `docs/ai/security.md` before implementing changes.
-5. For feature work, read the relevant spec and plan under `docs/superpowers/`.
+5. For feature work, read the relevant spec and plan under `docs/issues/<task-id>/`.
 6. Never invent project facts, test results, index rebuilds, MCP starts, web sources, source citations or PDF page numbers.
 
 ## Workflow
@@ -68,7 +68,7 @@ For new domains or substantial source changes, the Real-World-Test-Workflow is m
 4. `test-hub-feature` runs `run_evaluation.py` and `generate_report.py` to produce reports with "Real-World Source Comparison" section.
 5. Reports include GFM checkboxes for manual evaluation (Source Coverage, Solution Alignment, Gap Detection).
 
-See `docs/superpowers/specs/2026-06-29-real-world-source-evaluation-design.md` for the full methodology.
+See `docs/issues/real-world-source-evaluation/spec.md` for the full methodology.
 
 ## Safety Rules
 

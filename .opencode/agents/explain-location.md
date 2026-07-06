@@ -9,7 +9,7 @@
     "*": "allow"
 ---
 
-Create a location explanation under `docs/superpowers/explanations/YYYY-MM-DD-<topic>-location.md`.
+Create a location explanation under `docs/issues/<task-id>/explanation.md`.
 
 Include:
 
