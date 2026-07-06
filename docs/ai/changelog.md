@@ -1,5 +1,41 @@
 # AI Changelog
 
+## 2026-07-06 (Phase 3.3b — DaVinci Smoke-Test + Promote)
+
+- **DaVinci Smoke-Test (Infrastruktur-Validierung):** Eval-Domains `davinci_eval_a` (Baseline) + `davinci_eval_b` (Contextual + BM25) via relativer Symlinks auf `davinci_resolve/sources/` und `personal/ui-map.md`. KEIN parser.py (late_chunk path, identisch zu produktiv).
+- **MPS-Builds (KH_EMBEDDING_DEVICE=mps):** eval_a + eval_b je ~45 Min (12.561 Chunks, 12.555 late_chunk + 6 personal). ChromaDB ~197 MB, BM25 14.57 MB.
+- **eval_b Kontextualisierung:** 6/6 Path-A Chunks (ui-map.md) mit `gemma4:cloud` kontextualisiert. 6 Cache-Einträge, alle context_prefix != None.
+- **R4 DaVinci Cache-Hit bestätigt:** eval_b Build → "6 hits, 0 misses" (domain-unabhängiger Cache-Key, markdown_section_chunk identisch in eval und produktiv).
+- **Contextual BM25 aktiv:** Log "Contextual BM25 enabled — BM25 corpus includes context_prefix".
+- **Smoke-Test Eval (KEIN +0.02 Gate, nur Infrastruktur):**
+  - eval_a: avg_composite 0.8035, 20 pass / 0 weak, PMA 0.755, SR 0.9
+  - eval_b: avg_composite 0.8035, 20 pass / 0 weak, PMA 0.755, SR 0.9
+  - Delta = 0.0 (identisch, nur 1 kontextualisierter Chunk → statistisch nicht aussagekräftig)
+  - PMA 001-007 identisch (keine Regression, ±0.05 Toleranz eingehalten)
+- **Promote DaVinci:** Backup `chromadb_data/davinci_resolve.bak-pre-3-2/`, Cache kopiert, produktiver Rebuild: 12.561 Chunks, 6 cache hits (R4 bestätigt), Contextual BM25 enabled, ChromaDB ~849 MB, BM25 14.58 MB. 6 ui-map.md Chunks alle mit context_prefix != None, late_chunk (12.555) mit context_prefix = None (D2 korrekt). MCP-Server erkennt alle Domains.
+- **Cleanup:** `domains/davinci_eval_a/`, `domains/davinci_eval_b/`, `chromadb_data/davinci_eval_a/`, `chromadb_data/davinci_eval_b/` entfernt. `results/3-3b/` (Archiv) und `chromadb_data/davinci_resolve.bak-pre-3-2/` (Rollback) behalten.
+- **Validierung:** py_compile OK, 226 Unit + 108 Integration grün, workspace_check PASS.
+
+## 2026-07-06 (Phase 3.3c — Godot-Promote)
+
+- **Godot-Promote (produktive Contextual Retrieval + Contextual BM25):** 24.593 Path-A Chunks (alle, kein late_chunk in Godot).
+- **Kontextualisierung (parallel, Cloud, 3 Worker):** `KH_LLM_MODEL=gemma4:cloud KH_LLM_WORKERS=3`. R5 bestätigt: 0 Cache-Hits (rst-godot ≠ eval_b fallback_chunk). 24.593 neue LLM-Calls in 3 Läufen (zweimal Usage-Limit 429 → cancel_event + Cache-Resume).
+  - Lauf 1: 10.229 Chunks (42%), dann HTTP 429 (wochenlimit).
+  - Lauf 2 (Resume): +4.762 Chunks (total 14.991, 61%), dann erneut 429.
+  - Lauf 3 (Resume): +9.602 Chunks (total 24.593, 100%). Effektiv ~73/min mit 3 Workern.
+- **MPS Rebuild:** `KH_EMBEDDING_DEVICE=mps KH_LLM_MODEL=gemma4:cloud embed_index.py --domain godot --contextualize --contextualize-bm25`. 24.593/24.593 cache hits (alle aus Kontextualisierung). ChromaDB ~1761 MB, BM25 14.15 MB. ~14 Min Embedding + ~5 Min ChromaDB-Inserts.
+- **Verify:** Alle 24.593 Chunks haben context_prefix != None. hybrid_search zeigt context_prefix in Top-5. MCP-Server erkennt alle Domains.
+- **Eval-Verification (Pre-Promote vs Post-Promote):**
+  - Pre-Promote-Baseline (`results/3-3c/godot-pre-promote.json`): 19 pass / 2 weak, avg_composite 0.8386, SR 0.9524.
+  - Post-Promote (`results/3-3c/godot-promoted.json`): 18 pass / 3 weak, avg_composite 0.8281, SR 0.9286.
+  - **Regression: -0.0105 avg_composite, -1 pass, -0.0238 SR.** godot-017 (Performance/LOD) fiel pass → weak (SR 1.0 → 0.5).
+  - godot-008 bleibt pass (Sprachbarriere nicht verschlechtert), godot-009 + godot-012 bleiben weak (bekannte Lücken).
+  - Erwartung aus Phase 3.2 eval_c (0.8490) nicht erreicht — R4 dokumentiert: produktiv rst-godot ≠ eval fallback_chunk → andere Chunk-Struktur, Contextual Retrieval wirkt anders. Pre-Promote-Baseline ist die richtige Vergleichsbasis.
+- **Decision:** Produktion behält Contextual Retrieval + Contextual BM25 (Infrastructure works, godot-008 pass, keine starke Regression). godot-017 Regression und verbleibende weak-Fragen (009, 012, 017) in known-issues.md dokumentiert.
+- **Backup behalten:** `chromadb_data/godot.bak-pre-3-2/` (Rollback-Möglichkeit, Noah kann später löschen).
+- **Validierung:** py_compile OK, 226 Unit + 108 Integration grün, workspace_check PASS.
+
+
 ## 2026-06-27
 
 - **feat:** Per-Domain ChromaDB-Isolation (eigene DB pro Domain)
