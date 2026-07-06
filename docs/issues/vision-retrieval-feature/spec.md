@@ -119,14 +119,24 @@ Text-Query
 
 **Datei:** `scripts/embed_images.py`
 
-- jina-clip-v2 via `transformers` (NICHT Ollama, Issue #5304 offen)
+Zwei Modelle wählbar via `KH_MULTIMODAL_MODEL` env var (analog zum
+`KH_RERANKER_MODEL`-Pattern beim Reranker):
+
+| Modell | Lizenz | Sprachen | Dims | Input | Default? |
+|---|---|---|---|---|---|
+| `google/siglip2-so400m-patch16-512` | Apache 2.0 | English-only | 1152 | 512×512 | **Ja** |
+| `jinaai/jina-clip-v2` | CC-BY-NC-4.0 | 89 Sprachen (multilingual) | 1024 | 512×512 | Optional |
+
+- Via `transformers` (NICHT Ollama, Issue #5304 offen)
 - `from transformers import AutoProcessor, AutoModel`
-- `model = AutoModel.from_pretrained("jinaai/jina-clip-v2")`
-- `processor = AutoProcessor.from_pretrained("jinaai/jina-clip-v2")`
+- `model = AutoModel.from_pretrained(KH_MULTIMODAL_MODEL, trust_remote_code=True)`
+- `processor = AutoProcessor.from_pretrained(KH_MULTIMODAL_MODEL)`
   (zwingend — hardcoded normalization = falsche results, Spheron-Best-
   Practice)
-- Bild-Embeddings: 1024-dim, 224×224 Input (jina-clip-v2 native)
-- Caption-Text-Embeddings: 1024-dim (gleicher Vektorraum, gleicher Encoder)
+- **SigLIP-2:** 1152-dim, mean [0.5, 0.5, 0.5], std [0.5, 0.5, 0.5]
+- **jina-clip-v2:** 1024-dim (Matryoshka truncatable), mean [0.485, 0.456,
+  0.406], std [0.229, 0.224, 0.225]
+- Caption-Text-Embeddings: gleicher Vektorraum, gleicher Encoder (joint)
 - Device: `KH_MULTIMODAL_DEVICE` env var (default `cpu`, opt-in `mps`)
   - Cache-Key: `multimodal:<model>:<device>` (Runtime-Switch lädt frische
     Instanz, wie BGE-M3)
@@ -140,6 +150,8 @@ Text-Query
     `modality` (image/caption), `caption`, `quality`
 - **Best-Practice Rule 2:** Joint-Encoder, gemeinsamer Vektorraum
 - **Best-Practice Rule 3:** Bild-Pfad in Metadaten (für späteres Abrufen)
+- **Lizenz-Doku:** SigLIP-2 → Apache-2.0-Sektion in THIRD_PARTY_LICENSES.md;
+  jina-clip-v2 → CC-BY-NC-4.0-Sektion (analog jina-reranker-v2)
 
 ### 4. Bild-BM25 (Index, neu)
 
@@ -185,7 +197,8 @@ Text-Query
   (analog `get_embedder()` für BGE-M3)
 - Cache-Key: `multimodal:<model>:<device>`
 - LRU-Eviction (wie embedder, B4-Migration angewendet)
-- `KH_MULTIMODAL_MODEL` env var (default `jinaai/jina-clip-v2`)
+- `KH_MULTIMODAL_MODEL` env var (default `google/siglip2-so400m-patch16-512`,
+  optional `jinaai/jina-clip-v2` für multilingual)
 - `KH_MULTIMODAL_DEVICE` env var (default `cpu`, opt-in `mps`)
 - `KH_MULTIMODAL_BATCH_SIZE` env var (default 32)
 - Live-Lesung der Env-Vars auf jedem Cache-Miss (wie BGE-M3)
@@ -195,8 +208,9 @@ Text-Query
 ### MPS GPU Acceleration
 - `KH_MULTIMODAL_DEVICE=mps` (wie BGE-M3, LIM-011 resolved)
 - Pre-Flight-Test: 10-Bild MPS-Encode; bei Hang >30s → CPU-Fallback
-- Geschätzt: ~6.000-15.000 pairs/hr (M1 Max MPS, ~5-10× langsamer als A100)
-- Bei ~8.000 DaVinci-Bildern: ~30 min - 2h (MPS), 2-5h (CPU)
+- Geschätzt bei 512×512: ~1.500-4.000 pairs/hr (M1 Max MPS, ~5-10× langsamer
+  als A100 bei 4× mehr pixel throughput als 224×224)
+- Bei ~8.000 DaVinci-Bildern: ~2-5h (MPS), 5-10h (CPU)
 
 ### Batch-Size Optimierung
 - `KH_MULTIMODAL_BATCH_SIZE=64` (start, MPS RAM-limitiert)
@@ -223,24 +237,30 @@ Text-Query
 - Dummy-Request vor Build-Loop (2-5s cold start, Spheron)
 - 10-Bild-Encode als Pre-Flight (gleichzeitig MPS-Check)
 
-## Build-Zeit Schätzung (DaVinci, ~8.000 Bilder)
+## Build-Zeit Schätzung (DaVinci, ~8.000 Bilder, 512×512 Input)
 
 | Phase | M1 Max MPS | Mit Cloud (Captioning) |
 |---|---|---|
 | Bild-Extraktion (PyMuPDF4LLM) | 10-30 min | 10-30 min |
-| Bild-Embedding (jina-clip-v2) | 30 min - 2h | 30 min - 2h |
-| Bild-Captioning (Vision-LLM) | ~5.5h lokal | ~2h (3 Worker Cloud) |
+| Bild-Embedding (SigLIP-2/jina-clip-v2, 512×512) | 2-5h | 2-5h |
+| Bild-Captioning (Gemma 4, 3 Worker Cloud) | ~5.5h lokal | **~2h (Cloud)** |
 | Caption-Text-Embedding | 15-30 min | 15-30 min |
 | ChromaDB + BM25 | 15-30 min | 15-30 min |
-| **Total** | ~8-10h | ~4-6h |
+| **Total** | ~10-14h | **~6-9h** |
+
+Hinweis: 512×512 Input ist 4× mehr pixel throughput als 224×224. MPS ist
+der Flaschenhals beim Bild-Embedding. Vision-LLM-Captioning wird durch
+Cloud-Parallelisierung (3 Worker) beschleunigt.
 
 ## Konfiguration (neue Env-Vars)
 
-- `KH_MULTIMODAL_MODEL` — default `jinaai/jina-clip-v2`
+- `KH_MULTIMODAL_MODEL` — default `google/siglip2-so400m-patch16-512`
+  (Apache 2.0, kommerziell sicher), optional `jinaai/jina-clip-v2`
+  (CC-BY-NC-4.0, multilingual)
 - `KH_MULTIMODAL_DEVICE` — default `cpu`, opt-in `mps`
 - `KH_MULTIMODAL_BATCH_SIZE` — default 32 (MPS RAM-limitiert)
-- `KH_VISION_LLM_MODEL` — default `gemma3:4b` (lokal) oder `gemma4:cloud`
-- `KH_VISION_LLM_WORKERS` — default 1, opt-in 3 für Cloud
+- `KH_VISION_LLM_MODEL` — default `gemma4:cloud` (Ollama Cloud, parallel)
+- `KH_VISION_LLM_WORKERS` — default 1, opt-in 3 für Cloud (parallel)
 
 ## Neue Dateien
 
@@ -264,7 +284,7 @@ Text-Query
 | `scripts/workspace_check.sh` | Image-Collection-Check (optional) |
 | `requirements.txt` | `pillow` (PIL für Bild-Verarbeitung) |
 | `requirements-pdf.txt` | bereits pymupdf (für write_images=True) |
-| `THIRD_PARTY_LICENSES.md` | jina-clip-v2 (Apache 2.0) |
+| `THIRD_PARTY_LICENSES.md` | SigLIP-2 (Apache 2.0) + jina-clip-v2 (CC-BY-NC-4.0) |
 
 ## Neue Ordner
 
@@ -340,22 +360,28 @@ Text-Query
    AGPL-Header (wie `parse_pdf_to_markdown.py`), wird via subprocess
    aufgerufen.
 
-## Open Questions für Noah
+## Entscheidungen (Noah, 2026-07-06)
 
-1. **Welche Domains sollen Bild-Extraktion bekommen?** Nur `davinci_resolve`
-   (PDFs) oder auch `godot` (Repo-Docs ohne Bilder)? Empfehlung: nur
-   `davinci_resolve` initially, godot hat keine Screenshots in den
-   repomix-Packed-Files.
-2. **Gemma 3 lokal oder Cloud?** Lokal = ~5.5h, kein Usage-Limit. Cloud =
-   ~2h mit 3 Workern, aber Usage-Limit-Risiko. Empfehlung: Cloud (wie
-   Contextual-Retrieval), lokal als Fallback.
-3. **Soll die bestehende `search_knowledge`-Funktion erweitert werden, oder
-   eine neue `search_knowledge_multimodal`?** Empfehlung: erweitern
-  (`modality`-Feld in Metadaten, backward-kompatibel).
-4. **SigLIP-2 als Alternative?** SigLIP-2 hat bessere accuracy, aber
-   English-only und 512×512 (4× mehr pixel throughput). Empfehlung:
-   jina-clip-v2 (multilingual, passt zu BGE-M3-Stack, schneller durch
-   224×224).
+1. **Domains:** Nur `davinci_resolve` (PDFs mit Screenshots). Godot hat keine
+   Bilder in den repomix-Packed-Files.
+2. **Vision-LLM:** Gemma 4 via Ollama Cloud mit 3 parallelen Workern
+  (`KH_LLM_WORKERS=3`), wie Contextual-Retrieval. Lokal als Fallback.
+3. **search_knowledge:** Bestehende Funktion erweitern (backward-kompatibel,
+   `modality`-Feld in Metadaten, `image_path` + `caption` optional).
+4. **Multimodal-Modell:** **Option 3 — Beide unterstützen:**
+   - **Default:** `google/siglip2-so400m-patch16-512` (Apache 2.0,
+     kommerziell sicher, English-only, 512×512)
+   - **Optional:** `jinaai/jina-clip-v2` (CC-BY-NC-4.0, multilingual, 512×512)
+   - **Env-Var:** `KH_MULTIMODAL_MODEL` (Default: siglip2, wie
+     `KH_RERANKER_MODEL`-Pattern beim Reranker)
+   - **Lizenz-Doku:** in `THIRD_PARTY_LICENSES.md` analog zum Reranker-Pattern
+     (Default = kommerziell sicher, Optional = CC-BY-NC-4.0 akzeptiert für
+     persönlichen Hub)
+   - **Begründung:** Knowledge Hub ist MIT-lizenziert (Open Source). Default
+     bleibt kommerziell sicher (Apache 2.0). Optional für multilingual
+     (CC-BY-NC-4.0, analog zum bereits akzeptierten jina-reranker-v2).
+5. **Bild-Auflösung:** 512×512 (beide Modelle unterstützen 512×512). Kein
+   Downsampling — volle Qualität für UI-Screenshot-Erkennung.
 
 ## Referenzen
 
