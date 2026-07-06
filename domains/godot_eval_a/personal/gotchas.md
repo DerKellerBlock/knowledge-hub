@@ -1,1 +1,0 @@
-../../godot/personal/gotchas.md

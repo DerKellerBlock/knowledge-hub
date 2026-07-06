@@ -1,1 +1,0 @@
-../../godot/personal/tips.md

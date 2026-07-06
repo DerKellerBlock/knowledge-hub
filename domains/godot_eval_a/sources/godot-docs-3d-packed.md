@@ -1,1 +1,0 @@
-../../godot/sources/godot-docs-3d-packed.md

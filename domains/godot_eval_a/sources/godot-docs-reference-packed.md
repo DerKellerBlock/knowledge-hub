@@ -1,1 +1,0 @@
-../../godot/sources/godot-docs-reference-packed.md

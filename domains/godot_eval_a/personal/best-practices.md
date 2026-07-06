@@ -1,1 +1,0 @@
-../../godot/personal/best-practices.md
