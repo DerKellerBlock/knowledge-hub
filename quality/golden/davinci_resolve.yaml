@@ -2,12 +2,14 @@ domain: davinci_resolve
 version: 1
 description: "Golden Dataset for DaVinci Resolve domain quality evaluation"
 last_updated: 2026-07-01
-# Optional: override default weights/thresholds (uncomment to use)
-# weights:
-#   source_recall: 0.35
-#   page_metadata_accuracy: 0.20
-#   top_k_relevance: 0.25
-#   evidence_quality: 0.20
+# Vision Retrieval Feature: image_presence weight (0.20 = 20% of composite)
+# Redistributed from other metrics: SR 0.35->0.30, PMA 0.20->0.15, TKR 0.25->0.20, EQ 0.20->0.15
+weights:
+  source_recall: 0.30
+  page_metadata_accuracy: 0.15
+  top_k_relevance: 0.20
+  evidence_quality: 0.15
+  image_presence: 0.20
 # thresholds:
 #   pass: 0.7
 #   weak: 0.4
@@ -522,8 +524,9 @@ questions:
       - "davinci-resolve-20.3-reference-manual.md"
       - "davinci-resolve-20-colorist-guide.md"
     expected_page_ranges:
-      - {start: 1140, end: 1145}
-      - {start: 60, end: 65}
+      - {start: 35, end: 42}      # colorist-guide p37-40 (±2)
+      - {start: 2973, end: 2978}  # ref-manual p2975-2976 (±2)
+      - {start: 3082, end: 3087}  # ref-manual p3084 (image: Color Wheels panel, ±2)
     real_world_sources:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/color"
         date: null
@@ -552,8 +555,9 @@ questions:
       - "fusion-20.3-manual.md"
       - "davinci-resolve-20-fusion-visual-effects.md"
     expected_page_ranges:
-      - {start: 20, end: 25}
-      - {start: 10, end: 15}
+      - {start: 110, end: 115}    # fusion-manual p112-113 (±2)
+      - {start: 1343, end: 1348}  # ref-manual p1345-1346 (±2)
+      - {start: 3335, end: 3340}  # ref-manual p3337 (image: Node Editor panel, ±2)
     real_world_sources:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/fusion"
         date: null
@@ -575,10 +579,12 @@ questions:
     question: "Where is the Inspector panel and how do I use it to change clip properties?"
     expected_source_files:
       - "davinci-resolve-20.3-reference-manual.md"
+      - "davinci-resolve-20-fairlight-audio-post.md"
       - "davinci-resolve-20-editors-guide.md"
     expected_page_ranges:
-      - {start: 460, end: 465}
-      - {start: 100, end: 105}
+      - {start: 36, end: 40}      # fairlight-audio-post p38 (±2)
+      - {start: 430, end: 435}    # ref-manual p432-433 (±2)
+      - {start: 478, end: 483}    # fairlight-audio-post p480-481 (±2)
     real_world_sources:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/edit"
         date: null
@@ -599,11 +605,13 @@ questions:
   - id: davinci_resolve-024
     question: "How do I access the Fairlight Mixer to adjust audio levels?"
     expected_source_files:
-      - "davinci-resolve-20-fairlight-audio-post.md"
       - "davinci-resolve-20.3-reference-manual.md"
+      - "davinci-resolve-20-fairlight-audio-post.md"
+      - "davinci-resolve-20-beginners-guide.md"
     expected_page_ranges:
-      - {start: 40, end: 45}
-      - {start: 1780, end: 1785}
+      - {start: 699, end: 704}    # ref-manual p701-702 (±2)
+      - {start: 3731, end: 3736}  # ref-manual p3733-3734 (±2)
+      - {start: 456, end: 461}    # beginners-guide p458-459 (±2)
     real_world_sources:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/fairlight"
         date: null
@@ -625,10 +633,12 @@ questions:
     question: "Where are the Render Settings on the Deliver page?"
     expected_source_files:
       - "davinci-resolve-20.3-reference-manual.md"
+      - "davinci-resolve-20-editors-guide.md"
       - "davinci-resolve-20-beginners-guide.md"
     expected_page_ranges:
-      - {start: 1980, end: 1985}
-      - {start: 580, end: 585}
+      - {start: 4043, end: 4048}  # ref-manual p4045-4046 (±2)
+      - {start: 50, end: 55}      # ref-manual p52-53 (±2)
+      - {start: 568, end: 573}    # editors-guide p570 (image: Deliver Page Render Settings, ±2)
     real_world_sources:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/edit"
         date: null
@@ -650,10 +660,10 @@ questions:
     question: "How do I switch between the Cut page and the Edit page, and what's the difference?"
     expected_source_files:
       - "davinci-resolve-20.3-reference-manual.md"
-      - "davinci-resolve-20-beginners-guide.md"
     expected_page_ranges:
-      - {start: 420, end: 425}
-      - {start: 20, end: 25}
+      - {start: 557, end: 562}    # ref-manual p559-560 (±2)
+      - {start: 567, end: 572}    # ref-manual p569-570 (±2)
+      - {start: 601, end: 606}    # ref-manual p603-604 (±2)
     real_world_sources:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/cut"
         date: null

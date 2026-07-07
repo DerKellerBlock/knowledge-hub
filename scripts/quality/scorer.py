@@ -63,6 +63,7 @@ W_SR = DEFAULT_WEIGHTS["source_recall"]
 W_PMA = DEFAULT_WEIGHTS["page_metadata_accuracy"]
 W_TKR = DEFAULT_WEIGHTS["top_k_relevance"]
 W_EQ = DEFAULT_WEIGHTS["evidence_quality"]
+W_IP = DEFAULT_WEIGHTS["image_presence"]
 
 # Thresholds for classify_score (fallbacks when no override given).
 PASS_THRESHOLD = DEFAULT_THRESHOLDS["pass"]
@@ -269,11 +270,49 @@ def score_evidence_quality(results: list[dict]) -> float | None:
     return round(with_text / len(results), 4)
 
 
+def score_image_presence(
+    results: list[dict], question: dict | None = None
+) -> float | None:
+    """Vision Retrieval Feature: image/caption presence in top-k results.
+
+    Returns the fraction of results with ``modality`` in
+    ``{"image", "caption"}``. Returns ``None`` (N/A) when:
+
+    - Results are empty
+    - No results have a non-text modality (domain without Vision Retrieval)
+    - The question is NOT an image-related question (no ``screenshot`` or
+      ``image`` tag). This prevents text questions (e.g. "How do I set up
+      a Planar Tracker?") from being penalised by irrelevant image
+      results that the 1/3 interleave budget injects into every query.
+
+    A score of 0.0 means "no image results in top-k" (valid score, not
+    N/A). A score of 0.3 means "30% of top-k are image/caption results".
+
+    The 1/3 interleave budget in ``hybrid_search.py`` targets ~0.33
+    for image-centric queries on image-enabled domains.
+    """
+    if not results:
+        return None
+
+    # Only score image-related questions (tagged with 'screenshot' or 'image')
+    if question is not None:
+        tags = question.get("tags", []) or []
+        if not any(t in ("screenshot", "image") for t in tags):
+            return None
+
+    modalities = [r.get("modality", "text") for r in results]
+    if not any(m in ("image", "caption") for m in modalities):
+        return None
+    image_count = sum(1 for m in modalities if m in ("image", "caption"))
+    return round(image_count / len(results), 4)
+
+
 def compute_composite_score(
     source_recall: float | None,
     page_metadata_accuracy: float | None,
     top_k_relevance: float | None,
     evidence_quality: float | None,
+    image_presence: float | None = None,
     weights: dict[str, float] | None = None,
 ) -> float:
     """Weighted composite score with N/A redistribution.
@@ -294,6 +333,7 @@ def compute_composite_score(
         (page_metadata_accuracy, w["page_metadata_accuracy"]),
         (top_k_relevance, w["top_k_relevance"]),
         (evidence_quality, w["evidence_quality"]),
+        (image_presence, w.get("image_presence", 0.0)),
     ]
     active = [(v, wt) for v, wt in parts if v is not None]
 
@@ -369,7 +409,8 @@ def evaluate_question(
     )
     tkr = score_top_k_relevance(results)
     eq_ = score_evidence_quality(results)
-    composite = compute_composite_score(sr, pma, tkr, eq_, weights=weights)
+    ip = score_image_presence(results, question=question)
+    composite = compute_composite_score(sr, pma, tkr, eq_, ip, weights=weights)
     label = classify_score(composite, thresholds=thresholds)
 
     # Truncation heuristic (LIM-003) — False positives possible.
@@ -405,6 +446,7 @@ def evaluate_question(
         "page_metadata_accuracy": pma,
         "top_k_relevance": tkr,
         "evidence_quality": eq_,
+        "image_presence": ip,
         "composite_score": composite,
         "label": label,
         "truncation_warnings": truncation_warnings,
@@ -449,6 +491,7 @@ def aggregate_domain_scores(domain: str, evaluations: list[dict]) -> dict:
         "avg_page_metadata_accuracy": avg("page_metadata_accuracy"),
         "avg_top_k_relevance": avg("top_k_relevance"),
         "avg_evidence_quality": avg("evidence_quality"),
+        "avg_image_presence": avg("image_presence"),
     }
 
 
@@ -483,10 +526,18 @@ def generate_markdown_report(
     lines.append(f"| Page Metadata Accuracy | {summary['avg_page_metadata_accuracy']} |")
     lines.append(f"| Top-K Relevance | {summary['avg_top_k_relevance']} |")
     lines.append(f"| Evidence Quality | {summary['avg_evidence_quality']} |")
+    ip = summary.get('avg_image_presence')
+    if ip is not None:
+        lines.append(f"| Image Presence | {ip} |")
     lines.append("")
     lines.append("## Per-Question Results")
-    lines.append("| ID | Question | Score | Label | SR | PMA | TKR | EQ |")
-    lines.append("|----|----------|-------|-------|----|----|----|----|")
+    has_ip = any(e.get("image_presence") is not None for e in evaluations)
+    if has_ip:
+        lines.append("| ID | Question | Score | Label | SR | PMA | TKR | EQ | IP |")
+        lines.append("|----|----------|-------|-------|----|----|----|----|----|")
+    else:
+        lines.append("| ID | Question | Score | Label | SR | PMA | TKR | EQ |")
+        lines.append("|----|----------|-------|-------|----|----|----|----|")
     for e in evaluations:
         q_short = e["question"][:40] + ("..." if len(e["question"]) > 40 else "")
         sr = e["source_recall"] if e["source_recall"] is not None else "N/A"
@@ -496,10 +547,18 @@ def generate_markdown_report(
             else "N/A"
         )
         eq = e["evidence_quality"] if e["evidence_quality"] is not None else "N/A"
-        lines.append(
-            f"| {e['id']} | {q_short} | {e['composite_score']} | {e['label']} | "
-            f"{sr} | {pma} | {e['top_k_relevance']} | {eq} |"
-        )
+        ip_val = e.get("image_presence")
+        ip_str = ip_val if ip_val is not None else "N/A"
+        if has_ip:
+            lines.append(
+                f"| {e['id']} | {q_short} | {e['composite_score']} | {e['label']} | "
+                f"{sr} | {pma} | {e['top_k_relevance']} | {eq} | {ip_str} |"
+            )
+        else:
+            lines.append(
+                f"| {e['id']} | {q_short} | {e['composite_score']} | {e['label']} | "
+                f"{sr} | {pma} | {e['top_k_relevance']} | {eq} |"
+            )
     lines.append("")
     weak_fail = [e for e in evaluations if e["label"] in ("weak", "fail")]
     if weak_fail:

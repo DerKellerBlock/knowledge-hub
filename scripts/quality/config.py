@@ -25,6 +25,17 @@ DEFAULT_WEIGHTS: dict[str, float] = {
     "page_metadata_accuracy": 0.20,
     "top_k_relevance": 0.25,
     "evidence_quality": 0.20,
+    # Vision Retrieval Feature (2026-07-07): image_presence measures
+    # whether image/caption results appear in the top-k. Default weight
+    # 0.0 = backward-compatible (domains without images are unaffected).
+    # Override per-domain in the Golden Dataset YAML, e.g.:
+    #   weights:
+    #     source_recall: 0.30
+    #     page_metadata_accuracy: 0.15
+    #     top_k_relevance: 0.20
+    #     evidence_quality: 0.15
+    #     image_presence: 0.20
+    "image_presence": 0.0,
 }
 
 # Composite-score classification thresholds. ``composite >= pass`` is

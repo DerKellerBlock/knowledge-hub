@@ -68,6 +68,7 @@ from image_caption_cache import (
     put_cached,
     count_entries,
 )
+from caption_cleaning import clean_caption
 from mcp_servers.knowledge_hub import config as _config
 from mcp_servers.knowledge_hub.config import domain_image_manifest_path
 
@@ -516,7 +517,7 @@ def caption_manifest(
                 # Context-aware caption: context_before + description + context_after.
                 cb = _clean_context(entry.get("context_before", ""))
                 ca = _clean_context(entry.get("context_after", ""))
-                full_caption = f"{cb} [IMAGE: {description}] {ca}".strip()
+                full_caption = clean_caption(f"{cb} [IMAGE: {description}] {ca}".strip())
                 entry["caption"] = full_caption
                 pending_writes.append((entry, img_hash, full_caption))
                 with stats_lock:
@@ -610,7 +611,7 @@ def _caption_sequential(
             else:
                 cb = _clean_context(entry.get("context_before", ""))
                 ca = _clean_context(entry.get("context_after", ""))
-                full_caption = f"{cb} [IMAGE: {description}] {ca}".strip()
+                full_caption = clean_caption(f"{cb} [IMAGE: {description}] {ca}".strip())
                 entry["caption"] = full_caption
                 put_cached(conn, entry["image_id"], img_hash, model_name, full_caption)
                 stats["misses"] += 1
