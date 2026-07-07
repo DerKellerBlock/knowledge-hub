@@ -22,8 +22,21 @@
   "mcp": {
     "knowledge_hub": {
       "type": "local",
-      "command": ["python3", "-m", "mcp_servers.knowledge_hub.server"],
-      "enabled": true
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "mcp_servers.knowledge_hub.server"
+      ],
+      "enabled": true,
+      "environment": {
+        "KH_LLM_MODEL": "gemma4:cloud",
+        "KH_EMBEDDING_MODEL": "BAAI/bge-m3",
+        "KH_EMBEDDING_DEVICE": "mps",
+        "KH_MULTIMODAL_MODEL": "google/siglip2-so400m-patch16-512",
+        "KH_MULTIMODAL_DEVICE": "mps",
+        "KH_OLLAMA_HOST": "http://localhost:11434"
+      },
+      "timeout": 120000
     }
   },
   "permission": {
