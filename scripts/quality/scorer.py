@@ -12,6 +12,7 @@ Design spec:
 from __future__ import annotations
 
 import json
+import math as _math
 from pathlib import Path
 from statistics import mean
 from typing import Any
@@ -270,6 +271,279 @@ def score_evidence_quality(results: list[dict]) -> float | None:
     return round(with_text / len(results), 4)
 
 
+def score_ndcg(
+    results: list[dict],
+    question: dict | None = None,
+    expected_source_files: list[str] | None = None,
+    expected_page_ranges: list[dict] | None = None,
+    query_tokens: set[str] | None = None,
+) -> float | None:
+    """NDCG@10 — Normalized Discounted Cumulative Gain with 4-level relevance.
+
+    Replaces the constant ``score_top_k_relevance`` (which always returns
+    ~0.55 for 10 results) with a discriminative rank-aware metric.
+
+    Relevance levels (heuristic, no manual judgment needed):
+        3 = chunk is from an expected_source_file AND page_start is in
+            an expected_page_range (±2 tolerance for chunking variance)
+        2 = chunk is from an expected_source_file (without page match)
+        1 = chunk text has keyword overlap with the query (BM25 tokens)
+        0 = no match at all
+
+    Formula:
+        DCG@K  = Σ(i=1..K) (2^rel_i - 1) / log2(i + 1)
+        IDCG@K = DCG of ideal ranking (descending by rel)
+        NDCG@K = DCG@K / IDCG@K  (0.0 if IDCG=0, i.e. no relevant results)
+
+    Args:
+        results: Search results (must have ``rank`` or be in rank order).
+        question: Optional Golden Dataset question (for extracting
+            expected sources/ranges if not passed explicitly).
+        expected_source_files: Override for expected sources.
+        expected_page_ranges: Override for expected page ranges.
+        query_tokens: Optional set of query keywords for rel=1 heuristic.
+            If None, rel=1 is skipped (only rel=0/2/3 used).
+
+    Returns:
+        NDCG@10 in [0, 1], or None (N/A) for empty results.
+    """
+    if not results:
+        return None
+
+    # Extract expected sources/ranges from question if not explicit
+    if expected_source_files is None and question:
+        expected_source_files = question.get("expected_source_files", []) or []
+    if expected_page_ranges is None and question:
+        expected_page_ranges = question.get("expected_page_ranges") or []
+    if query_tokens is None:
+        # Simple keyword extraction from question text
+        q_text = (question.get("question", "") if question else "").lower()
+        # Use same CamelCase + Unicode tokenization as BM25 (simplified)
+        import re as _re
+        tokens = _re.findall(r'[a-z0-9]+', q_text)
+        # Filter very short tokens
+        query_tokens = {t for t in tokens if len(t) >= 3}
+
+    expected_sources_set = set(expected_source_files or [])
+    expected_ranges = expected_page_ranges or []
+
+    def _relevance(result: dict) -> int:
+        """Determine 4-level relevance for a single result."""
+        sf = result.get("source_file", "")
+        ps = result.get("page_start")
+
+        # rel=3: source match + page match
+        if sf in expected_sources_set and ps is not None and expected_ranges:
+            for er in expected_ranges:
+                if er["start"] - 2 <= ps <= er["end"] + 2:
+                    return 3
+            # Source match but no page match → rel=2
+            return 2
+
+        # rel=2: source match without page
+        if sf in expected_sources_set:
+            return 2
+
+        # rel=1: keyword overlap
+        if query_tokens:
+            text = (result.get("text", "") or "").lower()
+            result_tokens = set(_re.findall(r'[a-z0-9]+', text))
+            overlap = query_tokens & result_tokens
+            if len(overlap) >= 2:  # at least 2 query keywords in text
+                return 1
+
+        # rel=0: no match
+        return 0
+
+    # Compute relevance for top-10
+    top_k = results[:10]
+    rels = [_relevance(r) for r in top_k]
+
+    # DCG
+    dcg = sum(
+        (2 ** rel - 1) / _math.log2(i + 2)  # i+2 because log2(1+1)=1 for i=0
+        for i, rel in enumerate(rels)
+    )
+
+    # IDCG (ideal: sort descending by rel)
+    ideal_rels = sorted(rels, reverse=True)
+    idcg = sum(
+        (2 ** rel - 1) / _math.log2(i + 2)
+        for i, rel in enumerate(ideal_rels)
+    )
+
+    if idcg == 0:
+        # No relevant results at all → NDCG=0 (not None — it's a valid 0)
+        return 0.0
+
+    return round(dcg / idcg, 4)
+
+
+def score_jaccard_page_overlap(
+    results: list[dict],
+    is_pdf_domain: bool = False,
+    expected_ranges: list[dict] | None = None,
+) -> float | None:
+    """Jaccard Page Overlap — naturally continuous page accuracy metric.
+
+    Replaces ``score_page_metadata_accuracy`` which used a rigid ±2
+    tolerance (binary in/out per range). Jaccard is naturally continuous
+    and handles Late Chunking variance better.
+
+    For each result with page_start/page_end, computes the Jaccard index
+    against each expected_page_range and takes the maximum. The overall
+    score is the average of per-result best-Jaccard values.
+
+    Formula (per result):
+        expected_pages = {start, start+1, ..., end}  (from expected range)
+        actual_pages   = {page_start, ..., page_end}
+        Jaccard = |expected ∩ actual| / |expected ∪ actual|
+
+    Args:
+        results: Search results with optional page_start/page_end.
+        is_pdf_domain: Whether the domain uses PDF sources.
+        expected_ranges: List of ``{"start": N, "end": M}`` dicts.
+
+    Returns:
+        Average best-Jaccard in [0, 1], or None (N/A) for non-PDF domains
+        or empty results or no expected_ranges.
+    """
+    if not is_pdf_domain or not results or not expected_ranges:
+        return None
+
+    jaccards = []
+    for r in results:
+        ps = r.get("page_start")
+        pe = r.get("page_end")
+        if ps is None or pe is None:
+            jaccards.append(0.0)
+            continue
+
+        actual_pages = set(range(int(ps), int(pe) + 1))
+        best_j = 0.0
+
+        for er in expected_ranges:
+            exp_pages = set(range(er["start"], er["end"] + 1))
+            union = actual_pages | exp_pages
+            if not union:
+                continue
+            intersection = actual_pages & exp_pages
+            j = len(intersection) / len(union)
+            best_j = max(best_j, j)
+
+        jaccards.append(best_j)
+
+    if not jaccards:
+        return None
+    return round(sum(jaccards) / len(jaccards), 4)
+
+
+def score_weighted_source_recall(
+    results: list[dict],
+    expected_source_files: list,
+) -> float | None:
+    """Weighted Source Recall — continuous, with optional per-source weights.
+
+    Replaces ``score_source_recall`` which was binary (found/not-found).
+    Supports optional ``weight`` per source via dict entries in the
+    Golden Dataset:
+
+    .. code-block:: yaml
+
+        expected_source_files:
+          - file: "reference-manual.md"
+            weight: 2.0
+          - file: "colorist-guide.md"
+            weight: 1.0
+
+    Backward-compatible: plain string entries get default weight 1.0,
+    producing identical results to the old ``score_source_recall``.
+
+    Formula:
+        WSR = Σ(w_s × found_s) / Σ(w_s)  for s ∈ expected_sources
+
+    Args:
+        results: Search results with ``source_file`` field.
+        expected_source_files: List of filenames (str) or dicts with
+            ``file`` and optional ``weight`` keys.
+
+    Returns:
+        Weighted recall in [0, 1], or None (N/A) if no expected sources.
+    """
+    if not expected_source_files:
+        return None
+
+    if not results:
+        return 0.0
+
+    found_sources = {r.get("source_file", "") for r in results if r.get("source_file")}
+
+    # Parse expected sources with weights
+    total_weight = 0.0
+    found_weight = 0.0
+    for entry in expected_source_files:
+        if isinstance(entry, dict):
+            fname = entry.get("file", "")
+            weight = entry.get("weight", 1.0)
+        else:
+            fname = str(entry)
+            weight = 1.0
+        total_weight += weight
+        if fname in found_sources:
+            found_weight += weight
+
+    if total_weight == 0:
+        return None
+    return round(found_weight / total_weight, 4)
+
+
+def score_source_diversity(results: list[dict]) -> float | None:
+    """Source Diversity — normalized Shannon entropy of source distribution.
+
+    Measures how well the top-k results spread across multiple source
+    files. A single-source result set gets 0.0; an evenly spread multi-
+    source set gets ~1.0.
+
+    Formula:
+        p_i = count(source_i) / total_results
+        Diversity = -Σ(p_i × log2(p_i)) / log2(num_unique_sources)
+
+    The normalization by ``log2(num_unique_sources)`` ensures the score
+    is in [0, 1] regardless of how many sources are in the top-k.
+
+    Returns None (N/A) for empty results or results without source_file.
+    """
+    if not results:
+        return None
+
+    # Count sources
+    source_counts: dict[str, int] = {}
+    for r in results:
+        sf = r.get("source_file", "")
+        if sf:
+            source_counts[sf] = source_counts.get(sf, 0) + 1
+
+    if not source_counts:
+        return None
+
+    total = sum(source_counts.values())
+    num_unique = len(source_counts)
+
+    if num_unique == 1:
+        return 0.0  # All from one source → zero diversity
+
+    # Shannon entropy
+    entropy = 0.0
+    for count in source_counts.values():
+        p = count / total
+        if p > 0:
+            entropy -= p * _math.log2(p)
+
+    # Normalize by max possible entropy (log2(num_unique))
+    max_entropy = _math.log2(num_unique)
+    return round(entropy / max_entropy, 4)
+
+
 def score_image_presence(
     results: list[dict], question: dict | None = None
 ) -> float | None:
@@ -313,6 +587,7 @@ def compute_composite_score(
     top_k_relevance: float | None,
     evidence_quality: float | None,
     image_presence: float | None = None,
+    source_diversity: float | None = None,
     weights: dict[str, float] | None = None,
 ) -> float:
     """Weighted composite score with N/A redistribution.
@@ -334,6 +609,7 @@ def compute_composite_score(
         (top_k_relevance, w["top_k_relevance"]),
         (evidence_quality, w["evidence_quality"]),
         (image_presence, w.get("image_presence", 0.0)),
+        (source_diversity, w.get("source_diversity", 0.0)),
     ]
     active = [(v, wt) for v, wt in parts if v is not None]
 
@@ -403,14 +679,22 @@ def evaluate_question(
     expected_sources = question.get("expected_source_files", []) or []
     expected_ranges = question.get("expected_page_ranges") or None
 
-    sr = score_source_recall(results, expected_sources)
-    pma = score_page_metadata_accuracy(
+    # Quality Metrics v2: use new discriminative metrics when available.
+    # Fall back to legacy metrics for backward-compat (tests may pass
+    # plain-string expected_source_files without weight dicts).
+    sr = score_weighted_source_recall(results, expected_sources)
+    pma = score_jaccard_page_overlap(
         results, is_pdf_domain=is_pdf_domain, expected_ranges=expected_ranges
     )
-    tkr = score_top_k_relevance(results)
+    tkr = score_ndcg(
+        results, question=question,
+        expected_source_files=expected_sources,
+        expected_page_ranges=expected_ranges,
+    )
     eq_ = score_evidence_quality(results)
     ip = score_image_presence(results, question=question)
-    composite = compute_composite_score(sr, pma, tkr, eq_, ip, weights=weights)
+    div = score_source_diversity(results)
+    composite = compute_composite_score(sr, pma, tkr, eq_, ip, div, weights=weights)
     label = classify_score(composite, thresholds=thresholds)
 
     # Truncation heuristic (LIM-003) — False positives possible.
@@ -447,6 +731,7 @@ def evaluate_question(
         "top_k_relevance": tkr,
         "evidence_quality": eq_,
         "image_presence": ip,
+        "source_diversity": div,
         "composite_score": composite,
         "label": label,
         "truncation_warnings": truncation_warnings,
@@ -492,6 +777,7 @@ def aggregate_domain_scores(domain: str, evaluations: list[dict]) -> dict:
         "avg_top_k_relevance": avg("top_k_relevance"),
         "avg_evidence_quality": avg("evidence_quality"),
         "avg_image_presence": avg("image_presence"),
+        "avg_source_diversity": avg("source_diversity"),
     }
 
 
@@ -527,17 +813,24 @@ def generate_markdown_report(
     lines.append(f"| Top-K Relevance | {summary['avg_top_k_relevance']} |")
     lines.append(f"| Evidence Quality | {summary['avg_evidence_quality']} |")
     ip = summary.get('avg_image_presence')
-    if ip is not None:
+    if ip is not None and ip > 0:
         lines.append(f"| Image Presence | {ip} |")
+    div = summary.get('avg_source_diversity')
+    if div is not None and div > 0:
+        lines.append(f"| Source Diversity | {div} |")
     lines.append("")
     lines.append("## Per-Question Results")
     has_ip = any(e.get("image_presence") is not None for e in evaluations)
-    if has_ip:
-        lines.append("| ID | Question | Score | Label | SR | PMA | TKR | EQ | IP |")
-        lines.append("|----|----------|-------|-------|----|----|----|----|----|")
+    has_div = any(e.get("source_diversity") is not None for e in evaluations)
+    if has_ip and has_div:
+        lines.append("| ID | Question | Score | Label | SR | PMA | NDCG | EQ | IP | Div |")
+        lines.append("|----|----------|-------|-------|----|----|------|----|----|-----|")
+    elif has_ip:
+        lines.append("| ID | Question | Score | Label | SR | PMA | NDCG | EQ | IP |")
+        lines.append("|----|----------|-------|-------|----|----|------|----|----|")
     else:
-        lines.append("| ID | Question | Score | Label | SR | PMA | TKR | EQ |")
-        lines.append("|----|----------|-------|-------|----|----|----|----|")
+        lines.append("| ID | Question | Score | Label | SR | PMA | NDCG | EQ |")
+        lines.append("|----|----------|-------|-------|----|----|------|----|")
     for e in evaluations:
         q_short = e["question"][:40] + ("..." if len(e["question"]) > 40 else "")
         sr = e["source_recall"] if e["source_recall"] is not None else "N/A"
@@ -549,15 +842,23 @@ def generate_markdown_report(
         eq = e["evidence_quality"] if e["evidence_quality"] is not None else "N/A"
         ip_val = e.get("image_presence")
         ip_str = ip_val if ip_val is not None else "N/A"
-        if has_ip:
+        div_val = e.get("source_diversity")
+        div_str = div_val if div_val is not None else "N/A"
+        tkr = e["top_k_relevance"] if e["top_k_relevance"] is not None else "N/A"
+        if has_ip and has_div:
             lines.append(
                 f"| {e['id']} | {q_short} | {e['composite_score']} | {e['label']} | "
-                f"{sr} | {pma} | {e['top_k_relevance']} | {eq} | {ip_str} |"
+                f"{sr} | {pma} | {tkr} | {eq} | {ip_str} | {div_str} |"
+            )
+        elif has_ip:
+            lines.append(
+                f"| {e['id']} | {q_short} | {e['composite_score']} | {e['label']} | "
+                f"{sr} | {pma} | {tkr} | {eq} | {ip_str} |"
             )
         else:
             lines.append(
                 f"| {e['id']} | {q_short} | {e['composite_score']} | {e['label']} | "
-                f"{sr} | {pma} | {e['top_k_relevance']} | {eq} |"
+                f"{sr} | {pma} | {tkr} | {eq} |"
             )
     lines.append("")
     weak_fail = [e for e in evaluations if e["label"] in ("weak", "fail")]

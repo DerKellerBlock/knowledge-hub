@@ -2,14 +2,16 @@ domain: davinci_resolve
 version: 1
 description: "Golden Dataset for DaVinci Resolve domain quality evaluation"
 last_updated: 2026-07-01
-# Vision Retrieval Feature: image_presence weight (0.20 = 20% of composite)
-# Redistributed from other metrics: SR 0.35->0.30, PMA 0.20->0.15, TKR 0.25->0.20, EQ 0.20->0.15
+# Quality Metrics v2 (2026-07-07): discriminative metrics
+# NDCG@10 replaces constant TKR, Jaccard replaces ±2 PMA, WSR replaces binary SR
+# Source Diversity (Shannon entropy) rewards multi-source spread
 weights:
-  source_recall: 0.30
-  page_metadata_accuracy: 0.15
-  top_k_relevance: 0.20
-  evidence_quality: 0.15
-  image_presence: 0.20
+  source_recall: 0.25          # Weighted Source Recall
+  page_metadata_accuracy: 0.15 # Jaccard Page Overlap
+  top_k_relevance: 0.20        # NDCG@10
+  evidence_quality: 0.10       # Evidence Quality (reduced)
+  image_presence: 0.20         # Vision Retrieval (image questions only)
+  source_diversity: 0.10       # Source Diversity (DaVinci has 10 PDFs)
 # thresholds:
 #   pass: 0.7
 #   weak: 0.4

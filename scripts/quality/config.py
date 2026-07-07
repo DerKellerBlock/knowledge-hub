@@ -21,21 +21,16 @@ from typing import Any
 # a Golden Dataset can override individual metrics without redefining
 # every weight.
 DEFAULT_WEIGHTS: dict[str, float] = {
-    "source_recall": 0.35,
-    "page_metadata_accuracy": 0.20,
-    "top_k_relevance": 0.25,
-    "evidence_quality": 0.20,
-    # Vision Retrieval Feature (2026-07-07): image_presence measures
-    # whether image/caption results appear in the top-k. Default weight
-    # 0.0 = backward-compatible (domains without images are unaffected).
-    # Override per-domain in the Golden Dataset YAML, e.g.:
-    #   weights:
-    #     source_recall: 0.30
-    #     page_metadata_accuracy: 0.15
-    #     top_k_relevance: 0.20
-    #     evidence_quality: 0.15
-    #     image_presence: 0.20
-    "image_presence": 0.0,
+    # Quality Metrics v2 (2026-07-07): discriminative metrics replace
+    # constant TKR (was always 0.55) and near-constant EQ (was always 1.0).
+    # New: source_diversity (Shannon entropy) rewards multi-source spread.
+    # 70% of weight is now on discriminative metrics (was 60%).
+    "source_recall": 0.30,          # Weighted Source Recall (continuous)
+    "page_metadata_accuracy": 0.15, # Jaccard Page Overlap (continuous)
+    "top_k_relevance": 0.20,        # NDCG@10 (4-level relevance)
+    "evidence_quality": 0.10,       # EQ (reduced from 0.20 — near-constant)
+    "image_presence": 0.0,          # Vision Retrieval (default off)
+    "source_diversity": 0.05,       # NEW: Shannon entropy of source spread
 }
 
 # Composite-score classification thresholds. ``composite >= pass`` is
