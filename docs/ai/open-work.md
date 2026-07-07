@@ -11,7 +11,7 @@
 
 | Task-ID | Spec | Plan | Priorität | Status | Kurzbeschreibung |
 |---|---|---|---|---|---|
-| quality-metrics-v2 | docs/issues/quality-metrics-v2/spec.md | docs/issues/quality-metrics-v2/plan.md | high | open | Diskriminative Eval-Metriken (NDCG@10, Jaccard Page Overlap, Weighted Source Recall, Source Diversity) — ersetzt konstante TKR/EQ durch echte Signale |
+| quality-metrics-v2 | docs/issues/quality-metrics-v2/spec.md | docs/issues/quality-metrics-v2/plan.md | high | done | Diskriminative Eval-Metriken (NDCG@10, Jaccard, WSR, Diversity) + HyDE + Page Range Kuratie — 0.7234→0.8017, 15→21 pass |
 
 
 

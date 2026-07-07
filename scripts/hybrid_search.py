@@ -25,6 +25,7 @@ if str(_pkg_root) not in _sys.path:
     _sys.path.insert(0, str(_pkg_root))
 from model_manager import get_embedder, get_chroma_client, is_reranker_available
 from embed_search import semantic_search
+from hyde import generate_hypothetical_document, should_use_hyde
 from bm25_search import bm25_search, image_bm25_search, get_image_bm25_index_size_mb
 from reranker import rerank
 from mcp_servers.knowledge_hub.config import domain_image_bm25_path
@@ -395,7 +396,12 @@ def search(
     # Hybrid — use 4-list RRF if the domain has an image index, else 2-list.
     model = get_embedder(domain)
     bm25_results = bm25_search(domain, query, top_k=100)
-    dense_results = semantic_search(domain, query, 100, model)
+    # HyDE: generate hypothetical document for better embedding match.
+    # BM25 still uses the raw query (keyword overlap is important).
+    query_for_embedding = query
+    if should_use_hyde(query):
+        query_for_embedding = generate_hypothetical_document(query)
+    dense_results = semantic_search(domain, query_for_embedding, 100, model)
 
     if source_filter:
         bm25_results = [r for r in bm25_results if r.get("source_type") in source_filter]

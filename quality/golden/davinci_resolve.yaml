@@ -88,9 +88,10 @@ questions:
       - "davinci-resolve-20.3-reference-manual.md"
       - "davinci-resolve-20-colorist-guide.md"
     expected_page_ranges:
-      - {start: 216, end: 220}      # beginners-guide p218 (Using the Primary Corrector, ±2)
-      - {start: 2973, end: 2978}    # ref-manual p2975-2976 (Primary Color Correction, ±2)
-      - {start: 161, end: 173}      # colorist-guide (preserved from original as fallback)
+      - {start: 216, end: 220}      # beginners-guide p218 (Using the Primary Corrector)
+      - {start: 2973, end: 2978}    # ref-manual p2975-2976 (Primary Color Correction)
+      - {start: 271, end: 275}      # beginners-guide p273 (Masking Areas with Windows)
+      - {start: 161, end: 173}      # colorist-guide (preserved as fallback)
     real_world_sources:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/color"
         date: null
@@ -558,9 +559,10 @@ questions:
       - "fusion-20.3-manual.md"
       - "davinci-resolve-20-fusion-visual-effects.md"
     expected_page_ranges:
-      - {start: 110, end: 115}    # fusion-manual p112-113 (±2)
-      - {start: 1343, end: 1348}  # ref-manual p1345-1346 (±2)
-      - {start: 3335, end: 3340}  # ref-manual p3337 (image: Node Editor panel, ±2)
+      - {start: 110, end: 115}    # fusion-manual p112-113 (Working in the Node Editor)
+      - {start: 1343, end: 1348}  # ref-manual p1345-1346 (Node Editor reference)
+      - {start: 118, end: 125}    # fusion-manual p120-124 (Node Editor operations)
+      - {start: 3335, end: 3340}  # ref-manual p3337 (image: Node Editor panel)
     real_world_sources:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/fusion"
         date: null
@@ -585,9 +587,10 @@ questions:
       - "davinci-resolve-20-fairlight-audio-post.md"
       - "davinci-resolve-20-editors-guide.md"
     expected_page_ranges:
-      - {start: 36, end: 40}      # fairlight-audio-post p38 (±2)
-      - {start: 430, end: 435}    # ref-manual p432-433 (±2)
-      - {start: 478, end: 483}    # fairlight-audio-post p480-481 (±2)
+      - {start: 36, end: 40}      # fairlight-audio-post p38 (Inspector clip volume)
+      - {start: 430, end: 435}    # ref-manual p432-433 (Inspector panel)
+      - {start: 438, end: 443}    # ref-manual p440-441 (Inspector controls)
+      - {start: 478, end: 483}    # fairlight-audio-post p480-481 (Inspector audio)
     real_world_sources:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/edit"
         date: null
@@ -612,9 +615,10 @@ questions:
       - "davinci-resolve-20-fairlight-audio-post.md"
       - "davinci-resolve-20-beginners-guide.md"
     expected_page_ranges:
-      - {start: 699, end: 704}    # ref-manual p701-702 (±2)
-      - {start: 3731, end: 3736}  # ref-manual p3733-3734 (±2)
-      - {start: 456, end: 461}    # beginners-guide p458-459 (±2)
+      - {start: 699, end: 704}    # ref-manual p701-702 (Mixer and Meters)
+      - {start: 3731, end: 3736}  # ref-manual p3733-3734 (Fairlight Mixer)
+      - {start: 456, end: 461}    # beginners-guide p458-459 (Mixer audio levels)
+      - {start: 15, end: 19}      # fairlight-live p17 (Mixer panel)
     real_world_sources:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/fairlight"
         date: null
@@ -639,9 +643,10 @@ questions:
       - "davinci-resolve-20-editors-guide.md"
       - "davinci-resolve-20-beginners-guide.md"
     expected_page_ranges:
-      - {start: 4043, end: 4048}  # ref-manual p4045-4046 (±2)
-      - {start: 50, end: 55}      # ref-manual p52-53 (±2)
-      - {start: 568, end: 573}    # editors-guide p570 (image: Deliver Page Render Settings, ±2)
+      - {start: 4043, end: 4048}  # ref-manual p4045-4046 (Deliver Page)
+      - {start: 50, end: 55}      # ref-manual p52-53 (Deliver Page overview)
+      - {start: 4060, end: 4065}  # ref-manual p4062-4063 (Render Settings)
+      - {start: 569, end: 574}    # editors-guide p571-572 (Deliver render settings)
     real_world_sources:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/edit"
         date: null
@@ -664,9 +669,10 @@ questions:
     expected_source_files:
       - "davinci-resolve-20.3-reference-manual.md"
     expected_page_ranges:
-      - {start: 557, end: 562}    # ref-manual p559-560 (±2)
-      - {start: 567, end: 572}    # ref-manual p569-570 (±2)
-      - {start: 601, end: 606}    # ref-manual p603-604 (±2)
+      - {start: 557, end: 562}    # ref-manual p559-560 (Cut Page)
+      - {start: 567, end: 572}    # ref-manual p569-570 (Edit Page)
+      - {start: 573, end: 578}    # ref-manual p575-576 (Cut vs Edit)
+      - {start: 601, end: 606}    # ref-manual p603-604 (Cut Page edit commands)
     real_world_sources:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/cut"
         date: null
