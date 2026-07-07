@@ -433,10 +433,13 @@ def search(
     else:
         text_entries = text_entries[:top_k]
 
-    # Re-merge: interleave by rerank_score (text) / rrf_score (image).
-    # Mixed-modality merge: reserve up to 1/3 of top_k slots for image
-    # entries so image-centric queries get at least one image result.
-    # Text entries are sorted by rerank_score, images by RRF score.
+    # Re-merge: interleave text and image entries so image-centric queries
+    # get visible image results. The cross-encoder reranker scores text
+    # entries in a much higher range (~5-7) than image RRF scores (~0.03),
+    # so a pure score-sort would push all images to the bottom. Instead we
+    # reserve 1/3 of top_k slots for images and interleave: the best image
+    # appears at rank 2, the second at rank 4, etc., so a user scanning
+    # top-5 sees both text and image results.
     for r in image_entries:
         r["rerank_score"] = None
         r["stage1_score"] = r.get("score")
@@ -447,12 +450,24 @@ def search(
     image_budget = min(len(image_entries), max(1, top_k // 3)) if image_entries else 0
     text_budget = top_k - image_budget
 
-    merged = text_entries[:text_budget] + image_entries[:image_budget]
-    def _sort_key(r):
-        if r.get("rerank_score") is not None:
-            return (1, r["rerank_score"])
-        return (0, r.get("stage1_score", r.get("score", 0)))
-    merged.sort(key=_sort_key, reverse=True)
+    # Interleave: take 2 text, 1 image, 2 text, 1 image, ...
+    # This gives images visible positions without a pure score-sort
+    # that would bury them at the bottom.
+    merged = []
+    ti = 0  # text index
+    ii = 0  # image index
+    text_slice = text_entries[:text_budget]
+    image_slice = image_entries[:image_budget]
+    while ti < len(text_slice) or ii < len(image_slice):
+        # Take 2 text entries (or 1 if only 1 left)
+        for _ in range(2):
+            if ti < len(text_slice):
+                merged.append(text_slice[ti])
+                ti += 1
+        # Take 1 image entry
+        if ii < len(image_slice):
+            merged.append(image_slice[ii])
+            ii += 1
     fused = merged[:top_k]
     # Re-assign sequential ranks 1..N after the merge so consumers see a
     # contiguous ranking (the RRF rank and rerank position would otherwise
