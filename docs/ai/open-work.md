@@ -11,6 +11,7 @@
 
 | Task-ID | Spec | Plan | Priorität | Status | Kurzbeschreibung |
 |---|---|---|---|---|---|
+| quality-metrics-v2 | docs/issues/quality-metrics-v2/spec.md | docs/issues/quality-metrics-v2/plan.md | high | open | Diskriminative Eval-Metriken (NDCG@10, Jaccard Page Overlap, Weighted Source Recall, Source Diversity) — ersetzt konstante TKR/EQ durch echte Signale |
 
 
 
