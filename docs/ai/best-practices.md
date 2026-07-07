@@ -225,3 +225,72 @@ KH_LLM_MODEL=gemma4:cloud python scripts/embed_index.py --domain <domain> --cont
 - Keine harten `/Users/noahk/`-Pfade (außer in dieser Doku und opencode.json)
 - Shell-Skripte prüfen Inputs (z.B. Domain-Namen validieren)
 - **Pickle-Sicherheit:** `rank_bm25` serialisiert/deserialisiert BM25-Indizes via Python `pickle`. Für den persönlichen Hub akzeptabel (alle Dateien unter eigener Kontrolle, kein externer Input). Produktion/Shared-Hub wäre problematisch — dann auf JSON oder safetensors migrieren.
+
+## Vision Retrieval Feature (2026-07-07)
+
+### Neue Env-Vars
+
+- `KH_MULTIMODAL_MODEL` — Überschreibt das Multimodal-Embedding-Modell
+  (SigLIP-2 / jina-clip-v2). Default: `google/siglip2-so400m-patch16-512`
+  (Apache 2.0, 1152 dims, 512×512, English-only, kommerziell sicher).
+  Optional: `jinaai/jina-clip-v2` (CC-BY-NC-4.0, multilingual, 1024 dims,
+  `trust_remote_code=True`, analog jina-reranker-v2).
+  Wird LIVE in `model_manager.get_multimodal_embedder()` auf jedem Cache-Miss
+  gelesen. Precedence: Env-Var > `DEFAULT_MULTIMODAL_MODEL`.
+- `KH_MULTIMODAL_DEVICE` — Überschreibt das Compute-Device des Multimodal-
+  Embedders. Default `cpu`, opt-in `mps` (Apple Silicon, ~4.7× Speedup).
+  Cache-Key: `multimodal:<model>:<device>` (Runtime-Switch lädt frische
+  Instanz). Pre-Flight-Mitigation: 10-Bild MPS-Encode vor jedem Build;
+  bei Hang (>30s) auf CPU zurückfallen (`embed_images.py` automatisiert).
+- `KH_MULTIMODAL_BATCH_SIZE` — Default `32`. MPS RAM-limitiert (Spheron
+  empfiehlt 256-512 für Server-GPUs; auf M1 Max ist 32-128 sicher).
+- `KH_VISION_LLM_MODEL` — Überschreibt das Vision-LLM für Bild-Captioning.
+  Default folgt `KH_LLM_MODEL` (`gemma4:cloud`). Wird in `caption_images.py`
+  genutzt.
+- `KH_VISION_LLM_WORKERS` — Default `1` (sequenziell), opt-in `3` für
+  Ollama-Cloud Pro Concurrency. CLI-Flag `--workers N` an `caption_images.py`
+  überschreibt die env var. ThreadPoolExecutor + `cancel_event` bei HTTP 429.
+
+### CLI-Skripte
+
+```bash
+# 1. Bilder extrahieren (AGPL build tool, PyMuPDF4LLM)
+python scripts/extract_pdf_images.py --domain davinci_resolve
+python scripts/extract_pdf_images.py --domain davinci_resolve --quality-check
+
+# 2. Captions generieren (Gemma 4 Cloud, 3 Worker)
+KH_LLM_MODEL=gemma4:cloud KH_VISION_LLM_WORKERS=3 \
+    python scripts/caption_images.py --domain davinci_resolve --workers 3
+
+# 3. Bild-Embeddings bauen (SigLIP-2, MPS)
+KH_MULTIMODAL_DEVICE=mps KH_MULTIMODAL_BATCH_SIZE=64 \
+    python scripts/embed_images.py --domain davinci_resolve
+
+# 4. Bild-BM25 + Text-Index (additiv)
+python scripts/embed_index.py --domain davinci_resolve --embed-images
+```
+
+### Pre-Flight MPS-Check (SigLIP-2)
+
+`embed_images.py` führt vor jedem Build einen 10-Bild MPS-Encode durch.
+Bei Hang (>30s) oder OOM fällt es automatisch auf CPU zurück und lädt
+das Modell neu. Der Check ist auch standalone verfügbar:
+
+```bash
+KH_MULTIMODAL_DEVICE=mps python scripts/embed_images.py --domain davinci_resolve --pre-flight-only
+```
+
+### Context-Aware Captions (TowardsDataScience Best-Practice)
+
+Captions sind context-aware: `context_before + [IMAGE: description] + context_after`.
+Der Vision-LLM bekommt den umgebenden Handbuch-Text (±200 chars, bereinigt
+um Bild-Referenzen) als Disambiguierungshilfe. Ähnlich aussehende
+Screenshots (verschiedene Color-Page-Dialoge) bekommen so unterscheidbare
+Captions.
+
+### Content-Hash Caching (AugmentCode Rule 8)
+
+`image_caption_cache.db` und `image_embedding_cache.db` verwenden
+content-hash Keys (SHA-256 der Bild-Bytes + Modell + Modality). Bei
+Re-Builds werden unveränderte Bilder/Captions übersprungen. Cache-Resume
+nach Abbruch: alle bereits verarbeiteten Bilder bleiben im Cache.

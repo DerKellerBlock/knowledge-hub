@@ -38,6 +38,14 @@ Deckt: Cut, Edit, Color, Fairlight, Fusion, Deliver, Photo (ab Resolve 21).
 - BM25-Path: chromadb_data/davinci_resolve/davinci_resolve_bm25.pkl
 - Source-Types: pdf
 - Letztes Update: 2026-06-30
+- Multimodal-Model: google/siglip2-so400m-patch16-512 (1152 dims, text+image joint encoder, Apache 2.0)
+- Vision-LLM: gemma4:cloud (Ollama Cloud, Zero-Retention, 3 parallele Worker)
+- Image-Collection: davinci_resolve_images (ChromaDB, modality=image|caption)
+- Image-BM25-Path: chromadb_data/davinci_resolve/davinci_resolve_images_bm25.pkl
+- Image-Manifest: chromadb_data/davinci_resolve/image_manifest.json
+- Image-Extraction: enabled (PyMuPDF4LLM write_images=True, AGPL build tool)
+- Image-Caption-Cache: chromadb_data/davinci_resolve/image_caption_cache.db (SQLite WAL)
+- Image-Embedding-Cache: chromadb_data/davinci_resolve/image_embedding_cache.db (SQLite WAL)
 
 ## Lizenz-Hinweis
 Quelldokumente © Blackmagic Design. Ursprüngliche PDFs in sources/raw/ (gitignored).

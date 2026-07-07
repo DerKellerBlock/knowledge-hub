@@ -128,3 +128,80 @@ Parallel LLM-Calls (Phase 3.3a, Contextual Retrieval):
 
 Domain-Scoping: `--domains` CLI-Flag auf dem MCP-Server begrenzt sichtbare
 Domains. Default (ohne Flag): alle sichtbar (rückwärtskompatibel).
+
+## Vision Retrieval Feature (2026-07-07)
+
+Multimodal-RAG für PDF-Domains mit Screenshots (aktuell: `davinci_resolve`).
+Additive Pipeline — bestehende Text-Suche bleibt unverändert, Bild-Pipeline
+ist ein zusätzliches Retrieval-Signal.
+
+### Pipeline-Übersicht
+
+```
+PDFs (sources/raw/*.pdf)
+   │
+   ▼ extract_pdf_images.py (PyMuPDF4LLM write_images=True, AGPL build tool)
+   │
+   ├─ domains/<domain>/images/<source-stem>/<pdf>-<page>-<idx>.png
+   └─ chromadb_data/<domain>/image_manifest.json
+         │
+         ▼ caption_images.py (Gemma 4 Cloud, 3 parallele Worker)
+         │
+         └─ chromadb_data/<domain>/image_caption_cache.db (SQLite WAL)
+               │
+               ▼ embed_images.py (SigLIP-2 / jina-clip-v2, MPS)
+               │
+               ├─ chromadb_data/<domain>/image_embedding_cache.db (SQLite WAL)
+               └─ ChromaDB <domain>_images collection (modality=image|caption)
+                     │
+                     ▼ embed_index.py --embed-images
+                     │
+                     └─ chromadb_data/<domain>/<domain>_images_bm25.pkl
+                           │
+                           ▼ hybrid_search.py (4-Listen-RRF)
+                           │
+                           └─ Top-K gemischt (text + image + caption)
+```
+
+### 4-Listen-RRF (Modality-Gap-Berücksichtigung)
+
+```
+Stage 1 (parallel):
+  text_bm25    → BM25 über Text-Chunks (k=60)
+  text_dense   → BGE-M3 ChromaDB (k=60)
+  image_bm25   → BM25 über Bild-Captions (k=30, kleiner → stärkere Gewichtung)
+  image_dense  → SigLIP-2 Caption-Embeddings (k=30)
+
+Stage 2 (Reranking):
+  text_entries   → jina-reranker-v2 Cross-Encoder
+  image_entries  → kein Reranking (Modality-Gap: Text-Cross-Encoder
+                   würde Bild-Captions falsch scoreran)
+  Merge: 2/3 Text + 1/3 Bild (min 1 Bild wenn im RRF-Pool)
+```
+
+### Neue Env-Vars
+
+- `KH_MULTIMODAL_MODEL` — Default `google/siglip2-so400m-patch16-512`
+  (Apache 2.0, 1152 dims, English-only). Optional: `jinaai/jina-clip-v2`
+  (CC-BY-NC-4.0, multilingual, 1024 dims, `trust_remote_code=True`).
+- `KH_MULTIMODAL_DEVICE` — Default `cpu`, opt-in `mps` (Apple Silicon).
+- `KH_MULTIMODAL_BATCH_SIZE` — Default `32`.
+- `KH_VISION_LLM_MODEL` — Default folgt `KH_LLM_MODEL` (`gemma4:cloud`).
+- `KH_VISION_LLM_WORKERS` — Default `1`, opt-in `3` für Cloud-Concurrency.
+
+### Neue Skripte
+
+| Skript | Verantwortung | AGPL? |
+|--------|---------------|-------|
+| `extract_pdf_images.py` | PDF → PNG + Manifest | Ja (PyMuPDF) |
+| `caption_images.py` | Bild → Caption (Gemma 4 Cloud) | Nein (MIT) |
+| `embed_images.py` | Bild/Caption → ChromaDB images | Nein (MIT) |
+| `image_caption_cache.py` | SQLite-Cache für Captions | Nein (MIT) |
+| `image_embedding_cache.py` | SQLite-Cache für Embeddings | Nein (MIT) |
+
+### Neue Collections / Indizes
+
+- ChromaDB `<domain>_images` — modality=image|caption, cosine, 1152 dims (SigLIP-2)
+- BM25 `<domain>_images_bm25.pkl` — über Bild-Captions
+- SQLite `image_caption_cache.db` — WAL, content-hash Key, domain-unabhängig
+- SQLite `image_embedding_cache.db` — WAL, base64 float32, domain-unabhängig

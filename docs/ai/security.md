@@ -61,3 +61,38 @@ find . -name "*.sh" -exec bash -n {} \;
 ```
 
 For changes touching `model_manager.py:get_reranker()` or any model loaded with `trust_remote_code=True`, additionally review the upstream model repository and confirm the commit hash matches the documented trusted source. `gitleaks`/`semgrep` are optional but recommended for security-sensitive changes.
+## Vision Retrieval Feature (2026-07-07)
+
+### Multimodal Embedding (SigLIP-2 / jina-clip-v2)
+
+- **SigLIP-2 (Default):** Apache 2.0, kommerziell sicher. Kein
+  `trust_remote_code` nötig (kein `auto_map` in config.json). Wird via
+  `transformers.AutoModel.from_pretrained()` geladen.
+- **jina-clip-v2 (Optional):** CC-BY-NC-4.0, multilingual. Schips custom
+  code via `auto_map` → `trust_remote_code=True` (analog jina-reranker-v2).
+  Akzeptiert für persönlichen nicht-kommerziellen Hub. Für Produktion:
+  Commit-Hash pinnen oder Custom-Code auditieren.
+- **Ollama-Multimodal-Limitation:** SigLIP-2/jina-clip-v2 laufen via
+  `transformers` (NICHT via Ollama — Ollama hat keine Multimodal-Embedding-
+  API, Issue #5304 offen seit 2024-06). Das ist sicherer als der jina-
+  reranker-Pfad (kein Ollama-Netzwerk-Call für Embeddings).
+
+### Vision-LLM Captioning (Gemma 4 Cloud)
+
+- **Datenexfiltration:** Bild-Bytes (PNG-Screenshots) + umgebender
+  Handbuch-Text werden an Ollama-Cloud gesendet. Zero-Retention-Policy
+  von Ollama-Cloud (ollama.com/privacy). Akzeptabel für DaVinci-Handbücher
+  (öffentlich von Blackmagic) — nicht akzeptabel für sensitive Personal
+  Notes (für diese wäre lokales Gemma fallback nötig).
+- **Usage-Limit-Handling:** HTTP 429 → `cancel_event` propagiert an alle
+  Worker, sofortiger Stopp. Cache bleibt für Resume intakt.
+- **Parallel Workers:** `KH_VISION_LLM_WORKERS=3` erhöht parallele Cloud-
+  Calls; `cancel_event` verhindert Waste nach erstem 429.
+
+### AGPL Process Boundary (extract_pdf_images.py)
+
+`extract_pdf_images.py` importiert PyMuPDF4LLM (AGPL-3.0) und läuft als
+standalone Build-Tool via `python scripts/extract_pdf_images.py`. Der
+MIT-lizenste Runtime-Code (`embed_images.py`, `hybrid_search.py`,
+`mcp_servers/`) liest nur die resultierenden `.png`-Dateien + das JSON-
+Manifest — er importiert NICHT PyMuPDF. Analog zu `parse_pdf_to_markdown.py`.

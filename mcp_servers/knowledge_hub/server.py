@@ -69,7 +69,7 @@ async def list_tools_handler() -> list[Tool]:
     return [
         Tool(
             name="search_knowledge",
-            description="Search knowledge in a domain (exact=BM25, semantic=ChromaDB, hybrid=both + CrossEncoder rerank). Finds API references, code examples, and personal notes.",
+            description="Search knowledge in a domain (exact=BM25, semantic=ChromaDB, hybrid=both + CrossEncoder rerank + 4-list RRF for image domains). Finds API references, code examples, personal notes, and image screenshots with captions (modality field: text|image|caption).",
             inputSchema={
                 "type": "object",
                 "properties": {

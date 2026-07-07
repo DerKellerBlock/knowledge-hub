@@ -24,6 +24,20 @@ einops>=0.7.0,<1.0.0
 # and `ollama pull gemma4:12b-mlx`. Ollama v0.31.1+ recommended for Gemma 4
 # MTP (Multi-Token Prediction) speedup.
 ollama>=0.4.0,<1.0.0
+
+# Vision Retrieval Feature — Pillow (PIL) for image loading in multimodal
+# embedding (SigLIP-2 / jina-clip-v2). PIL is the standard Python imaging
+# library, BSD-3-Clause licensed (see THIRD_PARTY_LICENSES.md). Used by
+# scripts/embed_images.py and scripts/extract_pdf_images.py.
+pillow>=10.0.0,<14.0.0
+# torch + transformers are required by the multimodal embedders (SigLIP-2 /
+# jina-clip-v2). They are already transitive deps of sentence-transformers,
+# but listed explicitly here because the multimodal path loads them via
+# transformers.AutoModel.from_pretrained() (not via sentence-transformers).
+# Both are Apache-2.0 licensed.
+torch>=2.12.0
+transformers>=4.57.0,<5.0.0
+
 # llama-cpp-python is an OPTIONAL Cross-Platform fallback backend
 # (KH_LLM_BACKEND=llama-cpp). Not installed by default — only needed when
 # Ollama is unavailable. Install manually if required:

@@ -20,7 +20,7 @@ import sys as _sys
 _pkg_root = Path(__file__).resolve().parent.parent
 if str(_pkg_root) not in _sys.path:
     _sys.path.insert(0, str(_pkg_root))
-from mcp_servers.knowledge_hub.config import domain_bm25_path
+from mcp_servers.knowledge_hub.config import domain_bm25_path, domain_image_bm25_path
 from model_manager import bm25_cache_get, bm25_cache_set, bm25_cache_invalidate
 
 
@@ -149,6 +149,112 @@ def bm25_search(domain: str, query: str, top_k: int = 100) -> list[dict]:
 def get_bm25_index_size_mb(domain: str) -> float:
     """Get BM25 index file size in MB."""
     index_path = domain_bm25_path(domain)
+    if index_path.exists():
+        return round(index_path.stat().st_size / 1024 / 1024, 2)
+    return 0.0
+
+
+
+# ── Image BM25 (Vision Retrieval Feature) ──────────────────────────────────
+#
+# Separate BM25 index over image captions, stored at
+# ``chromadb_data/<domain>/<domain>_images_bm25.pkl``. Used by the
+# 4-Listen-RRF in ``hybrid_search.py`` as the ``image-bm25`` list.
+#
+# The index is built from manifest entries (with cached captions) using
+# the same Unicode-aware tokenizer as the text BM25 index, so query
+# tokenization is symmetric.
+
+
+def build_image_bm25_index(domain: str, image_entries: list[dict]) -> bool:
+    """Build and persist a BM25 index over image captions.
+
+    Args:
+        domain: Domain name.
+        image_entries: List of manifest entries (must have ``image_id``
+            and ``caption`` keys). Entries with empty captions are
+            skipped (they cannot contribute to BM25 token overlap).
+
+    Returns:
+        ``True`` if the index was built, ``False`` if no entries had
+        captions (empty corpus).
+    """
+    corpus = []
+    image_ids = []
+
+    for entry in image_entries:
+        caption = entry.get("caption", "") or ""
+        if not caption.strip():
+            continue
+        tokens = tokenize(caption)
+        corpus.append(tokens)
+        image_ids.append(entry["image_id"])
+
+    if not corpus:
+        # Write an empty placeholder so callers can detect "built but empty".
+        bm25_path = domain_image_bm25_path(domain)
+        bm25_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(bm25_path, "wb") as f:
+            pickle.dump({"index": None, "image_ids": []}, f)
+        return False
+
+    bm25 = BM25Okapi(corpus)
+    bm25_path = domain_image_bm25_path(domain)
+    bm25_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(bm25_path, "wb") as f:
+        pickle.dump({"index": bm25, "image_ids": image_ids}, f)
+    return True
+
+
+def _load_image_index(domain: str) -> dict:
+    """Load the image BM25 index from pickle (no LRU cache — image
+    searches are less frequent than text searches).
+
+    Raises :class:`FileNotFoundError` if the index does not exist.
+    """
+    index_path = domain_image_bm25_path(domain)
+    if not index_path.exists():
+        raise FileNotFoundError(
+            f"Image BM25 index not found for domain '{domain}' at {index_path}. "
+            f"Run embed_index.py --domain {domain} --embed-images first."
+        )
+    with open(index_path, "rb") as f:
+        return pickle.load(f)
+
+
+def image_bm25_search(domain: str, query: str, top_k: int = 50) -> list[dict]:
+    """BM25 sparse retrieval over image captions.
+
+    Returns a list of ``{image_id, score, match_type}`` dicts sorted by
+    score descending. Entries with score <= 0 are filtered out.
+    """
+    data = _load_image_index(domain)
+    bm25 = data.get("index")
+    image_ids: list[str] = data.get("image_ids", [])
+
+    if bm25 is None or not image_ids:
+        return []
+
+    tokens = tokenize(query)
+    scores = bm25.get_scores(tokens)
+    if len(scores) == 0:
+        return []
+
+    top_indices = np.argsort(scores)[::-1][:top_k]
+    return [
+        {
+            "image_id": image_ids[i],
+            "score": float(scores[i]),
+            "match_type": "image_bm25",
+        }
+        for i in top_indices
+        if scores[i] > 0
+    ]
+
+
+def get_image_bm25_index_size_mb(domain: str) -> float:
+    """Get image BM25 index file size in MB."""
+    index_path = domain_image_bm25_path(domain)
     if index_path.exists():
         return round(index_path.stat().st_size / 1024 / 1024, 2)
     return 0.0

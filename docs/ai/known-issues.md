@@ -47,3 +47,34 @@
 
 - **DaVinci Phase-1-Baseline-Verlust:** DaVinci avg_composite 0.7218 / PMA 0.1714 ist die erste Messung nach Phase 1 (Chunk-Overlap 200→400, +283 Chunks). Keine Pre-Phase-1-Baseline vorhanden (Backups entfernt). PMA 0.1714 ist niedrig (±2 Seitentoleranz, PDF-Chunking-Varianz) — ob Phase 1 die PMA verschlechtert oder verbessert hat, ist nicht ermittelbar. Phase 2 sollte eine neue DaVinci-Baseline etablieren und den Chunk-Overlap-Effekt auf PMA isoliert messen.
 
+
+## Vision Retrieval Feature (2026-07-07)
+
+- **VRF-001:** Bild-Extraktion verwendet PyMuPDF4LLM `write_images=True`,
+  das alle Bilder als PNG extrahiert. PyMuPDF4LLM benennt Bilder
+  `<pdf_stem>-<page>-<idx>.png` mit 0-basierten Seitenzahlen. Das
+  `page`-Feld im Manifest ist 0-basiert (abweichend von `page_start`/
+  `page_end` in Text-Chunks, die 1-basiert sind). Konsumenten müssen
+  den Unterschied beachten.
+- **VRF-002:** Context-Aware Captions können trunzierte Bild-Referenzen
+  im Kontext enthalten wenn das ±200-char-Fenster mitten in einer
+  `![](path.png)`-Ref schneidet. `extract_pdf_images.py` hat eine Regex
+  die trunzierte Refs stript, aber Edge-Cases sind möglich. Captions
+  sind daher gelegentlich leicht verrauscht — für RAG akzeptabel.
+- **VRF-003:** 4-Listen-RRF Merge-Strategie reserviert 1/3 der Top-K-
+  Slots für Bilder (min 1 wenn Bilder im RRF-Pool). Das kann Text-
+  Treffer mit höherem Cross-Encoder-Score verdrängen. Für text-zentrierte
+  Queries ist das suboptimal; für bild-zentrierte Queries ist es
+  erforderlich. Die 1/3-Schwelle ist ein Kompromiss (Adjustierbar im
+  Code: `top_k // 3`).
+- **VRF-004:** Bild-Embeddings (SigLIP-2, 1152 dims) und Text-Embeddings
+  (BGE-M3, 1024 dims) leben in unterschiedlichen Vektorräumen. Die
+  4-Listen-RRF kombiniert sie über RRF-Rang (dim-unabhängig), nicht über
+  Cosine-Similarity. Eine direkte Cross-Modality-Similarity ist nicht
+  möglich (Modality-Gap, siehe Spheron Benchmark).
+- **VRF-005:** `image_bm25_search` liefert Bild-Treffer mit `image_id`
+  als `chunk_id`. `_resolve_image_metadata` reichert sie mit Caption-
+  Metadaten aus der `<domain>_images::cap`-Collection an. Wenn ein
+  Bild keine Caption hat (z.B. `quality=poor` übersprungen), fehlen
+  `caption`, `image_path` etc. — der Treffer wird stillschweigend
+  verworfen.

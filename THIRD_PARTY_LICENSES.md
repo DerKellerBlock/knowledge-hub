@@ -13,6 +13,9 @@ These packages are imported by the MIT-licensed Knowledge Hub runtime code.
 | mcp | MIT | Model Context Protocol server |
 | rank-bm25 | Apache-2.0 | BM25 sparse retrieval |
 | einops | Apache-2.0 | Tensor reshaping utilities — imported by the jina-reranker-v2 custom code (see CC-BY-NC-4.0 section below). No-op for the default ms-marco MiniLM reranker. |
+| pillow | BSD-3-Clause | Image loading for the multimodal embedders (SigLIP-2 / jina-clip-v2). Used by scripts/embed_images.py and scripts/extract_pdf_images.py. |
+| torch | BSD-3-Clause | Tensor computation backend for the multimodal embedders. Already a transitive dep of sentence-transformers; listed explicitly because the multimodal path uses transformers.AutoModel directly. |
+| transformers | Apache-2.0 | Model loading (AutoModel / AutoProcessor) for SigLIP-2 / jina-clip-v2. Already a transitive dep of sentence-transformers; listed explicitly because the multimodal path imports it directly. |
 
 ## MIT-Licensed Model Weights (Runtime, Configurable Embedding)
 
@@ -81,6 +84,28 @@ commercial Jina AI license.
   `scripts/model_manager.py::get_reranker()`. The default ms-marco
   MiniLM has no `auto_map` and ignores this flag.
 
+
+### jinaai/jina-clip-v2
+
+- **Repository:** https://huggingface.co/jinaai/jina-clip-v2
+- **License:** CC-BY-NC-4.0 (Creative Commons Attribution-NonCommercial 4.0)
+- **Copyright:** Jina AI GmbH
+- **Usage:** Vision Retrieval Feature — optional multimodal embedding model
+  (image+text joint encoder). Multilingual (89 Sprachen incl. German), 1024
+  dims (Matryoshka truncatable), 512×512 image input, ~3.5 GB download on
+  first use. Selectable via
+  `KH_MULTIMODAL_MODEL=jinaai/jina-clip-v2`.
+  Runs via `transformers.AutoModel` + `AutoProcessor` (NOT via Ollama —
+  Ollama has no multimodal-embedding API, Issue #5304 open since 2024-06).
+  The default `google/siglip2-so400m-patch16-512` (Apache 2.0) is
+  kommerziell sicher; jina-clip-v2 is the optional multilingual override,
+  analog to the existing jina-reranker-v2 (CC-BY-NC-4.0).
+- **License file:** https://huggingface.co/jinaai/jina-clip-v2/blob/main/LICENSE
+- **Custom code:** The model ships an `auto_map` in `config.json`; we
+  pass `trust_remote_code=True` to `AutoModel.from_pretrained()` in
+  `scripts/model_manager.py::get_multimodal_embedder()`. The default
+  SigLIP-2 has no `auto_map` and ignores this flag.
+
 ## Apache-2.0 Licensed Model Weights (Runtime, Configurable LLM)
 
 These model weights are downloaded on demand at index-build time for
@@ -108,6 +133,25 @@ Phase 3.1 Contextual Retrieval. The default is `gemma4:12b-mlx`
 - **Custom code:** None. Ollama loads the model without
   HuggingFace `auto_map` custom code — no `trust_remote_code=True`
   needed (safer than the jina-reranker-v2 path).
+
+
+### google/siglip2-so400m-patch16-512 (SigLIP-2)
+
+- **Repository:** https://huggingface.co/google/siglip2-so400m-patch16-512
+- **License:** Apache-2.0
+- **Copyright:** Google LLC
+- **Usage:** Vision Retrieval Feature — default multimodal embedding model
+  (image+text joint encoder). 1152 dims, 512×512 image input, English-only,
+  ~1.5 GB download on first use. Selectable via
+  `KH_MULTIMODAL_MODEL=google/siglip2-so400m-patch16-512` (default).
+  Loaded via `transformers.AutoModel` + `AutoProcessor` (NOT via Ollama —
+  Ollama has no multimodal-embedding API, Issue #5304 open since 2024-06).
+  Apache-2.0 license makes it kommerziell sicher, suitable as the default
+  for the MIT-licensed Knowledge Hub.
+- **License file:** https://www.apache.org/licenses/LICENSE-2.0
+- **Custom code:** None. SigLIP-2 has no `auto_map` in config.json —
+  `trust_remote_code=True` is passed to `AutoModel.from_pretrained()`
+  for compatibility with the jina-clip-v2 path but is a no-op here.
 
 ### ollama (Python HTTP client)
 

@@ -248,7 +248,8 @@ def load_domain_sources(
 
 
 def build_index(domain: str, contextualize: bool = False,
-                contextualize_bm25: bool = False) -> None:
+                contextualize_bm25: bool = False,
+                embed_images: bool = False) -> None:
     """Build ChromaDB + BM25 index for a single domain.
 
     Phase 2.2: For PDF domains (e.g. DaVinci Resolve), if
@@ -434,6 +435,54 @@ def build_index(domain: str, contextualize: bool = False,
           f"{len(chunks)} chunks, ChromaDB ~{chroma_size / 1024 / 1024:.0f} MB, "
           f"BM25 {bm25_mb} MB")
 
+    # Vision Retrieval Feature: build image BM25 index from cached captions.
+    # This is additive — it does NOT touch the text index. Requires
+    # image_manifest.json + image_caption_cache.db to exist (built by
+    # extract_pdf_images.py + caption_images.py).
+    if embed_images:
+        print("[INFO]  Building image BM25 index (Vision Retrieval Feature)...")
+        from bm25_search import build_image_bm25_index, get_image_bm25_index_size_mb
+        from mcp_servers.knowledge_hub.config import domain_image_manifest_path
+        from image_caption_cache import open_cache as open_caption_cache
+        import json as _json
+        import os as _os
+
+        manifest_path = domain_image_manifest_path(domain)
+        if not manifest_path.exists():
+            print(f"[WARN]  No image_manifest.json for '{domain}' — "
+                  f"run extract_pdf_images.py first. Skipping image BM25.")
+        else:
+            with open(manifest_path, "r", encoding="utf-8") as f:
+                manifest = _json.load(f)
+            image_entries = manifest.get("images", [])
+
+            # Inject cached captions into entries.
+            llm_model = _os.environ.get("KH_LLM_MODEL", "gemma4:cloud")
+            cap_conn = open_caption_cache(domain)
+            try:
+                rows = cap_conn.execute(
+                    "SELECT image_id, caption FROM image_caption_cache "
+                    "WHERE model = ?",
+                    (llm_model,),
+                ).fetchall()
+                cap_map = {row[0]: row[1] for row in rows}
+            finally:
+                cap_conn.close()
+
+            for entry in image_entries:
+                entry["caption"] = cap_map.get(entry["image_id"], "")
+
+            cap_count = sum(1 for e in image_entries if e["caption"])
+            print(f"[INFO]  Image manifest: {len(image_entries)} images, "
+                  f"{cap_count} with captions (model={llm_model})")
+
+            built = build_image_bm25_index(domain, image_entries)
+            img_bm25_mb = get_image_bm25_index_size_mb(domain)
+            if built:
+                print(f"[INFO]  ✓ Image BM25 built: {img_bm25_mb} MB")
+            else:
+                print(f"[WARN]  Image BM25 not built (no captions or empty)")
+
 
 def main():
     parser = argparse.ArgumentParser(description="Build ChromaDB + BM25 index")
@@ -450,6 +499,14 @@ def main():
         action="store_true",
         help="Also use context_prefix in BM25 (Contextual BM25, "
              "experimental). Implies --contextualize.",
+    )
+    parser.add_argument(
+        "--embed-images",
+        action="store_true",
+        help="Build image BM25 index from cached captions (Vision Retrieval "
+             "Feature). Requires image_manifest.json + image_caption_cache.db "
+             "(run extract_pdf_images.py + caption_images.py first). Does NOT "
+             "re-embed images — use embed_images.py for that.",
     )
     args = parser.parse_args()
 
@@ -487,7 +544,8 @@ def main():
             print(f"  Parser: none (fallback chunking)")
         print(f"{'=' * 60}")
         build_index(domain, contextualize=contextualize,
-                    contextualize_bm25=contextualize_bm25)
+                    contextualize_bm25=contextualize_bm25,
+                    embed_images=args.embed_images)
 
     print(f"\n[INFO]  Done.")
 

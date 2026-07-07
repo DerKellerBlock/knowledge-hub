@@ -12,12 +12,13 @@
 | Task-ID | Spec | Plan | Priorität | Status | Kurzbeschreibung |
 |---|---|---|---|---|---|
 
-| vision-retrieval-feature | docs/issues/vision-retrieval-feature/spec.md | docs/issues/vision-retrieval-feature/plan.md | high | open | Echtes Multimodal-Retrieval für PDF-Domains (jina-clip-v2, Bild-Extraktion, Context-Aware Captions, 4-Listen-RRF) |
+
 
 ## Abgeschlossene Tasks
 
 | Task-ID | Abschluss | Retrospektive | Zusammenfassung |
 |---|---|---|---|
+| vision-retrieval-feature | 2026-07-07 | docs/issues/vision-retrieval-feature/retrospective.md | Vision Retrieval Feature (Multimodal-RAG: 23182 images, 4-Listen-RRF, Eval 0.6945, 6 Bild-Fragen) |
 | acceleration-mps-parallel | 2026-07-04 |  | Acceleration Mps Parallel |
 | answer-synthesis | 2026-06-29 | docs/issues/answer-synthesis/retrospective.md | Answer Synthesis |
 | davinci-resolve-knowledge-domain | 2026-06-27 |  | Davinci Resolve Knowledge Domain |

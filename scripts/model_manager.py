@@ -71,6 +71,18 @@ DEFAULT_RERANKER_MODEL = "cross-encoder/ms-marco-MiniLM-L-12-v2"
 DEFAULT_LLM_MODEL = "gemma4:12b-mlx"
 DEFAULT_LLM_BACKEND = "ollama"  # "ollama" | "llama-cpp"
 
+# Vision Retrieval Feature — Multimodal Embedding defaults.
+# Read LIVE from KH_MULTIMODAL_MODEL in get_multimodal_embedder() on every
+# cache-miss, analog to get_embedder()/get_reranker()/get_llm().
+#
+# Default: google/siglip2-so400m-patch16-512 (Apache 2.0, kommerziell sicher,
+# English-only, 512x512 input, 1152 dims). Optional: jinaai/jina-clip-v2
+# (CC-BY-NC-4.0, multilingual, 1024 dims, requires trust_remote_code=True,
+# analog jina-reranker-v2). SigLIP-2 needs no custom code.
+DEFAULT_MULTIMODAL_MODEL = "google/siglip2-so400m-patch16-512"
+DEFAULT_MULTIMODAL_DEVICE = "cpu"
+DEFAULT_MULTIMODAL_BATCH_SIZE = 32
+
 # ── Model cache ────────────────────────────────────────────────────────────
 _model_cache: dict[str, object] = {}
 _chroma_clients: dict[str, chromadb.PersistentClient] = {}
@@ -229,6 +241,119 @@ def get_reranker() -> CrossEncoder:
             trust_remote_code=True,  # required for jina-reranker-v2 custom code
         )
     return _model_cache["reranker"]
+
+
+def get_multimodal_embedder(model_name: str | None = None) -> tuple:
+    """Lazy-load multimodal embedding model (image+text joint encoder).
+
+    Loads SigLIP-2 or jina-clip-v2 via transformers.AutoModel +
+    ``AutoProcessor`` (NOT via Ollama — see
+    ``docs/issues/vision-retrieval-feature/context/research-ollama-multimodal-limitation.md``;
+    Ollama has no multimodal-embedding API, Issue #5304 open since 2024-06).
+
+    Resolution order (analog get_embedder/get_reranker):
+
+    1. ``model_name`` argument (explicit override, used by tests).
+    2. ``KH_MULTIMODAL_MODEL`` environment variable (read LIVE on every
+       cache-miss).
+    3. :data:`DEFAULT_MULTIMODAL_MODEL`
+       (``google/siglip2-so400m-patch16-512``, Apache 2.0, kommerziell
+       sicher, English-only, 1152 dims). Optional override:
+       ``jinaai/jina-clip-v2`` (CC-BY-NC-4.0, multilingual, 1024 dims,
+       ``trust_remote_code=True`` — analog jina-reranker-v2; see
+       ``docs/ai/security.md`` for the accepted risk).
+
+    Device selection via KH_MULTIMODAL_DEVICE (default "cpu",
+    opt-in "mps" for Apple Silicon GPU acceleration, analog
+    KH_EMBEDDING_DEVICE). Cache key is
+    multimodal:<model>:<device> — a runtime env-var switch loads a
+    fresh instance instead of returning the wrong-device cached model
+    (analog the BGE-M3 device-cache fix in Phase 3.3a, LIM-011).
+
+    Batch size via KH_MULTIMODAL_BATCH_SIZE (default 32, MPS
+    RAM-limited). The batch size is returned to the caller (it is NOT
+    baked into the model); callers should use it when batching encode
+    calls.
+
+    Returns:
+        ``(processor, model, device, batch_size)`` tuple. ``processor``
+        is the :class:`transformers.AutoProcessor` for the model — it
+        MUST be used for image+text preprocessing (Spheron best-practice:
+        hardcoded normalization = wrong cosine similarity; the processor
+        contains the correct mean/std/resize config). ``model`` is the
+        :class:`transformers.AutoModel` (a vision-text dual encoder).
+        ``device`` is the resolved compute device string
+        (``"cpu"`` / ``"mps"`` / ``"cuda"``). ``batch_size`` is the
+        resolved batch size int.
+
+    Note:
+        Loading SigLIP-2 (~1.5 GB) or jina-clip-v2 (~3.5 GB) alongside
+        BGE-M3 (~2.2 GB) + jina-reranker (~1.1 GB) raises the total RAM
+        budget. On a 16 GB Mac this is tight; on 32 GB it is fine. The
+        model stays resident in _model_cache until the process exits
+        (LRU-bounded cache is the same plain dict as for the other
+        models — see LIM-008 / B4).
+    """
+    import torch as _torch  # local import: torch only needed here
+
+    if model_name is None:
+        model_name = os.environ.get(
+            "KH_MULTIMODAL_MODEL", DEFAULT_MULTIMODAL_MODEL
+        )
+    device = os.environ.get("KH_MULTIMODAL_DEVICE", DEFAULT_MULTIMODAL_DEVICE)
+    batch_size = int(
+        os.environ.get("KH_MULTIMODAL_BATCH_SIZE", DEFAULT_MULTIMODAL_BATCH_SIZE)
+    )
+    key = f"multimodal:{model_name}:{device}"
+    if key not in _model_cache:
+        from transformers import AutoProcessor, AutoModel
+
+        # jina-clip-v2 ships custom code via auto_map (analog jina-reranker-v2).
+        # SigLIP-2 has no auto_map and ignores the flag. trust_remote_code is
+        # accepted for the personal Hub (see docs/ai/security.md).
+        processor = AutoProcessor.from_pretrained(model_name)
+        model = AutoModel.from_pretrained(model_name, trust_remote_code=True)
+        # Resolve the torch device. "mps" only exists on Apple Silicon;
+        # on non-Apple platforms fall back to cpu.
+        if device == "mps" and not _torch.backends.mps.is_available():
+            print("[WARN]  KH_MULTIMODAL_DEVICE=mps but MPS not available — falling back to cpu")
+            device = "cpu"
+            key = f"multimodal:{model_name}:{device}"
+        if device == "cuda" and not _torch.cuda.is_available():
+            print("[WARN]  KH_MULTIMODAL_DEVICE=cuda but CUDA not available — falling back to cpu")
+            device = "cpu"
+            key = f"multimodal:{model_name}:{device}"
+        torch_device = _torch.device(device)
+        model = model.to(torch_device)
+        model.eval()
+        _model_cache[key] = {
+            "processor": processor,
+            "model": model,
+            "device": device,
+            "torch_device": torch_device,
+            "batch_size": batch_size,
+            "model_name": model_name,
+        }
+    return (
+        _model_cache[key]["processor"],
+        _model_cache[key]["model"],
+        _model_cache[key]["device"],
+        _model_cache[key]["batch_size"],
+    )
+
+
+def is_multimodal_embedder_available() -> bool:
+    """Check if the multimodal embedder can be loaded. Does NOT trigger download."""
+    try:
+        # Cheap probe: check if the model name resolves to a HuggingFace
+        # snapshot directory (cached locally). We do NOT instantiate the
+        # model here (would trigger a download). This is a best-effort
+        # availability check used by hybrid_search to decide whether to
+        # attempt the image-vector path at all.
+        get_multimodal_embedder()
+        return True
+    except Exception:
+        return False
 
 
 def get_chroma_client(domain: str) -> chromadb.PersistentClient:

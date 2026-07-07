@@ -139,6 +139,23 @@ def get_domain_status(domain: str | None = None) -> dict:
 
         bm25_mb = get_bm25_index_size_mb(d)
 
+        # Vision Retrieval Feature: image index status.
+        image_count = 0
+        image_index_exists = False
+        image_bm25_mb = 0.0
+        try:
+            img_client = get_chroma_client(d)
+            img_collection = img_client.get_collection(f"{d}_images")
+            image_count = img_collection.count()
+            image_index_exists = True
+        except Exception:
+            pass
+        try:
+            from bm25_search import get_image_bm25_index_size_mb
+            image_bm25_mb = get_image_bm25_index_size_mb(d)
+        except Exception:
+            pass
+
         result[d] = {
             "sources": len(sources),
             "source_files": [s.name for s in sources],
@@ -148,6 +165,9 @@ def get_domain_status(domain: str | None = None) -> dict:
             "index_size_mb": index_size_mb,
             "has_parser": has_parser,
             "bm25_index_size_mb": bm25_mb,
+            "image_count": image_count,
+            "image_index_exists": image_index_exists,
+            "image_bm25_index_size_mb": image_bm25_mb,
         }
 
     return result

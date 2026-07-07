@@ -71,3 +71,51 @@ def legacy_bm25_path(domain: str) -> Path:
 def legacy_collection_path(domain: str) -> Path:
     """Legacy ChromaDB collection directory (pre-migration layout)."""
     return CHROMA_DIR / f"{domain}_knowledge"
+
+
+# Vision Retrieval Feature — Multimodal Embedding + Vision LLM defaults.
+# Reference constants (env-aware at import time) for documentation and other
+# modules. The live model is resolved in model_manager.get_multimodal_embedder()
+# from the KH_MULTIMODAL_MODEL env var on every cache-miss, with the STATIC
+# fallback in model_manager.py (DEFAULT_MULTIMODAL_MODEL) — same dual-source
+# pattern as CROSS_ENCODER_MODEL (config.py, env-aware) vs
+# DEFAULT_RERANKER_MODEL (model_manager.py, static).
+#
+# Default: google/siglip2-so400m-patch16-512 (Apache 2.0, kommerziell sicher,
+# English-only, 512x512, 1152 dims). Optional: jinaai/jina-clip-v2
+# (CC-BY-NC-4.0, multilingual, 1024 dims, analog jina-reranker-v2).
+DEFAULT_MULTIMODAL_MODEL = os.environ.get(
+    "KH_MULTIMODAL_MODEL",
+    "google/siglip2-so400m-patch16-512",
+)
+DEFAULT_MULTIMODAL_DEVICE = os.environ.get("KH_MULTIMODAL_DEVICE", "cpu")
+DEFAULT_MULTIMODAL_BATCH_SIZE = int(os.environ.get("KH_MULTIMODAL_BATCH_SIZE", "32"))
+
+# Vision LLM for image captioning (Gemma 4 via Ollama Cloud, analog
+# Contextual Retrieval). Default uses the same KH_LLM_MODEL env var so the
+# captioning pipeline can share the Ollama-Cloud routing. KH_VISION_LLM_WORKERS
+# mirrors KH_LLM_WORKERS for parallel cloud calls.
+DEFAULT_VISION_LLM_MODEL = os.environ.get("KH_VISION_LLM_MODEL", DEFAULT_LLM_MODEL)
+DEFAULT_VISION_LLM_WORKERS = int(os.environ.get("KH_VISION_LLM_WORKERS", "1"))
+
+
+def domain_images_dir(domain: str) -> Path:
+    """Directory holding extracted PNGs for a domain.
+
+    Layout: domains/<domain>/images/<source-file>/<page>-<idx>.png.
+    Created on demand.
+    """
+    return DOMAINS_DIR / domain / "images"
+
+
+def domain_image_bm25_path(domain: str) -> Path:
+    """BM25 pickle file path for a domain's image-caption index."""
+    return CHROMA_DIR / domain / f"{domain}_images_bm25.pkl"
+
+
+def domain_image_manifest_path(domain: str) -> Path:
+    """JSON manifest of extracted images for a domain.
+
+    Layout: chromadb_data/<domain>/image_manifest.json (gitignored).
+    """
+    return CHROMA_DIR / domain / "image_manifest.json"

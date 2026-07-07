@@ -23,6 +23,9 @@ venv/
 # Original PDFs (too large for Git, converted to .md via build tool)
 domains/*/sources/raw/
 
+# Vision Retrieval Feature — extracted images (reproducible via extract_pdf_images.py)
+domains/*/images/
+
 # Coverage
 .coverage
 .coverage.*

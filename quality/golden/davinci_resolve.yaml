@@ -516,3 +516,158 @@ questions:
     last_verified: 2026-07-01
     notes: "Easy: Grundlegende Workflow-Frage zum Projektimport. Bisher ungetestet (005 deckt nur Export/Rendering ab, nicht Import). Erwartet reference-manual.md (technische Details) und editors-guide.md (praktischer Workflow)."
     min_top_k: 10
+  - id: davinci_resolve-021
+    question: "Where do I find the Color Wheels in DaVinci Resolve?"
+    expected_source_files:
+      - "davinci-resolve-20.3-reference-manual.md"
+      - "davinci-resolve-20-colorist-guide.md"
+    expected_page_ranges:
+      - {start: 1140, end: 1145}
+      - {start: 60, end: 65}
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/color"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Color page. Primary color wheels (Lift/Gamma/Gain) are at the bottom-left of the Color page interface. Each wheel controls shadow/midtone/highlight color and luma. Trackpad or mouse adjusts hue/saturation."
+        has_solution: true
+      - url: "https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-20-Colorist-Guide.pdf"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Colorist training guide. Color Wheels are found on the Color Page in the Primaries Wheels panel — the three wheels labeled Lift, Gamma, Gain control shadows, midtones, and highlights respectively."
+        has_solution: true
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/training"
+        date: null
+        type: "official-docs"
+        solution_summary: "Free 'Introduction to Color' video training (90m) with downloadable project files. Covers color wheels, node editor, curves, qualifiers, power windows, tracking, and HDR grading."
+        has_solution: true
+    difficulty: easy
+    tags: [color-page, color-wheels, lift, gamma, gain, ui, beginner, screenshot]
+    created_date: 2026-07-07
+    last_verified: 2026-07-07
+    notes: "Vision Retrieval Feature test: UI-Screenshot-bezogene Frage. Erwartet Bild-Treffer (Color Wheels UI) in Top-Ergebnissen neben Text-Treffern. Colorist-Guide hat viele Screenshots der Color Page."
+    min_top_k: 10
+  - id: davinci_resolve-022
+    question: "How do I open the Node Editor in Fusion page?"
+    expected_source_files:
+      - "fusion-20.3-manual.md"
+      - "davinci-resolve-20-fusion-visual-effects.md"
+    expected_page_ranges:
+      - {start: 20, end: 25}
+      - {start: 10, end: 15}
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/fusion"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Fusion page. Node Editor is the bottom half of the Fusion page interface. Drag effects from the left-side library to add nodes. Connect nodes with drag-to-link. Each node represents an effect, mask, or transformation."
+        has_solution: true
+      - url: "https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-20-Fusion-Visual-Effects.pdf"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Fusion VFX training guide. The Fusion page has a node-based compositing interface — the Node Editor occupies the lower workspace. Effects Library on the left, viewer on top, inspector on the right, node editor at the bottom."
+        has_solution: true
+    difficulty: easy
+    tags: [fusion-page, node-editor, ui, beginner, screenshot, compositing]
+    created_date: 2026-07-07
+    last_verified: 2026-07-07
+    notes: "Vision Retrieval Feature test: UI-Screenshot-Frage für Fusion Page. Erwartet Bild-Treffer (Node Editor UI) in Top-Ergebnissen. Fusion-Visual-Effects-Guide hat viele Node Editor Screenshots."
+    min_top_k: 10
+  - id: davinci_resolve-023
+    question: "Where is the Inspector panel and how do I use it to change clip properties?"
+    expected_source_files:
+      - "davinci-resolve-20.3-reference-manual.md"
+      - "davinci-resolve-20-editors-guide.md"
+    expected_page_ranges:
+      - {start: 460, end: 465}
+      - {start: 100, end: 105}
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Edit page. Inspector panel is top-right of the Edit page. Tabs: Video (transform, crop, opacity, zoom), Audio (volume, fade, EQ), Effects, File (codec, resolution, fps), Transition (duration, alignment)."
+        has_solution: true
+      - url: "https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-20-Editors-Guide.pdf"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Editor's training guide. Inspector is the top-right panel on the Edit page. Select a clip in the timeline to see its properties in the Inspector — Video tab for transform/zoom/opacity, Audio tab for volume/fade."
+        has_solution: true
+    difficulty: easy
+    tags: [edit-page, inspector, ui, beginner, screenshot, clip-properties, transform]
+    created_date: 2026-07-07
+    last_verified: 2026-07-07
+    notes: "Vision Retrieval Feature test: Inspector Panel UI-Frage. Erwartet Bild-Treffer (Inspector Panel Screenshots) in Top-Ergebnissen. Editors-Guide hat viele Inspector Screenshots."
+    min_top_k: 10
+  - id: davinci_resolve-024
+    question: "How do I access the Fairlight Mixer to adjust audio levels?"
+    expected_source_files:
+      - "davinci-resolve-20-fairlight-audio-post.md"
+      - "davinci-resolve-20.3-reference-manual.md"
+    expected_page_ranges:
+      - {start: 40, end: 45}
+      - {start: 1780, end: 1785}
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/fairlight"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Fairlight page. Mixer is at the bottom of the Fairlight page. Channel strips show track name, fader, pan, mute/solo, EQ, dynamics. Click the Mixer button in the toolbar if not visible."
+        has_solution: true
+      - url: "https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-20-Fairlight-Audio-Post.pdf"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Fairlight audio training guide. The Mixer is in the lower portion of the Fairlight page — channel strips with faders, pan controls, mute/solo, EQ and dynamics processors. Use faders to adjust track levels."
+        has_solution: true
+    difficulty: easy
+    tags: [fairlight-page, mixer, audio-levels, ui, beginner, screenshot, channel-strip]
+    created_date: 2026-07-07
+    last_verified: 2026-07-07
+    notes: "Vision Retrieval Feature test: Fairlight Mixer UI-Frage. Erwartet Bild-Treffer (Mixer UI Screenshots) in Top-Ergebnissen. Fairlight-Audio-Post-Guide hat viele Mixer Screenshots."
+    min_top_k: 10
+  - id: davinci_resolve-025
+    question: "Where are the Render Settings on the Deliver page?"
+    expected_source_files:
+      - "davinci-resolve-20.3-reference-manual.md"
+      - "davinci-resolve-20-beginners-guide.md"
+    expected_page_ranges:
+      - {start: 1980, end: 1985}
+      - {start: 580, end: 585}
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Edit/Deliver documentation. Deliver page (rocket icon) has render settings in the left panel — choose a preset (YouTube, Vimeo, ProRes, H.264, etc.), set output location, filename, and click Add to Render Queue."
+        has_solution: true
+      - url: "https://documents.blackmagicdesign.com/UserManuals/DaVinci-Resolve-20-Beginners-Guide.pdf"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Beginner's training guide. The Deliver page is accessed via the rocket icon at the bottom. Render Settings panel on the left lets you pick format, codec, resolution, and destination. Add to Render Queue then click Render All."
+        has_solution: true
+    difficulty: easy
+    tags: [deliver-page, render-settings, export, ui, beginner, screenshot, render-queue]
+    created_date: 2026-07-07
+    last_verified: 2026-07-07
+    notes: "Vision Retrieval Feature test: Deliver Page Render Settings UI-Frage. Erwartet Bild-Treffer (Deliver Page Screenshots) in Top-Ergebnissen. Beginner's Guide hat Deliver Page Screenshots."
+    min_top_k: 10
+  - id: davinci_resolve-026
+    question: "How do I switch between the Cut page and the Edit page, and what's the difference?"
+    expected_source_files:
+      - "davinci-resolve-20.3-reference-manual.md"
+      - "davinci-resolve-20-beginners-guide.md"
+    expected_page_ranges:
+      - {start: 420, end: 425}
+      - {start: 20, end: 25}
+    real_world_sources:
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/cut"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Cut page. Cut page is optimized for fast turnaround editing with dual timeline, source tape, and smart insert. Edit page is the full-featured traditional editor. Switch via the page icons at the very bottom of the screen."
+        has_solution: true
+      - url: "https://www.blackmagicdesign.com/products/davinciresolve/edit"
+        date: null
+        type: "official-docs"
+        solution_summary: "Official Edit page. Edit page provides full editing features — timeline, inspector, transitions, titles, keyframe animation, multicam. Switch to Cut page via the bottom toolbar for speed-editing workflows."
+        has_solution: true
+    difficulty: easy
+    tags: [cut-page, edit-page, ui, beginner, screenshot, page-switcher, workflow]
+    created_date: 2026-07-07
+    last_verified: 2026-07-07
+    notes: "Vision Retrieval Feature test: Cut vs Edit Page UI-Frage. Erwartet Bild-Treffer (Page Switcher UI, Cut Page Screenshots) in Top-Ergebnissen. Beginner's Guide hat Page-Übersicht-Screenshots."
+    min_top_k: 10
