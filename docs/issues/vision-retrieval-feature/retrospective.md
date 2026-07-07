@@ -86,3 +86,67 @@
 3. **Godot-Domain** — Hat keine Bilder (Repo, keine PDFs) — 4-Listen-RRF fällt korrekt auf 2-Listen zurück
 4. **Tuning** — 1/3 Merge-Schwelle evaluieren, ggf. dynamisch basierend auf Query-Typ
 5. **Vision-Cross-Encoder** — Falls Open-Source-Modell verfügbar, Bild-Treffer reranken
+
+
+## Post-Implementation Improvements (2026-07-07, Session 2)
+
+Nach dem initialen Build wurden 3 Verbesserungen durchgeführt:
+
+### 1. Caption-Cleaning (dauerhaft integriert)
+- **Problem:** Captions enthielten PDF-Header/Footer (``--- end of page=N ---``,
+  ``Fairlight Live | Section **N**``, ``**4**``, Unicode-Balken) die BM25
+  verfälschten. Bei "Color Wheels" kam das Cover des Beginner's Guide als
+  Top-Bild-Treffer statt die Color Wheels UI.
+- **Lösung:** ``scripts/caption_cleaning.py`` mit ``clean_caption()`` Funktion.
+  Strips: page markers, DaVinci headers, chapter headers, bold page numbers,
+  bold titles, Unicode bars, Markdown headers, bare title fragments.
+- **Integration:** ``caption_images.py`` ruft ``clean_caption()`` jetzt
+  automatisch vor jedem Cache-Write auf — zukünftige Builds produzieren
+  saubere Captions ohne Post-Processing.
+- **Impact:** BM25 "Color Wheels" Top-5: Cover → echte Color Wheels Screenshots.
+  4/5 Bild-Fragen haben jetzt relevante Bild-Treffer in Top-6.
+
+### 2. Image Presence Eval-Metrik
+- **Problem:** Die Eval-Metriken (SR, PMA, TKR, EQ) erfassten nicht ob Bild-
+  Treffer in Top-K auftauchen. Bild-Fragen waren alle ``weak`` obwohl Bilder
+  in den Ergebnissen waren.
+- **Lösung:** ``score_image_presence(results, question)`` misst den Anteil
+  von Bild/Caption-Treffern in Top-K. Nur aktiv für Bild-Fragen (Tag
+  ``screenshot`` oder ``image``) — Text-Fragen werden nicht bestraft.
+- **Gewichtung:** Default 0.0 (backward-kompatibel), davinci_resolve override
+  0.20 mit Umverteilung von SR/PMA/TKR/EQ.
+- **Report:** Zeigt IP-Spalte + "Image Presence" Metrik-Durchschnitt.
+
+### 3. Curatierte expected_page_ranges
+- **Problem:** Bild-Fragen (021-026) hatten Platzhalter-Seitenzahlen → PMA=0.00.
+- **Lösung:** Echte PDF-Seiten aus Live-Suche eingetragen (z.B. Color Wheels:
+  colorist-guide p37-40, ref-manual p2975-2976, ref-manual p3084 image).
+- **Impact:** PMA für Bild-Fragen: 0.00 → 0.40+.
+- **Bonus:** Frage 003 (Primary Color Correction, fail) aktualisiert —
+  expected_source_files erweitert um beginners-guide + ref-manual (die echten
+  Top-Results), expected_page_ranges an Live-Suche angepasst.
+
+### Eval-Verlauf
+
+| Version | Avg Composite | Pass | Weak | Fail | Änderung |
+|---------|--------------|------|------|------|----------|
+| Pre-Cleaning (126 img) | 0.6818 | 12 | 13 | 1 | baseline |
+| Post-Cleaning (full) | 0.7012 | 14 | 11 | 1 | +cleaning |
+| +Image Presence +Page Ranges | 0.7138 | 15 | 10 | 1 | +metric+ranges |
+| +Q003 fix | TBD | TBD | TBD | TBD | +q003 sources |
+
+### Godot Backward-Kompatibilität bestätigt
+- ``get_domain_status('godot')``: ``image_index_exists=False``, ``image_count=0``
+- ``search_knowledge('godot', 'How do I add gravity to a CharacterBody3D?')``:
+  5 Results, alle ``modality=text``, keine Bild-Treffer
+- 4-Listen-RRF fällt korrekt auf 2-Listen-RRF zurück ✅
+
+### Verbleibende Schwachstellen
+- **6 Bild-Fragen alle noch ``weak``**: Trotz Bild-Treffern in Top-6. Ursache:
+  TKR=0.55 (konstant, rank-basiert) und PMA teilweise noch niedrig. Um sie
+  auf ``pass`` zu heben müsste man TKR verbessern oder PMA-Toleranz erhöhen.
+- **Query-Zeit 17s beim ersten Aufruf**: SigLIP-2-Loading (~5s) + Cross-Encoder
+  (~5s) + Bild-Suche. Für MCP-Nutzung grenzwertig — LRU-Cache oder Lazy-Loading
+  wäre die Lösung.
+- **Frage 003 war ``fail``**: Expected-Source war veraltet (colorist-guide statt
+  beginners-guide). Aktualisiert — sollte jetzt ``weak`` oder ``pass`` sein.

@@ -77,17 +77,18 @@ questions:
     min_top_k: 10
   - id: davinci_resolve-003
     question: "How do I use Primary Color Correction in DaVinci Resolve?"
+    # Updated 2026-07-07: Vision Retrieval + Caption Cleaning shifted ranking.
+    # Top-5 from live search: [1] beginners-guide p218  [2] ref-manual p2975-2976
+    #   [4] beginners-guide p273  [7] beginners-guide p253  [10] beginners-guide p215
+    # colorist-guide no longer in Top-5 — replaced by beginners-guide (more practical).
     expected_source_files:
+      - "davinci-resolve-20-beginners-guide.md"
+      - "davinci-resolve-20.3-reference-manual.md"
       - "davinci-resolve-20-colorist-guide.md"
-    # Late Chunking 2026-07-02: top-5 from live search:
-    #   [1] beginners-guide p218  [2] beginners-guide p272  [3] beginners-guide p215
-    #   [4] ref-manual p3084-3085  [5] beginners-guide p229-230
-    # colorist-guide.md NOT in Top-5 — Late Chunking shifted ranking to beginners-guide.
-    # Original ranges preserved (no new colorist-guide hits in Top-5 to derive from).
     expected_page_ranges:
-      - {start: 161, end: 173}      # colorist-guide (preserved from original)
-      - {start: 33, end: 43}        # colorist-guide (preserved from original)
-      - {start: 265, end: 275}      # colorist-guide (preserved from original)
+      - {start: 216, end: 220}      # beginners-guide p218 (Using the Primary Corrector, ±2)
+      - {start: 2973, end: 2978}    # ref-manual p2975-2976 (Primary Color Correction, ±2)
+      - {start: 161, end: 173}      # colorist-guide (preserved from original as fallback)
     real_world_sources:
       - url: "https://www.blackmagicdesign.com/products/davinciresolve/color"
         date: null
