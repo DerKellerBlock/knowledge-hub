@@ -12,7 +12,7 @@
 | Task-ID | Spec | Plan | Priorität | Status | Kurzbeschreibung |
 |---|---|---|---|---|---|
 | quality-metrics-v2 | docs/issues/quality-metrics-v2/spec.md | docs/issues/quality-metrics-v2/plan.md | high | done | Diskriminative Eval-Metriken (NDCG@10, Jaccard, WSR, Diversity) + HyDE + Page Range Kuratie — 0.7234→0.8017, 15→21 pass |
-| visual-question-answering | docs/issues/visual-question-answering/spec.md | docs/issues/visual-question-answering/plan.md | high | open | Visual Question Answering via MCP — search_knowledge akzeptiert image_path, SigLIP-2 findet ähnliche Screenshots, optional MiniMax M3 Vision-LLM |
+| vqa-opencode-passthrough | docs/issues/vqa-opencode-passthrough/spec.md | docs/issues/vqa-opencode-passthrough/plan.md | high | open | VQA-Passthrough für OpenCode v1.17.15 (Drag-Drop/Clipboard-Pfad-Verlust) — drei unabhängige Approaches: A) @-Mention-Passthrough, B) get_recent_image_path() MCP-Tool (macOS), C) lokales OpenCode-Plugin (blocked bis PR #21633) |
 
 
 
@@ -20,6 +20,7 @@
 
 | Task-ID | Abschluss | Retrospektive | Zusammenfassung |
 |---|---|---|---|
+| visual-question-answering | 2026-07-07 | docs/issues/visual-question-answering/retrospective.md | Visual Question Answering via MCP — search_knowledge akzeptiert image_path, SigLIP-2 findet ähnliche DaVinci-Screenshots per Cosine-Similarity, image_match Treffer mit Captions; MiniMax M3 deferred |
 | vision-retrieval-feature | 2026-07-07 | docs/issues/vision-retrieval-feature/retrospective.md | Vision Retrieval Feature (Multimodal-RAG: 23182 images, 4-Listen-RRF, Eval 0.6945, 6 Bild-Fragen) |
 | acceleration-mps-parallel | 2026-07-04 |  | Acceleration Mps Parallel |
 | answer-synthesis | 2026-06-29 | docs/issues/answer-synthesis/retrospective.md | Answer Synthesis |

@@ -205,3 +205,96 @@ Stage 2 (Reranking):
 - BM25 `<domain>_images_bm25.pkl` — über Bild-Captions
 - SQLite `image_caption_cache.db` — WAL, content-hash Key, domain-unabhängig
 - SQLite `image_embedding_cache.db` — WAL, base64 float32, domain-unabhängig
+
+## Visual Question Answering (2026-07-07)
+
+VQA erweitert das Vision Retrieval Feature um **Image-Query Search**:
+Ein Nutzer lädt ein Bild hoch und stellt eine Frage dazu („was ist das
+rechts unten?"). Das OpenCode-LLM kann keine Bilder lesen, aber es
+reicht den Bild-Pfad an `search_knowledge(image_path=...)` weiter. Der
+Knowledge Hub embeddet das Bild mit SigLIP-2 (gleicher Vektorraum wie
+die indexierten Screenshots), findet die ähnlichsten DaVinci-Screenshots
+per Cosine-Similarity und gibt deren Captions zurück. Das LLM nutzt die
+Captions um zu erklären was auf dem Nutzer-Bild zu sehen ist.
+
+### VQA Pipeline
+
+```
+Nutzer-Bild (PNG/JPG, beliebiger Pfad)
+   │
+   ▼ image_similarity_search() in hybrid_search.py
+   │
+   ├─ PIL Image.open(path).convert("RGB")
+   ├─ Content-Hash (SHA-256) → image_embedding_cache.db Lookup
+   │    modality="query_image" (NICHT "image" — das sind indexierte
+   │    Screenshots; image_id="query" Placeholder)
+   │
+   ├─ [Cache Miss] SigLIP-2 image-encode (processor + get_image_features)
+   │    → 1152-dim Vektor → L2-Normalize (CLIP convention)
+   │    → Cache write (modality="query_image")
+   │
+   ├─ ChromaDB <domain>_images.query (where modality="image", cosine)
+   │    → Top-K image entries nach similarity
+   │
+   └─ Result-Enrichment: caption, page, source_file aus image-Metadaten
+      ( caption ist im image-Eintrag selbst gespeichert, kein separater
+        caption-Lookup nötig — embed_images.py schreibt caption in beide
+        modality-Entries )
+      → sortiert nach similarity_score (1 - cosine_distance, 0..1)
+      → modality="image_match", match_type="image_similarity"
+```
+
+### search_knowledge image_path Integration
+
+```
+search_knowledge(domain, query, image_path=<pfad>)
+   │
+   ├─ [1] 4-Listen-RRF läuft unverändert (text + image_bm25 + caption)
+   │      → top_k text/image/caption Treffer
+   │
+   ├─ [2] image_similarity_search(domain, image_path, top_k)
+   │      → top_k image_match Treffer (similarity_score, caption, page)
+   │
+   └─ [3] Merge: image_match Treffer werden PREPENDED
+          ( additive, bis top_k — kombinierte Liste max 2*top_k )
+          → Ranks 1..N neu zugewiesen
+          → Return-Dict: image_match_count + results
+```
+
+### Backward-Kompatibilität
+
+Ohne `image_path` (Default `None`):
+
+- `image_similarity_search` wird NICHT aufgerufen
+- Kein `image_match` in Results
+- `image_match_count = 0`
+- Verhalten identisch zur Pre-VQA-Signatur
+
+### Modality-Werte in Results
+
+| modality | Quelle | Bedeutung |
+|----------|--------|-----------|
+| `text` | 4-Listen-RRF (text_bm25 + text_semantic) | Text-Chunk aus Repo/Personal Notes |
+| `image` | 4-Listen-RRF (image_bm25) | Screenshot gefunden via Caption-Keyword-Match |
+| `caption` | 4-Listen-RRF (image_dense) | Screenshot gefunden via Caption-Semantic-Match |
+| `image_match` | VQA: `image_similarity_search` | Screenshot gefunden via Query-Image-Ähnlichkeit (NEU) |
+
+### Neue Env-Vars
+
+Keine — VQA nutzt die bestehenden `KH_MULTIMODAL_MODEL` /
+`KH_MULTIMODAL_DEVICE` Env-Vars des Vision Retrieval Features.
+
+### Performance
+
+- 1 SigLIP-2 Image-Embedding pro Query (~0.5s auf MPS, ~3s auf CPU)
+- Cache-Hit bei wiederholter Query desselben Bildes (~0ms Embedding)
+- ChromaDB cosine query über ~23k image-Entries: ~50ms
+
+### Optional: MiniMax M3 Vision-LLM (deferred)
+
+Die Caption-basierte Antwort (über `image_match` Captions) funktioniert
+ohne Vision-LLM. Eine optionale Erweiterung würde das Nutzer-Bild + Top-3
+ähnliche Screenshots an einen Vision-LLM (MiniMax M3) senden, der das
+Bild direkt versteht statt über Captions zu schließen. Status: deferred
+(keine API-Keys, externe Dependency). Siehe
+`docs/issues/visual-question-answering/spec.md` Section 5.

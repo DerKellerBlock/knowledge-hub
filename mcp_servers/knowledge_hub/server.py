@@ -69,7 +69,7 @@ async def list_tools_handler() -> list[Tool]:
     return [
         Tool(
             name="search_knowledge",
-            description="Search knowledge in a domain (exact=BM25, semantic=ChromaDB, hybrid=both + CrossEncoder rerank + 4-list RRF for image domains). Finds API references, code examples, personal notes, and image screenshots with captions (modality field: text|image|caption).",
+            description="Search knowledge in a domain (exact=BM25, semantic=ChromaDB, hybrid=both + CrossEncoder rerank + 4-list RRF for image domains). Finds API references, code examples, personal notes, and image screenshots with captions (modality field: text|image|caption|image_match). Optional image_path triggers visual similarity search (VQA: findet ähnliche DaVinci-Screenshots per SigLIP-2).",
             inputSchema={
                 "type": "object",
                 "properties": {
@@ -78,6 +78,7 @@ async def list_tools_handler() -> list[Tool]:
                     "mode": {"type": "string", "enum": ["exact", "semantic", "hybrid"], "description": "Search mode: exact=BM25, semantic=ChromaDB, hybrid=both", "default": "hybrid"},
                     "max_results": {"type": "integer", "description": "Maximum number of results", "default": 10},
                     "source_filter": {"type": "array", "items": {"type": "string", "enum": ["repo", "personal"]}, "description": "Filter by source type (repo and/or personal)"},
+                    "image_path": {"type": "string", "description": "Optional: absoluter Pfad zu einer Bilddatei für visuelle Ähnlichkeitssuche gegen indexierte Screenshots. Bei Setzung wird das Bild mit SigLIP-2 embeddet und ähnliche DaVinci-Screenshots werden gefunden. Ergebnisse enthalten 'image_match' Treffer mit Captions + similarity_score."},
                 },
                 "required": ["domain", "query"],
             },
@@ -151,6 +152,7 @@ async def call_tool_handler(name: str, arguments: dict) -> list[TextContent]:
                 mode=arguments.get("mode", "hybrid"),
                 max_results=arguments.get("max_results", 10),
                 source_filter=arguments.get("source_filter"),
+                image_path=arguments.get("image_path"),
             )
         elif name == "get_domain_status":
             result = get_domain_status(domain=arguments.get("domain"))

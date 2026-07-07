@@ -78,3 +78,28 @@
   Bild keine Caption hat (z.B. `quality=poor` übersprungen), fehlen
   `caption`, `image_path` etc. — der Treffer wird stillschweigend
   verworfen.
+
+## Visual Question Answering (2026-07-07)
+
+- **VQA-001:** `image_path` funktioniert nur für Domains mit indexierten
+  Screenshots. Aktuell hat nur `davinci_resolve` eine `<domain>_images`
+  Collection. Andere Domains (godot, …) liefern keine `image_match`
+  Treffer — `image_similarity_search` returniert `[]` (graceful).
+- **VQA-002:** Keine OCR-Texterkennung. SigLIP-2 findet *ähnliche*
+  Screenshots per visueller Ähnlichkeit, extrahiert aber keinen Text
+  aus dem Nutzer-Bild. Wenn das Nutzer-Bild Text enthält, der nicht in
+  einem DaVinci-Screenshot vorkommt, kann die Suche schwach sein.
+- **VQA-003:** Caption-basierte Antwortqualität. Die `image_match`
+  Treffer liefern die Caption des ähnlichsten indexierten Screenshots,
+  nicht eine direkte Beschreibung des Nutzer-Bildes. Bei sehr ähnlichen
+  Screenshots (sim > 0.9) ist die Caption eine gute Beschreibung; bei
+  niedrigerer Similarity kann die Caption irreführend sein.
+- **VQA-004:** MiniMax M3 Vision-LLM Integration ist **deferred**. Die
+  Caption-basierte Antwort funktioniert ohne Vision-LLM, würde aber von
+  einem direkten Bild-Vergleich (Nutzer-Bild + Top-3 Screenshots an
+  Vision-LLM) profitieren. Siehe
+  `docs/issues/visual-question-answering/spec.md` Section 5.
+- **VQA-005:** `image_match` Treffer werden PREPENDED (additiv, bis
+  top_k). Die kombinierte Liste kann bis zu 2*top_k Einträge enthalten
+  (top_k image_match + top_k text/image/caption). Consumers die ein
+  strikt top_k-limit brauchen, müssen selbst abschneiden.

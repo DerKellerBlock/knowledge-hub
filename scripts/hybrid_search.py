@@ -226,6 +226,242 @@ def _resolve_image_metadata(domain: str, image_bm25_results: list[dict]) -> list
     return enriched
 
 
+    return enriched
+
+
+def image_similarity_search(
+    domain: str,
+    image_path: str,
+    top_k: int = 10,
+) -> list[dict]:
+    """Find similar screenshots by image embedding (VQA Feature, Task 1).
+
+    Loads the query image, embeds it with the multimodal model (SigLIP-2 /
+    jina-clip-v2 — same vector space as the indexed screenshots), and queries
+    the ``<domain>_images`` ChromaDB collection (``modality="image"``) by
+    cosine similarity. The top-k image entries are enriched with their
+    caption + page + source_file metadata from the matching
+    ``<image_id>::cap`` caption entry so the caller can explain what the
+    screenshot shows.
+
+    Content-hash caching: query-image embeddings are persisted in
+    ``image_embedding_cache.db`` with ``modality="query_image"`` (NOT
+    ``"image"`` — that is the modality of the indexed screenshots, and we
+    must not collide the cache keyspace). Cache-Key is
+    ``image_id="query"`` (a stable placeholder) + content_hash of the
+    query image bytes + model + ``"query_image"``.
+
+    Graceful failure: any error (file missing, PIL decode failure,
+    SigLIP-2 not available, images collection missing) returns an empty
+    list + a warning log. The caller (``search_knowledge``) treats an
+    empty list as "no image_match results" — fully backward compatible.
+
+    Args:
+        domain: Domain name (must have an ``<domain>_images`` collection).
+        image_path: Absolute path to a query image file (PNG/JPG/...).
+        top_k: Number of similar screenshots to return.
+
+    Returns:
+        List of ``image_match`` result dicts sorted by ``similarity_score``
+        (descending). Each entry has:
+
+        * ``chunk_id`` — the image entry id (``<image_id>::img``)
+        * ``image_id`` — stable image identifier
+        * ``modality`` — ``"image_match"`` (distinguishes from text/image/caption)
+        * ``match_type`` — ``"image_similarity"``
+        * ``similarity_score`` — cosine similarity (0..1, higher = more similar)
+        * ``score`` — alias of ``similarity_score`` (for sort-compat with RRF)
+        * ``caption`` — caption text of the matched screenshot
+        * ``image_path`` — relative path of the matched screenshot
+        * ``source_file`` — source PDF / markdown file
+        * ``page`` — 0-based PDF page (VRF-001)
+        * ``idx`` — image index on the page
+        * ``quality`` — caption quality flag
+        * ``domain`` — domain name
+        * ``text`` — the caption text (so the reranker / LLM can read it)
+    """
+    # ── Validate input path ────────────────────────────────────────────
+    p = Path(image_path)
+    if not p.is_file():
+        logger.warning(
+            "image_similarity_search: image not found: %s — returning []",
+            image_path,
+        )
+        return []
+
+    # ── Load image via PIL ─────────────────────────────────────────────
+    try:
+        from PIL import Image
+        img = Image.open(p).convert("RGB")
+    except Exception as e:
+        logger.warning(
+            "image_similarity_search: PIL failed to open %s: %s: %s — returning []",
+            image_path, type(e).__name__, e,
+        )
+        return []
+
+    # ── Load multimodal embedder ───────────────────────────────────────
+    from model_manager import get_multimodal_embedder
+    try:
+        processor, mm_model, device, _ = get_multimodal_embedder()
+    except Exception as e:
+        logger.warning(
+            "image_similarity_search: multimodal embedder unavailable: %s: %s — returning []",
+            type(e).__name__, e,
+        )
+        return []
+
+    # ── Content-hash cache lookup ──────────────────────────────────────
+    # Query-image embeddings use modality="query_image" so they don't
+    # collide with indexed-screenshot embeddings (modality="image").
+    import os
+    from image_embedding_cache import (
+        open_cache as open_emb_cache,
+        get_cached as get_emb_cached,
+        put_cached as put_emb_cached,
+        image_hash as _image_hash,
+    )
+    model_name = os.environ.get(
+        "KH_MULTIMODAL_MODEL",
+        "google/siglip2-so400m-patch16-512",
+    )
+    try:
+        img_hash = _image_hash(p)
+    except OSError as e:
+        logger.warning(
+            "image_similarity_search: hash failed for %s: %s — returning []",
+            image_path, e,
+        )
+        return []
+
+    # Use a stable placeholder image_id for query images so the cache key
+    # is deterministic across calls for the same image bytes + model.
+    query_image_id = "query"
+
+    embedding = None
+    try:
+        conn = open_emb_cache(domain)
+        try:
+            embedding = get_emb_cached(
+                conn, query_image_id, img_hash, model_name, "query_image",
+            )
+        finally:
+            conn.close()
+    except Exception as e:
+        logger.warning(
+            "image_similarity_search: cache lookup failed: %s: %s — proceeding without cache",
+            type(e).__name__, e,
+        )
+
+    # ── Embed the query image with SigLIP-2 ────────────────────────────
+    if embedding is None:
+        try:
+            import torch
+            import numpy as np
+            torch_device = torch.device(device)
+            inputs = processor(images=[img], return_tensors="pt")
+            inputs = {k: v.to(torch_device) for k, v in inputs.items()}
+            with torch.no_grad():
+                outputs = mm_model.get_image_features(**inputs)
+            emb = outputs.cpu().float().numpy()
+            if emb.ndim == 2 and emb.shape[0] == 1:
+                emb = emb[0]
+            norms = np.linalg.norm(emb, axis=-1, keepdims=True)
+            norms = np.where(norms == 0, 1, norms)
+            embedding = emb / norms
+        except Exception as e:
+            logger.warning(
+                "image_similarity_search: SigLIP-2 encode failed: %s: %s — returning []",
+                type(e).__name__, e,
+            )
+            return []
+
+        # Persist in cache so subsequent queries for the same image are free.
+        try:
+            conn = open_emb_cache(domain)
+            try:
+                put_emb_cached(
+                    conn, query_image_id, img_hash, model_name,
+                    "query_image", embedding,
+                )
+            finally:
+                conn.close()
+        except Exception as e:
+            logger.warning(
+                "image_similarity_search: cache write failed: %s: %s — ignoring",
+                type(e).__name__, e,
+            )
+
+    # ── Query ChromaDB <domain>_images (modality="image") ──────────────
+    try:
+        client = get_chroma_client(domain)
+        collection = client.get_collection(f"{domain}_images")
+    except Exception as e:
+        logger.warning(
+            "image_similarity_search: %s_images collection missing for domain '%s': %s — returning []",
+            domain, domain, e,
+        )
+        return []
+
+    try:
+        results = collection.query(
+            query_embeddings=[embedding.tolist()],
+            n_results=top_k,
+            where={"modality": "image"},
+            include=["metadatas", "distances"],
+        )
+    except Exception as e:
+        logger.warning(
+            "image_similarity_search: ChromaDB query failed: %s: %s — returning []",
+            type(e).__name__, e,
+        )
+        return []
+
+    # ── Build result list ──────────────────────────────────────────────
+    # ChromaDB returns cosine *distance* (lower = more similar). Convert
+    # to similarity score (1 - distance, clamped to [0, 1]).
+    formatted = []
+    ids = results.get("ids", [[]])
+    metas = results.get("metadatas", [[]])
+    dists = results.get("distances", [[]])
+    if not ids or not ids[0]:
+        return []
+
+    for i in range(len(ids[0])):
+        meta = metas[0][i] or {}
+        distance = dists[0][i]
+        # ChromaDB cosine: distance in [0, 2]; similarity = 1 - distance.
+        similarity = max(0.0, min(1.0, 1.0 - float(distance)))
+        image_id = meta.get("image_id", "")
+        formatted.append({
+            "chunk_id": ids[0][i],
+            "image_id": image_id,
+            "modality": "image_match",
+            "match_type": "image_similarity",
+            "similarity_score": round(similarity, 4),
+            "score": round(similarity, 4),  # sort-compat alias
+            "image_path": meta.get("image_path", ""),
+            "source_file": meta.get("source_file", ""),
+            "page": meta.get("page"),
+            "idx": meta.get("idx"),
+            "caption": meta.get("caption", ""),
+            "quality": meta.get("quality", "unchecked"),
+            "domain": meta.get("domain", domain),
+            "text": (meta.get("caption", "") or "")[:5000],
+            "rerank_score": None,
+            "stage1_score": round(similarity, 4),
+        })
+
+    # Sort by similarity descending (ChromaDB may already sort, but be explicit).
+    formatted.sort(key=lambda r: r["similarity_score"], reverse=True)
+
+    # Reassign sequential ranks 1..N.
+    for i, entry in enumerate(formatted):
+        entry["rank"] = i + 1
+
+    return formatted
+
+
 def rrf_fusion_4list(
     text_sparse: list[dict],
     text_dense: list[dict],
@@ -363,8 +599,19 @@ def search(
     mode: str = "hybrid",
     top_k: int = 10,
     source_filter: list[str] | None = None,
+    image_path: str | None = None,
 ) -> dict:
-    """Search knowledge in a domain."""
+    """Search knowledge in a domain.
+
+    When ``image_path`` is set (Visual Question Answering Feature), an
+    additional :func:`image_similarity_search` is run: the query image is
+    embedded with SigLIP-2 and similar screenshots from the
+    ``<domain>_images`` collection are appended to the results with
+    ``modality="image_match"``. The text/image/caption search pipeline
+    runs unchanged (4-list RRF + cross-encoder rerank). Without
+    ``image_path`` the behavior is identical to the previous signature
+    (backward compatible).
+    """
     t0 = time.time()
 
     if mode == "exact":
@@ -475,6 +722,36 @@ def search(
             merged.append(image_slice[ii])
             ii += 1
     fused = merged[:top_k]
+
+    # ── Visual Question Answering: image similarity matches ───────────
+    # When image_path is set, run image_similarity_search ADDITIONALLY
+    # to the 4-list RRF and prepend the image_match results to the
+    # merged list. They get their own modality="image_match" so consumers
+    # can distinguish them from text/image/caption hits. Without
+    # image_path this block is skipped entirely (backward-compat).
+    image_match_results: list[dict] = []
+    if image_path:
+        try:
+            image_match_results = image_similarity_search(
+                domain, image_path, top_k=top_k,
+            )
+        except Exception as e:
+            logger.warning(
+                "search: image_similarity_search failed for image_path=%s: %s: %s — continuing without image_match results",
+                image_path, type(e).__name__, e,
+            )
+            image_match_results = []
+
+    # Prepend image_match results so the LLM sees the most similar
+    # screenshots first (highest similarity_score). They are NOT mixed
+    # into the interleave budget — they are additive on top of the
+    # text/image/caption results.
+    if image_match_results:
+        # Cap image_match to top_k so the combined list does not exceed
+        # 2*top_k (text top_k + image_match top_k).
+        image_match_results = image_match_results[:top_k]
+        fused = image_match_results + fused
+
     # Re-assign sequential ranks 1..N after the merge so consumers see a
     # contiguous ranking (the RRF rank and rerank position would otherwise
     # leak through as non-sequential numbers).
@@ -486,6 +763,7 @@ def search(
         "total_found": len(fused),
         "mode": mode,
         "query_time_ms": int((time.time() - t0) * 1000),
+        "image_match_count": len(image_match_results),
     }
 
 

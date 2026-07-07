@@ -294,3 +294,63 @@ Captions.
 content-hash Keys (SHA-256 der Bild-Bytes + Modell + Modality). Bei
 Re-Builds werden unveränderte Bilder/Captions übersprungen. Cache-Resume
 nach Abbruch: alle bereits verarbeiteten Bilder bleiben im Cache.
+
+## Visual Question Answering (image_path, 2026-07-07)
+
+### search_knowledge mit image_path
+
+```python
+# Über MCP-Tool (OpenCode Agent):
+search_knowledge(
+    domain="davinci_resolve",
+    query="Color Wheels panel",         # Frage als Text zusammengefasst
+    image_path="/tmp/uploads/img.png",  # absoluter Pfad zum Nutzer-Bild
+    mode="hybrid",
+    max_results=10,
+)
+```
+
+**Verhalten:**
+- 4-Listen-RRF läuft unverändert (text + image_bm25 + caption).
+- ZUSÄTZlich wird `image_similarity_search()` aufgerufen: das Query-Bild
+  wird mit SigLIP-2 embeddet und gegen `<domain>_images` (modality=image)
+  per Cosine-Similarity gesucht.
+- `image_match` Treffer werden vorangestellt (additiv, bis top_k).
+- `image_match_count` im Return-Dict gibt die Anzahl der Bild-Treffer.
+
+**Backward-Kompatibel:** Ohne `image_path` läuft die Text-Suche
+unverändert. Kein `image_match` in Results, `image_match_count = 0`.
+
+### Cache-Verhalten
+
+Query-Image-Embeddings werden in `image_embedding_cache.db` gecacht:
+
+- `modality = "query_image"` (NICHT `"image"` — das sind indexierte
+  Screenshots; Kollision würde zu falschen Cache-Hits führen).
+- `image_id = "query"` (stabilen Placeholder, damit gleiche Bild-Bytes
+  + gleiches Modell denselben Cache-Key ergeben).
+- Cache-Key: `sha256("query" | <content_hash> | <model> | "query_image")`.
+- Bei wiederholter Query desselben Bildes: Cache-Hit (~0ms Embedding).
+
+### Graceful Fallback
+
+`image_similarity_search()` returniert `[]` bei:
+
+- Bild-Datei existiert nicht
+- PIL kann Bild nicht dekodieren (kein gültiges PNG/JPG)
+- SigLIP-2 nicht verfügbar (Modell nicht geladen / nicht heruntergeladen)
+- `<domain>_images` Collection existiert nicht (Domain ohne Vision Feature)
+
+Die `search()`-Funktion fängt zusätzlich alle Exceptions ab und setzt
+`image_match_count = 0` — die Text-Suche bleibt unbeeinflusst.
+
+### Einschränkungen
+
+- Nur `davinci_resolve` hat indexierte Screenshots. Andere Domains
+  liefern keine `image_match` Treffer.
+- Keine OCR-Texterkennung — SigLIP-2 findet *ähnliche* Screenshots,
+  keine Text-Inhalte. Wenn das Nutzer-Bild Text enthält, der nicht in
+  DaVinci-Screenshots vorkommt, kann die Suche schwach sein.
+- Captions sind kontext-aware ( TowardsDataScience Best-Practice:
+  `context_before + [IMAGE: description] + context_after`), aber
+  gelegentlich leicht verrauscht (VRF-002).

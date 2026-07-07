@@ -89,8 +89,17 @@ def search_knowledge(
     mode: str = "hybrid",
     max_results: int = 10,
     source_filter: list[str] | None = None,
+    image_path: str | None = None,
 ) -> dict:
-    """Search a domain's knowledge."""
+    """Search a domain's knowledge.
+
+    When ``image_path`` is set (Visual Question Answering Feature), an
+    additional image-similarity search is run: the query image is
+    embedded with SigLIP-2 and similar indexed screenshots are returned
+    as ``modality="image_match"`` results with their captions. Without
+    ``image_path`` the behavior is identical to the previous signature
+    (backward compatible).
+    """
     scope_error = _check_domain_scope(domain)
     if scope_error:
         return scope_error
@@ -100,6 +109,7 @@ def search_knowledge(
         mode=mode,
         top_k=max_results,
         source_filter=source_filter,
+        image_path=image_path,
     )
 
 
