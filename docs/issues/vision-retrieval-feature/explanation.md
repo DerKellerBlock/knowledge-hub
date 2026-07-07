@@ -1,134 +1,140 @@
-# Explanation — Vision Retrieval Feature
+# Explanation — Vision Retrieval Feature + Quality Metrics v2
 
-**Task:** Vision-Retrieval-Feature (Multimodal-RAG)
 **Datum:** 2026-07-07
-**Für:** Anfängerfreundliche Erklärung der geänderten Dateien, OpenCode-Konfiguration, Agenten, Validierung
+**Status:** Abgeschlossen
+**Commits:** 7 (3fc9cd1 → 1ce7838)
 
-## Was wurde gebaut
+## Was gebaut wurde
 
-Das Vision Retrieval Feature ist eine **additive Multimodal-RAG-Pipeline** für PDF-Domains mit Screenshots. Sie erweitert die bestehende Text-Suche um Bild-Suche, ohne den Text-Pfad zu verändern.
+### 1. Vision Retrieval Feature (Multimodal-RAG)
 
-### Kernidee
-DaVinci-Handbücher enthalten viele UI-Screenshots. Bisher war die Suche nur auf Text-Chunks (BGE-M3 + BM25). Jetzt gibt es einen zusätzlichen Bild-Pfad: extrahiere PNGs aus PDFs, generiere Captions mit Gemma 4, embedde Bilder+Captions mit SigLIP-2, und fusioniere Text- und Bild-Treffer über 4-Listen-RRF.
+Additive Bild-Suche für PDF-Domains mit Screenshots. Bestehende Text-Suche bleibt unverändert; Bild-Pipeline ist ein zusätzliches Retrieval-Signal.
+
+**Pipeline:**
+```
+PDFs → extract_pdf_images.py (PyMuPDF4LLM, AGPL)
+     → caption_images.py (Gemma 4 Cloud, 3 Worker)
+     → embed_images.py (SigLIP-2, MPS GPU)
+     → ChromaDB <domain>_images + <domain>_images_bm25.pkl
+     → hybrid_search.py 4-Listen-RRF (text+image, Modality-Gap)
+```
+
+**Full DaVinci Build:**
+- 10 PDFs → 19.183 Bilder extrahiert (12 min)
+- 7.592 als poor markiert (<20KB, Logos/Icons)
+- 11.591 Bilder captioned (3h 28m, 0.9 img/s, 3 Worker)
+- 23.182 ChromaDB entries embedded (1h 9m, 2.8 img/s, MPS)
+- 5.32 MB Bild-BM25
+
+### 2. Caption Cleaning
+
+PDF-Header/Footer-Rausch aus Captions gestrippt (dauerhaft in `caption_images.py` integriert):
+- `--- end of page=N ---`, DaVinci Section Header, `**N**` Seitenzahlen, Unicode-Balken, Markdown-Header
+- BM25 "Color Wheels": Cover-Bild → echte Color Wheels Screenshots
+
+### 3. Quality Metrics v2 (Diskriminative Metriken)
+
+40% des Eval-Composite-Scores waren Konstanten (TKR=0.55, EQ=1.0). Ersetzt durch:
+
+| Alt (konstant) | Neu (diskriminativ) | Range |
+|----------------|---------------------|-------|
+| TKR = 0.55 | NDCG@10 (4-stufige Relevanz) | 0.67–0.99 |
+| PMA ±2 (binär) | Jaccard Page Overlap (kontinuierlich) | 0.03–1.0 |
+| SR (binär) | Weighted Source Recall (mit Gewichten) | 0.5–1.0 |
+| — | Source Diversity (Shannon-Entropie, neu) | 0.47–0.99 |
+
+### 4. HyDE (Hypothetical Document Embeddings)
+
+LLM generiert hypothetisches Dokument mit technischer Terminologie → besseres semantisches Embedding. Optional via `KH_HYDE_ENABLED=1`.
+
+## Neue Dateien
+
+| Datei | Lizenz | Zweck |
+|------|--------|-------|
+| `scripts/extract_pdf_images.py` | AGPL | PDF → PNG + Manifest |
+| `scripts/caption_images.py` | MIT | Bild → Caption (Cloud, parallel) |
+| `scripts/caption_cleaning.py` | MIT | Caption-Rausch-Stripping |
+| `scripts/image_caption_cache.py` | MIT | SQLite-Cache für Captions |
+| `scripts/embed_images.py` | MIT | Bild/Caption → ChromaDB |
+| `scripts/image_embedding_cache.py` | MIT | SQLite-Cache für Embeddings |
+| `scripts/hyde.py` | MIT | HyDE Query-Verbesserung |
+| `docs/issues/vision-retrieval-feature/spec.md` | — | SDD Spec |
+| `docs/issues/vision-retrieval-feature/plan.md` | — | SDD Plan |
+| `docs/issues/vision-retrieval-feature/retrospective.md` | — | Retrospektive |
+| `docs/issues/vision-retrieval-feature/explanation.md` | — | Diese Datei |
+| `docs/issues/quality-metrics-v2/spec.md` | — | SDD Spec Metrics v2 |
+| `docs/issues/quality-metrics-v2/plan.md` | — | SDD Plan Metrics v2 |
+| `docs/issues/quality-metrics-v2/retrospective.md` | — | Retrospektive Metrics v2 |
 
 ## Geänderte Dateien
 
-### Neue Skripte (scripts/)
-| Skript | Lizenz | Zweck |
-|--------|--------|-------|
-| `extract_pdf_images.py` | AGPL (PyMuPDF) | PDF → PNG + `image_manifest.json` |
-| `caption_images.py` | MIT | Bild → Caption (Gemma 4 Cloud, 3 Worker) |
-| `image_caption_cache.py` | MIT | SQLite-Cache für Captions (WAL, content-hash) |
-| `embed_images.py` | MIT | Bild/Caption → ChromaDB `<domain>_images` |
-| `image_embedding_cache.py` | MIT | SQLite-Cache für Embeddings (base64 float32) |
+| Datei | Änderung |
+|------|----------|
+| `scripts/model_manager.py` | `get_multimodal_embedder()` hinzugefügt |
+| `scripts/bm25_search.py` | `build_image_bm25_index()`, `image_bm25_search()` |
+| `scripts/hybrid_search.py` | 4-Listen-RRF, Interleave-Merge, HyDE-Integration |
+| `scripts/embed_index.py` | `--embed-images` Flag |
+| `scripts/quality/scorer.py` | NDCG, Jaccard, WSR, Diversity + Report-Update |
+| `scripts/quality/config.py` | Neue Weights (70% diskriminativ) |
+| `mcp_servers/knowledge_hub/config.py` | 5 neue Env-Vars + Helper |
+| `mcp_servers/knowledge_hub/tools.py` | `get_domain_status` mit image_count |
+| `mcp_servers/knowledge_hub/server.py` | `search_knowledge` Beschreibung |
+| `requirements.txt` | pillow, torch, transformers |
+| `THIRD_PARTY_LICENSES.md` | SigLIP-2, jina-clip-v2, pillow/torch |
+| `domains/davinci_resolve/domain.md` | 8 neue Metadaten-Felder |
+| `quality/golden/davinci_resolve.yaml` | +6 Bild-Fragen, weights, page ranges |
+| `.gitignore` | `domains/*/images/` hinzugefügt |
+| `docs/ai/architecture.md` | Vision Retrieval Sektion |
+| `docs/ai/best-practices.md` | Neue Env-Vars + CLI |
+| `docs/ai/security.md` | Multimodal + AGPL Boundary |
+| `docs/ai/known-issues.md` | VRF-001 bis VRF-006 |
+| `docs/ai/open-work.md` | 2 Tasks als done markiert |
 
-### Erweiterte Skripte
-- `model_manager.py` — `get_multimodal_embedder()` + `is_multimodal_embedder_available()`
-- `bm25_search.py` — `build_image_bm25_index()`, `image_bm25_search()`, `get_image_bm25_index_size_mb()`
-- `hybrid_search.py` — 4-Listen-RRF, `_image_semantic_search()`, `_resolve_image_metadata()`, Mixed-Modality Merge
-- `embed_index.py` — `--embed-images` Flag (baut Bild-BM25)
+## Neue Env-Vars
 
-### Erweiterte MCP-Server-Dateien
-- `mcp_servers/knowledge_hub/config.py` — Neue Env-Vars + `domain_images_dir()`, `domain_image_bm25_path()`, `domain_image_manifest_path()`
-- `mcp_servers/knowledge_hub/tools.py` — `get_domain_status` mit `image_count`, `image_index_exists`, `image_bm25_index_size_mb`
-- `mcp_servers/knowledge_hub/server.py` — `search_knowledge` Beschreibung aktualisiert
+| Var | Default | Zweck |
+|-----|---------|-------|
+| `KH_MULTIMODAL_MODEL` | `google/siglip2-so400m-patch16-512` | Multimodal-Embedding-Modell |
+| `KH_MULTIMODAL_DEVICE` | `cpu` | Compute-Device (opt-in `mps`) |
+| `KH_MULTIMODAL_BATCH_SIZE` | `32` | Batch-Size |
+| `KH_VISION_LLM_MODEL` | folgt `KH_LLM_MODEL` | Vision-LLM für Captioning |
+| `KH_VISION_LLM_WORKERS` | `1` | Parallele Worker (opt-in `3`) |
+| `KH_HYDE_ENABLED` | `0` | HyDE aktivieren (opt-in `1`) |
 
-### Erweiterte Doku
-- `docs/ai/architecture.md` — Vision Retrieval Feature Sektion mit Pipeline-Diagramm
-- `docs/ai/best-practices.md` — Neue Env-Vars, CLI-Skripte, Pre-Flight, Context-Aware Captions
-- `docs/ai/security.md` — SigLIP-2/jina-clip-v2 Lizenzen, Datenexfiltration, AGPL Process Boundary
-- `docs/ai/known-issues.md` — VRF-001 bis VRF-005
+## CLI-Skripte
 
-### Erweiterte Konfiguration
-- `requirements.txt` — `pillow`, `torch>=2.12.0`, `transformers>=4.57.0`
-- `THIRD_PARTY_LICENSES.md` — SigLIP-2 (Apache 2.0), jina-clip-v2 (CC-BY-NC-4.0), pillow/torch/transformers
-- `domains/davinci_resolve/domain.md` — Multimodal-Model, Vision-LLM, Image-Collection Metadaten
-
-## OpenCode-Konfiguration
-
-Die `.opencode/opencode.json` wurde NICHT geändert — das Vision Retrieval Feature nutzt die bestehende MCP-Server-Infrastruktur. Der `search_knowledge` MCP-Tool-Aufruf bleibt identisch; die `modality`/`image_path`/`caption` Felder sind zusätzliche Felder in den Ergebnissen (backward-kompatibel).
-
-### Neue Env-Vars (für den Build-Prozess)
 ```bash
-# Captioning (Gemma 4 Cloud, 3 parallele Worker)
-export KH_LLM_MODEL=gemma4:cloud
-export KH_OLLAMA_HOST=http://localhost:11434
-export KH_VISION_LLM_WORKERS=3
-
-# Multimodal Embedding (SigLIP-2, MPS GPU)
-export KH_MULTIMODAL_MODEL=google/siglip2-so400m-patch16-512
-export KH_MULTIMODAL_DEVICE=mps
-export KH_MULTIMODAL_BATCH_SIZE=32
-```
-
-## Agenten
-
-Die Implementierung wurde vom `implement-hub-change` Agenten durchgeführt (kein Subagent-Spawning). Die Validierung erfolgt durch:
-- `validate-hub-project` — Syntax, Struktur, Index-Status
-- `test-hub-feature` — pytest + Knowledge-QA
-- `review-hub-diff` — Diff-Review auf Fehler/Regressionen
-- `review-hub-security` — Security-Review (MCP, Secrets, Dependencies)
-
-## Validierungsbefehle
-
-### Syntax
-```bash
-.venv/bin/python -m py_compile scripts/*.py mcp_servers/knowledge_hub/*.py
-```
-
-### Unit-Tests
-```bash
-.venv/bin/pytest -m unit -q
-# 226 passed, 227 deselected
-```
-
-### Workspace
-```bash
-./scripts/workspace_check.sh
-# All workspace checks passed
-```
-
-### End-to-End Build (pro PDF)
-```bash
-# 1. Extrahieren
+# Vision Retrieval Build
 python scripts/extract_pdf_images.py --domain davinci_resolve
-
-# 2. Captioning (Cloud, parallel)
 KH_LLM_MODEL=gemma4:cloud KH_VISION_LLM_WORKERS=3 \
     python scripts/caption_images.py --domain davinci_resolve --workers 3
-
-# 3. Embedding (MPS GPU)
-KH_MULTIMODAL_DEVICE=mps KH_MULTIMODAL_BATCH_SIZE=32 \
-    python scripts/embed_images.py --domain davinci_resolve
-
-# 4. Bild-BM25 (additiv zu Text-Index)
+KH_MULTIMODAL_DEVICE=mps python scripts/embed_images.py --domain davinci_resolve
 python scripts/embed_index.py --domain davinci_resolve --embed-images
+
+# Eval mit neuen Metriken
+python scripts/quality/run_evaluation.py --domain davinci_resolve
+python scripts/quality/generate_report.py --input results.json
+
+# HyDE (optional)
+KH_HYDE_ENABLED=1 python scripts/hybrid_search.py --domain davinci_resolve --query "..."
 ```
 
-### Search-Test
+## Eval-Ergebnis
+
+| Version | Avg Composite | Pass | Weak | Fail |
+|---------|--------------|------|------|------|
+| Pre-Session (konstante Metriken) | 0.7234 | 15 (58%) | 11 (42%) | 0 |
+| +v2 Metriken | 0.7928 | 20 (77%) | 6 (23%) | 0 |
+| **+Page Ranges +HyDE (FINAL)** | **0.8017** | **21 (81%)** | **5 (19%)** | **0** |
+
+**Godot (backward-compat):** 0.9153 avg, 19 pass, 2 weak, 0 fail (unverändert)
+
+## Validierung
+
 ```bash
-KH_LLM_MODEL=gemma4:cloud KH_MULTIMODAL_MODEL=google/siglip2-so400m-patch16-512 \
-KH_MULTIMODAL_DEVICE=mps python scripts/hybrid_search.py \
-    --domain davinci_resolve --query "Fairlight mixing console" --top 5
+.venv/bin/python -m py_compile scripts/*.py mcp_servers/knowledge_hub/*.py  # OK
+.venv/bin/pytest -m unit -q                                                 # 226 passed
+./scripts/workspace_check.sh                                               # All checks passed
+.venv/bin/python scripts/quality/validate_dataset.py --domain davinci_resolve  # OK
+.venv/bin/python scripts/quality/validate_dataset.py --domain godot            # OK
 ```
-
-## Knowledge-QA Ablauf
-
-Für Quellen-/Domain-Änderungen prüft `test-hub-feature`:
-1. Realistische Nutzerfragen aus geänderten Quellen
-2. Real-World Problem Prompts (via websearch)
-3. Top-Search-Results mit `source_file`
-4. PDF `page_start`/`page_end` wenn verfügbar
-5. Evidence Snippets
-6. Schwache/fehlende Coverage als Findings dokumentiert
-
-Für das Vision Retrieval Feature bedeutet das: Bild-zentrierte Queries sollten Bild-Treffer mit `image_path` und `caption` in den Top-Ergebnissen zeigen.
-
-## Architektur-Entscheidungen
-
-1. **SigLIP-2 als Default** (Apache 2.0) — kommerziell sicher, English-only. jina-clip-v2 (CC-BY-NC-4.0) als multilinguale Option.
-2. **Ollama NICHT für Multimodal** — Ollama hat keine Multimodal-Embedding-API (Issue #5304). SigLIP-2 läuft via `transformers`.
-3. **4-Listen-RRF mit Modality-Gap** — `k_image=30` (kleiner als `k_text=60`) gewichtet Bilder stärker. Cross-Encoder nur auf Text.
-4. **Mixed-Modality Merge** — 1/3 der Top-K-Slots für Bilder reserviert (min 1). Kompromiss zwischen Text- und Bild-Dominanz.
-5. **Content-Hash Caching** — SQLite-Caches mit SHA-256 Keys machen Builds crash-resilient und domain-unabhängig.
-6. **AGPL Process Boundary** — `extract_pdf_images.py` importiert PyMuPDF (AGPL), Runtime bleibt MIT (analog `parse_pdf_to_markdown.py`).
