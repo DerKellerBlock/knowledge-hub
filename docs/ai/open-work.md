@@ -12,7 +12,7 @@
 | Task-ID | Spec | Plan | Priorität | Status | Kurzbeschreibung |
 |---|---|---|---|---|---|
 | quality-metrics-v2 | docs/issues/quality-metrics-v2/spec.md | docs/issues/quality-metrics-v2/plan.md | high | done | Diskriminative Eval-Metriken (NDCG@10, Jaccard, WSR, Diversity) + HyDE + Page Range Kuratie — 0.7234→0.8017, 15→21 pass |
-| vqa-opencode-passthrough | docs/issues/vqa-opencode-passthrough/spec.md | docs/issues/vqa-opencode-passthrough/plan.md | high | open | VQA-Passthrough für OpenCode v1.17.15 (Drag-Drop/Clipboard-Pfad-Verlust) — drei unabhängige Approaches: A) @-Mention-Passthrough, B) get_recent_image_path() MCP-Tool (macOS), C) lokales OpenCode-Plugin (blocked bis PR #21633) |
+| vqa-opencode-passthrough | docs/issues/vqa-opencode-passthrough/spec.md | docs/issues/vqa-opencode-passthrough/plan.md | high | open | VQA-Passthrough für OpenCode v1.17.15 (Drag-Drop/Clipboard-Pfad-Verlust) — drei unabhängige Approaches: A) @-Mention-Passthrough, B) get_recent_image_path() MCP-Tool (macOS), C) lokales OpenCode-Plugin (blocked bis PR #21633). Sub-Feature D (cross-cutting): PDF Source-Page Link Generation — Orchestrator generiert copy-paste-fertige direkte Chrome/Firefox-Binary-Kommandos mit `#page=N` für VQA/Text-Treffer mit `page`/`page_start`-Metadaten (Task D1 Prompt, D2 Page-Offset-Verifikation, D3 Browser-Fallback). |
 
 
 

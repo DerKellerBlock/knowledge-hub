@@ -222,7 +222,113 @@ zwei oder alle drei umsetzen. Empfohlene Start-Reihenfolge: A → B → C
   PNG-Datei mit mtime ≤ 30s; Orchestrator-Log zeigt
   `image_path=/tmp/...`.
 
-### Task D1: Doku + open-work.md + Retrospektive
+### Task D1: Prompt-Erweiterung PDF Source-Link Generation
+
+- Datei: `.opencode/agents/orchestrator-knowledge.md` (bestehende
+  VQA-Sektion bei Line 158).
+- Erweitere die VQA-Sektion um eine Subsektion **„PDF Source-Link
+  Generation (Cross-Cutting)"**. Der Prompt instruiert den Agent, nach
+  jedem `search_knowledge`-Call mit `image_match`- oder
+  `page_start`-Text-Treffern:
+  1. Für jeden Treffer: mappe `source_file` zu PDF-Pfad via
+     `ls domains/<domain>/sources/raw/` Lookup (via `bash`-Tool,
+     case-insensitive Match des Basenames ohne `.md`).
+  2. Konstruiere `file://`-URL mit `#page=<N+1>` (image_match) oder
+     `#page=<page_start+1>` (text late_chunk).
+  3. Generiere ein direktes Browser-Binary-Kommando (Chrome oder
+      Firefox, siehe Task D3). **Nicht** `open -a` verwenden, da macOS
+      `open` das `#page=N`-Fragment bei lokalen PDFs nicht zuverlässig
+      an die Ziel-App weiterreicht.
+  4. Für `image_match`: zusätzlich `qlmanage -p "<extracted_png_path>"`
+     Kommando aus dem `image_path`-Feld des Treffers.
+  5. Gib die Kommandos in einer
+     `## CLI-Kommandos zum Nachschlagen`-Sektion in der Antwort aus
+     (Copy-Paste-fertig für den Nutzer; der Agent führt sie NICHT
+     selbst aus — siehe „dry-run"-Hinweis in Task D3).
+- Prompt enthält folgende Templates als Referenz für den Agent:
+  - Browser-PDF: `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" "file://<abs_pdf>#page=<N>"`
+  - Firefox-Fallback: `"/Applications/Firefox.app/Contents/MacOS/firefox" "file://<abs_pdf>#page=<N>"`
+  - Quick-Look-Screenshot: `qlmanage -p "<abs_png>"`
+  - PDF-Pfad-Auflösung: `ls domains/<domain>/sources/raw/ | grep -i
+    "<source_file-basename-ohne-md>"`
+- Pfade werden via `os.path.abspath` (repo-root-aware) absolut gemacht;
+  der Prompt erwähnt explizit, dass relative Pfade in Browser-Kommandos
+  fehlschlagen können.
+- **Verify:** `grep -n "PDF Source-Link Generation" .opencode/agents/
+  orchestrator-knowledge.md` liefert Treffer; Prompt-Datei bleibt
+  gültiges Markdown; bestehende VQA-Sektion unberührt (nur neue
+  Subsektion addiert).
+
+### Task D2: Page-Offset Verifikation für text `late_chunk`-Chunks
+
+- Verifiziere, ob `page_start`/`page_end` in Text-`late_chunk`-Chunks
+  0-basiert oder 1-basiert sind. Methode:
+  1. Suche einen bekannten Text-Treffer (z.B. `page_start: 521` für
+     „The Cut page Timeline controls" aus dem Reference Manual).
+  2. Extrahiere mit `pdftotext -f 522 -l 522 <pdf> -` und
+      `pdftotext -f 521 -l 521 <pdf> -` die Kandidatenseiten
+      (pdftotext verwendet 1-basierte Seitenzahlen).
+  3. Prüfe, welche Seite den Text „The Cut page Timeline controls"
+      enthält.
+  4. Dokumentiere das Ergebnis in
+     `docs/issues/vqa-opencode-passthrough/context/
+     page-offset-verification.md` und im Orchestrator-Prompt
+     (Task D1 Template): falls 0-basiert → `#page=<page_start+1>`;
+     falls 1-basiert → `#page=<page_start>`.
+- Für `image_match.page` ist die Konvention durch VRF-001 geklärt:
+  0-basiert → 1-basierte PDF-Seite = `page + 1`. Keine Verifikation
+  nötig für image_match.
+- **Verify:** `context/page-offset-verification.md` existiert und
+  dokumentiert das Ergebnis (0-basiert oder 1-basiert) mit
+  `pdftotext`-Beweis (welche Seite enthält den gesuchten Text);
+  Orchestrator-Prompt nutzt den korrekten Offset.
+
+**✅ Ergebnis (2026-07-07):**
+
+- **Verdict: 0-basiert bestätigt.** Alle drei Tests (Text-Treffer
+  `page_start=521` → Text auf PDF-Seite 522, image_match `page=167`
+  → Bild auf PDF-Seite 168, image_match `page=838` → Bild auf PDF-Seite
+  839) sind konsistent. Sowohl `late_chunk.page_start`/`page_end` als
+  auch `image_match.page` nutzen PyMuPDF4LLMs 0-basierte
+  Seitenkonvention.
+- **Vollständige Evidenz:** `context/page-offset-verification.md`
+  (pdftotext Cross-Check mit Poppler 26.04.0).
+- **Instruktion für Task D1:** Verwende `page + 1` / `page_start + 1`
+  für 1-basierte PDF-Seiten in CLI-Kommandos (verifiziert, siehe
+  `context/page-offset-verification.md`).
+
+### Task D3: Browser-Detection Fallback + Dry-Run-Modus
+
+- Der Prompt enthält eine Fallback-Logik: vor dem ersten generierten
+  Kommando führt der Agent
+  `test -x "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"`
+  und `test -x "/Applications/Firefox.app/Contents/MacOS/firefox"` aus
+  (via `bash`-Tool) und wählt den ersten verfügbaren Browser.
+  - Falls Chrome: `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" "file://...#page=N"`.
+  - Falls Firefox (kein Chrome): `"/Applications/Firefox.app/Contents/MacOS/firefox" "file://...#page=N"`.
+  - Falls weder Chrome noch Firefox: `open "file://..."` (kein
+    Page-Anchor — `open` reicht `#page=N` bei lokalen PDFs nicht
+    zuverlässig weiter). Warnung ausgeben: „Kein Chrome/Firefox-Binary
+    gefunden — öffne PDF ohne Seitensprung, bitte manuell zu Seite N
+    navigieren."
+  - **Verworfener Ansatz:** `open -a "Google Chrome" "file://...#page=N"`
+    nicht verwenden. Live-Debugging zeigte, dass Chrome/Safari nach
+    `open -a` nur `file://...pdf` ohne Fragment sehen. Der direkte
+    Chrome-Binary-Aufruf erhält `#page=N` und wurde durch den Nutzer als
+    funktionierend bestätigt.
+- **Dry-Run-Prinzip:** der Agent gibt die Kommandos als
+  Copy-Paste-Text in der Antwort aus und führt sie **NICHT** selbst
+  aus. Begründung: der Nutzer will die PDF-Seite in seinem eigenen
+  Fenster öffnen, nicht dass der Agent ein neues Fenster aufmacht.
+  Der Prompt instruiert explizit: „Gib die Kommandos als Code-Block
+  aus. Führe sie NICHT via bash-Tool selbst aus — der Nutzer
+  copy-pastet sie in sein Terminal."
+- Beispiel im Prompt: Safari-only-Fallback-Antwort-Format.
+- **Verify:** `grep -n "Browser-Detection\|Safari-only\|Dry-Run"
+  .opencode/agents/orchestrator-knowledge.md` liefert Treffer; Prompt
+  enthält Fallback-Logik und ein Safari-only-Beispiel.
+
+### Task E1: Doku + open-work.md + Retrospektive
 
 - Datei: `docs/ai/open-work.md` — Status des Tasks auf `done` setzen,
   sobald mindestens ein Approach abgeschlossen ist (A reicht für
@@ -242,10 +348,15 @@ zwei oder alle drei umsetzen. Empfohlene Start-Reihenfolge: A → B → C
 
 ## Reihenfolge
 
+Task D (PDF Link Generation) ist cross-cutting und kann nach Approach A
+oder B (sobald Such-Results mit `page`/`page_start` vorliegen) umgesetzt
+werden. D2 (Page-Offset-Verifikation) sollte VOR D1 (Prompt-Erweiterung)
+laufen, damit der Prompt sofort den korrekten Offset nutzt.
+
 ```
 Approach A (unabhängig):
   Task A1 (Prompt) ── Task A2 (Test) ──┐
-                                       └── Task D1 (Doku)
+                                       └── Task E1 (Doku)
 
 Approach B (unabhängig, parallel zu A möglich):
   Task B1 (tools.py) ──┬── Task B2 (server.py)
@@ -254,16 +365,22 @@ Approach B (unabhängig, parallel zu A möglich):
                                                │
                                                └── Task B5 (Prompt)
                                                      │
-                                                     └── Task D1 (Doku)
+                                                     └── Task E1 (Doku)
 
 Approach C (blockiert bis C1 Research):
-  Task C1 (Research-Spike) ─┬── [API existiert] ── Task C2 (Plugin) ── Task D1
+  Task C1 (Research-Spike) ─┬── [API existiert] ── Task C2 (Plugin) ── Task E1
                              │
-                             └── [API fehlt] ── blocked, dokumentiert, D1
+                             └── [API fehlt] ── blocked, dokumentiert, E1
+
+Task D (cross-cutting, nach A oder B):
+  Task D2 (Offset-Verifikation) ── Task D1 (Prompt-Erweiterung) ── Task D3 (Browser-Fallback)
+                                                                      │
+                                                                      └── Task E1 (Doku)
 ```
 
 Die drei Approaches sind unabhängig — der Nutzer kann A sofort
-umsetzen, B nachreichen, C erforschen.
+umsetzen, B nachreichen, C erforschen. Task D augmentiert A (und B,
+sobald implementiert) mit PDF-Link-Generierung.
 
 ## Validierung
 
@@ -293,6 +410,13 @@ find . -name "*.sh" -exec bash -n {} \;
 # Manueller Smoke-Test Approach C (nach Task C2):
 # Bild in OpenCode drag-droppen → /tmp/knowledge-hub-attachments/... prüfen
 # → Orchestrator sollte image_path im Prompt sehen.
+
+# Manueller Smoke-Test Task D (nach D1+D3):
+# VQA-Query mit @/pfad/zum/bild.png → Orchestrator liefert image_match
+# + text Treffer + "## CLI-Kommandos zum Nachschlagen"-Sektion mit
+# direkten Browser-Binary-Kommandos (`/Applications/.../Google Chrome`
+# oder `/Applications/.../firefox`) mit `#page=N`. Copy-paste eines
+# Kommandos öffnet das PDF auf der korrekten Seite (visuell prüfen).
 ```
 
 ## Risiko
@@ -322,14 +446,26 @@ find . -name "*.sh" -exec bash -n {} \;
   ohne `@`-Mention bleibt Verhalten unverändert. Approach B fügt ein
   neues Tool hinzu, ohne bestehende Tools zu ändern. Approach C
   patcht OpenCode lokal, ohne Knowledge-Hub-Code zu ändern.
+- **Task D (PDF Link Generation) — Niedrig:** reine Prompt-Instruktion,
+  kein Code-Change am Knowledge Hub. Risiko: PDF-Pfad-Mapping schlägt
+  fehl, falls `source_file`-Basename nicht in `sources/raw/` gefunden
+  wird (z.B. neue Quelle, noch nicht als PDF abgelegt) → graceful:
+  Agent gibt Hinweis „PDF nicht gefunden, source_file=<name>" aus.
+  Risiko: Page-Offset-Annahme falsch (0 vs 1) → D2 verifiziert visuell.
+  Risiko: Browser nicht installiert oder Binary-Pfad weicht ab → D3
+  Fallback mit Warnung. `open -a` ist explizit ausgeschlossen, da es
+  `#page=N` für lokale PDFs strippt/ignoriert.
+  Risiko: Agent führt Kommandos selbst aus statt Copy-Paste zu liefern
+  → Prompt instruiert explizit „NICHT selbst ausführen" (Dry-Run).
 
 ## Aufwandsschätzung
 
-| Approach | Aufwand | Verlässlichkeit | macOS-spezifisch? |
+| Approach/Task | Aufwand | Verlässlichkeit | macOS-spezifisch? |
 |----------|---------|-----------------|-------------------|
 | A | ~1-2h | mittel (LLM-Adhäsion) | nein |
 | B | ~3-4h | hoch (deterministisch) | ja (osascript) |
 | C | ~1-2 Tage (falls API existiert) | unklar (Plugin-API instabil) | nein |
+| D (PDF Links) | ~1-2h | hoch (Prompt + D2-Verifikation) | teil (Browser/qlmanage) |
 
 **Empfehlung:** A zuerst (sofort verfügbar, low risk), dann B (löst
 den täglichen Mac-Screenshot-Workflow robust). C nur als

@@ -252,6 +252,114 @@ distributiert werden soll, lege es unter
 `.agents/skills/knowledge-hub-image-passthrough/SKILL.md` ab (analog
 der bestehenden Skills-Struktur).
 
+### 4. PDF Source-Page Link Generation (cross-cutting, gilt für alle 3 Approaches)
+
+**Konzept:** Wenn der Orchestrator VQA-Results (`image_match`-Treffer)
+oder Text-Such-Treffer mit PDF-Seiten-Metadaten zurückgibt, soll er
+copy-paste-fertige CLI-Kommandos generieren, die den Nutzer die exakte
+PDF-Seite in einem Browser öffnen lassen (Chrome/Firefox-Binary direkt
+mit `file://...#page=N`) oder den extrahierten Screenshot direkt per
+Quick Look anzeigen.
+
+**Hintergrund:** Der Nutzer fragt nach einer VQA-Query typischerweise
+„wo finde ich das im Handbuch?" — aktuell liefert der Knowledge Hub
+nur `page`/`page_start`/`page_end` als Zahlen und `source_file` als
+Markdown-Basename. Der Nutzer müsste selbst die PDF finden, die Seite
+umrechnen und das PDF-Programm bedienen. Diese Sub-Feature schließt
+diese Lücke durch Prompt-Instruktion (kein Code-Change am Knowledge Hub).
+
+**Anforderungen:**
+
+- Für jeden `image_match`-Treffer mit `page`- und `source_file`-Feld:
+  - Berechne 1-basierte PDF-Seite = `page + 1` (da `page` 0-basiert
+    ist, siehe VRF-001).
+  - Finde die tatsächliche PDF-Datei: mappe `source_file` (z.B.
+    `davinci-resolve-20-beginners-guide.md`) auf den Roh-PDF-Pfad
+    `domains/<domain>/sources/raw/<pdf-filename>.pdf` — eine
+    Helper-Funktion oder Lookup-Tabelle ist nötig (der `source_file`-
+    Basename ohne `.md`-Endung entspricht ungefähr dem PDF-Filename,
+    aber verifiziere das exakte Mapping in der Implementierung).
+  - Generiere zwei Kommandos:
+    1. **PDF an Seite öffnen (Browser):**
+       `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" "file://<abs_path_to_pdf>#page=<N>"`
+       (mit Fallback auf den Firefox-Binary, falls Chrome nicht installiert).
+    2. **Quick Look extrahierter Screenshot:**
+       `qlmanage -p "<abs_path_to_extracted_png>"` — nutzt das
+       `image_path`-Feld, das bereits im Result steht.
+- Für jeden Text-Treffer (`modality: text`) mit `page_start`/`page_end`
+  und `source_type: repo` mit `chunk_type: late_chunk`:
+  - Berechne PDF-Seite (1-basiert) = `page_start + 1` (0-basiert,
+    verifiziert in Task D2; siehe `context/page-offset-verification.md`).
+  - Generiere: `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" "file://<abs_path_to_pdf>#page=<N>"`.
+- **Browser-Erkennung:** bevorzugt Chrome, Fallback Firefox, Fallback
+  `open` (Default-App, kein Page-Anchor) mit gedruckter Warnung, dass
+  der Nutzer manuell navigieren muss.
+- **Wichtig:** `open -a "Google Chrome" "file://...#page=N"` ist
+  **nicht** zulässig. Live-Verifikation zeigte, dass macOS `open` das
+  URL-Fragment bei lokalen PDF-URLs nicht zuverlässig an die Ziel-App
+  weiterreicht; Chrome/Safari sahen nur `file://...pdf` ohne `#page=N`.
+  Der direkte Browser-Binary-Aufruf erhält das Fragment und springt zur
+  korrekten Seite.
+- **Pfad-Handling:** alle generierten Pfade müssen absolut sein (auflösen
+  via `os.path.abspath` relativ zum Knowledge-Hub-Repo-Root, da der
+  Orchestrator von dort läuft).
+- **Keine Code-Änderung an den Knowledge Hub Tools** — das ist reine
+  Orchestrator-Prompt-Arbeit, analog Approach A. Der Orchestrator
+  konstruiert die Kommandos im Antwort-Text, indem er die `image_path`-,
+  `page`- und `source_file`-Felder aus den Suchergebnissen liest.
+
+**Browser-Fallback-Chain:**
+
+```
+1. Try: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" "file://...#page=N"
+2. Falls Chrome nicht installiert: "/Applications/Firefox.app/Contents/MacOS/firefox" "file://...#page=N"
+3. Falls beide fehlen: open "file://..." (kein Page-Anchor, Warnung ausgeben)
+```
+
+**PDF-Pfad-Auflösung:**
+
+Der Orchestrator muss `source_file` (z.B.
+`davinci-resolve-20-beginners-guide.md`) auf den tatsächlichen PDF-
+Filename mappen. Die Konvention ist:
+
+- `source_file` stript `.md` → `davinci-resolve-20-beginners-guide`.
+- Ersetze Bindestriche/Unterstriche basierend auf den tatsächlichen
+  PDF-Filenames in `domains/<domain>/sources/raw/`.
+- Für DaVinci: `davinci-resolve-20-beginners-guide.md` →
+  `DaVinci-Resolve-20_Beginners-Guide.pdf` (Case- + Unterstrich-
+  Unterschiede).
+
+Da das Mapping nicht 1:1 durch einfache String-Manipulation möglich
+ist (Case-Unterschiede, Unterstrich-Platzierung), sollte der
+Orchestrator `glob` oder `bash` mit `ls domains/<domain>/sources/raw/`
+nutzen, um die tatsächliche PDF-Datei zur Antwort-Zeit zu finden. Das
+ist zuverlässig und braucht keine Helper-Funktion.
+
+**Quellen-Verifikation (in dieser Session durchgeführt):**
+
+- `domains/davinci_resolve/sources/raw/` enthält 10 PDFs (siehe
+  `context/pdf-link-generation-research.md` für die vollständige Liste).
+- Das Mapping `*.md` → `*.pdf` ist case-insensitive-basierbar, aber
+  nicht trivial (z.B. `davinci-resolve-20.3-reference-manual.md` →
+  `DaVinci_Resolve_20.3_Reference_Manual.pdf`).
+- Beispielpfade: `davinci-resolve-20-beginners-guide.md` →
+  `DaVinci-Resolve-20_Beginners-Guide.pdf`.
+
+**Page-Numbering-Konvention (siehe VRF-001):**
+
+- `page` in `image_match`-Resultaten und `image_manifest.json` ist
+  **0-basiert** (PyMuPDF4LLM-Konvention).
+- `page_start`/`page_end` in Text-Chunks (`late_chunk`-Typ) sind
+  ebenfalls **0-basiert**. Task D2 verifizierte das via `pdftotext`:
+  Treffer `page_start=521` enthält „The Cut page Timeline controls" auf
+  PDF-Seite 522.
+
+Für die Nutzer-Anfrage ist die sicherste Konvention:
+
+- Für `image_match`-Treffer: PDF-Seite (1-basiert) = `page + 1`.
+- Für Text-`late_chunk`-Treffer: PDF-Seite (1-basiert) = `page_start + 1`.
+
+
 ## Akzeptanzkriterien
 
 ### Approach A (alle erfüllt → A done)
@@ -313,6 +421,23 @@ der bestehenden Skills-Struktur).
     `explanation.md` werden bei Abschluss geschrieben (Standard-Workflow).
 18. Keine bestehende Funktionalität regrediert
    (`tests/unit/test_image_similarity.py` bleibt grün).
+19. Orchestrator-Prompt (`.opencode/agents/orchestrator-knowledge.md`)
+    instruiert den Agent, bei `image_match`- und `late_chunk`-Text-
+    Treffern mit `page`-/`page_start`-Metadaten copy-paste-fertige
+    CLI-Kommandos zu generieren (direkter Chrome-Binary mit `#page=N`,
+    Fallback direkter Firefox-Binary, Fallback `open` ohne Page-Anchor).
+20. Generierte Pfade sind absolut (via `os.path.abspath` oder
+    repo-root-aware).
+21. Page-Offset ist korrekt: `image_match.page + 1` für 1-basierte
+    PDF-Seite; für Text-`late_chunk` ist der Offset in Task D2 verifiziert
+    und im Prompt dokumentiert.
+22. PDF-Dateiname wird zur Laufzeit via `ls`/`glob` aufgelöst (kein
+    hardcodiertes Mapping).
+23. Manuelles Smoke-Test: VQA-Query mit `@/pfad/zum/bild.png` liefert
+    Ergebnisse + copy-paste-fähige direkte Browser-Binary-Kommandos
+    (`.../Google Chrome` oder `.../firefox` mit `#page=N`), die den
+    Nutzer auf der richtigen PDF-Seite landen lassen.
+24. `pytest -m unit -q` und `pytest -m mcp -q` bleiben grün.
 
 ## Nicht-Ziele
 
@@ -339,3 +464,11 @@ der bestehenden Skills-Struktur).
 - `.opencode/agents/orchestrator-knowledge.md:158-200` — bestehende
   VQA-Prompt-Sektion
 - OpenCode PRs #21633, #30153, #32680, #22218 (unmerged/abandoned)
+- `context/pdf-link-generation-research.md` — PDF-Link-Generierung
+  Recherche (osascript-Failure, `open -a` Fragment-Stripping,
+  direkter Browser-Binary mit `#page=`, qlmanage,
+  Page-Offset-Ambiguität, Beispielpfade für die 5 VQA-Hits)
+- `docs/ai/known-issues.md` VRF-001 — `page`-Feld ist 0-basiert
+- `docs/ai/known-issues.md` LIM-004 — `page_start`/`page_end` ±2-Toleranz
+- `domains/davinci_resolve/sources/raw/` — 10 Quell-PDFs (Mapping-Tabelle
+  in `context/pdf-link-generation-research.md`)
